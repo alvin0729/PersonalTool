@@ -1,0 +1,23 @@
+//
+//  PrefixHeader.pch
+//  ALPersonalDemo
+//
+//  Created by Alvin on 2017/5/28.
+//  Copyright © 2017年 company. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
+
+#import "ALEnumList.h"
+#import "ALConstant.h"
+#import "ALToolMacro.h"
+
+
+
+
+
+#endif /* PrefixHeader_pch */
