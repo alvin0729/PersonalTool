@@ -8,14 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		E17E21711EDA73760013D3B9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E17E21701EDA73760013D3B9 /* main.m */; };
-		E17E21741EDA73760013D3B9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E17E21731EDA73760013D3B9 /* AppDelegate.m */; };
-		E17E21771EDA73760013D3B9 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E17E21761EDA73760013D3B9 /* ViewController.m */; };
-		E17E217A1EDA73760013D3B9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E17E21781EDA73760013D3B9 /* Main.storyboard */; };
-		E17E217D1EDA73760013D3B9 /* ALPersonalDemo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E17E217B1EDA73760013D3B9 /* ALPersonalDemo.xcdatamodeld */; };
-		E17E217F1EDA73760013D3B9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E17E217E1EDA73760013D3B9 /* Assets.xcassets */; };
-		E17E21821EDA73760013D3B9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E17E21801EDA73760013D3B9 /* LaunchScreen.storyboard */; };
 		E17E218D1EDA73760013D3B9 /* ALPersonalDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E17E218C1EDA73760013D3B9 /* ALPersonalDemoTests.m */; };
 		E17E21981EDA73760013D3B9 /* ALPersonalDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = E17E21971EDA73760013D3B9 /* ALPersonalDemoUITests.m */; };
+		E17E21A81EDA7B3A0013D3B9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E17E21A71EDA7B3A0013D3B9 /* AppDelegate.m */; };
+		E17E21AA1EDA7C320013D3B9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E17E21A91EDA7C320013D3B9 /* Assets.xcassets */; };
+		E17E21B31EDA7C3B0013D3B9 /* ALPersonalDemo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E17E21AB1EDA7C3B0013D3B9 /* ALPersonalDemo.xcdatamodeld */; };
+		E17E21B61EDA7C3B0013D3B9 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E17E21B21EDA7C3B0013D3B9 /* Info.plist */; };
+		E17E21BB1EDA7C4D0013D3B9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E17E21B71EDA7C4D0013D3B9 /* LaunchScreen.storyboard */; };
+		E17E21BC1EDA7C4D0013D3B9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E17E21B91EDA7C4D0013D3B9 /* Main.storyboard */; };
+		E17E21C01EDA7C970013D3B9 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E17E21BF1EDA7C970013D3B9 /* ViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,21 +39,21 @@
 /* Begin PBXFileReference section */
 		E17E216C1EDA73760013D3B9 /* ALPersonalDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ALPersonalDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E17E21701EDA73760013D3B9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		E17E21721EDA73760013D3B9 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		E17E21731EDA73760013D3B9 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		E17E21751EDA73760013D3B9 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		E17E21761EDA73760013D3B9 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		E17E21791EDA73760013D3B9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		E17E217C1EDA73760013D3B9 /* ALPersonalDemo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ALPersonalDemo.xcdatamodel; sourceTree = "<group>"; };
-		E17E217E1EDA73760013D3B9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		E17E21811EDA73760013D3B9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		E17E21831EDA73760013D3B9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E17E21881EDA73760013D3B9 /* ALPersonalDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ALPersonalDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E17E218C1EDA73760013D3B9 /* ALPersonalDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ALPersonalDemoTests.m; sourceTree = "<group>"; };
 		E17E218E1EDA73760013D3B9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E17E21931EDA73760013D3B9 /* ALPersonalDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ALPersonalDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E17E21971EDA73760013D3B9 /* ALPersonalDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ALPersonalDemoUITests.m; sourceTree = "<group>"; };
 		E17E21991EDA73760013D3B9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E17E21A61EDA7B3A0013D3B9 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		E17E21A71EDA7B3A0013D3B9 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		E17E21A91EDA7C320013D3B9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E17E21AC1EDA7C3B0013D3B9 /* ALPersonalDemo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ALPersonalDemo.xcdatamodel; sourceTree = "<group>"; };
+		E17E21B21EDA7C3B0013D3B9 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E17E21B81EDA7C4D0013D3B9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		E17E21BA1EDA7C4D0013D3B9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		E17E21BE1EDA7C970013D3B9 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		E17E21BF1EDA7C970013D3B9 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,15 +104,8 @@
 		E17E216E1EDA73760013D3B9 /* ALPersonalDemo */ = {
 			isa = PBXGroup;
 			children = (
-				E17E21721EDA73760013D3B9 /* AppDelegate.h */,
-				E17E21731EDA73760013D3B9 /* AppDelegate.m */,
-				E17E21751EDA73760013D3B9 /* ViewController.h */,
-				E17E21761EDA73760013D3B9 /* ViewController.m */,
-				E17E21781EDA73760013D3B9 /* Main.storyboard */,
-				E17E217E1EDA73760013D3B9 /* Assets.xcassets */,
-				E17E21801EDA73760013D3B9 /* LaunchScreen.storyboard */,
-				E17E21831EDA73760013D3B9 /* Info.plist */,
-				E17E217B1EDA73760013D3B9 /* ALPersonalDemo.xcdatamodeld */,
+				E17E21BD1EDA7C620013D3B9 /* ViewController */,
+				E17E21A51EDA7AED0013D3B9 /* AppDelegate */,
 				E17E216F1EDA73760013D3B9 /* Supporting Files */,
 			);
 			path = ALPersonalDemo;
@@ -120,9 +114,14 @@
 		E17E216F1EDA73760013D3B9 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				E17E21B71EDA7C4D0013D3B9 /* LaunchScreen.storyboard */,
+				E17E21B91EDA7C4D0013D3B9 /* Main.storyboard */,
+				E17E21AB1EDA7C3B0013D3B9 /* ALPersonalDemo.xcdatamodeld */,
+				E17E21B21EDA7C3B0013D3B9 /* Info.plist */,
+				E17E21A91EDA7C320013D3B9 /* Assets.xcassets */,
 				E17E21701EDA73760013D3B9 /* main.m */,
 			);
-			name = "Supporting Files";
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		E17E218B1EDA73760013D3B9 /* ALPersonalDemoTests */ = {
@@ -141,6 +140,24 @@
 				E17E21991EDA73760013D3B9 /* Info.plist */,
 			);
 			path = ALPersonalDemoUITests;
+			sourceTree = "<group>";
+		};
+		E17E21A51EDA7AED0013D3B9 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				E17E21A61EDA7B3A0013D3B9 /* AppDelegate.h */,
+				E17E21A71EDA7B3A0013D3B9 /* AppDelegate.m */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		E17E21BD1EDA7C620013D3B9 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				E17E21BE1EDA7C970013D3B9 /* ViewController.h */,
+				E17E21BF1EDA7C970013D3B9 /* ViewController.m */,
+			);
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -250,9 +267,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E17E21821EDA73760013D3B9 /* LaunchScreen.storyboard in Resources */,
-				E17E217F1EDA73760013D3B9 /* Assets.xcassets in Resources */,
-				E17E217A1EDA73760013D3B9 /* Main.storyboard in Resources */,
+				E17E21BB1EDA7C4D0013D3B9 /* LaunchScreen.storyboard in Resources */,
+				E17E21B61EDA7C3B0013D3B9 /* Info.plist in Resources */,
+				E17E21AA1EDA7C320013D3B9 /* Assets.xcassets in Resources */,
+				E17E21BC1EDA7C4D0013D3B9 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -277,9 +295,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E17E21771EDA73760013D3B9 /* ViewController.m in Sources */,
-				E17E217D1EDA73760013D3B9 /* ALPersonalDemo.xcdatamodeld in Sources */,
-				E17E21741EDA73760013D3B9 /* AppDelegate.m in Sources */,
+				E17E21A81EDA7B3A0013D3B9 /* AppDelegate.m in Sources */,
+				E17E21B31EDA7C3B0013D3B9 /* ALPersonalDemo.xcdatamodeld in Sources */,
+				E17E21C01EDA7C970013D3B9 /* ViewController.m in Sources */,
 				E17E21711EDA73760013D3B9 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -316,20 +334,20 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		E17E21781EDA73760013D3B9 /* Main.storyboard */ = {
+		E17E21B71EDA7C4D0013D3B9 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				E17E21791EDA73760013D3B9 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		E17E21801EDA73760013D3B9 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				E17E21811EDA73760013D3B9 /* Base */,
+				E17E21B81EDA7C4D0013D3B9 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		E17E21B91EDA7C4D0013D3B9 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E17E21BA1EDA7C4D0013D3B9 /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -428,7 +446,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 527RYUW2J9;
-				INFOPLIST_FILE = ALPersonalDemo/Info.plist;
+				INFOPLIST_FILE = "ALPersonalDemo/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.company.ALPersonalDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -440,7 +458,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 527RYUW2J9;
-				INFOPLIST_FILE = ALPersonalDemo/Info.plist;
+				INFOPLIST_FILE = "ALPersonalDemo/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.company.ALPersonalDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -512,6 +530,7 @@
 				E17E219E1EDA73760013D3B9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E17E219F1EDA73760013D3B9 /* Build configuration list for PBXNativeTarget "ALPersonalDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -520,6 +539,7 @@
 				E17E21A11EDA73760013D3B9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E17E21A21EDA73760013D3B9 /* Build configuration list for PBXNativeTarget "ALPersonalDemoUITests" */ = {
 			isa = XCConfigurationList;
@@ -528,16 +548,17 @@
 				E17E21A41EDA73760013D3B9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		E17E217B1EDA73760013D3B9 /* ALPersonalDemo.xcdatamodeld */ = {
+		E17E21AB1EDA7C3B0013D3B9 /* ALPersonalDemo.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				E17E217C1EDA73760013D3B9 /* ALPersonalDemo.xcdatamodel */,
+				E17E21AC1EDA7C3B0013D3B9 /* ALPersonalDemo.xcdatamodel */,
 			);
-			currentVersion = E17E217C1EDA73760013D3B9 /* ALPersonalDemo.xcdatamodel */;
+			currentVersion = E17E21AC1EDA7C3B0013D3B9 /* ALPersonalDemo.xcdatamodel */;
 			path = ALPersonalDemo.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
