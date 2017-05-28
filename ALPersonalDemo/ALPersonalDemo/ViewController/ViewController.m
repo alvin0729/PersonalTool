@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "ALNetWorkViewController.h"
+#import "ALToastTableViewController.h"
 
 static NSArray *titles;
 
@@ -28,7 +29,7 @@ static NSArray *titles;
     self.tableView.dataSource = self;
     [self.view addSubview:self.tableView];
     
-    titles = @[@"ALNetWorkViewController+网络数据类"];
+    titles = @[@"ALNetWorkViewController+网络数据类",@"ALToastTableViewController+提示加载"];
 }
 
 
