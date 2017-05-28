@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D2195EE7F67E7C822F1A5342 /* libPods-ALPersonalDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 95C4D560735BE5A3E41488ED /* libPods-ALPersonalDemo.a */; };
 		E17E21711EDA73760013D3B9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E17E21701EDA73760013D3B9 /* main.m */; };
 		E17E218D1EDA73760013D3B9 /* ALPersonalDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E17E218C1EDA73760013D3B9 /* ALPersonalDemoTests.m */; };
 		E17E21981EDA73760013D3B9 /* ALPersonalDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = E17E21971EDA73760013D3B9 /* ALPersonalDemoUITests.m */; };
@@ -14,11 +15,13 @@
 		E17E21AA1EDA7C320013D3B9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E17E21A91EDA7C320013D3B9 /* Assets.xcassets */; };
 		E17E21B31EDA7C3B0013D3B9 /* ALPersonalDemo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E17E21AB1EDA7C3B0013D3B9 /* ALPersonalDemo.xcdatamodeld */; };
 		E17E21C01EDA7C970013D3B9 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E17E21BF1EDA7C970013D3B9 /* ViewController.m */; };
-		E17E21CC1EDA86D40013D3B9 /* UIDevice+ALSystemInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = E17E21CB1EDA86D40013D3B9 /* UIDevice+ALSystemInfo.m */; };
 		E17E21CE1EDAA2050013D3B9 /* autobuild.py in Resources */ = {isa = PBXBuildFile; fileRef = E17E21CD1EDAA2050013D3B9 /* autobuild.py */; };
 		E17E21D21EDAA9EF0013D3B9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E17E21B71EDA7C4D0013D3B9 /* LaunchScreen.storyboard */; };
 		E17E21D31EDAA9EF0013D3B9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E17E21B91EDA7C4D0013D3B9 /* Main.storyboard */; };
 		E17E21D51EDAAC050013D3B9 /* SmartPush.zip in Resources */ = {isa = PBXBuildFile; fileRef = E17E21D41EDAAC050013D3B9 /* SmartPush.zip */; };
+		E17E21DB1EDABED80013D3B9 /* ALNetWorkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E17E21DA1EDABED80013D3B9 /* ALNetWorkViewController.m */; };
+		E17E21E01EDAC4630013D3B9 /* HYBNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = E17E21DF1EDAC4630013D3B9 /* HYBNetworking.m */; };
+		E17E21E41EDACCF30013D3B9 /* UIDevice+ALSystemInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = E17E21E31EDACCF30013D3B9 /* UIDevice+ALSystemInfo.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +42,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		44651CCE15993B1899769C3F /* Pods-ALPersonalDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ALPersonalDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-ALPersonalDemo/Pods-ALPersonalDemo.release.xcconfig"; sourceTree = "<group>"; };
+		95C4D560735BE5A3E41488ED /* libPods-ALPersonalDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ALPersonalDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BE7837F5255163B32FFF2157 /* Pods-ALPersonalDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ALPersonalDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ALPersonalDemo/Pods-ALPersonalDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		E17E216C1EDA73760013D3B9 /* ALPersonalDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ALPersonalDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E17E21701EDA73760013D3B9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E17E21881EDA73760013D3B9 /* ALPersonalDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ALPersonalDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -59,11 +65,15 @@
 		E17E21C11EDA81940013D3B9 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		E17E21C61EDA84E00013D3B9 /* ALEnumList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALEnumList.h; sourceTree = "<group>"; };
 		E17E21C71EDA85790013D3B9 /* ALConstant.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ALConstant.h; sourceTree = "<group>"; };
-		E17E21CA1EDA86D40013D3B9 /* UIDevice+ALSystemInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+ALSystemInfo.h"; sourceTree = "<group>"; };
-		E17E21CB1EDA86D40013D3B9 /* UIDevice+ALSystemInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+ALSystemInfo.m"; sourceTree = "<group>"; };
 		E17E21CD1EDAA2050013D3B9 /* autobuild.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = autobuild.py; sourceTree = "<group>"; };
 		E17E21D11EDAA49A0013D3B9 /* ALToolMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ALToolMacro.h; sourceTree = "<group>"; };
 		E17E21D41EDAAC050013D3B9 /* SmartPush.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = SmartPush.zip; sourceTree = "<group>"; };
+		E17E21D91EDABED80013D3B9 /* ALNetWorkViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALNetWorkViewController.h; sourceTree = "<group>"; };
+		E17E21DA1EDABED80013D3B9 /* ALNetWorkViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALNetWorkViewController.m; sourceTree = "<group>"; };
+		E17E21DE1EDAC4630013D3B9 /* HYBNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYBNetworking.h; sourceTree = "<group>"; };
+		E17E21DF1EDAC4630013D3B9 /* HYBNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYBNetworking.m; sourceTree = "<group>"; };
+		E17E21E21EDACCF30013D3B9 /* UIDevice+ALSystemInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+ALSystemInfo.h"; sourceTree = "<group>"; };
+		E17E21E31EDACCF30013D3B9 /* UIDevice+ALSystemInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+ALSystemInfo.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +81,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D2195EE7F67E7C822F1A5342 /* libPods-ALPersonalDemo.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -91,6 +102,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5590D417F550BE9269ADEF3E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				95C4D560735BE5A3E41488ED /* libPods-ALPersonalDemo.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D2D59E4CC23B391AD24269D2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BE7837F5255163B32FFF2157 /* Pods-ALPersonalDemo.debug.xcconfig */,
+				44651CCE15993B1899769C3F /* Pods-ALPersonalDemo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		E17E21631EDA73760013D3B9 = {
 			isa = PBXGroup;
 			children = (
@@ -98,6 +126,8 @@
 				E17E218B1EDA73760013D3B9 /* ALPersonalDemoTests */,
 				E17E21961EDA73760013D3B9 /* ALPersonalDemoUITests */,
 				E17E216D1EDA73760013D3B9 /* Products */,
+				D2D59E4CC23B391AD24269D2 /* Pods */,
+				5590D417F550BE9269ADEF3E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -114,6 +144,7 @@
 		E17E216E1EDA73760013D3B9 /* ALPersonalDemo */ = {
 			isa = PBXGroup;
 			children = (
+				E17E21D71EDAB51A0013D3B9 /* 网络 */,
 				E17E21C51EDA84A10013D3B9 /* header */,
 				E17E21C41EDA82750013D3B9 /* macro */,
 				E17E21C31EDA82560013D3B9 /* Category */,
@@ -179,6 +210,7 @@
 		E17E21C31EDA82560013D3B9 /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				E17E21E11EDACCAD0013D3B9 /* UIView */,
 				E17E21C81EDA86470013D3B9 /* UIDevice */,
 			);
 			path = Category;
@@ -204,10 +236,36 @@
 		E17E21C81EDA86470013D3B9 /* UIDevice */ = {
 			isa = PBXGroup;
 			children = (
-				E17E21CA1EDA86D40013D3B9 /* UIDevice+ALSystemInfo.h */,
-				E17E21CB1EDA86D40013D3B9 /* UIDevice+ALSystemInfo.m */,
+				E17E21E21EDACCF30013D3B9 /* UIDevice+ALSystemInfo.h */,
+				E17E21E31EDACCF30013D3B9 /* UIDevice+ALSystemInfo.m */,
 			);
-			name = UIDevice;
+			path = UIDevice;
+			sourceTree = "<group>";
+		};
+		E17E21D71EDAB51A0013D3B9 /* 网络 */ = {
+			isa = PBXGroup;
+			children = (
+				E17E21DD1EDAC4630013D3B9 /* HYBNetworking */,
+				E17E21D91EDABED80013D3B9 /* ALNetWorkViewController.h */,
+				E17E21DA1EDABED80013D3B9 /* ALNetWorkViewController.m */,
+			);
+			path = "网络";
+			sourceTree = "<group>";
+		};
+		E17E21DD1EDAC4630013D3B9 /* HYBNetworking */ = {
+			isa = PBXGroup;
+			children = (
+				E17E21DE1EDAC4630013D3B9 /* HYBNetworking.h */,
+				E17E21DF1EDAC4630013D3B9 /* HYBNetworking.m */,
+			);
+			path = HYBNetworking;
+			sourceTree = "<group>";
+		};
+		E17E21E11EDACCAD0013D3B9 /* UIView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UIView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -217,9 +275,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E17E219C1EDA73760013D3B9 /* Build configuration list for PBXNativeTarget "ALPersonalDemo" */;
 			buildPhases = (
+				2496B2C680154E862788E9F0 /* [CP] Check Pods Manifest.lock */,
 				E17E21681EDA73760013D3B9 /* Sources */,
 				E17E21691EDA73760013D3B9 /* Frameworks */,
 				E17E216A1EDA73760013D3B9 /* Resources */,
+				50EA91EE26D6307F1762C435 /* [CP] Embed Pods Frameworks */,
+				B43718F5FFA76B7556198964 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -342,6 +403,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2496B2C680154E862788E9F0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		50EA91EE26D6307F1762C435 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ALPersonalDemo/Pods-ALPersonalDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B43718F5FFA76B7556198964 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ALPersonalDemo/Pods-ALPersonalDemo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		E17E21681EDA73760013D3B9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -350,7 +459,9 @@
 				E17E21A81EDA7B3A0013D3B9 /* AppDelegate.m in Sources */,
 				E17E21B31EDA7C3B0013D3B9 /* ALPersonalDemo.xcdatamodeld in Sources */,
 				E17E21C01EDA7C970013D3B9 /* ViewController.m in Sources */,
-				E17E21CC1EDA86D40013D3B9 /* UIDevice+ALSystemInfo.m in Sources */,
+				E17E21E01EDAC4630013D3B9 /* HYBNetworking.m in Sources */,
+				E17E21E41EDACCF30013D3B9 /* UIDevice+ALSystemInfo.m in Sources */,
+				E17E21DB1EDABED80013D3B9 /* ALNetWorkViewController.m in Sources */,
 				E17E21711EDA73760013D3B9 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -496,6 +607,7 @@
 		};
 		E17E219D1EDA73760013D3B9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BE7837F5255163B32FFF2157 /* Pods-ALPersonalDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 527RYUW2J9;
@@ -510,6 +622,7 @@
 		};
 		E17E219E1EDA73760013D3B9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 44651CCE15993B1899769C3F /* Pods-ALPersonalDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 527RYUW2J9;

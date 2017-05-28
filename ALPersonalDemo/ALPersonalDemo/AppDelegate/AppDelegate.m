@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import <UserNotifications/UserNotifications.h>
+#import "ViewController.h"
 
 @interface AppDelegate ()<UNUserNotificationCenterDelegate>
 
@@ -21,6 +22,13 @@
     [[UIButton appearance] setExclusiveTouch:YES];
     //注册推送
     [self registerRemoteNotification:application withOptions:launchOptions];
+    
+    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    [self.window makeKeyAndVisible];
+    
+    ViewController *demoListViewController = [[ViewController alloc] init];
+    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:demoListViewController];
+    self.window.rootViewController = navigationController;
     
     return YES;
 }
