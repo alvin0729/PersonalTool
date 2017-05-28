@@ -13,7 +13,6 @@
 		E17E21A81EDA7B3A0013D3B9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E17E21A71EDA7B3A0013D3B9 /* AppDelegate.m */; };
 		E17E21AA1EDA7C320013D3B9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E17E21A91EDA7C320013D3B9 /* Assets.xcassets */; };
 		E17E21B31EDA7C3B0013D3B9 /* ALPersonalDemo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E17E21AB1EDA7C3B0013D3B9 /* ALPersonalDemo.xcdatamodeld */; };
-		E17E21B61EDA7C3B0013D3B9 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E17E21B21EDA7C3B0013D3B9 /* Info.plist */; };
 		E17E21BB1EDA7C4D0013D3B9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E17E21B71EDA7C4D0013D3B9 /* LaunchScreen.storyboard */; };
 		E17E21BC1EDA7C4D0013D3B9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E17E21B91EDA7C4D0013D3B9 /* Main.storyboard */; };
 		E17E21C01EDA7C970013D3B9 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E17E21BF1EDA7C970013D3B9 /* ViewController.m */; };
@@ -268,7 +267,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				E17E21BB1EDA7C4D0013D3B9 /* LaunchScreen.storyboard in Resources */,
-				E17E21B61EDA7C3B0013D3B9 /* Info.plist in Resources */,
 				E17E21AA1EDA7C320013D3B9 /* Assets.xcassets in Resources */,
 				E17E21BC1EDA7C4D0013D3B9 /* Main.storyboard in Resources */,
 			);
