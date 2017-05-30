@@ -34,6 +34,8 @@
 #define IsStrEmpty(_ref)    (((_ref) == nil) || ([(_ref) isEqual:[NSNull null]]) ||([(_ref)isEqualToString:@""]))
 //数组是否为空
 #define IsArrEmpty(_ref)    (((_ref) == nil) || ([(_ref) isEqual:[NSNull null]]) ||([(_ref) count] == 0))
+#pragma mark ----------------UI相关---------------------------
+#define AlertViewShow(msg) [[[UIAlertView alloc]initWithTitle:@"提示" message:msg delegate:nil cancelButtonTitle:@"取消" otherButtonTitles:@"确定", nil] show];
 
 //=================================单例化一个类=================================//
 #define SYNTHESIZE_SINGLETON_FOR_CLASS(classname) \
@@ -76,5 +78,82 @@ return self; \
 #pragma mark - weak 和 strong
 #define WeakObj(o) autoreleasepool{} __weak typeof(o) Weak##o = o;
 #define StrongObj(o) autoreleasepool{} __strong typeof(o) o = o##Weak;
+
+
+#pragma mark ---------------安全释放相关---------------------------
+#define HTTP_RELEASE_SAFELY(__POINTER) \
+{\
+if (nil != (__POINTER))\
+{\
+[__POINTER stop];\
+TT_RELEASE_SAFELY(__POINTER);\
+}\
+}
+
+#if !__has_feature(objc_arc)
+
+/*safe release*/
+#undef TT_RELEASE_SAFELY
+#define TT_RELEASE_SAFELY(__REF) \
+{\
+if (nil != (__REF)) \
+{\
+CFRelease(__REF); \
+__REF = nil;\
+}\
+}
+
+//view安全释放
+#undef TTVIEW_RELEASE_SAFELY
+#define TTVIEW_RELEASE_SAFELY(__REF) \
+{\
+if (nil != (__REF))\
+{\
+[__REF removeFromSuperview];\
+CFRelease(__REF);\
+__REF = nil;\
+}\
+}
+
+//释放定时器
+#undef TT_INVALIDATE_TIMER
+#define TT_INVALIDATE_TIMER(__TIMER) \
+{\
+[__TIMER invalidate];\
+[__TIMER release];\
+__TIMER = nil;\
+}
+
+#else
+
+/*safe release*/
+#undef TT_RELEASE_SAFELY
+#define TT_RELEASE_SAFELY(__REF) \
+{\
+if (nil != (__REF)) \
+{\
+__REF = nil;\
+}\
+}
+
+//view安全释放
+#define TTVIEW_RELEASE_SAFELY(__REF) \
+{\
+if (nil != (__REF))\
+{\
+[__REF removeFromSuperview];\
+__REF = nil;\
+}\
+}
+
+//释放定时器
+#define TT_INVALIDATE_TIMER(__TIMER) \
+{\
+[__TIMER invalidate];\
+__TIMER = nil;\
+}
+
+#endif
+
 
 #endif /* ALToolMacro_h */

@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "ALNetWorkViewController.h"
 #import "ALToastTableViewController.h"
+#import "UIButton+SSAdd.h"
 
 static NSArray *titles;
 
@@ -20,10 +21,24 @@ static NSArray *titles;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title = @"ALPersonalDemo";
+    self.view.backgroundColor = [UIColor lightGrayColor];
+    //self.title = @"ALPersonalDemo";
     //self.automaticallyAdjustsScrollViewInsets = NO;
+    UIView *view = [UIView new];
+    view.backgroundColor = [UIColor cyanColor];
+    [self.view addSubview:view];
+    view.frame = CGRectMake(50, 50, 45, 45);
     
-    self.tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStyleGrouped];
+    UIButton *titleBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    titleBtn.frame = CGRectMake(70, 70, 5, 5);
+    titleBtn.backgroundColor = [UIColor orangeColor];
+    [titleBtn addTarget:self action:@selector(titleBtnAction) forControlEvents:UIControlEventTouchUpInside];
+    //self.navigationItem.titleView = titleBtn;
+    [self.view addSubview:titleBtn];
+    [titleBtn setEnlargeEdgeWithTop:20 right:20 bottom:20 left:20];
+    
+    //self.tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStyleGrouped];
+    self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 100, kALScreenWidth, kALScreenHeight - 100) style:UITableViewStyleGrouped];
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cell"];
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
@@ -32,6 +47,9 @@ static NSArray *titles;
     titles = @[@"ALNetWorkViewController+网络数据类",@"ALToastTableViewController+提示加载"];
 }
 
+-(void)titleBtnAction{
+    ALAppLog(@"===titleBtnAction===");
+}
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
