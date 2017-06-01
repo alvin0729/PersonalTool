@@ -155,5 +155,7 @@ __TIMER = nil;\
 
 #endif
 
+#pragma mark ----------------UIFont相关---------------------------
+#define DDPingFangSCMediumFONT(fontsize)      [UIFont fontWithName:@"PingFangSC-Medium" size:fontsize]
 
 #endif /* ALToolMacro_h */

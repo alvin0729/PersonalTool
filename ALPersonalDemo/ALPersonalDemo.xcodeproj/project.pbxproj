@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CF40EC751EE0191E0003499F /* WWTagEditingView.m in Sources */ = {isa = PBXBuildFile; fileRef = CF40EC741EE0191E0003499F /* WWTagEditingView.m */; };
+		CF40EC781EE01A0D0003499F /* WWTagButtonTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = CF40EC771EE01A0D0003499F /* WWTagButtonTextField.m */; };
+		CF40EC7B1EE01AA90003499F /* ALDemo1ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF40EC7A1EE01AA90003499F /* ALDemo1ViewController.m */; };
 		D2195EE7F67E7C822F1A5342 /* libPods-ALPersonalDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 95C4D560735BE5A3E41488ED /* libPods-ALPersonalDemo.a */; };
 		E17E21711EDA73760013D3B9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E17E21701EDA73760013D3B9 /* main.m */; };
 		E17E218D1EDA73760013D3B9 /* ALPersonalDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E17E218C1EDA73760013D3B9 /* ALPersonalDemoTests.m */; };
@@ -67,6 +70,12 @@
 		44651CCE15993B1899769C3F /* Pods-ALPersonalDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ALPersonalDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-ALPersonalDemo/Pods-ALPersonalDemo.release.xcconfig"; sourceTree = "<group>"; };
 		95C4D560735BE5A3E41488ED /* libPods-ALPersonalDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ALPersonalDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE7837F5255163B32FFF2157 /* Pods-ALPersonalDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ALPersonalDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ALPersonalDemo/Pods-ALPersonalDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		CF40EC731EE0191E0003499F /* WWTagEditingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WWTagEditingView.h; sourceTree = "<group>"; };
+		CF40EC741EE0191E0003499F /* WWTagEditingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WWTagEditingView.m; sourceTree = "<group>"; };
+		CF40EC761EE01A0D0003499F /* WWTagButtonTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WWTagButtonTextField.h; sourceTree = "<group>"; };
+		CF40EC771EE01A0D0003499F /* WWTagButtonTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WWTagButtonTextField.m; sourceTree = "<group>"; };
+		CF40EC791EE01AA90003499F /* ALDemo1ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALDemo1ViewController.h; sourceTree = "<group>"; };
+		CF40EC7A1EE01AA90003499F /* ALDemo1ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALDemo1ViewController.m; sourceTree = "<group>"; };
 		E17E216C1EDA73760013D3B9 /* ALPersonalDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ALPersonalDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E17E21701EDA73760013D3B9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E17E21881EDA73760013D3B9 /* ALPersonalDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ALPersonalDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -271,6 +280,8 @@
 			children = (
 				E17E21BE1EDA7C970013D3B9 /* ViewController.h */,
 				E17E21BF1EDA7C970013D3B9 /* ViewController.m */,
+				CF40EC791EE01AA90003499F /* ALDemo1ViewController.h */,
+				CF40EC7A1EE01AA90003499F /* ALDemo1ViewController.m */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -465,6 +476,10 @@
 			children = (
 				E1F661A61EDDA024001D98E1 /* SSUIAdapter.h */,
 				E1F661A71EDDA024001D98E1 /* SSUIAdapter.m */,
+				CF40EC761EE01A0D0003499F /* WWTagButtonTextField.h */,
+				CF40EC771EE01A0D0003499F /* WWTagButtonTextField.m */,
+				CF40EC731EE0191E0003499F /* WWTagEditingView.h */,
+				CF40EC741EE0191E0003499F /* WWTagEditingView.m */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -585,7 +600,7 @@
 				TargetAttributes = {
 					E17E216B1EDA73760013D3B9 = {
 						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = 527RYUW2J9;
+						DevelopmentTeam = 75C82FC24V;
 						ProvisioningStyle = Automatic;
 					};
 					E17E21871EDA73760013D3B9 = {
@@ -722,8 +737,11 @@
 				E1F661BB1EDDA303001D98E1 /* UILabel+SSAdd.m in Sources */,
 				E17E21C01EDA7C970013D3B9 /* ViewController.m in Sources */,
 				E17E21E01EDAC4630013D3B9 /* HYBNetworking.m in Sources */,
+				CF40EC7B1EE01AA90003499F /* ALDemo1ViewController.m in Sources */,
 				E1F661B41EDDA2B4001D98E1 /* UIGestureRecognizer+SSAdd.m in Sources */,
+				CF40EC781EE01A0D0003499F /* WWTagButtonTextField.m in Sources */,
 				E17E21E41EDACCF30013D3B9 /* UIDevice+ALSystemInfo.m in Sources */,
+				CF40EC751EE0191E0003499F /* WWTagEditingView.m in Sources */,
 				E1F661AC1EDDA14B001D98E1 /* CommonBaseTools.m in Sources */,
 				E17E21EE1EDAF6A20013D3B9 /* ALToastTableViewController.m in Sources */,
 				E1F661C21EDDA39E001D98E1 /* UIView+SSAdd.m in Sources */,
@@ -878,12 +896,12 @@
 			baseConfigurationReference = BE7837F5255163B32FFF2157 /* Pods-ALPersonalDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 527RYUW2J9;
+				DEVELOPMENT_TEAM = 75C82FC24V;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/ALPersonalDemo/Supporting Files/PrefixHeader.pch";
 				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = "ALPersonalDemo/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.company.ALPersonalDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.alvin.test4;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -893,12 +911,12 @@
 			baseConfigurationReference = 44651CCE15993B1899769C3F /* Pods-ALPersonalDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 527RYUW2J9;
+				DEVELOPMENT_TEAM = 75C82FC24V;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/ALPersonalDemo/Supporting Files/PrefixHeader.pch";
 				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = "ALPersonalDemo/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.company.ALPersonalDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.alvin.test4;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

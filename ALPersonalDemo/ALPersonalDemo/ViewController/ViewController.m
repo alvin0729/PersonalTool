@@ -10,6 +10,7 @@
 #import "ALNetWorkViewController.h"
 #import "ALToastTableViewController.h"
 #import "UIButton+SSAdd.h"
+#import "ALDemo1ViewController.h"
 
 static NSArray *titles;
 
@@ -44,7 +45,7 @@ static NSArray *titles;
     self.tableView.dataSource = self;
     [self.view addSubview:self.tableView];
     
-    titles = @[@"ALNetWorkViewController+网络数据类",@"ALToastTableViewController+提示加载"];
+    titles = @[@"ALNetWorkViewController+网络数据类",@"ALToastTableViewController+提示加载",@"ALDemo1ViewController+暂时显示"];
 }
 
 -(void)titleBtnAction{
