@@ -126,7 +126,7 @@ static CGFloat MWXTagCount = 3 ;
         NSLog(@"null");
         return;
     }
-    if (btnTitle.length > 6) {
+    if (btnTitle.length > 7) {
         NSLog(@"字符超过6个，请删除重新生成标签");
         return;
     }
@@ -138,7 +138,7 @@ static CGFloat MWXTagCount = 3 ;
     
     NSMutableAttributedString *attrituteTitle = [[NSMutableAttributedString alloc] initWithString:[NSString stringWithFormat:@" #%@ ",btnTitle]];
     [attrituteTitle insertAttributedString:attachmentStr atIndex:attrituteTitle.length];
-    [attrituteTitle setAttributes:@{NSForegroundColorAttributeName : [UIColor colorWithHexString:@"fffa69"], NSFontAttributeName : DDPingFangSCMediumFONT(12)} range:NSMakeRange(0, attrituteTitle.length)];
+    [attrituteTitle setAttributes:@{NSForegroundColorAttributeName : [UIColor colorWithHexString:@"fffa69"], NSFontAttributeName : DDPingFangSCMediumFONT(12)} range:NSMakeRange(0, attrituteTitle.length-1)];
     
     [btn setAttributedTitle:attrituteTitle forState:UIControlStateNormal];
     btn.backgroundColor = [UIColor colorWithHexString:@"000000" alpha:0.3];
@@ -158,7 +158,7 @@ static CGFloat MWXTagCount = 3 ;
 //                                              context:nil].size ;
     //提前在 上下左右 做好偏移
     
-    btn.frame = CGRectMake(0, 0, sizeToFit.width+8 + 28, sizeToFit.height+4);
+    btn.frame = CGRectMake(0, 0, sizeToFit.width+8 +8, sizeToFit.height+4);
     
     //btn宽高
     if (btn.frame.size.width > self.frame.size.width - 2 * WWDistanceLength) {
@@ -257,6 +257,7 @@ static CGFloat MWXTagCount = 3 ;
     [self textFieldShouldReturn:self.textField];
 }
 
+#pragma mark - ===================================
 
 
 #pragma mark - textFeildDelegate
@@ -279,7 +280,6 @@ static CGFloat MWXTagCount = 3 ;
 
 -(BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string
 {
-    
     if (self.btnArray.count >= MWXTagCount) {
         self.textField.text = nil;
         return NO;
@@ -296,9 +296,9 @@ static CGFloat MWXTagCount = 3 ;
     NSInteger existedLength = textField.text.length;
     NSInteger selectedLength = range.length;
     NSInteger replaceLength = string.length;
-    if (existedLength - selectedLength + replaceLength > 6) {
-        return NO;
-    }
+//    if (existedLength - selectedLength + replaceLength > 6) {
+//        return NO;
+//    }
     if ([string isEqualToString:@" "] && range.location != 0 ) {
         if (self.btnTitleArray.count > 0) {
             for (NSString *title in self.btnTitleArray) {
@@ -334,57 +334,45 @@ static CGFloat MWXTagCount = 3 ;
 #pragma mark - textFied tager
 -(void)textFielddidChange:(UITextField*)sender
 {
-    
-    
+
     if (self.btnArray.count > 0 || sender.text.length > 0) {
         self.textField.placeholder = @" ";
     }else{
         self.textField.placeholder = @"请给故事贴上标签，按空格自动生成...";
     }
     
-    if ([self isChineseInput]==NO) {
-        return;
-    }
-    else
-    {
-        if( [self isNotHighLightEdtingWithTextView:sender]==YES) {
-            if (sender.text.length >=6)
-            {//此时是非高亮状态
-                NSString *subStr= [sender.text substringWithRange:NSMakeRange(0, 6)];
+//    if (sender.text.length > 6) {
+//        sender.text = [sender.text substringToIndex:6];
+//    }
+    NSLog(@"==%d==",sender.text.length);
+    if (sender.text.length > 0 && [[sender.text substringWithRange:NSMakeRange(sender.text.length - 1, 1)] isEqualToString:@" "]) {
+        if (self.btnTitleArray.count > 0) {
+            for (NSString *title in self.btnTitleArray) {
+                if ([title isEqualToString:sender.text]) {
+                    NSLog(@"==已经加入==");
+                }else{
+                    [self textFieldShouldReturn:self.textField];
+                }
+                return;
             }
+        } else{
+            [self textFieldShouldReturn:self.textField];
+            return;
         }
     }
-
-    if (sender.text.length > 6) {
-        sender.text = [sender.text substringToIndex:6];
-    }
+//    if (self.btnTitleArray.count < 3 && self.textField.text.length == 6) {
+//        [self textFieldShouldReturn:self.textField];
+//        return;
+//    }
+    
 }
 
 -(BOOL )isChineseInput
 {
-    
     NSString *primaryLanguage=  [[UIApplication sharedApplication]textInputMode].primaryLanguage ;
     // 键盘输入语言模式 英语为en-US 如果是中文为zh-Hans 表情 emoji
-    //    NSLog(@"%@---%@-----%@",primaryLanguage,[UITextInputMode activeInputModes],primaryLanguage);
+    // NSLog(@"%@---%@-----%@",primaryLanguage,[UITextInputMode activeInputModes],primaryLanguage);
     return [primaryLanguage isEqualToString:@"zh-Hans"];
 }
-
--(BOOL )isNotHighLightEdtingWithTextView:(UITextField *)textField
-{
-    UITextRange *selectedRange = [textField markedTextRange];
-    //获取高亮部分（就是在编辑蓝色的部分）
-    UITextPosition *position = [textField positionFromPosition:selectedRange.start offset:0];
-    if(selectedRange && position){
-        // 有高亮选择的字符串，则暂不对文字进行统计和限制
-        return NO;
-    }
-    else if (!position) {
-        // 非高亮选择的字
-        return YES;
-    }
-    else return NO;
-    
-}
-
 
 @end
