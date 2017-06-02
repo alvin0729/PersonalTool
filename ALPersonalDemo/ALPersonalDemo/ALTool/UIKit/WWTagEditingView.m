@@ -127,8 +127,9 @@ static CGFloat MWXTagCount = 3 ;
         return;
     }
     if (btnTitle.length > 7) {
+        btnTitle = [btnTitle substringWithRange:NSMakeRange(0, 6)];
         NSLog(@"字符超过6个，请删除重新生成标签");
-        return;
+        //return;
     }
     
     NSTextAttachment *attachment = [[NSTextAttachment alloc] init];
@@ -142,9 +143,6 @@ static CGFloat MWXTagCount = 3 ;
     
     [btn setAttributedTitle:attrituteTitle forState:UIControlStateNormal];
     btn.backgroundColor = [UIColor colorWithHexString:@"000000" alpha:0.3];
-    //btn.titleEdgeInsets = UIEdgeInsetsMake(2, 2, 2, 2);
-    //btn.layer.borderColor = [UIColor lightGrayColor].CGColor;
-    //btn.layer.borderWidth = 1;
     btn.layer.cornerRadius = 5;
     
     [btn addTarget:self action:@selector(tagBtnClick:) forControlEvents:UIControlEventTouchUpInside];
@@ -157,7 +155,6 @@ static CGFloat MWXTagCount = 3 ;
 //                                           attributes:@{NSFontAttributeName : DDPingFangSCMediumFONT(12)}
 //                                              context:nil].size ;
     //提前在 上下左右 做好偏移
-    
     btn.frame = CGRectMake(0, 0, sizeToFit.width+8 +8, sizeToFit.height+4);
     
     //btn宽高
@@ -200,18 +197,13 @@ static CGFloat MWXTagCount = 3 ;
             }
         });
     });
-    
-    
-    
-    
+ 
 }
 
 #pragma mark - 点击按钮变动
 -(void)tagBtnClick:(UIButton*)sender
 {
-    
     //点击 做判定是否select
-    
     [sender removeFromSuperview];
     NSInteger index = [self.btnArray indexOfObject: sender];
     [self.btnArray removeObject:sender];
@@ -222,9 +214,7 @@ static CGFloat MWXTagCount = 3 ;
         self.textField.frame =  [self updateTextFrame];
         self.assBtn.frame = CGRectMake(self.textField.frame.origin.x, self.textField.frame.origin.y+self.textField.frame.size.height, self.textField.frame.size.width, self.textField.frame.size.height);
     }];
-    
 }
-
 
 //更新所有tagbtn的frame
 -(void)updateTagsFrame
@@ -244,10 +234,8 @@ static CGFloat MWXTagCount = 3 ;
             frame.origin.x = self.bounds.size.width - widthPart > btn.frame.size.width ? widthPart : WWDistanceLength;
             frame.origin.y = self.bounds.size.width - widthPart > btn.frame.size.width ? lastBtn.frame.origin.y :lastBtn.frame.origin.y + lastBtn.frame.size.height + WWDistanceLength;
         }
-        
         btn.frame = frame;
         lastBtn = btn;
-        
     }
 }
 
@@ -256,9 +244,6 @@ static CGFloat MWXTagCount = 3 ;
 {
     [self textFieldShouldReturn:self.textField];
 }
-
-#pragma mark - ===================================
-
 
 #pragma mark - textFeildDelegate
 -(BOOL)textFieldShouldReturn:(UITextField *)textField
@@ -292,13 +277,7 @@ static CGFloat MWXTagCount = 3 ;
     if ([self isChineseInput]==YES) {
         return YES;//中文的话交给textViewDidChange 计算
     }
-    
-    NSInteger existedLength = textField.text.length;
-    NSInteger selectedLength = range.length;
-    NSInteger replaceLength = string.length;
-//    if (existedLength - selectedLength + replaceLength > 6) {
-//        return NO;
-//    }
+
     if ([string isEqualToString:@" "] && range.location != 0 ) {
         if (self.btnTitleArray.count > 0) {
             for (NSString *title in self.btnTitleArray) {
@@ -319,7 +298,6 @@ static CGFloat MWXTagCount = 3 ;
         [self textFieldShouldReturn:self.textField];
         return NO;
     }
-    
     return YES;
 }
 
@@ -340,11 +318,6 @@ static CGFloat MWXTagCount = 3 ;
     }else{
         self.textField.placeholder = @"请给故事贴上标签，按空格自动生成...";
     }
-    
-//    if (sender.text.length > 6) {
-//        sender.text = [sender.text substringToIndex:6];
-//    }
-    NSLog(@"==%d==",sender.text.length);
     if (sender.text.length > 0 && [[sender.text substringWithRange:NSMakeRange(sender.text.length - 1, 1)] isEqualToString:@" "]) {
         if (self.btnTitleArray.count > 0) {
             for (NSString *title in self.btnTitleArray) {
@@ -360,11 +333,6 @@ static CGFloat MWXTagCount = 3 ;
             return;
         }
     }
-//    if (self.btnTitleArray.count < 3 && self.textField.text.length == 6) {
-//        [self textFieldShouldReturn:self.textField];
-//        return;
-//    }
-    
 }
 
 -(BOOL )isChineseInput

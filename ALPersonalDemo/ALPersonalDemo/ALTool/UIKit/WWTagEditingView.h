@@ -10,7 +10,6 @@
 #import "WWTagButtonTextField.h"
 
 
-
 @interface WWTagEditingView : UIView
 
 @property(nonatomic,strong)WWTagButtonTextField *textField;
