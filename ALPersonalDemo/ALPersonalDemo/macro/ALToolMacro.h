@@ -158,4 +158,15 @@ __TIMER = nil;\
 #pragma mark ----------------UIFont相关---------------------------
 #define DDPingFangSCMediumFONT(fontsize)      [UIFont fontWithName:@"PingFangSC-Medium" size:fontsize]
 
+/**
+ *  通过RGB颜色值返回UIColor
+ */
+#define RGB(RED,GREEN,BLUE) [UIColor colorWithRed:RED/255.0f green:GREEN/255.0f blue:BLUE/255.0f alpha:1.0f]
+#define RGBA(RED,GREEN,BLUE,ALPHA) [UIColor colorWithRed:RED/255.0f green:GREEN/255.0f blue:BLUE/255.0f alpha:ALPHA]
+
+
+
+
+
+
 #endif /* ALToolMacro_h */
