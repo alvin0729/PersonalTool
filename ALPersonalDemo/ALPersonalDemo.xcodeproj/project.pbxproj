@@ -11,6 +11,9 @@
 		CF40EC781EE01A0D0003499F /* WWTagButtonTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = CF40EC771EE01A0D0003499F /* WWTagButtonTextField.m */; };
 		CF40EC7B1EE01AA90003499F /* ALDemo1ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF40EC7A1EE01AA90003499F /* ALDemo1ViewController.m */; };
 		D2195EE7F67E7C822F1A5342 /* libPods-ALPersonalDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 95C4D560735BE5A3E41488ED /* libPods-ALPersonalDemo.a */; };
+		E13C56631EE4231600005CFD /* FCFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E13C56621EE4231600005CFD /* FCFileManager.m */; };
+		E13C56661EE427B600005CFD /* FileManagerHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = E13C56651EE427B600005CFD /* FileManagerHelper.m */; };
+		E13C566E1EE42B8A00005CFD /* HttpTool.m in Sources */ = {isa = PBXBuildFile; fileRef = E13C566D1EE42B8A00005CFD /* HttpTool.m */; };
 		E17E21711EDA73760013D3B9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E17E21701EDA73760013D3B9 /* main.m */; };
 		E17E218D1EDA73760013D3B9 /* ALPersonalDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E17E218C1EDA73760013D3B9 /* ALPersonalDemoTests.m */; };
 		E17E21981EDA73760013D3B9 /* ALPersonalDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = E17E21971EDA73760013D3B9 /* ALPersonalDemoUITests.m */; };
@@ -76,6 +79,13 @@
 		CF40EC771EE01A0D0003499F /* WWTagButtonTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WWTagButtonTextField.m; sourceTree = "<group>"; };
 		CF40EC791EE01AA90003499F /* ALDemo1ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALDemo1ViewController.h; sourceTree = "<group>"; };
 		CF40EC7A1EE01AA90003499F /* ALDemo1ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALDemo1ViewController.m; sourceTree = "<group>"; };
+		E13C56611EE4231600005CFD /* FCFileManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FCFileManager.h; sourceTree = "<group>"; };
+		E13C56621EE4231600005CFD /* FCFileManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FCFileManager.m; sourceTree = "<group>"; };
+		E13C56641EE427B600005CFD /* FileManagerHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileManagerHelper.h; sourceTree = "<group>"; };
+		E13C56651EE427B600005CFD /* FileManagerHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileManagerHelper.m; sourceTree = "<group>"; };
+		E13C566B1EE42B8A00005CFD /* HttpComm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpComm.h; sourceTree = "<group>"; };
+		E13C566C1EE42B8A00005CFD /* HttpTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpTool.h; sourceTree = "<group>"; };
+		E13C566D1EE42B8A00005CFD /* HttpTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HttpTool.m; sourceTree = "<group>"; };
 		E17E216C1EDA73760013D3B9 /* ALPersonalDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ALPersonalDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E17E21701EDA73760013D3B9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E17E21881EDA73760013D3B9 /* ALPersonalDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ALPersonalDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -192,6 +202,16 @@
 				44651CCE15993B1899769C3F /* Pods-ALPersonalDemo.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		E13C566A1EE42B6C00005CFD /* 续传 */ = {
+			isa = PBXGroup;
+			children = (
+				E13C566B1EE42B8A00005CFD /* HttpComm.h */,
+				E13C566C1EE42B8A00005CFD /* HttpTool.h */,
+				E13C566D1EE42B8A00005CFD /* HttpTool.m */,
+			);
+			path = "续传";
 			sourceTree = "<group>";
 		};
 		E17E21631EDA73760013D3B9 = {
@@ -337,6 +357,7 @@
 		E17E21D71EDAB51A0013D3B9 /* 网络 */ = {
 			isa = PBXGroup;
 			children = (
+				E13C566A1EE42B6C00005CFD /* 续传 */,
 				E17E21DD1EDAC4630013D3B9 /* HYBNetworking */,
 				E17E21D91EDABED80013D3B9 /* ALNetWorkViewController.h */,
 				E17E21DA1EDABED80013D3B9 /* ALNetWorkViewController.m */,
@@ -487,6 +508,10 @@
 		E1F661A91EDDA122001D98E1 /* NSObject */ = {
 			isa = PBXGroup;
 			children = (
+				E13C56641EE427B600005CFD /* FileManagerHelper.h */,
+				E13C56651EE427B600005CFD /* FileManagerHelper.m */,
+				E13C56611EE4231600005CFD /* FCFileManager.h */,
+				E13C56621EE4231600005CFD /* FCFileManager.m */,
 				E1F661AA1EDDA14B001D98E1 /* CommonBaseTools.h */,
 				E1F661AB1EDDA14B001D98E1 /* CommonBaseTools.m */,
 			);
@@ -727,12 +752,14 @@
 				E17E21A81EDA7B3A0013D3B9 /* AppDelegate.m in Sources */,
 				E1F661841EDD9BB9001D98E1 /* UILabel+Copyable.m in Sources */,
 				E1F661881EDD9C66001D98E1 /* NSDate+SSAdd.m in Sources */,
+				E13C56631EE4231600005CFD /* FCFileManager.m in Sources */,
 				E1F661B81EDDA2E5001D98E1 /* UIImage+SSAdd.m in Sources */,
 				E1F661A81EDDA024001D98E1 /* SSUIAdapter.m in Sources */,
 				E1F6619A1EDD9DB5001D98E1 /* NSObject+SSAdd.m in Sources */,
 				E1F6619F1EDD9DE8001D98E1 /* NSString+SSAdd.m in Sources */,
 				E17E21B31EDA7C3B0013D3B9 /* ALPersonalDemo.xcdatamodeld in Sources */,
 				E17E21F51EDAFE0F0013D3B9 /* UIButton+SSImageTitleStyle.m in Sources */,
+				E13C56661EE427B600005CFD /* FileManagerHelper.m in Sources */,
 				E1F6618C1EDD9CBC001D98E1 /* NSArray+SSAdd.m in Sources */,
 				E1F661BB1EDDA303001D98E1 /* UILabel+SSAdd.m in Sources */,
 				E17E21C01EDA7C970013D3B9 /* ViewController.m in Sources */,
@@ -749,6 +776,7 @@
 				E1F661B01EDDA287001D98E1 /* UIControl+SSAdd.m in Sources */,
 				E17E21711EDA73760013D3B9 /* main.m in Sources */,
 				E17E21E71EDAF3C20013D3B9 /* UIView+ALFrame.m in Sources */,
+				E13C566E1EE42B8A00005CFD /* HttpTool.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
