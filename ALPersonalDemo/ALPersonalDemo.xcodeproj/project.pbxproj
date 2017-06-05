@@ -10,6 +10,11 @@
 		CF40EC751EE0191E0003499F /* WWTagEditingView.m in Sources */ = {isa = PBXBuildFile; fileRef = CF40EC741EE0191E0003499F /* WWTagEditingView.m */; };
 		CF40EC781EE01A0D0003499F /* WWTagButtonTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = CF40EC771EE01A0D0003499F /* WWTagButtonTextField.m */; };
 		CF40EC7B1EE01AA90003499F /* ALDemo1ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF40EC7A1EE01AA90003499F /* ALDemo1ViewController.m */; };
+		CF48AC131EE4E32A009C4AD7 /* UIImage+Orientaion.m in Sources */ = {isa = PBXBuildFile; fileRef = CF48AC0C1EE4E32A009C4AD7 /* UIImage+Orientaion.m */; };
+		CF48AC141EE4E32A009C4AD7 /* UIImage+Scale.m in Sources */ = {isa = PBXBuildFile; fileRef = CF48AC0E1EE4E32A009C4AD7 /* UIImage+Scale.m */; };
+		CF48AC151EE4E32A009C4AD7 /* UIImage+Thumbnail.m in Sources */ = {isa = PBXBuildFile; fileRef = CF48AC101EE4E32A009C4AD7 /* UIImage+Thumbnail.m */; };
+		CF48AC161EE4E32A009C4AD7 /* UIImage+Tools.m in Sources */ = {isa = PBXBuildFile; fileRef = CF48AC121EE4E32A009C4AD7 /* UIImage+Tools.m */; };
+		CF48AC1A1EE4E35B009C4AD7 /* UIImageView+CircleImage.m in Sources */ = {isa = PBXBuildFile; fileRef = CF48AC191EE4E35B009C4AD7 /* UIImageView+CircleImage.m */; };
 		D2195EE7F67E7C822F1A5342 /* libPods-ALPersonalDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 95C4D560735BE5A3E41488ED /* libPods-ALPersonalDemo.a */; };
 		E13C56631EE4231600005CFD /* FCFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E13C56621EE4231600005CFD /* FCFileManager.m */; };
 		E13C56661EE427B600005CFD /* FileManagerHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = E13C56651EE427B600005CFD /* FileManagerHelper.m */; };
@@ -85,6 +90,16 @@
 		CF40EC771EE01A0D0003499F /* WWTagButtonTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WWTagButtonTextField.m; sourceTree = "<group>"; };
 		CF40EC791EE01AA90003499F /* ALDemo1ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALDemo1ViewController.h; sourceTree = "<group>"; };
 		CF40EC7A1EE01AA90003499F /* ALDemo1ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALDemo1ViewController.m; sourceTree = "<group>"; };
+		CF48AC0B1EE4E32A009C4AD7 /* UIImage+Orientaion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Orientaion.h"; sourceTree = "<group>"; };
+		CF48AC0C1EE4E32A009C4AD7 /* UIImage+Orientaion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Orientaion.m"; sourceTree = "<group>"; };
+		CF48AC0D1EE4E32A009C4AD7 /* UIImage+Scale.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Scale.h"; sourceTree = "<group>"; };
+		CF48AC0E1EE4E32A009C4AD7 /* UIImage+Scale.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Scale.m"; sourceTree = "<group>"; };
+		CF48AC0F1EE4E32A009C4AD7 /* UIImage+Thumbnail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Thumbnail.h"; sourceTree = "<group>"; };
+		CF48AC101EE4E32A009C4AD7 /* UIImage+Thumbnail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Thumbnail.m"; sourceTree = "<group>"; };
+		CF48AC111EE4E32A009C4AD7 /* UIImage+Tools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Tools.h"; sourceTree = "<group>"; };
+		CF48AC121EE4E32A009C4AD7 /* UIImage+Tools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Tools.m"; sourceTree = "<group>"; };
+		CF48AC181EE4E35B009C4AD7 /* UIImageView+CircleImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+CircleImage.h"; sourceTree = "<group>"; };
+		CF48AC191EE4E35B009C4AD7 /* UIImageView+CircleImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+CircleImage.m"; sourceTree = "<group>"; };
 		E13C56611EE4231600005CFD /* FCFileManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FCFileManager.h; sourceTree = "<group>"; };
 		E13C56621EE4231600005CFD /* FCFileManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FCFileManager.m; sourceTree = "<group>"; };
 		E13C56641EE427B600005CFD /* FileManagerHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileManagerHelper.h; sourceTree = "<group>"; };
@@ -211,6 +226,15 @@
 				95C4D560735BE5A3E41488ED /* libPods-ALPersonalDemo.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CF48AC171EE4E342009C4AD7 /* UIImageView */ = {
+			isa = PBXGroup;
+			children = (
+				CF48AC181EE4E35B009C4AD7 /* UIImageView+CircleImage.h */,
+				CF48AC191EE4E35B009C4AD7 /* UIImageView+CircleImage.m */,
+			);
+			path = UIImageView;
 			sourceTree = "<group>";
 		};
 		D2D59E4CC23B391AD24269D2 /* Pods */ = {
@@ -352,6 +376,7 @@
 		E17E21C31EDA82560013D3B9 /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				CF48AC171EE4E342009C4AD7 /* UIImageView */,
 				E13C56801EE44EFA00005CFD /* UINavigationBar */,
 				E13C56731EE44DCA00005CFD /* UIBarButtonItem */,
 				E1F661BC1EDDA355001D98E1 /* UITableView */,
@@ -591,6 +616,14 @@
 		E1F661B51EDDA2C8001D98E1 /* UIImage */ = {
 			isa = PBXGroup;
 			children = (
+				CF48AC0B1EE4E32A009C4AD7 /* UIImage+Orientaion.h */,
+				CF48AC0C1EE4E32A009C4AD7 /* UIImage+Orientaion.m */,
+				CF48AC0D1EE4E32A009C4AD7 /* UIImage+Scale.h */,
+				CF48AC0E1EE4E32A009C4AD7 /* UIImage+Scale.m */,
+				CF48AC0F1EE4E32A009C4AD7 /* UIImage+Thumbnail.h */,
+				CF48AC101EE4E32A009C4AD7 /* UIImage+Thumbnail.m */,
+				CF48AC111EE4E32A009C4AD7 /* UIImage+Tools.h */,
+				CF48AC121EE4E32A009C4AD7 /* UIImage+Tools.m */,
 				E13C567A1EE44EC200005CFD /* UIImage+Extension.h */,
 				E13C567B1EE44EC200005CFD /* UIImage+Extension.m */,
 				E1F661B61EDDA2E5001D98E1 /* UIImage+SSAdd.h */,
@@ -809,12 +842,14 @@
 				E1F661881EDD9C66001D98E1 /* NSDate+SSAdd.m in Sources */,
 				E13C56631EE4231600005CFD /* FCFileManager.m in Sources */,
 				E1F661B81EDDA2E5001D98E1 /* UIImage+SSAdd.m in Sources */,
+				CF48AC161EE4E32A009C4AD7 /* UIImage+Tools.m in Sources */,
 				E1F661A81EDDA024001D98E1 /* SSUIAdapter.m in Sources */,
 				E13C56791EE44E6900005CFD /* UILabel+Set.m in Sources */,
 				E13C56831EE44F1800005CFD /* UINavigationBar+Awesome.m in Sources */,
 				E1F6619A1EDD9DB5001D98E1 /* NSObject+SSAdd.m in Sources */,
 				E1F6619F1EDD9DE8001D98E1 /* NSString+SSAdd.m in Sources */,
 				E13C56721EE44BE500005CFD /* NSString+extension.m in Sources */,
+				CF48AC141EE4E32A009C4AD7 /* UIImage+Scale.m in Sources */,
 				E17E21B31EDA7C3B0013D3B9 /* ALPersonalDemo.xcdatamodeld in Sources */,
 				E17E21F51EDAFE0F0013D3B9 /* UIButton+SSImageTitleStyle.m in Sources */,
 				E13C56661EE427B600005CFD /* FileManagerHelper.m in Sources */,
@@ -829,11 +864,14 @@
 				E13C56761EE44DEB00005CFD /* UIBarButtonItem+DDExtension.m in Sources */,
 				E17E21E41EDACCF30013D3B9 /* UIDevice+ALSystemInfo.m in Sources */,
 				CF40EC751EE0191E0003499F /* WWTagEditingView.m in Sources */,
+				CF48AC151EE4E32A009C4AD7 /* UIImage+Thumbnail.m in Sources */,
+				CF48AC131EE4E32A009C4AD7 /* UIImage+Orientaion.m in Sources */,
 				E1F661AC1EDDA14B001D98E1 /* CommonBaseTools.m in Sources */,
 				E17E21EE1EDAF6A20013D3B9 /* ALToastTableViewController.m in Sources */,
 				E1F661C21EDDA39E001D98E1 /* UIView+SSAdd.m in Sources */,
 				E17E21DB1EDABED80013D3B9 /* ALNetWorkViewController.m in Sources */,
 				E1F661B01EDDA287001D98E1 /* UIControl+SSAdd.m in Sources */,
+				CF48AC1A1EE4E35B009C4AD7 /* UIImageView+CircleImage.m in Sources */,
 				E17E21711EDA73760013D3B9 /* main.m in Sources */,
 				E17E21E71EDAF3C20013D3B9 /* UIView+ALFrame.m in Sources */,
 				E13C566E1EE42B8A00005CFD /* HttpTool.m in Sources */,

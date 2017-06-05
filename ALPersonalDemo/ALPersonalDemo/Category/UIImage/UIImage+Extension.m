@@ -291,7 +291,8 @@
 }
 
 + (UIImage *)placeholderImage{
-    return [UIImage imageWithColor: colorWithHex(D9D9D9)]; //[UIImage imageNamed:@"choose_photos_no_photos"];
+    return nil;
+    //return [UIImage imageWithColor: colorWithHex(D9D9D9)]; //[UIImage imageNamed:@"choose_photos_no_photos"];
 }
 
 + (UIImage *)albumsPlaceholderImage{
