@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CF1695A71EE918DF00D174B1 /* UIView+ManualAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = CF1695A41EE918DF00D174B1 /* UIView+ManualAdapter.m */; };
+		CF1695A81EE918DF00D174B1 /* ZHManualAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = CF1695A61EE918DF00D174B1 /* ZHManualAdapter.m */; };
 		CF40EC751EE0191E0003499F /* WWTagEditingView.m in Sources */ = {isa = PBXBuildFile; fileRef = CF40EC741EE0191E0003499F /* WWTagEditingView.m */; };
 		CF40EC781EE01A0D0003499F /* WWTagButtonTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = CF40EC771EE01A0D0003499F /* WWTagButtonTextField.m */; };
 		CF40EC7B1EE01AA90003499F /* ALDemo1ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF40EC7A1EE01AA90003499F /* ALDemo1ViewController.m */; };
@@ -84,6 +86,11 @@
 		44651CCE15993B1899769C3F /* Pods-ALPersonalDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ALPersonalDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-ALPersonalDemo/Pods-ALPersonalDemo.release.xcconfig"; sourceTree = "<group>"; };
 		95C4D560735BE5A3E41488ED /* libPods-ALPersonalDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ALPersonalDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE7837F5255163B32FFF2157 /* Pods-ALPersonalDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ALPersonalDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ALPersonalDemo/Pods-ALPersonalDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		CF16959E1EE8E92A00D174B1 /* testHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = testHeader.h; sourceTree = "<group>"; };
+		CF1695A31EE918DF00D174B1 /* UIView+ManualAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+ManualAdapter.h"; sourceTree = "<group>"; };
+		CF1695A41EE918DF00D174B1 /* UIView+ManualAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+ManualAdapter.m"; sourceTree = "<group>"; };
+		CF1695A51EE918DF00D174B1 /* ZHManualAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZHManualAdapter.h; sourceTree = "<group>"; };
+		CF1695A61EE918DF00D174B1 /* ZHManualAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZHManualAdapter.m; sourceTree = "<group>"; };
 		CF40EC731EE0191E0003499F /* WWTagEditingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WWTagEditingView.h; sourceTree = "<group>"; };
 		CF40EC741EE0191E0003499F /* WWTagEditingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WWTagEditingView.m; sourceTree = "<group>"; };
 		CF40EC761EE01A0D0003499F /* WWTagButtonTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WWTagButtonTextField.h; sourceTree = "<group>"; };
@@ -228,6 +235,17 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		CF1695A21EE918BA00D174B1 /* UIFont */ = {
+			isa = PBXGroup;
+			children = (
+				CF1695A31EE918DF00D174B1 /* UIView+ManualAdapter.h */,
+				CF1695A41EE918DF00D174B1 /* UIView+ManualAdapter.m */,
+				CF1695A51EE918DF00D174B1 /* ZHManualAdapter.h */,
+				CF1695A61EE918DF00D174B1 /* ZHManualAdapter.m */,
+			);
+			path = UIFont;
+			sourceTree = "<group>";
+		};
 		CF48AC171EE4E342009C4AD7 /* UIImageView */ = {
 			isa = PBXGroup;
 			children = (
@@ -369,6 +387,7 @@
 				E17E21BF1EDA7C970013D3B9 /* ViewController.m */,
 				CF40EC791EE01AA90003499F /* ALDemo1ViewController.h */,
 				CF40EC7A1EE01AA90003499F /* ALDemo1ViewController.m */,
+				CF16959E1EE8E92A00D174B1 /* testHeader.h */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -376,6 +395,7 @@
 		E17E21C31EDA82560013D3B9 /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				CF1695A21EE918BA00D174B1 /* UIFont */,
 				CF48AC171EE4E342009C4AD7 /* UIImageView */,
 				E13C56801EE44EFA00005CFD /* UINavigationBar */,
 				E13C56731EE44DCA00005CFD /* UIBarButtonItem */,
@@ -858,8 +878,10 @@
 				E1F661BB1EDDA303001D98E1 /* UILabel+SSAdd.m in Sources */,
 				E17E21C01EDA7C970013D3B9 /* ViewController.m in Sources */,
 				E17E21E01EDAC4630013D3B9 /* HYBNetworking.m in Sources */,
+				CF1695A81EE918DF00D174B1 /* ZHManualAdapter.m in Sources */,
 				CF40EC7B1EE01AA90003499F /* ALDemo1ViewController.m in Sources */,
 				E1F661B41EDDA2B4001D98E1 /* UIGestureRecognizer+SSAdd.m in Sources */,
+				CF1695A71EE918DF00D174B1 /* UIView+ManualAdapter.m in Sources */,
 				CF40EC781EE01A0D0003499F /* WWTagButtonTextField.m in Sources */,
 				E13C56761EE44DEB00005CFD /* UIBarButtonItem+DDExtension.m in Sources */,
 				E17E21E41EDACCF30013D3B9 /* UIDevice+ALSystemInfo.m in Sources */,
