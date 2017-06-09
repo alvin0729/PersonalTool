@@ -11,6 +11,7 @@
 #import "ALToastTableViewController.h"
 #import "UIButton+SSAdd.h"
 #import "ALDemo1ViewController.h"
+#import "ALReactiveCocoaDemoVC.h"
 #import "FileManagerHelper.h"
 
 static NSArray *titles;
@@ -46,7 +47,7 @@ static NSArray *titles;
     self.tableView.dataSource = self;
     [self.view addSubview:self.tableView];
     
-    titles = @[@"ALNetWorkViewController+网络数据类",@"ALToastTableViewController+提示加载",@"ALDemo1ViewController+暂时显示"];
+    titles = @[@"ALNetWorkViewController+网络数据类",@"ALToastTableViewController+提示加载",@"ALReactiveCocoaDemoVC+RAC",@"ALDemo1ViewController+暂时显示"];
     [FileManagerHelper deleteObjectWithFile:[NSString stringWithFormat:@"user_jpg"]  folder:nil sandBoxFolder:kUseDocumentTypeLibraryCaches];
 }
 

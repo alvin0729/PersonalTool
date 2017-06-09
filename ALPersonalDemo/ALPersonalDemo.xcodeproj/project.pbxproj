@@ -27,6 +27,7 @@
 		E13C567C1EE44EC200005CFD /* UIImage+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = E13C567B1EE44EC200005CFD /* UIImage+Extension.m */; };
 		E13C567F1EE44EDC00005CFD /* NSDate+AU.m in Sources */ = {isa = PBXBuildFile; fileRef = E13C567E1EE44EDC00005CFD /* NSDate+AU.m */; };
 		E13C56831EE44F1800005CFD /* UINavigationBar+Awesome.m in Sources */ = {isa = PBXBuildFile; fileRef = E13C56821EE44F1800005CFD /* UINavigationBar+Awesome.m */; };
+		E14AD1871EEB0233003353B6 /* ALReactiveCocoaDemoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E14AD1861EEB0233003353B6 /* ALReactiveCocoaDemoVC.m */; };
 		E17E21711EDA73760013D3B9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E17E21701EDA73760013D3B9 /* main.m */; };
 		E17E218D1EDA73760013D3B9 /* ALPersonalDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E17E218C1EDA73760013D3B9 /* ALPersonalDemoTests.m */; };
 		E17E21981EDA73760013D3B9 /* ALPersonalDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = E17E21971EDA73760013D3B9 /* ALPersonalDemoUITests.m */; };
@@ -126,6 +127,8 @@
 		E13C567E1EE44EDC00005CFD /* NSDate+AU.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+AU.m"; sourceTree = "<group>"; };
 		E13C56811EE44F1800005CFD /* UINavigationBar+Awesome.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationBar+Awesome.h"; sourceTree = "<group>"; };
 		E13C56821EE44F1800005CFD /* UINavigationBar+Awesome.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationBar+Awesome.m"; sourceTree = "<group>"; };
+		E14AD1851EEB0233003353B6 /* ALReactiveCocoaDemoVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALReactiveCocoaDemoVC.h; sourceTree = "<group>"; };
+		E14AD1861EEB0233003353B6 /* ALReactiveCocoaDemoVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALReactiveCocoaDemoVC.m; sourceTree = "<group>"; };
 		E17E216C1EDA73760013D3B9 /* ALPersonalDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ALPersonalDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E17E21701EDA73760013D3B9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E17E21881EDA73760013D3B9 /* ALPersonalDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ALPersonalDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -297,6 +300,15 @@
 				E13C56821EE44F1800005CFD /* UINavigationBar+Awesome.m */,
 			);
 			path = UINavigationBar;
+			sourceTree = "<group>";
+		};
+		E14AD1841EEB01D6003353B6 /* ReactiveCocoa */ = {
+			isa = PBXGroup;
+			children = (
+				E14AD1851EEB0233003353B6 /* ALReactiveCocoaDemoVC.h */,
+				E14AD1861EEB0233003353B6 /* ALReactiveCocoaDemoVC.m */,
+			);
+			path = ReactiveCocoa;
 			sourceTree = "<group>";
 		};
 		E17E21631EDA73760013D3B9 = {
@@ -583,6 +595,7 @@
 		E1F661A41EDD9FE8001D98E1 /* ALTool */ = {
 			isa = PBXGroup;
 			children = (
+				E14AD1841EEB01D6003353B6 /* ReactiveCocoa */,
 				E1F661A91EDDA122001D98E1 /* NSObject */,
 				E1F661A51EDDA001001D98E1 /* UIKit */,
 			);
@@ -864,6 +877,7 @@
 				E1F661B81EDDA2E5001D98E1 /* UIImage+SSAdd.m in Sources */,
 				CF48AC161EE4E32A009C4AD7 /* UIImage+Tools.m in Sources */,
 				E1F661A81EDDA024001D98E1 /* SSUIAdapter.m in Sources */,
+				E14AD1871EEB0233003353B6 /* ALReactiveCocoaDemoVC.m in Sources */,
 				E13C56791EE44E6900005CFD /* UILabel+Set.m in Sources */,
 				E13C56831EE44F1800005CFD /* UINavigationBar+Awesome.m in Sources */,
 				E1F6619A1EDD9DB5001D98E1 /* NSObject+SSAdd.m in Sources */,
