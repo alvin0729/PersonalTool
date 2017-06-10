@@ -74,6 +74,13 @@ static NSArray *titles;
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     NSString *vcStr = [titles[indexPath.row] componentsSeparatedByString:@"+"].firstObject;
     
+    if ([vcStr isEqualToString:@"ALReactiveCocoaDemoVC"]) {
+        UIStoryboard *board = [UIStoryboard storyboardWithName:@"Main" bundle: nil];
+        ALReactiveCocoaDemoVC *childController = [board instantiateViewControllerWithIdentifier: @"ALReactiveCocoaDemoVC"];
+        [self.navigationController pushViewController:childController animated:NO];
+        return;
+    }
+    
     UIViewController *viewController = [[NSClassFromString(vcStr) class] new];
     [self.navigationController pushViewController:viewController animated:NO];
 }

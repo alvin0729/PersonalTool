@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16B2657" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -27,7 +30,7 @@
         <!--Reactive Cocoa DemoVC-->
         <scene sceneID="GGH-sp-qkN">
             <objects>
-                <viewController id="iNq-87-smf" customClass="ALReactiveCocoaDemoVC" sceneMemberID="viewController">
+                <viewController restorationIdentifier="ALReactiveCocoaDemoVC" storyboardIdentifier="ALReactiveCocoaDemoVC" id="iNq-87-smf" customClass="ALReactiveCocoaDemoVC" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="EWj-SD-Xo1"/>
                         <viewControllerLayoutGuide type="bottom" id="Hxn-RI-1i9"/>
@@ -37,6 +40,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="u89-DN-zvH">
+                                <rect key="frame" x="48" y="28" width="280" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="wAH-9S-Ku5"/>
                                 </constraints>
@@ -44,7 +48,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.84705882349999995" green="0.57254901960000004" blue="0.63529411759999999" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="u89-DN-zvH" firstAttribute="top" secondItem="EWj-SD-Xo1" secondAttribute="bottom" constant="8" id="aNg-Z6-pXL"/>
                             <constraint firstItem="u89-DN-zvH" firstAttribute="leading" secondItem="JbX-mT-efF" secondAttribute="leadingMargin" constant="32" id="xdX-Ol-lQg"/>
