@@ -10,7 +10,8 @@
 
 /** 评论假数据的id */
 NSString * const MHAllCommentsId = @"MHAllCommentsId" ;
-
+/** 文本行高 */
+CGFloat const  MHCommentContentLineSpacing = 10.0f;
 
 @implementation MHComment
 
@@ -34,14 +35,14 @@ NSString * const MHAllCommentsId = @"MHAllCommentsId" ;
         NSString *textString = [NSString stringWithFormat:@"%@",self.text];
         
         NSMutableAttributedString *mutableAttributedString = [[NSMutableAttributedString alloc] initWithString:textString];
-        mutableAttributedString.yy_font = MHCommentTextFont;
-        mutableAttributedString.yy_color = MHGlobalOrangeTextColor;
+        mutableAttributedString.yy_font = [UIFont boldSystemFontOfSize:12];
+        mutableAttributedString.yy_color = [UIColor colorWithHexString:@"#FF9500"];
         mutableAttributedString.yy_lineSpacing = MHCommentContentLineSpacing;
         return mutableAttributedString;
     }
     
     
-    if (!MHObjectIsNil(self.toUser) && self.toUser.nickname.length>0) {
+    if (NotNilAndNull(self.toUser) && self.toUser.nickname.length>0) {
         // 有回复
         NSString *textString = [NSString stringWithFormat:@"%@回复%@: %@", self.fromUser.nickname, self.toUser.nickname, self.text];;
         NSMutableAttributedString *mutableAttributedString = [[NSMutableAttributedString alloc] initWithString:textString];

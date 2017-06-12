@@ -17,7 +17,7 @@
 #import "ALToolMacro.h"
 #import "UIColor+SSAdd.h"
 
-
+#import "YYText.h"
 
 //判断运行时类是ipad，如果是则返回true，否则返回false
 //BOOL getRuntimeClassIsIpad()

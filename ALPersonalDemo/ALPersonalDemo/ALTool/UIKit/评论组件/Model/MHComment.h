@@ -11,6 +11,8 @@
 
 /** 评论假数据 */
 UIKIT_EXTERN NSString * const MHAllCommentsId;
+/** 文本行高 */
+UIKIT_EXTERN CGFloat const  MHCommentContentLineSpacing;
 
 @interface MHComment : NSObject
 

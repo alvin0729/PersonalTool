@@ -6,38 +6,43 @@
 	<dict>
 		<key>AFNetworking.xcscheme</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>1</integer>
+			<key>isShown</key>
+			<false/>
 		</dict>
 		<key>Pods-ALPersonalDemo.xcscheme</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>2</integer>
+			<key>isShown</key>
+			<false/>
 		</dict>
 		<key>ReactiveCocoa.xcscheme</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>3</integer>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>YYText.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>3D9775DE7203B71CB09716C9D81BC9A5</key>
+		<key>786D57210704B1FBD6DB6FE201C6B3E7</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>5D9B66B2B118346ACFFAD01285E29B37</key>
+		<key>9E033EDB5EC0819481B0546434FA577B</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>928353533005A4198EBDA5B700D37B64</key>
+		<key>EF462BF06F2B83E3B69E13F0DD26A5FD</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>AFCC3BD11864DADCF014C338A9CD9FE9</key>
+		<key>FE24F2D16C1FE0B08895C19215B09FC3</key>
 		<dict>
 			<key>primary</key>
 			<true/>

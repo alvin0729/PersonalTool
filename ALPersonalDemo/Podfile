@@ -3,6 +3,9 @@ inhibit_all_warnings!
 
 target "ALPersonalDemo" do
 
+#富文本
+pod 'YYText', '~> 1.0.5'
+
 pod 'AFNetworking', '~> 3.0.4'
 pod 'ReactiveCocoa', '2.5'
 end
