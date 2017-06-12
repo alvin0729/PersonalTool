@@ -17,6 +17,13 @@
 		CF48AC151EE4E32A009C4AD7 /* UIImage+Thumbnail.m in Sources */ = {isa = PBXBuildFile; fileRef = CF48AC101EE4E32A009C4AD7 /* UIImage+Thumbnail.m */; };
 		CF48AC161EE4E32A009C4AD7 /* UIImage+Tools.m in Sources */ = {isa = PBXBuildFile; fileRef = CF48AC121EE4E32A009C4AD7 /* UIImage+Tools.m */; };
 		CF48AC1A1EE4E35B009C4AD7 /* UIImageView+CircleImage.m in Sources */ = {isa = PBXBuildFile; fileRef = CF48AC191EE4E35B009C4AD7 /* UIImageView+CircleImage.m */; };
+		CFC1EC8B1EEE617B00641E5D /* UIView+HGCorner.m in Sources */ = {isa = PBXBuildFile; fileRef = CFC1EC8A1EEE617B00641E5D /* UIView+HGCorner.m */; };
+		CFC1EC8E1EEE895000641E5D /* podSource.rtf in Resources */ = {isa = PBXBuildFile; fileRef = CFC1EC8D1EEE895000641E5D /* podSource.rtf */; };
+		CFC1EC941EEE9F6E00641E5D /* MHYouKuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = CFC1EC931EEE9F6E00641E5D /* MHYouKuItem.m */; };
+		CFC1EC971EEE9F9200641E5D /* MHYouKuCommentItem.m in Sources */ = {isa = PBXBuildFile; fileRef = CFC1EC961EEE9F9200641E5D /* MHYouKuCommentItem.m */; };
+		CFC1EC9A1EEE9FC100641E5D /* MHYouKuTopicController.m in Sources */ = {isa = PBXBuildFile; fileRef = CFC1EC991EEE9FC100641E5D /* MHYouKuTopicController.m */; };
+		CFC1EC9D1EEEA1A700641E5D /* MHUser.m in Sources */ = {isa = PBXBuildFile; fileRef = CFC1EC9C1EEEA1A700641E5D /* MHUser.m */; };
+		CFC1ECA01EEEA1E000641E5D /* MHComment.m in Sources */ = {isa = PBXBuildFile; fileRef = CFC1EC9F1EEEA1E000641E5D /* MHComment.m */; };
 		D2195EE7F67E7C822F1A5342 /* libPods-ALPersonalDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 95C4D560735BE5A3E41488ED /* libPods-ALPersonalDemo.a */; };
 		E13C56631EE4231600005CFD /* FCFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E13C56621EE4231600005CFD /* FCFileManager.m */; };
 		E13C56661EE427B600005CFD /* FileManagerHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = E13C56651EE427B600005CFD /* FileManagerHelper.m */; };
@@ -108,6 +115,19 @@
 		CF48AC121EE4E32A009C4AD7 /* UIImage+Tools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Tools.m"; sourceTree = "<group>"; };
 		CF48AC181EE4E35B009C4AD7 /* UIImageView+CircleImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+CircleImage.h"; sourceTree = "<group>"; };
 		CF48AC191EE4E35B009C4AD7 /* UIImageView+CircleImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+CircleImage.m"; sourceTree = "<group>"; };
+		CFC1EC891EEE617B00641E5D /* UIView+HGCorner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+HGCorner.h"; sourceTree = "<group>"; };
+		CFC1EC8A1EEE617B00641E5D /* UIView+HGCorner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+HGCorner.m"; sourceTree = "<group>"; };
+		CFC1EC8D1EEE895000641E5D /* podSource.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = podSource.rtf; sourceTree = "<group>"; };
+		CFC1EC921EEE9F6E00641E5D /* MHYouKuItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MHYouKuItem.h; sourceTree = "<group>"; };
+		CFC1EC931EEE9F6E00641E5D /* MHYouKuItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MHYouKuItem.m; sourceTree = "<group>"; };
+		CFC1EC951EEE9F9200641E5D /* MHYouKuCommentItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MHYouKuCommentItem.h; sourceTree = "<group>"; };
+		CFC1EC961EEE9F9200641E5D /* MHYouKuCommentItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MHYouKuCommentItem.m; sourceTree = "<group>"; };
+		CFC1EC981EEE9FC100641E5D /* MHYouKuTopicController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MHYouKuTopicController.h; sourceTree = "<group>"; };
+		CFC1EC991EEE9FC100641E5D /* MHYouKuTopicController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MHYouKuTopicController.m; sourceTree = "<group>"; };
+		CFC1EC9B1EEEA1A700641E5D /* MHUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MHUser.h; sourceTree = "<group>"; };
+		CFC1EC9C1EEEA1A700641E5D /* MHUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MHUser.m; sourceTree = "<group>"; };
+		CFC1EC9E1EEEA1E000641E5D /* MHComment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MHComment.h; sourceTree = "<group>"; };
+		CFC1EC9F1EEEA1E000641E5D /* MHComment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MHComment.m; sourceTree = "<group>"; };
 		E13C56611EE4231600005CFD /* FCFileManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FCFileManager.h; sourceTree = "<group>"; };
 		E13C56621EE4231600005CFD /* FCFileManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FCFileManager.m; sourceTree = "<group>"; };
 		E13C56641EE427B600005CFD /* FileManagerHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileManagerHelper.h; sourceTree = "<group>"; };
@@ -256,6 +276,47 @@
 				CF48AC191EE4E35B009C4AD7 /* UIImageView+CircleImage.m */,
 			);
 			path = UIImageView;
+			sourceTree = "<group>";
+		};
+		CFC1EC8C1EEE882E00641E5D /* 评论组件 */ = {
+			isa = PBXGroup;
+			children = (
+				CFC1EC911EEE9C7C00641E5D /* Controller */,
+				CFC1EC901EEE9C6B00641E5D /* View */,
+				CFC1EC8F1EEE9C5600641E5D /* Model */,
+			);
+			path = "评论组件";
+			sourceTree = "<group>";
+		};
+		CFC1EC8F1EEE9C5600641E5D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CFC1EC9B1EEEA1A700641E5D /* MHUser.h */,
+				CFC1EC9C1EEEA1A700641E5D /* MHUser.m */,
+				CFC1EC9E1EEEA1E000641E5D /* MHComment.h */,
+				CFC1EC9F1EEEA1E000641E5D /* MHComment.m */,
+				CFC1EC921EEE9F6E00641E5D /* MHYouKuItem.h */,
+				CFC1EC931EEE9F6E00641E5D /* MHYouKuItem.m */,
+				CFC1EC951EEE9F9200641E5D /* MHYouKuCommentItem.h */,
+				CFC1EC961EEE9F9200641E5D /* MHYouKuCommentItem.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CFC1EC901EEE9C6B00641E5D /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CFC1EC911EEE9C7C00641E5D /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				CFC1EC981EEE9FC100641E5D /* MHYouKuTopicController.h */,
+				CFC1EC991EEE9FC100641E5D /* MHYouKuTopicController.m */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		D2D59E4CC23B391AD24269D2 /* Pods */ = {
@@ -480,6 +541,8 @@
 		E17E21E11EDACCAD0013D3B9 /* UIView */ = {
 			isa = PBXGroup;
 			children = (
+				CFC1EC891EEE617B00641E5D /* UIView+HGCorner.h */,
+				CFC1EC8A1EEE617B00641E5D /* UIView+HGCorner.m */,
 				E1F661C01EDDA39E001D98E1 /* UIView+SSAdd.h */,
 				E1F661C11EDDA39E001D98E1 /* UIView+SSAdd.m */,
 				E17E21E81EDAF6160013D3B9 /* UIView+Toast.h */,
@@ -605,12 +668,14 @@
 		E1F661A51EDDA001001D98E1 /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
+				CFC1EC8C1EEE882E00641E5D /* 评论组件 */,
 				E1F661A61EDDA024001D98E1 /* SSUIAdapter.h */,
 				E1F661A71EDDA024001D98E1 /* SSUIAdapter.m */,
 				CF40EC761EE01A0D0003499F /* WWTagButtonTextField.h */,
 				CF40EC771EE01A0D0003499F /* WWTagButtonTextField.m */,
 				CF40EC731EE0191E0003499F /* WWTagEditingView.h */,
 				CF40EC741EE0191E0003499F /* WWTagEditingView.m */,
+				CFC1EC8D1EEE895000641E5D /* podSource.rtf */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -786,6 +851,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E17E21D21EDAA9EF0013D3B9 /* LaunchScreen.storyboard in Resources */,
+				CFC1EC8E1EEE895000641E5D /* podSource.rtf in Resources */,
 				E17E21D31EDAA9EF0013D3B9 /* Main.storyboard in Resources */,
 				E17E21D51EDAAC050013D3B9 /* SmartPush.zip in Resources */,
 				E17E21CE1EDAA2050013D3B9 /* autobuild.py in Resources */,
@@ -874,12 +940,14 @@
 				E1F661841EDD9BB9001D98E1 /* UILabel+Copyable.m in Sources */,
 				E1F661881EDD9C66001D98E1 /* NSDate+SSAdd.m in Sources */,
 				E13C56631EE4231600005CFD /* FCFileManager.m in Sources */,
+				CFC1EC941EEE9F6E00641E5D /* MHYouKuItem.m in Sources */,
 				E1F661B81EDDA2E5001D98E1 /* UIImage+SSAdd.m in Sources */,
 				CF48AC161EE4E32A009C4AD7 /* UIImage+Tools.m in Sources */,
 				E1F661A81EDDA024001D98E1 /* SSUIAdapter.m in Sources */,
 				E14AD1871EEB0233003353B6 /* ALReactiveCocoaDemoVC.m in Sources */,
 				E13C56791EE44E6900005CFD /* UILabel+Set.m in Sources */,
 				E13C56831EE44F1800005CFD /* UINavigationBar+Awesome.m in Sources */,
+				CFC1EC971EEE9F9200641E5D /* MHYouKuCommentItem.m in Sources */,
 				E1F6619A1EDD9DB5001D98E1 /* NSObject+SSAdd.m in Sources */,
 				E1F6619F1EDD9DE8001D98E1 /* NSString+SSAdd.m in Sources */,
 				E13C56721EE44BE500005CFD /* NSString+extension.m in Sources */,
@@ -890,6 +958,7 @@
 				E1F6618C1EDD9CBC001D98E1 /* NSArray+SSAdd.m in Sources */,
 				E13C567C1EE44EC200005CFD /* UIImage+Extension.m in Sources */,
 				E1F661BB1EDDA303001D98E1 /* UILabel+SSAdd.m in Sources */,
+				CFC1ECA01EEEA1E000641E5D /* MHComment.m in Sources */,
 				E17E21C01EDA7C970013D3B9 /* ViewController.m in Sources */,
 				E17E21E01EDAC4630013D3B9 /* HYBNetworking.m in Sources */,
 				CF1695A81EE918DF00D174B1 /* ZHManualAdapter.m in Sources */,
@@ -898,12 +967,15 @@
 				CF1695A71EE918DF00D174B1 /* UIView+ManualAdapter.m in Sources */,
 				CF40EC781EE01A0D0003499F /* WWTagButtonTextField.m in Sources */,
 				E13C56761EE44DEB00005CFD /* UIBarButtonItem+DDExtension.m in Sources */,
+				CFC1EC8B1EEE617B00641E5D /* UIView+HGCorner.m in Sources */,
 				E17E21E41EDACCF30013D3B9 /* UIDevice+ALSystemInfo.m in Sources */,
 				CF40EC751EE0191E0003499F /* WWTagEditingView.m in Sources */,
 				CF48AC151EE4E32A009C4AD7 /* UIImage+Thumbnail.m in Sources */,
 				CF48AC131EE4E32A009C4AD7 /* UIImage+Orientaion.m in Sources */,
+				CFC1EC9D1EEEA1A700641E5D /* MHUser.m in Sources */,
 				E1F661AC1EDDA14B001D98E1 /* CommonBaseTools.m in Sources */,
 				E17E21EE1EDAF6A20013D3B9 /* ALToastTableViewController.m in Sources */,
+				CFC1EC9A1EEE9FC100641E5D /* MHYouKuTopicController.m in Sources */,
 				E1F661C21EDDA39E001D98E1 /* UIView+SSAdd.m in Sources */,
 				E17E21DB1EDABED80013D3B9 /* ALNetWorkViewController.m in Sources */,
 				E1F661B01EDDA287001D98E1 /* UIControl+SSAdd.m in Sources */,
