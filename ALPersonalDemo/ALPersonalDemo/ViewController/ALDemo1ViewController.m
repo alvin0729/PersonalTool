@@ -8,6 +8,7 @@
 
 #import "ALDemo1ViewController.h"
 #import "WWTagEditingView.h"
+#import "BBAlertView.h"
 
 @interface ALDemo1ViewController ()
 @property(nonatomic,strong)WWTagEditingView *edtingView;
@@ -17,9 +18,31 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.edtingView = [[WWTagEditingView alloc]initWithFrame:CGRectMake(10, 80, self.view.bounds.size.width-20, 200)];
-    self.edtingView.backgroundColor = [UIColor grayColor];
-    [self.view addSubview:self.edtingView];
+    
+    UIView *view = [UIView new];
+    view.frame = CGRectMake(0, 50, 200, 300);
+    view.backgroundColor = [UIColor orangeColor];
+    
+    BBAlertView *alert = [[BBAlertView alloc] initWithStyle:BBAlertViewStyleCustomView
+                                                      Title:@"hello"
+                                                    message:@"Product_AlreadyAddedToShopCart"
+                                                 customView:view
+                                                   delegate:nil
+                                          cancelButtonTitle:@"Confirm"
+                                          otherButtonTitles:@"Product_GoToShopCart"];
+    [alert show];
+    [alert setConfirmBlock:^{
+        
+        ALAppLog(@"----hehe");
+    }];
+    [alert setCancelBlock:^{
+        
+    }];
+    
+    
+//    self.edtingView = [[WWTagEditingView alloc]initWithFrame:CGRectMake(10, 80, self.view.bounds.size.width-20, 200)];
+//    self.edtingView.backgroundColor = [UIColor grayColor];
+//    [self.view addSubview:self.edtingView];
 }
 
 - (void)didReceiveMemoryWarning {
