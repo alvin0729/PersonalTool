@@ -8,6 +8,10 @@
 
 #import "MHComment.h"
 
+#define MHCommentTextFont        [UIFont boldSystemFontOfSize:12]
+#define MHGlobalOrangeTextColor  [UIColor colorWithHexString:@"#FF9500"]
+#define MHGlobalBlackTextColor   [UIColor colorWithHexString:@"#323232"]
+
 /** 评论假数据的id */
 NSString * const MHAllCommentsId = @"MHAllCommentsId" ;
 /** 文本行高 */
@@ -35,8 +39,8 @@ CGFloat const  MHCommentContentLineSpacing = 10.0f;
         NSString *textString = [NSString stringWithFormat:@"%@",self.text];
         
         NSMutableAttributedString *mutableAttributedString = [[NSMutableAttributedString alloc] initWithString:textString];
-        mutableAttributedString.yy_font = [UIFont boldSystemFontOfSize:12];
-        mutableAttributedString.yy_color = [UIColor colorWithHexString:@"#FF9500"];
+        mutableAttributedString.yy_font = MHCommentTextFont;
+        mutableAttributedString.yy_color = MHGlobalOrangeTextColor;
         mutableAttributedString.yy_lineSpacing = MHCommentContentLineSpacing;
         return mutableAttributedString;
     }
