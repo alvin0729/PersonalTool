@@ -22,7 +22,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-<<<<<<< HEAD
+
 }
 
 -(void)testTEXTKit{
@@ -35,7 +35,7 @@
     self.textView.editable = NO;
     self.textView.scrollEnabled = NO;
     [self.view addSubview:self.textView];
-=======
+
     UIView *view = [UIView new];
     view.frame = CGRectMake(0, 50, 200, 300);
     view.backgroundColor = [UIColor orangeColor];
@@ -65,7 +65,6 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
->>>>>>> 42937b927964399777a99c213812b797d7660489
 }
 
 

@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		CF1695A71EE918DF00D174B1 /* UIView+ManualAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = CF1695A41EE918DF00D174B1 /* UIView+ManualAdapter.m */; };
 		CF1695A81EE918DF00D174B1 /* ZHManualAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = CF1695A61EE918DF00D174B1 /* ZHManualAdapter.m */; };
+		CF2185F71EF36CC800B151DE /* CharacterLimitTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = CF2185F61EF36CC800B151DE /* CharacterLimitTextField.m */; };
 		CF40EC751EE0191E0003499F /* WWTagEditingView.m in Sources */ = {isa = PBXBuildFile; fileRef = CF40EC741EE0191E0003499F /* WWTagEditingView.m */; };
 		CF40EC781EE01A0D0003499F /* WWTagButtonTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = CF40EC771EE01A0D0003499F /* WWTagButtonTextField.m */; };
 		CF40EC7B1EE01AA90003499F /* ALDemo1ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF40EC7A1EE01AA90003499F /* ALDemo1ViewController.m */; };
@@ -124,6 +125,8 @@
 		CF1695A41EE918DF00D174B1 /* UIView+ManualAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+ManualAdapter.m"; sourceTree = "<group>"; };
 		CF1695A51EE918DF00D174B1 /* ZHManualAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZHManualAdapter.h; sourceTree = "<group>"; };
 		CF1695A61EE918DF00D174B1 /* ZHManualAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZHManualAdapter.m; sourceTree = "<group>"; };
+		CF2185F51EF36CC800B151DE /* CharacterLimitTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CharacterLimitTextField.h; sourceTree = "<group>"; };
+		CF2185F61EF36CC800B151DE /* CharacterLimitTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CharacterLimitTextField.m; sourceTree = "<group>"; };
 		CF40EC731EE0191E0003499F /* WWTagEditingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WWTagEditingView.h; sourceTree = "<group>"; };
 		CF40EC741EE0191E0003499F /* WWTagEditingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WWTagEditingView.m; sourceTree = "<group>"; };
 		CF40EC761EE01A0D0003499F /* WWTagButtonTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WWTagButtonTextField.h; sourceTree = "<group>"; };
@@ -344,6 +347,15 @@
 				CF1695A61EE918DF00D174B1 /* ZHManualAdapter.m */,
 			);
 			path = UIFont;
+			sourceTree = "<group>";
+		};
+		CF2185F41EF36C7B00B151DE /* UITextfield */ = {
+			isa = PBXGroup;
+			children = (
+				CF2185F51EF36CC800B151DE /* CharacterLimitTextField.h */,
+				CF2185F61EF36CC800B151DE /* CharacterLimitTextField.m */,
+			);
+			path = UITextfield;
 			sourceTree = "<group>";
 		};
 		CF48AC171EE4E342009C4AD7 /* UIImageView */ = {
@@ -822,6 +834,7 @@
 		E1F661A51EDDA001001D98E1 /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
+				CF2185F41EF36C7B00B151DE /* UITextfield */,
 				CFC1EC8C1EEE882E00641E5D /* 评论组件 */,
 				E1F661A61EDDA024001D98E1 /* SSUIAdapter.h */,
 				E1F661A71EDDA024001D98E1 /* SSUIAdapter.m */,
@@ -1118,18 +1131,16 @@
 				E13C56721EE44BE500005CFD /* NSString+extension.m in Sources */,
 				CF48AC141EE4E32A009C4AD7 /* UIImage+Scale.m in Sources */,
 				E17E21B31EDA7C3B0013D3B9 /* ALPersonalDemo.xcdatamodeld in Sources */,
-<<<<<<< HEAD
 				CFDC0AF91EF1143C0099E3E5 /* UIImage+HXExtension.m in Sources */,
-=======
 				E14B8A721EF1889D0021D665 /* NSData+Base64.m in Sources */,
 				E14B8A7D1EF1889D0021D665 /* SystemInfo.m in Sources */,
->>>>>>> 42937b927964399777a99c213812b797d7660489
 				E17E21F51EDAFE0F0013D3B9 /* UIButton+SSImageTitleStyle.m in Sources */,
 				E13C56661EE427B600005CFD /* FileManagerHelper.m in Sources */,
 				E1F6618C1EDD9CBC001D98E1 /* NSArray+SSAdd.m in Sources */,
 				E14B8A7C1EF1889D0021D665 /* SNTimer.m in Sources */,
 				E13C567C1EE44EC200005CFD /* UIImage+Extension.m in Sources */,
 				E14B8A811EF1889D0021D665 /* UIWebView+SNFoundation.m in Sources */,
+				CF2185F71EF36CC800B151DE /* CharacterLimitTextField.m in Sources */,
 				E1F661BB1EDDA303001D98E1 /* UILabel+SSAdd.m in Sources */,
 				CFC1ECA01EEEA1E000641E5D /* MHComment.m in Sources */,
 				E17E21C01EDA7C970013D3B9 /* ViewController.m in Sources */,
@@ -1153,11 +1164,8 @@
 				E1F661AC1EDDA14B001D98E1 /* CommonBaseTools.m in Sources */,
 				E14B8A791EF1889D0021D665 /* SNCache.m in Sources */,
 				E17E21EE1EDAF6A20013D3B9 /* ALToastTableViewController.m in Sources */,
-<<<<<<< HEAD
 				CFC1EC9A1EEE9FC100641E5D /* MHYouKuTopicController.m in Sources */,
-=======
 				E14B8A7F1EF1889D0021D665 /* UIImage+SNFoundation.m in Sources */,
->>>>>>> 42937b927964399777a99c213812b797d7660489
 				E1F661C21EDDA39E001D98E1 /* UIView+SSAdd.m in Sources */,
 				E14B8A7E1EF1889D0021D665 /* UIColor+SNFoundation.m in Sources */,
 				E17E21DB1EDABED80013D3B9 /* ALNetWorkViewController.m in Sources */,
