@@ -14,6 +14,8 @@ PODS:
   - AFNetworking/Serialization (3.0.4)
   - AFNetworking/UIKit (3.0.4):
     - AFNetworking/NSURLSession
+  - Masonry (1.0.2)
+  - MJRefresh (3.1.12)
   - ReactiveCocoa (2.5):
     - ReactiveCocoa/UI (= 2.5)
   - ReactiveCocoa/Core (2.5):
@@ -21,18 +23,27 @@ PODS:
   - ReactiveCocoa/no-arc (2.5)
   - ReactiveCocoa/UI (2.5):
     - ReactiveCocoa/Core
+  - SDWebImage (3.8.2):
+    - SDWebImage/Core (= 3.8.2)
+  - SDWebImage/Core (3.8.2)
   - YYText (1.0.7)
 
 DEPENDENCIES:
   - AFNetworking (~> 3.0.4)
+  - Masonry (~> 1.0.1)
+  - MJRefresh (~> 3.1.12)
   - ReactiveCocoa (= 2.5)
+  - SDWebImage
   - YYText (~> 1.0.5)
 
 SPEC CHECKSUMS:
   AFNetworking: a0075feb321559dc78d9d85b55d11caa19eabb93
+  Masonry: 7c429b56da9d4ee0bbb3ed77a5ea710d6a5df39e
+  MJRefresh: b96cdb21c4aa75a7b07654311ab2f315c497e806
   ReactiveCocoa: e2db045570aa97c695e7aa97c2bcab222ae51f4a
+  SDWebImage: 098e97e6176540799c27e804c96653ee0833d13c
   YYText: 5c461d709e24d55a182d1441c41dc639a18a4849
 
-PODFILE CHECKSUM: 91bab6836680512987819099ce4d873ffe298d80
+PODFILE CHECKSUM: 270c217d0afa58e8ed1174c3b52fe9b4f151072c
 
-COCOAPODS: 1.2.1.beta.1
+COCOAPODS: 1.0.1

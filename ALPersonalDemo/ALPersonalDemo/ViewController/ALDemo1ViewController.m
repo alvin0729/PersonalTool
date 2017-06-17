@@ -9,6 +9,7 @@
 #import "ALDemo1ViewController.h"
 #import "WWTagEditingView.h"
 #import "BBAlertView.h"
+#import "MHYouKuTopicController.h"
 
 @interface ALDemo1ViewController ()
 @property(nonatomic,strong)WWTagEditingView *edtingView;
@@ -21,7 +22,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    MHYouKuTopicController *vc = [MHYouKuTopicController new];
+    [self.navigationController pushViewController:vc animated:NO];
 
 }
 

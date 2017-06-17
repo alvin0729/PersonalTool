@@ -11,10 +11,27 @@
 #import "ViewController.h"
 
 @interface AppDelegate ()<UNUserNotificationCenterDelegate>
-
+/**
+ *  用户数据 只读
+ */
+@property (nonatomic , strong) MHAccount *account;
 @end
 
 @implementation AppDelegate
+#pragma mark- 获取appdelegate
++ (AppDelegate *)sharedDelegate
+{
+    return (AppDelegate *)[[UIApplication sharedApplication] delegate];
+}
+
+- (MHAccount *)account
+{
+    if (_account == nil) {
+        // 内部初始化了数据
+        _account = [[MHAccount alloc] init];
+    }
+    return _account;
+}
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {

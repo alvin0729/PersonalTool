@@ -7,15 +7,13 @@
 //
 
 #import "MHComment.h"
+#import "MHConstant.h"
 
 #define MHCommentTextFont        [UIFont boldSystemFontOfSize:12]
 #define MHGlobalOrangeTextColor  [UIColor colorWithHexString:@"#FF9500"]
 #define MHGlobalBlackTextColor   [UIColor colorWithHexString:@"#323232"]
 
-/** 评论假数据的id */
-NSString * const MHAllCommentsId = @"MHAllCommentsId" ;
-/** 文本行高 */
-CGFloat const  MHCommentContentLineSpacing = 10.0f;
+
 
 @implementation MHComment
 
@@ -97,9 +95,6 @@ CGFloat const  MHCommentContentLineSpacing = 10.0f;
         YYTextHighlight *fromUserHighlight = [YYTextHighlight highlightWithBackgroundColor:[UIColor colorWithWhite:0.000 alpha:0.220]];
         fromUserHighlight.userInfo = @{MHCommentUserKey:self.fromUser};
         [mutableAttributedString yy_setTextHighlight:fromUserHighlight range:fromUserRange];
-        
-        
-        
         return mutableAttributedString;
     }
     

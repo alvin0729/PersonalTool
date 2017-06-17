@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import <CoreData/CoreData.h>
+#import "MHAccount.h"
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
@@ -16,6 +17,16 @@
 @property (readonly, strong) NSPersistentContainer *persistentContainer;
 
 - (void)saveContext;
+
+/**
+ *  用户数据 只读
+ */
+@property (nonatomic , strong ,readonly) MHAccount *account;
+/**
+ *  获取delegate
+ *
+ */
++ (AppDelegate *)sharedDelegate;
 
 
 @end

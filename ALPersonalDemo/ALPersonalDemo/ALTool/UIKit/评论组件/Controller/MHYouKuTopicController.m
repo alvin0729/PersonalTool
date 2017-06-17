@@ -19,6 +19,14 @@
 #import "MHYouKuInputPanelView.h"
 #import "MHTopicManager.h"
 #import "MHYouKuCommentItem.h"
+#import "MHConstant.h"
+#import "NSDateFormatter+Extension.h"
+#import "NSObject+MHRandom.h"
+#import "NSDate+Extension.h"
+#import "MHWebImageTool.h"
+#import "UIImage+MHCrop.h"
+#import "UIImage+MHExtension.h"
+
 @interface MHYouKuTopicController ()<UITableViewDelegate,UITableViewDataSource , MHCommentCellDelegate ,MHTopicHeaderViewDelegate , MHYouKuInputPanelViewDelegate>
 
 /** MHTopicFrame 模型 */
@@ -54,15 +62,14 @@
 
 - (void)dealloc
 {
-    MHDealloc;
     [MHNotificationCenter removeObserver:self];
 }
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
-    // 初始化
+    self.mediabase_id = @"MHAllCommentsId";
+    // 初始化s
     [self _setup];
     
     // 初始化数据
@@ -253,6 +260,7 @@
 - (void)_setupNavigationItem
 {
     //
+    self.automaticallyAdjustsScrollViewInsets = NO;
 }
 
 #pragma mark - 设置子控件
@@ -298,7 +306,8 @@
     [closeBtn addTarget:self action:@selector(_closeBtnDidClicked:) forControlEvents:UIControlEventTouchUpInside];
     [titleView addSubview:closeBtn];
     
-    MHDivider *bottomLine = [MHDivider divider];
+    UIView *bottomLine = [UIView new];
+    bottomLine.backgroundColor = [UIColor purpleColor];
     [titleView addSubview:bottomLine];
     
     // 布局
@@ -344,7 +353,7 @@
     [self.view addSubview:commentView];
     
     // 用户头像
-    MHImageView *avatar = [MHImageView imageView];
+    UIImageView *avatar = [UIImageView new];
     avatar.image = MHGlobalUserDefaultAvatar;
     MHAccount *account = [AppDelegate sharedDelegate].account;
     if (!MHObjectIsNil(account)) {
@@ -353,8 +362,7 @@
             avatar.image = MHObjectIsNil(image)?MHGlobalUserDefaultAvatar.mh_circleImage:image.mh_circleImage;
             
         }];
-    }
-    
+    }    
     
     [commentView addSubview:avatar];
     
@@ -375,7 +383,8 @@
     [topicTypeBtn addTarget:self action:@selector(_topicTypeBtnDidClicked:) forControlEvents:UIControlEventTouchUpInside];
     [commentView addSubview:topicTypeBtn];
     
-    MHDivider *bottomLine = [MHDivider divider];
+    UIView *bottomLine = [UIView new];
+    bottomLine.backgroundColor = [UIColor grayColor];
     [commentView addSubview:bottomLine];
     
     // 布局
@@ -493,10 +502,10 @@
     MHTopicFrame *topicFrame = [note.userInfo objectForKey:MHCommentReplySuccessKey];
     
     // 这里需要判断数据 不是同一个视频  直接退出
-    if (!(topicFrame.topic.mediabase_id.longLongValue == self.mediabase_id.longLongValue))
-    {
-        return;
-    }
+//    if (!(topicFrame.topic.mediabase_id.longLongValue == self.mediabase_id.longLongValue))
+//    {
+//        return;
+//    }
     
     if (topicFrame == self.selectedTopicFrame) {
         // 刷新组
@@ -530,8 +539,8 @@
     // 评论框按钮被点击
     MHYouKuCommentController *comment = [[MHYouKuCommentController alloc] init];
     comment.mediabase_id = self.mediabase_id;
-    MHNavigationController *nav = [[MHNavigationController alloc] initWithRootViewController:comment];
-    [self.parentViewController presentViewController:nav animated:YES completion:nil];
+//    MHNavigationController *nav = [[MHNavigationController alloc] initWithRootViewController:comment];
+    [self.parentViewController presentViewController:comment animated:YES completion:nil];
 }
 
 - (void)_topicTypeBtnDidClicked:(UIButton *)sender
@@ -717,16 +726,16 @@
         MHYouKuTopicDetailController *topicDetail = [[MHYouKuTopicDetailController alloc] init];
         topicDetail.topicFrame = topicFrame;
         // push
-        [self.parentViewController.navigationController pushViewController:topicDetail animated:YES];
+        [self.navigationController pushViewController:topicDetail animated:YES];
         return;
     }
     
     // 这里是回复
 
     // 回复自己则跳过
-    if ([commentFrame.comment.fromUser.userId isEqualToString:[AppDelegate sharedDelegate].account.userId]) {
-        return;
-    }
+//    if ([commentFrame.comment.fromUser.userId isEqualToString:[AppDelegate sharedDelegate].account.userId]) {
+//        return;
+//    }
     
     // 回复评论
     MHCommentReply *commentReply = [[MHTopicManager sharedManager] commentReplyWithModel:commentFrame.comment];

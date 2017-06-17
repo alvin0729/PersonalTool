@@ -18,6 +18,16 @@ typedef NS_ENUM(NSInteger, CalculateType) {
 
 @interface NSString (SSAdd)
 
+/**
+ *  动态计算文字的宽高（单行）
+ *
+ *  @param font 文字的字体
+ *
+ *  @return 计算的宽高
+ */
+- (CGSize)mh_sizeWithFont:(UIFont *)font;
+
+
 -(BOOL)containsString:(NSString *)astring;
 - (NSString *)SXstringByReplacingWihtNSRegularExpressionString:(NSString *)expressionString withString:(NSString *)newString;
 - (NSString *)URLEncoding;

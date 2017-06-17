@@ -13,6 +13,18 @@
 
 @implementation NSString (SSAdd)
 
+/**
+ *  动态计算文字的宽高（单行）
+ *  @param font 文字的字体
+ *  @return 计算的宽高
+ */
+- (CGSize)mh_sizeWithFont:(UIFont *)font
+{
+    NSDictionary *attributes = [NSDictionary dictionaryWithObject:font forKey:NSFontAttributeName];
+    return [self sizeWithAttributes:attributes];
+    
+}
+
 - (BOOL)containsString:(NSString *)astring {
     BOOL haveString = [self rangeOfString:astring].location != NSNotFound;
     return haveString;
