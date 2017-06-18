@@ -61,6 +61,7 @@
 		E14B8A801EF1889D0021D665 /* UIView+SNFoundation.m in Sources */ = {isa = PBXBuildFile; fileRef = E14B8A6C1EF1889D0021D665 /* UIView+SNFoundation.m */; };
 		E14B8A811EF1889D0021D665 /* UIWebView+SNFoundation.m in Sources */ = {isa = PBXBuildFile; fileRef = E14B8A6E1EF1889D0021D665 /* UIWebView+SNFoundation.m */; };
 		E14B8A831EF18A310021D665 /* libc.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = E14B8A821EF18A310021D665 /* libc.tbd */; };
+		E1540A0F1EF6312000D2721F /* RSKImageCropper.zip in Resources */ = {isa = PBXBuildFile; fileRef = E1540A0E1EF6312000D2721F /* RSKImageCropper.zip */; };
 		E15D6FFD1EF4D69600513AE6 /* MHCommentReply.m in Sources */ = {isa = PBXBuildFile; fileRef = E15D6FFC1EF4D69600513AE6 /* MHCommentReply.m */; };
 		E15D70001EF4D6FF00513AE6 /* MHTopic.m in Sources */ = {isa = PBXBuildFile; fileRef = E15D6FFF1EF4D6FF00513AE6 /* MHTopic.m */; };
 		E15D70031EF4DE4900513AE6 /* NSDate+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = E15D70021EF4DE4900513AE6 /* NSDate+Extension.m */; };
@@ -92,6 +93,10 @@
 		E15D70571EF53B0500513AE6 /* navigationbar.rtf in Resources */ = {isa = PBXBuildFile; fileRef = E15D70561EF53B0500513AE6 /* navigationbar.rtf */; };
 		E15D705A1EF540CD00513AE6 /* NSObject+MHRandom.m in Sources */ = {isa = PBXBuildFile; fileRef = E15D70591EF540CD00513AE6 /* NSObject+MHRandom.m */; };
 		E15D705D1EF5478500513AE6 /* MHAccount.m in Sources */ = {isa = PBXBuildFile; fileRef = E15D705C1EF5478500513AE6 /* MHAccount.m */; };
+		E15D70601EF5802A00513AE6 /* MHTopicTwoController.m in Sources */ = {isa = PBXBuildFile; fileRef = E15D705F1EF5802A00513AE6 /* MHTopicTwoController.m */; };
+		E15D70631EF5803F00513AE6 /* MHTopicOneController.m in Sources */ = {isa = PBXBuildFile; fileRef = E15D70621EF5803F00513AE6 /* MHTopicOneController.m */; };
+		E15D70671EF5811600513AE6 /* MHTopicCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E15D70661EF5811600513AE6 /* MHTopicCell.m */; };
+		E15D706A1EF5813700513AE6 /* MHTopicCommentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E15D70691EF5813700513AE6 /* MHTopicCommentCell.m */; };
 		E17E21711EDA73760013D3B9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E17E21701EDA73760013D3B9 /* main.m */; };
 		E17E218D1EDA73760013D3B9 /* ALPersonalDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E17E218C1EDA73760013D3B9 /* ALPersonalDemoTests.m */; };
 		E17E21981EDA73760013D3B9 /* ALPersonalDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = E17E21971EDA73760013D3B9 /* ALPersonalDemoUITests.m */; };
@@ -258,6 +263,7 @@
 		E14B8A6D1EF1889D0021D665 /* UIWebView+SNFoundation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWebView+SNFoundation.h"; sourceTree = "<group>"; };
 		E14B8A6E1EF1889D0021D665 /* UIWebView+SNFoundation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWebView+SNFoundation.m"; sourceTree = "<group>"; };
 		E14B8A821EF18A310021D665 /* libc.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libc.tbd; path = usr/lib/libc.tbd; sourceTree = SDKROOT; };
+		E1540A0E1EF6312000D2721F /* RSKImageCropper.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = RSKImageCropper.zip; sourceTree = "<group>"; };
 		E15D6FFB1EF4D69600513AE6 /* MHCommentReply.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MHCommentReply.h; sourceTree = "<group>"; };
 		E15D6FFC1EF4D69600513AE6 /* MHCommentReply.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MHCommentReply.m; sourceTree = "<group>"; };
 		E15D6FFE1EF4D6FF00513AE6 /* MHTopic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MHTopic.h; sourceTree = "<group>"; };
@@ -321,6 +327,14 @@
 		E15D70591EF540CD00513AE6 /* NSObject+MHRandom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+MHRandom.m"; sourceTree = "<group>"; };
 		E15D705B1EF5478500513AE6 /* MHAccount.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MHAccount.h; sourceTree = "<group>"; };
 		E15D705C1EF5478500513AE6 /* MHAccount.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MHAccount.m; sourceTree = "<group>"; };
+		E15D705E1EF5802A00513AE6 /* MHTopicTwoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MHTopicTwoController.h; sourceTree = "<group>"; };
+		E15D705F1EF5802A00513AE6 /* MHTopicTwoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MHTopicTwoController.m; sourceTree = "<group>"; };
+		E15D70611EF5803F00513AE6 /* MHTopicOneController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MHTopicOneController.h; sourceTree = "<group>"; };
+		E15D70621EF5803F00513AE6 /* MHTopicOneController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MHTopicOneController.m; sourceTree = "<group>"; };
+		E15D70651EF5811600513AE6 /* MHTopicCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MHTopicCell.h; sourceTree = "<group>"; };
+		E15D70661EF5811600513AE6 /* MHTopicCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MHTopicCell.m; sourceTree = "<group>"; };
+		E15D70681EF5813700513AE6 /* MHTopicCommentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MHTopicCommentCell.h; sourceTree = "<group>"; };
+		E15D70691EF5813700513AE6 /* MHTopicCommentCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MHTopicCommentCell.m; sourceTree = "<group>"; };
 		E17E216C1EDA73760013D3B9 /* ALPersonalDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ALPersonalDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E17E21701EDA73760013D3B9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E17E21881EDA73760013D3B9 /* ALPersonalDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ALPersonalDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -466,6 +480,11 @@
 		CFC1EC8C1EEE882E00641E5D /* 评论组件 */ = {
 			isa = PBXGroup;
 			children = (
+				E15D70641EF580B500513AE6 /* cell嵌套tableview */,
+				E15D70611EF5803F00513AE6 /* MHTopicOneController.h */,
+				E15D70621EF5803F00513AE6 /* MHTopicOneController.m */,
+				E15D705E1EF5802A00513AE6 /* MHTopicTwoController.h */,
+				E15D705F1EF5802A00513AE6 /* MHTopicTwoController.m */,
 				E15D70171EF4ECFB00513AE6 /* MHConstant.h */,
 				E15D70181EF4ECFB00513AE6 /* MHConstant.m */,
 				CFC1EC911EEE9C7C00641E5D /* Controller */,
@@ -668,6 +687,13 @@
 			path = SNFoundation;
 			sourceTree = "<group>";
 		};
+		E1540A0D1EF6186F00D2721F /* 相册 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "相册";
+			sourceTree = "<group>";
+		};
 		E15D70131EF4EB6300513AE6 /* http */ = {
 			isa = PBXGroup;
 			children = (
@@ -684,6 +710,24 @@
 				E15D70471EF5266B00513AE6 /* UIViewController+MHHUD.m */,
 			);
 			path = UIViewController;
+			sourceTree = "<group>";
+		};
+		E15D70641EF580B500513AE6 /* cell嵌套tableview */ = {
+			isa = PBXGroup;
+			children = (
+				E15D70651EF5811600513AE6 /* MHTopicCell.h */,
+				E15D70661EF5811600513AE6 /* MHTopicCell.m */,
+				E15D70681EF5813700513AE6 /* MHTopicCommentCell.h */,
+				E15D70691EF5813700513AE6 /* MHTopicCommentCell.m */,
+			);
+			path = "cell嵌套tableview";
+			sourceTree = "<group>";
+		};
+		E15D706B1EF5838A00513AE6 /* 富文本 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "富文本";
 			sourceTree = "<group>";
 		};
 		E17E21631EDA73760013D3B9 = {
@@ -728,6 +772,7 @@
 			isa = PBXGroup;
 			children = (
 				E17E21D41EDAAC050013D3B9 /* SmartPush.zip */,
+				E1540A0E1EF6312000D2721F /* RSKImageCropper.zip */,
 				E17E21CD1EDAA2050013D3B9 /* autobuild.py */,
 				E17E21B71EDA7C4D0013D3B9 /* LaunchScreen.storyboard */,
 				E17E21B91EDA7C4D0013D3B9 /* Main.storyboard */,
@@ -993,6 +1038,8 @@
 		E1F661A51EDDA001001D98E1 /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
+				E1540A0D1EF6186F00D2721F /* 相册 */,
+				E15D706B1EF5838A00513AE6 /* 富文本 */,
 				CF2185F41EF36C7B00B151DE /* UITextfield */,
 				CFC1EC8C1EEE882E00641E5D /* 评论组件 */,
 				E1F661A61EDDA024001D98E1 /* SSUIAdapter.h */,
@@ -1196,6 +1243,7 @@
 			files = (
 				E17E21D21EDAA9EF0013D3B9 /* LaunchScreen.storyboard in Resources */,
 				CFC1EC8E1EEE895000641E5D /* podSource.rtf in Resources */,
+				E1540A0F1EF6312000D2721F /* RSKImageCropper.zip in Resources */,
 				E17E21D31EDAA9EF0013D3B9 /* Main.storyboard in Resources */,
 				E17E21D51EDAAC050013D3B9 /* SmartPush.zip in Resources */,
 				E15D70571EF53B0500513AE6 /* navigationbar.rtf in Resources */,
@@ -1324,6 +1372,7 @@
 				E14B8A7D1EF1889D0021D665 /* SystemInfo.m in Sources */,
 				E17E21F51EDAFE0F0013D3B9 /* UIButton+SSImageTitleStyle.m in Sources */,
 				E15D704B1EF52B2D00513AE6 /* MHTopicManager.m in Sources */,
+				E15D70671EF5811600513AE6 /* MHTopicCell.m in Sources */,
 				E13C56661EE427B600005CFD /* FileManagerHelper.m in Sources */,
 				E1F6618C1EDD9CBC001D98E1 /* NSArray+SSAdd.m in Sources */,
 				E14B8A7C1EF1889D0021D665 /* SNTimer.m in Sources */,
@@ -1333,6 +1382,7 @@
 				E1F661BB1EDDA303001D98E1 /* UILabel+SSAdd.m in Sources */,
 				E15D6FFD1EF4D69600513AE6 /* MHCommentReply.m in Sources */,
 				E15D702B1EF51F2F00513AE6 /* MHYouKuCommentController.m in Sources */,
+				E15D70601EF5802A00513AE6 /* MHTopicTwoController.m in Sources */,
 				CFC1ECA01EEEA1E000641E5D /* MHComment.m in Sources */,
 				E17E21C01EDA7C970013D3B9 /* ViewController.m in Sources */,
 				E15D701C1EF4EDFA00513AE6 /* UIFont+MHExtension.m in Sources */,
@@ -1375,10 +1425,12 @@
 				E1F661B01EDDA287001D98E1 /* UIControl+SSAdd.m in Sources */,
 				E14B8A441EF187CD0021D665 /* UIImage-Extensions.m in Sources */,
 				E14B8A701EF1889D0021D665 /* IPAddress.mm in Sources */,
+				E15D706A1EF5813700513AE6 /* MHTopicCommentCell.m in Sources */,
 				CF48AC1A1EE4E35B009C4AD7 /* UIImageView+CircleImage.m in Sources */,
 				E17E21711EDA73760013D3B9 /* main.m in Sources */,
 				E15D70521EF5301900513AE6 /* MHYouKuInputPanelView.m in Sources */,
 				E14B8A801EF1889D0021D665 /* UIView+SNFoundation.m in Sources */,
+				E15D70631EF5803F00513AE6 /* MHTopicOneController.m in Sources */,
 				E17E21E71EDAF3C20013D3B9 /* UIView+ALFrame.m in Sources */,
 				E15D70061EF4E01600513AE6 /* NSDateFormatter+Extension.m in Sources */,
 				E14B8A7B1EF1889D0021D665 /* SNSandBox.m in Sources */,
