@@ -944,7 +944,7 @@
 			path = "相册";
 			sourceTree = "<group>";
 		};
-		E1540A101EF646A800D2721F /* MFD时尚日记 */ = {
+		E1540A101EF646A800D2721F /* MFD */ = {
 			isa = PBXGroup;
 			children = (
 				E1540ADF1EF6532F00D2721F /* helper */,
@@ -955,6 +955,7 @@
 				E1540A121EF6477300D2721F /* View */,
 				E1540A111EF6475100D2721F /* Viewcontroller */,
 			);
+			name = MFD;
 			path = "MFD时尚日记";
 			sourceTree = "<group>";
 		};
@@ -1263,7 +1264,7 @@
 		E15D706B1EF5838A00513AE6 /* 富文本 */ = {
 			isa = PBXGroup;
 			children = (
-				E1540A101EF646A800D2721F /* MFD时尚日记 */,
+				E1540A101EF646A800D2721F /* MFD */,
 			);
 			path = "富文本";
 			sourceTree = "<group>";
