@@ -1,9 +1,9 @@
 //
 //  UIConstants.h
-//  ssrj
+//  wwrj
 //
 //  Created by CC on 16/5/5.
-//  Copyright © 2016年 ssrj. All rights reserved.
+//  Copyright © 2016年 wwrj. All rights reserved.
 //
 
 //#ifndef UIConstants_h

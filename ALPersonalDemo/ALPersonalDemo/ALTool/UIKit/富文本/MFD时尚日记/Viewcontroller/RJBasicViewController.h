@@ -1,9 +1,9 @@
 //
 //  RJBasicViewController.h
-//  ssrj
+//  wwrj
 //
 //  Created by CC on 16/5/31.
-//  Copyright © 2016年 ssrj. All rights reserved.
+//  Copyright © 2016年 wwrj. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>

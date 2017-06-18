@@ -535,7 +535,7 @@
             return;
         }
         [parmaDic addEntriesFromDictionary:@{@"json":jsonString,@"upload_type":[NSNumber numberWithInteger:type]}];
-        [[AFHTTPRequestOperationManager manager]POST:[NSString stringWithFormat:@"https://ssrj.com/b180/api/v1/statistics/upload"] parameters:parmaDic success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        [[AFHTTPRequestOperationManager manager]POST:[NSString stringWithFormat:@"https://wwrj.com/b180/api/v1/statistics/upload"] parameters:parmaDic success:^(AFHTTPRequestOperation *operation, id responseObject) {
 //            NSLog(@"%@",responseObject);
         } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
 //            NSLog(@"%@",[error localizedDescription]);
@@ -550,9 +550,9 @@
 {
 #if 0
     // /先导入证书
-    NSString *cerPath = [[NSBundle mainBundle] pathForResource:@"ssrj" ofType:@"cer"];//证书的路径
+    NSString *cerPath = [[NSBundle mainBundle] pathForResource:@"wwrj" ofType:@"cer"];//证书的路径
     
-    //    NSString *cerPath = [[NSBundle mainBundle] pathForResource:@"www.ssrj.com" ofType:@"cer"];//证书的路径
+    //    NSString *cerPath = [[NSBundle mainBundle] pathForResource:@"www.wwrj.com" ofType:@"cer"];//证书的路径
     
     
     

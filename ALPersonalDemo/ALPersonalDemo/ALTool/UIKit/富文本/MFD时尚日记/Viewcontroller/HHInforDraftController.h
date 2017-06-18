@@ -1,9 +1,9 @@
 //
 //  HHInforDraftController.h
-//  ssrj
+//  wwrj
 //
-//  Created by 夏亚峰 on 16/12/14.
-//  Copyright © 2016年 ssrj. All rights reserved.
+//  Created by wwrj on 16/12/14.
+//  Copyright © 2016年 wwrj. All rights reserved.
 //
 
 #import "RJBasicViewController.h"

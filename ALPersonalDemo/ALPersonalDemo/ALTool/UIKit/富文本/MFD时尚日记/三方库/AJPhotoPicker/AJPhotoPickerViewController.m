@@ -521,7 +521,7 @@
     UIAlertView *alert;
     if ([[[UIDevice currentDevice] systemVersion] floatValue] < 8.0) {
         alert = [[UIAlertView alloc] initWithTitle:@"提示"
-                                           message:@"请在iPhone的“设置”-“隐私”-“照片”中，找到MFD时尚日记更改"
+                                           message:@"请在iPhone的“设置”-“隐私”-“照片”中，找到MFD更改"
                                           delegate:nil
                                  cancelButtonTitle:@"确定"
                                  otherButtonTitles:nil, nil];

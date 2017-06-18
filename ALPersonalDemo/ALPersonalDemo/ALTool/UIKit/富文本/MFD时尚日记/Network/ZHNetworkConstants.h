@@ -5,10 +5,10 @@
 //
 
 #ifdef HT_DEBUG
-//https://ssrj.com
+//https://wwrj.com
 #define API_BASE_URL @"http://192.168.1.42"
 #else
-#define API_BASE_URL @"https://ssrj.com"
+#define API_BASE_URL @"https://wwrj.com"
 #endif
 
 #ifdef HT_DEBUG

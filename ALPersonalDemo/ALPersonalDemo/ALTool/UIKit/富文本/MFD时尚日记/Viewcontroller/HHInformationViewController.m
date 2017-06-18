@@ -1,9 +1,9 @@
 //
 //  HHInformationViewController.m
-//  ssrj
+//  wwrj
 //
-//  Created by 夏亚峰 on 16/12/9.
-//  Copyright © 2016年 ssrj. All rights reserved.
+//  Created by wwrj on 16/12/9.
+//  Copyright © 2016年 wwrj. All rights reserved.
 //
 
 #import "HHInformationViewController.h"
@@ -464,13 +464,13 @@ static NSString * const ListString = @"•  ";
 }
 #pragma mark - 网络请求专题内容
 #pragma mark -- 获取专题内容
-/** http://b82.ssrj.com/api/v5/index/infromcategorylist?appVersion=2.2.0
+/** http://b82.wwrj.com/api/v5/index/infromcategorylist?appVersion=2.2.0
  "data":[
  {
  "id":0,
  "name":"全部专题",
- "uncheckedImage":"http://www.ssrj.com/upload/image/201611/44475d90-4130-4fe2-b472-d254d9de33c7.png",
- "checkedImage":"http://www.ssrj.com/upload/image/201611/c50d5656-aa3b-4915-8ac5-a666baf47585.png"
+ "uncheckedImage":"http://www.wwrj.com/upload/image/201611/44475d90-4130-4fe2-b472-d254d9de33c7.png",
+ "checkedImage":"http://www.wwrj.com/upload/image/201611/c50d5656-aa3b-4915-8ac5-a666baf47585.png"
  },
  */
 - (void)getCategoryData{
@@ -570,9 +570,9 @@ static NSString * const ListString = @"•  ";
     NSMutableDictionary *dict = [[NSMutableDictionary alloc] init];
     [dict setObject:@"标题" forKey:@"title"];
     [dict setObject:@"我是描述" forKey:@"memo"];
-    [dict setObject:@"http://www.ssrj.com/upload/image/201612/5416ca64-0c57-466b-a8c7-905e95d79e5a.jpg" forKey:@"img"];
-    [dict setObject:@"http://www.ssrj.com/mobile/inform/content/201612/218/1_app.html" forKey:@"showUrl"];
-    [dict setObject:@"http://www.ssrj.com/mobile/inform/content/201612/218/1.html" forKey:@"shareUrl"];
+    [dict setObject:@"http://www.wwrj.com/upload/image/201612/5416ca64-0c57-466b-a8c7-905e95d79e5a.jpg" forKey:@"img"];
+    [dict setObject:@"http://www.wwrj.com/mobile/inform/content/201612/218/1_app.html" forKey:@"showUrl"];
+    [dict setObject:@"http://www.wwrj.com/mobile/inform/content/201612/218/1.html" forKey:@"shareUrl"];
     
     return [RJHomeTopicShareModel new];
 }
