@@ -10,6 +10,7 @@
 #import "WWTagEditingView.h"
 #import "BBAlertView.h"
 #import "MHYouKuTopicController.h"
+#import "HHInformationViewController.h"
 
 @interface ALDemo1ViewController ()
 @property(nonatomic,strong)WWTagEditingView *edtingView;
@@ -22,9 +23,12 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    MHYouKuTopicController *vc = [MHYouKuTopicController new];
-    [self.navigationController pushViewController:vc animated:NO];
+    //MHYouKuTopicController *vc = [MHYouKuTopicController new];
+    //[self.navigationController pushViewController:vc animated:NO];
 
+    
+    HHInformationViewController *vc = [HHInformationViewController new];
+    [self.navigationController pushViewController:vc animated:NO];
 }
 
 -(void)testTEXTKit{

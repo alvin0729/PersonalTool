@@ -45,5 +45,180 @@
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ALPersonalDemo/ALTool/UIKit/&#x5bcc;&#x6587;&#x672c;/MFD&#x65f6;&#x5c1a;&#x65e5;&#x8bb0;/Viewcontroller/HHInformationViewController.m"
+            timestampString = "519463995.43837"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "784"
+            endingLineNumber = "784"
+            landmarkName = "-menuBtnClick"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__43-[HHInformationViewController menuBtnClick]_block_invoke.565"
+                  moduleName = "ALPersonalDemo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/alvin/GitLab/PersonalTool/ALPersonalDemo/ALPersonalDemo/ALTool/UIKit/%E5%AF%8C%E6%96%87%E6%9C%AC/MFD%E6%97%B6%E5%B0%9A%E6%97%A5%E8%AE%B0/Viewcontroller/HHInformationViewController.m"
+                  timestampString = "519464064.781998"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "784"
+                  endingLineNumber = "784"
+                  offsetFromSymbolStart = "88">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__copy_helper_block_.568"
+                  moduleName = "ALPersonalDemo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/alvin/GitLab/PersonalTool/ALPersonalDemo/ALPersonalDemo/ALTool/UIKit/%E5%AF%8C%E6%96%87%E6%9C%AC/MFD%E6%97%B6%E5%B0%9A%E6%97%A5%E8%AE%B0/Viewcontroller/HHInformationViewController.m"
+                  timestampString = "519464064.783411"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "784"
+                  endingLineNumber = "784"
+                  offsetFromSymbolStart = "64">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__destroy_helper_block_.569"
+                  moduleName = "ALPersonalDemo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/alvin/GitLab/PersonalTool/ALPersonalDemo/ALPersonalDemo/ALTool/UIKit/%E5%AF%8C%E6%96%87%E6%9C%AC/MFD%E6%97%B6%E5%B0%9A%E6%97%A5%E8%AE%B0/Viewcontroller/HHInformationViewController.m"
+                  timestampString = "519464064.784743"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "784"
+                  endingLineNumber = "784"
+                  offsetFromSymbolStart = "36">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ALPersonalDemo/ALTool/UIKit/&#x5bcc;&#x6587;&#x672c;/MFD&#x65f6;&#x5c1a;&#x65e5;&#x8bb0;/Viewcontroller/HHInformationViewController.m"
+            timestampString = "519464005.892154"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "785"
+            endingLineNumber = "785"
+            landmarkName = "-menuBtnClick"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[HHInformationViewController menuBtnClick]"
+                  moduleName = "ALPersonalDemo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/alvin/GitLab/PersonalTool/ALPersonalDemo/ALPersonalDemo/ALTool/UIKit/%E5%AF%8C%E6%96%87%E6%9C%AC/MFD%E6%97%B6%E5%B0%9A%E6%97%A5%E8%AE%B0/Viewcontroller/HHInformationViewController.m"
+                  timestampString = "519464064.794598"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "785"
+                  endingLineNumber = "785"
+                  offsetFromSymbolStart = "1244">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__43-[HHInformationViewController menuBtnClick]_block_invoke.573"
+                  moduleName = "ALPersonalDemo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/alvin/GitLab/PersonalTool/ALPersonalDemo/ALPersonalDemo/ALTool/UIKit/%E5%AF%8C%E6%96%87%E6%9C%AC/MFD%E6%97%B6%E5%B0%9A%E6%97%A5%E8%AE%B0/Viewcontroller/HHInformationViewController.m"
+                  timestampString = "519464064.796288"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "786"
+                  endingLineNumber = "786"
+                  offsetFromSymbolStart = "56">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ALPersonalDemo/ALTool/UIKit/&#x5bcc;&#x6587;&#x672c;/MFD&#x65f6;&#x5c1a;&#x65e5;&#x8bb0;/Viewcontroller/HHInformationViewController.m"
+            timestampString = "519464021.047469"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "758"
+            endingLineNumber = "758"
+            landmarkName = "-menuBtnClick"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ALPersonalDemo/ALTool/UIKit/&#x5bcc;&#x6587;&#x672c;/MFD&#x65f6;&#x5c1a;&#x65e5;&#x8bb0;/Viewcontroller/HHInformationViewController.m"
+            timestampString = "519464322.425146"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "545"
+            endingLineNumber = "545"
+            landmarkName = "-pubLishInformation"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[HHInformationViewController pubLishInformation]"
+                  moduleName = "ALPersonalDemo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/alvin/GitLab/PersonalTool/ALPersonalDemo/ALPersonalDemo/ALTool/UIKit/%E5%AF%8C%E6%96%87%E6%9C%AC/MFD%E6%97%B6%E5%B0%9A%E6%97%A5%E8%AE%B0/Viewcontroller/HHInformationViewController.m"
+                  timestampString = "519464322.749161"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "545"
+                  endingLineNumber = "545"
+                  offsetFromSymbolStart = "720">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__49-[HHInformationViewController pubLishInformation]_block_invoke"
+                  moduleName = "ALPersonalDemo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/alvin/GitLab/PersonalTool/ALPersonalDemo/ALPersonalDemo/ALTool/UIKit/%E5%AF%8C%E6%96%87%E6%9C%AC/MFD%E6%97%B6%E5%B0%9A%E6%97%A5%E8%AE%B0/Viewcontroller/HHInformationViewController.m"
+                  timestampString = "519464322.750603"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "547"
+                  endingLineNumber = "547"
+                  offsetFromSymbolStart = "24">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>
