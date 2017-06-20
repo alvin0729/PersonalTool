@@ -18,6 +18,7 @@
 		CF48AC151EE4E32A009C4AD7 /* UIImage+Thumbnail.m in Sources */ = {isa = PBXBuildFile; fileRef = CF48AC101EE4E32A009C4AD7 /* UIImage+Thumbnail.m */; };
 		CF48AC161EE4E32A009C4AD7 /* UIImage+Tools.m in Sources */ = {isa = PBXBuildFile; fileRef = CF48AC121EE4E32A009C4AD7 /* UIImage+Tools.m */; };
 		CF48AC1A1EE4E35B009C4AD7 /* UIImageView+CircleImage.m in Sources */ = {isa = PBXBuildFile; fileRef = CF48AC191EE4E35B009C4AD7 /* UIImageView+CircleImage.m */; };
+		CF970B3B1EF76F0300955D4A /* LLRollingButtonScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = CF970B3A1EF76F0300955D4A /* LLRollingButtonScrollView.m */; };
 		CFC1EC8B1EEE617B00641E5D /* UIView+HGCorner.m in Sources */ = {isa = PBXBuildFile; fileRef = CFC1EC8A1EEE617B00641E5D /* UIView+HGCorner.m */; };
 		CFC1EC8E1EEE895000641E5D /* podSource.rtf in Resources */ = {isa = PBXBuildFile; fileRef = CFC1EC8D1EEE895000641E5D /* podSource.rtf */; };
 		CFC1EC941EEE9F6E00641E5D /* MHYouKuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = CFC1EC931EEE9F6E00641E5D /* MHYouKuItem.m */; };
@@ -26,6 +27,9 @@
 		CFC1EC9D1EEEA1A700641E5D /* MHUser.m in Sources */ = {isa = PBXBuildFile; fileRef = CFC1EC9C1EEEA1A700641E5D /* MHUser.m */; };
 		CFC1ECA01EEEA1E000641E5D /* MHComment.m in Sources */ = {isa = PBXBuildFile; fileRef = CFC1EC9F1EEEA1E000641E5D /* MHComment.m */; };
 		CFDC0AF91EF1143C0099E3E5 /* UIImage+HXExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = CFDC0AF81EF1143C0099E3E5 /* UIImage+HXExtension.m */; };
+		CFFF6F291EF91B580092132B /* SSRollingButtonScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = CFFF6F281EF91B580092132B /* SSRollingButtonScrollView.m */; };
+		CFFF6F2C1EF91B7B0092132B /* ALRichTextDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CFFF6F2B1EF91B7B0092132B /* ALRichTextDemoViewController.m */; };
+		CFFF6F2F1EF925440092132B /* WWFontDownloadManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CFFF6F2E1EF925440092132B /* WWFontDownloadManager.m */; };
 		D2195EE7F67E7C822F1A5342 /* libPods-ALPersonalDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 95C4D560735BE5A3E41488ED /* libPods-ALPersonalDemo.a */; };
 		E13C56631EE4231600005CFD /* FCFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E13C56621EE4231600005CFD /* FCFileManager.m */; };
 		E13C56661EE427B600005CFD /* FileManagerHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = E13C56651EE427B600005CFD /* FileManagerHelper.m */; };
@@ -259,6 +263,8 @@
 		CF48AC121EE4E32A009C4AD7 /* UIImage+Tools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Tools.m"; sourceTree = "<group>"; };
 		CF48AC181EE4E35B009C4AD7 /* UIImageView+CircleImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+CircleImage.h"; sourceTree = "<group>"; };
 		CF48AC191EE4E35B009C4AD7 /* UIImageView+CircleImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+CircleImage.m"; sourceTree = "<group>"; };
+		CF970B391EF76F0300955D4A /* LLRollingButtonScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LLRollingButtonScrollView.h; sourceTree = "<group>"; };
+		CF970B3A1EF76F0300955D4A /* LLRollingButtonScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LLRollingButtonScrollView.m; sourceTree = "<group>"; };
 		CFC1EC891EEE617B00641E5D /* UIView+HGCorner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+HGCorner.h"; sourceTree = "<group>"; };
 		CFC1EC8A1EEE617B00641E5D /* UIView+HGCorner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+HGCorner.m"; sourceTree = "<group>"; };
 		CFC1EC8D1EEE895000641E5D /* podSource.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = podSource.rtf; sourceTree = "<group>"; };
@@ -274,6 +280,12 @@
 		CFC1EC9F1EEEA1E000641E5D /* MHComment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MHComment.m; sourceTree = "<group>"; };
 		CFDC0AF71EF1143C0099E3E5 /* UIImage+HXExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+HXExtension.h"; sourceTree = "<group>"; };
 		CFDC0AF81EF1143C0099E3E5 /* UIImage+HXExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+HXExtension.m"; sourceTree = "<group>"; };
+		CFFF6F271EF91B580092132B /* SSRollingButtonScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSRollingButtonScrollView.h; sourceTree = "<group>"; };
+		CFFF6F281EF91B580092132B /* SSRollingButtonScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSRollingButtonScrollView.m; sourceTree = "<group>"; };
+		CFFF6F2A1EF91B7B0092132B /* ALRichTextDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALRichTextDemoViewController.h; sourceTree = "<group>"; };
+		CFFF6F2B1EF91B7B0092132B /* ALRichTextDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALRichTextDemoViewController.m; sourceTree = "<group>"; };
+		CFFF6F2D1EF925440092132B /* WWFontDownloadManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WWFontDownloadManager.h; sourceTree = "<group>"; };
+		CFFF6F2E1EF925440092132B /* WWFontDownloadManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WWFontDownloadManager.m; sourceTree = "<group>"; };
 		E13C56611EE4231600005CFD /* FCFileManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FCFileManager.h; sourceTree = "<group>"; };
 		E13C56621EE4231600005CFD /* FCFileManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FCFileManager.m; sourceTree = "<group>"; };
 		E13C56641EE427B600005CFD /* FileManagerHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileManagerHelper.h; sourceTree = "<group>"; };
@@ -727,6 +739,15 @@
 			path = UIImageView;
 			sourceTree = "<group>";
 		};
+		CF970B381EF76ED700955D4A /* BTNScrollView */ = {
+			isa = PBXGroup;
+			children = (
+				CF970B391EF76F0300955D4A /* LLRollingButtonScrollView.h */,
+				CF970B3A1EF76F0300955D4A /* LLRollingButtonScrollView.m */,
+			);
+			path = BTNScrollView;
+			sourceTree = "<group>";
+		};
 		CFC1EC8C1EEE882E00641E5D /* 评论组件 */ = {
 			isa = PBXGroup;
 			children = (
@@ -806,6 +827,51 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
+		CFFF6F1E1EF919FA0092132B /* personalTempDemo */ = {
+			isa = PBXGroup;
+			children = (
+				CFFF6F1F1EF91A2A0092132B /* wangwangRichText */,
+			);
+			path = personalTempDemo;
+			sourceTree = "<group>";
+		};
+		CFFF6F1F1EF91A2A0092132B /* wangwangRichText */ = {
+			isa = PBXGroup;
+			children = (
+				CFFF6F261EF91B250092132B /* Model */,
+				CFFF6F251EF91B110092132B /* third */,
+				CFFF6F231EF91AF70092132B /* View */,
+				CFFF6F2A1EF91B7B0092132B /* ALRichTextDemoViewController.h */,
+				CFFF6F2B1EF91B7B0092132B /* ALRichTextDemoViewController.m */,
+			);
+			path = wangwangRichText;
+			sourceTree = "<group>";
+		};
+		CFFF6F231EF91AF70092132B /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CFFF6F251EF91B110092132B /* third */ = {
+			isa = PBXGroup;
+			children = (
+				CFFF6F271EF91B580092132B /* SSRollingButtonScrollView.h */,
+				CFFF6F281EF91B580092132B /* SSRollingButtonScrollView.m */,
+			);
+			path = third;
+			sourceTree = "<group>";
+		};
+		CFFF6F261EF91B250092132B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CFFF6F2D1EF925440092132B /* WWFontDownloadManager.h */,
+				CFFF6F2E1EF925440092132B /* WWFontDownloadManager.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		D2D59E4CC23B391AD24269D2 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -877,6 +943,7 @@
 		E14B8A451EF1886E0021D665 /* 第三方 */ = {
 			isa = PBXGroup;
 			children = (
+				CF970B381EF76ED700955D4A /* BTNScrollView */,
 				E15D70131EF4EB6300513AE6 /* http */,
 				E14B8A461EF1889D0021D665 /* SNFoundation */,
 			);
@@ -1354,6 +1421,7 @@
 		E17E21BD1EDA7C620013D3B9 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				CFFF6F1E1EF919FA0092132B /* personalTempDemo */,
 				E17E21BE1EDA7C970013D3B9 /* ViewController.h */,
 				E17E21BF1EDA7C970013D3B9 /* ViewController.m */,
 				CF40EC791EE01AA90003499F /* ALDemo1ViewController.h */,
@@ -1743,7 +1811,7 @@
 				TargetAttributes = {
 					E17E216B1EDA73760013D3B9 = {
 						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = 494678YY6X;
+						DevelopmentTeam = 75C82FC24V;
 						ProvisioningStyle = Automatic;
 					};
 					E17E21871EDA73760013D3B9 = {
@@ -1889,6 +1957,7 @@
 				E1540B211EF6534C00D2721F /* HTHelper.m in Sources */,
 				E1F661A31EDD9E2E001D98E1 /* UIColor+SSAdd.m in Sources */,
 				E17E21A81EDA7B3A0013D3B9 /* AppDelegate.m in Sources */,
+				CFFF6F291EF91B580092132B /* SSRollingButtonScrollView.m in Sources */,
 				E1540B101EF6534C00D2721F /* UIColor+CIELAB.m in Sources */,
 				E1F661841EDD9BB9001D98E1 /* UILabel+Copyable.m in Sources */,
 				E1F661881EDD9C66001D98E1 /* NSDate+SSAdd.m in Sources */,
@@ -1993,6 +2062,7 @@
 				CF40EC751EE0191E0003499F /* WWTagEditingView.m in Sources */,
 				E1540B261EF6582E00D2721F /* HHLineStyleViewController.m in Sources */,
 				E1540B351EF6592E00D2721F /* HHHTMLViewController.m in Sources */,
+				CFFF6F2C1EF91B7B0092132B /* ALRichTextDemoViewController.m in Sources */,
 				E1540A341EF64ABC00D2721F /* UIFont+LMText.m in Sources */,
 				E1540AC71EF64F9700D2721F /* UIViewController+Tracking.m in Sources */,
 				E1540B161EF6534C00D2721F /* UIImage+Alpha.m in Sources */,
@@ -2016,6 +2086,7 @@
 				E15D705A1EF540CD00513AE6 /* NSObject+MHRandom.m in Sources */,
 				E1540A161EF647E100D2721F /* HHInformationViewController.m in Sources */,
 				CFC1EC9A1EEE9FC100641E5D /* MHYouKuTopicController.m in Sources */,
+				CFFF6F2F1EF925440092132B /* WWFontDownloadManager.m in Sources */,
 				E1540B3B1EF659A700D2721F /* LMTextHTMLParser.m in Sources */,
 				E15D70091EF4E08C00513AE6 /* MHCommentFrame.m in Sources */,
 				E1540A711EF64C8800D2721F /* CGGeometry+RSKImageCropper.m in Sources */,
@@ -2036,6 +2107,7 @@
 				E1540A771EF64C8800D2721F /* UIApplication+RSKImageCropper.m in Sources */,
 				E1540A541EF64C2A00D2721F /* AJPhotoBrowserViewController.m in Sources */,
 				E14B8A441EF187CD0021D665 /* UIImage-Extensions.m in Sources */,
+				CF970B3B1EF76F0300955D4A /* LLRollingButtonScrollView.m in Sources */,
 				E14B8A701EF1889D0021D665 /* IPAddress.mm in Sources */,
 				E1540A221EF6492400D2721F /* HHImageStyle.m in Sources */,
 				E15D706A1EF5813700513AE6 /* MHTopicCommentCell.m in Sources */,
@@ -2203,12 +2275,12 @@
 			baseConfigurationReference = BE7837F5255163B32FFF2157 /* Pods-ALPersonalDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 494678YY6X;
+				DEVELOPMENT_TEAM = 75C82FC24V;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/ALPersonalDemo/Supporting Files/PrefixHeader.pch";
 				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = "ALPersonalDemo/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.wxp10088;
+				PRODUCT_BUNDLE_IDENTIFIER = com.alvin.test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -2218,12 +2290,12 @@
 			baseConfigurationReference = 44651CCE15993B1899769C3F /* Pods-ALPersonalDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 494678YY6X;
+				DEVELOPMENT_TEAM = 75C82FC24V;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/ALPersonalDemo/Supporting Files/PrefixHeader.pch";
 				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = "ALPersonalDemo/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.wxp10088;
+				PRODUCT_BUNDLE_IDENTIFIER = com.alvin.test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

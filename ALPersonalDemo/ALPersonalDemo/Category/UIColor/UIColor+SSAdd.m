@@ -91,4 +91,22 @@
                            alpha:alpha];
 }
 
+/**
+ *  UIColor 转化成16进制颜色值
+ *
+ *  @param color UIColor
+ *
+ *  @return 16进制颜色值
+ */
+
++ (NSString *)stringTRUeFromColor:(UIColor *)color
+{
+    const size_t totalComponents = CGColorGetNumberOfComponents(color.CGColor);
+    const CGFloat * components = CGColorGetComponents(color.CGColor);
+    return [NSString stringWithFormat:@"#%02X%02X%02X",
+            (int)(255 * components[MIN(0,totalComponents-2)]),
+            (int)(255 * components[MIN(1,totalComponents-2)]),
+            (int)(255 * components[MIN(2,totalComponents-2)])];
+}
+
 @end
