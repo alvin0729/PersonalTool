@@ -672,3 +672,38 @@
 }
 
 @end
+
+/*
+ self.digitSelector03.fixedButtonWidth = 58.0f;
+ self.digitSelector03.spacingBetweenButtons = 2.0f;
+ self.digitSelector03.notCenterButtonTextColor = [UIColor lightGrayColor];
+ self.digitSelector03.notCenterButtonBackgroundColor = [UIColor darkGrayColor];
+ self.digitSelector03.centerButtonBackgroundColor = [UIColor blackColor];
+ self.digitSelector03.stopOnCenter = NO;
+ [self.digitSelector03 createButtonArrayWithButtonTitles:digits andLayoutStyle:SShorizontalLayout];
+ self.digitSelector03.ssRollingButtonScrollViewDelegate = self;
+ 
+ self.digitSelector04.fixedButtonWidth = 60.0f;
+ self.digitSelector04.notCenterButtonTextColor = [UIColor lightGrayColor];
+ self.digitSelector04.playSound = NO;
+ [self.digitSelector04 createButtonArrayWithButtonTitles:digits andLayoutStyle:SShorizontalLayout];
+ self.digitSelector04.ssRollingButtonScrollViewDelegate = self;
+ 
+ self.numberSelector01.fixedButtonWidth = 120.0f;
+ self.numberSelector01.fixedButtonHeight = 50.0f;
+ self.numberSelector01.notCenterButtonTextColor = [UIColor grayColor];
+ self.numberSelector01.centerButtonTextColor = [UIColor blackColor];
+ self.numberSelector01.centerButtonBackgroundImage = [UIImage imageNamed:@"Star"];
+ [self.numberSelector01 createButtonArrayWithButtonTitles:digitNames andLayoutStyle:SSverticalLayout];
+ self.numberSelector01.ssRollingButtonScrollViewDelegate = self;
+ */
+
+
+
+
+
+
+
+
+
+

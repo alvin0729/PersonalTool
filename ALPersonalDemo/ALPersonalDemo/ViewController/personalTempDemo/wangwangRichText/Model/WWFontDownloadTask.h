@@ -47,12 +47,16 @@ UIKIT_EXTERN NSString * const kFontAdobeHeiti;     //Adobe 黑体
 UIKIT_EXTERN NSString * const kFontAdobeKaiti;     //Adobe 楷体
 UIKIT_EXTERN NSString * const kFontAdobeSongti;    //Adobe 宋体
 
-@interface WWFontDownloadManager : NSObject
 
-+ (BOOL)isFontDownloaded:(NSString*)fontName;
+@class ALFontFile;
+@interface WWFontDownloadTask : NSObject
 
-+ (void)downloadFont:(NSString*)fontName succeed:(void(^)(NSError* error, double progressValue))succeed;
+- (BOOL)isFontDownloaded:(NSString*)fontName;
 
-+ (UIFont *)fontWithName:(NSString *)fontName size:(CGFloat)fontSize;
+-(void)downloadFont:(ALFontFile *)fontFlie completionHandler:(void(^)(NSError *error, double progressValue))completionHandler;
+
+- (void)downloadFont:(NSString *)fontName succeed:(void(^)(NSError* error, double progressValue))succeed;
+
+- (UIFont *)fontWithName:(NSString *)fontName size:(CGFloat)fontSize;
 
 @end

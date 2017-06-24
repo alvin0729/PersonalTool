@@ -6,8 +6,9 @@
 //  Copyright © 2017年 company. All rights reserved.
 //
 
-#import "WWFontDownloadManager.h"
+#import "WWFontDownloadTask.h"
 #import <CoreText/CoreText.h>
+#import "ALFontFile.h"
 
 NSString * const kFontBaoli = @"STBaoli-SC-Regular";          //报隶-简
 NSString * const kFontDongqinghei = @"HiraginoSansGB-W3";    //冬青黑体-简
@@ -48,16 +49,18 @@ NSString * const kFontAdobeHeiti = @"AdobeHeitiStd-Regular";     //Adobe 黑体
 NSString * const kFontAdobeKaiti = @"AdobeKaitiStd-Regular";     //Adobe 楷体
 NSString * const kFontAdobeSongti = @"AdobeSongStd-Light";    //Adobe 宋体
 
-@interface WWFontDownloadManager(){
+@interface WWFontDownloadTask(){
     NSString *_errorMessage;
     NSString *_postName;
 }
 
+
+
 @end
 
-@implementation WWFontDownloadManager
+@implementation WWFontDownloadTask
 
-+ (BOOL)isFontDownloaded:(NSString*)fontName{
+- (BOOL)isFontDownloaded:(NSString*)fontName{
     UIFont* font = [UIFont fontWithName:fontName size:12.0];
     if (font && ([font.fontName compare:fontName] == NSOrderedSame || [font.familyName compare:fontName] == NSOrderedSame)) {
         return YES;
@@ -66,7 +69,78 @@ NSString * const kFontAdobeSongti = @"AdobeSongStd-Light";    //Adobe 宋体
     }
 }
 
-+ (void)downloadFont:(NSString*)fontName succeed:(void(^)(NSError* error, double progressValue))succeed{
+-(void)downloadFont:(ALFontFile *)fontFlie completionHandler:(void(^)(NSError *error, double progressValue))completionHandler{
+    
+    NSMutableDictionary* attrs = [NSMutableDictionary dictionaryWithObjectsAndKeys:fontFlie.fontName, kCTFontNameAttribute, nil];
+    CTFontDescriptorRef desc = CTFontDescriptorCreateWithAttributes((__bridge CFDictionaryRef)attrs);
+    NSMutableArray* descs = [NSMutableArray arrayWithCapacity:0];
+    [descs addObject:(__bridge id)desc];
+    CFRelease(desc);
+    
+    __block BOOL errorDuringDownload = NO;
+    //下载
+    CTFontDescriptorMatchFontDescriptorsWithProgressHandler((__bridge CFArrayRef)descs, NULL, ^bool(CTFontDescriptorMatchingState state, CFDictionaryRef progressParameter) {
+        
+        double progressValue = [[(__bridge NSDictionary*)progressParameter objectForKey:(id)kCTFontDescriptorMatchingPercentage] doubleValue];
+        double totalDownloadedSize = [[(__bridge NSDictionary*)progressParameter objectForKey:(id)kCTFontDescriptorMatchingTotalDownloadedSize] doubleValue];
+        double totalSize = [[(__bridge NSDictionary*)progressParameter objectForKey:(id)kCTFontDescriptorMatchingTotalAssetSize] doubleValue];
+        
+        fontFlie.fileTotalSize = totalSize;
+        fontFlie.downloadProgress = progressValue;
+        fontFlie.fileDownloadedSize = totalDownloadedSize;
+        
+        if(kCTFontDescriptorMatchingDidBegin == state){
+            ALAppLog(@"字体已经匹配");
+        }else if (kCTFontDescriptorMatchingDidFinish == state){
+            if (!errorDuringDownload) {
+                ALAppLog(@"%@字体下载完成", fontFlie.fontName);
+                fontFlie.downloadStatus = ALFontFileDownloadStateDownloaded;
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    if (completionHandler) {
+                        completionHandler(nil,1.0);
+                    }
+                });
+            }
+        }else if (kCTFontDescriptorMatchingWillBeginDownloading == state){
+            ALAppLog(@"字体开始下载");
+        }else if (kCTFontDescriptorMatchingDidFinishDownloading == state){
+            ALAppLog(@"字体开始完成");
+        }else if (kCTFontDescriptorMatchingDownloading == state){
+            ALAppLog(@"下载进度:%.0f%%", progressValue);
+            fontFlie.downloadStatus = ALFontFileDownloadStateDownloading;
+            dispatch_async(dispatch_get_main_queue(), ^{
+                if (completionHandler) {
+                    completionHandler(nil,progressValue);
+                }
+            });
+        }else if (kCTFontDescriptorMatchingDidFailWithError == state){
+            errorDuringDownload = YES;
+            NSError* error = [(__bridge NSDictionary*)progressParameter objectForKey:(id)kCTFontDescriptorMatchingError];
+            fontFlie.downloadError = error;
+            fontFlie.downloadStatus = ALFontFileDownloadStateError;
+            if (!error) {
+                ALAppLog(@"%@", error.description);
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    if (completionHandler) {
+                        completionHandler([NSError errorWithDomain:error.description code:error.code userInfo:nil],0);
+                    }
+                });
+            }else{
+                ALAppLog(@"ERROR MESSAGE IS NOT AVAILABLE!");
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    if (completionHandler) {
+                        completionHandler([NSError errorWithDomain:@"ERROR MESSAGE IS NOT AVAILABLE!" code:-1000 userInfo:nil],0);
+                    }
+                });
+            }
+        }
+        return (BOOL)YES;
+    });
+
+}
+
+
+- (void)downloadFont:(NSString*)fontName succeed:(void(^)(NSError* error, double progressValue))succeed{
     //用字体的PostScript名字创建一个Dictionary
     NSMutableDictionary* attrs = [NSMutableDictionary dictionaryWithObjectsAndKeys:fontName, kCTFontNameAttribute, nil];
     //创建一个字体描述对象CTFontDescriptorRef
@@ -140,8 +214,8 @@ NSString * const kFontAdobeSongti = @"AdobeSongStd-Light";    //Adobe 宋体
     });
 }
 
-+ (UIFont *)fontWithName:(NSString *)fontName size:(CGFloat)fontSize{
-    if ([WWFontDownloadManager isFontDownloaded:fontName]) {
+- (UIFont *)fontWithName:(NSString *)fontName size:(CGFloat)fontSize{
+    if ([self isFontDownloaded:fontName]) {
         return [UIFont fontWithName:fontName size:fontSize];
     }else{
         return nil;

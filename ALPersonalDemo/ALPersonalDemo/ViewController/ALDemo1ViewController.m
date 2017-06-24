@@ -11,6 +11,8 @@
 #import "BBAlertView.h"
 #import "MHYouKuTopicController.h"
 #import "HHInformationViewController.h"
+#import "ALRichTextDemoViewController.h"
+#import "ALRIchTextDemoViewControllernone.h"
 
 @interface ALDemo1ViewController ()
 @property(nonatomic,strong)WWTagEditingView *edtingView;
@@ -29,6 +31,13 @@
     
     HHInformationViewController *vc = [HHInformationViewController new];
     [self.navigationController pushViewController:vc animated:NO];
+    
+    
+//    ALRichTextDemoViewController *vc = [ALRichTextDemoViewController new];
+//    [self.navigationController pushViewController:vc animated:NO];
+    
+//    ALRIchTextDemoViewControllernone *vc = [ALRIchTextDemoViewControllernone new];
+//    [self.navigationController pushViewController:vc animated:NO];
 }
 
 -(void)testTEXTKit{

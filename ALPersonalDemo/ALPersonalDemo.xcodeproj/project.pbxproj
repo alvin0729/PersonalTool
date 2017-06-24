@@ -18,7 +18,29 @@
 		CF48AC151EE4E32A009C4AD7 /* UIImage+Thumbnail.m in Sources */ = {isa = PBXBuildFile; fileRef = CF48AC101EE4E32A009C4AD7 /* UIImage+Thumbnail.m */; };
 		CF48AC161EE4E32A009C4AD7 /* UIImage+Tools.m in Sources */ = {isa = PBXBuildFile; fileRef = CF48AC121EE4E32A009C4AD7 /* UIImage+Tools.m */; };
 		CF48AC1A1EE4E35B009C4AD7 /* UIImageView+CircleImage.m in Sources */ = {isa = PBXBuildFile; fileRef = CF48AC191EE4E35B009C4AD7 /* UIImageView+CircleImage.m */; };
+		CF6012DC1EFA3645007CA737 /* LxGridViewFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = CF6012DB1EFA3645007CA737 /* LxGridViewFlowLayout.m */; };
+		CF6012DF1EFA36EE007CA737 /* UIView+TZLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = CF6012DE1EFA36EE007CA737 /* UIView+TZLayout.m */; };
+		CF6012E21EFA370E007CA737 /* TZTestCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CF6012E11EFA370E007CA737 /* TZTestCell.m */; };
+		CF6012E51EFA3EDC007CA737 /* ALFontCache.m in Sources */ = {isa = PBXBuildFile; fileRef = CF6012E41EFA3EDC007CA737 /* ALFontCache.m */; };
+		CF6012E81EFA3F38007CA737 /* ALFontFile.m in Sources */ = {isa = PBXBuildFile; fileRef = CF6012E71EFA3F38007CA737 /* ALFontFile.m */; };
+		CF6012EB1EFA4A68007CA737 /* ALFontManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CF6012EA1EFA4A68007CA737 /* ALFontManager.m */; };
 		CF970B3B1EF76F0300955D4A /* LLRollingButtonScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = CF970B3A1EF76F0300955D4A /* LLRollingButtonScrollView.m */; };
+		CFC0AACA1EFB64B600E4FF12 /* EHHorizontalLineViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CFC0AAC11EFB64B600E4FF12 /* EHHorizontalLineViewCell.m */; };
+		CFC0AACB1EFB64B600E4FF12 /* EHHorizontalSelectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = CFC0AAC31EFB64B600E4FF12 /* EHHorizontalSelectionView.m */; };
+		CFC0AACC1EFB64B600E4FF12 /* EHHorizontalViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CFC0AAC51EFB64B600E4FF12 /* EHHorizontalViewCell.m */; };
+		CFC0AACD1EFB64B600E4FF12 /* EHRoundedHorizontalViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CFC0AAC71EFB64B600E4FF12 /* EHRoundedHorizontalViewCell.m */; };
+		CFC0AAE01EFB737D00E4FF12 /* BaseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CFC0AAD31EFB737D00E4FF12 /* BaseTableViewCell.m */; };
+		CFC0AAE31EFB737D00E4FF12 /* HorizonScrollTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = CFC0AAD91EFB737D00E4FF12 /* HorizonScrollTableView.m */; };
+		CFC0AAE41EFB737D00E4FF12 /* HorizontalScrollCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CFC0AADB1EFB737D00E4FF12 /* HorizontalScrollCell.m */; };
+		CFC0AAE51EFB737D00E4FF12 /* HorzonItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CFC0AADE1EFB737D00E4FF12 /* HorzonItemCell.m */; };
+		CFC0AAED1EFB74E600E4FF12 /* BaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CFC0AAE81EFB74E600E4FF12 /* BaseModel.m */; };
+		CFC0AAEE1EFB74E600E4FF12 /* CategoryModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CFC0AAEA1EFB74E600E4FF12 /* CategoryModel.m */; };
+		CFC0AAEF1EFB74E600E4FF12 /* CollectModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CFC0AAEC1EFB74E600E4FF12 /* CollectModel.m */; };
+		CFC0AAF21EFB75BE00E4FF12 /* UIView+ViewConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = CFC0AAF11EFB75BE00E4FF12 /* UIView+ViewConstraint.m */; };
+		CFC0AAF51EFB76F500E4FF12 /* ALRIchTextDemoViewControllernone.m in Sources */ = {isa = PBXBuildFile; fileRef = CFC0AAF41EFB76F500E4FF12 /* ALRIchTextDemoViewControllernone.m */; };
+		CFC0AAF81EFB80BE00E4FF12 /* AFTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CFC0AAF71EFB80BE00E4FF12 /* AFTableViewCell.m */; };
+		CFC0AAFB1EFB822100E4FF12 /* ALPanToolView.m in Sources */ = {isa = PBXBuildFile; fileRef = CFC0AAFA1EFB822100E4FF12 /* ALPanToolView.m */; };
+		CFC0AAFE1EFB8C1600E4FF12 /* ALRichTextCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CFC0AAFD1EFB8C1600E4FF12 /* ALRichTextCollectionViewCell.m */; };
 		CFC1EC8B1EEE617B00641E5D /* UIView+HGCorner.m in Sources */ = {isa = PBXBuildFile; fileRef = CFC1EC8A1EEE617B00641E5D /* UIView+HGCorner.m */; };
 		CFC1EC8E1EEE895000641E5D /* podSource.rtf in Resources */ = {isa = PBXBuildFile; fileRef = CFC1EC8D1EEE895000641E5D /* podSource.rtf */; };
 		CFC1EC941EEE9F6E00641E5D /* MHYouKuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = CFC1EC931EEE9F6E00641E5D /* MHYouKuItem.m */; };
@@ -29,7 +51,7 @@
 		CFDC0AF91EF1143C0099E3E5 /* UIImage+HXExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = CFDC0AF81EF1143C0099E3E5 /* UIImage+HXExtension.m */; };
 		CFFF6F291EF91B580092132B /* SSRollingButtonScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = CFFF6F281EF91B580092132B /* SSRollingButtonScrollView.m */; };
 		CFFF6F2C1EF91B7B0092132B /* ALRichTextDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CFFF6F2B1EF91B7B0092132B /* ALRichTextDemoViewController.m */; };
-		CFFF6F2F1EF925440092132B /* WWFontDownloadManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CFFF6F2E1EF925440092132B /* WWFontDownloadManager.m */; };
+		CFFF6F2F1EF925440092132B /* WWFontDownloadTask.m in Sources */ = {isa = PBXBuildFile; fileRef = CFFF6F2E1EF925440092132B /* WWFontDownloadTask.m */; };
 		D2195EE7F67E7C822F1A5342 /* libPods-ALPersonalDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 95C4D560735BE5A3E41488ED /* libPods-ALPersonalDemo.a */; };
 		E13C56631EE4231600005CFD /* FCFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E13C56621EE4231600005CFD /* FCFileManager.m */; };
 		E13C56661EE427B600005CFD /* FileManagerHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = E13C56651EE427B600005CFD /* FileManagerHelper.m */; };
@@ -263,8 +285,54 @@
 		CF48AC121EE4E32A009C4AD7 /* UIImage+Tools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Tools.m"; sourceTree = "<group>"; };
 		CF48AC181EE4E35B009C4AD7 /* UIImageView+CircleImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+CircleImage.h"; sourceTree = "<group>"; };
 		CF48AC191EE4E35B009C4AD7 /* UIImageView+CircleImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+CircleImage.m"; sourceTree = "<group>"; };
+		CF6012DA1EFA3645007CA737 /* LxGridViewFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LxGridViewFlowLayout.h; sourceTree = "<group>"; };
+		CF6012DB1EFA3645007CA737 /* LxGridViewFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LxGridViewFlowLayout.m; sourceTree = "<group>"; };
+		CF6012DD1EFA36EE007CA737 /* UIView+TZLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+TZLayout.h"; sourceTree = "<group>"; };
+		CF6012DE1EFA36EE007CA737 /* UIView+TZLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+TZLayout.m"; sourceTree = "<group>"; };
+		CF6012E01EFA370E007CA737 /* TZTestCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TZTestCell.h; sourceTree = "<group>"; };
+		CF6012E11EFA370E007CA737 /* TZTestCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TZTestCell.m; sourceTree = "<group>"; };
+		CF6012E31EFA3EDC007CA737 /* ALFontCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALFontCache.h; sourceTree = "<group>"; };
+		CF6012E41EFA3EDC007CA737 /* ALFontCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALFontCache.m; sourceTree = "<group>"; };
+		CF6012E61EFA3F38007CA737 /* ALFontFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALFontFile.h; sourceTree = "<group>"; };
+		CF6012E71EFA3F38007CA737 /* ALFontFile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALFontFile.m; sourceTree = "<group>"; };
+		CF6012E91EFA4A68007CA737 /* ALFontManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALFontManager.h; sourceTree = "<group>"; };
+		CF6012EA1EFA4A68007CA737 /* ALFontManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALFontManager.m; sourceTree = "<group>"; };
+		CF6012EC1EFA988A007CA737 /* RichTextConstant.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RichTextConstant.h; sourceTree = "<group>"; };
 		CF970B391EF76F0300955D4A /* LLRollingButtonScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LLRollingButtonScrollView.h; sourceTree = "<group>"; };
 		CF970B3A1EF76F0300955D4A /* LLRollingButtonScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LLRollingButtonScrollView.m; sourceTree = "<group>"; };
+		CFC0AAC01EFB64B600E4FF12 /* EHHorizontalLineViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHHorizontalLineViewCell.h; sourceTree = "<group>"; };
+		CFC0AAC11EFB64B600E4FF12 /* EHHorizontalLineViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EHHorizontalLineViewCell.m; sourceTree = "<group>"; };
+		CFC0AAC21EFB64B600E4FF12 /* EHHorizontalSelectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHHorizontalSelectionView.h; sourceTree = "<group>"; };
+		CFC0AAC31EFB64B600E4FF12 /* EHHorizontalSelectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EHHorizontalSelectionView.m; sourceTree = "<group>"; };
+		CFC0AAC41EFB64B600E4FF12 /* EHHorizontalViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHHorizontalViewCell.h; sourceTree = "<group>"; };
+		CFC0AAC51EFB64B600E4FF12 /* EHHorizontalViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EHHorizontalViewCell.m; sourceTree = "<group>"; };
+		CFC0AAC61EFB64B600E4FF12 /* EHRoundedHorizontalViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHRoundedHorizontalViewCell.h; sourceTree = "<group>"; };
+		CFC0AAC71EFB64B600E4FF12 /* EHRoundedHorizontalViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EHRoundedHorizontalViewCell.m; sourceTree = "<group>"; };
+		CFC0AAD21EFB737D00E4FF12 /* BaseTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseTableViewCell.h; sourceTree = "<group>"; };
+		CFC0AAD31EFB737D00E4FF12 /* BaseTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseTableViewCell.m; sourceTree = "<group>"; };
+		CFC0AAD81EFB737D00E4FF12 /* HorizonScrollTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HorizonScrollTableView.h; sourceTree = "<group>"; };
+		CFC0AAD91EFB737D00E4FF12 /* HorizonScrollTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HorizonScrollTableView.m; sourceTree = "<group>"; };
+		CFC0AADA1EFB737D00E4FF12 /* HorizontalScrollCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HorizontalScrollCell.h; sourceTree = "<group>"; };
+		CFC0AADB1EFB737D00E4FF12 /* HorizontalScrollCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HorizontalScrollCell.m; sourceTree = "<group>"; };
+		CFC0AADC1EFB737D00E4FF12 /* HorizontalScrollCellDeleagte.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HorizontalScrollCellDeleagte.h; sourceTree = "<group>"; };
+		CFC0AADD1EFB737D00E4FF12 /* HorzonItemCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HorzonItemCell.h; sourceTree = "<group>"; };
+		CFC0AADE1EFB737D00E4FF12 /* HorzonItemCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HorzonItemCell.m; sourceTree = "<group>"; };
+		CFC0AAE71EFB74E600E4FF12 /* BaseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseModel.h; sourceTree = "<group>"; };
+		CFC0AAE81EFB74E600E4FF12 /* BaseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseModel.m; sourceTree = "<group>"; };
+		CFC0AAE91EFB74E600E4FF12 /* CategoryModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryModel.h; sourceTree = "<group>"; };
+		CFC0AAEA1EFB74E600E4FF12 /* CategoryModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryModel.m; sourceTree = "<group>"; };
+		CFC0AAEB1EFB74E600E4FF12 /* CollectModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectModel.h; sourceTree = "<group>"; };
+		CFC0AAEC1EFB74E600E4FF12 /* CollectModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectModel.m; sourceTree = "<group>"; };
+		CFC0AAF01EFB75BE00E4FF12 /* UIView+ViewConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+ViewConstraint.h"; sourceTree = "<group>"; };
+		CFC0AAF11EFB75BE00E4FF12 /* UIView+ViewConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+ViewConstraint.m"; sourceTree = "<group>"; };
+		CFC0AAF31EFB76F500E4FF12 /* ALRIchTextDemoViewControllernone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALRIchTextDemoViewControllernone.h; sourceTree = "<group>"; };
+		CFC0AAF41EFB76F500E4FF12 /* ALRIchTextDemoViewControllernone.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALRIchTextDemoViewControllernone.m; sourceTree = "<group>"; };
+		CFC0AAF61EFB80BE00E4FF12 /* AFTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFTableViewCell.h; sourceTree = "<group>"; };
+		CFC0AAF71EFB80BE00E4FF12 /* AFTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFTableViewCell.m; sourceTree = "<group>"; };
+		CFC0AAF91EFB822100E4FF12 /* ALPanToolView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALPanToolView.h; sourceTree = "<group>"; };
+		CFC0AAFA1EFB822100E4FF12 /* ALPanToolView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALPanToolView.m; sourceTree = "<group>"; };
+		CFC0AAFC1EFB8C1600E4FF12 /* ALRichTextCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALRichTextCollectionViewCell.h; sourceTree = "<group>"; };
+		CFC0AAFD1EFB8C1600E4FF12 /* ALRichTextCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALRichTextCollectionViewCell.m; sourceTree = "<group>"; };
 		CFC1EC891EEE617B00641E5D /* UIView+HGCorner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+HGCorner.h"; sourceTree = "<group>"; };
 		CFC1EC8A1EEE617B00641E5D /* UIView+HGCorner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+HGCorner.m"; sourceTree = "<group>"; };
 		CFC1EC8D1EEE895000641E5D /* podSource.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = podSource.rtf; sourceTree = "<group>"; };
@@ -284,8 +352,8 @@
 		CFFF6F281EF91B580092132B /* SSRollingButtonScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSRollingButtonScrollView.m; sourceTree = "<group>"; };
 		CFFF6F2A1EF91B7B0092132B /* ALRichTextDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALRichTextDemoViewController.h; sourceTree = "<group>"; };
 		CFFF6F2B1EF91B7B0092132B /* ALRichTextDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALRichTextDemoViewController.m; sourceTree = "<group>"; };
-		CFFF6F2D1EF925440092132B /* WWFontDownloadManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WWFontDownloadManager.h; sourceTree = "<group>"; };
-		CFFF6F2E1EF925440092132B /* WWFontDownloadManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WWFontDownloadManager.m; sourceTree = "<group>"; };
+		CFFF6F2D1EF925440092132B /* WWFontDownloadTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WWFontDownloadTask.h; sourceTree = "<group>"; };
+		CFFF6F2E1EF925440092132B /* WWFontDownloadTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WWFontDownloadTask.m; sourceTree = "<group>"; };
 		E13C56611EE4231600005CFD /* FCFileManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FCFileManager.h; sourceTree = "<group>"; };
 		E13C56621EE4231600005CFD /* FCFileManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FCFileManager.m; sourceTree = "<group>"; };
 		E13C56641EE427B600005CFD /* FileManagerHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileManagerHelper.h; sourceTree = "<group>"; };
@@ -748,6 +816,68 @@
 			path = BTNScrollView;
 			sourceTree = "<group>";
 		};
+		CFC0AABE1EFB619E00E4FF12 /* EHHorizontalSelectionView */ = {
+			isa = PBXGroup;
+			children = (
+				CFC0AABF1EFB64B600E4FF12 /* EHHorizontalSelectionView */,
+			);
+			path = EHHorizontalSelectionView;
+			sourceTree = "<group>";
+		};
+		CFC0AABF1EFB64B600E4FF12 /* EHHorizontalSelectionView */ = {
+			isa = PBXGroup;
+			children = (
+				CFC0AAC01EFB64B600E4FF12 /* EHHorizontalLineViewCell.h */,
+				CFC0AAC11EFB64B600E4FF12 /* EHHorizontalLineViewCell.m */,
+				CFC0AAC21EFB64B600E4FF12 /* EHHorizontalSelectionView.h */,
+				CFC0AAC31EFB64B600E4FF12 /* EHHorizontalSelectionView.m */,
+				CFC0AAC41EFB64B600E4FF12 /* EHHorizontalViewCell.h */,
+				CFC0AAC51EFB64B600E4FF12 /* EHHorizontalViewCell.m */,
+				CFC0AAC61EFB64B600E4FF12 /* EHRoundedHorizontalViewCell.h */,
+				CFC0AAC71EFB64B600E4FF12 /* EHRoundedHorizontalViewCell.m */,
+				CFC0AAC81EFB64B600E4FF12 /* xibs */,
+			);
+			path = EHHorizontalSelectionView;
+			sourceTree = "<group>";
+		};
+		CFC0AAC81EFB64B600E4FF12 /* xibs */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = xibs;
+			sourceTree = "<group>";
+		};
+		CFC0AACF1EFB737D00E4FF12 /* HorizontalView */ = {
+			isa = PBXGroup;
+			children = (
+				CFC0AAF01EFB75BE00E4FF12 /* UIView+ViewConstraint.h */,
+				CFC0AAF11EFB75BE00E4FF12 /* UIView+ViewConstraint.m */,
+				CFC0AAD21EFB737D00E4FF12 /* BaseTableViewCell.h */,
+				CFC0AAD31EFB737D00E4FF12 /* BaseTableViewCell.m */,
+				CFC0AAD81EFB737D00E4FF12 /* HorizonScrollTableView.h */,
+				CFC0AAD91EFB737D00E4FF12 /* HorizonScrollTableView.m */,
+				CFC0AADA1EFB737D00E4FF12 /* HorizontalScrollCell.h */,
+				CFC0AADB1EFB737D00E4FF12 /* HorizontalScrollCell.m */,
+				CFC0AADC1EFB737D00E4FF12 /* HorizontalScrollCellDeleagte.h */,
+				CFC0AADD1EFB737D00E4FF12 /* HorzonItemCell.h */,
+				CFC0AADE1EFB737D00E4FF12 /* HorzonItemCell.m */,
+			);
+			path = HorizontalView;
+			sourceTree = "<group>";
+		};
+		CFC0AAE61EFB74CC00E4FF12 /* baseModel */ = {
+			isa = PBXGroup;
+			children = (
+				CFC0AAE71EFB74E600E4FF12 /* BaseModel.h */,
+				CFC0AAE81EFB74E600E4FF12 /* BaseModel.m */,
+				CFC0AAE91EFB74E600E4FF12 /* CategoryModel.h */,
+				CFC0AAEA1EFB74E600E4FF12 /* CategoryModel.m */,
+				CFC0AAEB1EFB74E600E4FF12 /* CollectModel.h */,
+				CFC0AAEC1EFB74E600E4FF12 /* CollectModel.m */,
+			);
+			path = baseModel;
+			sourceTree = "<group>";
+		};
 		CFC1EC8C1EEE882E00641E5D /* 评论组件 */ = {
 			isa = PBXGroup;
 			children = (
@@ -843,6 +973,8 @@
 				CFFF6F231EF91AF70092132B /* View */,
 				CFFF6F2A1EF91B7B0092132B /* ALRichTextDemoViewController.h */,
 				CFFF6F2B1EF91B7B0092132B /* ALRichTextDemoViewController.m */,
+				CFC0AAF31EFB76F500E4FF12 /* ALRIchTextDemoViewControllernone.h */,
+				CFC0AAF41EFB76F500E4FF12 /* ALRIchTextDemoViewControllernone.m */,
 			);
 			path = wangwangRichText;
 			sourceTree = "<group>";
@@ -850,6 +982,12 @@
 		CFFF6F231EF91AF70092132B /* View */ = {
 			isa = PBXGroup;
 			children = (
+				CF6012E01EFA370E007CA737 /* TZTestCell.h */,
+				CF6012E11EFA370E007CA737 /* TZTestCell.m */,
+				CFC0AAFC1EFB8C1600E4FF12 /* ALRichTextCollectionViewCell.h */,
+				CFC0AAFD1EFB8C1600E4FF12 /* ALRichTextCollectionViewCell.m */,
+				CFC0AAF91EFB822100E4FF12 /* ALPanToolView.h */,
+				CFC0AAFA1EFB822100E4FF12 /* ALPanToolView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -857,8 +995,16 @@
 		CFFF6F251EF91B110092132B /* third */ = {
 			isa = PBXGroup;
 			children = (
+				CFC0AAF61EFB80BE00E4FF12 /* AFTableViewCell.h */,
+				CFC0AAF71EFB80BE00E4FF12 /* AFTableViewCell.m */,
+				CFC0AACF1EFB737D00E4FF12 /* HorizontalView */,
+				CFC0AABE1EFB619E00E4FF12 /* EHHorizontalSelectionView */,
 				CFFF6F271EF91B580092132B /* SSRollingButtonScrollView.h */,
 				CFFF6F281EF91B580092132B /* SSRollingButtonScrollView.m */,
+				CF6012DA1EFA3645007CA737 /* LxGridViewFlowLayout.h */,
+				CF6012DB1EFA3645007CA737 /* LxGridViewFlowLayout.m */,
+				CF6012DD1EFA36EE007CA737 /* UIView+TZLayout.h */,
+				CF6012DE1EFA36EE007CA737 /* UIView+TZLayout.m */,
 			);
 			path = third;
 			sourceTree = "<group>";
@@ -866,8 +1012,16 @@
 		CFFF6F261EF91B250092132B /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				CFFF6F2D1EF925440092132B /* WWFontDownloadManager.h */,
-				CFFF6F2E1EF925440092132B /* WWFontDownloadManager.m */,
+				CFC0AAE61EFB74CC00E4FF12 /* baseModel */,
+				CFFF6F2D1EF925440092132B /* WWFontDownloadTask.h */,
+				CFFF6F2E1EF925440092132B /* WWFontDownloadTask.m */,
+				CF6012E91EFA4A68007CA737 /* ALFontManager.h */,
+				CF6012EA1EFA4A68007CA737 /* ALFontManager.m */,
+				CF6012E61EFA3F38007CA737 /* ALFontFile.h */,
+				CF6012E71EFA3F38007CA737 /* ALFontFile.m */,
+				CF6012E31EFA3EDC007CA737 /* ALFontCache.h */,
+				CF6012E41EFA3EDC007CA737 /* ALFontCache.m */,
+				CF6012EC1EFA988A007CA737 /* RichTextConstant.h */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1935,9 +2089,12 @@
 				E1F661901EDD9CE7001D98E1 /* NSDictionary+SSAdd.m in Sources */,
 				E1540B1E1EF6534C00D2721F /* UIDevice+Resolutions.m in Sources */,
 				E1540B121EF6534C00D2721F /* UIColor+Hex.m in Sources */,
+				CFC0AACD1EFB64B600E4FF12 /* EHRoundedHorizontalViewCell.m in Sources */,
 				E1540B291EF6584800D2721F /* HHLineStyleCell.m in Sources */,
 				E1F661BF1EDDA36F001D98E1 /* UITableView+SSAdd.m in Sources */,
 				E15D70031EF4DE4900513AE6 /* NSDate+Extension.m in Sources */,
+				CFC0AACB1EFB64B600E4FF12 /* EHHorizontalSelectionView.m in Sources */,
+				CFC0AAEF1EFB74E600E4FF12 /* CollectModel.m in Sources */,
 				E17E21F41EDAFE0F0013D3B9 /* UIButton+SSAdd.m in Sources */,
 				E1540B191EF6534C00D2721F /* UIImage+Resize.m in Sources */,
 				E1540A1C1EF6485E00D2721F /* CCButton.m in Sources */,
@@ -1984,17 +2141,22 @@
 				E1540AC51EF64F9700D2721F /* UITableViewCell+Tracking.m in Sources */,
 				E15D701F1EF4F04700513AE6 /* MHTopicFooterView.m in Sources */,
 				E1540B4B1EF65BA300D2721F /* MBProgressHUD+Add.m in Sources */,
+				CFC0AAE31EFB737D00E4FF12 /* HorizonScrollTableView.m in Sources */,
 				E1540B411EF65A9600D2721F /* HHInforDraftCell.m in Sources */,
 				E1F661A81EDDA024001D98E1 /* SSUIAdapter.m in Sources */,
+				CFC0AAED1EFB74E600E4FF12 /* BaseModel.m in Sources */,
 				E15D70551EF5372200513AE6 /* UINavigationController+FDFullscreenPopGesture.m in Sources */,
 				E1540A761EF64C8800D2721F /* RSKTouchView.m in Sources */,
+				CF6012E51EFA3EDC007CA737 /* ALFontCache.m in Sources */,
 				E1540A5D1EF64C2B00D2721F /* AJPhotoPickerViewController.m in Sources */,
+				CFC0AAE01EFB737D00E4FF12 /* BaseTableViewCell.m in Sources */,
 				E14AD1871EEB0233003353B6 /* ALReactiveCocoaDemoVC.m in Sources */,
 				E14B8A711EF1889D0021D665 /* NSArray+SNFoundation.m in Sources */,
 				E1540B2F1EF6589A00D2721F /* LMTextStyle.m in Sources */,
 				E13C56791EE44E6900005CFD /* UILabel+Set.m in Sources */,
 				E15D70221EF4F4A100513AE6 /* MHCommentCell.m in Sources */,
 				E15D703D1EF5231400513AE6 /* UIImage+MHCrop.m in Sources */,
+				CFC0AAF81EFB80BE00E4FF12 /* AFTableViewCell.m in Sources */,
 				E1540A751EF64C8800D2721F /* RSKInternalUtility.m in Sources */,
 				E1540B171EF6534C00D2721F /* UIImage+New.m in Sources */,
 				E1540A251EF6495F00D2721F /* HHInforDraftModel.m in Sources */,
@@ -2036,19 +2198,24 @@
 				E15D70601EF5802A00513AE6 /* MHTopicTwoController.m in Sources */,
 				E1540B111EF6534C00D2721F /* UIColor+Crayola.m in Sources */,
 				CFC1ECA01EEEA1E000641E5D /* MHComment.m in Sources */,
+				CFC0AAEE1EFB74E600E4FF12 /* CategoryModel.m in Sources */,
 				E17E21C01EDA7C970013D3B9 /* ViewController.m in Sources */,
 				E1540AD11EF6506E00D2721F /* ZHNetworkManager.m in Sources */,
 				E1540B131EF6534C00D2721F /* UIColor+HSB.m in Sources */,
 				E15D701C1EF4EDFA00513AE6 /* UIFont+MHExtension.m in Sources */,
 				E17E21E01EDAC4630013D3B9 /* HYBNetworking.m in Sources */,
 				E1540ABF1EF64F9700D2721F /* RJClickCountLabel.m in Sources */,
+				CFC0AACA1EFB64B600E4FF12 /* EHHorizontalLineViewCell.m in Sources */,
 				CF1695A81EE918DF00D174B1 /* ZHManualAdapter.m in Sources */,
 				CF40EC7B1EE01AA90003499F /* ALDemo1ViewController.m in Sources */,
 				E1F661B41EDDA2B4001D98E1 /* UIGestureRecognizer+SSAdd.m in Sources */,
 				E1540AC31EF64F9700D2721F /* UIControl+Tracking.m in Sources */,
+				CFC0AAE51EFB737D00E4FF12 /* HorzonItemCell.m in Sources */,
+				CFC0AAFB1EFB822100E4FF12 /* ALPanToolView.m in Sources */,
 				E14B8A771EF1889D0021D665 /* NSDictionary+SNFoundation.m in Sources */,
 				CF1695A71EE918DF00D174B1 /* UIView+ManualAdapter.m in Sources */,
 				CF40EC781EE01A0D0003499F /* WWTagButtonTextField.m in Sources */,
+				CF6012E21EFA370E007CA737 /* TZTestCell.m in Sources */,
 				E15D70441EF523A400513AE6 /* UIView+MHExtension.m in Sources */,
 				E14B8A761EF1889D0021D665 /* NSDate+SNFoundation.m in Sources */,
 				E1540B511EF65C8C00D2721F /* RJHomeTopicShareModel.m in Sources */,
@@ -2072,11 +2239,14 @@
 				E1540B181EF6534C00D2721F /* UIImage+ProportionalFill.m in Sources */,
 				CF48AC151EE4E32A009C4AD7 /* UIImage+Thumbnail.m in Sources */,
 				E1540B2C1EF6587400D2721F /* HHTextStyleViewController.m in Sources */,
+				CF6012DF1EFA36EE007CA737 /* UIView+TZLayout.m in Sources */,
+				CFC0AACC1EFB64B600E4FF12 /* EHHorizontalViewCell.m in Sources */,
 				E15D70411EF5231400513AE6 /* UIImage+MHSnap.m in Sources */,
 				E15D70401EF5231400513AE6 /* UIImage+MHOrientation.m in Sources */,
 				CF48AC131EE4E32A009C4AD7 /* UIImage+Orientaion.m in Sources */,
 				E1540A2B1EF64A2200D2721F /* HHInformationTextView.m in Sources */,
 				E15D703E1EF5231400513AE6 /* UIImage+MHExtension.m in Sources */,
+				CFC0AAF21EFB75BE00E4FF12 /* UIView+ViewConstraint.m in Sources */,
 				E15D703F1EF5231400513AE6 /* UIImage+MHFile.m in Sources */,
 				E15D70281EF4F77400513AE6 /* MHYouKuCommentButton.m in Sources */,
 				CFC1EC9D1EEEA1A700641E5D /* MHUser.m in Sources */,
@@ -2085,25 +2255,30 @@
 				E17E21EE1EDAF6A20013D3B9 /* ALToastTableViewController.m in Sources */,
 				E15D705A1EF540CD00513AE6 /* NSObject+MHRandom.m in Sources */,
 				E1540A161EF647E100D2721F /* HHInformationViewController.m in Sources */,
+				CF6012DC1EFA3645007CA737 /* LxGridViewFlowLayout.m in Sources */,
+				CFC0AAE41EFB737D00E4FF12 /* HorizontalScrollCell.m in Sources */,
 				CFC1EC9A1EEE9FC100641E5D /* MHYouKuTopicController.m in Sources */,
-				CFFF6F2F1EF925440092132B /* WWFontDownloadManager.m in Sources */,
+				CFFF6F2F1EF925440092132B /* WWFontDownloadTask.m in Sources */,
 				E1540B3B1EF659A700D2721F /* LMTextHTMLParser.m in Sources */,
 				E15D70091EF4E08C00513AE6 /* MHCommentFrame.m in Sources */,
 				E1540A711EF64C8800D2721F /* CGGeometry+RSKImageCropper.m in Sources */,
 				E1540A731EF64C8800D2721F /* RSKImageCropViewController.m in Sources */,
 				E14B8A7F1EF1889D0021D665 /* UIImage+SNFoundation.m in Sources */,
 				E1540B3E1EF65A5500D2721F /* HHInforDraftController.m in Sources */,
+				CF6012EB1EFA4A68007CA737 /* ALFontManager.m in Sources */,
 				E1F661C21EDDA39E001D98E1 /* UIView+SSAdd.m in Sources */,
 				E14B8A7E1EF1889D0021D665 /* UIColor+SNFoundation.m in Sources */,
 				E1540B221EF6534C00D2721F /* HTUIHelper.m in Sources */,
 				E17E21DB1EDABED80013D3B9 /* ALNetWorkViewController.m in Sources */,
 				E15D703C1EF5231400513AE6 /* UIImage+MHBlur.m in Sources */,
+				CFC0AAF51EFB76F500E4FF12 /* ALRIchTextDemoViewControllernone.m in Sources */,
 				E14B8A741EF1889D0021D665 /* NSData+GZIP.m in Sources */,
 				E1540A741EF64C8800D2721F /* RSKImageScrollView.m in Sources */,
 				E1F661B01EDDA287001D98E1 /* UIControl+SSAdd.m in Sources */,
 				E1540B381EF6597F00D2721F /* HMSegmentedControl.m in Sources */,
 				E1540B1C1EF6534C00D2721F /* UIImage+Tint.m in Sources */,
 				E1540B1F1EF6534C00D2721F /* UILabel+StringFrame.m in Sources */,
+				CFC0AAFE1EFB8C1600E4FF12 /* ALRichTextCollectionViewCell.m in Sources */,
 				E1540A771EF64C8800D2721F /* UIApplication+RSKImageCropper.m in Sources */,
 				E1540A541EF64C2A00D2721F /* AJPhotoBrowserViewController.m in Sources */,
 				E14B8A441EF187CD0021D665 /* UIImage-Extensions.m in Sources */,
@@ -2116,6 +2291,7 @@
 				E17E21711EDA73760013D3B9 /* main.m in Sources */,
 				E1540A591EF64C2B00D2721F /* AJPhotoGroupView.m in Sources */,
 				E1540A571EF64C2B00D2721F /* AJTapDetectingView.m in Sources */,
+				CF6012E81EFA3F38007CA737 /* ALFontFile.m in Sources */,
 				E15D70521EF5301900513AE6 /* MHYouKuInputPanelView.m in Sources */,
 				E14B8A801EF1889D0021D665 /* UIView+SNFoundation.m in Sources */,
 				E15D70631EF5803F00513AE6 /* MHTopicOneController.m in Sources */,
