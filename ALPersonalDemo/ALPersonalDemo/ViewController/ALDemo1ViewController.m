@@ -29,8 +29,8 @@
     //[self.navigationController pushViewController:vc animated:NO];
 
     
-    HHInformationViewController *vc = [HHInformationViewController new];
-    [self.navigationController pushViewController:vc animated:NO];
+    //HHInformationViewController *vc = [HHInformationViewController new];
+    //[self.navigationController pushViewController:vc animated:NO];
     
     
 //    ALRichTextDemoViewController *vc = [ALRichTextDemoViewController new];

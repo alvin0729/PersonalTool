@@ -24,6 +24,7 @@
 		CF6012E51EFA3EDC007CA737 /* ALFontCache.m in Sources */ = {isa = PBXBuildFile; fileRef = CF6012E41EFA3EDC007CA737 /* ALFontCache.m */; };
 		CF6012E81EFA3F38007CA737 /* ALFontFile.m in Sources */ = {isa = PBXBuildFile; fileRef = CF6012E71EFA3F38007CA737 /* ALFontFile.m */; };
 		CF6012EB1EFA4A68007CA737 /* ALFontManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CF6012EA1EFA4A68007CA737 /* ALFontManager.m */; };
+		CF6DF6BC1F04D4070093E2D6 /* 备忘录.rtf in Resources */ = {isa = PBXBuildFile; fileRef = CF6DF6BB1F04D4070093E2D6 /* 备忘录.rtf */; };
 		CF970B3B1EF76F0300955D4A /* LLRollingButtonScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = CF970B3A1EF76F0300955D4A /* LLRollingButtonScrollView.m */; };
 		CFC0AACA1EFB64B600E4FF12 /* EHHorizontalLineViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CFC0AAC11EFB64B600E4FF12 /* EHHorizontalLineViewCell.m */; };
 		CFC0AACB1EFB64B600E4FF12 /* EHHorizontalSelectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = CFC0AAC31EFB64B600E4FF12 /* EHHorizontalSelectionView.m */; };
@@ -48,6 +49,7 @@
 		CFC1EC9A1EEE9FC100641E5D /* MHYouKuTopicController.m in Sources */ = {isa = PBXBuildFile; fileRef = CFC1EC991EEE9FC100641E5D /* MHYouKuTopicController.m */; };
 		CFC1EC9D1EEEA1A700641E5D /* MHUser.m in Sources */ = {isa = PBXBuildFile; fileRef = CFC1EC9C1EEEA1A700641E5D /* MHUser.m */; };
 		CFC1ECA01EEEA1E000641E5D /* MHComment.m in Sources */ = {isa = PBXBuildFile; fileRef = CFC1EC9F1EEEA1E000641E5D /* MHComment.m */; };
+		CFCE04621F0B703F0047D184 /* HexColors.m in Sources */ = {isa = PBXBuildFile; fileRef = CFCE04611F0B703F0047D184 /* HexColors.m */; };
 		CFDC0AF91EF1143C0099E3E5 /* UIImage+HXExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = CFDC0AF81EF1143C0099E3E5 /* UIImage+HXExtension.m */; };
 		CFFF6F291EF91B580092132B /* SSRollingButtonScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = CFFF6F281EF91B580092132B /* SSRollingButtonScrollView.m */; };
 		CFFF6F2C1EF91B7B0092132B /* ALRichTextDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CFFF6F2B1EF91B7B0092132B /* ALRichTextDemoViewController.m */; };
@@ -298,6 +300,7 @@
 		CF6012E91EFA4A68007CA737 /* ALFontManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALFontManager.h; sourceTree = "<group>"; };
 		CF6012EA1EFA4A68007CA737 /* ALFontManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALFontManager.m; sourceTree = "<group>"; };
 		CF6012EC1EFA988A007CA737 /* RichTextConstant.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RichTextConstant.h; sourceTree = "<group>"; };
+		CF6DF6BB1F04D4070093E2D6 /* 备忘录.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = "备忘录.rtf"; sourceTree = "<group>"; };
 		CF970B391EF76F0300955D4A /* LLRollingButtonScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LLRollingButtonScrollView.h; sourceTree = "<group>"; };
 		CF970B3A1EF76F0300955D4A /* LLRollingButtonScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LLRollingButtonScrollView.m; sourceTree = "<group>"; };
 		CFC0AAC01EFB64B600E4FF12 /* EHHorizontalLineViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHHorizontalLineViewCell.h; sourceTree = "<group>"; };
@@ -346,6 +349,8 @@
 		CFC1EC9C1EEEA1A700641E5D /* MHUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MHUser.m; sourceTree = "<group>"; };
 		CFC1EC9E1EEEA1E000641E5D /* MHComment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MHComment.h; sourceTree = "<group>"; };
 		CFC1EC9F1EEEA1E000641E5D /* MHComment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MHComment.m; sourceTree = "<group>"; };
+		CFCE04601F0B703F0047D184 /* HexColors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HexColors.h; sourceTree = "<group>"; };
+		CFCE04611F0B703F0047D184 /* HexColors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HexColors.m; sourceTree = "<group>"; };
 		CFDC0AF71EF1143C0099E3E5 /* UIImage+HXExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+HXExtension.h"; sourceTree = "<group>"; };
 		CFDC0AF81EF1143C0099E3E5 /* UIImage+HXExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+HXExtension.m"; sourceTree = "<group>"; };
 		CFFF6F271EF91B580092132B /* SSRollingButtonScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSRollingButtonScrollView.h; sourceTree = "<group>"; };
@@ -1812,8 +1817,11 @@
 				CF40EC771EE01A0D0003499F /* WWTagButtonTextField.m */,
 				CF40EC731EE0191E0003499F /* WWTagEditingView.h */,
 				CF40EC741EE0191E0003499F /* WWTagEditingView.m */,
+				CFCE04601F0B703F0047D184 /* HexColors.h */,
+				CFCE04611F0B703F0047D184 /* HexColors.m */,
 				CFC1EC8D1EEE895000641E5D /* podSource.rtf */,
 				E15D70561EF53B0500513AE6 /* navigationbar.rtf */,
+				CF6DF6BB1F04D4070093E2D6 /* 备忘录.rtf */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -2006,6 +2014,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E17E21D21EDAA9EF0013D3B9 /* LaunchScreen.storyboard in Resources */,
+				CF6DF6BC1F04D4070093E2D6 /* 备忘录.rtf in Resources */,
 				CFC1EC8E1EEE895000641E5D /* podSource.rtf in Resources */,
 				E1540A0F1EF6312000D2721F /* RSKImageCropper.zip in Resources */,
 				E1540A721EF64C8800D2721F /* RSKImageCropperStrings.bundle in Resources */,
@@ -2206,6 +2215,7 @@
 				E17E21E01EDAC4630013D3B9 /* HYBNetworking.m in Sources */,
 				E1540ABF1EF64F9700D2721F /* RJClickCountLabel.m in Sources */,
 				CFC0AACA1EFB64B600E4FF12 /* EHHorizontalLineViewCell.m in Sources */,
+				CFCE04621F0B703F0047D184 /* HexColors.m in Sources */,
 				CF1695A81EE918DF00D174B1 /* ZHManualAdapter.m in Sources */,
 				CF40EC7B1EE01AA90003499F /* ALDemo1ViewController.m in Sources */,
 				E1F661B41EDDA2B4001D98E1 /* UIGestureRecognizer+SSAdd.m in Sources */,
