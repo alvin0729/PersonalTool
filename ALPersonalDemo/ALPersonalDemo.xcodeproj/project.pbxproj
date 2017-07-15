@@ -89,6 +89,7 @@
 		E14B8A801EF1889D0021D665 /* UIView+SNFoundation.m in Sources */ = {isa = PBXBuildFile; fileRef = E14B8A6C1EF1889D0021D665 /* UIView+SNFoundation.m */; };
 		E14B8A811EF1889D0021D665 /* UIWebView+SNFoundation.m in Sources */ = {isa = PBXBuildFile; fileRef = E14B8A6E1EF1889D0021D665 /* UIWebView+SNFoundation.m */; };
 		E14B8A831EF18A310021D665 /* libc.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = E14B8A821EF18A310021D665 /* libc.tbd */; };
+		E14EBC151F12327600998083 /* LTVideoProgressSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = E14EBC141F12327600998083 /* LTVideoProgressSlider.m */; };
 		E1540A0F1EF6312000D2721F /* RSKImageCropper.zip in Resources */ = {isa = PBXBuildFile; fileRef = E1540A0E1EF6312000D2721F /* RSKImageCropper.zip */; };
 		E1540A161EF647E100D2721F /* HHInformationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E1540A151EF647E100D2721F /* HHInformationViewController.m */; };
 		E1540A191EF6484300D2721F /* RJBasicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E1540A181EF6484300D2721F /* RJBasicViewController.m */; };
@@ -428,6 +429,8 @@
 		E14B8A6D1EF1889D0021D665 /* UIWebView+SNFoundation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWebView+SNFoundation.h"; sourceTree = "<group>"; };
 		E14B8A6E1EF1889D0021D665 /* UIWebView+SNFoundation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWebView+SNFoundation.m"; sourceTree = "<group>"; };
 		E14B8A821EF18A310021D665 /* libc.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libc.tbd; path = usr/lib/libc.tbd; sourceTree = SDKROOT; };
+		E14EBC131F12327600998083 /* LTVideoProgressSlider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTVideoProgressSlider.h; sourceTree = "<group>"; };
+		E14EBC141F12327600998083 /* LTVideoProgressSlider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LTVideoProgressSlider.m; sourceTree = "<group>"; };
 		E1540A0E1EF6312000D2721F /* RSKImageCropper.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = RSKImageCropper.zip; sourceTree = "<group>"; };
 		E1540A141EF647E100D2721F /* HHInformationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HHInformationViewController.h; sourceTree = "<group>"; };
 		E1540A151EF647E100D2721F /* HHInformationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HHInformationViewController.m; sourceTree = "<group>"; };
@@ -1163,6 +1166,15 @@
 			path = SNFoundation;
 			sourceTree = "<group>";
 		};
+		E14EBC121F12325200998083 /* audio&video */ = {
+			isa = PBXGroup;
+			children = (
+				E14EBC131F12327600998083 /* LTVideoProgressSlider.h */,
+				E14EBC141F12327600998083 /* LTVideoProgressSlider.m */,
+			);
+			path = "audio&video";
+			sourceTree = "<group>";
+		};
 		E1540A0D1EF6186F00D2721F /* 相册 */ = {
 			isa = PBXGroup;
 			children = (
@@ -1807,6 +1819,7 @@
 		E1F661A51EDDA001001D98E1 /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
+				E14EBC121F12325200998083 /* audio&video */,
 				E1540A0D1EF6186F00D2721F /* 相册 */,
 				E15D706B1EF5838A00513AE6 /* 富文本 */,
 				CF2185F41EF36C7B00B151DE /* UITextfield */,
@@ -2230,6 +2243,7 @@
 				E14B8A761EF1889D0021D665 /* NSDate+SNFoundation.m in Sources */,
 				E1540B511EF65C8C00D2721F /* RJHomeTopicShareModel.m in Sources */,
 				E14B8A781EF1889D0021D665 /* NSString+SNFoundation.m in Sources */,
+				E14EBC151F12327600998083 /* LTVideoProgressSlider.m in Sources */,
 				E13C56761EE44DEB00005CFD /* UIBarButtonItem+DDExtension.m in Sources */,
 				CFC1EC8B1EEE617B00641E5D /* UIView+HGCorner.m in Sources */,
 				E17E21E41EDACCF30013D3B9 /* UIDevice+ALSystemInfo.m in Sources */,
