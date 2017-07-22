@@ -6,12 +6,14 @@
 \red0\green0\blue0;\red20\green159\blue255;\red211\green24\blue149;\red252\green44\blue56;\red120\green109\blue255;
 \red35\green255\blue131;\red228\green124\blue72;\red0\green0\blue0;\red170\green13\blue145;\red92\green38\blue153;
 \red46\green13\blue110;\red63\green110\blue116;\red0\green0\blue255;\red74\green74\blue74;\red15\green114\blue1;
-\red67\green67\blue67;\red246\green246\blue246;\red210\green0\blue5;\red0\green116\blue0;}
+\red67\green67\blue67;\red246\green246\blue246;\red210\green0\blue5;\red0\green116\blue0;\red196\green26\blue22;
+\red100\green56\blue32;\red28\green0\blue207;}
 {\*\expandedcolortbl;\csgray\c100000;\cssrgb\c100000\c100000\c100000;\csgray\c100000;\cssrgb\c29412\c81961\c34118;
 \cssrgb\c0\c0\c0;\cssrgb\c0\c69412\c100000;\cssrgb\c87059\c21961\c65098;\cssrgb\c100000\c27451\c27843;\cssrgb\c54510\c52941\c100000;
 \cssrgb\c3137\c98039\c58431;\cssrgb\c92157\c56471\c35294;\csgenericrgb\c0\c0\c0;\csgenericrgb\c66500\c5200\c56900;\csgenericrgb\c35900\c14900\c60100;
 \csgenericrgb\c18100\c5200\c43100;\csgenericrgb\c24700\c43100\c45600;\cssrgb\c0\c0\c100000;\cssrgb\c36078\c36078\c36078;\cssrgb\c0\c50980\c0;
-\cssrgb\c33333\c33333\c33333;\cssrgb\c97255\c97255\c97255;\cssrgb\c86667\c0\c0;\csgenericrgb\c0\c45600\c0;}
+\cssrgb\c33333\c33333\c33333;\cssrgb\c97255\c97255\c97255;\cssrgb\c86667\c0\c0;\csgenericrgb\c0\c45600\c0;\csgenericrgb\c77000\c10200\c8600;
+\csgenericrgb\c39100\c22000\c12500;\csgenericrgb\c11000\c0\c81000;}
 {\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc0\levelnfcn0\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{decimal\}}{\leveltext\leveltemplateid1\'01\'00;}{\levelnumbers\'01;}\fi-360\li720\lin720 }{\listname ;}\listid1}}
 {\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}}
 \margl1440\margr1440\vieww9000\viewh8400\viewkind0
@@ -231,7 +233,79 @@ UIFont
 
 \f4\fs26 \cf23 \cb3 \kerning1\expnd0\expndtw0 \CocoaLigature0 //    UIImage *backButtonImage = [UIImage imageNamed:@"fabugushi_back_btn_red"];\cf12 \
 \cf23 //    [self.backButton setImage:[backButtonImage imageWithRenderingMode:(UIImageRenderingModeAlwaysTemplate)] forState:UIControlStateNormal];\cf12 \
-\cf23 //    [self.backButton setTintColor:UIColorHex(0x7269ff)];
+\cf23 //    [self.backButton setTintColor:UIColorHex(0x7269ff)];\
+\
+\pard\tx642\pardeftab642\pardirnatural\partightenfactor0
+\cf14 NSString\cf12  *script = [\cf14 NSString\cf12  \cf15 stringWithFormat\cf12 :\
+                        \cf24 @"var script = document.createElement('script');"\cf12 \
+                        \cf24 "script.type = 'text/javascript';"\cf12 \
+                        \cf24 "script.text = \\"function ResizeImages() \{ "\cf12 \
+                        \cf24 "var img;"\cf12 \
+                        \cf24 "var maxwidth=%f;"\cf12 \
+                        \cf24 "for(i=0;i <document.images.length;i++)\{"\cf12 \
+                        \cf24 "img = document.images[i];"\cf12 \
+                        \cf24 "if(img.width > maxwidth)\{"\cf12 \
+                        \cf24 "img.width = maxwidth;"\cf12 \
+                        \cf24 "\}"\cf12 \
+                        \cf24 "\}"\cf12 \
+                        \cf24 "\}\\";"\cf12 \
+                        \cf24 "document.getElementsByTagName('head')[0].appendChild(script);"\cf12 , \cf25 SCREEN_WIDTH\cf12  - \cf26 20\cf12 ];\
+    [webView \cf15 stringByEvaluatingJavaScriptFromString\cf12 : script];\
+    [webView \cf15 stringByEvaluatingJavaScriptFromString\cf12 :\cf24 @"ResizeImages();"\cf12 ];\
+\
+\
+-(\cf14 UIView\cf12  *)hitTest:(\cf14 CGPoint\cf12 )point withEvent:(\cf14 UIEvent\cf12  *)event\{\
+    \
+    \cf14 UIView\cf12  *hitView = [\cf13 super\cf12  \cf15 hitTest\cf12 :point \cf15 withEvent\cf12 :event];\
+    \cf13 if\cf12 (hitView ==\cf13 self\cf12  && \cf15 CGRectContainsPoint\cf12 (\cf15 CGRectMake\cf12 (\cf26 0\cf12 , \cf26 0\cf12 , \cf25 SCREEN_WIDTH\cf12  - \cf26 60\cf12 , \cf13 self\cf12 .\cf14 bounds\cf12 .\cf14 size\cf12 .\cf14 height\cf12 ), point)) \{\
+        \cf13 return\cf12  \cf13 self\cf12 ;\
+    \}\cf13 else\cf12   \cf13 if\cf12 (hitView ==\cf13 self\cf12  && !\cf15 CGRectContainsPoint\cf12 (\cf15 CGRectMake\cf12 (\cf26 0\cf12 , \cf26 0\cf12 , \cf25 SCREEN_WIDTH\cf12  - \cf26 60\cf12 , \cf13 self\cf12 .\cf14 bounds\cf12 .\cf14 size\cf12 .\cf14 height\cf12 ), point)) \{\
+        \cf13 return\cf12   \cf13 nil\cf12 ;\
+    \}\cf13 else\cf12 \{\
+        \cf13 return\cf12   hitView;\
+    \}\
+\}\
+\pard\tx642\pardeftab642\pardirnatural\partightenfactor0
+\cf23 \
+\
+\pard\tx642\pardeftab642\pardirnatural\partightenfactor0
+\cf12 - (\cf14 CGFloat\cf12 )screenViewY \{\
+    \cf14 CGFloat\cf12  y = \cf26 0\cf12 ;\
+    \cf13 for\cf12  (\cf14 UIView\cf12 * view = \cf13 self\cf12 ; view; view = view.\cf14 superview\cf12 ) \{\
+        y += view.\cf16 y\cf12 ;\
+        \
+        \cf13 if\cf12  ([view \cf15 isKindOfClass\cf12 :[\cf14 UIScrollView\cf12  \cf15 class\cf12 ]]) \{\
+            \cf14 UIScrollView\cf12 * scrollView = (\cf14 UIScrollView\cf12 *)view;\
+            y -= scrollView.\cf14 contentOffset\cf12 .\cf14 y\cf12 ;\
+        \}\
+    \}\
+    \cf13 return\cf12  y;\
+\}\cf23 \
+\
+\pard\tx642\pardeftab642\pardirnatural\partightenfactor0
+\cf12 \cb1 - (\cf14 UIView\cf12  *)hitTest:(\cf14 CGPoint\cf12 )point withEvent:(\cf14 UIEvent\cf12  *)event \{\
+    \cf13 if\cf12  (!\cf13 self\cf12 .\cf15 isUserInteractionEnabled\cf12  || \cf13 self\cf12 .\cf15 isHidden\cf12  || \cf13 self\cf12 .\cf14 alpha\cf12  <= \cf26 0.01\cf12 ) \{\
+        \cf13 return\cf12  \cf13 nil\cf12 ;\
+    \}\
+    \cf14 CGRect\cf12  touchRect = \cf15 CGRectMake\cf12 (\cf26 0\cf12 , \cf26 0\cf12 , \cf25 SCREEN_WIDTH\cf12 , \cf26 44\cf12 );\
+    \cf13 if\cf12  (\cf15 CGRectContainsPoint\cf12 (touchRect, point)) \{\
+        \cf13 for\cf12  (\cf14 UIView\cf12  *subview \cf13 in\cf12  [\cf13 self\cf12 .\cf14 subviews\cf12  \cf15 reverseObjectEnumerator\cf12 ]) \{\
+            \cf14 CGPoint\cf12  convertedPoint = [subview \cf15 convertPoint\cf12 :point \cf15 fromView\cf12 :\cf13 self\cf12 ];\
+            \cf14 UIView\cf12  *hitTestView = [subview \cf15 hitTest\cf12 :convertedPoint \cf15 withEvent\cf12 :event];\
+            \cf13 if\cf12  (hitTestView) \{\
+                \cf13 return\cf12  hitTestView;\
+            \}\
+        \}\
+        \cf13 return\cf12  \cf13 self\cf12 ;\
+    \}\
+    \cf13 return\cf12  \cf13 self\cf12 ;\
+\}\cf23 \cb3 \
+\
+\
+\
+\
+\pard\tx642\pardeftab642\pardirnatural\partightenfactor0
+
 \f0\fs28 \cf0 \cb2 \expnd0\expndtw0\kerning0
 \CocoaLigature1 \
 }

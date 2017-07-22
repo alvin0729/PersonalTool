@@ -13,8 +13,10 @@
 #import "HHInformationViewController.h"
 #import "ALRichTextDemoViewController.h"
 #import "ALRIchTextDemoViewControllernone.h"
+#import "WWDropDownMenu.h"
 
-@interface ALDemo1ViewController ()
+@interface ALDemo1ViewController ()<WWDropdownMenuDelegate>
+
 @property(nonatomic,strong)WWTagEditingView *edtingView;
 
 @property (nonatomic,strong) UITextView *textView;
@@ -38,8 +40,21 @@
     
 //    ALRIchTextDemoViewControllernone *vc = [ALRIchTextDemoViewControllernone new];
 //    [self.navigationController pushViewController:vc animated:NO];
+    
+    self.view.backgroundColor = [UIColor lightGrayColor];
+    
+    
+    WWDropDownMenu * dropdownMenu = [[WWDropDownMenu alloc] init];
+    [dropdownMenu setFrame:CGRectMake(20, 80, 100, 40)];
+    [dropdownMenu setMenuTitles:@[@"往往",@"朋友圈"] rowHeight:30];
+    dropdownMenu.delegate = self;
+    [self.view addSubview:dropdownMenu];
 }
 
+#pragma mark - LMJDropdownMenu Delegate
+- (void)dropdownMenuDidHidden:(WWDropDownMenu *)menu mainBtnTitle:(NSString *)title{
+    NSLog(@"--已经隐藏--😘:%@",title);
+}
 -(void)testTEXTKit{
     self.edtingView = [[WWTagEditingView alloc]initWithFrame:CGRectMake(10, 80, self.view.bounds.size.width-20, 200)];
     self.edtingView.backgroundColor = [UIColor grayColor];

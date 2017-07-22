@@ -18,6 +18,7 @@
 		CF48AC151EE4E32A009C4AD7 /* UIImage+Thumbnail.m in Sources */ = {isa = PBXBuildFile; fileRef = CF48AC101EE4E32A009C4AD7 /* UIImage+Thumbnail.m */; };
 		CF48AC161EE4E32A009C4AD7 /* UIImage+Tools.m in Sources */ = {isa = PBXBuildFile; fileRef = CF48AC121EE4E32A009C4AD7 /* UIImage+Tools.m */; };
 		CF48AC1A1EE4E35B009C4AD7 /* UIImageView+CircleImage.m in Sources */ = {isa = PBXBuildFile; fileRef = CF48AC191EE4E35B009C4AD7 /* UIImageView+CircleImage.m */; };
+		CF5E3ED21F20BCD3009B40A8 /* WWDropDownMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = CF5E3ED11F20BCD3009B40A8 /* WWDropDownMenu.m */; };
 		CF6012DC1EFA3645007CA737 /* LxGridViewFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = CF6012DB1EFA3645007CA737 /* LxGridViewFlowLayout.m */; };
 		CF6012DF1EFA36EE007CA737 /* UIView+TZLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = CF6012DE1EFA36EE007CA737 /* UIView+TZLayout.m */; };
 		CF6012E21EFA370E007CA737 /* TZTestCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CF6012E11EFA370E007CA737 /* TZTestCell.m */; };
@@ -288,6 +289,8 @@
 		CF48AC121EE4E32A009C4AD7 /* UIImage+Tools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Tools.m"; sourceTree = "<group>"; };
 		CF48AC181EE4E35B009C4AD7 /* UIImageView+CircleImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+CircleImage.h"; sourceTree = "<group>"; };
 		CF48AC191EE4E35B009C4AD7 /* UIImageView+CircleImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+CircleImage.m"; sourceTree = "<group>"; };
+		CF5E3ED01F20BCD3009B40A8 /* WWDropDownMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WWDropDownMenu.h; sourceTree = "<group>"; };
+		CF5E3ED11F20BCD3009B40A8 /* WWDropDownMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WWDropDownMenu.m; sourceTree = "<group>"; };
 		CF6012DA1EFA3645007CA737 /* LxGridViewFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LxGridViewFlowLayout.h; sourceTree = "<group>"; };
 		CF6012DB1EFA3645007CA737 /* LxGridViewFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LxGridViewFlowLayout.m; sourceTree = "<group>"; };
 		CF6012DD1EFA36EE007CA737 /* UIView+TZLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+TZLayout.h"; sourceTree = "<group>"; };
@@ -813,6 +816,15 @@
 				CF48AC191EE4E35B009C4AD7 /* UIImageView+CircleImage.m */,
 			);
 			path = UIImageView;
+			sourceTree = "<group>";
+		};
+		CF5E3ECF1F20BC72009B40A8 /* 下拉 */ = {
+			isa = PBXGroup;
+			children = (
+				CF5E3ED01F20BCD3009B40A8 /* WWDropDownMenu.h */,
+				CF5E3ED11F20BCD3009B40A8 /* WWDropDownMenu.m */,
+			);
+			path = "下拉";
 			sourceTree = "<group>";
 		};
 		CF970B381EF76ED700955D4A /* BTNScrollView */ = {
@@ -1819,6 +1831,7 @@
 		E1F661A51EDDA001001D98E1 /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
+				CF5E3ECF1F20BC72009B40A8 /* 下拉 */,
 				E14EBC121F12325200998083 /* audio&video */,
 				E1540A0D1EF6186F00D2721F /* 相册 */,
 				E15D706B1EF5838A00513AE6 /* 富文本 */,
@@ -2256,6 +2269,7 @@
 				CFFF6F2C1EF91B7B0092132B /* ALRichTextDemoViewController.m in Sources */,
 				E1540A341EF64ABC00D2721F /* UIFont+LMText.m in Sources */,
 				E1540AC71EF64F9700D2721F /* UIViewController+Tracking.m in Sources */,
+				CF5E3ED21F20BCD3009B40A8 /* WWDropDownMenu.m in Sources */,
 				E1540B161EF6534C00D2721F /* UIImage+Alpha.m in Sources */,
 				E1540A281EF649AB00D2721F /* RJTopicCategoryModel.m in Sources */,
 				E1540ABE1EF64F9700D2721F /* CATextLayer+Tracking.m in Sources */,
