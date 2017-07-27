@@ -25,6 +25,7 @@
 		CF6012E51EFA3EDC007CA737 /* ALFontCache.m in Sources */ = {isa = PBXBuildFile; fileRef = CF6012E41EFA3EDC007CA737 /* ALFontCache.m */; };
 		CF6012E81EFA3F38007CA737 /* ALFontFile.m in Sources */ = {isa = PBXBuildFile; fileRef = CF6012E71EFA3F38007CA737 /* ALFontFile.m */; };
 		CF6012EB1EFA4A68007CA737 /* ALFontManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CF6012EA1EFA4A68007CA737 /* ALFontManager.m */; };
+		CF61C0551F2340F7007B7731 /* NSDictionary+SafeExpectations.m in Sources */ = {isa = PBXBuildFile; fileRef = CF61C0531F2340F7007B7731 /* NSDictionary+SafeExpectations.m */; };
 		CF6DF6BC1F04D4070093E2D6 /* 备忘录.rtf in Resources */ = {isa = PBXBuildFile; fileRef = CF6DF6BB1F04D4070093E2D6 /* 备忘录.rtf */; };
 		CF970B3B1EF76F0300955D4A /* LLRollingButtonScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = CF970B3A1EF76F0300955D4A /* LLRollingButtonScrollView.m */; };
 		CFC0AACA1EFB64B600E4FF12 /* EHHorizontalLineViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CFC0AAC11EFB64B600E4FF12 /* EHHorizontalLineViewCell.m */; };
@@ -304,6 +305,9 @@
 		CF6012E91EFA4A68007CA737 /* ALFontManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALFontManager.h; sourceTree = "<group>"; };
 		CF6012EA1EFA4A68007CA737 /* ALFontManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALFontManager.m; sourceTree = "<group>"; };
 		CF6012EC1EFA988A007CA737 /* RichTextConstant.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RichTextConstant.h; sourceTree = "<group>"; };
+		CF61C0521F2340F7007B7731 /* NSDictionary+SafeExpectations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+SafeExpectations.h"; sourceTree = "<group>"; };
+		CF61C0531F2340F7007B7731 /* NSDictionary+SafeExpectations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+SafeExpectations.m"; sourceTree = "<group>"; };
+		CF61C0541F2340F7007B7731 /* NSObject+SafeExpectations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+SafeExpectations.h"; sourceTree = "<group>"; };
 		CF6DF6BB1F04D4070093E2D6 /* 备忘录.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = "备忘录.rtf"; sourceTree = "<group>"; };
 		CF970B391EF76F0300955D4A /* LLRollingButtonScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LLRollingButtonScrollView.h; sourceTree = "<group>"; };
 		CF970B3A1EF76F0300955D4A /* LLRollingButtonScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LLRollingButtonScrollView.m; sourceTree = "<group>"; };
@@ -1787,6 +1791,9 @@
 		E1F661951EDD9D84001D98E1 /* NSObject */ = {
 			isa = PBXGroup;
 			children = (
+				CF61C0521F2340F7007B7731 /* NSDictionary+SafeExpectations.h */,
+				CF61C0531F2340F7007B7731 /* NSDictionary+SafeExpectations.m */,
+				CF61C0541F2340F7007B7731 /* NSObject+SafeExpectations.h */,
 				E15D70581EF540CD00513AE6 /* NSObject+MHRandom.h */,
 				E15D70591EF540CD00513AE6 /* NSObject+MHRandom.m */,
 				E1F661961EDD9DB5001D98E1 /* NSObject+SSAdd.h */,
@@ -2155,6 +2162,7 @@
 				E1F661881EDD9C66001D98E1 /* NSDate+SSAdd.m in Sources */,
 				E1540AC41EF64F9700D2721F /* UITableView+Tracking.m in Sources */,
 				E15D704F1EF52D3600513AE6 /* MHYouKuTopicDetailController.m in Sources */,
+				CF61C0551F2340F7007B7731 /* NSDictionary+SafeExpectations.m in Sources */,
 				E15D70481EF5266B00513AE6 /* UIViewController+MHHUD.m in Sources */,
 				E1540B321EF658EA00D2721F /* HHTextStyleCell.m in Sources */,
 				E1540B1D1EF6534C00D2721F /* NSString+Additions.m in Sources */,

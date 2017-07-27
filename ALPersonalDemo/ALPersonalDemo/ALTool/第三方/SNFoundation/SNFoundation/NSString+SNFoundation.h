@@ -44,6 +44,6 @@
 
 - (NSString *)MD5Hex;
 - (NSData *)hexStringToData;    //从16进制的字符串格式转换为NSData
-
++(NSString *)JSONString:(NSString *)aString ;
 @end
 
