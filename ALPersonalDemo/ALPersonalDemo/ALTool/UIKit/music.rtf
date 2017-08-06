@@ -1,0 +1,589 @@
+{\rtf1\ansi\ansicpg936\cocoartf1504\cocoasubrtf600
+{\fonttbl\f0\fnil\fcharset0 Menlo-Regular;\f1\fnil\fcharset134 PingFangSC-Regular;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;\red100\green56\blue32;\red196\green26\blue22;
+\red170\green13\blue145;\red63\green110\blue116;\red0\green116\blue0;\red92\green38\blue153;\red46\green13\blue110;
+\red38\green71\blue75;\red28\green0\blue207;}
+{\*\expandedcolortbl;\csgray\c100000;\csgenericrgb\c0\c0\c0;\csgenericrgb\c39100\c22000\c12500;\csgenericrgb\c77000\c10200\c8600;
+\csgenericrgb\c66500\c5200\c56900;\csgenericrgb\c24700\c43100\c45600;\csgenericrgb\c0\c45600\c0;\csgenericrgb\c35900\c14900\c60100;\csgenericrgb\c18100\c5200\c43100;
+\csgenericrgb\c14900\c27800\c29400;\csgenericrgb\c11000\c0\c81000;}
+\margl1440\margr1440\vieww9000\viewh8400\viewkind0
+\deftab642
+\pard\tx642\pardeftab642\pardirnatural\partightenfactor0
+
+\f0\fs26 \cf2 \CocoaLigature0 \
+\cf3 #import \cf4 "ViewController.h"\cf3 \
+#import \cf4 "MusicModel.h"\cf3 \
+#import \cf4 "UIImageView+WebCache.h"\cf3 \
+#import \cf4 <AVFoundation/AVFoundation.h>\cf3 \
+#import \cf4 <MediaPlayer/MediaPlayer.h>\cf3 \
+\cf2 \
+\cf5 @interface\cf2  \cf6 ViewController\cf2  ()\
+\cf7 //
+\f1 \'d2\'f4\'c0\'d6\'c3\'fb
+\f0 \cf2 \
+\cf5 @property\cf2  (\cf5 weak\cf2 , \cf5 nonatomic\cf2 ) \cf5 IBOutlet\cf2  \cf8 UILabel\cf2  *musicName;\
+\cf7 //
+\f1 \'d1\'dd\'b3\'aa\'d5\'df
+\f0 \cf2 \
+\cf5 @property\cf2  (\cf5 weak\cf2 , \cf5 nonatomic\cf2 ) \cf5 IBOutlet\cf2  \cf8 UILabel\cf2  *artist;\
+\cf7 //
+\f1 \'d2\'f4\'c0\'d6\'cd\'bc\'c6\'ac
+\f0 \cf2 \
+\cf5 @property\cf2  (\cf5 weak\cf2 , \cf5 nonatomic\cf2 ) \cf5 IBOutlet\cf2  \cf8 UIImageView\cf2  *musicIcon;\
+\cf7 //
+\f1 \'b5\'b1\'c7\'b0\'b2\'a5\'b7\'c5\'ca\'b1\'bc\'e4
+\f0 \cf2 \
+\cf5 @property\cf2  (\cf5 weak\cf2 , \cf5 nonatomic\cf2 ) \cf5 IBOutlet\cf2  \cf8 UILabel\cf2  *currentTime;\
+\cf7 //
+\f1 \'d2\'f4\'c0\'d6\'ca\'b1\'b3\'a3
+\f0 \cf2 \
+\cf5 @property\cf2  (\cf5 weak\cf2 , \cf5 nonatomic\cf2 ) \cf5 IBOutlet\cf2  \cf8 UILabel\cf2  *duration;\
+\
+\cf5 @property\cf2  (\cf5 weak\cf2 , \cf5 nonatomic\cf2 ) \cf5 IBOutlet\cf2  \cf8 UIButton\cf2  *playBtn;\
+\cf7 //
+\f1 \'bb\'ba\'b3\'e5\'bd\'f8\'b6\'c8\'cc\'f5
+\f0 \cf2 \
+\cf5 @property\cf2  (\cf5 weak\cf2 , \cf5 nonatomic\cf2 ) \cf5 IBOutlet\cf2  \cf8 UIProgressView\cf2  *loadTimeProgress;\
+\cf7 //
+\f1 \'b2\'a5\'b7\'c5\'bd\'f8\'b6\'c8\'bb\'ac\'bf\'e9
+\f0 \cf2 \
+\cf5 @property\cf2  (\cf5 weak\cf2 , \cf5 nonatomic\cf2 ) \cf5 IBOutlet\cf2  \cf8 UISlider\cf2  *playSlider;\
+\cf7 //
+\f1 \'ca\'fd\'be\'dd\'d4\'b4
+\f0 \cf2 \
+\cf5 @property\cf2 (\cf5 nonatomic\cf2 ,\cf5 strong\cf2 ) \cf8 NSMutableArray\cf2  *dataSource;\
+\cf7 //
+\f1 \'b2\'a5\'b7\'c5\'c6\'f7
+\f0 \cf2 \
+\cf5 @property\cf2 (\cf5 nonatomic\cf2 ,\cf5 strong\cf2 ) \cf8 AVPlayer\cf2  *player;\
+\
+\cf7 //
+\f1 \'b5\'b1\'c7\'b0\'b2\'a5\'b7\'c5\'d2\'f4\'c0\'d6\'b5\'c4\'cb\'f7\'d2\'fd
+\f0 \cf2 \
+\cf5 @property\cf2 (\cf5 nonatomic\cf2 ,\cf5 assign\cf2 ) \cf8 NSInteger\cf2  currentIndex;\
+\cf7 //
+\f1 \'b5\'b1\'c7\'b0\'b2\'a5\'b7\'c5\'b5\'c4\'d2\'f4\'c0\'d6\'c4\'a3\'d0\'cd
+\f0 \cf2 \
+\cf5 @property\cf2 (\cf5 nonatomic\cf2 ,\cf5 strong\cf2 ) \cf6 MusicModel\cf2  *currentModel;\
+\
+\cf7 //
+\f1 \'bb\'ba\'b4\'e6\'d2\'f4\'c0\'d6\'cd\'bc\'c6\'ac
+\f0 \cf2 \
+\cf5 @property\cf2 (\cf5 nonatomic\cf2 ,\cf5 strong\cf2 ) \cf8 NSMutableDictionary\cf2  *musicImageDic;\
+\
+\cf7 //
+\f1 \'b5\'b1\'c7\'b0\'b8\'e8\'c7\'fa\'bd\'f8\'b6\'c8\'bc\'e0\'cc\'fd\'d5\'df
+\f0 \cf2 \
+\cf5 @property\cf2 (\cf5 nonatomic\cf2 ,\cf5 strong\cf2 ) \cf5 id\cf2  timeObserver;\
+\
+\cf5 @end\cf2 \
+\
+\cf5 @implementation\cf2  ViewController\
+\
+- (\cf5 void\cf2 )viewDidLoad \{\
+   \
+    [\cf5 super\cf2  \cf9 viewDidLoad\cf2 ];\
+   \
+    [\cf5 self\cf2  \cf10 loadData\cf2 ];\
+    \
+    \cf5 self\cf2 .\cf6 currentIndex\cf2  = \cf11 0\cf2 ;\
+    [\cf5 self\cf2  \cf10 playBtnAction\cf2 :\cf5 self\cf2 .\cf6 playBtn\cf2 ];\
+   \
+\}\
+\
+\cf3 #pragma mark - private\
+\cf2 -(\cf5 void\cf2 )loadData\
+\{\
+    \cf8 NSString\cf2  *path = [[\cf8 NSBundle\cf2  \cf9 mainBundle\cf2 ] \cf9 pathForResource\cf2 :\cf4 @"music"\cf2  \cf9 ofType\cf2 :\cf4 @"json"\cf2 ];\
+    \cf8 NSData\cf2  *data = [\cf8 NSData\cf2  \cf9 dataWithContentsOfFile\cf2 :path];\
+    \cf8 NSArray\cf2  *datas =  [\cf8 NSJSONSerialization\cf2  \cf9 JSONObjectWithData\cf2 :data \cf9 options\cf2 :\cf9 NSJSONReadingMutableContainers\cf2  \cf9 error\cf2 :\cf5 nil\cf2 ];\
+    \cf5 for\cf2  (\cf8 NSDictionary\cf2  *dic \cf5 in\cf2  datas) \{\
+        \
+        \cf6 MusicModel\cf2  *model = [[\cf6 MusicModel\cf2  \cf9 alloc\cf2 ] \cf10 initWithDic\cf2 :dic];\
+        [\cf5 self\cf2 .\cf6 dataSource\cf2  \cf9 addObject\cf2 :model];\
+   \
+    \}\
+\}\
+\
+-(\cf5 void\cf2 )reloadUI:(\cf6 MusicModel\cf2 *)model\
+\{\
+    \cf5 self\cf2 .\cf6 musicName\cf2 .\cf8 text\cf2  = model.\cf6 name\cf2 ;\
+    \cf5 self\cf2 .\cf6 artist\cf2 .\cf8 text\cf2  = model.\cf6 artist\cf2 ;\
+    [\cf5 self\cf2 .\cf6 musicIcon\cf2  \cf10 sd_setImageWithURL\cf2 :[\cf8 NSURL\cf2  \cf9 URLWithString\cf2 :model.\cf6 cover\cf2 ]];\
+    \cf5 self\cf2 .\cf6 duration\cf2 .\cf8 text\cf2  = model.\cf6 duration\cf2 ;\
+    \cf5 self\cf2 .\cf6 playBtn\cf2 .\cf8 selected\cf2  = \cf5 YES\cf2 ;\
+    \cf5 self\cf2 .\cf6 playSlider\cf2 .\cf8 value\cf2  = \cf11 0\cf2 ;\
+    \cf5 self\cf2 .\cf6 loadTimeProgress\cf2 .\cf8 progress\cf2  = \cf11 0\cf2 ;\
+    \
+\}\
+\
+\cf3 #pragma mark- 
+\f1 \'d2\'f4\'c0\'d6\'b2\'a5\'b7\'c5\'cf\'e0\'b9\'d8
+\f0 \
+\cf7 //
+\f1 \'b2\'a5\'b7\'c5\'d2\'f4\'c0\'d6
+\f0 \cf2 \
+-(\cf5 void\cf2 )playWithUrl:(\cf6 MusicModel\cf2 *)model\
+\{\
+    \cf8 AVPlayerItem\cf2  *item = [[\cf8 AVPlayerItem\cf2  \cf9 alloc\cf2 ] \cf9 initWithURL\cf2 :[\cf8 NSURL\cf2  \cf9 URLWithString\cf2 :model.\cf6 url\cf2 ]];\
+    \
+    \cf7 //
+\f1 \'cc\'e6\'bb\'bb\'b5\'b1\'c7\'b0\'d2\'f4\'c0\'d6\'d7\'ca\'d4\'b4
+\f0 \cf2 \
+    [\cf5 self\cf2 .\cf6 player\cf2  \cf9 replaceCurrentItemWithPlayerItem\cf2 :item];\
+    \
+    \cf7 //
+\f1 \'cb\'a2\'d0\'c2\'bd\'e7\'c3\'e6
+\f0 UI\cf2 \
+    [\cf5 self\cf2  \cf10 reloadUI\cf2 :model];\
+  \
+    \cf7 //
+\f1 \'bc\'e0\'cc\'fd\'d2\'f4\'c0\'d6\'b2\'a5\'b7\'c5\'cd\'ea\'b3\'c9\'cd\'a8\'d6\'aa
+\f0 \cf2 \
+    [\cf5 self\cf2  \cf10 addNSNotificationForPlayMusicFinish\cf2 ];\
+    \
+    \cf7 //
+\f1 \'bf\'aa\'ca\'bc\'b2\'a5\'b7\'c5
+\f0 \cf2 \
+    [\cf5 self\cf2 .\cf6 player\cf2  \cf9 play\cf2 ];\
+    \
+    \cf7 //
+\f1 \'bc\'e0\'cc\'fd\'b2\'a5\'b7\'c5\'c6\'f7\'d7\'b4\'cc\'ac
+\f0 \cf2 \
+    [\cf5 self\cf2  \cf10 addPlayStatus\cf2 ];\
+    \
+    \cf7 //
+\f1 \'bc\'e0\'cc\'fd\'d2\'f4\'c0\'d6\'bb\'ba\'b3\'e5\'bd\'f8\'b6\'c8
+\f0 \cf2 \
+    [\cf5 self\cf2  \cf10 addPlayLoadTime\cf2 ];\
+    \
+    \cf7 //
+\f1 \'bc\'e0\'cc\'fd\'d2\'f4\'c0\'d6\'b2\'a5\'b7\'c5\'b5\'c4\'bd\'f8\'b6\'c8
+\f0 \cf2 \
+    [\cf5 self\cf2  \cf10 addMusicProgressWithItem\cf2 :item];\
+    \
+   \cf7 //
+\f1 \'bc\'c7\'c2\'bc\'b5\'b1\'c7\'b0\'b2\'a5\'b7\'c5\'d2\'f4\'c0\'d6\'b5\'c4\'cb\'f7\'d2\'fd
+\f0 \cf2 \
+    \cf5 self\cf2 .\cf6 currentIndex\cf2  = [model.\cf6 Id\cf2  \cf9 integerValue\cf2 ];\
+    \cf5 self\cf2 .\cf6 currentModel\cf2  = model;\
+    \
+    \cf7 //
+\f1 \'d2\'f4\'c0\'d6\'cb\'f8\'c6\'c1\'d0\'c5\'cf\'a2\'d5\'b9\'ca\'be
+\f0 \cf2 \
+    [\cf5 self\cf2  \cf10 setupLockScreenInfo\cf2 ];\
+    \
+\}\
+\
+\
+\cf3 #pragma mark - 
+\f1 \'c9\'e8\'d6\'c3\'cb\'f8\'c6\'c1\'d0\'c5\'cf\'a2
+\f0 \
+\cf2 \
+\cf7 //
+\f1 \'d2\'f4\'c0\'d6\'cb\'f8\'c6\'c1\'d0\'c5\'cf\'a2\'d5\'b9\'ca\'be
+\f0 \cf2 \
+- (\cf5 void\cf2 )setupLockScreenInfo\
+\{\
+    \cf7 // 1.
+\f1 \'bb\'f1\'c8\'a1\'cb\'f8\'c6\'c1\'d6\'d0\'d0\'c4
+\f0 \cf2 \
+    \cf8 MPNowPlayingInfoCenter\cf2  *playingInfoCenter = [\cf8 MPNowPlayingInfoCenter\cf2  \cf9 defaultCenter\cf2 ];\
+    \
+   \cf7 //
+\f1 \'b3\'f5\'ca\'bc\'bb\'af\'d2\'bb\'b8\'f6\'b4\'e6\'b7\'c5\'d2\'f4\'c0\'d6\'d0\'c5\'cf\'a2\'b5\'c4\'d7\'d6\'b5\'e4
+\f0 \cf2 \
+    \cf8 NSMutableDictionary\cf2  *playingInfoDict = [\cf8 NSMutableDictionary\cf2  \cf9 dictionary\cf2 ];\
+    \cf7 // 2
+\f1 \'a1\'a2\'c9\'e8\'d6\'c3\'b8\'e8\'c7\'fa\'c3\'fb
+\f0 \cf2 \
+    \cf5 if\cf2  (\cf5 self\cf2 .\cf6 currentModel\cf2 .\cf6 name\cf2 ) \{\
+        [playingInfoDict \cf9 setObject\cf2 :\cf5 self\cf2 .\cf6 currentModel\cf2 .\cf6 name\cf2  \cf9 forKey\cf2 :\cf8 MPMediaItemPropertyAlbumTitle\cf2 ];\
+    \}\
+    \cf7 // 
+\f1 \'c9\'e8\'d6\'c3\'b8\'e8\'ca\'d6\'c3\'fb
+\f0 \cf2 \
+    \cf5 if\cf2  (\cf5 self\cf2 .\cf6 currentModel\cf2 .\cf6 artist\cf2 ) \{\
+        [playingInfoDict \cf9 setObject\cf2 :\cf5 self\cf2 .\cf6 currentModel\cf2 .\cf6 artist\cf2  \cf9 forKey\cf2 :\cf8 MPMediaItemPropertyArtist\cf2 ];\
+    \}\
+    \cf7 // 3
+\f1 \'c9\'e8\'d6\'c3\'b7\'e2\'c3\'e6\'b5\'c4\'cd\'bc\'c6\'ac
+\f0 \cf2 \
+    \cf8 UIImage\cf2  *image = [\cf5 self\cf2  \cf10 getMusicImageWithMusicId\cf2 :\cf5 self\cf2 .\cf6 currentModel\cf2 ];\
+    \cf5 if\cf2  (image) \{\
+        \cf8 MPMediaItemArtwork\cf2  *artwork = [[\cf8 MPMediaItemArtwork\cf2  \cf9 alloc\cf2 ] \cf9 initWithImage\cf2 :image];\
+        [playingInfoDict \cf9 setObject\cf2 :artwork \cf9 forKey\cf2 :\cf8 MPMediaItemPropertyArtwork\cf2 ];\
+    \}\
+    \
+    \cf7 // 4
+\f1 \'c9\'e8\'d6\'c3\'b8\'e8\'c7\'fa\'b5\'c4\'d7\'dc\'ca\'b1\'b3\'a4
+\f0 \cf2 \
+    [playingInfoDict \cf9 setObject\cf2 :\cf5 self\cf2 .\cf6 currentModel\cf2 .\cf6 detailDuration\cf2  \cf9 forKey\cf2 :\cf8 MPMediaItemPropertyPlaybackDuration\cf2 ];\
+    \
+    \cf7 //
+\f1 \'d2\'f4\'c0\'d6\'d0\'c5\'cf\'a2\'b8\'b3\'d6\'b5\'b8\'f8\'bb\'f1\'c8\'a1\'cb\'f8\'c6\'c1\'d6\'d0\'d0\'c4\'b5\'c4
+\f0 nowPlayingInfo
+\f1 \'ca\'f4\'d0\'d4
+\f0 \cf2 \
+    playingInfoCenter.\cf8 nowPlayingInfo\cf2  = playingInfoDict;\
+    \
+    \cf7 // 5.
+\f1 \'bf\'aa\'c6\'f4\'d4\'b6\'b3\'cc\'bd\'bb\'bb\'a5
+\f0 \cf2 \
+    [[\cf8 UIApplication\cf2  \cf9 sharedApplication\cf2 ] \cf9 beginReceivingRemoteControlEvents\cf2 ];\
+\}\
+\
+\cf7 //
+\f1 \'bb\'f1\'c8\'a1\'d4\'b6\'b3\'cc\'cd\'f8\'c2\'e7\'cd\'bc\'c6\'ac\'a3\'ac\'c8\'e7\'d3\'d0\'bb\'ba\'b4\'e6\'c8\'a1\'bb\'ba\'b4\'e6\'a3\'ac\'c3\'bb\'d3\'d0\'bb\'ba\'b4\'e6\'a3\'ac\'d4\'b6\'b3\'cc\'bc\'d3\'d4\'d8\'b2\'a2\'bb\'ba\'b4\'e6
+\f0 \cf2 \
+-(\cf8 UIImage\cf2 *)getMusicImageWithMusicId:(\cf6 MusicModel\cf2 *)model\
+\{\
+    \cf8 UIImage\cf2  *image;\
+    \cf8 NSString\cf2  *key = [model.\cf6 Id\cf2  \cf9 stringValue\cf2 ];\
+    \cf8 UIImage\cf2  *cacheImage = \cf5 self\cf2 .\cf6 musicImageDic\cf2 [key];\
+    \cf5 if\cf2  (cacheImage) \{\
+        image = cacheImage;\
+    \}\cf5 else\cf2 \{\
+        \cf7 //
+\f1 \'d5\'e2\'c0\'ef\'d3\'c3\'c1\'cb\'b7\'c7\'b3\'a3\'b9\'e6\'b5\'c4\'d7\'f6\'b7\'a8\'a3\'ac\'bd\'f6\'d3\'c3\'d3\'da
+\f0 demo
+\f1 \'bf\'ec\'cb\'d9\'b2\'e2\'ca\'d4\'a3\'ac\'ca\'b5\'bc\'ca\'bf\'aa\'b7\'a2\'b2\'bb\'cd\'c6\'bc\'f6\'a3\'ac\'bb\'e1\'b6\'c2\'c8\'fb\'d6\'f7\'cf\'df\'b3\'cc
+\f0 \cf2 \
+        \cf7 //
+\f1 \'bd\'a8\'d2\'e9\'bc\'d3\'d4\'d8\'b8\'e8\'c7\'fa\'ca\'b1\'cf\'c8\'b0\'d1\'cd\'f8\'c2\'e7\'cd\'bc\'c6\'ac\'c7\'eb\'c7\'f3\'cf\'c2\'c0\'b4\'d4\'d9\'c9\'e8\'d6\'c3
+\f0 \cf2 \
+        \cf8 NSData\cf2  *data = [\cf8 NSData\cf2  \cf9 dataWithContentsOfURL\cf2 :[\cf8 NSURL\cf2  \cf9 URLWithString\cf2 :model.\cf6 cover\cf2 ]];\
+        image =  [\cf8 UIImage\cf2  \cf9 imageWithData\cf2 :data];\
+        \cf5 if\cf2  (image) \{\
+            [\cf5 self\cf2 .\cf6 musicImageDic\cf2  \cf9 setObject\cf2 :image \cf9 forKey\cf2 :key];\
+            \
+        \}\
+    \}\
+    \
+    \cf5 return\cf2  image;\
+\}\
+\
+\
+\cf7 //
+\f1 \'bc\'e0\'cc\'fd\'d4\'b6\'b3\'cc\'bd\'bb\'bb\'a5\'b7\'bd\'b7\'a8
+\f0 \cf2 \
+- (\cf5 void\cf2 )remoteControlReceivedWithEvent:(\cf8 UIEvent\cf2  *)event\
+\{\
+    \
+    \cf5 switch\cf2  (event.\cf8 subtype\cf2 ) \{\
+        \cf7 //
+\f1 \'b2\'a5\'b7\'c5
+\f0 \cf2 \
+        \cf5 case\cf2  \cf9 UIEventSubtypeRemoteControlPlay\cf2 :\{\
+            [\cf5 self\cf2 .\cf6 player\cf2  \cf9 play\cf2 ];\
+                    \}\
+            \cf5 break\cf2 ;\
+        \cf7 //
+\f1 \'cd\'a3\'d6\'b9
+\f0 \cf2 \
+        \cf5 case\cf2  \cf9 UIEventSubtypeRemoteControlPause\cf2 :\{\
+            [\cf5 self\cf2 .\cf6 player\cf2  \cf9 pause\cf2 ];\
+                   \}\
+            \cf5 break\cf2 ;\
+        \cf7 //
+\f1 \'cf\'c2\'d2\'bb\'ca\'d7
+\f0 \cf2 \
+        \cf5 case\cf2  \cf9 UIEventSubtypeRemoteControlNextTrack\cf2 :\
+            [\cf5 self\cf2  \cf10 nextBtnAction\cf2 :\cf5 nil\cf2 ];\
+            \cf5 break\cf2 ;\
+        \cf7 //
+\f1 \'c9\'cf\'d2\'bb\'ca\'d7
+\f0 \cf2 \
+        \cf5 case\cf2  \cf9 UIEventSubtypeRemoteControlPreviousTrack\cf2 :\
+            [\cf5 self\cf2  \cf10 lastBtnAction\cf2 :\cf5 nil\cf2 ];\
+            \cf5 break\cf2 ;\
+            \
+        \cf5 default\cf2 :\
+            \cf5 break\cf2 ;\
+    \}\
+\}\
+\
+\cf3 #pragma mark - NSNotification\
+\cf2 -(\cf5 void\cf2 )addNSNotificationForPlayMusicFinish\
+\{\
+    [[\cf8 NSNotificationCenter\cf2  \cf9 defaultCenter\cf2 ] \cf9 removeObserver\cf2 :\cf5 self\cf2 ];\
+    \cf7 //
+\f1 \'b8\'f8
+\f0 AVPlayerItem
+\f1 \'cc\'ed\'bc\'d3\'b2\'a5\'b7\'c5\'cd\'ea\'b3\'c9\'cd\'a8\'d6\'aa
+\f0 \cf2 \
+    [[\cf8 NSNotificationCenter\cf2  \cf9 defaultCenter\cf2 ] \cf9 addObserver\cf2 :\cf5 self\cf2  \cf9 selector\cf2 :\cf5 @selector\cf2 (playFinished:) \cf9 name\cf2 :\cf8 AVPlayerItemDidPlayToEndTimeNotification\cf2  \cf9 object\cf2 :\cf6 _player\cf2 .\cf8 currentItem\cf2 ];\
+\}\
+\
+-(\cf5 void\cf2 )playFinished:(\cf8 NSNotification\cf2 *)notification\
+\{\
+    \cf7 //
+\f1 \'b2\'a5\'b7\'c5\'cf\'c2\'d2\'bb\'ca\'d7
+\f0 \cf2 \
+    [\cf5 self\cf2  \cf10 nextBtnAction\cf2 :\cf5 nil\cf2 ];\
+\}\
+\
+\
+\
+\cf3 #pragma mark - 
+\f1 \'bc\'e0\'cc\'fd\'d2\'f4\'c0\'d6\'b8\'f7\'d6\'d6\'d7\'b4\'cc\'ac
+\f0 \
+\cf7 //
+\f1 \'cd\'a8\'b9\'fd
+\f0 KVO
+\f1 \'bc\'e0\'cc\'fd\'b2\'a5\'b7\'c5\'c6\'f7\'d7\'b4\'cc\'ac
+\f0 \cf2 \
+-(\cf5 void\cf2 )addPlayStatus\
+\{\
+    \
+    [\cf5 self\cf2 .\cf6 player\cf2 .\cf8 currentItem\cf2  \cf9 addObserver\cf2 :\cf5 self\cf2  \cf9 forKeyPath\cf2 :\cf4 @"status"\cf2  \cf9 options\cf2 :\cf9 NSKeyValueObservingOptionNew\cf2  \cf9 context\cf2 :\cf5 nil\cf2 ];\
+        \
+\}\
+\cf7 //
+\f1 \'d2\'c6\'b3\'fd\'bc\'e0\'cc\'fd\'b2\'a5\'b7\'c5\'c6\'f7\'d7\'b4\'cc\'ac
+\f0 \cf2 \
+-(\cf5 void\cf2 )removePlayStatus\
+\{\
+    \cf5 if\cf2  (\cf5 self\cf2 .\cf6 currentModel\cf2  == \cf5 nil\cf2 ) \{\cf5 return\cf2 ;\}\
+    \
+    [\cf5 self\cf2 .\cf6 player\cf2 .\cf8 currentItem\cf2  \cf9 removeObserver\cf2 :\cf5 self\cf2  \cf9 forKeyPath\cf2 :\cf4 @"status"\cf2 ];\
+\}\
+\
+\
+\
+\cf7 //KVO
+\f1 \'bc\'e0\'cc\'fd\'d2\'f4\'c0\'d6\'bb\'ba\'b3\'e5\'d7\'b4\'cc\'ac
+\f0 \cf2 \
+-(\cf5 void\cf2 )addPlayLoadTime\
+\{\
+  [\cf5 self\cf2 .\cf6 player\cf2 .\cf8 currentItem\cf2  \cf9 addObserver\cf2 :\cf5 self\cf2  \cf9 forKeyPath\cf2 :\cf4 @"loadedTimeRanges"\cf2  \cf9 options\cf2 :\cf9 NSKeyValueObservingOptionNew\cf2  \cf9 context\cf2 :\cf5 nil\cf2 ];\
+    \
+\}\
+\cf7 //
+\f1 \'d2\'c6\'b3\'fd\'bc\'e0\'cc\'fd\'d2\'f4\'c0\'d6\'bb\'ba\'b3\'e5\'d7\'b4\'cc\'ac
+\f0 \cf2 \
+-(\cf5 void\cf2 )removePlayLoadTime\
+\{\
+    \cf5 if\cf2  (\cf5 self\cf2 .\cf6 currentModel\cf2  == \cf5 nil\cf2 ) \{\cf5 return\cf2 ;\}\
+    [\cf5 self\cf2 .\cf6 player\cf2 .\cf8 currentItem\cf2  \cf9 removeObserver\cf2 :\cf5 self\cf2  \cf9 forKeyPath\cf2 :\cf4 @"loadedTimeRanges"\cf2 ];\
+\}\
+\
+\cf7 //
+\f1 \'bc\'e0\'cc\'fd\'d2\'f4\'c0\'d6\'b2\'a5\'b7\'c5\'b5\'c4\'bd\'f8\'b6\'c8
+\f0 \cf2 \
+-(\cf5 void\cf2 )addMusicProgressWithItem:(\cf8 AVPlayerItem\cf2  *)item\
+\{\
+    \cf7 //
+\f1 \'d2\'c6\'b3\'fd\'bc\'e0\'cc\'fd\'d2\'f4\'c0\'d6\'b2\'a5\'b7\'c5\'bd\'f8\'b6\'c8
+\f0 \cf2 \
+    [\cf5 self\cf2  \cf10 removeTimeObserver\cf2 ];\
+    \cf5 __weak\cf2  \cf5 typeof\cf2 (\cf5 self\cf2 ) weakSelf = \cf5 self\cf2 ;\
+    \cf5 self\cf2 .\cf6 timeObserver\cf2  =  [\cf5 self\cf2 .\cf6 player\cf2  \cf9 addPeriodicTimeObserverForInterval\cf2 :\cf9 CMTimeMake\cf2 (\cf11 1.0\cf2 , \cf11 1.0\cf2 ) \cf9 queue\cf2 :\cf9 dispatch_get_main_queue\cf2 () \cf9 usingBlock\cf2 :^(\cf8 CMTime\cf2  time) \{\
+        \cf7 //
+\f1 \'b5\'b1\'c7\'b0\'b2\'a5\'b7\'c5\'b5\'c4\'ca\'b1\'bc\'e4
+\f0 \cf2 \
+        \cf5 float\cf2  current = \cf9 CMTimeGetSeconds\cf2 (time);\
+        \cf7 //
+\f1 \'d7\'dc\'ca\'b1\'bc\'e4
+\f0 \cf2 \
+        \cf5 float\cf2  total = \cf9 CMTimeGetSeconds\cf2 (item.\cf8 duration\cf2 );\
+        \cf5 if\cf2  (current) \{\
+            \cf5 float\cf2  progress = current / total;\
+            \cf7 //
+\f1 \'b8\'fc\'d0\'c2\'b2\'a5\'b7\'c5\'bd\'f8\'b6\'c8\'cc\'f5
+\f0 \cf2 \
+           weakSelf.\cf6 playSlider\cf2 .\cf8 value\cf2  = progress;\
+            weakSelf.\cf6 currentTime\cf2 .\cf8 text\cf2  = [weakSelf \cf10 timeFormatted\cf2 :current];\
+        \}\
+    \}];\
+    \
+\}\
+\
+\cf7 //
+\f1 \'d7\'aa\'bb\'bb\'b3\'c9\'ca\'b1\'b7\'d6\'c3\'eb
+\f0 \cf2 \
+- (\cf8 NSString\cf2  *)timeFormatted:(\cf5 int\cf2 )totalSeconds\
+\{\
+    \cf5 int\cf2  seconds = totalSeconds % \cf11 60\cf2 ;\
+    \cf5 int\cf2  minutes = (totalSeconds / \cf11 60\cf2 ) % \cf11 60\cf2 ;\
+    \
+    \cf5 return\cf2  [\cf8 NSString\cf2  \cf9 stringWithFormat\cf2 :\cf4 @"%02d:%02d"\cf2 ,minutes, seconds];\
+\}\
+\cf7 //
+\f1 \'d2\'c6\'b3\'fd\'bc\'e0\'cc\'fd\'d2\'f4\'c0\'d6\'b2\'a5\'b7\'c5\'bd\'f8\'b6\'c8
+\f0 \cf2 \
+-(\cf5 void\cf2 )removeTimeObserver\
+\{\
+    \cf5 if\cf2  (\cf5 self\cf2 .\cf6 timeObserver\cf2 ) \{\
+        [\cf5 self\cf2 .\cf6 player\cf2  \cf9 removeTimeObserver\cf2 :\cf5 self\cf2 .\cf6 timeObserver\cf2 ];\
+        \cf5 self\cf2 .\cf6 timeObserver\cf2  = \cf5 nil\cf2 ;\
+    \}\
+\}\
+\
+\cf7 //
+\f1 \'b9\'db\'b2\'ec\'d5\'df\'bb\'d8\'b5\'f7
+\f0 \cf2 \
+-(\cf5 void\cf2 )observeValueForKeyPath:(\cf8 NSString\cf2  *)keyPath ofObject:(\cf5 id\cf2 )object change:(\cf8 NSDictionary\cf2 <\cf8 NSKeyValueChangeKey\cf2 ,\cf5 id\cf2 > *)change context:(\cf5 void\cf2  *)context\
+\
+\{\
+    \cf5 if\cf2  ([keyPath \cf9 isEqualToString\cf2 :\cf4 @"status"\cf2 ]) \{\
+        \cf5 switch\cf2  (\cf5 self\cf2 .\cf6 player\cf2 .\cf8 status\cf2 ) \{\
+            \cf5 case\cf2  \cf9 AVPlayerStatusUnknown\cf2 :\
+            \{\
+                \cf9 NSLog\cf2 (\cf4 @"
+\f1 \'ce\'b4\'d6\'aa\'d7\'aa\'cc\'ac
+\f0 "\cf2 );\
+            \}\
+                \cf5 break\cf2 ;\
+            \cf5 case\cf2  \cf9 AVPlayerStatusReadyToPlay\cf2 :\
+            \{\
+                \cf9 NSLog\cf2 (\cf4 @"
+\f1 \'d7\'bc\'b1\'b8\'b2\'a5\'b7\'c5
+\f0 "\cf2 );\
+            \}\
+                \cf5 break\cf2 ;\
+            \cf5 case\cf2  \cf9 AVPlayerStatusFailed\cf2 :\
+            \{\
+                \cf9 NSLog\cf2 (\cf4 @"
+\f1 \'bc\'d3\'d4\'d8\'ca\'a7\'b0\'dc
+\f0 "\cf2 );\
+            \}\
+                \cf5 break\cf2 ;\
+                \
+            \cf5 default\cf2 :\
+                \cf5 break\cf2 ;\
+        \}\
+        \
+    \}\
+    \
+    \cf5 if\cf2  ([keyPath \cf9 isEqualToString\cf2 :\cf4 @"loadedTimeRanges"\cf2 ]) \{\
+        \
+        \cf8 NSArray\cf2  * timeRanges = \cf5 self\cf2 .\cf6 player\cf2 .\cf8 currentItem\cf2 .\cf8 loadedTimeRanges\cf2 ;\
+        \cf7 //
+\f1 \'b1\'be\'b4\'ce\'bb\'ba\'b3\'e5\'b5\'c4\'ca\'b1\'bc\'e4\'b7\'b6\'ce\'a7
+\f0 \cf2 \
+        \cf8 CMTimeRange\cf2  timeRange = [timeRanges.\cf8 firstObject\cf2  \cf9 CMTimeRangeValue\cf2 ];\
+        \cf7 //
+\f1 \'bb\'ba\'b3\'e5\'d7\'dc\'b3\'a4\'b6\'c8
+\f0 \cf2 \
+        \cf8 NSTimeInterval\cf2  totalLoadTime = \cf9 CMTimeGetSeconds\cf2 (timeRange.\cf8 start\cf2 ) + \cf9 CMTimeGetSeconds\cf2 (timeRange.\cf8 duration\cf2 );\
+        \cf7 //
+\f1 \'d2\'f4\'c0\'d6\'b5\'c4\'d7\'dc\'ca\'b1\'bc\'e4
+\f0 \cf2 \
+        \cf8 NSTimeInterval\cf2  duration = \cf9 CMTimeGetSeconds\cf2 (\cf5 self\cf2 .\cf6 player\cf2 .\cf8 currentItem\cf2 .\cf8 duration\cf2 );\
+        \cf7 //
+\f1 \'bc\'c6\'cb\'e3\'bb\'ba\'b3\'e5\'b0\'d9\'b7\'d6\'b1\'c8\'c0\'fd
+\f0 \cf2 \
+        \cf8 NSTimeInterval\cf2  scale = totalLoadTime/duration;\
+        \cf7 //
+\f1 \'b8\'fc\'d0\'c2\'bb\'ba\'b3\'e5\'bd\'f8\'b6\'c8\'cc\'f5
+\f0 \cf2 \
+       \cf5 self\cf2 .\cf6 loadTimeProgress\cf2 .\cf8 progress\cf2  = scale;\
+    \}\
+\}\
+\
+\
+\cf3 #pragma mark - action\
+\cf7 //
+\f1 \'b2\'a5\'b7\'c5\'c9\'cf\'d2\'bb\'ca\'d7
+\f0 \cf2 \
+- (\cf5 IBAction\cf2 )lastBtnAction:(\cf8 UIButton\cf2  *)sender\
+\{\
+    \cf7 //
+\f1 \'c8\'a1\'b3\'f6\'cf\'c2\'d2\'bb\'ca\'d7\'d2\'f4\'c0\'d6\'c4\'a3\'d0\'cd
+\f0 \cf2 \
+    \cf5 if\cf2  (\cf5 self\cf2 .\cf6 currentIndex\cf2  - \cf11 1\cf2  < \cf11 0\cf2 ) \{\
+        \cf5 self\cf2 .\cf6 currentIndex\cf2  = \cf5 self\cf2 .\cf6 dataSource\cf2 .\cf8 count\cf2  -\cf11 1\cf2 ;\
+    \}\cf5 else\cf2 \{\
+        \cf5 self\cf2 .\cf6 currentIndex\cf2  -= \cf11 1\cf2 ;\
+    \}\
+    [\cf5 self\cf2  \cf10 removePlayStatus\cf2 ];\
+    [\cf5 self\cf2  \cf10 removePlayLoadTime\cf2 ];\
+    \cf6 MusicModel\cf2  *model = \cf5 self\cf2 .\cf6 dataSource\cf2 [\cf5 self\cf2 .\cf6 currentIndex\cf2 ];\
+    [\cf5 self\cf2  \cf10 playWithUrl\cf2 :model];\
+\
+\}\
+\
+\cf7 //
+\f1 \'b2\'a5\'b7\'c5
+\f0 \cf2 \
+- (\cf5 IBAction\cf2 )playBtnAction:(\cf8 UIButton\cf2  *)sender\
+\{\
+    \cf5 if\cf2  (!sender.\cf8 selected\cf2 ) \{\
+        [\cf5 self\cf2  \cf10 playWithUrl\cf2 :\cf5 self\cf2 .\cf6 dataSource\cf2 [\cf5 self\cf2 .\cf6 currentIndex\cf2 ]];\
+        sender.\cf8 selected\cf2  = \cf5 YES\cf2 ;\
+    \}\cf5 else\cf2 \{\
+        [\cf5 self\cf2 .\cf6 player\cf2  \cf9 pause\cf2 ];\
+        [\cf5 self\cf2  \cf10 removePlayStatus\cf2 ];\
+        [\cf5 self\cf2  \cf10 removePlayLoadTime\cf2 ];\
+        \cf5 self\cf2 .\cf6 currentModel\cf2  = \cf5 nil\cf2 ;\
+        sender.\cf8 selected\cf2  = \cf5 NO\cf2 ;\
+    \}\
+    \
+\}\
+\cf7 //
+\f1 \'cf\'c2\'d2\'bb\'ca\'d7
+\f0 \cf2 \
+- (\cf5 IBAction\cf2 )nextBtnAction:(\cf8 UIButton\cf2  *)sender \{\
+    \cf7 //
+\f1 \'c8\'a1\'b3\'f6\'cf\'c2\'d2\'bb\'ca\'d7\'d2\'f4\'c0\'d6\'c4\'a3\'d0\'cd
+\f0 \cf2 \
+    \cf5 if\cf2  (\cf5 self\cf2 .\cf6 currentIndex\cf2  +\cf11 1\cf2  > \cf5 self\cf2 .\cf6 dataSource\cf2 .\cf8 count\cf2  -\cf11 1\cf2 ) \{\
+        \cf5 self\cf2 .\cf6 currentIndex\cf2  = \cf11 0\cf2 ;\
+    \}\cf5 else\cf2 \{\
+        \cf5 self\cf2 .\cf6 currentIndex\cf2  += \cf11 1\cf2 ;\
+    \}\
+    [\cf5 self\cf2  \cf10 removePlayStatus\cf2 ];\
+    [\cf5 self\cf2  \cf10 removePlayLoadTime\cf2 ];\
+    \cf6 MusicModel\cf2  *model = \cf5 self\cf2 .\cf6 dataSource\cf2 [\cf5 self\cf2 .\cf6 currentIndex\cf2 ];\
+     [\cf5 self\cf2  \cf10 playWithUrl\cf2 :model];\
+\
+\}\
+\cf7 //
+\f1 \'d2\'c6\'b6\'af\'bb\'ac\'bf\'e9\'b5\'f7\'d5\'fb\'b2\'a5\'b7\'c5\'bd\'f8\'b6\'c8
+\f0 \cf2 \
+- (\cf5 IBAction\cf2 )playSliderValueChange:(\cf8 UISlider\cf2  *)sender\
+\{\
+    \cf7 //
+\f1 \'b8\'f9\'be\'dd\'d6\'b5\'bc\'c6\'cb\'e3\'ca\'b1\'bc\'e4
+\f0 \cf2 \
+    \cf5 float\cf2  time = sender.\cf8 value\cf2  * \cf9 CMTimeGetSeconds\cf2 (\cf5 self\cf2 .\cf6 player\cf2 .\cf8 currentItem\cf2 .\cf8 duration\cf2 );\
+    \cf7 //
+\f1 \'cc\'f8\'d7\'aa\'b5\'bd\'b5\'b1\'c7\'b0\'d6\'b8\'b6\'a8\'ca\'b1\'bc\'e4
+\f0 \cf2 \
+    [\cf5 self\cf2 .\cf6 player\cf2  \cf9 seekToTime\cf2 :\cf9 CMTimeMake\cf2 (time, \cf11 1\cf2 )];\
+\}\
+\
+\
+\cf3 #pragma mark - getter\
+\cf2 -(\cf8 NSMutableArray\cf2  *)dataSource\
+\{\
+    \cf5 if\cf2  (\cf6 _dataSource\cf2  == \cf5 nil\cf2 ) \{\
+        \cf6 _dataSource\cf2  = [\cf8 NSMutableArray\cf2  \cf9 array\cf2 ];\
+    \}\
+    \cf5 return\cf2  \cf6 _dataSource\cf2 ;\
+\}\
+-(\cf8 AVPlayer\cf2  *)player\
+\{\
+    \cf5 if\cf2  (\cf6 _player\cf2  == \cf5 nil\cf2 ) \{\
+        \cf7 //
+\f1 \'b3\'f5\'ca\'bc\'bb\'af
+\f0 _player\cf2 \
+        \cf8 AVPlayerItem\cf2  *item = [[\cf8 AVPlayerItem\cf2  \cf9 alloc\cf2 ] \cf9 initWithURL\cf2 :[\cf8 NSURL\cf2  \cf9 URLWithString\cf2 :\cf4 @""\cf2 ]];\
+        \cf6 _player\cf2  = [[\cf8 AVPlayer\cf2  \cf9 alloc\cf2 ] \cf9 initWithPlayerItem\cf2 :item];\
+    \}\
+    \
+    \cf5 return\cf2  \cf6 _player\cf2 ;\
+\}\
+\
+\
+-(\cf8 NSMutableDictionary\cf2  *)musicImageDic\
+\{\
+    \cf5 if\cf2  (\cf6 _musicImageDic\cf2  == \cf5 nil\cf2 ) \{\
+        \cf6 _musicImageDic\cf2  = [\cf8 NSMutableDictionary\cf2  \cf9 dictionary\cf2 ];\
+    \}\
+    \cf5 return\cf2  \cf6 _musicImageDic\cf2 ;\
+\}\
+\
+\cf5 @end\cf2 \
+}

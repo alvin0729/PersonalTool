@@ -44,11 +44,14 @@
     self.view.backgroundColor = [UIColor lightGrayColor];
     
     
-    WWDropDownMenu * dropdownMenu = [[WWDropDownMenu alloc] init];
-    [dropdownMenu setFrame:CGRectMake(20, 80, 100, 40)];
-    [dropdownMenu setMenuTitles:@[@"往往",@"朋友圈"] rowHeight:30];
-    dropdownMenu.delegate = self;
-    [self.view addSubview:dropdownMenu];
+//    WWDropDownMenu * dropdownMenu = [[WWDropDownMenu alloc] init];
+//    [dropdownMenu setFrame:CGRectMake(20, 80, 100, 40)];
+//    [dropdownMenu setMenuTitles:@[@"往往",@"朋友圈"] rowHeight:30];
+//    dropdownMenu.delegate = self;
+//    [self.view addSubview:dropdownMenu];
+    
+    
+    
 }
 
 #pragma mark - LMJDropdownMenu Delegate
