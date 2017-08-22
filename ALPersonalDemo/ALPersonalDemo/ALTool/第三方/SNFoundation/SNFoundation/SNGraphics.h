@@ -17,7 +17,7 @@ SN_EXTERN void CGContextAddRoundCornerToPath(CGContextRef context, CGRect rect, 
 SN_EXTERN void CGContextAddCircleRectToPath(CGContextRef context, CGRect rect);
 
 SN_EXTERN CGRect CGRectFromSize(CGSize size);
-SN_EXTERN CGPoint CGRectGetCenter(CGRect rect);
+SN_EXTERN CGPoint CGRectGetCenter1(CGRect rect);
 
 @interface SNGraphics : NSObject
 

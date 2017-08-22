@@ -23,10 +23,12 @@ PODS:
   - ReactiveCocoa/no-arc (2.5)
   - ReactiveCocoa/UI (2.5):
     - ReactiveCocoa/Core
-  - SDWebImage (3.8.2):
-    - SDWebImage/Core (= 3.8.2)
-  - SDWebImage/Core (3.8.2)
-  - YYText (1.0.7)
+  - SDWebImage (4.0.0):
+    - SDWebImage/Core (= 4.0.0)
+  - SDWebImage/Core (4.0.0)
+  - YYKit (1.0.9):
+    - YYKit/no-arc (= 1.0.9)
+  - YYKit/no-arc (1.0.9)
 
 DEPENDENCIES:
   - AFNetworking (~> 3.0.4)
@@ -34,16 +36,16 @@ DEPENDENCIES:
   - MJRefresh (~> 3.1.12)
   - ReactiveCocoa (= 2.5)
   - SDWebImage
-  - YYText (~> 1.0.5)
+  - YYKit (~> 1.0.9)
 
 SPEC CHECKSUMS:
   AFNetworking: a0075feb321559dc78d9d85b55d11caa19eabb93
   Masonry: 7c429b56da9d4ee0bbb3ed77a5ea710d6a5df39e
   MJRefresh: b96cdb21c4aa75a7b07654311ab2f315c497e806
   ReactiveCocoa: e2db045570aa97c695e7aa97c2bcab222ae51f4a
-  SDWebImage: 098e97e6176540799c27e804c96653ee0833d13c
-  YYText: 5c461d709e24d55a182d1441c41dc639a18a4849
+  SDWebImage: 76a6348bdc74eb5a55dd08a091ef298e56b55e41
+  YYKit: 7cda43304a8dc3696c449041e2cb3107b4e236e7
 
-PODFILE CHECKSUM: 270c217d0afa58e8ed1174c3b52fe9b4f151072c
+PODFILE CHECKSUM: 4223d08ed08187e283270e264620f4c1d7cf3d5e
 
-COCOAPODS: 1.0.1
+COCOAPODS: 1.2.1.beta.1

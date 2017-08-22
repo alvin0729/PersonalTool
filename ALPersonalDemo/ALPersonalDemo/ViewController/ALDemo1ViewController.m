@@ -14,11 +14,16 @@
 #import "ALRichTextDemoViewController.h"
 #import "ALRIchTextDemoViewControllernone.h"
 #import "WWDropDownMenu.h"
+#import "MHTopicOneController.h"
+#import "MHTopicTwoController.h"
+#import "WWCustomLimitDatePickerView.h"
+#import "WWCalourseView.h"
 
-@interface ALDemo1ViewController ()<WWDropdownMenuDelegate>
+
+@interface ALDemo1ViewController ()<WWDropdownMenuDelegate,WWCalourseViewDataSource>
 
 @property(nonatomic,strong)WWTagEditingView *edtingView;
-
+@property(nonatomic,strong)WWCalourseView* calourse;
 @property (nonatomic,strong) UITextView *textView;
 
 @end
@@ -27,9 +32,29 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+//    [[LZPickViewManager initLZPickerViewManager] showWithMaxDateString:@"2020-08-06" withMinDateString:@"1993-01-01" didSeletedDateStringBlock:^(NSString *dateString) {
+//        
+//        NSString * showString = [NSString stringWithFormat:@"选择了时间是%@",dateString];
+//        AlertShow(showString)
+//        
+//    }];
+    
+//    WWCustomLimitDatePickerView *limitDatePicker = [WWCustomLimitDatePickerView initCustomLimitDatePicker];
+//    [limitDatePicker showWithMaxDateString:@"2010-12-31" withMinDateString:@"1960-01-01" didSeletedDateStringBlock:^(NSString *dateString) {
+//        NSLog(@"🤗🤗🤗🤗🤗%@🤗🤗🤗🤗",dateString);
+//    }];
+    
     //MHYouKuTopicController *vc = [MHYouKuTopicController new];
     //[self.navigationController pushViewController:vc animated:NO];
 
+    
+//    MHTopicOneController *vc = [MHTopicOneController new];
+//    [self.navigationController pushViewController:vc animated:NO];
+    
+    
+//    MHTopicTwoController *vc = [MHTopicTwoController new];
+//    [self.navigationController pushViewController:vc animated:NO];
     
     //HHInformationViewController *vc = [HHInformationViewController new];
     //[self.navigationController pushViewController:vc animated:NO];
@@ -41,7 +66,7 @@
 //    ALRIchTextDemoViewControllernone *vc = [ALRIchTextDemoViewControllernone new];
 //    [self.navigationController pushViewController:vc animated:NO];
     
-    self.view.backgroundColor = [UIColor lightGrayColor];
+//    self.view.backgroundColor = [UIColor lightGrayColor];
     
     
 //    WWDropDownMenu * dropdownMenu = [[WWDropDownMenu alloc] init];
@@ -51,6 +76,38 @@
 //    [self.view addSubview:dropdownMenu];
     
     
+    WWCalourseView* calourse = [[WWCalourseView alloc]initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, 200)];
+    [self.view addSubview:calourse];
+    [calourse setDataSource:self];
+    _calourse=calourse;
+}
+
+-(NSInteger)JE3DCalourseNumber
+{
+    return 3;
+}
+-(void)WWCalourseViewWith:(WWCalourseCell *)Cell andIndex:(NSInteger)index
+{
+    UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width + 60, 200)];
+    UIImageView *imageView1 = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width / 3.0 + 20, 200)];
+    UIImageView *imageView2 = [[UIImageView alloc] initWithFrame:CGRectMake(self.view.bounds.size.width / 3.0 + 20, 0, self.view.bounds.size.width / 3.0 + 20, 200)];
+    UIImageView *imageView3 = [[UIImageView alloc] initWithFrame:CGRectMake(self.view.bounds.size.width * 2 / 3.0 + 40, 0, self.view.bounds.size.width / 3.0 + 20, 200)];
+    [view addSubview:imageView1];
+    [view addSubview:imageView2];[view addSubview:imageView3];
+    NSString *resourcePath = [[NSBundle mainBundle] resourcePath];
+    
+    NSString *image_path1 = [resourcePath stringByAppendingPathComponent:@"gif_0.gif"];
+    YYImage *image1 = [[YYImage alloc] initWithContentsOfFile:image_path1];
+    imageView1.image = image1;
+    
+    NSString *image_path2 = [resourcePath stringByAppendingPathComponent:@"gif_1.gif"];
+    YYImage *image2 = [[YYImage alloc] initWithContentsOfFile:image_path2];
+    imageView1.image = image2;
+    
+    
+    NSString *image_path3 = [resourcePath stringByAppendingPathComponent:@"gif_2.gif"];
+    YYImage *image3 = [[YYImage alloc] initWithContentsOfFile:image_path3];
+    imageView1.image = image3;
     
 }
 

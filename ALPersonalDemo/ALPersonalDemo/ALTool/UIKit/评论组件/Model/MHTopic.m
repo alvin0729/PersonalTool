@@ -63,9 +63,9 @@
     if (self.text == nil) return nil;
     
     NSMutableAttributedString *attributedString = [[NSMutableAttributedString alloc] initWithString:self.text];
-    attributedString.yy_font = MHFont(MHPxConvertPt(15.0f), NO);
-    attributedString.yy_color = MHGlobalBlackTextColor;
-    attributedString.yy_lineSpacing = MHCommentContentLineSpacing;
+    attributedString.font = MHFont(MHPxConvertPt(15.0f), NO);
+    attributedString.color = MHGlobalBlackTextColor;
+    attributedString.lineSpacing = MHCommentContentLineSpacing;
     return attributedString;
 }
 

@@ -46,7 +46,7 @@ CGRect CGRectFromSize( CGSize size )
     return CGRectMake( 0, 0, size.width, size.height );
 };
 
-CGPoint CGRectGetCenter( CGRect rect )
+CGPoint CGRectGetCenter1( CGRect rect )
 {
     return CGPointMake( CGRectGetMidX( rect ), CGRectGetMidY( rect ) );
 };

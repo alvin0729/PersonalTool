@@ -19,7 +19,7 @@
 #import "UIColor+SSAdd.h"
 #import "UIView+ALFrame.h"
 
-#import "YYText.h"
+#import "YYKit.h"
 #import "Masonry.h"
 #import "UIImageView+WebCache.h"
 
