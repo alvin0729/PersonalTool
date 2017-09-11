@@ -78,15 +78,15 @@
     [self addSubview:_view2];
     [self addSubview:_view3];
     
-    [self animationChange];
-    [self updateTag];
-    
-    _transOriOne=_view1.layer.transform;
-    _transOriTwo=_view2.layer.transform;
-    _transOriThree=_view3.layer.transform;
-    _TempOriPostOne=_view1.layer.position;
-    _TempOriPostTwo=_view2.layer.position;
-    _TempOriPostThree=_view3.layer.position;
+//    [self animationChange];
+//    [self updateTag];
+//    
+//    _transOriOne=_view1.layer.transform;
+//    _transOriTwo=_view2.layer.transform;
+//    _transOriThree=_view3.layer.transform;
+//    _TempOriPostOne=_view1.layer.position;
+//    _TempOriPostTwo=_view2.layer.position;
+//    _TempOriPostThree=_view3.layer.position;
     
     
     //_pan=[[UIPanGestureRecognizer alloc]initWithTarget:self action:@selector(handelPan:)];
@@ -95,8 +95,8 @@
     //[self addGestureRecognizer:_pan];
     //[self addGestureRecognizer:_tap];
     
-    _timer=[NSTimer scheduledTimerWithTimeInterval:0.3f target:self selector:@selector(timerChange) userInfo:nil repeats:YES];
-    
+    _timer=[NSTimer scheduledTimerWithTimeInterval:1.0f target:self selector:@selector(timerChange) userInfo:nil repeats:YES];
+    [[NSRunLoop currentRunLoop] addTimer:_timer forMode:NSRunLoopCommonModes];
 }
 -(void)updateTag{
     _view1.tag=0;
@@ -106,10 +106,10 @@
 
 -(void)timerChange{
     self.transX += kScrollSpeed;
-    _view1.layer.position=CGPointMake(_TempOriPostOne.x+self.transX, _view1.layer.position.y);
-    _view2.layer.position=CGPointMake(_TempOriPostTwo.x+self.transX, _view2.layer.position.y);
-    _view3.layer.position=CGPointMake(_TempOriPostThree.x+self.transX, _view3.layer.position.y);
-    [self animationChange];
+//    _view1.layer.position=CGPointMake(_TempOriPostOne.x+self.transX, _view1.layer.position.y);
+//    _view2.layer.position=CGPointMake(_TempOriPostTwo.x+self.transX, _view2.layer.position.y);
+//    _view3.layer.position=CGPointMake(_TempOriPostThree.x+self.transX, _view3.layer.position.y);
+    
     
     if (self.transX >= self.bounds.size.width + kAmountMarginWidth) {
         WWCalourseCell* tempView=_view3;
@@ -119,14 +119,13 @@
         
         [_view2.layer setPosition:CGPointMake(_view1.layer.position.x+self.bounds.size.width-_margin + kAmountMarginWidth, _view2.layer.position.y)];
         [self updateTag];
-        [self animationChange];
-        
         _view2.sectionTag=[self NextNumberAfter:_view1.sectionTag];
         [self.DataSource WWCalourseViewWith:_view2 andIndex:_view2.sectionTag];
-        [self AnmiationTypeTwoChangeWithUIView:_view1 andPosition:_TempOriPostOne];
-        [self AnmiationTypeTwoChangeWithUIView:_view2 andPosition:_TempOriPostTwo];
-        [self AnmiationTypeTwoChangeWithUIView:_view3 andPosition:_TempOriPostThree];
     }
+    [self animationChange];
+    [self AnmiationTypeTwoChangeWithUIView:_view1 andPosition:_TempOriPostOne];
+    [self AnmiationTypeTwoChangeWithUIView:_view2 andPosition:_TempOriPostTwo];
+    [self AnmiationTypeTwoChangeWithUIView:_view3 andPosition:_TempOriPostThree];
 }
 
 -(NSInteger)NextNumberAfter:(NSInteger)index{
@@ -271,27 +270,15 @@
 }
 
 -(CATransform3D)transFormFrom:(CGFloat)position{
-    CGFloat chaFloat=[self positiveFloatFrom:(position-CGRectGetMidX(self.bounds) - kAmountMarginWidth / 2)/(self.bounds.size.width + kAmountMarginWidth)];
-    
-    //CGFloat angel=(position-CGRectGetMidX(self.bounds))/self.bounds.size.width*M_PI/10;
-    CGFloat angel= 0;
-    
     CGFloat latx;
     if (position == _TempOriPostOne.x || position == _TempOriPostTwo.x || position == _TempOriPostThree.x) {
         latx=0;
     }else
     {
-        latx=(position-CGRectGetMidX(self.bounds) - kAmountMarginWidth / 2)/(self.bounds.size.width + kAmountMarginWidth)*6;
+        latx=(position-CGRectGetMidX(self.bounds) - kAmountMarginWidth / 2)/(self.bounds.size.width + kAmountMarginWidth);
     }
-    CATransform3D transformlat=CATransform3DMakeTranslation(latx, 0, 0);
-    CATransform3D transformRotation = CATransform3DIdentity;
-    transformRotation.m34=-1/275.0;
-    transformRotation=CATransform3DRotate(transformRotation,angel, 0, 1, 0);
-    
-    CATransform3D transformScale=CATransform3DMakeScale(1-chaFloat*_scaleFloat, 1-chaFloat*_scaleFloat,1);
-    
-    return CATransform3DConcat(CATransform3DConcat(transformRotation, transformScale), transformlat);
-    
+    CATransform3D transformlat=CATransform3DMakeTranslation(kScrollSpeed, 0, 0);
+    return transformlat;
 }
 
 -(void)addTransform:(UIView*)view{

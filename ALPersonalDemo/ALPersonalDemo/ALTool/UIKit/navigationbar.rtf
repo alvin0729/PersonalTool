@@ -1,12 +1,16 @@
 {\rtf1\ansi\ansicpg936\cocoartf1504\cocoasubrtf600
-{\fonttbl\f0\fnil\fcharset0 Menlo-Regular;\f1\fnil\fcharset134 PingFangSC-Regular;\f2\fnil\fcharset0 HelveticaNeue;
-}
+{\fonttbl\f0\fnil\fcharset0 Menlo-Regular;\f1\fnil\fcharset134 PingFangSC-Regular;\f2\fswiss\fcharset0 ArialMT;
+\f3\fnil\fcharset0 Consolas;\f4\fnil\fcharset0 HelveticaNeue;}
 {\colortbl;\red255\green255\blue255;\red0\green128\blue0;\red0\green0\blue0;\red163\green21\blue21;
 \red0\green0\blue255;\red43\green131\blue159;\red15\green112\blue1;\red0\green116\blue0;\red170\green13\blue145;
-\red92\green38\blue153;\red46\green13\blue110;\red38\green71\blue75;\red38\green38\blue38;}
+\red92\green38\blue153;\red46\green13\blue110;\red38\green71\blue75;\red27\green29\blue31;\red255\green255\blue255;
+\red255\green255\blue255;\red235\green236\blue237;\red36\green38\blue41;\red37\green127\blue159;\red13\green0\blue129;
+\red104\green26\blue29;\red38\green38\blue38;}
 {\*\expandedcolortbl;\csgray\c100000;\csgenericrgb\c0\c50200\c0;\csgenericrgb\c0\c0\c0;\csgenericrgb\c63900\c8200\c8200;
 \csgenericrgb\c0\c0\c100000;\csgenericrgb\c16900\c51200\c62500;\csgenericrgb\c5773\c43941\c538;\csgenericrgb\c0\c45600\c0;\csgenericrgb\c66500\c5200\c56900;
-\csgenericrgb\c35900\c14900\c60100;\csgenericrgb\c18100\c5200\c43100;\csgenericrgb\c14900\c27800\c29400;\cssrgb\c20000\c20000\c20000;}
+\csgenericrgb\c35900\c14900\c60100;\csgenericrgb\c18100\c5200\c43100;\csgenericrgb\c14900\c27800\c29400;\cssrgb\c14118\c15294\c16078;\cssrgb\c100000\c100000\c100000;
+\csgray\c100000;\cssrgb\c93725\c94118\c94510;\cssrgb\c18824\c20000\c21176;\cssrgb\c16863\c56863\c68627;\cssrgb\c6275\c6275\c58039;
+\cssrgb\c49020\c15294\c15294;\cssrgb\c20000\c20000\c20000;}
 \margl1440\margr1440\vieww9000\viewh8400\viewkind0
 \deftab692
 \pard\tx692\pardeftab692\pardirnatural\partightenfactor0
@@ -583,13 +587,65 @@
 \}\
 \
 \
+\pard\pardeftab720\partightenfactor0
+
+\f2\fs30 \cf13 \cb14 \expnd0\expndtw0\kerning0
+\CocoaLigature1 You are removing the shadow but not the border, you need to do the following:\cb15 \
+\pard\pardeftab720\partightenfactor0
+
+\f3\fs26 \cf13 \cb16 [[UINavigationBar appearance] setBackgroundImage:[[UIImage alloc] init] forBarMetrics:UIBarMetricsDefault];\
+[[UINavigationBar appearance] setShadowImage:[[UIImage alloc] init]];\
+\pard\pardeftab720\partightenfactor0
+
+\f2\fs30 \cf13 \cb14 To change the border use an image of 2 pixels width line:\cb15 \
+\pard\pardeftab720\partightenfactor0
+
+\f3\fs26 \cf13 \cb16 [[UINavigationBar appearance] setShadowImage:[UIImage imageNamed:@"2pxWidthLineImage"]]; 
+\f0 \cf3 \cb15 \kerning1\expnd0\expndtw0 \CocoaLigature0 \
+\pard\tx642\pardeftab642\pardirnatural\partightenfactor0
+\cf3 \
+\pard\tx642\pardeftab642\pardirnatural\partightenfactor0
+\cf3 \cb1 - (\cf9 void\cf3 )viewWillAppear:(\cf9 BOOL\cf3 )animated \{\
+    [\cf9 super\cf3  \cf11 viewWillAppear\cf3 :animated];\
+    [\cf9 self\cf3 .\cf10 navigationController\cf3 .\cf10 navigationBar\cf3  \cf11 setBackgroundImage\cf3 :\cf9 nil\cf3  \cf11 forBarPosition\cf3 :\cf11 UIBarPositionAny\cf3  \cf11 barMetrics\cf3 :\cf11 UIBarMetricsDefault\cf3 ];\
+    [\cf9 self\cf3 .\cf10 navigationController\cf3 .\cf10 navigationBar\cf3  \cf11 setShadowImage\cf3 :\cf9 nil\cf3 ];\
+    [\cf9 self\cf3 .\cf10 navigationController\cf3 .\cf10 navigationBar\cf3  \cf12 lt_setBackgroundColor\cf3 :[\cf10 UIColor\cf3  \cf11 whiteColor\cf3 ]];\
+    \cf9 self\cf3 .\cf10 tabBarController\cf3 .\cf10 tabBar\cf3 .\cf10 hidden\cf3 =\cf9 NO\cf3 ;\
+    \
+\}\
+- (\cf9 void\cf3 )viewWillDisappear:(\cf9 BOOL\cf3 )animated \{\
+    [\cf9 super\cf3  \cf11 viewWillDisappear\cf3 :animated];\
+    [\cf9 self\cf3 .\cf10 navigationController\cf3 .\cf10 navigationBar\cf3  \cf11 setBackgroundImage\cf3 :[\cf10 UIImage\cf3  \cf11 new\cf3 ] \cf11 forBarPosition\cf3 :\cf11 UIBarPositionAny\cf3  \cf11 barMetrics\cf3 :\cf11 UIBarMetricsDefault\cf3 ];\
+    [\cf9 self\cf3 .\cf10 navigationController\cf3 .\cf10 navigationBar\cf3  \cf11 setShadowImage\cf3 :[\cf10 UIImage\cf3  \cf11 new\cf3 ]];\
+\}\cb15 \
+\
+\
+\pard\pardeftab720\partightenfactor0
+
+\f3 \cf17 \cb16 \expnd0\expndtw0\kerning0
+\CocoaLigature1 func application(application: \cf18 UIApplication\cf17 , didFinishLaunchingWithOptions launchOptions: [\cf18 NSObject\cf17 : \cf18 AnyObject\cf17 ]?) -> \cf18 Bool\cf17  \{\
+\
+    \cf18 UINavigationBar\cf17 .appearance().setBackgroundImage(\cf18 UIImage\cf17 (), forBarPosition: \cf18 UIBarPosition\cf17 .\cf18 Any\cf17 , barMetrics: \cf18 UIBarMetrics\cf17 .\cf18 Default\cf17 )\
+    \cf18 UINavigationBar\cf17 .appearance().shadowImage = \cf18 UIImage\cf17 ()\
+    \cf18 UINavigationBar\cf17 .appearance().tintColor = \cf18 UIColor\cf17 .whiteColor()\
+    \cf18 UINavigationBar\cf17 .appearance().barTintColor = \cf18 UIColor\cf17 .redColor()\
+    \cf18 UINavigationBar\cf17 .appearance().translucent = \cf19 false\cf17 \
+    \cf18 UINavigationBar\cf17 .appearance().clipsToBounds = \cf19 false\cf17 \
+    \cf18 UINavigationBar\cf17 .appearance().backgroundColor = \cf18 UIColor\cf17 .redColor()\
+    \cf18 UINavigationBar\cf17 .appearance().titleTextAttributes = [\cf18 NSFontAttributeName\cf17  : (\cf18 UIFont\cf17 (name: \cf20 "FONT NAME"\cf17 , size: \cf20 18\cf17 ))!, \cf18 NSForegroundColorAttributeName\cf17 : \cf18 UIColor\cf17 .whiteColor()] \}
+\f0 \cf3 \cb15 \kerning1\expnd0\expndtw0 \CocoaLigature0 \
+\pard\tx642\pardeftab642\pardirnatural\partightenfactor0
+\cf3 \
+\
+\
+\
 http://www.jianshu.com/p/5c09c2700038\
 \pard\pardeftab720\partightenfactor0
 
-\f2\b\fs68 \cf13 \expnd0\expndtw0\kerning0
+\f4\b\fs68 \cf21 \expnd0\expndtw0\kerning0
 \CocoaLigature1 ios 
 \f1 \'d7\'b4\'cc\'ac\'c0\'b8
-\f2 statusBar
+\f4 statusBar
 \f1 \'b5\'c4\'b1\'b3\'be\'b0\'d1\'d5\'c9\'ab
 \f0\b0\fs26 \cf3 \kerning1\expnd0\expndtw0 \CocoaLigature0 \
 \pard\tx642\pardeftab642\pardirnatural\partightenfactor0
@@ -600,7 +656,7 @@ http://www.jianshu.com/p/5c09c2700038\
 \f1 \cf3 \'c6\'c1\'b1\'ce
 \b \cf0 \CocoaLigature1 \'d3\'d2\'bb\'ac
 \b0 \cf3 \CocoaLigature0 \'b7\'b5\'bb\'d8\'b9\'a6\'c4\'dc\'b4\'fa\'c2\'eb\'a3\'ba
-\f0 \cf3 \
+\f0 \
 if ([self.navigationController respondsToSelector:@selector(interactivePopGestureRecognizer)]) \{    \
     self.navigationController.interactivePopGestureRecognizer.enabled = NO;    \
 \}\

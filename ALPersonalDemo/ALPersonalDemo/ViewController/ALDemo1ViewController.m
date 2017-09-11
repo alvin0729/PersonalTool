@@ -82,15 +82,15 @@
     _calourse=calourse;
 }
 
--(NSInteger)JE3DCalourseNumber
+-(NSInteger)WWCalourseNumber
 {
     return 3;
 }
 -(void)WWCalourseViewWith:(WWCalourseCell *)Cell andIndex:(NSInteger)index
 {
     UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width + 60, 200)];
-    UIImageView *imageView1 = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width / 3.0 + 20, 200)];
-    UIImageView *imageView2 = [[UIImageView alloc] initWithFrame:CGRectMake(self.view.bounds.size.width / 3.0 + 20, 0, self.view.bounds.size.width / 3.0 + 20, 200)];
+    UIImageView *imageView1 = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width / 3.0, 200)];
+    UIImageView *imageView2 = [[UIImageView alloc] initWithFrame:CGRectMake(self.view.bounds.size.width / 3.0 + 20, 0, self.view.bounds.size.width / 3.0, 200)];
     UIImageView *imageView3 = [[UIImageView alloc] initWithFrame:CGRectMake(self.view.bounds.size.width * 2 / 3.0 + 40, 0, self.view.bounds.size.width / 3.0 + 20, 200)];
     [view addSubview:imageView1];
     [view addSubview:imageView2];[view addSubview:imageView3];
@@ -102,12 +102,14 @@
     
     NSString *image_path2 = [resourcePath stringByAppendingPathComponent:@"gif_1.gif"];
     YYImage *image2 = [[YYImage alloc] initWithContentsOfFile:image_path2];
-    imageView1.image = image2;
+    imageView2.image = image2;
     
     
     NSString *image_path3 = [resourcePath stringByAppendingPathComponent:@"gif_2.gif"];
     YYImage *image3 = [[YYImage alloc] initWithContentsOfFile:image_path3];
-    imageView1.image = image3;
+    imageView3.image = image3;
+    
+    [Cell addSubview:view];
     
 }
 

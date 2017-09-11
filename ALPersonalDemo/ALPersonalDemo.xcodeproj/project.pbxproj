@@ -919,6 +919,13 @@
 			path = UIScrollView;
 			sourceTree = "<group>";
 		};
+		CF7F435D1F5CDC600055CC81 /* navigationBar */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = navigationBar;
+			sourceTree = "<group>";
+		};
 		CF970B381EF76ED700955D4A /* BTNScrollView */ = {
 			isa = PBXGroup;
 			children = (
@@ -1931,6 +1938,7 @@
 		E1F661A41EDD9FE8001D98E1 /* ALTool */ = {
 			isa = PBXGroup;
 			children = (
+				CF7F435D1F5CDC600055CC81 /* navigationBar */,
 				E14B8A451EF1886E0021D665 /* 第三方 */,
 				E14AD1841EEB01D6003353B6 /* ReactiveCocoa */,
 				E1F661A91EDDA122001D98E1 /* NSObject */,
