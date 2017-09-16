@@ -4,9 +4,9 @@ inhibit_all_warnings!
 target "ALPersonalDemo" do
 
 #富文本
-pod 'YYText', '~> 1.0.5'
 #图片缓存
 pod 'SDWebImage'
+pod 'YYKit', '~> 1.0.9'
 #AutoLayout
 pod 'Masonry', '~> 1.0.1'
 #刷新控件

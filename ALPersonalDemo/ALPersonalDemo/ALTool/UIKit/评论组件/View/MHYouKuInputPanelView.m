@@ -242,8 +242,8 @@
     words.textAlignment = NSTextAlignmentLeft;
     
     NSMutableAttributedString *attributedText = [[NSMutableAttributedString alloc] initWithString:@"0/300字"];
-    attributedText.yy_font = MHFont(MHPxConvertPt(9.0f), NO);
-    attributedText.yy_color = MHGlobalGrayTextColor;
+    attributedText.font = MHFont(MHPxConvertPt(9.0f), NO);
+    attributedText.color = MHGlobalGrayTextColor;
     words.attributedText = attributedText;
     [bottomView addSubview: words];
     self.words = words;
@@ -531,9 +531,9 @@
     UIColor *color = textView.attributedText.length<=300 ? MHGlobalGrayTextColor : [UIColor redColor];
     NSRange range = [text rangeOfString:[NSString stringWithFormat:@"%zd/",textView.attributedText.length]];
     NSMutableAttributedString *attributedText = [[NSMutableAttributedString alloc] initWithString:text];
-    attributedText.yy_font = font;
-    attributedText.yy_color = MHGlobalGrayTextColor;
-    [attributedText yy_setColor:color range:range];
+    attributedText.font = font;
+    attributedText.color = MHGlobalGrayTextColor;
+    [attributedText setColor:color range:range];
     self.words.attributedText = attributedText;
 }
 

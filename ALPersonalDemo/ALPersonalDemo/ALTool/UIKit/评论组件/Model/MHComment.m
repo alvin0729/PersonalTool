@@ -37,9 +37,9 @@
         NSString *textString = [NSString stringWithFormat:@"%@",self.text];
         
         NSMutableAttributedString *mutableAttributedString = [[NSMutableAttributedString alloc] initWithString:textString];
-        mutableAttributedString.yy_font = MHCommentTextFont;
-        mutableAttributedString.yy_color = MHGlobalOrangeTextColor;
-        mutableAttributedString.yy_lineSpacing = MHCommentContentLineSpacing;
+        mutableAttributedString.font = MHCommentTextFont;
+        mutableAttributedString.color = MHGlobalOrangeTextColor;
+        mutableAttributedString.lineSpacing = MHCommentContentLineSpacing;
         return mutableAttributedString;
     }
     
@@ -48,16 +48,16 @@
         // 有回复
         NSString *textString = [NSString stringWithFormat:@"%@回复%@: %@", self.fromUser.nickname, self.toUser.nickname, self.text];;
         NSMutableAttributedString *mutableAttributedString = [[NSMutableAttributedString alloc] initWithString:textString];
-        mutableAttributedString.yy_font = MHCommentTextFont;
-        mutableAttributedString.yy_color = MHGlobalBlackTextColor;
-        mutableAttributedString.yy_lineSpacing = MHCommentContentLineSpacing;
+        mutableAttributedString.font = MHCommentTextFont;
+        mutableAttributedString.color = MHGlobalBlackTextColor;
+        mutableAttributedString.lineSpacing = MHCommentContentLineSpacing;
         
         NSRange fromUserRange = NSMakeRange(0, self.fromUser.nickname.length);
         YYTextHighlight *fromUserHighlight = [YYTextHighlight highlightWithBackgroundColor:[UIColor colorWithWhite:0.000 alpha:0.220]];
         fromUserHighlight.userInfo = @{MHCommentUserKey:self.fromUser};
-        [mutableAttributedString yy_setTextHighlight:fromUserHighlight range:fromUserRange];
+        [mutableAttributedString setTextHighlight:fromUserHighlight range:fromUserRange];
         // 设置昵称颜色
-        [mutableAttributedString yy_setColor:MHGlobalOrangeTextColor range:NSMakeRange(0, self.fromUser.nickname.length)];
+        [mutableAttributedString setColor:MHGlobalOrangeTextColor range:NSMakeRange(0, self.fromUser.nickname.length)];
         
         
         
@@ -73,8 +73,8 @@
 //            // 这里通过通知把用户的模型传递出去
 //        };
         
-        [mutableAttributedString yy_setTextHighlight:toUserHighlight range:toUserRange];
-        [mutableAttributedString yy_setColor:MHGlobalOrangeTextColor range:toUserRange];
+        [mutableAttributedString setTextHighlight:toUserHighlight range:toUserRange];
+        [mutableAttributedString setColor:MHGlobalOrangeTextColor range:toUserRange];
         
         return mutableAttributedString;
         
@@ -84,17 +84,17 @@
         // 没有回复
         NSString *textString = [NSString stringWithFormat:@"%@: %@", self.fromUser.nickname, self.text];
         NSMutableAttributedString *mutableAttributedString = [[NSMutableAttributedString alloc] initWithString:textString];
-        mutableAttributedString.yy_font = MHCommentTextFont;
-        mutableAttributedString.yy_color = MHGlobalBlackTextColor;
-        mutableAttributedString.yy_lineSpacing = MHCommentContentLineSpacing;
+        mutableAttributedString.font = MHCommentTextFont;
+        mutableAttributedString.color = MHGlobalBlackTextColor;
+        mutableAttributedString.lineSpacing = MHCommentContentLineSpacing;
         
         NSRange fromUserRange = NSMakeRange(0, self.fromUser.nickname.length+1);
         // 设置昵称颜色
-        [mutableAttributedString yy_setColor:MHGlobalOrangeTextColor range:fromUserRange];
+        [mutableAttributedString setColor:MHGlobalOrangeTextColor range:fromUserRange];
         
         YYTextHighlight *fromUserHighlight = [YYTextHighlight highlightWithBackgroundColor:[UIColor colorWithWhite:0.000 alpha:0.220]];
         fromUserHighlight.userInfo = @{MHCommentUserKey:self.fromUser};
-        [mutableAttributedString yy_setTextHighlight:fromUserHighlight range:fromUserRange];
+        [mutableAttributedString setTextHighlight:fromUserHighlight range:fromUserRange];
         return mutableAttributedString;
     }
     

@@ -116,7 +116,7 @@ THE SOFTWARE.
 
 
 
-## YYText
+## YYKit
 
 The MIT License (MIT)
 

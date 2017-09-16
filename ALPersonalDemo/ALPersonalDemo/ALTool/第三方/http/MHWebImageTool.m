@@ -26,29 +26,44 @@
 
 + (void)setImageWithURL:(nullable NSString *)url placeholderImage:(nullable UIImage *)placeholder imageView:(nullable UIImageView *)imageView progress:(nullable MHWebImageDownloaderProgressBlock)progressBlock completed:(nullable MHWebImageCompletionWithFinishedBlock)completedBlock
 {
-    [imageView sd_setImageWithURL:[NSURL URLWithString:url] placeholderImage:placeholder options:SDWebImageLowPriority | SDWebImageRetryFailed progress:^(NSInteger receivedSize, NSInteger expectedSize) {
-        if (progressBlock) {
-           // progressBlock(receivedSize,expectedSize);
-        }
-    } completed:^(UIImage * _Nullable image, NSError * _Nullable error, SDImageCacheType cacheType, NSURL * _Nullable imageURL) {
+    
+    [imageView sd_setImageWithURL:[NSURL URLWithString:url] completed:^(UIImage * _Nullable image, NSError * _Nullable error, SDImageCacheType cacheType, NSURL * _Nullable imageURL) {
         if (completedBlock) {
             completedBlock(image);
         }
     }];
+//    [imageView sd_setImageWithURL:[NSURL URLWithString:url] placeholderImage:placeholder options:SDWebImageLowPriority | SDWebImageRetryFailed progress:^(NSInteger receivedSize, NSInteger expectedSize) {
+//        if (progressBlock) {
+//           // progressBlock(receivedSize,expectedSize);
+//        }
+//    } completed:^(UIImage * _Nullable image, NSError * _Nullable error, SDImageCacheType cacheType, NSURL * _Nullable imageURL) {
+//        if (completedBlock) {
+//            completedBlock(image);
+//        }
+//    }];
 }
 
 
 + (void)downloadImageWithURL:(nullable NSString *)url progress:(nullable MHWebImageDownloaderProgressBlock)progressBlock completed:(nullable MHWebImageCompletionWithFinishedBlock)completedBlock
 {
-    [[SDWebImageDownloader sharedDownloader] downloadImageWithURL:[NSURL URLWithString:url] options:SDWebImageDownloaderUseNSURLCache progress:^(NSInteger receivedSize, NSInteger expectedSize) {
-        if (progressBlock) {
-            //progressBlock(receivedSize,expectedSize,targetURL);
-        }
+    [[SDWebImageDownloader sharedDownloader] downloadImageWithURL:[NSURL URLWithString:url]
+     options:SDWebImageDownloaderUseNSURLCache progress:^(NSInteger receivedSize, NSInteger expectedSize, NSURL * _Nullable targetURL) {
+        
     } completed:^(UIImage * _Nullable image, NSData * _Nullable data, NSError * _Nullable error, BOOL finished) {
         if (completedBlock) {
             completedBlock(image);
         }
     }];
+    
+//    [[SDWebImageDownloader sharedDownloader] downloadImageWithURL:[NSURL URLWithString:url] options:SDWebImageDownloaderUseNSURLCache progress:^(NSInteger receivedSize, NSInteger expectedSize) {
+//        if (progressBlock) {
+//            //progressBlock(receivedSize,expectedSize,targetURL);
+//        }
+//    } completed:^(UIImage * _Nullable image, NSData * _Nullable data, NSError * _Nullable error, BOOL finished) {
+//        if (completedBlock) {
+//            completedBlock(image);
+//        }
+//    }];
 }
 + (void) clearWebImageCache
 {
