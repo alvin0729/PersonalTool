@@ -40,5 +40,43 @@
 			<integer>7</integer>
 		</dict>
 	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>04CF549EBEEE7BC87AEAE35397184D94</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>5B2B3092C71481A55A55D625720BEF1F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>9DC8D9E02903E93BD0B2FEC9D846EA20</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>9E033EDB5EC0819481B0546434FA577B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>CA8FAAEE1E139E43EF530667EC52EC6D</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>DD7D6D70A805A6D236A7D446C0889FA8</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>FA6E6201AE23C703ADD07F9B1ACFCD49</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+	</dict>
 </dict>
 </plist>
