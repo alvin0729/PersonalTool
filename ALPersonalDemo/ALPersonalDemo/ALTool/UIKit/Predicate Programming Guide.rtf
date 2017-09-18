@@ -1,0 +1,2082 @@
+{\rtf1\ansi\ansicpg936\cocoartf1504\cocoasubrtf600
+{\fonttbl\f0\fnil\fcharset0 LucidaGrande;\f1\fmodern\fcharset0 Courier;\f2\fmodern\fcharset0 Courier-Bold;
+\f3\fswiss\fcharset0 Helvetica;\f4\fnil\fcharset0 LucidaGrande-Bold;\f5\fnil\fcharset0 Menlo-Regular;
+}
+{\colortbl;\red255\green255\blue255;\red255\green255\blue255;\red46\green58\blue89;\red83\green83\blue83;
+\red238\green242\blue247;\red187\green196\blue203;\red39\green78\blue192;\red92\green38\blue153;\red0\green0\blue0;
+\red46\green13\blue110;\red63\green110\blue116;\red0\green116\blue0;\red28\green0\blue207;\red170\green13\blue145;
+\red38\green71\blue75;\red196\green26\blue22;}
+{\*\expandedcolortbl;\csgray\c100000;\cssrgb\c100000\c100000\c100000;\cssrgb\c23529\c29804\c42353;\cssrgb\c40000\c40000\c40000;
+\cssrgb\c94510\c96078\c97647;\cssrgb\c78039\c81176\c83529;\cssrgb\c20000\c40000\c80000;\csgenericrgb\c35900\c14900\c60100;\csgenericrgb\c0\c0\c0;
+\csgenericrgb\c18100\c5200\c43100;\csgenericrgb\c24700\c43100\c45600;\csgenericrgb\c0\c45600\c0;\csgenericrgb\c11000\c0\c81000;\csgenericrgb\c66500\c5200\c56900;
+\csgenericrgb\c14900\c27800\c29400;\csgenericrgb\c77000\c10200\c8600;}
+{\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid1\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid1}}
+{\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}}
+\margl1440\margr1440\vieww9000\viewh8400\viewkind0
+\deftab720
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs56 \cf0 \cb2 \expnd0\expndtw0\kerning0
+Creating Predicates\cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\fs48\fsmilli24310 \cf3 \cb2 Creating a Predicate Using a Format String\cb1 \
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat5 \trbrdrt\brdrs\brdrw20\brdrcf6 \trbrdrl\brdrs\brdrw20\brdrcf6 \trbrdrr\brdrs\brdrw20\brdrcf6 \tapadb80 
+\clvertalc \clshdrawnil \clwWidth19241\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt119 \clpadl119 \clpadb119 \clpadr119 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f1\fs24\fsmilli12275 \cf4 \cb2 NSPredicate *predicate = [NSPredicate\cb1 \
+\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat5 \trbrdrl\brdrs\brdrw20\brdrcf6 \trbrdrr\brdrs\brdrw20\brdrcf6 \tapadb80 
+\clvertalc \clshdrawnil \clwWidth19241\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt119 \clpadl119 \clpadb119 \clpadr119 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf4 \cb2     predicateWithFormat:@"(lastName like[cd] %@) AND (birthday > %@)",\cb1 \
+\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat5 \trbrdrl\brdrs\brdrw20\brdrcf6 \trbrdrb\brdrs\brdrw20\brdrcf6 \trbrdrr\brdrs\brdrw20\brdrcf6 \tapadb80 
+\clvertalc \clshdrawnil \clwWidth19241\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt119 \clpadl119 \clpadb119 \clpadr119 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf4 \cb2     \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0lastNameSearchString, birthdaySearchDate];\cb1 \
+\cell \lastrow\row
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs26 \cf0 \cb2 The predicate string parser is whitespace insensitive, case insensitive with respect to keywords, and supports nested parenthetical expressions. It also supports 
+\f1\fs26\fsmilli13390 \cf4 printf
+\f0\fs26 \cf0 -style format specifiers (like 
+\f1\fs26\fsmilli13390 \cf4 %x
+\f0\fs26 \cf0  and 
+\f1\fs26\fsmilli13390 \cf4 %@
+\f0\fs26 \cf0 )\'97see {\field{\*\fldinst{HYPERLINK "https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/Strings/Articles/FormatStrings.html#//apple_ref/doc/uid/20000943"}}{\fldrslt \cf7 Formatting String Objects}}.
+\fs48\fsmilli24310 \cf3 \
+\pard\pardeftab720\partightenfactor0
+
+\fs37\fsmilli18850 \cf0 String Constants, Variables, and Wildcards\cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\fs26 \cf0 \cb2 If you use string constants within your format string, you must quote them yourself, as in the following example.
+\fs48\fsmilli24310 \cf3 \
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat5 \trbrdrt\brdrs\brdrw20\brdrcf6 \trbrdrl\brdrs\brdrw20\brdrcf6 \trbrdrr\brdrs\brdrw20\brdrcf6 \tapadb80 
+\clvertalc \clshdrawnil \clwWidth19241\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt119 \clpadl119 \clpadb119 \clpadr119 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f1\fs24\fsmilli12275 \cf4 NSPredicate *predicate = [NSPredicate\cb1 \
+\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat5 \trbrdrl\brdrs\brdrw20\brdrcf6 \trbrdrb\brdrs\brdrw20\brdrcf6 \trbrdrr\brdrs\brdrw20\brdrcf6 \tapadb80 
+\clvertalc \clshdrawnil \clwWidth19241\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt119 \clpadl119 \clpadb119 \clpadr119 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf4 \cb2     predicateWithFormat:@"lastName like[c] \\"S*\\""];\cb1 \
+\cell \lastrow\row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat5 \trbrdrt\brdrs\brdrw20\brdrcf6 \trbrdrl\brdrs\brdrw20\brdrcf6 \trbrdrr\brdrs\brdrw20\brdrcf6 \tapadb80 
+\clvertalc \clshdrawnil \clwWidth19241\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt119 \clpadl119 \clpadb119 \clpadr119 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf4 \cb2 NSString *prefix = @"prefix";\cb1 \
+\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat5 \trbrdrl\brdrs\brdrw20\brdrcf6 \trbrdrr\brdrs\brdrw20\brdrcf6 \tapadb80 
+\clvertalc \clshdrawnil \clwWidth19241\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt119 \clpadl119 \clpadb119 \clpadr119 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf4 \cb2 NSString *suffix = @"suffix";\cb1 \
+\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat5 \trbrdrl\brdrs\brdrw20\brdrcf6 \trbrdrr\brdrs\brdrw20\brdrcf6 \tapadb80 
+\clvertalc \clshdrawnil \clwWidth19241\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt119 \clpadl119 \clpadb119 \clpadr119 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf4 \cb2 NSPredicate *predicate = [NSPredicate\cb1 \
+\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat5 \trbrdrl\brdrs\brdrw20\brdrcf6 \trbrdrr\brdrs\brdrw20\brdrcf6 \tapadb80 
+\clvertalc \clshdrawnil \clwWidth19241\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt119 \clpadl119 \clpadb119 \clpadr119 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf4 \cb2     predicateWithFormat:@"SELF like[c] %@",\cb1 \
+\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat5 \trbrdrl\brdrs\brdrw20\brdrcf6 \trbrdrr\brdrs\brdrw20\brdrcf6 \tapadb80 
+\clvertalc \clshdrawnil \clwWidth19241\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt119 \clpadl119 \clpadb119 \clpadr119 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf4 \cb2     [[prefix stringByAppendingString:@"*"] stringByAppendingString:suffix]];\cb1 \
+\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat5 \trbrdrl\brdrs\brdrw20\brdrcf6 \trbrdrb\brdrs\brdrw20\brdrcf6 \trbrdrr\brdrs\brdrw20\brdrcf6 \tapadb80 
+\clvertalc \clshdrawnil \clwWidth19241\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt119 \clpadl119 \clpadb119 \clpadr119 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf4 \cb2 BOOL ok = [predicate evaluateWithObject:@"prefixxxxxxsuffix"];\cb1 \
+\cell \lastrow\row
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs26 \cf0 \cb2 Finally, the following fragment results in a runtime parse error (
+\f1\fs26\fsmilli13390 \cf4 Unable to parse the format string "SELF like[c] %@*"
+\f0\fs26 \cf0 ).\cb1 \
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat5 \trbrdrt\brdrs\brdrw20\brdrcf6 \trbrdrl\brdrs\brdrw20\brdrcf6 \trbrdrr\brdrs\brdrw20\brdrcf6 \tapadb80 
+\clvertalc \clshdrawnil \clwWidth19241\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt119 \clpadl119 \clpadb119 \clpadr119 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f1\fs24\fsmilli12275 \cf4 \cb2 predicate = [NSPredicate\cb1 \
+\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat5 \trbrdrl\brdrs\brdrw20\brdrcf6 \trbrdrb\brdrs\brdrw20\brdrcf6 \trbrdrr\brdrs\brdrw20\brdrcf6 \tapadb80 
+\clvertalc \clshdrawnil \clwWidth19241\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt119 \clpadl119 \clpadb119 \clpadr119 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf4 \cb2     predicateWithFormat:@"SELF like[c] %@*", prefix];\cb1 \
+\cell \lastrow\row
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs26 \cf0 \cb2 variable expression\
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat5 \trbrdrt\brdrs\brdrw20\brdrcf6 \trbrdrl\brdrs\brdrw20\brdrcf6 \trbrdrr\brdrs\brdrw20\brdrcf6 \tapadb80 
+\clvertalc \clshdrawnil \clwWidth19241\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt119 \clpadl119 \clpadb119 \clpadr119 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f1\fs24\fsmilli12275 \cf4 predicate = [NSPredicate\cb1 \
+\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat5 \trbrdrl\brdrs\brdrw20\brdrcf6 \trbrdrb\brdrs\brdrw20\brdrcf6 \trbrdrr\brdrs\brdrw20\brdrcf6 \tapadb80 
+\clvertalc \clshdrawnil \clwWidth19241\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt119 \clpadl119 \clpadb119 \clpadr119 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf4 \cb2     predicateWithFormat:@"lastName like[c] $LAST_NAME"];
+\f0\fs26 \cf0 \cell \lastrow\row
+\pard\pardeftab720\partightenfactor0
+
+\fs37\fsmilli18850 \cf0 \
+Boolean Values\cb1 \
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat5 \trbrdrt\brdrs\brdrw20\brdrcf6 \trbrdrl\brdrs\brdrw20\brdrcf6 \trbrdrr\brdrs\brdrw20\brdrcf6 \tapadb80 
+\clvertalc \clshdrawnil \clwWidth19241\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt119 \clpadl119 \clpadb119 \clpadr119 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f1\fs24\fsmilli12275 \cf4 \cb2 NSPredicate *newPredicate =\cb1 \
+\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat5 \trbrdrl\brdrs\brdrw20\brdrcf6 \trbrdrr\brdrs\brdrw20\brdrcf6 \tapadb80 
+\clvertalc \clshdrawnil \clwWidth19241\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt119 \clpadl119 \clpadb119 \clpadr119 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf4 \cb2     [NSPredicate predicateWithFormat:@"anAttribute == %@", [NSNumber numberWithBool:aBool]];\cb1 \
+\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat5 \trbrdrl\brdrs\brdrw20\brdrcf6 \trbrdrr\brdrs\brdrw20\brdrcf6 \tapadb80 
+\clvertalc \clshdrawnil \clwWidth19241\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt119 \clpadl119 \clpadb119 \clpadr119 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf4 \cb2 NSPredicate *testForTrue =\cb1 \
+\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat5 \trbrdrl\brdrs\brdrw20\brdrcf6 \trbrdrb\brdrs\brdrw20\brdrcf6 \trbrdrr\brdrs\brdrw20\brdrcf6 \tapadb80 
+\clvertalc \clshdrawnil \clwWidth19241\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt119 \clpadl119 \clpadb119 \clpadr119 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf4 \cb2     [NSPredicate predicateWithFormat:@"anAttribute == YES"];\cb1 \
+\cell \lastrow\row
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs48\fsmilli24310 \cf3 \cb2 \
+\pard\pardeftab720\partightenfactor0
+
+\fs37\fsmilli18850 \cf0 Dynamic Property Names
+\fs48\fsmilli24310 \cf3 \
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat5 \trbrdrt\brdrs\brdrw20\brdrcf6 \trbrdrl\brdrs\brdrw20\brdrcf6 \trbrdrr\brdrs\brdrw20\brdrcf6 \tapadb80 
+\clvertalc \clshdrawnil \clwWidth19241\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt119 \clpadl119 \clpadb119 \clpadr119 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f1\fs24\fsmilli12275 \cf4 NSString *attributeName = @"firstName";\cb1 \
+\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat5 \trbrdrl\brdrs\brdrw20\brdrcf6 \trbrdrr\brdrs\brdrw20\brdrcf6 \tapadb80 
+\clvertalc \clshdrawnil \clwWidth19241\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt119 \clpadl119 \clpadb119 \clpadr119 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf4 \cb2 NSString *attributeValue = @"Adam";\cb1 \
+\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat5 \trbrdrl\brdrs\brdrw20\brdrcf6 \trbrdrr\brdrs\brdrw20\brdrcf6 \tapadb80 
+\clvertalc \clshdrawnil \clwWidth19241\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt119 \clpadl119 \clpadb119 \clpadr119 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf4 \cb2 NSPredicate *predicate = [NSPredicate predicateWithFormat:@"%@ like %@",\cb1 \
+\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat5 \trbrdrl\brdrs\brdrw20\brdrcf6 \trbrdrb\brdrs\brdrw20\brdrcf6 \trbrdrr\brdrs\brdrw20\brdrcf6 \tapadb80 
+\clvertalc \clshdrawnil \clwWidth19241\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt119 \clpadl119 \clpadb119 \clpadr119 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf4 \cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0attributeName, attributeValue];\cb1 \
+\cell \lastrow\row
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs26 \cf0 \cb2 The predicate format string in this case evaluates to 
+\f1\fs26\fsmilli13390 \cf4 "firstName" like "Adam"
+\f0\fs26 \cf0 .\cb1 \
+\cb2 If you want to specify a dynamic property name, you use 
+\f1\fs26\fsmilli13390 \cf4 %K
+\f0\fs26 \cf0  in the format string, as shown in the following fragment.\cb1 \
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat5 \trbrdrt\brdrs\brdrw20\brdrcf6 \trbrdrl\brdrs\brdrw20\brdrcf6 \trbrdrr\brdrs\brdrw20\brdrcf6 \tapadb80 
+\clvertalc \clshdrawnil \clwWidth19241\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt119 \clpadl119 \clpadb119 \clpadr119 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f1\fs24\fsmilli12275 \cf4 \cb2 predicate = [NSPredicate predicateWithFormat:@"%K like %@",\cb1 \
+\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat5 \trbrdrl\brdrs\brdrw20\brdrcf6 \trbrdrb\brdrs\brdrw20\brdrcf6 \trbrdrr\brdrs\brdrw20\brdrcf6 \tapadb80 
+\clvertalc \clshdrawnil \clwWidth19241\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt119 \clpadl119 \clpadb119 \clpadr119 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf4 \cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0attributeName, attributeValue];\cb1 \
+\cell \lastrow\row
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs26 \cf0 \cb2 The predicate format string in this case evaluates to 
+\f1\fs26\fsmilli13390 \cf4 firstName like "Adam"
+\f0\fs26 \cf0  (note that there are no quotation marks around 
+\f1\fs26\fsmilli13390 \cf4 firstName
+\f0\fs26 \cf0 ).\cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\fs48\fsmilli24310 \cf3 \cb2 \
+Creating Predicates Directly in Code\cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\fs26 \cf0 \cb2 represent 
+\f1\fs26\fsmilli13390 \cf4 (revenue >= 1000000) and (revenue < 100000000)
+\f0\fs48\fsmilli24310 \cf3 \
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat5 \trbrdrt\brdrs\brdrw20\brdrcf6 \trbrdrl\brdrs\brdrw20\brdrcf6 \trbrdrr\brdrs\brdrw20\brdrcf6 \tapadb80 
+\clvertalc \clshdrawnil \clwWidth19241\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt119 \clpadl119 \clpadb119 \clpadr119 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f1\fs24\fsmilli12275 \cf4 NSExpression *lhs = [NSExpression expressionForKeyPath:@"revenue"];\cb1 \
+\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat5 \trbrdrl\brdrs\brdrw20\brdrcf6 \trbrdrr\brdrs\brdrw20\brdrcf6 \tapadb80 
+\clvertalc \clshdrawnil \clwWidth19241\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt119 \clpadl119 \clpadb119 \clpadr119 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf4 \cb2  \cb1 \
+\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat5 \trbrdrl\brdrs\brdrw20\brdrcf6 \trbrdrr\brdrs\brdrw20\brdrcf6 \tapadb80 
+\clvertalc \clshdrawnil \clwWidth19241\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt119 \clpadl119 \clpadb119 \clpadr119 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf4 \cb2 NSExpression *greaterThanRhs = [NSExpression expressionForConstantValue:[NSNumber numberWithInt:1000000]];\cb1 \
+\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat5 \trbrdrl\brdrs\brdrw20\brdrcf6 \trbrdrr\brdrs\brdrw20\brdrcf6 \tapadb80 
+\clvertalc \clshdrawnil \clwWidth19241\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt119 \clpadl119 \clpadb119 \clpadr119 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf4 \cb2 NSPredicate *greaterThanPredicate = [NSComparisonPredicate\cb1 \
+\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat5 \trbrdrl\brdrs\brdrw20\brdrcf6 \trbrdrr\brdrs\brdrw20\brdrcf6 \tapadb80 
+\clvertalc \clshdrawnil \clwWidth19241\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt119 \clpadl119 \clpadb119 \clpadr119 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf4 \cb2     predicateWithLeftExpression:lhs\cb1 \
+\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat5 \trbrdrl\brdrs\brdrw20\brdrcf6 \trbrdrr\brdrs\brdrw20\brdrcf6 \tapadb80 
+\clvertalc \clshdrawnil \clwWidth19241\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt119 \clpadl119 \clpadb119 \clpadr119 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf4 \cb2     rightExpression:greaterThanRhs\cb1 \
+\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat5 \trbrdrl\brdrs\brdrw20\brdrcf6 \trbrdrr\brdrs\brdrw20\brdrcf6 \tapadb80 
+\clvertalc \clshdrawnil \clwWidth19241\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt119 \clpadl119 \clpadb119 \clpadr119 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf4 \cb2     modifier:NSDirectPredicateModifier\cb1 \
+\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat5 \trbrdrl\brdrs\brdrw20\brdrcf6 \trbrdrr\brdrs\brdrw20\brdrcf6 \tapadb80 
+\clvertalc \clshdrawnil \clwWidth19241\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt119 \clpadl119 \clpadb119 \clpadr119 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf4 \cb2     type:NSGreaterThanOrEqualToPredicateOperatorType\cb1 \
+\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat5 \trbrdrl\brdrs\brdrw20\brdrcf6 \trbrdrr\brdrs\brdrw20\brdrcf6 \tapadb80 
+\clvertalc \clshdrawnil \clwWidth19241\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt119 \clpadl119 \clpadb119 \clpadr119 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf4 \cb2     options:0];\cb1 \
+\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat5 \trbrdrl\brdrs\brdrw20\brdrcf6 \trbrdrr\brdrs\brdrw20\brdrcf6 \tapadb80 
+\clvertalc \clshdrawnil \clwWidth19241\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt119 \clpadl119 \clpadb119 \clpadr119 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf4 \cb2  \cb1 \
+\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat5 \trbrdrl\brdrs\brdrw20\brdrcf6 \trbrdrr\brdrs\brdrw20\brdrcf6 \tapadb80 
+\clvertalc \clshdrawnil \clwWidth19241\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt119 \clpadl119 \clpadb119 \clpadr119 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf4 \cb2 NSExpression *lessThanRhs = [NSExpression expressionForConstantValue:[NSNumber numberWithInt:100000000]];\cb1 \
+\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat5 \trbrdrl\brdrs\brdrw20\brdrcf6 \trbrdrr\brdrs\brdrw20\brdrcf6 \tapadb80 
+\clvertalc \clshdrawnil \clwWidth19241\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt119 \clpadl119 \clpadb119 \clpadr119 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf4 \cb2 NSPredicate *lessThanPredicate = [NSComparisonPredicate\cb1 \
+\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat5 \trbrdrl\brdrs\brdrw20\brdrcf6 \trbrdrr\brdrs\brdrw20\brdrcf6 \tapadb80 
+\clvertalc \clshdrawnil \clwWidth19241\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt119 \clpadl119 \clpadb119 \clpadr119 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf4 \cb2     predicateWithLeftExpression:lhs\cb1 \
+\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat5 \trbrdrl\brdrs\brdrw20\brdrcf6 \trbrdrr\brdrs\brdrw20\brdrcf6 \tapadb80 
+\clvertalc \clshdrawnil \clwWidth19241\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt119 \clpadl119 \clpadb119 \clpadr119 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf4 \cb2     rightExpression:lessThanRhs\cb1 \
+\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat5 \trbrdrl\brdrs\brdrw20\brdrcf6 \trbrdrr\brdrs\brdrw20\brdrcf6 \tapadb80 
+\clvertalc \clshdrawnil \clwWidth19241\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt119 \clpadl119 \clpadb119 \clpadr119 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf4 \cb2     modifier:NSDirectPredicateModifier\cb1 \
+\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat5 \trbrdrl\brdrs\brdrw20\brdrcf6 \trbrdrr\brdrs\brdrw20\brdrcf6 \tapadb80 
+\clvertalc \clshdrawnil \clwWidth19241\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt119 \clpadl119 \clpadb119 \clpadr119 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf4 \cb2     type:NSLessThanPredicateOperatorType\cb1 \
+\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat5 \trbrdrl\brdrs\brdrw20\brdrcf6 \trbrdrr\brdrs\brdrw20\brdrcf6 \tapadb80 
+\clvertalc \clshdrawnil \clwWidth19241\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt119 \clpadl119 \clpadb119 \clpadr119 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf4 \cb2     options:0];\cb1 \
+\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat5 \trbrdrl\brdrs\brdrw20\brdrcf6 \trbrdrr\brdrs\brdrw20\brdrcf6 \tapadb80 
+\clvertalc \clshdrawnil \clwWidth19241\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt119 \clpadl119 \clpadb119 \clpadr119 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf4 \cb2  \cb1 \
+\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat5 \trbrdrl\brdrs\brdrw20\brdrcf6 \trbrdrr\brdrs\brdrw20\brdrcf6 \tapadb80 
+\clvertalc \clshdrawnil \clwWidth19241\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt119 \clpadl119 \clpadb119 \clpadr119 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf4 \cb2 NSCompoundPredicate *predicate = [NSCompoundPredicate andPredicateWithSubpredicates:\cb1 \
+\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat5 \trbrdrl\brdrs\brdrw20\brdrcf6 \trbrdrb\brdrs\brdrw20\brdrcf6 \trbrdrr\brdrs\brdrw20\brdrcf6 \tapadb80 
+\clvertalc \clshdrawnil \clwWidth19241\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt119 \clpadl119 \clpadb119 \clpadr119 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf4 \cb2     @[greaterThanPredicate, lessThanPredicate]];\cb1 \
+\cell \lastrow\row
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs26 \cf0 \cb2 The disadvantage of this technique should be immediately apparent\'97you may have to write a lot of code. The advantages are that it is less prone to spelling and other typographical errors that may only be discovered at runtime and it may be faster than depending on string parsing.\cb1 \
+\cb2 This technique is most likely to be useful when the creation of the predicate is itself dynamic, such as in a predicate builder.\cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\fs48\fsmilli24310 \cf3 \cb2 Creating Predicates Using Predicate Templates\cb1 \
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat5 \trbrdrt\brdrs\brdrw20\brdrcf6 \trbrdrl\brdrs\brdrw20\brdrcf6 \trbrdrr\brdrs\brdrw20\brdrcf6 \tapadb80 
+\clvertalc \clshdrawnil \clwWidth19241\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt119 \clpadl119 \clpadb119 \clpadr119 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f1\fs24\fsmilli12275 \cf4 \cb2 NSPredicate *predicateTemplate = [NSPredicate\cb1 \
+\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat5 \trbrdrl\brdrs\brdrw20\brdrcf6 \trbrdrb\brdrs\brdrw20\brdrcf6 \trbrdrr\brdrs\brdrw20\brdrcf6 \tapadb80 
+\clvertalc \clshdrawnil \clwWidth19241\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt119 \clpadl119 \clpadb119 \clpadr119 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf4 \cb2     predicateWithFormat:@"lastName like[c] $LAST_NAME"];\cb1 \
+\cell \lastrow\row
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs26 \cf0 \cb2 This is equivalent to creating the variable expression directly as shown in the following example.\cb1 \
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat5 \trbrdrt\brdrs\brdrw20\brdrcf6 \trbrdrl\brdrs\brdrw20\brdrcf6 \trbrdrr\brdrs\brdrw20\brdrcf6 \tapadb80 
+\clvertalc \clshdrawnil \clwWidth19241\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt119 \clpadl119 \clpadb119 \clpadr119 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f1\fs24\fsmilli12275 \cf4 \cb2 NSExpression *lhs = [NSExpression expressionForKeyPath:@"lastName"];\cb1 \
+\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat5 \trbrdrl\brdrs\brdrw20\brdrcf6 \trbrdrr\brdrs\brdrw20\brdrcf6 \tapadb80 
+\clvertalc \clshdrawnil \clwWidth19241\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt119 \clpadl119 \clpadb119 \clpadr119 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf4 \cb2  \cb1 \
+\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat5 \trbrdrl\brdrs\brdrw20\brdrcf6 \trbrdrr\brdrs\brdrw20\brdrcf6 \tapadb80 
+\clvertalc \clshdrawnil \clwWidth19241\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt119 \clpadl119 \clpadb119 \clpadr119 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf4 \cb2 NSExpression *rhs = [NSExpression expressionForVariable:@"LAST_NAME"];\cb1 \
+\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat5 \trbrdrl\brdrs\brdrw20\brdrcf6 \trbrdrr\brdrs\brdrw20\brdrcf6 \tapadb80 
+\clvertalc \clshdrawnil \clwWidth19241\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt119 \clpadl119 \clpadb119 \clpadr119 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf4 \cb2  \cb1 \
+\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat5 \trbrdrl\brdrs\brdrw20\brdrcf6 \trbrdrr\brdrs\brdrw20\brdrcf6 \tapadb80 
+\clvertalc \clshdrawnil \clwWidth19241\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt119 \clpadl119 \clpadb119 \clpadr119 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf4 \cb2 NSPredicate *predicateTemplate = [NSComparisonPredicate\cb1 \
+\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat5 \trbrdrl\brdrs\brdrw20\brdrcf6 \trbrdrr\brdrs\brdrw20\brdrcf6 \tapadb80 
+\clvertalc \clshdrawnil \clwWidth19241\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt119 \clpadl119 \clpadb119 \clpadr119 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf4 \cb2     predicateWithLeftExpression:lhs\cb1 \
+\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat5 \trbrdrl\brdrs\brdrw20\brdrcf6 \trbrdrr\brdrs\brdrw20\brdrcf6 \tapadb80 
+\clvertalc \clshdrawnil \clwWidth19241\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt119 \clpadl119 \clpadb119 \clpadr119 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf4 \cb2     rightExpression:rhs\cb1 \
+\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat5 \trbrdrl\brdrs\brdrw20\brdrcf6 \trbrdrr\brdrs\brdrw20\brdrcf6 \tapadb80 
+\clvertalc \clshdrawnil \clwWidth19241\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt119 \clpadl119 \clpadb119 \clpadr119 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf4 \cb2     modifier:NSDirectPredicateModifier\cb1 \
+\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat5 \trbrdrl\brdrs\brdrw20\brdrcf6 \trbrdrr\brdrs\brdrw20\brdrcf6 \tapadb80 
+\clvertalc \clshdrawnil \clwWidth19241\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt119 \clpadl119 \clpadb119 \clpadr119 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf4 \cb2     type:NSLikePredicateOperatorType\cb1 \
+\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat5 \trbrdrl\brdrs\brdrw20\brdrcf6 \trbrdrb\brdrs\brdrw20\brdrcf6 \trbrdrr\brdrs\brdrw20\brdrcf6 \tapadb80 
+\clvertalc \clshdrawnil \clwWidth19241\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt119 \clpadl119 \clpadb119 \clpadr119 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf4 \cb2     options:NSCaseInsensitivePredicateOption];\cb1 \
+\cell \lastrow\row
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs48\fsmilli24310 \cf3 \cb2 \
+\pard\pardeftab720\partightenfactor0
+
+\fs26 \cf0 To create a valid predicate to evaluate against an object, you use the 
+\f1\fs26\fsmilli13390 \cf4 NSPredicate
+\f0\fs26 \cf0  method 
+\f1\fs26\fsmilli13390 \cf4 predicateWithSubstitutionVariables:
+\f0\fs26 \cf0  to pass in a dictionary that contains the variables to be substituted. (Note that the dictionary must contain key-value pairs for all the variables specified in the predicate.)\cb1 \
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat5 \trbrdrt\brdrs\brdrw20\brdrcf6 \trbrdrl\brdrs\brdrw20\brdrcf6 \trbrdrr\brdrs\brdrw20\brdrcf6 \tapadb80 
+\clvertalc \clshdrawnil \clwWidth19241\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt119 \clpadl119 \clpadb119 \clpadr119 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f1\fs24\fsmilli12275 \cf4 \cb2 NSPredicate *predicate = [predicateTemplate predicateWithSubstitutionVariables:\cb1 \
+\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat5 \trbrdrl\brdrs\brdrw20\brdrcf6 \trbrdrb\brdrs\brdrw20\brdrcf6 \trbrdrr\brdrs\brdrw20\brdrcf6 \tapadb80 
+\clvertalc \clshdrawnil \clwWidth19241\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt119 \clpadl119 \clpadb119 \clpadr119 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf4 \cb2     [NSDictionary dictionaryWithObject:@"Turner" forKey:@"LAST_NAME"]];\cb1 \
+\cell \lastrow\row
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs26 \cf0 \cb2 The new predicate returned by this example is 
+\f1\fs26\fsmilli13390 \cf4 lastName LIKE[c] "Turner"
+\f0\fs26 \cf0 .
+\fs48\fsmilli24310 \cf3 \
+
+\fs26 \cf0 Because the substitution dictionary must contain key-value pairs for all the variables specified in the predicate, if you want to match a null value, you must provide a null value in the dictionary, as illustrated in the following example.\cb1 \
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat5 \trbrdrt\brdrs\brdrw20\brdrcf6 \trbrdrl\brdrs\brdrw20\brdrcf6 \trbrdrr\brdrs\brdrw20\brdrcf6 \tapadb80 
+\clvertalc \clshdrawnil \clwWidth19241\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt119 \clpadl119 \clpadb119 \clpadr119 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f1\fs24\fsmilli12275 \cf4 \cb2 NSPredicate *predicate = [NSPredicate\cb1 \
+\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat5 \trbrdrl\brdrs\brdrw20\brdrcf6 \trbrdrr\brdrs\brdrw20\brdrcf6 \tapadb80 
+\clvertalc \clshdrawnil \clwWidth19241\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt119 \clpadl119 \clpadb119 \clpadr119 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf4 \cb2     predicateWithFormat:@"date = $DATE"];\cb1 \
+\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat5 \trbrdrl\brdrs\brdrw20\brdrcf6 \trbrdrr\brdrs\brdrw20\brdrcf6 \tapadb80 
+\clvertalc \clshdrawnil \clwWidth19241\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt119 \clpadl119 \clpadb119 \clpadr119 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf4 \cb2 predicate = [predicate predicateWithSubstitutionVariables:\cb1 \
+\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat5 \trbrdrl\brdrs\brdrw20\brdrcf6 \trbrdrb\brdrs\brdrw20\brdrcf6 \trbrdrr\brdrs\brdrw20\brdrcf6 \tapadb80 
+\clvertalc \clshdrawnil \clwWidth19241\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt119 \clpadl119 \clpadb119 \clpadr119 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf4 \cb2     [NSDictionary dictionaryWithObject:[NSNull null] forKey:@"DATE"]];\cb1 \
+\cell \lastrow\row
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs26 \cf0 \cb2 The predicate formed by this example is 
+\f1\fs26\fsmilli13390 \cf4 date == <null>
+\f0\fs26 \cf0 .\cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\fs48\fsmilli24310 \cf3 \cb2 Format String Summary\cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\fs26 \cf0 \cb2 It is important to distinguish between the different types of value in a format string. Note also that single or double quoting variables (or substitution variable strings) will cause 
+\f1\fs26\fsmilli13390 \cf4 %@
+\f0\fs26 \cf0 , 
+\f1\fs26\fsmilli13390 \cf4 %K
+\f0\fs26 \cf0 , or 
+\f1\fs26\fsmilli13390 \cf4 $variable
+\f0\fs26 \cf0  to be interpreted as a literal in the format string and so will prevent any substitution.\cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\f2\b\fs26\fsmilli13390 \cf4 \cb2 @"attributeName == %@"
+\f0\b0\fs26 \cf0 \cb1 \
+\pard\pardeftab720\partightenfactor0
+\cf0 \cb2 This predicate checks whether the value of the key 
+\f1\fs26\fsmilli13390 \cf4 attributeName
+\f0\fs26 \cf0  is the same as the value of the object 
+\f1\fs26\fsmilli13390 \cf4 %@
+\f0\fs26 \cf0  that is supplied at runtime as an argument to 
+\f1\fs26\fsmilli13390 \cf4 predicateWithFormat:
+\f0\fs26 \cf0 . Note that 
+\f1\fs26\fsmilli13390 \cf4 %@
+\f0\fs26 \cf0  can be a placeholder for any object whose description is valid in the predicate, such as an instance of 
+\f1\fs26\fsmilli13390 \cf4 NSDate
+\f0\fs26 \cf0 , 
+\f1\fs26\fsmilli13390 \cf4 NSNumber
+\f0\fs26 \cf0 , 
+\f1\fs26\fsmilli13390 \cf4 NSDecimalNumber
+\f0\fs26 \cf0 , or 
+\f1\fs26\fsmilli13390 \cf4 NSString
+\f0\fs26 \cf0 .\cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\f2\b\fs26\fsmilli13390 \cf4 \cb2 @"%K == %@"
+\f0\b0\fs26 \cf0 \cb1 \
+\pard\pardeftab720\partightenfactor0
+\cf0 \cb2 This predicate checks whether the value of the key 
+\f1\fs26\fsmilli13390 \cf4 %K
+\f0\fs26 \cf0  is the same as the value of the object 
+\f1\fs26\fsmilli13390 \cf4 %@
+\f0\fs26 \cf0 . The variables are supplied at runtime as arguments to 
+\f1\fs26\fsmilli13390 \cf4 predicateWithFormat:
+\f0\fs26 \cf0 .\cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\f2\b\fs26\fsmilli13390 \cf4 \cb2 @"name IN $NAME_LIST"
+\f0\b0\fs26 \cf0 \cb1 \
+\pard\pardeftab720\partightenfactor0
+\cf0 \cb2 This is a template for a predicate that checks whether the value of the key 
+\f1\fs26\fsmilli13390 \cf4 name
+\f0\fs26 \cf0  is in the variable 
+\f1\fs26\fsmilli13390 \cf4 $NAME_LIST
+\f0\fs26 \cf0  (no quotes) that is supplied at runtime using 
+\f1\fs26\fsmilli13390 \cf4 predicateWithSubstitutionVariables:
+\f0\fs26 \cf0 .\cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\f2\b\fs26\fsmilli13390 \cf4 \cb2 @"'name' IN $NAME_LIST"
+\f0\b0\fs26 \cf0 \cb1 \
+\pard\pardeftab720\partightenfactor0
+\cf0 \cb2 This is a template for a predicate that checks whether the constant value 
+\f1\fs26\fsmilli13390 \cf4 'name'
+\f0\fs26 \cf0  (note the quotes around the string) is in the variable 
+\f1\fs26\fsmilli13390 \cf4 $NAME_LIST
+\f0\fs26 \cf0  that is supplied at runtime using 
+\f1\fs26\fsmilli13390 \cf4 predicateWithSubstitutionVariables:
+\f0\fs26 \cf0 .\cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\f2\b\fs26\fsmilli13390 \cf4 \cb2 @"$name IN $NAME_LIST"
+\f0\b0\fs26 \cf0 \cb1 \
+\pard\pardeftab720\partightenfactor0
+\cf0 \cb2 This is a template for a predicate that expects values to be substituted (using 
+\f1\fs26\fsmilli13390 \cf4 predicateWithSubstitutionVariables:
+\f0\fs26 \cf0 ) for both 
+\f1\fs26\fsmilli13390 \cf4 $NAME
+\f0\fs26 \cf0  and 
+\f1\fs26\fsmilli13390 \cf4 $NAME_LIST
+\f0\fs26 \cf0 .\cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\f2\b\fs26\fsmilli13390 \cf4 \cb2 @"%K == '%@'"
+\f0\b0\fs26 \cf0 \cb1 \
+\pard\pardeftab720\partightenfactor0
+\cf0 \cb2 This predicate checks whether the value of the key 
+\f1\fs26\fsmilli13390 \cf4 %K
+\f0\fs26 \cf0  is equal to the string literal \'93
+\f1\fs26\fsmilli13390 \cf4 %@
+\f0\fs26 \cf0 \'93 (note the single quotes around 
+\f1\fs26\fsmilli13390 \cf4 %@
+\f0\fs26 \cf0 ). The key name 
+\f1\fs26\fsmilli13390 \cf4 %K
+\f0\fs26 \cf0  is supplied at runtime as an argument to 
+\f1\fs26\fsmilli13390 \cf4 predicateWithFormat:
+\f0\fs26 \cf0 .\
+\
+\pard\pardeftab720\partightenfactor0
+
+\fs48\fsmilli24310 \cf3 \
+\pard\pardeftab720\partightenfactor0
+
+\fs56 \cf0 Using Predicates\
+\pard\pardeftab720\partightenfactor0
+
+\fs48\fsmilli24310 \cf3 Evaluating Predicates
+\fs56 \cf0 \
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat5 \trbrdrt\brdrs\brdrw20\brdrcf6 \trbrdrl\brdrs\brdrw20\brdrcf6 \trbrdrr\brdrs\brdrw20\brdrcf6 \tapadb80 
+\clvertalc \clshdrawnil \clwWidth19241\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt119 \clpadl119 \clpadb119 \clpadr119 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f1\fs24\fsmilli12275 \cf4 NSPredicate *predicate = [NSPredicate predicateWithFormat:@"SELF IN %@", @[@"Stig", @"Shaffiq", @"Chris"]];\cb1 \
+\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat5 \trbrdrl\brdrs\brdrw20\brdrcf6 \trbrdrb\brdrs\brdrw20\brdrcf6 \trbrdrr\brdrs\brdrw20\brdrcf6 \tapadb80 
+\clvertalc \clshdrawnil \clwWidth19241\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt119 \clpadl119 \clpadb119 \clpadr119 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf4 \cb2 BOOL result = [predicate evaluateWithObject:@"Shaffiq"];\cb1 \
+\cell \lastrow\row
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs26 \cf0 \cb2 You can use predicates with any class of object, but the class must support \cf7 key-value coding\cf0  for the keys you want to use in a predicate.\cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\fs48\fsmilli24310 \cf3 \cb2 Using Predicates with Arrays\cb1 \
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat5 \trbrdrt\brdrs\brdrw20\brdrcf6 \trbrdrl\brdrs\brdrw20\brdrcf6 \trbrdrr\brdrs\brdrw20\brdrcf6 \tapadb80 
+\clvertalc \clshdrawnil \clwWidth19241\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt119 \clpadl119 \clpadb119 \clpadr119 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f1\fs24\fsmilli12275 \cf4 \cb2 NSMutableArray *names = [@[@"Nick", @"Ben", @"Adam", @"Melissa"] mutableCopy];\cb1 \
+\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat5 \trbrdrl\brdrs\brdrw20\brdrcf6 \trbrdrr\brdrs\brdrw20\brdrcf6 \tapadb80 
+\clvertalc \clshdrawnil \clwWidth19241\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt119 \clpadl119 \clpadb119 \clpadr119 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf4 \cb2  \cb1 \
+\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat5 \trbrdrl\brdrs\brdrw20\brdrcf6 \trbrdrr\brdrs\brdrw20\brdrcf6 \tapadb80 
+\clvertalc \clshdrawnil \clwWidth19241\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt119 \clpadl119 \clpadb119 \clpadr119 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf4 \cb2 NSPredicate *bPredicate = [NSPredicate predicateWithFormat:@"SELF beginswith[c] 'b'"];\cb1 \
+\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat5 \trbrdrl\brdrs\brdrw20\brdrcf6 \trbrdrr\brdrs\brdrw20\brdrcf6 \tapadb80 
+\clvertalc \clshdrawnil \clwWidth19241\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt119 \clpadl119 \clpadb119 \clpadr119 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf4 \cb2 NSArray *beginWithB = [names filteredArrayUsingPredicate:bPredicate];\cb1 \
+\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat5 \trbrdrl\brdrs\brdrw20\brdrcf6 \trbrdrr\brdrs\brdrw20\brdrcf6 \tapadb80 
+\clvertalc \clshdrawnil \clwWidth19241\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt119 \clpadl119 \clpadb119 \clpadr119 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf4 \cb2 // beginWithB contains \{ @"Ben" \}.\cb1 \
+\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat5 \trbrdrl\brdrs\brdrw20\brdrcf6 \trbrdrr\brdrs\brdrw20\brdrcf6 \tapadb80 
+\clvertalc \clshdrawnil \clwWidth19241\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt119 \clpadl119 \clpadb119 \clpadr119 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf4 \cb2  \cb1 \
+\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat5 \trbrdrl\brdrs\brdrw20\brdrcf6 \trbrdrr\brdrs\brdrw20\brdrcf6 \tapadb80 
+\clvertalc \clshdrawnil \clwWidth19241\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt119 \clpadl119 \clpadb119 \clpadr119 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf4 \cb2 NSPredicate *ePredicate = [NSPredicate predicateWithFormat:@"SELF contains[c] 'e'"];\cb1 \
+\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat5 \trbrdrl\brdrs\brdrw20\brdrcf6 \trbrdrr\brdrs\brdrw20\brdrcf6 \tapadb80 
+\clvertalc \clshdrawnil \clwWidth19241\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt119 \clpadl119 \clpadb119 \clpadr119 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf4 \cb2 [names filterUsingPredicate:ePredicate];\cb1 \
+\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat5 \trbrdrl\brdrs\brdrw20\brdrcf6 \trbrdrb\brdrs\brdrw20\brdrcf6 \trbrdrr\brdrs\brdrw20\brdrcf6 \tapadb80 
+\clvertalc \clshdrawnil \clwWidth19241\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt119 \clpadl119 \clpadb119 \clpadr119 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf4 \cb2 // array now contains \{ @"Ben", @"Melissa" \}\cb1 \
+\cell \lastrow\row
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs26 \cf0 \cb2 If you use the Core Data framework, the array methods provide an efficient means of filtering an existing array of objects without\'97as a fetch does\'97requiring a round trip to a persistent data store.\cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\fs48\fsmilli24310 \cf3 \cb2 \
+Using Predicates with Key-Paths\cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\fs26 \cf0 \cb2 The following example illustrates the creation of a predicate to find employees that belong to a department with a given name (but see also \cf7 Performance\cf0 ).\cb1 \
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat5 \trbrdrt\brdrs\brdrw20\brdrcf6 \trbrdrl\brdrs\brdrw20\brdrcf6 \trbrdrr\brdrs\brdrw20\brdrcf6 \tapadb80 
+\clvertalc \clshdrawnil \clwWidth19241\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt119 \clpadl119 \clpadb119 \clpadr119 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f1\fs24\fsmilli12275 \cf4 \cb2 NSString *departmentName = ... ;\cb1 \
+\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat5 \trbrdrl\brdrs\brdrw20\brdrcf6 \trbrdrr\brdrs\brdrw20\brdrcf6 \tapadb80 
+\clvertalc \clshdrawnil \clwWidth19241\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt119 \clpadl119 \clpadb119 \clpadr119 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf4 \cb2 NSPredicate *predicate = [NSPredicate predicateWithFormat:\cb1 \
+\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat5 \trbrdrl\brdrs\brdrw20\brdrcf6 \trbrdrb\brdrs\brdrw20\brdrcf6 \trbrdrr\brdrs\brdrw20\brdrcf6 \tapadb80 
+\clvertalc \clshdrawnil \clwWidth19241\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt119 \clpadl119 \clpadb119 \clpadr119 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf4 \cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0@"department.name like %@", departmentName];\cb1 \
+\cell \lastrow\row
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs26 \cf0 \cb2 If you use a to-many relationship, the construction of a predicate is slightly different. If you want to fetch Departments in which at least one of the employees has the first name "Matthew," for instance, you use an 
+\f1\fs26\fsmilli13390 \cf4 ANY
+\f0\fs26 \cf0  operator as shown in the following example:\cb1 \
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat5 \trbrdrt\brdrs\brdrw20\brdrcf6 \trbrdrl\brdrs\brdrw20\brdrcf6 \trbrdrr\brdrs\brdrw20\brdrcf6 \tapadb80 
+\clvertalc \clshdrawnil \clwWidth19241\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt119 \clpadl119 \clpadb119 \clpadr119 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f1\fs24\fsmilli12275 \cf4 \cb2 NSPredicate *predicate = [NSPredicate predicateWithFormat:\cb1 \
+\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat5 \trbrdrl\brdrs\brdrw20\brdrcf6 \trbrdrb\brdrs\brdrw20\brdrcf6 \trbrdrr\brdrs\brdrw20\brdrcf6 \tapadb80 
+\clvertalc \clshdrawnil \clwWidth19241\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt119 \clpadl119 \clpadb119 \clpadr119 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf4 \cb2 \'a0\'a0\'a0\'a0@"ANY employees.firstName like 'Matthew'"];\cb1 \
+\cell \lastrow\row
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs26 \cf0 \cb2 If you want to find Departments in which at least one of the employees is paid more than a certain amount, you use an 
+\f1\fs26\fsmilli13390 \cf4 ANY
+\f0\fs26 \cf0  operator as shown in the following example:\cb1 \
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat5 \trbrdrt\brdrs\brdrw20\brdrcf6 \trbrdrl\brdrs\brdrw20\brdrcf6 \trbrdrr\brdrs\brdrw20\brdrcf6 \tapadb80 
+\clvertalc \clshdrawnil \clwWidth19241\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt119 \clpadl119 \clpadb119 \clpadr119 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f1\fs24\fsmilli12275 \cf4 \cb2 float salary = ... ;\cb1 \
+\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat5 \trbrdrl\brdrs\brdrw20\brdrcf6 \trbrdrb\brdrs\brdrw20\brdrcf6 \trbrdrr\brdrs\brdrw20\brdrcf6 \tapadb80 
+\clvertalc \clshdrawnil \clwWidth19241\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt119 \clpadl119 \clpadb119 \clpadr119 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf4 \cb2 NSPredicate *predicate = [NSPredicate predicateWithFormat:@"ANY employees.salary > %f", salary];\cb1 \
+\cell \lastrow\row
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs48\fsmilli24310 \cf3 \cb2 \
+Using Null Values\cb1 \
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat5 \trbrdrt\brdrs\brdrw20\brdrcf6 \trbrdrl\brdrs\brdrw20\brdrcf6 \trbrdrr\brdrs\brdrw20\brdrcf6 \tapadb80 
+\clvertalc \clshdrawnil \clwWidth19241\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt119 \clpadl119 \clpadb119 \clpadr119 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f1\fs24\fsmilli12275 \cf4 \cb2 NSString *firstName = @"Ben";\cb1 \
+\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat5 \trbrdrl\brdrs\brdrw20\brdrcf6 \trbrdrr\brdrs\brdrw20\brdrcf6 \tapadb80 
+\clvertalc \clshdrawnil \clwWidth19241\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt119 \clpadl119 \clpadb119 \clpadr119 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf4 \cb2  \cb1 \
+\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat5 \trbrdrl\brdrs\brdrw20\brdrcf6 \trbrdrr\brdrs\brdrw20\brdrcf6 \tapadb80 
+\clvertalc \clshdrawnil \clwWidth19241\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt119 \clpadl119 \clpadb119 \clpadr119 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf4 \cb2 NSArray *array = @[ @\{ @"lastName" : "Turner" \}];\cb1 \
+\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat5 \trbrdrl\brdrs\brdrw20\brdrcf6 \trbrdrr\brdrs\brdrw20\brdrcf6 \tapadb80 
+\clvertalc \clshdrawnil \clwWidth19241\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt119 \clpadl119 \clpadb119 \clpadr119 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf4 \cb2                     @\{ @"firstName" : @"Ben", @"lastName" : @"Ballard",\cb1 \
+\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat5 \trbrdrl\brdrs\brdrw20\brdrcf6 \trbrdrr\brdrs\brdrw20\brdrcf6 \tapadb80 
+\clvertalc \clshdrawnil \clwWidth19241\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt119 \clpadl119 \clpadb119 \clpadr119 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf4 \cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0       @"birthday", [NSDate dateWithString:@"1972-03-24 10:45:32 +0600"] \} ];\cb1 \
+\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat5 \trbrdrl\brdrs\brdrw20\brdrcf6 \trbrdrr\brdrs\brdrw20\brdrcf6 \tapadb80 
+\clvertalc \clshdrawnil \clwWidth19241\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt119 \clpadl119 \clpadb119 \clpadr119 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf4 \cb2  \cb1 \
+\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat5 \trbrdrl\brdrs\brdrw20\brdrcf6 \trbrdrr\brdrs\brdrw20\brdrcf6 \tapadb80 
+\clvertalc \clshdrawnil \clwWidth19241\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt119 \clpadl119 \clpadb119 \clpadr119 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf4 \cb2 NSPredicate *predicate =\cb1 \
+\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat5 \trbrdrl\brdrs\brdrw20\brdrcf6 \trbrdrr\brdrs\brdrw20\brdrcf6 \tapadb80 
+\clvertalc \clshdrawnil \clwWidth19241\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt119 \clpadl119 \clpadb119 \clpadr119 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf4 \cb2 \'a0\'a0\'a0\'a0[NSPredicate predicateWithFormat:@"firstName like %@", firstName];\cb1 \
+\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat5 \trbrdrl\brdrs\brdrw20\brdrcf6 \trbrdrr\brdrs\brdrw20\brdrcf6 \tapadb80 
+\clvertalc \clshdrawnil \clwWidth19241\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt119 \clpadl119 \clpadb119 \clpadr119 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf4 \cb2 NSArray *filteredArray = [array filteredArrayUsingPredicate:predicate];\cb1 \
+\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat5 \trbrdrl\brdrs\brdrw20\brdrcf6 \trbrdrr\brdrs\brdrw20\brdrcf6 \tapadb80 
+\clvertalc \clshdrawnil \clwWidth19241\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt119 \clpadl119 \clpadb119 \clpadr119 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf4 \cb2  \cb1 \
+\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat5 \trbrdrl\brdrs\brdrw20\brdrcf6 \trbrdrr\brdrs\brdrw20\brdrcf6 \tapadb80 
+\clvertalc \clshdrawnil \clwWidth19241\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt119 \clpadl119 \clpadb119 \clpadr119 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf4 \cb2 NSLog(@"filteredArray: %@", filteredArray);\cb1 \
+\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat5 \trbrdrl\brdrs\brdrw20\brdrcf6 \trbrdrr\brdrs\brdrw20\brdrcf6 \tapadb80 
+\clvertalc \clshdrawnil \clwWidth19241\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt119 \clpadl119 \clpadb119 \clpadr119 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf4 \cb2 // Output:\cb1 \
+\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat5 \trbrdrl\brdrs\brdrw20\brdrcf6 \trbrdrr\brdrs\brdrw20\brdrcf6 \tapadb80 
+\clvertalc \clshdrawnil \clwWidth19241\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt119 \clpadl119 \clpadb119 \clpadr119 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf4 \cb2 // filteredArray (\{birthday = 1972-03-24 10:45:32 +0600; \\\\\cb1 \
+\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat5 \trbrdrl\brdrs\brdrw20\brdrcf6 \trbrdrb\brdrs\brdrw20\brdrcf6 \trbrdrr\brdrs\brdrw20\brdrcf6 \tapadb80 
+\clvertalc \clshdrawnil \clwWidth19241\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt119 \clpadl119 \clpadb119 \clpadr119 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf4 \cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0firstName = Ben; lastName = Ballard;\})\cb1 \
+\cell \lastrow\row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat5 \trbrdrt\brdrs\brdrw20\brdrcf6 \trbrdrl\brdrs\brdrw20\brdrcf6 \trbrdrr\brdrs\brdrw20\brdrcf6 \tapadb80 
+\clvertalc \clshdrawnil \clwWidth19241\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt119 \clpadl119 \clpadb119 \clpadr119 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf4 \cb2 NSDate *referenceDate = [NSDate dateWithTimeIntervalSince1970:0];\cb1 \
+\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat5 \trbrdrl\brdrs\brdrw20\brdrcf6 \trbrdrr\brdrs\brdrw20\brdrcf6 \tapadb80 
+\clvertalc \clshdrawnil \clwWidth19241\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt119 \clpadl119 \clpadb119 \clpadr119 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf4 \cb2  \cb1 \
+\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat5 \trbrdrl\brdrs\brdrw20\brdrcf6 \trbrdrr\brdrs\brdrw20\brdrcf6 \tapadb80 
+\clvertalc \clshdrawnil \clwWidth19241\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt119 \clpadl119 \clpadb119 \clpadr119 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf4 \cb2 predicate = [NSPredicate predicateWithFormat:@"birthday > %@", referenceDate];\cb1 \
+\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat5 \trbrdrl\brdrs\brdrw20\brdrcf6 \trbrdrr\brdrs\brdrw20\brdrcf6 \tapadb80 
+\clvertalc \clshdrawnil \clwWidth19241\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt119 \clpadl119 \clpadb119 \clpadr119 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf4 \cb2 filteredArray = [array filteredArrayUsingPredicate:predicate];\cb1 \
+\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat5 \trbrdrl\brdrs\brdrw20\brdrcf6 \trbrdrr\brdrs\brdrw20\brdrcf6 \tapadb80 
+\clvertalc \clshdrawnil \clwWidth19241\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt119 \clpadl119 \clpadb119 \clpadr119 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf4 \cb2  \cb1 \
+\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat5 \trbrdrl\brdrs\brdrw20\brdrcf6 \trbrdrr\brdrs\brdrw20\brdrcf6 \tapadb80 
+\clvertalc \clshdrawnil \clwWidth19241\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt119 \clpadl119 \clpadb119 \clpadr119 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf4 \cb2 NSLog(@"filteredArray: %@", filteredArray);\cb1 \
+\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat5 \trbrdrl\brdrs\brdrw20\brdrcf6 \trbrdrr\brdrs\brdrw20\brdrcf6 \tapadb80 
+\clvertalc \clshdrawnil \clwWidth19241\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt119 \clpadl119 \clpadb119 \clpadr119 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf4 \cb2 // Output:\cb1 \
+\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat5 \trbrdrl\brdrs\brdrw20\brdrcf6 \trbrdrr\brdrs\brdrw20\brdrcf6 \tapadb80 
+\clvertalc \clshdrawnil \clwWidth19241\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt119 \clpadl119 \clpadb119 \clpadr119 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf4 \cb2 // filteredArray: (\{birthday = 1972-03-24 10:45:32 +0600; \\\\\cb1 \
+\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat5 \trbrdrl\brdrs\brdrw20\brdrcf6 \trbrdrb\brdrs\brdrw20\brdrcf6 \trbrdrr\brdrs\brdrw20\brdrcf6 \tapadb80 
+\clvertalc \clshdrawnil \clwWidth19241\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt119 \clpadl119 \clpadb119 \clpadr119 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf4 \cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0firstName = Ben; lastName = Ballard;\})\cb1 \
+\cell \lastrow\row
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs37\fsmilli18850 \cf0 \cb2 Testing for Null\cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\fs26 \cf0 \cb2 If you want to match null values, you must include a specific test in addition to other comparisons, as illustrated in the following fragment.\cb1 \
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat5 \trbrdrt\brdrs\brdrw20\brdrcf6 \trbrdrl\brdrs\brdrw20\brdrcf6 \trbrdrr\brdrs\brdrw20\brdrcf6 \tapadb80 
+\clvertalc \clshdrawnil \clwWidth19241\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt119 \clpadl119 \clpadb119 \clpadr119 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f1\fs24\fsmilli12275 \cf4 \cb2 predicate = [NSPredicate predicateWithFormat:@"(firstName == %@) || (firstName = nil)", firstName];\cb1 \
+\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat5 \trbrdrl\brdrs\brdrw20\brdrcf6 \trbrdrr\brdrs\brdrw20\brdrcf6 \tapadb80 
+\clvertalc \clshdrawnil \clwWidth19241\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt119 \clpadl119 \clpadb119 \clpadr119 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf4 \cb2 filteredArray = [array filteredArrayUsingPredicate:predicate];\cb1 \
+\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat5 \trbrdrl\brdrs\brdrw20\brdrcf6 \trbrdrr\brdrs\brdrw20\brdrcf6 \tapadb80 
+\clvertalc \clshdrawnil \clwWidth19241\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt119 \clpadl119 \clpadb119 \clpadr119 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf4 \cb2 NSLog(@"filteredArray: %@", filteredArray);\cb1 \
+\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat5 \trbrdrl\brdrs\brdrw20\brdrcf6 \trbrdrr\brdrs\brdrw20\brdrcf6 \tapadb80 
+\clvertalc \clshdrawnil \clwWidth19241\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt119 \clpadl119 \clpadb119 \clpadr119 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf4 \cb2  \cb1 \
+\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat5 \trbrdrl\brdrs\brdrw20\brdrcf6 \trbrdrr\brdrs\brdrw20\brdrcf6 \tapadb80 
+\clvertalc \clshdrawnil \clwWidth19241\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt119 \clpadl119 \clpadb119 \clpadr119 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf4 \cb2 // Output:\cb1 \
+\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat5 \trbrdrl\brdrs\brdrw20\brdrcf6 \trbrdrb\brdrs\brdrw20\brdrcf6 \trbrdrr\brdrs\brdrw20\brdrcf6 \tapadb80 
+\clvertalc \clshdrawnil \clwWidth19241\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt119 \clpadl119 \clpadb119 \clpadr119 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf4 \cb2 // filteredArray: ( \{ lastName = Turner; \}, \{ birthday = 1972-03-23 20:45:32 -0800; firstName = Ben; lastName = Ballard; \}\cb1 \
+\cell \lastrow\row
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs26 \cf0 \cb2 By implication, a test for null that matches a null value returns true. In the following code fragment, 
+\f1\fs26\fsmilli13390 \cf4 ok
+\f0\fs26 \cf0  is set to 
+\f1\fs26\fsmilli13390 \cf4 YES
+\f0\fs26 \cf0  for both predicate evaluations.\cb1 \
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat5 \trbrdrt\brdrs\brdrw20\brdrcf6 \trbrdrl\brdrs\brdrw20\brdrcf6 \trbrdrr\brdrs\brdrw20\brdrcf6 \tapadb80 
+\clvertalc \clshdrawnil \clwWidth19241\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt119 \clpadl119 \clpadb119 \clpadr119 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f1\fs24\fsmilli12275 \cf4 \cb2 predicate = [NSPredicate predicateWithFormat:@"firstName = nil"];\cb1 \
+\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat5 \trbrdrl\brdrs\brdrw20\brdrcf6 \trbrdrr\brdrs\brdrw20\brdrcf6 \tapadb80 
+\clvertalc \clshdrawnil \clwWidth19241\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt119 \clpadl119 \clpadb119 \clpadr119 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf4 \cb2 BOOL ok = [predicate evaluateWithObject:[NSDictionary dictionary]];\cb1 \
+\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat5 \trbrdrl\brdrs\brdrw20\brdrcf6 \trbrdrr\brdrs\brdrw20\brdrcf6 \tapadb80 
+\clvertalc \clshdrawnil \clwWidth19241\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt119 \clpadl119 \clpadb119 \clpadr119 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf4 \cb2  \cb1 \
+\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat5 \trbrdrl\brdrs\brdrw20\brdrcf6 \trbrdrr\brdrs\brdrw20\brdrcf6 \tapadb80 
+\clvertalc \clshdrawnil \clwWidth19241\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt119 \clpadl119 \clpadb119 \clpadr119 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf4 \cb2 ok = [predicate evaluateWithObject:\cb1 \
+\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat5 \trbrdrl\brdrs\brdrw20\brdrcf6 \trbrdrb\brdrs\brdrw20\brdrcf6 \trbrdrr\brdrs\brdrw20\brdrcf6 \tapadb80 
+\clvertalc \clshdrawnil \clwWidth19241\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt119 \clpadl119 \clpadb119 \clpadr119 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf4 \cb2 \'a0\'a0\'a0\'a0[NSDictionary dictionaryWithObject:[NSNull null] forKey:@"firstName"]];\cb1 \
+\cell \lastrow\row
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs48\fsmilli24310 \cf3 \cb2 \
+Using Predicates with Core Data\cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\fs37\fsmilli18850 \cf0 \cb2 Fetch Requests\cb1 \
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat5 \trbrdrt\brdrs\brdrw20\brdrcf6 \trbrdrl\brdrs\brdrw20\brdrcf6 \trbrdrr\brdrs\brdrw20\brdrcf6 \tapadb80 
+\clvertalc \clshdrawnil \clwWidth19241\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt119 \clpadl119 \clpadb119 \clpadr119 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f1\fs24\fsmilli12275 \cf4 \cb2 NSFetchRequest *request = [[NSFetchRequest alloc] init];\cb1 \
+\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat5 \trbrdrl\brdrs\brdrw20\brdrcf6 \trbrdrr\brdrs\brdrw20\brdrcf6 \tapadb80 
+\clvertalc \clshdrawnil \clwWidth19241\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt119 \clpadl119 \clpadb119 \clpadr119 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf4 \cb2 NSEntityDescription *entity = [NSEntityDescription entityForName:@"Employee"\cb1 \
+\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat5 \trbrdrl\brdrs\brdrw20\brdrcf6 \trbrdrr\brdrs\brdrw20\brdrcf6 \tapadb80 
+\clvertalc \clshdrawnil \clwWidth19241\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt119 \clpadl119 \clpadb119 \clpadr119 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf4 \cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0inManagedObjectContext:managedObjectContext];\cb1 \
+\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat5 \trbrdrl\brdrs\brdrw20\brdrcf6 \trbrdrr\brdrs\brdrw20\brdrcf6 \tapadb80 
+\clvertalc \clshdrawnil \clwWidth19241\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt119 \clpadl119 \clpadb119 \clpadr119 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf4 \cb2 [request setEntity:entity];\cb1 \
+\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat5 \trbrdrl\brdrs\brdrw20\brdrcf6 \trbrdrr\brdrs\brdrw20\brdrcf6 \tapadb80 
+\clvertalc \clshdrawnil \clwWidth19241\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt119 \clpadl119 \clpadb119 \clpadr119 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf4 \cb2  \cb1 \
+\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat5 \trbrdrl\brdrs\brdrw20\brdrcf6 \trbrdrr\brdrs\brdrw20\brdrcf6 \tapadb80 
+\clvertalc \clshdrawnil \clwWidth19241\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt119 \clpadl119 \clpadb119 \clpadr119 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf4 \cb2 NSNumber *salaryLimit = <#A number representing the limit#>;\cb1 \
+\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat5 \trbrdrl\brdrs\brdrw20\brdrcf6 \trbrdrr\brdrs\brdrw20\brdrcf6 \tapadb80 
+\clvertalc \clshdrawnil \clwWidth19241\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt119 \clpadl119 \clpadb119 \clpadr119 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf4 \cb2 NSPredicate *predicate = [NSPredicate predicateWithFormat:@"salary > %@", salaryLimit];\cb1 \
+\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat5 \trbrdrl\brdrs\brdrw20\brdrcf6 \trbrdrr\brdrs\brdrw20\brdrcf6 \tapadb80 
+\clvertalc \clshdrawnil \clwWidth19241\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt119 \clpadl119 \clpadb119 \clpadr119 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf4 \cb2 [request setPredicate:predicate];\cb1 \
+\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat5 \trbrdrl\brdrs\brdrw20\brdrcf6 \trbrdrr\brdrs\brdrw20\brdrcf6 \tapadb80 
+\clvertalc \clshdrawnil \clwWidth19241\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt119 \clpadl119 \clpadb119 \clpadr119 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf4 \cb2 NSError *error;\cb1 \
+\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat5 \trbrdrl\brdrs\brdrw20\brdrcf6 \trbrdrb\brdrs\brdrw20\brdrcf6 \trbrdrr\brdrs\brdrw20\brdrcf6 \tapadb80 
+\clvertalc \clshdrawnil \clwWidth19241\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt119 \clpadl119 \clpadb119 \clpadr119 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf4 \cb2 NSArray *array = [managedObjectContext executeFetchRequest:request error:&error];\cb1 \
+\cell \lastrow\row
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs37\fsmilli18850 \cf0 \cb2 Object Controllers\cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\fs48\fsmilli24310 \cf3 \cb2 Using Regular Expressions\cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\f1\fs26\fsmilli13390 \cf4 \cb2 MATCHES
+\f0\fs48\fsmilli24310 \cf3 \
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat5 \trbrdrt\brdrs\brdrw20\brdrcf6 \trbrdrl\brdrs\brdrw20\brdrcf6 \trbrdrr\brdrs\brdrw20\brdrcf6 \tapadb80 
+\clvertalc \clshdrawnil \clwWidth19241\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt119 \clpadl119 \clpadb119 \clpadr119 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f1\fs24\fsmilli12275 \cf4 NSArray *array = @[@"TATACCATGGGCCATCATCATCATCATCATCATCATCATCATCACAG",\cb1 \
+\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat5 \trbrdrl\brdrs\brdrw20\brdrcf6 \trbrdrr\brdrs\brdrw20\brdrcf6 \tapadb80 
+\clvertalc \clshdrawnil \clwWidth19241\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt119 \clpadl119 \clpadb119 \clpadr119 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf4 \cb2                    @"CGGGATCCCTATCAAGGCACCTCTTCG", @"CATGCCATGGATACCAACGAGTCCGAAC",\cb1 \
+\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat5 \trbrdrl\brdrs\brdrw20\brdrcf6 \trbrdrr\brdrs\brdrw20\brdrcf6 \tapadb80 
+\clvertalc \clshdrawnil \clwWidth19241\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt119 \clpadl119 \clpadb119 \clpadr119 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf4 \cb2                    @"CAT", @"CATCATCATGTCT", @"DOG"];\cb1 \
+\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat5 \trbrdrl\brdrs\brdrw20\brdrcf6 \trbrdrr\brdrs\brdrw20\brdrcf6 \tapadb80 
+\clvertalc \clshdrawnil \clwWidth19241\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt119 \clpadl119 \clpadb119 \clpadr119 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf4 \cb2  \cb1 \
+\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat5 \trbrdrl\brdrs\brdrw20\brdrcf6 \trbrdrr\brdrs\brdrw20\brdrcf6 \tapadb80 
+\clvertalc \clshdrawnil \clwWidth19241\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt119 \clpadl119 \clpadb119 \clpadr119 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf4 \cb2 // find strings that contain a repetition of at least 3 'CAT' sequences,\cb1 \
+\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat5 \trbrdrl\brdrs\brdrw20\brdrcf6 \trbrdrr\brdrs\brdrw20\brdrcf6 \tapadb80 
+\clvertalc \clshdrawnil \clwWidth19241\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt119 \clpadl119 \clpadb119 \clpadr119 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf4 \cb2 // but not followed by a further 'CA'\cb1 \
+\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat5 \trbrdrl\brdrs\brdrw20\brdrcf6 \trbrdrr\brdrs\brdrw20\brdrcf6 \tapadb80 
+\clvertalc \clshdrawnil \clwWidth19241\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt119 \clpadl119 \clpadb119 \clpadr119 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf4 \cb2 NSPredicate *catPredicate =\cb1 \
+\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat5 \trbrdrl\brdrs\brdrw20\brdrcf6 \trbrdrr\brdrs\brdrw20\brdrcf6 \tapadb80 
+\clvertalc \clshdrawnil \clwWidth19241\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt119 \clpadl119 \clpadb119 \clpadr119 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf4 \cb2 \'a0\'a0\'a0\'a0[NSPredicate predicateWithFormat:@"SELF MATCHES '.*(CAT)\{3,\}(?!CA).*'"];\cb1 \
+\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat5 \trbrdrl\brdrs\brdrw20\brdrcf6 \trbrdrr\brdrs\brdrw20\brdrcf6 \tapadb80 
+\clvertalc \clshdrawnil \clwWidth19241\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt119 \clpadl119 \clpadb119 \clpadr119 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf4 \cb2  \cb1 \
+\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat5 \trbrdrl\brdrs\brdrw20\brdrcf6 \trbrdrr\brdrs\brdrw20\brdrcf6 \tapadb80 
+\clvertalc \clshdrawnil \clwWidth19241\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt119 \clpadl119 \clpadb119 \clpadr119 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf4 \cb2 NSArray *filteredArray = [array filteredArrayUsingPredicate:catPredicate];\cb1 \
+\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat5 \trbrdrl\brdrs\brdrw20\brdrcf6 \trbrdrb\brdrs\brdrw20\brdrcf6 \trbrdrr\brdrs\brdrw20\brdrcf6 \tapadb80 
+\clvertalc \clshdrawnil \clwWidth19241\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt119 \clpadl119 \clpadb119 \clpadr119 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf4 \cb2 // filteredArray contains just 'CATCATCATGTCT'\cb1 \
+\cell \lastrow\row
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs26 \cf0 \cb2 According to the ICU specification, regular expression metacharacters are not valid inside a pattern set. For example, the regular expression 
+\f1\fs26\fsmilli13390 \cf4 \\d\{9\}[\\dxX]
+\f0\fs26 \cf0  does not match valid ISBN numbers (any ten digit number, or a string with nine digits and the letter 'X') since the pattern set (
+\f1\fs26\fsmilli13390 \cf4 [\\dxX]
+\f0\fs26 \cf0 ) contains a metacharacter (
+\f1\fs26\fsmilli13390 \cf4 \\d
+\f0\fs26 \cf0 ). Instead you could write an 
+\f1\fs26\fsmilli13390 \cf4 OR
+\f0\fs26 \cf0  expression, as shown in the following code sample:\cb1 \
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat5 \trbrdrt\brdrs\brdrw20\brdrcf6 \trbrdrl\brdrs\brdrw20\brdrcf6 \trbrdrr\brdrs\brdrw20\brdrcf6 \tapadb80 
+\clvertalc \clshdrawnil \clwWidth19241\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt119 \clpadl119 \clpadb119 \clpadr119 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f1\fs24\fsmilli12275 \cf4 \cb2 NSArray *isbnTestArray = @[@"123456789X", @"987654321x", @"1234567890", @"12345X", @"1234567890X"];\cb1 \
+\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat5 \trbrdrl\brdrs\brdrw20\brdrcf6 \trbrdrr\brdrs\brdrw20\brdrcf6 \tapadb80 
+\clvertalc \clshdrawnil \clwWidth19241\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt119 \clpadl119 \clpadb119 \clpadr119 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf4 \cb2 NSPredicate *isbnPredicate =\cb1 \
+\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat5 \trbrdrl\brdrs\brdrw20\brdrcf6 \trbrdrr\brdrs\brdrw20\brdrcf6 \tapadb80 
+\clvertalc \clshdrawnil \clwWidth19241\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt119 \clpadl119 \clpadb119 \clpadr119 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf4 \cb2 \'a0\'a0\'a0\'a0[NSPredicate predicateWithFormat:@"SELF MATCHES '\\\\\\\\d\{10\}|\\\\\\\\d\{9\}[Xx]'"];\cb1 \
+\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat5 \trbrdrl\brdrs\brdrw20\brdrcf6 \trbrdrr\brdrs\brdrw20\brdrcf6 \tapadb80 
+\clvertalc \clshdrawnil \clwWidth19241\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt119 \clpadl119 \clpadb119 \clpadr119 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf4 \cb2  \cb1 \
+\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat5 \trbrdrl\brdrs\brdrw20\brdrcf6 \trbrdrr\brdrs\brdrw20\brdrcf6 \tapadb80 
+\clvertalc \clshdrawnil \clwWidth19241\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt119 \clpadl119 \clpadb119 \clpadr119 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf4 \cb2 NSArray *isbnArray = [isbnTestArray filteredArrayUsingPredicate:isbnPredicate];\cb1 \
+\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat5 \trbrdrl\brdrs\brdrw20\brdrcf6 \trbrdrb\brdrs\brdrw20\brdrcf6 \trbrdrr\brdrs\brdrw20\brdrcf6 \tapadb80 
+\clvertalc \clshdrawnil \clwWidth19241\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt119 \clpadl119 \clpadb119 \clpadr119 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf4 \cb2 // isbnArray contains (123456789X, 987654321x, 1234567890)\cb1 \
+\cell \lastrow\row
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs48\fsmilli24310 \cf3 \cb2 Performance Considerations\cb1 \
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat5 \trbrdrt\brdrs\brdrw20\brdrcf6 \trbrdrl\brdrs\brdrw20\brdrcf6 \trbrdrr\brdrs\brdrw20\brdrcf6 \tapadb80 
+\clvertalc \clshdrawnil \clwWidth19241\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt119 \clpadl119 \clpadb119 \clpadr119 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f1\fs24\fsmilli12275 \cf4 \cb2 NSPredicate *predicate = [NSPredicate predicateWithFormat:\cb1 \
+\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat5 \trbrdrl\brdrs\brdrw20\brdrcf6 \trbrdrb\brdrs\brdrw20\brdrcf6 \trbrdrr\brdrs\brdrw20\brdrcf6 \tapadb80 
+\clvertalc \clshdrawnil \clwWidth19241\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt119 \clpadl119 \clpadb119 \clpadr119 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf4 \cb2 \'a0\'a0\'a0\'a0@"( title matches .*mar[1-10] ) OR ( type = 1 )"];\cb1 \
+\cell \lastrow\row
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs26 \cf0 \cb2 you should write\cb1 \
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat5 \trbrdrt\brdrs\brdrw20\brdrcf6 \trbrdrl\brdrs\brdrw20\brdrcf6 \trbrdrr\brdrs\brdrw20\brdrcf6 \tapadb80 
+\clvertalc \clshdrawnil \clwWidth19241\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt119 \clpadl119 \clpadb119 \clpadr119 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f1\fs24\fsmilli12275 \cf4 \cb2 NSPredicate *predicate = [NSPredicate predicateWithFormat:\cb1 \
+\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat5 \trbrdrl\brdrs\brdrw20\brdrcf6 \trbrdrb\brdrs\brdrw20\brdrcf6 \trbrdrr\brdrs\brdrw20\brdrcf6 \tapadb80 
+\clvertalc \clshdrawnil \clwWidth19241\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt119 \clpadl119 \clpadb119 \clpadr119 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf4 \cb2 \'a0\'a0\'a0\'a0@"( type = 1 ) OR ( title matches .*mar[1-10] )"];\cb1 \
+\cell \lastrow\row
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs26 \cf0 \cb2 In the second example, the regular expression is evaluated only if the first clause is false.\cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\fs48\fsmilli24310 \cf3 \cb2 \
+\pard\pardeftab720\partightenfactor0
+
+\fs37\fsmilli18850 \cf0 Using Joins\cb1 \
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat5 \trbrdrt\brdrs\brdrw20\brdrcf6 \trbrdrl\brdrs\brdrw20\brdrcf6 \trbrdrr\brdrs\brdrw20\brdrcf6 \tapadb80 
+\clvertalc \clshdrawnil \clwWidth19241\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt119 \clpadl119 \clpadb119 \clpadr119 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f1\fs24\fsmilli12275 \cf4 \cb2 NSPredicate *predicate = [NSPredicate predicateWithFormat:\cb1 \
+\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat5 \trbrdrl\brdrs\brdrw20\brdrcf6 \trbrdrb\brdrs\brdrw20\brdrcf6 \trbrdrr\brdrs\brdrw20\brdrcf6 \tapadb80 
+\clvertalc \clshdrawnil \clwWidth19241\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt119 \clpadl119 \clpadb119 \clpadr119 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf4 \cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0@"department.name like %@", [department name]];\cb1 \
+\cell \lastrow\row
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs26 \cf0 \cb2 it is more efficient to write:\cb1 \
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat5 \trbrdrt\brdrs\brdrw20\brdrcf6 \trbrdrl\brdrs\brdrw20\brdrcf6 \trbrdrr\brdrs\brdrw20\brdrcf6 \tapadb80 
+\clvertalc \clshdrawnil \clwWidth19241\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt119 \clpadl119 \clpadb119 \clpadr119 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f1\fs24\fsmilli12275 \cf4 \cb2 NSPredicate *predicate = [NSPredicate predicateWithFormat:\cb1 \
+\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat5 \trbrdrl\brdrs\brdrw20\brdrcf6 \trbrdrb\brdrs\brdrw20\brdrcf6 \trbrdrr\brdrs\brdrw20\brdrcf6 \tapadb80 
+\clvertalc \clshdrawnil \clwWidth19241\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt119 \clpadl119 \clpadb119 \clpadr119 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf4 \cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0@"department == %@", department];\cb1 \
+\cell \lastrow\row
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs26 \cf0 \cb2 If a predicate contains more than one expression, it is also typically more efficient to structure it to avoid joins. For example, 
+\f1\fs26\fsmilli13390 \cf4 @"firstName beginswith[cd] 'Matt' AND (ANY directreports.paygrade <= 7)"
+\f0\fs26 \cf0  is likely to be more efficient than 
+\f1\fs26\fsmilli13390 \cf4 @"(ANY directreports.paygrade <= 7) AND (firstName beginswith[cd] 'Matt')"
+\f0\fs26 \cf0  because the former avoids making a join unless the first test succeeds.\cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\fs48\fsmilli24310 \cf3 \cb2 \
+\pard\pardeftab720\partightenfactor0
+
+\fs56 \cf0 Comparison of NSPredicate and Spotlight Query Strings\
+\cb1 \
+\cb2 Predicate Format String Syntax\cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\fs48\fsmilli24310 \cf3 \cb2 \
+Parser Basics\
+\pard\pardeftab720\partightenfactor0
+
+\f3\fs24 \cf0 \cb1 \kerning1\expnd0\expndtw0 \
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs26 \cf0 \cb2 \expnd0\expndtw0\kerning0
+Variables are denoted with a dollar-sign (
+\f1\fs26\fsmilli13390 \cf4 $
+\f0\fs26 \cf0 ) character (for example, 
+\f1\fs26\fsmilli13390 \cf4 $VARIABLE_NAME
+\f0\fs26 \cf0 ).
+\f3\fs24 \cb1 \kerning1\expnd0\expndtw0 \
+\pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
+\ls1\ilvl0
+\f1\fs26\fsmilli13390 \cf4 \cb2 {\listtext	\'95	}\expnd0\expndtw0\kerning0
+%@
+\f0\fs26 \cf0  is a var arg substitution for an object value\'97often a string, number, or date.\cb1 \
+\ls1\ilvl0
+\f1\fs26\fsmilli13390 \cf4 \cb2 \kerning1\expnd0\expndtw0 {\listtext	\'95	}\expnd0\expndtw0\kerning0
+%K
+\f0\fs26 \cf0  is a var arg substitution for a key path.
+\f3\fs24 \cb1 \kerning1\expnd0\expndtw0 \
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs26 \cf0 \cb2 \expnd0\expndtw0\kerning0
+If you want to specify a dynamic property name, use 
+\f1\fs26\fsmilli13390 \cf4 %K
+\f0\fs26 \cf0  in the format string, as shown in the following example.\
+\pard\pardeftab720\partightenfactor0
+
+\f3\fs24 \cf0 \cb1 \kerning1\expnd0\expndtw0 \
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat5 \trbrdrt\brdrs\brdrw20\brdrcf6 \trbrdrl\brdrs\brdrw20\brdrcf6 \trbrdrr\brdrs\brdrw20\brdrcf6 \tapadb80 
+\clvertalc \clshdrawnil \clwWidth19241\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt119 \clpadl119 \clpadb119 \clpadr119 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f1\fs24\fsmilli12275 \cf4 \cb2 \expnd0\expndtw0\kerning0
+NSString *attributeName  = @"firstName";\cb1 \
+\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat5 \trbrdrl\brdrs\brdrw20\brdrcf6 \trbrdrr\brdrs\brdrw20\brdrcf6 \tapadb80 
+\clvertalc \clshdrawnil \clwWidth19241\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt119 \clpadl119 \clpadb119 \clpadr119 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf4 \cb2 NSString *attributeValue = @"Adam";\cb1 \
+\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat5 \trbrdrl\brdrs\brdrw20\brdrcf6 \trbrdrr\brdrs\brdrw20\brdrcf6 \tapadb80 
+\clvertalc \clshdrawnil \clwWidth19241\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt119 \clpadl119 \clpadb119 \clpadr119 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf4 \cb2 NSPredicate *predicate   = [NSPredicate predicateWithFormat:@"%K like %@",\cb1 \
+\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat5 \trbrdrl\brdrs\brdrw20\brdrcf6 \trbrdrb\brdrs\brdrw20\brdrcf6 \trbrdrr\brdrs\brdrw20\brdrcf6 \tapadb80 
+\clvertalc \clshdrawnil \clwWidth19241\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt119 \clpadl119 \clpadb119 \clpadr119 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf4 \cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0attributeName, attributeValue];\cell \lastrow\row
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab720\pardirnatural\partightenfactor0
+
+\f3\fs24 \cf0 \cb1 \kerning1\expnd0\expndtw0 \
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs26 \cf0 \cb2 \expnd0\expndtw0\kerning0
+Single or double quoting variables (or substitution variable strings) cause 
+\f1\fs26\fsmilli13390 \cf4 %@
+\f0\fs26 \cf0 , 
+\f1\fs26\fsmilli13390 \cf4 %K
+\f0\fs26 \cf0 , or 
+\f1\fs26\fsmilli13390 \cf4 $variable
+\f0\fs26 \cf0  to be interpreted as a literal in the format string and so prevent any substitution. In the following example, the predicate format string evaluates to 
+\f1\fs26\fsmilli13390 \cf4 firstName like "%@"
+\f0\fs26 \cf0  (note the single quotes around 
+\f1\fs26\fsmilli13390 \cf4 %@
+\f0\fs26 \cf0 ).\
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat5 \trbrdrt\brdrs\brdrw20\brdrcf6 \trbrdrl\brdrs\brdrw20\brdrcf6 \trbrdrr\brdrs\brdrw20\brdrcf6 \tapadb80 
+\clvertalc \clshdrawnil \clwWidth19241\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt119 \clpadl119 \clpadb119 \clpadr119 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f1\fs24\fsmilli12275 \cf4 NSString *attributeName = @"firstName";\cb1 \
+\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat5 \trbrdrl\brdrs\brdrw20\brdrcf6 \trbrdrr\brdrs\brdrw20\brdrcf6 \tapadb80 
+\clvertalc \clshdrawnil \clwWidth19241\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt119 \clpadl119 \clpadb119 \clpadr119 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf4 \cb2 NSString *attributeValue = @"Adam";\cb1 \
+\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat5 \trbrdrl\brdrs\brdrw20\brdrcf6 \trbrdrr\brdrs\brdrw20\brdrcf6 \tapadb80 
+\clvertalc \clshdrawnil \clwWidth19241\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt119 \clpadl119 \clpadb119 \clpadr119 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf4 \cb2 NSPredicate *predicate = [NSPredicate predicateWithFormat:@"%K like '%@'",\cb1 \
+\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat5 \trbrdrl\brdrs\brdrw20\brdrcf6 \trbrdrb\brdrs\brdrw20\brdrcf6 \trbrdrr\brdrs\brdrw20\brdrcf6 \tapadb80 
+\clvertalc \clshdrawnil \clwWidth19241\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt119 \clpadl119 \clpadb119 \clpadr119 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf4 \cb2 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0attributeName, attributeValue];\cb1 \
+\cell \lastrow\row
+\pard\pardeftab720\partightenfactor0
+
+\f3\fs24 \cf0 \kerning1\expnd0\expndtw0 \
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs48\fsmilli24310 \cf3 \cb2 \expnd0\expndtw0\kerning0
+Basic Comparisons
+\f3\fs24 \cf0 \cb1 \kerning1\expnd0\expndtw0 \
+\pard\pardeftab720\partightenfactor0
+
+\f2\b\fs26\fsmilli13390 \cf4 \cb2 \expnd0\expndtw0\kerning0
+=
+\f4\fs26 \cf0 , 
+\f2\fs26\fsmilli13390 \cf4 ==
+\f0\b0\fs26 \cf0 \cb1 \
+\pard\pardeftab720\partightenfactor0
+\cf0 \cb2 The left-hand expression is equal to the right-hand expression.\cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\f2\b\fs26\fsmilli13390 \cf4 \cb2 >=
+\f4\fs26 \cf0 , 
+\f2\fs26\fsmilli13390 \cf4 =>
+\f0\b0\fs26 \cf0 \cb1 \
+\pard\pardeftab720\partightenfactor0
+\cf0 \cb2 The left-hand expression is greater than or equal to the right-hand expression.\cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\f2\b\fs26\fsmilli13390 \cf4 \cb2 <=
+\f4\fs26 \cf0 , 
+\f2\fs26\fsmilli13390 \cf4 =<
+\f0\b0\fs26 \cf0 \cb1 \
+\pard\pardeftab720\partightenfactor0
+\cf0 \cb2 The left-hand expression is less than or equal to the right-hand expression.\cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\f2\b\fs26\fsmilli13390 \cf4 \cb2 >
+\f0\b0\fs26 \cf0 \cb1 \
+\pard\pardeftab720\partightenfactor0
+\cf0 \cb2 The left-hand expression is greater than the right-hand expression.\cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\f2\b\fs26\fsmilli13390 \cf4 \cb2 <
+\f0\b0\fs26 \cf0 \cb1 \
+\pard\pardeftab720\partightenfactor0
+\cf0 \cb2 The left-hand expression is less than the right-hand expression.\cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\f2\b\fs26\fsmilli13390 \cf4 \cb2 !=
+\f4\fs26 \cf0 , 
+\f2\fs26\fsmilli13390 \cf4 <>
+\f0\b0\fs26 \cf0 \cb1 \
+\pard\pardeftab720\partightenfactor0
+\cf0 \cb2 The left-hand expression is not equal to the right-hand expression.
+\f3\fs24 \cb1 \kerning1\expnd0\expndtw0 \
+\pard\pardeftab720\partightenfactor0
+
+\f2\b\fs26\fsmilli13390 \cf4 \cb2 \expnd0\expndtw0\kerning0
+BETWEEN
+\f3\b0\fs24 \cf0 \cb1 \kerning1\expnd0\expndtw0 \
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat5 \trbrdrt\brdrs\brdrw20\brdrcf6 \trbrdrl\brdrs\brdrw20\brdrcf6 \trbrdrr\brdrs\brdrw20\brdrcf6 \tapadb80 
+\clvertalc \clshdrawnil \clwWidth18916\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt119 \clpadl119 \clpadb119 \clpadr119 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f1\fs24\fsmilli12275 \cf4 \cb2 \expnd0\expndtw0\kerning0
+NSPredicate *betweenPredicate =\cb1 \
+\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat5 \trbrdrl\brdrs\brdrw20\brdrcf6 \trbrdrb\brdrs\brdrw20\brdrcf6 \trbrdrr\brdrs\brdrw20\brdrcf6 \tapadb80 
+\clvertalc \clshdrawnil \clwWidth18916\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt119 \clpadl119 \clpadb119 \clpadr119 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf4 \cb2     [NSPredicate predicateWithFormat: @"attributeName BETWEEN %@", @[@1, @10]];\cb1 \
+\cell \lastrow\row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat5 \trbrdrt\brdrs\brdrw20\brdrcf6 \trbrdrl\brdrs\brdrw20\brdrcf6 \trbrdrr\brdrs\brdrw20\brdrcf6 \tapadb80 
+\clvertalc \clshdrawnil \clwWidth18916\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt119 \clpadl119 \clpadb119 \clpadr119 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf4 \cb2 NSPredicate *betweenPredicate =\cb1 \
+\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat5 \trbrdrl\brdrs\brdrw20\brdrcf6 \trbrdrr\brdrs\brdrw20\brdrcf6 \tapadb80 
+\clvertalc \clshdrawnil \clwWidth18916\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt119 \clpadl119 \clpadb119 \clpadr119 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf4 \cb2     [NSPredicate predicateWithFormat: @"attributeName BETWEEN %@", @[@1, @10]];\cb1 \
+\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat5 \trbrdrl\brdrs\brdrw20\brdrcf6 \trbrdrr\brdrs\brdrw20\brdrcf6 \tapadb80 
+\clvertalc \clshdrawnil \clwWidth18916\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt119 \clpadl119 \clpadb119 \clpadr119 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf4 \cb2  \cb1 \
+\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat5 \trbrdrl\brdrs\brdrw20\brdrcf6 \trbrdrr\brdrs\brdrw20\brdrcf6 \tapadb80 
+\clvertalc \clshdrawnil \clwWidth18916\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt119 \clpadl119 \clpadb119 \clpadr119 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf4 \cb2 NSDictionary *dictionary = @\{ @"attributeName" : @5 \};\cb1 \
+\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat5 \trbrdrl\brdrs\brdrw20\brdrcf6 \trbrdrr\brdrs\brdrw20\brdrcf6 \tapadb80 
+\clvertalc \clshdrawnil \clwWidth18916\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt119 \clpadl119 \clpadb119 \clpadr119 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf4 \cb2  \cb1 \
+\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat5 \trbrdrl\brdrs\brdrw20\brdrcf6 \trbrdrr\brdrs\brdrw20\brdrcf6 \tapadb80 
+\clvertalc \clshdrawnil \clwWidth18916\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt119 \clpadl119 \clpadb119 \clpadr119 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf4 \cb2 BOOL between = [betweenPredicate evaluateWithObject:dictionary];\cb1 \
+\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat5 \trbrdrl\brdrs\brdrw20\brdrcf6 \trbrdrr\brdrs\brdrw20\brdrcf6 \tapadb80 
+\clvertalc \clshdrawnil \clwWidth18916\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt119 \clpadl119 \clpadb119 \clpadr119 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf4 \cb2 if (between) \{\cb1 \
+\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat5 \trbrdrl\brdrs\brdrw20\brdrcf6 \trbrdrr\brdrs\brdrw20\brdrcf6 \tapadb80 
+\clvertalc \clshdrawnil \clwWidth18916\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt119 \clpadl119 \clpadb119 \clpadr119 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf4 \cb2     NSLog(@"between");\cb1 \
+\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat5 \trbrdrl\brdrs\brdrw20\brdrcf6 \trbrdrb\brdrs\brdrw20\brdrcf6 \trbrdrr\brdrs\brdrw20\brdrcf6 \tapadb80 
+\clvertalc \clshdrawnil \clwWidth18916\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt119 \clpadl119 \clpadb119 \clpadr119 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf4 \cb2 \}\cb1 \
+\cell \lastrow\row
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab720\pardirnatural\partightenfactor0
+
+\f3\fs24 \cf0 \kerning1\expnd0\expndtw0 \
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs48\fsmilli24310 \cf3 \cb2 \expnd0\expndtw0\kerning0
+Boolean Value Predicates\cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\f2\b\fs26\fsmilli13390 \cf4 \cb2 TRUEPREDICATE
+\f0\b0\fs26 \cf0 \cb1 \
+\pard\pardeftab720\partightenfactor0
+\cf0 \cb2 A predicate that always evaluates to 
+\f1\fs26\fsmilli13390 \cf4 TRUE
+\f0\fs26 \cf0 .\cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\f2\b\fs26\fsmilli13390 \cf4 \cb2 FALSEPREDICATE
+\f0\b0\fs26 \cf0 \cb1 \
+\pard\pardeftab720\partightenfactor0
+\cf0 \cb2 A predicate that always evaluates to 
+\f1\fs26\fsmilli13390 \cf4 FALSE
+\f0\fs26 \cf0 .\
+\pard\pardeftab720\partightenfactor0
+\cf0 \cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\fs48\fsmilli24310 \cf3 \cb2 Basic Compound Predicates\cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\f2\b\fs26\fsmilli13390 \cf4 \cb2 AND
+\f4\fs26 \cf0 , 
+\f2\fs26\fsmilli13390 \cf4 &&
+\f0\b0\fs26 \cf0 \cb1 \
+\pard\pardeftab720\partightenfactor0
+\cf0 \cb2 Logical AND.\cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\f2\b\fs26\fsmilli13390 \cf4 \cb2 OR
+\f4\fs26 \cf0 , 
+\f2\fs26\fsmilli13390 \cf4 ||
+\f0\b0\fs26 \cf0 \cb1 \
+\pard\pardeftab720\partightenfactor0
+\cf0 \cb2 Logical OR.\cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\f2\b\fs26\fsmilli13390 \cf4 \cb2 NOT
+\f4\fs26 \cf0 , 
+\f2\fs26\fsmilli13390 \cf4 !
+\f0\b0\fs26 \cf0 \cb1 \
+\pard\pardeftab720\partightenfactor0
+\cf0 \cb2 Logical NOT.\
+\pard\pardeftab720\partightenfactor0
+\cf0 \cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\fs48\fsmilli24310 \cf3 \cb2 String Comparisons
+\f3\fs24 \cf0 \cb1 \kerning1\expnd0\expndtw0 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab720\pardirnatural\partightenfactor0
+\cf0 \
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs26 \cf0 \cb2 \expnd0\expndtw0\kerning0
+for example 
+\f1\fs26\fsmilli13390 \cf4 firstName BEGINSWITH[cd] $FIRST_NAME
+\f0\fs26 \cf0 .\cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\f2\b\fs26\fsmilli13390 \cf4 \cb2 BEGINSWITH
+\f0\b0\fs26 \cf0 \cb1 \
+\pard\pardeftab720\partightenfactor0
+\cf0 \cb2 The left-hand expression begins with the right-hand expression.\cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\f2\b\fs26\fsmilli13390 \cf4 \cb2 CONTAINS
+\f0\b0\fs26 \cf0 \cb1 \
+\pard\pardeftab720\partightenfactor0
+\cf0 \cb2 The left-hand expression contains the right-hand expression.\cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\f2\b\fs26\fsmilli13390 \cf4 \cb2 ENDSWITH
+\f0\b0\fs26 \cf0 \cb1 \
+\pard\pardeftab720\partightenfactor0
+\cf0 \cb2 The left-hand expression ends with the right-hand expression.\cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\f2\b\fs26\fsmilli13390 \cf4 \cb2 LIKE
+\f0\b0\fs26 \cf0 \cb1 \
+\pard\pardeftab720\partightenfactor0
+\cf0 \cb2 The left hand expression equals the right-hand expression: 
+\f1\fs26\fsmilli13390 \cf4 ?
+\f0\fs26 \cf0  and 
+\f1\fs26\fsmilli13390 \cf4 *
+\f0\fs26 \cf0  are allowed as wildcard characters, where 
+\f1\fs26\fsmilli13390 \cf4 ?
+\f0\fs26 \cf0  matches 
+\f1\fs26\fsmilli13390 \cf4 1
+\f0\fs26 \cf0  character and 
+\f1\fs26\fsmilli13390 \cf4 *
+\f0\fs26 \cf0  matches 
+\f1\fs26\fsmilli13390 \cf4 0
+\f0\fs26 \cf0  or more characters.\cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\f2\b\fs26\fsmilli13390 \cf4 \cb2 MATCHES
+\f0\b0\fs26 \cf0 \cb1 \
+\pard\pardeftab720\partightenfactor0
+\cf0 \cb2 The left hand expression equals the right hand expression using a 
+\f1\fs26\fsmilli13390 \cf4 regex
+\f0\fs26 \cf0 -style comparison according to ICU v3 (for more details see the ICU User Guide for {\field{\*\fldinst{HYPERLINK "http://icu.sourceforge.net/userguide/regexp.html"}}{\fldrslt \cf7 Regular Expressions}}).
+\f3\fs24 \cb1 \kerning1\expnd0\expndtw0 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab720\pardirnatural\partightenfactor0
+\cf0 \
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs48\fsmilli24310 \cf3 \cb2 \expnd0\expndtw0\kerning0
+Aggregate Operations\cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\f2\b\fs26\fsmilli13390 \cf4 \cb2 ANY
+\f4\fs26 \cf0 , 
+\f2\fs26\fsmilli13390 \cf4 SOME
+\f0\b0\fs26 \cf0 \cb1 \
+\pard\pardeftab720\partightenfactor0
+\cf0 \cb2 Specifies any of the elements in the following expression. For example 
+\f1\fs26\fsmilli13390 \cf4 ANY children.age < 18
+\f0\fs26 \cf0 .\cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\f2\b\fs26\fsmilli13390 \cf4 \cb2 ALL
+\f0\b0\fs26 \cf0 \cb1 \
+\pard\pardeftab720\partightenfactor0
+\cf0 \cb2 Specifies all of the elements in the following expression. For example 
+\f1\fs26\fsmilli13390 \cf4 ALL children.age < 18
+\f0\fs26 \cf0 .\cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\f2\b\fs26\fsmilli13390 \cf4 \cb2 NONE
+\f0\b0\fs26 \cf0 \cb1 \
+\pard\pardeftab720\partightenfactor0
+\cf0 \cb2 Specifies none of the elements in the following expression. For example, 
+\f1\fs26\fsmilli13390 \cf4 NONE children.age < 18
+\f0\fs26 \cf0 . This is logically equivalent to 
+\f1\fs26\fsmilli13390 \cf4 NOT (ANY ...)
+\f0\fs26 \cf0 .\cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\f2\b\fs26\fsmilli13390 \cf4 \cb2 IN
+\f0\b0\fs26 \cf0 \cb1 \
+\pard\pardeftab720\partightenfactor0
+\cf0 \cb2 Equivalent to an SQL IN operation, the left-hand side must appear in the collection specified by the right-hand side.\cb1 \
+\cb2 For example, 
+\f1\fs26\fsmilli13390 \cf4 name IN \{ 'Ben', 'Melissa', 'Nick' \}
+\f0\fs26 \cf0 . The collection may be an array, a set, or a dictionary\'97in the case of a dictionary, its values are used.\cb1 \
+\cb2 In Objective-C, you could create a IN predicate as shown in the following example:\cb1 \
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat5 \trbrdrt\brdrs\brdrw20\brdrcf6 \trbrdrl\brdrs\brdrw20\brdrcf6 \trbrdrr\brdrs\brdrw20\brdrcf6 \tapadb80 
+\clvertalc \clshdrawnil \clwWidth18916\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt119 \clpadl119 \clpadb119 \clpadr119 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f1\fs24\fsmilli12275 \cf4 \cb2 NSPredicate *inPredicate =\cb1 \
+\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat5 \trbrdrl\brdrs\brdrw20\brdrcf6 \trbrdrb\brdrs\brdrw20\brdrcf6 \trbrdrr\brdrs\brdrw20\brdrcf6 \tapadb80 
+\clvertalc \clshdrawnil \clwWidth18916\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt119 \clpadl119 \clpadb119 \clpadr119 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf4 \cb2             [NSPredicate predicateWithFormat: @"attribute IN %@", aCollection];\cb1 \
+\cell \lastrow\row
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs26 \cf0 \cb2 where 
+\f1\fs26\fsmilli13390 \cf4 aCollection
+\f0\fs26 \cf0  may be an instance of 
+\f1\fs26\fsmilli13390 \cf4 NSArray
+\f0\fs26 \cf0 , 
+\f1\fs26\fsmilli13390 \cf4 NSSet
+\f0\fs26 \cf0 , 
+\f1\fs26\fsmilli13390 \cf4 NSDictionary
+\f0\fs26 \cf0 , or of any of the corresponding mutable classes.\cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\f2\b\fs26\fsmilli13390 \cf4 \cb2 array[index]
+\f0\b0\fs26 \cf0 \cb1 \
+\pard\pardeftab720\partightenfactor0
+\cf0 \cb2 Specifies the element at the specified index in the array 
+\f1\fs26\fsmilli13390 \cf4 array
+\f0\fs26 \cf0 .\cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\f2\b\fs26\fsmilli13390 \cf4 \cb2 array[FIRST]
+\f0\b0\fs26 \cf0 \cb1 \
+\pard\pardeftab720\partightenfactor0
+\cf0 \cb2 Specifies the first element in the array 
+\f1\fs26\fsmilli13390 \cf4 array
+\f0\fs26 \cf0 .\cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\f2\b\fs26\fsmilli13390 \cf4 \cb2 array[LAST]
+\f0\b0\fs26 \cf0 \cb1 \
+\pard\pardeftab720\partightenfactor0
+\cf0 \cb2 Specifies the last element in the array 
+\f1\fs26\fsmilli13390 \cf4 array
+\f0\fs26 \cf0 .\cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\f2\b\fs26\fsmilli13390 \cf4 \cb2 array[SIZE]
+\f0\b0\fs26 \cf0 \cb1 \
+\pard\pardeftab720\partightenfactor0
+\cf0 \cb2 Specifies the size of the array 
+\f1\fs26\fsmilli13390 \cf4 array
+\f0\fs26 \cf0 .\
+\pard\pardeftab720\partightenfactor0
+\cf0 \cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\fs48\fsmilli24310 \cf3 \cb2 Identifiers\cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\f4\b\fs26 \cf0 \cb2 C style identifier
+\f0\b0 \cb1 \
+\pard\pardeftab720\partightenfactor0
+\cf0 \cb2 Any C style identifier that is not a reserved word.\cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\f4\b \cf0 \cb2 #symbol
+\f0\b0 \cb1 \
+\pard\pardeftab720\partightenfactor0
+\cf0 \cb2 Used to escape a reserved word into a user identifier.\cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\f4\b \cf0 \cb2 [\\]\{octaldigit\}\{3\}
+\f0\b0 \cb1 \
+\pard\pardeftab720\partightenfactor0
+\cf0 \cb2 Used to escape an octal number ( 
+\f1\fs26\fsmilli13390 \cf4 \\
+\f0\fs26 \cf0  followed by 3 octal digits).\cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\f4\b \cf0 \cb2 [\\][xX]\{hexdigit\}\{2\}
+\f0\b0 \cb1 \
+\pard\pardeftab720\partightenfactor0
+\cf0 \cb2 Used to escape a hex number ( 
+\f1\fs26\fsmilli13390 \cf4 \\x
+\f0\fs26 \cf0  or 
+\f1\fs26\fsmilli13390 \cf4 \\X
+\f0\fs26 \cf0  followed by 2 hex digits).\cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\f4\b \cf0 \cb2 [\\][uU]\{hexdigit\}\{4\}
+\f0\b0 \cb1 \
+\pard\pardeftab720\partightenfactor0
+\cf0 \cb2 Used to escape a Unicode number ( 
+\f1\fs26\fsmilli13390 \cf4 \\u
+\f0\fs26 \cf0  or 
+\f1\fs26\fsmilli13390 \cf4 \\U
+\f0\fs26 \cf0  followed by 4 hex digits).\cb1 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab720\pardirnatural\partightenfactor0
+
+\f3\fs24 \cf0 \kerning1\expnd0\expndtw0 \
+\
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs48\fsmilli24310 \cf3 \cb2 \expnd0\expndtw0\kerning0
+Literals\cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\fs26 \cf0 \cb2 Single and double quotes produce the same result, but they do not terminate each other. For example, 
+\f1\fs26\fsmilli13390 \cf4 "abc"
+\f0\fs26 \cf0  and 
+\f1\fs26\fsmilli13390 \cf4 'abc'
+\f0\fs26 \cf0  are identical, whereas 
+\f1\fs26\fsmilli13390 \cf4 "a'b'c"
+\f0\fs26 \cf0  is equivalent to a space-separated concatenation of 
+\f1\fs26\fsmilli13390 \cf4 a
+\f0\fs26 \cf0 , 
+\f1\fs26\fsmilli13390 \cf4 'b'
+\f0\fs26 \cf0 , 
+\f1\fs26\fsmilli13390 \cf4 c
+\f0\fs26 \cf0 .\cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\f2\b\fs26\fsmilli13390 \cf4 \cb2 FALSE
+\f4\fs26 \cf0 , 
+\f2\fs26\fsmilli13390 \cf4 NO
+\f0\b0\fs26 \cf0 \cb1 \
+\pard\pardeftab720\partightenfactor0
+\cf0 \cb2 Logical false.\cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\f2\b\fs26\fsmilli13390 \cf4 \cb2 TRUE
+\f4\fs26 \cf0 , 
+\f2\fs26\fsmilli13390 \cf4 YES
+\f0\b0\fs26 \cf0 \cb1 \
+\pard\pardeftab720\partightenfactor0
+\cf0 \cb2 Logical true.\cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\f2\b\fs26\fsmilli13390 \cf4 \cb2 NULL
+\f4\fs26 \cf0 , 
+\f2\fs26\fsmilli13390 \cf4 NIL
+\f0\b0\fs26 \cf0 \cb1 \
+\pard\pardeftab720\partightenfactor0
+\cf0 \cb2 A null value.\cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\f2\b\fs26\fsmilli13390 \cf4 \cb2 SELF
+\f0\b0\fs26 \cf0 \cb1 \
+\pard\pardeftab720\partightenfactor0
+\cf0 \cb2 Represents the object being evaluated.\cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\f2\b\fs26\fsmilli13390 \cf4 \cb2 "text"
+\f0\b0\fs26 \cf0 \cb1 \
+\pard\pardeftab720\partightenfactor0
+\cf0 \cb2 A character string.\cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\f2\b\fs26\fsmilli13390 \cf4 \cb2 'text'
+\f0\b0\fs26 \cf0 \cb1 \
+\pard\pardeftab720\partightenfactor0
+\cf0 \cb2 A character string.\cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\f4\b \cf0 \cb2 Comma-separated literal array
+\f0\b0 \cb1 \
+\pard\pardeftab720\partightenfactor0
+\cf0 \cb2 For example, 
+\f1\fs26\fsmilli13390 \cf4 \{ 'comma', 'separated', 'literal', 'array' \}
+\f0\fs26 \cf0 .\cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\f4\b \cf0 \cb2 Standard integer and fixed-point notations
+\f0\b0 \cb1 \
+\pard\pardeftab720\partightenfactor0
+\cf0 \cb2 For example, 
+\f1\fs26\fsmilli13390 \cf4 1
+\f0\fs26 \cf0 , 
+\f1\fs26\fsmilli13390 \cf4 27
+\f0\fs26 \cf0 , 
+\f1\fs26\fsmilli13390 \cf4 2.71828
+\f0\fs26 \cf0 , 
+\f1\fs26\fsmilli13390 \cf4 19.75
+\f0\fs26 \cf0 .\cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\f4\b \cf0 \cb2 Floating-point notation with exponentiation
+\f0\b0 \cb1 \
+\pard\pardeftab720\partightenfactor0
+\cf0 \cb2 For example, 
+\f1\fs26\fsmilli13390 \cf4 9.2e-5
+\f0\fs26 \cf0 .\cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\f2\b\fs26\fsmilli13390 \cf4 \cb2 0x
+\f0\b0\fs26 \cf0 \cb1 \
+\pard\pardeftab720\partightenfactor0
+\cf0 \cb2 Prefix used to denote a hexadecimal digit sequence.\cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\f2\b\fs26\fsmilli13390 \cf4 \cb2 0o
+\f0\b0\fs26 \cf0 \cb1 \
+\pard\pardeftab720\partightenfactor0
+\cf0 \cb2 Prefix used to denote an octal digit sequence.\cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\f2\b\fs26\fsmilli13390 \cf4 \cb2 0b
+\f0\b0\fs26 \cf0 \cb1 \
+\pard\pardeftab720\partightenfactor0
+\cf0 \cb2 Prefix used to denote a binary digit sequence.\cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\fs48\fsmilli24310 \cf3 \cb2 Reserved Words\cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\fs26 \cf0 \cb2 The following words are reserved:\cb1 \
+
+\f1\fs26\fsmilli13390 \cf4 \cb2 AND
+\f0\fs26 \cf0 , 
+\f1\fs26\fsmilli13390 \cf4 OR
+\f0\fs26 \cf0 , 
+\f1\fs26\fsmilli13390 \cf4 IN
+\f0\fs26 \cf0 , 
+\f1\fs26\fsmilli13390 \cf4 NOT
+\f0\fs26 \cf0 , 
+\f1\fs26\fsmilli13390 \cf4 ALL
+\f0\fs26 \cf0 , 
+\f1\fs26\fsmilli13390 \cf4 ANY
+\f0\fs26 \cf0 , 
+\f1\fs26\fsmilli13390 \cf4 SOME
+\f0\fs26 \cf0 , 
+\f1\fs26\fsmilli13390 \cf4 NONE
+\f0\fs26 \cf0 , 
+\f1\fs26\fsmilli13390 \cf4 LIKE
+\f0\fs26 \cf0 , 
+\f1\fs26\fsmilli13390 \cf4 CASEINSENSITIVE
+\f0\fs26 \cf0 , 
+\f1\fs26\fsmilli13390 \cf4 CI
+\f0\fs26 \cf0 , 
+\f1\fs26\fsmilli13390 \cf4 MATCHES
+\f0\fs26 \cf0 , 
+\f1\fs26\fsmilli13390 \cf4 CONTAINS
+\f0\fs26 \cf0 , 
+\f1\fs26\fsmilli13390 \cf4 BEGINSWITH
+\f0\fs26 \cf0 , 
+\f1\fs26\fsmilli13390 \cf4 ENDSWITH
+\f0\fs26 \cf0 , 
+\f1\fs26\fsmilli13390 \cf4 BETWEEN
+\f0\fs26 \cf0 , 
+\f1\fs26\fsmilli13390 \cf4 NULL
+\f0\fs26 \cf0 , 
+\f1\fs26\fsmilli13390 \cf4 NIL
+\f0\fs26 \cf0 , 
+\f1\fs26\fsmilli13390 \cf4 SELF
+\f0\fs26 \cf0 , 
+\f1\fs26\fsmilli13390 \cf4 TRUE
+\f0\fs26 \cf0 , 
+\f1\fs26\fsmilli13390 \cf4 YES
+\f0\fs26 \cf0 , 
+\f1\fs26\fsmilli13390 \cf4 FALSE
+\f0\fs26 \cf0 , 
+\f1\fs26\fsmilli13390 \cf4 NO
+\f0\fs26 \cf0 , 
+\f1\fs26\fsmilli13390 \cf4 FIRST
+\f0\fs26 \cf0 , 
+\f1\fs26\fsmilli13390 \cf4 LAST
+\f0\fs26 \cf0 , 
+\f1\fs26\fsmilli13390 \cf4 SIZE
+\f0\fs26 \cf0 , 
+\f1\fs26\fsmilli13390 \cf4 ANYKEY
+\f0\fs26 \cf0 , 
+\f1\fs26\fsmilli13390 \cf4 SUBQUERY
+\f0\fs26 \cf0 , 
+\f1\fs26\fsmilli13390 \cf4 FETCH
+\f0\fs26 \cf0 , 
+\f1\fs26\fsmilli13390 \cf4 CAST
+\f0\fs26 \cf0 , 
+\f1\fs26\fsmilli13390 \cf4 TRUEPREDICATE
+\f0\fs26 \cf0 , 
+\f1\fs26\fsmilli13390 \cf4 FALSEPREDICATE
+\f0\fs26 \cf0 , 
+\f1\fs26\fsmilli13390 \cf4 UTI-CONFORMS-TO
+\f0\fs26 \cf0 , 
+\f1\fs26\fsmilli13390 \cf4 UTI-EQUALS
+\f0\fs26 \cf0 ,
+\f3\fs24 \cb1 \kerning1\expnd0\expndtw0 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab720\pardirnatural\partightenfactor0
+\cf0 \
+\
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs56 \cf0 \cb2 \expnd0\expndtw0\kerning0
+BNF Definition of Cocoa Predicates\cb1 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab720\pardirnatural\partightenfactor0
+
+\f3\fs24 \cf0 \kerning1\expnd0\expndtw0 \
+\
+\
+\
+\pard\tx642\pardeftab642\pardirnatural\partightenfactor0
+
+\f5\fs26 \cf8 \CocoaLigature0 NSRegularExpression\cf9  *regex = [\cf8 NSRegularExpression\cf9  \cf10 regularExpressionWithPattern\cf9 :model.\cf11 balkNickName\cf9  \cf10 options\cf9 :\cf10 NSRegularExpressionCaseInsensitive\cf9  \cf10 error\cf9 :&error];\
+        \cf12 //NSTextCheckingResult *result = [regex firstMatchInString:text options:0 range:NSMakeRange(0, [text length])];\cf9 \
+        [regex \cf10 enumerateMatchesInString\cf9 :text \cf10 options\cf9 :\cf10 NSMatchingReportCompletion\cf9  \cf10 range\cf9 :\cf10 NSMakeRange\cf9 (\cf13 0\cf9 , text.\cf8 length\cf9 ) \cf10 usingBlock\cf9 :^(\cf8 NSTextCheckingResult\cf9  * \cf14 _Nullable\cf9  result, \cf8 NSMatchingFlags\cf9  flags, \cf14 BOOL\cf9  * \cf14 _Nonnull\cf9  stop) \{\
+            [\cf14 self\cf9 .\cf11 contentLabel\cf9  \cf15 addLinkToAddress\cf9 :\cf13 @\{\cf16 @"name"\cf9 :model.\cf11 balkNickName\cf13 \}\cf9  \cf15 withRange\cf9 :result.\cf8 range\cf9 ];\
+        \}];
+\f3\fs24 \cf0 \CocoaLigature1 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab720\pardirnatural\partightenfactor0
+\cf0 \
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+}

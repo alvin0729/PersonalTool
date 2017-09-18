@@ -18,6 +18,7 @@
 #import "MHTopicTwoController.h"
 #import "WWCustomLimitDatePickerView.h"
 #import "WWCalourseView.h"
+#import "ALNSPredicateViewController.h"
 
 
 @interface ALDemo1ViewController ()<WWDropdownMenuDelegate,WWCalourseViewDataSource>
@@ -76,10 +77,16 @@
 //    [self.view addSubview:dropdownMenu];
     
     
-    WWCalourseView* calourse = [[WWCalourseView alloc]initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, 200)];
-    [self.view addSubview:calourse];
-    [calourse setDataSource:self];
-    _calourse=calourse;
+//    WWCalourseView* calourse = [[WWCalourseView alloc]initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, 200)];
+//    [self.view addSubview:calourse];
+//    [calourse setDataSource:self];
+//    _calourse=calourse;
+    
+    //NSPredicate用法
+    ALNSPredicateViewController *vc = [ALNSPredicateViewController new];
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.8 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [self.navigationController pushViewController:vc animated:NO];
+    });
 }
 
 -(NSInteger)WWCalourseNumber
