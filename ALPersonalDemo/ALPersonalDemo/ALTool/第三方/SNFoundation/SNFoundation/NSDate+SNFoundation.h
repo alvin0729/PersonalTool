@@ -15,5 +15,5 @@
 
 + (NSDate *)getDate:(NSString *)dateStr pattern:(NSString *)ptn;
 + (NSDate *)getDate:(NSString *)sDate pattern:(NSString *)ptn locale:(NSLocale *)loc;
-
+- (int)compareOneDay:(NSDate *)oneDay withAnotherDay:(NSDate *)anotherDay;
 @end

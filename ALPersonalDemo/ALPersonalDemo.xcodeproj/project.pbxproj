@@ -11,7 +11,12 @@
 		CF04D97D1F48139000F507E7 /* 备忘2.rtf in Resources */ = {isa = PBXBuildFile; fileRef = CF04D97C1F48139000F507E7 /* 备忘2.rtf */; };
 		CF1695A71EE918DF00D174B1 /* UIView+ManualAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = CF1695A41EE918DF00D174B1 /* UIView+ManualAdapter.m */; };
 		CF1695A81EE918DF00D174B1 /* ZHManualAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = CF1695A61EE918DF00D174B1 /* ZHManualAdapter.m */; };
+		CF17A8FF1F6F996B00BE2BCF /* zLetterGestureRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = CF17A8FE1F6F996B00BE2BCF /* zLetterGestureRecognizer.m */; };
 		CF2185F71EF36CC800B151DE /* CharacterLimitTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = CF2185F61EF36CC800B151DE /* CharacterLimitTextField.m */; };
+		CF27F3601F7DE033000E241C /* UIBarButtonItem+WZLBadge.m in Sources */ = {isa = PBXBuildFile; fileRef = CF27F3541F7DE033000E241C /* UIBarButtonItem+WZLBadge.m */; };
+		CF27F3611F7DE033000E241C /* UITabBarItem+WZLBadge.m in Sources */ = {isa = PBXBuildFile; fileRef = CF27F3561F7DE033000E241C /* UITabBarItem+WZLBadge.m */; };
+		CF27F3621F7DE033000E241C /* CAAnimation+WAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = CF27F3591F7DE033000E241C /* CAAnimation+WAnimation.m */; };
+		CF27F3631F7DE033000E241C /* UIView+WZLBadge.m in Sources */ = {isa = PBXBuildFile; fileRef = CF27F35E1F7DE033000E241C /* UIView+WZLBadge.m */; };
 		CF40EC751EE0191E0003499F /* WWTagEditingView.m in Sources */ = {isa = PBXBuildFile; fileRef = CF40EC741EE0191E0003499F /* WWTagEditingView.m */; };
 		CF40EC781EE01A0D0003499F /* WWTagButtonTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = CF40EC771EE01A0D0003499F /* WWTagButtonTextField.m */; };
 		CF40EC7B1EE01AA90003499F /* ALDemo1ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF40EC7A1EE01AA90003499F /* ALDemo1ViewController.m */; };
@@ -308,8 +313,20 @@
 		CF1695A41EE918DF00D174B1 /* UIView+ManualAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+ManualAdapter.m"; sourceTree = "<group>"; };
 		CF1695A51EE918DF00D174B1 /* ZHManualAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZHManualAdapter.h; sourceTree = "<group>"; };
 		CF1695A61EE918DF00D174B1 /* ZHManualAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZHManualAdapter.m; sourceTree = "<group>"; };
+		CF17A8FD1F6F996B00BE2BCF /* zLetterGestureRecognizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = zLetterGestureRecognizer.h; sourceTree = "<group>"; };
+		CF17A8FE1F6F996B00BE2BCF /* zLetterGestureRecognizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = zLetterGestureRecognizer.m; sourceTree = "<group>"; };
 		CF2185F51EF36CC800B151DE /* CharacterLimitTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CharacterLimitTextField.h; sourceTree = "<group>"; };
 		CF2185F61EF36CC800B151DE /* CharacterLimitTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CharacterLimitTextField.m; sourceTree = "<group>"; };
+		CF27F3531F7DE033000E241C /* UIBarButtonItem+WZLBadge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+WZLBadge.h"; sourceTree = "<group>"; };
+		CF27F3541F7DE033000E241C /* UIBarButtonItem+WZLBadge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+WZLBadge.m"; sourceTree = "<group>"; };
+		CF27F3551F7DE033000E241C /* UITabBarItem+WZLBadge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITabBarItem+WZLBadge.h"; sourceTree = "<group>"; };
+		CF27F3561F7DE033000E241C /* UITabBarItem+WZLBadge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITabBarItem+WZLBadge.m"; sourceTree = "<group>"; };
+		CF27F3581F7DE033000E241C /* CAAnimation+WAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CAAnimation+WAnimation.h"; sourceTree = "<group>"; };
+		CF27F3591F7DE033000E241C /* CAAnimation+WAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CAAnimation+WAnimation.m"; sourceTree = "<group>"; };
+		CF27F35B1F7DE033000E241C /* WZLBadgeProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WZLBadgeProtocol.h; sourceTree = "<group>"; };
+		CF27F35D1F7DE033000E241C /* UIView+WZLBadge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+WZLBadge.h"; sourceTree = "<group>"; };
+		CF27F35E1F7DE033000E241C /* UIView+WZLBadge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+WZLBadge.m"; sourceTree = "<group>"; };
+		CF27F35F1F7DE033000E241C /* WZLBadgeImport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WZLBadgeImport.h; sourceTree = "<group>"; };
 		CF40EC731EE0191E0003499F /* WWTagEditingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WWTagEditingView.h; sourceTree = "<group>"; };
 		CF40EC741EE0191E0003499F /* WWTagEditingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WWTagEditingView.m; sourceTree = "<group>"; };
 		CF40EC761EE01A0D0003499F /* WWTagButtonTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WWTagButtonTextField.h; sourceTree = "<group>"; };
@@ -903,6 +920,15 @@
 			path = UIFont;
 			sourceTree = "<group>";
 		};
+		CF17A8FC1F6F995300BE2BCF /* Gesture */ = {
+			isa = PBXGroup;
+			children = (
+				CF17A8FD1F6F996B00BE2BCF /* zLetterGestureRecognizer.h */,
+				CF17A8FE1F6F996B00BE2BCF /* zLetterGestureRecognizer.m */,
+			);
+			path = Gesture;
+			sourceTree = "<group>";
+		};
 		CF2185F41EF36C7B00B151DE /* UITextfield */ = {
 			isa = PBXGroup;
 			children = (
@@ -910,6 +936,55 @@
 				CF2185F61EF36CC800B151DE /* CharacterLimitTextField.m */,
 			);
 			path = UITextfield;
+			sourceTree = "<group>";
+		};
+		CF27F3511F7DE033000E241C /* WZLBadge */ = {
+			isa = PBXGroup;
+			children = (
+				CF27F3521F7DE033000E241C /* BarItem */,
+				CF27F3571F7DE033000E241C /* CategorySupport */,
+				CF27F35A1F7DE033000E241C /* Protocol */,
+				CF27F35C1F7DE033000E241C /* View */,
+				CF27F35F1F7DE033000E241C /* WZLBadgeImport.h */,
+			);
+			path = WZLBadge;
+			sourceTree = "<group>";
+		};
+		CF27F3521F7DE033000E241C /* BarItem */ = {
+			isa = PBXGroup;
+			children = (
+				CF27F3531F7DE033000E241C /* UIBarButtonItem+WZLBadge.h */,
+				CF27F3541F7DE033000E241C /* UIBarButtonItem+WZLBadge.m */,
+				CF27F3551F7DE033000E241C /* UITabBarItem+WZLBadge.h */,
+				CF27F3561F7DE033000E241C /* UITabBarItem+WZLBadge.m */,
+			);
+			path = BarItem;
+			sourceTree = "<group>";
+		};
+		CF27F3571F7DE033000E241C /* CategorySupport */ = {
+			isa = PBXGroup;
+			children = (
+				CF27F3581F7DE033000E241C /* CAAnimation+WAnimation.h */,
+				CF27F3591F7DE033000E241C /* CAAnimation+WAnimation.m */,
+			);
+			path = CategorySupport;
+			sourceTree = "<group>";
+		};
+		CF27F35A1F7DE033000E241C /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				CF27F35B1F7DE033000E241C /* WZLBadgeProtocol.h */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		CF27F35C1F7DE033000E241C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CF27F35D1F7DE033000E241C /* UIView+WZLBadge.h */,
+				CF27F35E1F7DE033000E241C /* UIView+WZLBadge.m */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		CF48AC171EE4E342009C4AD7 /* UIImageView */ = {
@@ -1273,6 +1348,7 @@
 		E14B8A451EF1886E0021D665 /* 第三方 */ = {
 			isa = PBXGroup;
 			children = (
+				CF27F3511F7DE033000E241C /* WZLBadge */,
 				CF970B381EF76ED700955D4A /* BTNScrollView */,
 				E15D70131EF4EB6300513AE6 /* http */,
 				E14B8A461EF1889D0021D665 /* SNFoundation */,
@@ -2088,6 +2164,7 @@
 		E1F661A51EDDA001001D98E1 /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
+				CF17A8FC1F6F995300BE2BCF /* Gesture */,
 				E1D2264A1F6D85DB0001E8A3 /* tool */,
 				CF730C341F4BC4320040C187 /* 轮播 */,
 				CFC88B5D1F359A8D002C6CE5 /* LCFInfiniteScrollView */,
@@ -2442,6 +2519,7 @@
 				E15D704F1EF52D3600513AE6 /* MHYouKuTopicDetailController.m in Sources */,
 				CF61C0551F2340F7007B7731 /* NSDictionary+SafeExpectations.m in Sources */,
 				E15D70481EF5266B00513AE6 /* UIViewController+MHHUD.m in Sources */,
+				CF27F3611F7DE033000E241C /* UITabBarItem+WZLBadge.m in Sources */,
 				E1540B321EF658EA00D2721F /* HHTextStyleCell.m in Sources */,
 				E1540B1D1EF6534C00D2721F /* NSString+Additions.m in Sources */,
 				E14B8A3B1EF1851C0021D665 /* BBTipView.m in Sources */,
@@ -2544,6 +2622,7 @@
 				E15D70441EF523A400513AE6 /* UIView+MHExtension.m in Sources */,
 				E14B8A761EF1889D0021D665 /* NSDate+SNFoundation.m in Sources */,
 				E1540B511EF65C8C00D2721F /* RJHomeTopicShareModel.m in Sources */,
+				CF27F3621F7DE033000E241C /* CAAnimation+WAnimation.m in Sources */,
 				E14B8A781EF1889D0021D665 /* NSString+SNFoundation.m in Sources */,
 				E14EBC151F12327600998083 /* LTVideoProgressSlider.m in Sources */,
 				E13C56761EE44DEB00005CFD /* UIBarButtonItem+DDExtension.m in Sources */,
@@ -2603,6 +2682,7 @@
 				E14B8A7E1EF1889D0021D665 /* UIColor+SNFoundation.m in Sources */,
 				E1540B221EF6534C00D2721F /* HTUIHelper.m in Sources */,
 				E17E21DB1EDABED80013D3B9 /* ALNetWorkViewController.m in Sources */,
+				CF27F3631F7DE033000E241C /* UIView+WZLBadge.m in Sources */,
 				E15D703C1EF5231400513AE6 /* UIImage+MHBlur.m in Sources */,
 				CFC0AAF51EFB76F500E4FF12 /* ALRIchTextDemoViewControllernone.m in Sources */,
 				E14B8A741EF1889D0021D665 /* NSData+GZIP.m in Sources */,
@@ -2628,6 +2708,7 @@
 				CF6012E81EFA3F38007CA737 /* ALFontFile.m in Sources */,
 				E15D70521EF5301900513AE6 /* MHYouKuInputPanelView.m in Sources */,
 				E14B8A801EF1889D0021D665 /* UIView+SNFoundation.m in Sources */,
+				CF27F3601F7DE033000E241C /* UIBarButtonItem+WZLBadge.m in Sources */,
 				E15D70631EF5803F00513AE6 /* MHTopicOneController.m in Sources */,
 				E1540AC21EF64F9700D2721F /* UICollectionViewCell+Tracking.m in Sources */,
 				E1540B1B1EF6534C00D2721F /* UIImage+StretchImage.m in Sources */,
@@ -2639,6 +2720,7 @@
 				E17DCD661F6E33F0002DE738 /* NSSet+HYBUnicodeReadable.m in Sources */,
 				E13C566E1EE42B8A00005CFD /* HttpTool.m in Sources */,
 				E1540A531EF64C2A00D2721F /* AJGradientView.m in Sources */,
+				CF17A8FF1F6F996B00BE2BCF /* zLetterGestureRecognizer.m in Sources */,
 				E1540A561EF64C2A00D2721F /* AJPhotoZoomingScrollView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
