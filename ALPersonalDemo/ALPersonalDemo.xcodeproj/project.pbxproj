@@ -52,6 +52,7 @@
 		CF78E0091F3724C90027F046 /* 线程.rtf in Resources */ = {isa = PBXBuildFile; fileRef = CF78E0081F3724C90027F046 /* 线程.rtf */; };
 		CF7AF74A1F2C5E6200997D53 /* UIScrollView+ScrollAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = CF7AF7491F2C5E6200997D53 /* UIScrollView+ScrollAnimation.m */; };
 		CF970B3B1EF76F0300955D4A /* LLRollingButtonScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = CF970B3A1EF76F0300955D4A /* LLRollingButtonScrollView.m */; };
+		CFA999481F9062670034391E /* NSObject+VKMsgSend.m in Sources */ = {isa = PBXBuildFile; fileRef = CFA999461F9062670034391E /* NSObject+VKMsgSend.m */; };
 		CFB044F31F44271C00B9FFE3 /* WWCustomLimitDatePickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = CFB044F21F44271C00B9FFE3 /* WWCustomLimitDatePickerView.m */; };
 		CFC0AACA1EFB64B600E4FF12 /* EHHorizontalLineViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CFC0AAC11EFB64B600E4FF12 /* EHHorizontalLineViewCell.m */; };
 		CFC0AACB1EFB64B600E4FF12 /* EHHorizontalSelectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = CFC0AAC31EFB64B600E4FF12 /* EHHorizontalSelectionView.m */; };
@@ -384,6 +385,9 @@
 		CF7AF7491F2C5E6200997D53 /* UIScrollView+ScrollAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+ScrollAnimation.m"; sourceTree = "<group>"; };
 		CF970B391EF76F0300955D4A /* LLRollingButtonScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LLRollingButtonScrollView.h; sourceTree = "<group>"; };
 		CF970B3A1EF76F0300955D4A /* LLRollingButtonScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LLRollingButtonScrollView.m; sourceTree = "<group>"; };
+		CFA999451F9062670034391E /* NSObject+VKMsgSend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+VKMsgSend.h"; sourceTree = "<group>"; };
+		CFA999461F9062670034391E /* NSObject+VKMsgSend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+VKMsgSend.m"; sourceTree = "<group>"; };
+		CFA999471F9062670034391E /* VKMsgSend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VKMsgSend.h; sourceTree = "<group>"; };
 		CFB044F11F44271C00B9FFE3 /* WWCustomLimitDatePickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WWCustomLimitDatePickerView.h; sourceTree = "<group>"; };
 		CFB044F21F44271C00B9FFE3 /* WWCustomLimitDatePickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WWCustomLimitDatePickerView.m; sourceTree = "<group>"; };
 		CFC0AAC01EFB64B600E4FF12 /* EHHorizontalLineViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHHorizontalLineViewCell.h; sourceTree = "<group>"; };
@@ -1050,6 +1054,16 @@
 			path = BTNScrollView;
 			sourceTree = "<group>";
 		};
+		CFA999441F9062670034391E /* VKMsgSend */ = {
+			isa = PBXGroup;
+			children = (
+				CFA999451F9062670034391E /* NSObject+VKMsgSend.h */,
+				CFA999461F9062670034391E /* NSObject+VKMsgSend.m */,
+				CFA999471F9062670034391E /* VKMsgSend.h */,
+			);
+			path = VKMsgSend;
+			sourceTree = "<group>";
+		};
 		CFC0AABE1EFB619E00E4FF12 /* EHHorizontalSelectionView */ = {
 			isa = PBXGroup;
 			children = (
@@ -1348,6 +1362,7 @@
 		E14B8A451EF1886E0021D665 /* 第三方 */ = {
 			isa = PBXGroup;
 			children = (
+				CFA999441F9062670034391E /* VKMsgSend */,
 				CF27F3511F7DE033000E241C /* WZLBadge */,
 				CF970B381EF76ED700955D4A /* BTNScrollView */,
 				E15D70131EF4EB6300513AE6 /* http */,
@@ -2543,6 +2558,7 @@
 				CFC0AAE31EFB737D00E4FF12 /* HorizonScrollTableView.m in Sources */,
 				E1540B411EF65A9600D2721F /* HHInforDraftCell.m in Sources */,
 				E1F661A81EDDA024001D98E1 /* SSUIAdapter.m in Sources */,
+				CFA999481F9062670034391E /* NSObject+VKMsgSend.m in Sources */,
 				CFC0AAED1EFB74E600E4FF12 /* BaseModel.m in Sources */,
 				E15D70551EF5372200513AE6 /* UINavigationController+FDFullscreenPopGesture.m in Sources */,
 				E1540A761EF64C8800D2721F /* RSKTouchView.m in Sources */,
