@@ -1,142 +1,412 @@
 {\rtf1\ansi\ansicpg936\cocoartf1504\cocoasubrtf600
-{\fonttbl\f0\fnil\fcharset0 Menlo-Regular;\f1\fnil\fcharset134 PingFangSC-Regular;\f2\fnil\fcharset0 MicrosoftYaHei;
-\f3\fnil\fcharset0 Consolas-Bold;\f4\fnil\fcharset0 Consolas;}
-{\colortbl;\red255\green255\blue255;\red92\green38\blue153;\red0\green0\blue0;\red46\green13\blue110;
-\red170\green13\blue145;\red63\green110\blue116;\red38\green71\blue75;\red196\green26\blue22;\red28\green0\blue207;
-\red38\green38\blue38;\red255\green255\blue255;\red10\green82\blue135;\red74\green74\blue74;\red246\green246\blue246;
-\red15\green114\blue1;\red100\green56\blue32;}
-{\*\expandedcolortbl;\csgray\c100000;\csgenericrgb\c35900\c14900\c60100;\csgenericrgb\c0\c0\c0;\csgenericrgb\c18100\c5200\c43100;
-\csgenericrgb\c66500\c5200\c56900;\csgenericrgb\c24700\c43100\c45600;\csgenericrgb\c14900\c27800\c29400;\csgenericrgb\c77000\c10200\c8600;\csgenericrgb\c11000\c0\c81000;
-\cssrgb\c20000\c20000\c20000;\cssrgb\c100000\c100000\c100000;\cssrgb\c0\c40000\c60000;\cssrgb\c36078\c36078\c36078;\cssrgb\c97255\c97255\c97255;
-\cssrgb\c0\c50980\c0;\csgenericrgb\c39100\c22000\c12500;}
+{\fonttbl\f0\fnil\fcharset0 Menlo-Regular;\f1\fnil\fcharset134 PingFangSC-Regular;\f2\fnil\fcharset0 Consolas;
+\f3\fnil\fcharset0 MicrosoftYaHei;\f4\fnil\fcharset0 Consolas-Bold;\f5\fmodern\fcharset0 Courier;
+}
+{\colortbl;\red255\green255\blue255;\red92\green38\blue153;\red100\green56\blue32;\red0\green0\blue0;
+\red170\green13\blue145;\red46\green13\blue110;\red63\green110\blue116;\red38\green71\blue75;\red196\green26\blue22;
+\red28\green0\blue207;\red52\green52\blue52;\red241\green241\blue241;\red0\green0\blue0;\red255\green255\blue255;
+\red0\green0\blue255;\red38\green38\blue38;\red10\green82\blue135;\red74\green74\blue74;\red246\green246\blue246;
+\red15\green114\blue1;\red255\green255\blue255;\red0\green116\blue0;\red48\green48\blue48;\red53\green53\blue53;
+\red109\green109\blue109;\red0\green0\blue117;\red115\green0\blue2;\red82\green0\blue83;\red54\green54\blue54;
+}
+{\*\expandedcolortbl;\csgray\c100000;\csgenericrgb\c35900\c14900\c60100;\csgenericrgb\c39100\c22000\c12500;\csgenericrgb\c0\c0\c0;
+\csgenericrgb\c66500\c5200\c56900;\csgenericrgb\c18100\c5200\c43100;\csgenericrgb\c24700\c43100\c45600;\csgenericrgb\c14900\c27800\c29400;\csgenericrgb\c77000\c10200\c8600;
+\csgenericrgb\c11000\c0\c81000;\cssrgb\c26667\c26667\c26667;\cssrgb\c95686\c95686\c95686;\cssrgb\c0\c0\c0;\cssrgb\c100000\c100000\c100000;
+\cssrgb\c0\c0\c100000;\cssrgb\c20000\c20000\c20000;\cssrgb\c0\c40000\c60000;\cssrgb\c36078\c36078\c36078;\cssrgb\c97255\c97255\c97255;
+\cssrgb\c0\c50980\c0;\csgray\c100000;\csgenericrgb\c0\c45600\c0;\cssrgb\c24706\c24706\c24706;\cssrgb\c27059\c27059\c27059;
+\cssrgb\c50196\c50196\c50196\c4706;\cssrgb\c0\c0\c53333;\cssrgb\c53333\c0\c0;\cssrgb\c40000\c0\c40000;\cssrgb\c27451\c27451\c27451;
+}
 {\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc0\levelnfcn0\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{decimal\}}{\leveltext\leveltemplateid1\'01\'00;}{\levelnumbers\'01;}\fi-360\li720\lin720 }{\listname ;}\listid1}}
 {\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}}
 \margl1440\margr1440\vieww9000\viewh8400\viewkind0
 \deftab642
 \pard\tx642\pardeftab642\pardirnatural\partightenfactor0
 
-\f0\fs26 \cf2 \CocoaLigature0     dispatch_group_t\cf3  group = \cf4 dispatch_group_create\cf3 ();\
-    \cf5 __block\cf3  \cf5 BOOL\cf3  error = \cf5 NO\cf3 ;\
-    [\cf5 self\cf3 .\cf6 uploadImageArray\cf3  \cf4 enumerateObjectsUsingBlock\cf3 :^(\cf2 UIImage\cf3  *image, \cf2 NSUInteger\cf3  idx, \cf5 BOOL\cf3  * \cf5 _Nonnull\cf3  stop) \{\
+\f0\fs26 \cf2 \CocoaLigature0   \
+\pard\tx642\pardeftab642\pardirnatural\partightenfactor0
+\cf3 #if !OS_OBJECT_USE_OBJC\
+\pard\tx642\pardeftab642\pardirnatural\partightenfactor0
+\cf4     \cf5 if\cf4 ( transcodingQueue != \cf5 NULL\cf4  )\
+    \{\
+        dispatch_release(transcodingQueue);\
+    \}\
+\pard\tx642\pardeftab642\pardirnatural\partightenfactor0
+\cf3 #endif\cf2 \
+\
+  dispatch_group_t\cf4  group = \cf6 dispatch_group_create\cf4 ();\
+    \cf5 __block\cf4  \cf5 BOOL\cf4  error = \cf5 NO\cf4 ;\
+    [\cf5 self\cf4 .\cf7 uploadImageArray\cf4  \cf6 enumerateObjectsUsingBlock\cf4 :^(\cf2 UIImage\cf4  *image, \cf2 NSUInteger\cf4  idx, \cf5 BOOL\cf4  * \cf5 _Nonnull\cf4  stop) \{\
         \
-        \cf4 dispatch_group_enter\cf3 (group);\
-        [[\cf6 AFFileClient\cf3  \cf7 sharedClient\cf3 ] \cf7 upload\cf3 :\cf8 @"app/upload_file/imageList"\cf3 \
-                                 \cf7 parameters\cf3 :\cf5 nil\cf3 \
-                                      \cf7 files\cf3 :\cf9 @\{\cf8 @"upload"\cf3 :\cf4 UIImageJPEGRepresentation\cf3 (image, \cf9 0.8\cf3 )\cf9 \}\cf3 \
-                                   \cf7 complete\cf3 :^(\cf6 ResponseData\cf3  *response) \{\
-                                       \cf4 dispatch_group_leave\cf3 (group);\
-                                       \cf5 if\cf3  (response.\cf6 success\cf3 ) \{\
-                                           \cf4 NSLog\cf3 (\cf8 @"
+        \cf6 dispatch_group_enter\cf4 (group);\
+        [[\cf7 AFFileClient\cf4  \cf8 sharedClient\cf4 ] \cf8 upload\cf4 :\cf9 @"app/upload_file/imageList"\cf4 \
+                                 \cf8 parameters\cf4 :\cf5 nil\cf4 \
+                                      \cf8 files\cf4 :\cf10 @\{\cf9 @"upload"\cf4 :\cf6 UIImageJPEGRepresentation\cf4 (image, \cf10 0.8\cf4 )\cf10 \}\cf4 \
+                                   \cf8 complete\cf4 :^(\cf7 ResponseData\cf4  *response) \{\
+                                       \cf6 dispatch_group_leave\cf4 (group);\
+                                       \cf5 if\cf4  (response.\cf7 success\cf4 ) \{\
+                                           \cf6 NSLog\cf4 (\cf9 @"
 \f1 \'b5\'da
 \f0 %@
 \f1 \'d5\'c5\'cd\'bc\'c6\'ac\'c9\'cf\'b4\'ab\'cd\'ea\'b3\'c9
-\f0 ..."\cf3 ,\cf9 @(\cf3 idx\cf9 )\cf3 );\
+\f0 ..."\cf4 ,\cf10 @(\cf4 idx\cf10 )\cf4 );\
                                        \}\
-                                       \cf5 else\cf3  \{\
-                                           error = \cf5 YES\cf3 ;\
-                                           \cf4 NSLog\cf3 (\cf8 @"
+                                       \cf5 else\cf4  \{\
+                                           error = \cf5 YES\cf4 ;\
+                                           \cf6 NSLog\cf4 (\cf9 @"
 \f1 \'b5\'da
 \f0 %@
 \f1 \'d5\'c5\'cd\'bc\'c6\'ac\'c9\'cf\'b4\'ab\'ca\'a7\'b0\'dc\'a3\'ba
-\f0 %@"\cf3 ,\cf9 @(\cf3 idx\cf9 )\cf3 ,response.\cf6 message\cf3 );\
+\f0 %@"\cf4 ,\cf10 @(\cf4 idx\cf10 )\cf4 ,response.\cf7 message\cf4 );\
                                        \}\
         \}];\
     \}];\
-    \cf4 dispatch_group_notify\cf3 (group, \cf4 dispatch_get_main_queue\cf3 (), ^\{\
-        [\cf5 self\cf3  \cf7 doSomethingWhenAllImageUpload\cf3 :error];\
+    \cf6 dispatch_group_notify\cf4 (group, \cf6 dispatch_get_main_queue\cf4 (), ^\{\
+        [\cf5 self\cf4  \cf8 doSomethingWhenAllImageUpload\cf4 :error];\
     \});\
 \
 \
 \pard\pardeftab720\partightenfactor0
+
+\f2\fs24 \cf11 \cb12 \expnd0\expndtw0\kerning0
+\CocoaLigature1 - (void)group\
+\pard\pardeftab720\partightenfactor0
+\cf11 \cb14 \{\
+\pard\pardeftab720\partightenfactor0
+\cf11 \cb12 \'a0\'a0\'a0\'a0UIImageView *imageView = [[UIImageView alloc] init];\
+\pard\pardeftab720\partightenfactor0
+\cf11 \cb14 \'a0\'a0\'a0\'a0[\cf15 self\cf11 .view addSubview:imageView];\
+\pard\pardeftab720\partightenfactor0
+\cf11 \cb12 \'a0\'a0\'a0\'a0\'a0\
+\pard\pardeftab720\partightenfactor0
+\cf11 \cb14 \'a0\'a0\'a0\'a0dispatch_group_t group = dispatch_group_create();\
+\pard\pardeftab720\partightenfactor0
+\cf11 \cb12 \'a0\'a0\'a0\'a0dispatch_queue_t queue = dispatch_queue_create(\cf15 "cn.gcd-group.www"\cf11 , DISPATCH_QUEUE_CONCURRENT);\
+\pard\pardeftab720\partightenfactor0
+\cf11 \cb14 \'a0\'a0\'a0\'a0\'a0\
+\pard\pardeftab720\partightenfactor0
+\cf11 \cb12 \'a0\'a0\'a0\'a0dispatch_group_async(group, queue, ^\{\
+\pard\pardeftab720\partightenfactor0
+\cf11 \cb14 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf15 NSLog\cf11 (@\cf15 "
+\f1 \'d5\'fd\'d4\'da\'cf\'c2\'d4\'d8\'b5\'da\'d2\'bb\'d5\'c5\'cd\'bc\'c6\'ac
+\f2 "\cf11 );\
+\pard\pardeftab720\partightenfactor0
+\cf11 \cb12 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf15 NSData\cf11  *data = [\cf15 NSData\cf11  dataWithContentsOfURL:[\cf15 NSURL\cf11  URLWithString:@\cf15 "http://images2015.cnblogs.com/blog/471463/201509/471463-20150912213125372-589808688.png"\cf11 ]];\
+\pard\pardeftab720\partightenfactor0
+\cf11 \cb14 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf15 NSLog\cf11 (@\cf15 "
+\f1 \'b5\'da\'d2\'bb\'d5\'c5\'cd\'bc\'c6\'ac\'cf\'c2\'d4\'d8\'cd\'ea\'b1\'cf
+\f2 "\cf11 );\
+\pard\pardeftab720\partightenfactor0
+\cf11 \cb12 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf15 self\cf11 .imageOne = [UIImage imageWithData:data];\
+\pard\pardeftab720\partightenfactor0
+\cf11 \cb14 \'a0\'a0\'a0\'a0\});\
+\pard\pardeftab720\partightenfactor0
+\cf11 \cb12 \'a0\'a0\'a0\'a0\'a0\
+\pard\pardeftab720\partightenfactor0
+\cf11 \cb14 \'a0\'a0\'a0\'a0dispatch_group_async(group, queue, ^\{\
+\pard\pardeftab720\partightenfactor0
+\cf11 \cb12 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf15 NSLog\cf11 (@\cf15 "
+\f1 \'d5\'fd\'d4\'da\'cf\'c2\'d4\'d8\'b5\'da\'b6\'fe\'d5\'c5\'cd\'bc\'c6\'ac
+\f2 "\cf11 );\
+\pard\pardeftab720\partightenfactor0
+\cf11 \cb14 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf15 NSData\cf11  *data = [\cf15 NSData\cf11  dataWithContentsOfURL:[\cf15 NSURL\cf11  URLWithString:@\cf15 "http://images2015.cnblogs.com/blog/471463/201509/471463-20150912212457684-585830854.png"\cf11 ]];\
+\pard\pardeftab720\partightenfactor0
+\cf11 \cb12 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf15 NSLog\cf11 (@\cf15 "
+\f1 \'b5\'da\'b6\'fe\'d5\'c5\'cd\'bc\'c6\'ac\'cf\'c2\'d4\'d8\'cd\'ea\'b1\'cf
+\f2 "\cf11 );\
+\pard\pardeftab720\partightenfactor0
+\cf11 \cb14 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf15 self\cf11 .imageTwo = [UIImage imageWithData:data];\
+\pard\pardeftab720\partightenfactor0
+\cf11 \cb12 \'a0\'a0\'a0\'a0\});\
+\pard\pardeftab720\partightenfactor0
+\cf11 \cb14 \'a0\'a0\'a0\'a0\'a0\
+\pard\pardeftab720\partightenfactor0
+\cf11 \cb12 \'a0\'a0\'a0\'a0dispatch_group_notify(group, queue, ^\{\
+\pard\pardeftab720\partightenfactor0
+\cf11 \cb14 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0UIGraphicsBeginImageContext(CGSizeMake(300, 400));\
+\pard\pardeftab720\partightenfactor0
+\cf11 \cb12 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\
+\pard\pardeftab720\partightenfactor0
+\cf11 \cb14 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0[\cf15 self\cf11 .imageOne drawInRect:CGRectMake(0, 0, 150, 400)];\
+\pard\pardeftab720\partightenfactor0
+\cf11 \cb12 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0[\cf15 self\cf11 .imageTwo drawInRect:CGRectMake(150, 0, 150, 400)];\
+\pard\pardeftab720\partightenfactor0
+\cf11 \cb14 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\
+\pard\pardeftab720\partightenfactor0
+\cf11 \cb12 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0UIImage *newImage = UIGraphicsGetImageFromCurrentImageContext();\
+\pard\pardeftab720\partightenfactor0
+\cf11 \cb14 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0UIGraphicsEndImageContext();\
+\pard\pardeftab720\partightenfactor0
+\cf11 \cb12 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\
+\pard\pardeftab720\partightenfactor0
+\cf11 \cb14 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0dispatch_async(dispatch_get_main_queue(), ^\{\
+\pard\pardeftab720\partightenfactor0
+\cf11 \cb12 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0UIImageView *imageView = [[UIImageView alloc] initWithImage:newImage];\
+\pard\pardeftab720\partightenfactor0
+\cf11 \cb14 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0[\cf15 self\cf11 .view addSubview:imageView];\
+\pard\pardeftab720\partightenfactor0
+\cf11 \cb12 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf15 self\cf11 .textLabel.text = @\cf15 "
+\f1 \'cd\'bc\'c6\'ac\'ba\'cf\'b2\'a2\'cd\'ea\'b1\'cf
+\f2 "\cf11 ;\
+\pard\pardeftab720\partightenfactor0
+\cf11 \cb14 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\});\
+\pard\pardeftab720\partightenfactor0
+\cf11 \cb12 \'a0\'a0\'a0\'a0\});\
+\pard\pardeftab720\partightenfactor0
+\cf11 \cb14 \}
+\f0\fs26 \cf4 \cb1 \kerning1\expnd0\expndtw0 \CocoaLigature0 \
+\pard\tx642\pardeftab642\pardirnatural\partightenfactor0
+\cf4 \
+\
+\pard\pardeftab720\partightenfactor0
 {\field{\*\fldinst{HYPERLINK "http://blog.csdn.net/clwahaha/article/details/40895255"}}{\fldrslt 
-\f2\fs40 \cf10 \cb11 \expnd0\expndtw0\kerning0
+\f3\fs40 \cf16 \cb14 \expnd0\expndtw0\kerning0
 \CocoaLigature1 IOS\uc0\u33719 \u21462 \u31995 \u32479 \u36890 \u35759 \u24405 \u20351 \u29992 \u26435 \u38480 \u30340 \u20248 \u38597 \u26041 \u24335 }}
-\f2\fs40 \cf10 \cb11 \expnd0\expndtw0\kerning0
+\f3\fs40 \cf16 \cb14 \expnd0\expndtw0\kerning0
 \CocoaLigature1 \
 \pard\pardeftab720\partightenfactor0
 
-\f1\fs28 \cf10 \cb11 \'b4\'fa\'c2\'eb\'bf\'c9\'d2\'d4\'d4\'da\'d3\'c3\'bb\'a7\'d1\'a1\'d4\'f1\'cd\'ac\'d2\'e2\'bb\'f2\'d5\'df\'be\'dc\'be\'f8\'ba\'f3\'a3\'ac\'c1\'a2\'bc\'b4\'d6\'b4\'d0\'d0\'ca\'a3\'cf\'c2\'b5\'c4\'b4\'fa\'c2\'eb\'a3\'ac\'b6\'f8\'b2\'bb\'ca\'c7\'d6\'b1\'bd\'d3\'b7\'b5\'bb\'d8\'a1\'a3
-\f2\fs40 \cf10 \cb11 \
+\f1\fs28 \cf16 \cb14 \'b4\'fa\'c2\'eb\'bf\'c9\'d2\'d4\'d4\'da\'d3\'c3\'bb\'a7\'d1\'a1\'d4\'f1\'cd\'ac\'d2\'e2\'bb\'f2\'d5\'df\'be\'dc\'be\'f8\'ba\'f3\'a3\'ac\'c1\'a2\'bc\'b4\'d6\'b4\'d0\'d0\'ca\'a3\'cf\'c2\'b5\'c4\'b4\'fa\'c2\'eb\'a3\'ac\'b6\'f8\'b2\'bb\'ca\'c7\'d6\'b1\'bd\'d3\'b7\'b5\'bb\'d8\'a1\'a3
+\f3\fs40 \cf16 \cb14 \
 \pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
 \ls1\ilvl0
-\f3\b\fs24 \cf12 CFErrorRef
-\f4\b0 \cf13 \'a0*error\'a0=
-\f3\b \cf12 \'a0nil
-\f4\b0 \cf13 ;\'a0\'a0\
+\f4\b\fs24 \cf17 CFErrorRef
+\f2\b0 \cf18 \'a0*error\'a0=
+\f4\b \cf17 \'a0nil
+\f2\b0 \cf18 ;\'a0\'a0\
 \pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
-\ls1\ilvl0\cf13 \cb14 \'a0\'a0\'a0\'a0ABAddressBookRef\'a0addressBook\'a0=\'a0ABAddressBookCreateWithOptions(
-\f3\b \cf12 NULL
-\f4\b0 \cf13 ,\'a0error);\'a0\'a0\
+\ls1\ilvl0\cf18 \cb19 \'a0\'a0\'a0\'a0ABAddressBookRef\'a0addressBook\'a0=\'a0ABAddressBookCreateWithOptions(
+\f4\b \cf17 NULL
+\f2\b0 \cf18 ,\'a0error);\'a0\'a0\
 \pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
-\ls1\ilvl0\cf13 \cb11 \'a0\'a0\'a0\'a0\'a0\'a0\
+\ls1\ilvl0\cf18 \cb14 \'a0\'a0\'a0\'a0\'a0\'a0\
 \pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
-\ls1\ilvl0\cf13 \cb14 \'a0\'a0\'a0\'a0__block\'a0
-\f3\b \cf12 BOOL
-\f4\b0 \cf13 \'a0accessGranted\'a0=\'a0
-\f3\b \cf12 NO
-\f4\b0 \cf13 ;\'a0\'a0\
+\ls1\ilvl0\cf18 \cb19 \'a0\'a0\'a0\'a0__block\'a0
+\f4\b \cf17 BOOL
+\f2\b0 \cf18 \'a0accessGranted\'a0=\'a0
+\f4\b \cf17 NO
+\f2\b0 \cf18 ;\'a0\'a0\
 \pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
-\ls1\ilvl0\cf13 \cb11 \'a0\'a0\'a0\'a0\cf15 //\'a0we're\'a0on\'a0iOS\'a06\cf13 \'a0\'a0\
+\ls1\ilvl0\cf18 \cb14 \'a0\'a0\'a0\'a0\cf20 //\'a0we're\'a0on\'a0iOS\'a06\cf18 \'a0\'a0\
 \pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
-\ls1\ilvl0\cf13 \cb14 \'a0\'a0\'a0\'a0
-\f3\b \cf12 if
-\f4\b0 \cf13 \'a0(ABAddressBookRequestAccessWithCompletion\'a0!=\'a0
-\f3\b \cf12 NULL
-\f4\b0 \cf13 )\'a0\'a0\
+\ls1\ilvl0\cf18 \cb19 \'a0\'a0\'a0\'a0
+\f4\b \cf17 if
+\f2\b0 \cf18 \'a0(ABAddressBookRequestAccessWithCompletion\'a0!=\'a0
+\f4\b \cf17 NULL
+\f2\b0 \cf18 )\'a0\'a0\
 \pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
-\ls1\ilvl0\cf13 \cb11 \'a0\'a0\'a0\'a0\{\'a0\'a0\
+\ls1\ilvl0\cf18 \cb14 \'a0\'a0\'a0\'a0\{\'a0\'a0\
 \pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
-\ls1\ilvl0\cf13 \cb14 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0dispatch_semaphore_t\'a0sema\'a0=\'a0dispatch_semaphore_create(0);\'a0\'a0\
+\ls1\ilvl0\cf18 \cb19 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0dispatch_semaphore_t\'a0sema\'a0=\'a0dispatch_semaphore_create(0);\'a0\'a0\
 \pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
-\ls1\ilvl0\cf13 \cb11 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0ABAddressBookRequestAccessWithCompletion(addressBook,\'a0^(
-\f3\b \cf12 bool
-\f4\b0 \cf13 \'a0granted,\'a0CFErrorRef\'a0error)\'a0\{\'a0\'a0\
+\ls1\ilvl0\cf18 \cb14 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0ABAddressBookRequestAccessWithCompletion(addressBook,\'a0^(
+\f4\b \cf17 bool
+\f2\b0 \cf18 \'a0granted,\'a0CFErrorRef\'a0error)\'a0\{\'a0\'a0\
 \pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
-\ls1\ilvl0\cf13 \cb14 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0accessGranted\'a0=\'a0granted;\'a0\'a0\
+\ls1\ilvl0\cf18 \cb19 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0accessGranted\'a0=\'a0granted;\'a0\'a0\
 \pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
-\ls1\ilvl0\cf13 \cb11 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0dispatch_semaphore_signal(sema);\'a0\'a0\
+\ls1\ilvl0\cf18 \cb14 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0dispatch_semaphore_signal(sema);\'a0\'a0\
 \pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
-\ls1\ilvl0\cf13 \cb14 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\});\'a0\'a0\
+\ls1\ilvl0\cf18 \cb19 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\});\'a0\'a0\
 \pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
-\ls1\ilvl0\cf13 \cb11 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0dispatch_semaphore_wait(sema,\'a0DISPATCH_TIME_FOREVER);\'a0\'a0\
+\ls1\ilvl0\cf18 \cb14 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0dispatch_semaphore_wait(sema,\'a0DISPATCH_TIME_FOREVER);\'a0\'a0\
 \pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
-\ls1\ilvl0\cf13 \cb14 \'a0\'a0\'a0\'a0\}\'a0\'a0\
+\ls1\ilvl0\cf18 \cb19 \'a0\'a0\'a0\'a0\}\'a0\'a0\
 \pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
-\ls1\ilvl0\cf13 \cb11 \'a0\'a0\'a0\'a0
-\f3\b \cf12 else
-\f4\b0 \cf13 \'a0\'a0\'a0\'a0\'a0\cf15 //\'a0we're\'a0on\'a0iOS\'a05\'a0or\'a0older\cf13 \'a0\'a0\
+\ls1\ilvl0\cf18 \cb14 \'a0\'a0\'a0\'a0
+\f4\b \cf17 else
+\f2\b0 \cf18 \'a0\'a0\'a0\'a0\'a0\cf20 //\'a0we're\'a0on\'a0iOS\'a05\'a0or\'a0older\cf18 \'a0\'a0\
 \pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
-\ls1\ilvl0\cf13 \cb14 \'a0\'a0\'a0\'a0\{\'a0\'a0\
+\ls1\ilvl0\cf18 \cb19 \'a0\'a0\'a0\'a0\{\'a0\'a0\
 \pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
-\ls1\ilvl0\cf13 \cb11 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0accessGranted\'a0=\'a0
-\f3\b \cf12 YES
-\f4\b0 \cf13 ;\'a0\'a0\
+\ls1\ilvl0\cf18 \cb14 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0accessGranted\'a0=\'a0
+\f4\b \cf17 YES
+\f2\b0 \cf18 ;\'a0\'a0\
 \pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
-\ls1\ilvl0\cf13 \cb14 \'a0\'a0\'a0\'a0\}\'a0\'a0\
+\ls1\ilvl0\cf18 \cb19 \'a0\'a0\'a0\'a0\}\'a0\'a0\
 \pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
-\ls1\ilvl0\cf13 \cb11 \'a0\'a0\'a0\'a0
-\f3\b \cf12 return
-\f4\b0 \cf13 \'a0accessGranted;\'a0\'a0\
+\ls1\ilvl0\cf18 \cb14 \'a0\'a0\'a0\'a0
+\f4\b \cf17 return
+\f2\b0 \cf18 \'a0accessGranted;\'a0\'a0\
 \pard\tx642\pardeftab642\pardirnatural\partightenfactor0
 
-\f0\fs26 \cf3 \cb1 \kerning1\expnd0\expndtw0 \CocoaLigature0 \
-    \cf2 dispatch_semaphore_t\cf3  sema = \cf4 dispatch_semaphore_create\cf3 (\cf9 0\cf3 );\
-    \cf5 if\cf3  (\cf5 self\cf3 .\cf6 emojiModels\cf3 ) \{\
+\f0\fs26 \cf4 \cb21 \kerning1\expnd0\expndtw0 \CocoaLigature0 \
+    \cf2 dispatch_semaphore_t\cf4  sema = \cf6 dispatch_semaphore_create\cf4 (\cf10 0\cf4 );\
+    \cf5 if\cf4  (\cf5 self\cf4 .\cf7 emojiModels\cf4 ) \{\
         \
     \}\
     \
-    \cf5 if\cf3  (\cf5 self\cf3 .\cf6 emoijTitles\cf3 .\cf2 count\cf3  == \cf9 0\cf3 ) \{\
-        \cf4 dispatch_semaphore_signal\cf3 (sema);\
+    \cf5 if\cf4  (\cf5 self\cf4 .\cf7 emoijTitles\cf4 .\cf2 count\cf4  == \cf10 0\cf4 ) \{\
+        \cf6 dispatch_semaphore_signal\cf4 (sema);\
     \}\
-    \cf4 dispatch_semaphore_wait\cf3 (sema, \cf16 DISPATCH_TIME_FOREVER\cf3 );
-\f2\fs40 \cf10 \cb11 \expnd0\expndtw0\kerning0
+    \cf6 dispatch_semaphore_wait\cf4 (sema, \cf3 DISPATCH_TIME_FOREVER\cf4 );
+\f3\fs40 \cf16 \cb14 \expnd0\expndtw0\kerning0
 \CocoaLigature1 \
 \pard\tx560\pardeftab720\partightenfactor0
-\cf10 \
+\cf16 \
+\pard\tx642\pardeftab642\pardirnatural\partightenfactor0
+
+\f0\fs26 \cf2 \cb1 \kerning1\expnd0\expndtw0 \CocoaLigature0 dispatch_semaphore_t\cf4  _preloadedLock;
+\f3\fs40 \cf16 \cb14 \expnd0\expndtw0\kerning0
+\CocoaLigature1 \
+
+\f0\fs26 \cf7 \cb1 \kerning1\expnd0\expndtw0 \CocoaLigature0 _preloadedLock\cf4  = \cf6 dispatch_semaphore_create\cf4 (\cf10 1\cf4 );\
+\cf6 dispatch_semaphore_wait\cf4 (\cf7 _preloadedLock\cf4 , \cf3 DISPATCH_TIME_FOREVER\cf4 );\
+\cf7 _preloadedFrames\cf4  = \cf5 nil\cf4 ;\
+\cf6 dispatch_semaphore_signal\cf4 (\cf7 _preloadedLock\cf4 );
+\f3\fs40 \cf16 \cb14 \expnd0\expndtw0\kerning0
+\CocoaLigature1 \
+\pard\tx560\pardeftab720\partightenfactor0
+\cf16 \
+\pard\tx642\pardeftab642\pardirnatural\partightenfactor0
+
+\f0\fs26 \cf4 \cb1 \kerning1\expnd0\expndtw0 \CocoaLigature0 + (\cf2 dispatch_queue_t\cf4 )setterQueue \{\
+    \cf5 static\cf4  \cf2 dispatch_queue_t\cf4  queue;\
+    \cf5 static\cf4  \cf2 dispatch_once_t\cf4  onceToken;\
+    \cf3 dispatch_once\cf4 (&onceToken, ^\{\
+        queue = \cf6 dispatch_queue_create\cf4 (\cf9 "com.ibireme.yykit.webimage.setter"\cf4 , \cf3 DISPATCH_QUEUE_SERIAL\cf4 );\
+        \cf6 dispatch_set_target_queue\cf4 (queue, \cf6 dispatch_get_global_queue\cf4 (\cf3 DISPATCH_QUEUE_PRIORITY_DEFAULT\cf4 , \cf10 0\cf4 ));\
+    \});\
+    \cf5 return\cf4  queue;\
+\}\
+\cf7 _barrierQueue\cf4  = \cf6 dispatch_queue_create\cf4 (\cf9 "com.NewPan.JPVideoPlayerDownloaderOperationBarrierQueue"\cf4 , \cf3 DISPATCH_QUEUE_CONCURRENT\cf4 );\
+\cf6 dispatch_barrier_async\cf4 (\cf5 self\cf4 .\cf7 barrierQueue\cf4 , ^\{\
+        [\cf5 self\cf4 .\cf7 callbackBlocks\cf4  \cf6 addObject\cf4 :callbacks];\
+\});\
+\cf6 dispatch_barrier_sync\cf4 (\cf5 self\cf4 .\cf7 barrierQueue\cf4 , ^\{\
+        [\cf5 self\cf4 .\cf7 callbackBlocks\cf4  \cf6 removeObjectIdenticalTo\cf4 :token];\
+        \cf5 if\cf4  (\cf5 self\cf4 .\cf7 callbackBlocks\cf4 .\cf2 count\cf4  == \cf10 0\cf4 ) \{\
+            shouldCancel = \cf5 YES\cf4 ;\
+        \}\
+\});\
 \
-\
-\
+- (\cf5 nullable\cf4  \cf2 NSArray\cf4 <\cf5 id\cf4 > *)callbacksForKey:(\cf2 NSString\cf4  *)key \{\
+    \
+    \cf5 __block\cf4  \cf2 NSMutableArray\cf4 <\cf5 id\cf4 > *callbacks = \cf5 nil\cf4 ;\
+    \
+    \cf6 dispatch_sync\cf4 (\cf5 self\cf4 .\cf7 barrierQueue\cf4 , ^\{\
+        callbacks = [[\cf5 self\cf4 .\cf7 callbackBlocks\cf4  \cf6 valueForKey\cf4 :key] \cf6 mutableCopy\cf4 ];\
+        [callbacks \cf6 removeObjectIdenticalTo\cf4 :[\cf2 NSNull\cf4  \cf6 null\cf4 ]];\
+    \});\
+    \cf5 return\cf4  [callbacks \cf6 copy\cf4 ];    \cf22 // strip mutability here\cf4 \
+\}\
 \
 \pard\pardeftab720\partightenfactor0
-\cf10 \
+
+\f3\fs30 \cf23 \cb14 \expnd0\expndtw0\kerning0
+\CocoaLigature1 dispatch_barrier_sync\uc0\u21644 dispatch_barrier_async\u30340 \u20849 \u21516 \u28857 \u65306  \cb21 \
+\cb14 1\uc0\u12289 \u37117 \u20250 \u31561 \u24453 \u22312 \u23427 \u21069 \u38754 \u25554 \u20837 \u38431 \u21015 \u30340 \u20219 \u21153 \u65288 1\u12289 2\u12289 3\u65289 \u20808 \u25191 \u34892 \u23436  \cb21 \
+\cb14 2\uc0\u12289 \u37117 \u20250 \u31561 \u24453 \u20182 \u20204 \u33258 \u24049 \u30340 \u20219 \u21153 \u65288 0\u65289 \u25191 \u34892 \u23436 \u20877 \u25191 \u34892 \u21518 \u38754 \u30340 \u20219 \u21153 \u65288 4\u12289 5\u12289 6\u65289 \cb21 \
+\cb14 dispatch_barrier_sync\uc0\u21644 dispatch_barrier_async\u30340 \u19981 \u20849 \u21516 \u28857 \u65306  \cb21 \
+\cb14 \uc0\u22312 \u23558 \u20219 \u21153 \u25554 \u20837 \u21040 queue\u30340 \u26102 \u20505 \u65292 dispatch_barrier_sync\u38656 \u35201 \u31561 \u24453 \u33258 \u24049 \u30340 \u20219 \u21153 \u65288 0\u65289 \u32467 \u26463 \u20043 \u21518 \u25165 \u20250 \u32487 \u32493 \u31243 \u24207 \u65292 \u28982 \u21518 \u25554 \u20837 \u34987 \u20889 \u22312 \u23427 \u21518 \u38754 \u30340 \u20219 \u21153 \u65288 4\u12289 5\u12289 6\u65289 \u65292 \u28982 \u21518 \u25191 \u34892 \u21518 \u38754 \u30340 \u20219 \u21153  \cb21 \
+\cb14 \uc0\u32780 dispatch_barrier_async\u23558 \u33258 \u24049 \u30340 \u20219 \u21153 \u65288 0\u65289 \u25554 \u20837 \u21040 queue\u20043 \u21518 \u65292 \u19981 \u20250 \u31561 \u24453 \u33258 \u24049 \u30340 \u20219 \u21153 \u32467 \u26463 \u65292 \u23427 \u20250 \u32487 \u32493 \u25226 \u21518 \u38754 \u30340 \u20219 \u21153 \u65288 4\u12289 5\u12289 6\u65289 \u25554 \u20837 \u21040 queue\cb21 \
+\cb14 \uc0\u25152 \u20197 \u65292 dispatch_barrier_async\u30340 \u19981 \u31561 \u24453 \u65288 \u24322 \u27493 \u65289 \u29305 \u24615 \u20307 \u29616 \u22312 \u23558 \u20219 \u21153 \u25554 \u20837 \u38431 \u21015 \u30340 \u36807 \u31243 \u65292 \u23427 \u30340 \u31561 \u24453 \u29305 \u24615 \u20307 \u29616 \u22312 \u20219 \u21153 \u30495 \u27491 \u25191 \u34892 \u30340 \u36807 \u31243 \u12290 
+\f0\fs26 \cf4 \cb1 \kerning1\expnd0\expndtw0 \CocoaLigature0 \
+\pard\tx642\pardeftab642\pardirnatural\partightenfactor0
+\cf4 \
+\pard\pardeftab720\partightenfactor0
+
+\f1\fs32 \cf24 \cb14 \expnd0\expndtw0\kerning0
+\CocoaLigature1 \'d2\'ec\'b2\'bd\'d5\'cf\'b0\'ad\'c8\'ce\'ce\'f1\'d6\'bb\'bb\'e1\'bd\'ab\'b6\'d3\'c1\'d0\'d6\'d0\'b5\'c4\'c8\'ce\'ce\'f1\'c9\'e8\'d6\'c3\'d5\'cf\'b0\'ad\'b6\'f8\'b2\'bb\'bb\'e1\'d7\'e8\'b0\'ad\'ba\'f3\'c3\'e6\'b5\'c4\'d6\'f7\'cf\'df\'b3\'cc\'b5\'c4\'b4\'fa\'c2\'eb.
+\f3\fs40 \cf16 \cb14 \
+\pard\pardeftab720\partightenfactor0
+
+\f1\fs28 \cf24 \cb14 dispatch_barrier_sync(queue,void(^block)())\'bb\'e1\'bd\'abqueue\'d6\'d0barrier\'c7\'b0\'c3\'e6\'cc\'ed\'bc\'d3\'b5\'c4\'c8\'ce\'ce\'f1block\'c8\'ab\'b2\'bf\'d6\'b4\'d0\'d0\'ba\'f3,\'d4\'d9\'d6\'b4\'d0\'d0barrier\'c8\'ce\'ce\'f1\'b5\'c4block,\'d4\'d9\'d6\'b4\'d0\'d0barrier\'ba\'f3\'c3\'e6\'cc\'ed\'bc\'d3\'b5\'c4\'c8\'ce\'ce\'f1block.
+\fs32 \cb21 \
+
+\fs28 \cb14 dispatch_barrier_async(queue,void(^block)())\'bb\'e1\'bd\'abqueue\'d6\'d0barrier\'c7\'b0\'c3\'e6\'cc\'ed\'bc\'d3\'b5\'c4\'c8\'ce\'ce\'f1block\'d6\'bb\'cc\'ed\'bc\'d3\'b2\'bb\'d6\'b4\'d0\'d0,\'bc\'cc\'d0\'f8\'cc\'ed\'bc\'d3barrier\'b5\'c4block,\'d4\'d9\'cc\'ed\'bc\'d3barrier\'ba\'f3\'c3\'e6\'b5\'c4block,\'cd\'ac\'ca\'b1\'b2\'bb\'d3\'b0\'cf\'ec\'d6\'f7\'cf\'df\'b3\'cc(\'bb\'f2\'d5\'df\'b2\'d9\'d7\'f7\'cc\'ed\'bc\'d3\'c8\'ce\'ce\'f1\'b5\'c4\'cf\'df\'b3\'cc)\'d6\'d0\'b4\'fa\'c2\'eb\'b5\'c4\'d6\'b4\'d0\'d0!\
+\
+\pard\pardeftab720\partightenfactor0
+
+\f5 \cf16 \cb25 - (\cf26 void\cf16 )setCacheObject:(\cf26 id\cf16 )obj withKey:(\cf26 id\cf16 )key\
+\{\
+    \cf27 // 
+\f1 \'b1\'a3\'d6\'a4\'cd\'ac\'ca\'b1
+\f5 '
+\f1 \'d0\'b4
+\f5 '
+\f1 \'b5\'c4\'b5\'c4\'d6\'bb\'d3\'d0\'d2\'bb\'b8\'f6
+\f5 \cf16 \
+    dispatch_barrier_async(queue, ^\{\
+        [\cf26 self\cf28 .cache\cf16  setObject:obj forKey:key];\
+    \});\
+\}\
+\
+\
+dispatch_group_t group = dispatch_group_create();\
+    dispatch_queue_t queue = dispatch_queue_create("com.gcd-group.www", DISPATCH_QUEUE_CONCURRENT);\
+     \
+    dispatch_group_async(group, queue, ^\{\
+        for (int i = 0; i < 1000; i++) \{\
+            if (i == 999) \{\
+                NSLog(@"11111111");\
+            \}\
+        \}\
+    \});\
+     \
+    dispatch_group_async(group, queue, ^\{\
+        NSLog(@"22222222");\
+    \});\
+     \
+    dispatch_group_async(group, queue, ^\{\
+        NSLog(@"33333333");\
+    \});\
+     \
+    dispatch_group_notify(group, queue, ^\{\
+        NSLog(@"done");\
+    \});\
+\
+\pard\pardeftab720\partightenfactor0
+
+\f3\fs40 \cf16 \cb14 \
+\pard\pardeftab720\partightenfactor0
+\cf29 \cb14 GCD\uc0\u20013 \u30340 dispatch_apply\u30340 \u29992 \u27861 \u21450 \u20316 \u29992 \cf16 \cb14 \
+\pard\pardeftab720\partightenfactor0
+
+\fs30 \cf0 \cb14 dispatch_apply\uc0\u20989 \u25968 \u26159 dispatch_sync\u20989 \u25968 \u21644 Dispatch Group\u30340 \u20851 \u32852 API,\u35813 \u20989 \u25968 \u25353 \u25351 \u23450 \u30340 \u27425 \u25968 \u23558 \u25351 \u23450 \u30340 Block\u36861 \u21152 \u21040 \u25351 \u23450 \u30340 Dispatch Queue\u20013 ,\u24182 \u31561 \u21040 \u20840 \u37096 \u30340 \u22788 \u29702 \u25191 \u34892 \u32467 \u26463 \
+\
+/*!\
+ 2  *  @brief  dispatch_apply\uc0\u30340 \u29992 \u27861 \
+ 3  */\
+ 4 - (void)dispatchApplyTest1 \{\
+ 5     //\uc0\u29983 \u25104 \u20840 \u23616 \u38431 \u21015 \
+ 6     dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);\
+ 7     \
+ 8     \
+ 9     /*! dispatch_apply\uc0\u20989 \u25968 \u35828 \u26126 \
+10      *\
+11      *  @brief  dispatch_apply\uc0\u20989 \u25968 \u26159 dispatch_sync\u20989 \u25968 \u21644 Dispatch Group\u30340 \u20851 \u32852 API\
+12      *         \uc0\u35813 \u20989 \u25968 \u25353 \u25351 \u23450 \u30340 \u27425 \u25968 \u23558 \u25351 \u23450 \u30340 Block\u36861 \u21152 \u21040 \u25351 \u23450 \u30340 Dispatch Queue\u20013 ,\u24182 \u31561 \u21040 \u20840 \u37096 \u30340 \u22788 \u29702 \u25191 \u34892 \u32467 \u26463 \
+13      *\
+14      *  @param 10    \uc0\u25351 \u23450 \u37325 \u22797 \u27425 \u25968   \u25351 \u23450 10\u27425 \
+15      *  @param queue \uc0\u36861 \u21152 \u23545 \u35937 \u30340 Dispatch Queue\
+16      *  @param index \uc0\u24102 \u26377 \u21442 \u25968 \u30340 Block, index\u30340 \u20316 \u29992 \u26159 \u20026 \u20102 \u25353 \u25191 \u34892 \u30340 \u39034 \u24207 \u21306 \u20998 \u21508 \u20010 Block\
+17      *\
+18      */\
+19     dispatch_apply(10, queue, ^(size_t index) \{\
+20         NSLog(@"%zu", index);\
+21     \});\
+22     NSLog(@"done");\
+23     \
+24     /*!\
+25      *  @brief  \uc0\u36755 \u20986 \u32467 \u26524 \
+26      *\
+27      2016-02-25 19:24:39.102 dispatch_apply\uc0\u27979 \u35797 [2985:165004] 0\
+28      2016-02-25 19:24:39.102 dispatch_apply\uc0\u27979 \u35797 [2985:165086] 1\
+29      2016-02-25 19:24:39.104 dispatch_apply\uc0\u27979 \u35797 [2985:165004] 4\
+30      2016-02-25 19:24:39.104 dispatch_apply\uc0\u27979 \u35797 [2985:165004] 5\
+31      2016-02-25 19:24:39.104 dispatch_apply\uc0\u27979 \u35797 [2985:165004] 6\
+32      2016-02-25 19:24:39.103 dispatch_apply\uc0\u27979 \u35797 [2985:165088] 3\
+33      2016-02-25 19:24:39.104 dispatch_apply\uc0\u27979 \u35797 [2985:165004] 7\
+34      2016-02-25 19:24:39.105 dispatch_apply\uc0\u27979 \u35797 [2985:165004] 8\
+35      2016-02-25 19:24:39.105 dispatch_apply\uc0\u27979 \u35797 [2985:165004] 9\
+36      2016-02-25 19:24:39.102 dispatch_apply\uc0\u27979 \u35797 [2985:165087] 2\
+37      2016-02-25 19:24:39.105 dispatch_apply\uc0\u27979 \u35797 [2985:165004] done\
+38      *  !!!\uc0\u22240 \u20026 \u22312 Global Dispatch Queue\u20013 \u25191 \u34892 ,\u25152 \u20197 \u21508 \u20010 \u22788 \u29702 \u30340 \u25191 \u34892 \u26102 \u38388 \u19981 \u23450 \
+39      \uc0\u20294 done\u19968 \u23450 \u20250 \u36755 \u20986 \u22312 \u26368 \u21518 \u30340 \u20301 \u32622 ,\u22240 \u20026 dispatch_apply\u20989 \u25968 \u20250 \u31561 \u24453 \u25152 \u20197 \u30340 \u22788 \u29702 \u32467 \u26463 \
+40      */\
+41 \}\
+\pard\pardeftab720\partightenfactor0
+
+\fs40 \cf16 \cb14 \
+\
 }

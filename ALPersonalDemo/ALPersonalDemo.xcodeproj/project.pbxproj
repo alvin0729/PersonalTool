@@ -25,6 +25,7 @@
 		CF48AC151EE4E32A009C4AD7 /* UIImage+Thumbnail.m in Sources */ = {isa = PBXBuildFile; fileRef = CF48AC101EE4E32A009C4AD7 /* UIImage+Thumbnail.m */; };
 		CF48AC161EE4E32A009C4AD7 /* UIImage+Tools.m in Sources */ = {isa = PBXBuildFile; fileRef = CF48AC121EE4E32A009C4AD7 /* UIImage+Tools.m */; };
 		CF48AC1A1EE4E35B009C4AD7 /* UIImageView+CircleImage.m in Sources */ = {isa = PBXBuildFile; fileRef = CF48AC191EE4E35B009C4AD7 /* UIImageView+CircleImage.m */; };
+		CF584CFF1F95E3F100F0DFCC /* UIViewController+Swizzled.m in Sources */ = {isa = PBXBuildFile; fileRef = CF584CFD1F95E3F100F0DFCC /* UIViewController+Swizzled.m */; };
 		CF5E3ED21F20BCD3009B40A8 /* WWDropDownMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = CF5E3ED11F20BCD3009B40A8 /* WWDropDownMenu.m */; };
 		CF6012DC1EFA3645007CA737 /* LxGridViewFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = CF6012DB1EFA3645007CA737 /* LxGridViewFlowLayout.m */; };
 		CF6012DF1EFA36EE007CA737 /* UIView+TZLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = CF6012DE1EFA36EE007CA737 /* UIView+TZLayout.m */; };
@@ -344,6 +345,8 @@
 		CF48AC121EE4E32A009C4AD7 /* UIImage+Tools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Tools.m"; sourceTree = "<group>"; };
 		CF48AC181EE4E35B009C4AD7 /* UIImageView+CircleImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+CircleImage.h"; sourceTree = "<group>"; };
 		CF48AC191EE4E35B009C4AD7 /* UIImageView+CircleImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+CircleImage.m"; sourceTree = "<group>"; };
+		CF584CFD1F95E3F100F0DFCC /* UIViewController+Swizzled.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Swizzled.m"; sourceTree = "<group>"; };
+		CF584CFE1F95E3F100F0DFCC /* UIViewController+Swizzled.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Swizzled.h"; sourceTree = "<group>"; };
 		CF5E3ED01F20BCD3009B40A8 /* WWDropDownMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WWDropDownMenu.h; sourceTree = "<group>"; };
 		CF5E3ED11F20BCD3009B40A8 /* WWDropDownMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WWDropDownMenu.m; sourceTree = "<group>"; };
 		CF6012DA1EFA3645007CA737 /* LxGridViewFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LxGridViewFlowLayout.h; sourceTree = "<group>"; };
@@ -1896,6 +1899,8 @@
 			children = (
 				E17E21A61EDA7B3A0013D3B9 /* AppDelegate.h */,
 				E17E21A71EDA7B3A0013D3B9 /* AppDelegate.m */,
+				CF584CFD1F95E3F100F0DFCC /* UIViewController+Swizzled.m */,
+				CF584CFE1F95E3F100F0DFCC /* UIViewController+Swizzled.h */,
 			);
 			path = AppDelegate;
 			sourceTree = "<group>";
@@ -2637,6 +2642,7 @@
 				CF6012E21EFA370E007CA737 /* TZTestCell.m in Sources */,
 				E15D70441EF523A400513AE6 /* UIView+MHExtension.m in Sources */,
 				E14B8A761EF1889D0021D665 /* NSDate+SNFoundation.m in Sources */,
+				CF584CFF1F95E3F100F0DFCC /* UIViewController+Swizzled.m in Sources */,
 				E1540B511EF65C8C00D2721F /* RJHomeTopicShareModel.m in Sources */,
 				CF27F3621F7DE033000E241C /* CAAnimation+WAnimation.m in Sources */,
 				E14B8A781EF1889D0021D665 /* NSString+SNFoundation.m in Sources */,
