@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		82D04F3E3F207AF8CA483A1E /* libPods-ALPersonalDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 95C4D560735BE5A3E41488ED /* libPods-ALPersonalDemo.a */; };
 		CF04D97D1F48139000F507E7 /* 备忘2.rtf in Resources */ = {isa = PBXBuildFile; fileRef = CF04D97C1F48139000F507E7 /* 备忘2.rtf */; };
+		CF166A511FA95A5C00C81E43 /* ALWindowTapObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = CF166A501FA95A5C00C81E43 /* ALWindowTapObserver.m */; };
 		CF1695A71EE918DF00D174B1 /* UIView+ManualAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = CF1695A41EE918DF00D174B1 /* UIView+ManualAdapter.m */; };
 		CF1695A81EE918DF00D174B1 /* ZHManualAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = CF1695A61EE918DF00D174B1 /* ZHManualAdapter.m */; };
 		CF17A8FF1F6F996B00BE2BCF /* zLetterGestureRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = CF17A8FE1F6F996B00BE2BCF /* zLetterGestureRecognizer.m */; };
@@ -314,6 +315,8 @@
 		95C4D560735BE5A3E41488ED /* libPods-ALPersonalDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ALPersonalDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF99EDAB6382201CFA99A7A4 /* Pods-ALPersonalDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ALPersonalDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-ALPersonalDemo/Pods-ALPersonalDemo.release.xcconfig"; sourceTree = "<group>"; };
 		CF04D97C1F48139000F507E7 /* 备忘2.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = "备忘2.rtf"; sourceTree = "<group>"; };
+		CF166A4F1FA95A5C00C81E43 /* ALWindowTapObserver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALWindowTapObserver.h; sourceTree = "<group>"; };
+		CF166A501FA95A5C00C81E43 /* ALWindowTapObserver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALWindowTapObserver.m; sourceTree = "<group>"; };
 		CF16959E1EE8E92A00D174B1 /* testHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = testHeader.h; sourceTree = "<group>"; };
 		CF1695A31EE918DF00D174B1 /* UIView+ManualAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+ManualAdapter.h"; sourceTree = "<group>"; };
 		CF1695A41EE918DF00D174B1 /* UIView+ManualAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+ManualAdapter.m"; sourceTree = "<group>"; };
@@ -2229,6 +2232,8 @@
 				CF40EC771EE01A0D0003499F /* WWTagButtonTextField.m */,
 				CF40EC731EE0191E0003499F /* WWTagEditingView.h */,
 				CF40EC741EE0191E0003499F /* WWTagEditingView.m */,
+				CF166A4F1FA95A5C00C81E43 /* ALWindowTapObserver.h */,
+				CF166A501FA95A5C00C81E43 /* ALWindowTapObserver.m */,
 				CFCE04601F0B703F0047D184 /* HexColors.h */,
 				CFCE04611F0B703F0047D184 /* HexColors.m */,
 				CFB044F11F44271C00B9FFE3 /* WWCustomLimitDatePickerView.h */,
@@ -2643,6 +2648,7 @@
 				E1540B1A1EF6534C00D2721F /* UIImage+RoundedCorner.m in Sources */,
 				E15D70671EF5811600513AE6 /* MHTopicCell.m in Sources */,
 				E13C56661EE427B600005CFD /* FileManagerHelper.m in Sources */,
+				CF166A511FA95A5C00C81E43 /* ALWindowTapObserver.m in Sources */,
 				E1540A5A1EF64C2B00D2721F /* AJPhotoListCell.m in Sources */,
 				E1F6618C1EDD9CBC001D98E1 /* NSArray+SSAdd.m in Sources */,
 				E14B8A7C1EF1889D0021D665 /* SNTimer.m in Sources */,
