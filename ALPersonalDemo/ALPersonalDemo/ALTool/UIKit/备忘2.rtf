@@ -1,14 +1,14 @@
 {\rtf1\ansi\ansicpg936\cocoartf1504\cocoasubrtf600
 {\fonttbl\f0\fnil\fcharset0 Menlo-Regular;\f1\fnil\fcharset134 PingFangSC-Regular;\f2\fswiss\fcharset0 ArialMT;
 \f3\fnil\fcharset0 Consolas;\f4\fnil\fcharset0 Consolas-Bold;}
-{\colortbl;\red255\green255\blue255;\red170\green13\blue145;\red63\green110\blue116;\red0\green0\blue0;
-\red38\green71\blue75;\red53\green53\blue53;\red255\green255\blue255;\red255\green255\blue255;\red92\green38\blue153;
-\red46\green13\blue110;\red196\green26\blue22;\red38\green38\blue38;\red74\green74\blue74;\red210\green0\blue5;
-\red10\green82\blue135;\red0\green116\blue0;}
-{\*\expandedcolortbl;\csgray\c100000;\csgenericrgb\c66500\c5200\c56900;\csgenericrgb\c24700\c43100\c45600;\csgenericrgb\c0\c0\c0;
-\csgenericrgb\c14900\c27800\c29400;\cssrgb\c27059\c27059\c27059;\cssrgb\c100000\c100000\c100000;\csgray\c100000;\csgenericrgb\c35900\c14900\c60100;
-\csgenericrgb\c18100\c5200\c43100;\csgenericrgb\c77000\c10200\c8600;\cssrgb\c20000\c20000\c20000;\cssrgb\c36078\c36078\c36078;\cssrgb\c86667\c0\c0;
-\cssrgb\c0\c40000\c60000;\csgenericrgb\c0\c45600\c0;}
+{\colortbl;\red255\green255\blue255;\red170\green13\blue145;\red0\green0\blue0;\red92\green38\blue153;
+\red46\green13\blue110;\red63\green110\blue116;\red0\green116\blue0;\red28\green0\blue207;\red38\green71\blue75;
+\red53\green53\blue53;\red255\green255\blue255;\red255\green255\blue255;\red196\green26\blue22;\red38\green38\blue38;
+\red74\green74\blue74;\red210\green0\blue5;\red10\green82\blue135;}
+{\*\expandedcolortbl;\csgray\c100000;\csgenericrgb\c66500\c5200\c56900;\csgenericrgb\c0\c0\c0;\csgenericrgb\c35900\c14900\c60100;
+\csgenericrgb\c18100\c5200\c43100;\csgenericrgb\c24700\c43100\c45600;\csgenericrgb\c0\c45600\c0;\csgenericrgb\c11000\c0\c81000;\csgenericrgb\c14900\c27800\c29400;
+\cssrgb\c27059\c27059\c27059;\cssrgb\c100000\c100000\c100000;\csgray\c100000;\csgenericrgb\c77000\c10200\c8600;\cssrgb\c20000\c20000\c20000;
+\cssrgb\c36078\c36078\c36078;\cssrgb\c86667\c0\c0;\cssrgb\c0\c40000\c60000;}
 \margl1440\margr1440\vieww9000\viewh8400\viewkind0
 \deftab642
 \pard\tx642\pardeftab642\pardirnatural\partightenfactor0
@@ -17,11 +17,38 @@
 layer.cornerRadius\
 layer.masksToBounds\
 \
+\pard\tx642\pardeftab642\pardirnatural\partightenfactor0
+\cf3     \
+\
+    \cf4 UIImageView\cf3  *imageView = [[\cf4 UIImageView\cf3  \cf5 alloc\cf3 ]\cf5 initWithFrame\cf3 :\cf2 self\cf3 .\cf6 chatSessionInputBarControl\cf3 .\cf4 bounds\cf3 ];\
+    \cf7 //imageView.image = [UIImage imageWithColor:[UIColor colorWithHexString:@"ffffff"]];\cf3 \
+    imageView.\cf4 backgroundColor\cf3  = [\cf4 UIColor\cf3  \cf5 whiteColor\cf3 ];\
+    \cf7 //
+\f1 \'bf\'aa\'ca\'bc\'b6\'d4
+\f0 imageView
+\f1 \'bd\'f8\'d0\'d0\'bb\'ad\'cd\'bc
+\f0 \cf3 \
+    \cf5 UIGraphicsBeginImageContextWithOptions\cf3 (imageView.\cf4 bounds\cf3 .\cf4 size\cf3 , \cf2 YES\cf3 , [\cf4 UIScreen\cf3  \cf5 mainScreen\cf3 ].\cf4 scale\cf3 );\
+    \cf7 //
+\f1 \'ca\'b9\'d3\'c3\'b1\'b4\'c8\'fb\'b6\'fb\'c7\'fa\'cf\'df\'bb\'ad\'b3\'f6\'d2\'bb\'b8\'f6\'d4\'b2\'d0\'ce\'cd\'bc
+\f0 \cf3 \
+    \cf4 UIBezierPath\cf3  *bezierPath = [\cf4 UIBezierPath\cf3  \cf5 bezierPathWithRoundedRect\cf3 :\cf2 self\cf3 .\cf6 chatSessionInputBarControl\cf3 .\cf4 bounds\cf3  \cf5 byRoundingCorners\cf3 :(\cf5 UIRectCornerTopLeft\cf3  | \cf5 UIRectCornerTopRight\cf3 ) \cf5 cornerRadii\cf3 :\cf5 CGSizeMake\cf3 (\cf8 12\cf3 , \cf8 12\cf3 )];\
+    [bezierPath \cf5 addClip\cf3 ];\
+    [bezierPath \cf5 setLineWidth\cf3 :\cf8 1\cf3 ];\
+    [[\cf4 UIColor\cf3  \cf5 redColor\cf3 ] \cf5 setStroke\cf3 ];\
+    [bezierPath \cf5 stroke\cf3 ];\
+    [imageView \cf5 drawRect\cf3 :imageView.\cf4 bounds\cf3 ];\
+    imageView.\cf4 image\cf3  = \cf5 UIGraphicsGetImageFromCurrentImageContext\cf3 ();\
+    \cf7 //
+\f1 \'bd\'e1\'ca\'f8\'bb\'ad\'cd\'bc
+\f0 \cf3 \
+    \cf5 UIGraphicsEndImageContext\cf3 ();\
+    \cf2 self\cf3 .\cf6 layerCornerBgView\cf3  = imageView;\cf2 \
+\
 //
 \f1 \'c3\'b6\'be\'d9\'ca\'fd\'d7\'e9
 \f0 \
-\pard\tx642\pardeftab642\pardirnatural\partightenfactor0
-\cf3 WBadgeAnimType\cf4  animations[] = \{\cf5 WBadgeAnimTypeShake\cf4 , \cf5 WBadgeAnimTypeBounce\cf4 , \cf5 WBadgeAnimTypeBreathe\cf4 , \cf5 WBadgeAnimTypeScale\cf4 \};\cf2 \
+\cf6 WBadgeAnimType\cf3  animations[] = \{\cf9 WBadgeAnimTypeShake\cf3 , \cf9 WBadgeAnimTypeBounce\cf3 , \cf9 WBadgeAnimTypeBreathe\cf3 , \cf9 WBadgeAnimTypeScale\cf3 \};\cf2 \
 \
 \pard\tx642\pardeftab642\pardirnatural\partightenfactor0
 
@@ -29,66 +56,66 @@ layer.masksToBounds\
 \f0 \
 \pard\pardeftab720\partightenfactor0
 
-\f1\fs36 \cf6 \cb7 \expnd0\expndtw0\kerning0
+\f1\fs36 \cf10 \cb11 \expnd0\expndtw0\kerning0
 \CocoaLigature1 \'d7\'a5iphone\'ca\'fd\'be\'dd
-\fs32 \cb8 \
+\fs32 \cb12 \
 \pard\pardeftab720\partightenfactor0
-\cf6 \cb7 \'cf\'eb\'d7\'a5iphone\'b5\'c4\'ca\'fd\'be\'dd\'a3\'ac\'ca\'d7\'cf\'c8\'d0\'e8\'d2\'aa\'c8\'c3iphone\'ca\'fd\'be\'dd\'cd\'a8\'b9\'fdmac\'b2\'c5\'d0\'d0\'a1\'a3\'bf\'b4\'b5\'bd\'cd\'f8\'c9\'cf\'ba\'dc\'b6\'e0\'c9\'e8\'b4\'fa\'c0\'ed\'ca\'b2\'c3\'b4\'b5\'c4\'b7\'bd\'b7\'a8\'a3\'ac\'b1\'c8\'bd\'cf\'b8\'b4\'d4\'d3\'a3\'ac\'d3\'d0\'b5\'c4\'bb\'b9\'d2\'aa\'d4\'bd\'d3\'fc\'a1\'a3\'c6\'e4\'ca\'b5\'c3\'bb\'b1\'d8\'d2\'aa\'a1\'a3\'d6\'bb\'d2\'aa\'c1\'b4\'c9\'cf\'ca\'fd\'be\'dd\'cf\'df\'a3\'ac\'c8\'bb\'ba\'f3\'d4\'damac\'b5\'c4\'d6\'d5\'b6\'cb\'d6\'b4\'d0\'d0\'a3\'ba\cb8 \
-\cb7 	
+\cf10 \cb11 \'cf\'eb\'d7\'a5iphone\'b5\'c4\'ca\'fd\'be\'dd\'a3\'ac\'ca\'d7\'cf\'c8\'d0\'e8\'d2\'aa\'c8\'c3iphone\'ca\'fd\'be\'dd\'cd\'a8\'b9\'fdmac\'b2\'c5\'d0\'d0\'a1\'a3\'bf\'b4\'b5\'bd\'cd\'f8\'c9\'cf\'ba\'dc\'b6\'e0\'c9\'e8\'b4\'fa\'c0\'ed\'ca\'b2\'c3\'b4\'b5\'c4\'b7\'bd\'b7\'a8\'a3\'ac\'b1\'c8\'bd\'cf\'b8\'b4\'d4\'d3\'a3\'ac\'d3\'d0\'b5\'c4\'bb\'b9\'d2\'aa\'d4\'bd\'d3\'fc\'a1\'a3\'c6\'e4\'ca\'b5\'c3\'bb\'b1\'d8\'d2\'aa\'a1\'a3\'d6\'bb\'d2\'aa\'c1\'b4\'c9\'cf\'ca\'fd\'be\'dd\'cf\'df\'a3\'ac\'c8\'bb\'ba\'f3\'d4\'damac\'b5\'c4\'d6\'d5\'b6\'cb\'d6\'b4\'d0\'d0\'a3\'ba\cb12 \
+\cb11 	
 \b rvictl -s iphone\'c9\'e8\'b1\'b8id
-\b0 \cb8 \
-\cb7 \'d5\'e2\'ca\'b1\'a3\'ac\'cb\'f9\'d3\'d0iphone\'cd\'f8\'c2\'e7\'c1\'f7\'c1\'bf\'b6\'bc\'bb\'e1\'be\'ad\'b9\'fdiphone\'cb\'f9\'c1\'b4\'bd\'d3\'b5\'c4mac\'a3\'ac\'b2\'a2\'c7\'d2iphone\'ca\'fd\'be\'dd\'bb\'b9\'ca\'c7\'d7\'df\'d7\'d4\'bc\'ba\'b5\'c4\'cd\'f8\'c2\'e7\'a3\'ac\'b1\'c8\'c8\'e7iphone\'c1\'b4\'bd\'d3\'d4\'da3g\'cd\'f8\'c2\'e7\'a3\'ac\'ca\'fd\'be\'dd\'bb\'b9\'ca\'c7\'bb\'e1\'cd\'a8\'b9\'fd3G\'ca\'d5\'b7\'a2\'a3\'ac\'b6\'f8\'b2\'bb\'ca\'c7\'cd\'a8\'b9\'fdmac\'b5\'c4\'cd\'f8\'c2\'e7\'a1\'a3\'b6\'cf\'bf\'aa\'c1\'ac\'bd\'d3\'a3\'ba\cb8 \
-\cb7 	
+\b0 \cb12 \
+\cb11 \'d5\'e2\'ca\'b1\'a3\'ac\'cb\'f9\'d3\'d0iphone\'cd\'f8\'c2\'e7\'c1\'f7\'c1\'bf\'b6\'bc\'bb\'e1\'be\'ad\'b9\'fdiphone\'cb\'f9\'c1\'b4\'bd\'d3\'b5\'c4mac\'a3\'ac\'b2\'a2\'c7\'d2iphone\'ca\'fd\'be\'dd\'bb\'b9\'ca\'c7\'d7\'df\'d7\'d4\'bc\'ba\'b5\'c4\'cd\'f8\'c2\'e7\'a3\'ac\'b1\'c8\'c8\'e7iphone\'c1\'b4\'bd\'d3\'d4\'da3g\'cd\'f8\'c2\'e7\'a3\'ac\'ca\'fd\'be\'dd\'bb\'b9\'ca\'c7\'bb\'e1\'cd\'a8\'b9\'fd3G\'ca\'d5\'b7\'a2\'a3\'ac\'b6\'f8\'b2\'bb\'ca\'c7\'cd\'a8\'b9\'fdmac\'b5\'c4\'cd\'f8\'c2\'e7\'a1\'a3\'b6\'cf\'bf\'aa\'c1\'ac\'bd\'d3\'a3\'ba\cb12 \
+\cb11 	
 \b rvictl -x iphone\'c9\'e8\'b1\'b8id
-\b0 \cb8 \
-\cb7 \'c9\'e8\'b1\'b8\'c1\'ac\'bd\'d3\'ba\'f3\'a3\'acmac\'bb\'e1\'b3\'f6\'cf\'d6\'d2\'bb\'b8\'f6\'b6\'d4\'d3\'a6\'b5\'c4\'d0\'e9\'c4\'e2\'cd\'f8\'c2\'e7\'bd\'d3\'bf\'da\'a3\'ac\'c3\'fb\'d7\'d6\'ca\'c7rvi0\'a3\'a8\'c8\'e7\'b9\'fb\'d3\'d0\'b6\'e0\'b8\'f6iphone\'d4\'f2\'c0\'db\'bc\'d3\'a3\'acrvi1\'a3\'acrvi2\'a1\'ad\'a3\'a9\
+\b0 \cb12 \
+\cb11 \'c9\'e8\'b1\'b8\'c1\'ac\'bd\'d3\'ba\'f3\'a3\'acmac\'bb\'e1\'b3\'f6\'cf\'d6\'d2\'bb\'b8\'f6\'b6\'d4\'d3\'a6\'b5\'c4\'d0\'e9\'c4\'e2\'cd\'f8\'c2\'e7\'bd\'d3\'bf\'da\'a3\'ac\'c3\'fb\'d7\'d6\'ca\'c7rvi0\'a3\'a8\'c8\'e7\'b9\'fb\'d3\'d0\'b6\'e0\'b8\'f6iphone\'d4\'f2\'c0\'db\'bc\'d3\'a3\'acrvi1\'a3\'acrvi2\'a1\'ad\'a3\'a9\
 \
 \pard\tx642\pardeftab642\pardirnatural\partightenfactor0
 
-\f0\fs26 \cf2 \cb8 \kerning1\expnd0\expndtw0 \CocoaLigature0 \
+\f0\fs26 \cf2 \cb12 \kerning1\expnd0\expndtw0 \CocoaLigature0 \
 \
 \
-\cf4  \cf2 if\cf4  (object == \cf2 self\cf4 .\cf3 contentWebview\cf4 .\cf9 scrollView\cf4  && [keyPath \cf10 isEqualToString\cf4 :\cf11 @"contentOffset"\cf4 ])\{\
-        \cf2 if\cf4  ([\cf2 self\cf4 .\cf3 contentWebview\cf4  \cf10 respondsToSelector\cf4 :\cf2 @selector\cf4 (_updateVisibleContentRects)]) \{\
-            ((\cf2 void\cf4 (*)(\cf2 id\cf4 ,\cf2 SEL\cf4 ,\cf2 BOOL\cf4 ))\cf10 objc_msgSend\cf4 )(\cf2 self\cf4 .\cf3 contentWebview\cf4 ,\cf2 @selector\cf4 (_updateVisibleContentRects),\cf2 NO\cf4 );\
+\cf3  \cf2 if\cf3  (object == \cf2 self\cf3 .\cf6 contentWebview\cf3 .\cf4 scrollView\cf3  && [keyPath \cf5 isEqualToString\cf3 :\cf13 @"contentOffset"\cf3 ])\{\
+        \cf2 if\cf3  ([\cf2 self\cf3 .\cf6 contentWebview\cf3  \cf5 respondsToSelector\cf3 :\cf2 @selector\cf3 (_updateVisibleContentRects)]) \{\
+            ((\cf2 void\cf3 (*)(\cf2 id\cf3 ,\cf2 SEL\cf3 ,\cf2 BOOL\cf3 ))\cf5 objc_msgSend\cf3 )(\cf2 self\cf3 .\cf6 contentWebview\cf3 ,\cf2 @selector\cf3 (_updateVisibleContentRects),\cf2 NO\cf3 );\
         \}\
     \}\
 \
-\cf2 static\cf4  \cf2 void\cf4  *WWReportViewControllerObserverContext = &\cf3 WWReportViewControllerObserverContext\cf4 ;\
-[\cf2 self\cf4  \cf10 addObserver\cf4 :\cf2 self\cf4  \cf10 forKeyPath\cf4 :\cf11 @"isCommitBtnEnabled"\cf4  \cf10 options\cf4 :\cf10 NSKeyValueObservingOptionNew\cf4  \cf10 context\cf4 :\cf3 WWReportViewControllerObserverContext\cf4 ];\
-- (\cf2 void\cf4 )observeValueForKeyPath:(\cf9 NSString\cf4  *)keyPath ofObject:(\cf2 id\cf4 )object change:(\cf9 NSDictionary\cf4  *)change context:(\cf2 void\cf4  *)context \{\
-    \cf2 if\cf4  ( context == \cf3 WWReportViewControllerObserverContext\cf4 ) \{\
-        \cf2 BOOL\cf4  isEnalbed = [[change \cf10 objectForKey\cf4 :\cf9 NSKeyValueChangeNewKey\cf4 ] \cf10 boolValue\cf4 ];\
-        \cf2 if\cf4  (isEnalbed) \{\
-            \cf2 self\cf4 .\cf3 commit\cf4 .\cf9 enabled\cf4  = \cf2 YES\cf4 ;\
-            \cf2 self\cf4 .\cf3 textView\cf4 .\cf9 layer\cf4 .\cf9 borderColor\cf4  = [\cf9 UIColor\cf4  \cf5 colorWithHexString\cf4 :\cf11 @"7269ff"\cf4 ].\cf9 CGColor\cf4 ;\
-        \}\cf2 else\cf4 \{\
-            \cf2 self\cf4 .\cf3 commit\cf4 .\cf9 enabled\cf4  = \cf2 NO\cf4 ;\
-            \cf2 self\cf4 .\cf3 textView\cf4 .\cf9 layer\cf4 .\cf9 borderColor\cf4  = [\cf9 UIColor\cf4  \cf5 colorWithHexString\cf4 :\cf11 @"e5e5e5"\cf4 ].\cf9 CGColor\cf4 ;\
+\cf2 static\cf3  \cf2 void\cf3  *WWReportViewControllerObserverContext = &\cf6 WWReportViewControllerObserverContext\cf3 ;\
+[\cf2 self\cf3  \cf5 addObserver\cf3 :\cf2 self\cf3  \cf5 forKeyPath\cf3 :\cf13 @"isCommitBtnEnabled"\cf3  \cf5 options\cf3 :\cf5 NSKeyValueObservingOptionNew\cf3  \cf5 context\cf3 :\cf6 WWReportViewControllerObserverContext\cf3 ];\
+- (\cf2 void\cf3 )observeValueForKeyPath:(\cf4 NSString\cf3  *)keyPath ofObject:(\cf2 id\cf3 )object change:(\cf4 NSDictionary\cf3  *)change context:(\cf2 void\cf3  *)context \{\
+    \cf2 if\cf3  ( context == \cf6 WWReportViewControllerObserverContext\cf3 ) \{\
+        \cf2 BOOL\cf3  isEnalbed = [[change \cf5 objectForKey\cf3 :\cf4 NSKeyValueChangeNewKey\cf3 ] \cf5 boolValue\cf3 ];\
+        \cf2 if\cf3  (isEnalbed) \{\
+            \cf2 self\cf3 .\cf6 commit\cf3 .\cf4 enabled\cf3  = \cf2 YES\cf3 ;\
+            \cf2 self\cf3 .\cf6 textView\cf3 .\cf4 layer\cf3 .\cf4 borderColor\cf3  = [\cf4 UIColor\cf3  \cf9 colorWithHexString\cf3 :\cf13 @"7269ff"\cf3 ].\cf4 CGColor\cf3 ;\
+        \}\cf2 else\cf3 \{\
+            \cf2 self\cf3 .\cf6 commit\cf3 .\cf4 enabled\cf3  = \cf2 NO\cf3 ;\
+            \cf2 self\cf3 .\cf6 textView\cf3 .\cf4 layer\cf3 .\cf4 borderColor\cf3  = [\cf4 UIColor\cf3  \cf9 colorWithHexString\cf3 :\cf13 @"e5e5e5"\cf3 ].\cf4 CGColor\cf3 ;\
         \}\
     \}\
 \}\
 \
 \pard\pardeftab720\partightenfactor0
 
-\f1\fs28 \cf12 \cb7 \expnd0\expndtw0\kerning0
+\f1\fs28 \cf14 \cb11 \expnd0\expndtw0\kerning0
 \CocoaLigature1 \'d3\'c3
 \f2 scrollRangeToVisible
 \f1 \'ba\'af\'ca\'fd\'bd\'f8\'d0\'d0\'b9\'f6\'b6\'af\'a3\'ac\'bf\'c9\'d2\'d4\'cc\'f8\'b6\'af\'b5\'bd\'d7\'ee\'ba\'f3\'d2\'bb\'d0\'d0\'c4\'da\'c8\'dd\'c9\'cf
-\f0\fs26 \cf4 \cb8 \kerning1\expnd0\expndtw0 \CocoaLigature0 \
+\f0\fs26 \cf3 \cb12 \kerning1\expnd0\expndtw0 \CocoaLigature0 \
 \pard\pardeftab720\partightenfactor0
 
-\f3\fs24 \cf13 \cb7 \expnd0\expndtw0\kerning0
-\CocoaLigature1 [_textView\cf14 \'a0scrollRangeToVisible\cf13 :NSMakeRange(_textView.text.length,\'a01)];\'a0\'a0\
+\f3\fs24 \cf15 \cb11 \expnd0\expndtw0\kerning0
+\CocoaLigature1 [_textView\cf16 \'a0scrollRangeToVisible\cf15 :NSMakeRange(_textView.text.length,\'a01)];\'a0\'a0\
 \pard\pardeftab720\partightenfactor0
 
-\f4\b \cf15 self
-\f3\b0 \cf13 .textView.layoutManager.allowsNonContiguousLayout\'a0=\'a0
-\f4\b \cf15 NO
-\f3\b0 \cf13 ;\'a0\'a0\
+\f4\b \cf17 self
+\f3\b0 \cf15 .textView.layoutManager.allowsNonContiguousLayout\'a0=\'a0
+\f4\b \cf17 NO
+\f3\b0 \cf15 ;\'a0\'a0\
 \pard\pardeftab720\partightenfactor0
 
-\f1\fs28 \cf12 \'d5\'e2\'be\'e4\'b4\'fa\'c2\'eb\'c9\'e8\'d6\'c3\'c1\'cb
+\f1\fs28 \cf14 \'d5\'e2\'be\'e4\'b4\'fa\'c2\'eb\'c9\'e8\'d6\'c3\'c1\'cb
 \f2  UITextView 
 \f1 \'d6\'d0\'b5\'c4
 \f2  layoutManager(NSLayoutManager) 
@@ -99,62 +126,73 @@ layer.masksToBounds\
 \f1 \'ba\'f3
 \f2  UITextView 
 \f1 \'be\'cd\'b2\'bb\'bb\'e1\'d4\'d9\'d7\'d4\'bc\'ba\'d6\'d8\'d6\'c3\'bb\'ac\'b6\'af\'c1\'cb\'a1\'a3
-\f0\fs26 \cf4 \cb8 \kerning1\expnd0\expndtw0 \CocoaLigature0 \
+\f0\fs26 \cf3 \cb12 \kerning1\expnd0\expndtw0 \CocoaLigature0 \
 \pard\tx642\pardeftab642\pardirnatural\partightenfactor0
-\cf4 \cb8 \
+\cf3 \
 \
--(\cf2 void\cf4 )getCurrentMapScreenShot\{\
-    \cf16 \cb8 // 
+-(\cf2 void\cf3 )getCurrentMapScreenShot\{\
+    \cf7 // 
 \f1 \'bd\'d8\'cd\'bc\'b8\'bd\'bc\'d3\'d1\'a1\'cf\'ee
-\f0 \cf4 \cb8 \
-    \cf9 MKMapSnapshotOptions\cf4  *options = [[\cf9 MKMapSnapshotOptions\cf4  \cf10 alloc\cf4 ] \cf10 init\cf4 ];\
-    \cf16 \cb8 // 
+\f0 \cf3 \
+    \cf4 MKMapSnapshotOptions\cf3  *options = [[\cf4 MKMapSnapshotOptions\cf3  \cf5 alloc\cf3 ] \cf5 init\cf3 ];\
+    \cf7 // 
 \f1 \'c9\'e8\'d6\'c3\'bd\'d8\'cd\'bc\'c7\'f8\'d3\'f2
 \f0 (
 \f1 \'d4\'da\'b5\'d8\'cd\'bc\'c9\'cf\'b5\'c4\'c7\'f8\'d3\'f2
 \f0 ,
 \f1 \'d7\'f7\'d3\'c3\'d4\'da\'b5\'d8\'cd\'bc
-\f0 )\cf4 \cb8 \
-    options.region = \cf2 self\cf4 .mapView.region;\
-    \cf16 \cb8 //    options.mapRect = self.mapView.visibleMapRect;\cf4 \cb8 \
+\f0 )\cf3 \
+    options.region = \cf2 self\cf3 .mapView.region;\
+    \cf7 //    options.mapRect = self.mapView.visibleMapRect;\cf3 \
     \
-    \cf16 \cb8 // 
+    \cf7 // 
 \f1 \'c9\'e8\'d6\'c3\'bd\'d8\'cd\'bc\'ba\'f3\'b5\'c4\'cd\'bc\'c6\'ac\'b4\'f3\'d0\'a1
 \f0 (
 \f1 \'d7\'f7\'d3\'c3\'d4\'da\'ca\'e4\'b3\'f6\'cd\'bc\'cf\'f1
-\f0 )\cf4 \cb8 \
-    options.size = \cf2 self\cf4 .mapView.frame.size;\
-    \cf16 \cb8 // 
+\f0 )\cf3 \
+    options.size = \cf2 self\cf3 .mapView.frame.size;\
+    \cf7 // 
 \f1 \'c9\'e8\'d6\'c3\'bd\'d8\'cd\'bc\'ba\'f3\'b5\'c4\'cd\'bc\'c6\'ac\'b1\'c8\'c0\'fd\'a3\'a8\'c4\'ac\'c8\'cf\'ca\'c7\'c6\'c1\'c4\'bb\'b1\'c8\'c0\'fd\'a3\'ac
 \f0  
 \f1 \'d7\'f7\'d3\'c3\'d4\'da\'ca\'e4\'b3\'f6\'cd\'bc\'cf\'f1\'a3\'a9
-\f0 \cf4 \cb8 \
-    options.\cf9 scale\cf4  = [[\cf9 UIScreen\cf4  \cf10 mainScreen\cf4 ] \cf10 scale\cf4 ];\
+\f0 \cf3 \
+    options.\cf4 scale\cf3  = [[\cf4 UIScreen\cf3  \cf5 mainScreen\cf3 ] \cf5 scale\cf3 ];\
     \
-    \cf9 MKMapSnapshotter\cf4  *snapshotter = [[\cf9 MKMapSnapshotter\cf4  \cf10 alloc\cf4 ] \cf10 initWithOptions\cf4 :options];\
-    [snapshotter \cf10 startWithCompletionHandler\cf4 :^(\cf9 MKMapSnapshot\cf4  * \cf2 _Nullable\cf4  snapshot, \cf9 NSError\cf4  * \cf2 _Nullable\cf4  error) \{\
-        \cf2 if\cf4  (error) \{\
-            \cf10 NSLog\cf4 (\cf11 @"
-\f1 \cb8 \'bd\'d8\'cd\'bc\'b4\'ed\'ce\'f3\'a3\'ba
-\f0 \cb8 %@"\cf4 ,error.\cf9 localizedDescription\cf4 );\
-        \}\cf2 else\cf4 \
+    \cf4 MKMapSnapshotter\cf3  *snapshotter = [[\cf4 MKMapSnapshotter\cf3  \cf5 alloc\cf3 ] \cf5 initWithOptions\cf3 :options];\
+    [snapshotter \cf5 startWithCompletionHandler\cf3 :^(\cf4 MKMapSnapshot\cf3  * \cf2 _Nullable\cf3  snapshot, \cf4 NSError\cf3  * \cf2 _Nullable\cf3  error) \{\
+        \cf2 if\cf3  (error) \{\
+            \cf5 NSLog\cf3 (\cf13 @"
+\f1 \'bd\'d8\'cd\'bc\'b4\'ed\'ce\'f3\'a3\'ba
+\f0 %@"\cf3 ,error.\cf4 localizedDescription\cf3 );\
+        \}\cf2 else\cf3 \
         \{\
-            \cf16 \cb8 // 
+            \cf7 // 
 \f1 \'c9\'e8\'d6\'c3\'c6\'c1\'c4\'bb\'c9\'cf\'cd\'bc\'c6\'ac\'cf\'d4\'ca\'be
-\f0 \cf4 \cb8 \
-            \cf2 self\cf4 .snapshootImageView.image = snapshot.image;\
-            \cf16 \cb8 // 
+\f0 \cf3 \
+            \cf2 self\cf3 .snapshootImageView.image = snapshot.image;\
+            \cf7 // 
 \f1 \'bd\'ab\'cd\'bc\'c6\'ac\'b1\'a3\'b4\'e6\'b5\'bd\'d6\'b8\'b6\'a8\'c2\'b7\'be\'b6\'a3\'a8\'b4\'cb\'b4\'a6\'ca\'c7\'d7\'c0\'c3\'e6\'c2\'b7\'be\'b6\'a3\'ac\'d0\'e8\'d2\'aa\'b8\'f9\'be\'dd\'b8\'f6\'c8\'cb\'b5\'e7\'c4\'d4\'b2\'bb\'cd\'ac\'bd\'f8\'d0\'d0\'d0\'de\'b8\'c4\'a3\'a9
-\f0 \cf4 \cb8 \
-            \cf9 NSData\cf4  *data = \cf10 UIImagePNGRepresentation\cf4 (snapshot.\cf9 image\cf4 );\
-            [data \cf10 writeToFile\cf4 :\cf11 @"/Users/wangshunzi/Desktop/snap.png"\cf4  \cf10 atomically\cf4 :\cf2 YES\cf4 ];\
+\f0 \cf3 \
+            \cf4 NSData\cf3  *data = \cf5 UIImagePNGRepresentation\cf3 (snapshot.\cf4 image\cf3 );\
+            [data \cf5 writeToFile\cf3 :\cf13 @"/Users/wangshunzi/Desktop/snap.png"\cf3  \cf5 atomically\cf3 :\cf2 YES\cf3 ];\
         \}\
     \}];\
 \}\
 \
 \
+\pard\pardeftab720\partightenfactor0
+
+\f3 \cf14 \cb11 \expnd0\expndtw0\kerning0
+\CocoaLigature1 NSString\'a0*path\'a0=\'a0[[NSBundle\'a0mainBundle]\'a0pathForResource:@\'94icon\'94\'a0ofType:@\'94png\'94];\
+UIImage\'a0*image\'a0=\'a0[UIImage\'a0imageWithContentsOfFile:path];\
 \
 \
+\
+\pard\pardeftab720\partightenfactor0
+
+\f0 \cf3 \cb12 \kerning1\expnd0\expndtw0 \CocoaLigature0 \
+\pard\tx642\pardeftab642\pardirnatural\partightenfactor0
+\cf3 \
 \
 \
 \

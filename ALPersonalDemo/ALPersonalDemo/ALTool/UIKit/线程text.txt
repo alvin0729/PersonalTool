@@ -1,3 +1,5 @@
+
+http://aaaboom.com/?p=37
 线程：
 TableView中实现平滑滚动延迟加载图片
 

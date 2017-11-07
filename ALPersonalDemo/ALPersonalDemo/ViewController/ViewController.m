@@ -13,6 +13,7 @@
 #import "ALDemo1ViewController.h"
 #import "ALReactiveCocoaDemoVC.h"
 #import "FileManagerHelper.h"
+#import <CommonCrypto/CommonDigest.h>
 
 static NSArray *titles;
 
@@ -51,16 +52,80 @@ static NSArray *titles;
     self.tableView.dataSource = self;
     [self.view addSubview:self.tableView];
     
+    
     titles = @[@"ALNetWorkViewController+网络数据类",@"ALToastTableViewController+提示加载",@"ALReactiveCocoaDemoVC+RAC",@"ALDemo1ViewController+暂时显示"];
     [FileManagerHelper deleteObjectWithFile:[NSString stringWithFormat:@"user_jpg"]  folder:nil sandBoxFolder:kUseDocumentTypeLibraryCaches];
+    
+    /**单词排序*/
+    NSString *randomString = [self randomStringWithLength:5];
+    /**结束面聊*/
+    //NSDictionary *params =  @{@"recordId":@(10041),@"payChannels":@"diamond",@"nonceStr":randomString};
+    /**面聊中扣费*/
+    NSDictionary *params =  @{@"recordId":@(10041),@"timeLeng":@(90),@"diamond":@(1000),@"payChannels":@"diamond",@"nonceStr":randomString,@"v":@"2.0"};
+    NSArray *paramsArr = params.allKeys;
+    NSArray *arr = [NSArray array];
+    arr = [paramsArr sortedArrayUsingSelector:@selector(compare:)];
+    NSString *firstStr = @"";
+    for (int i = 0; i < arr.count; i++) {
+        NSString *key = arr[i];
+        NSString *value = params[key];
+        if (![value isKindOfClass:[NSString class]]) {
+            if ([value isKindOfClass:[NSNumber class]]) {
+                value = [NSString stringWithFormat:@"%d",[params[key] intValue]];
+            }
+        }
+        if (0 == i) {
+            firstStr = [NSString stringWithFormat:@"%@=%@",key,value];
+        }else{
+            firstStr = [NSString stringWithFormat:@"%@&%@=%@",firstStr,key,value];
+        }
+    }
+    NSString *secondStr = [NSString stringWithFormat:@"%@&%@&%@",randomString,firstStr,randomString];
+    NSString *thirdStr = [self payMD5:@"javaapp"];
+    NSString *fourthStr = [NSString stringWithFormat:@"%@&%@&%@",thirdStr,secondStr,thirdStr];
+    NSString *signStr = [self payMD5:fourthStr];
+    NSLog(@"signStr:%@",signStr);
+    NSMutableDictionary *backDic = params.mutableCopy;
+    [backDic setValue:signStr forKey:@"signature"];
+    for (NSString *key in backDic.allKeys) {
+        NSLog(@"key:%@====value:%@",key,backDic[key]);
+    }
+    
+    
     [self testDemo3];
     while (1)
     {
-        [[NSRunLoop currentRunLoop] runUntilDate:[NSDate dateWithTimeIntervalSinceNow:10]];
+        [[NSRunLoop currentRunLoop] runUntilDate:[NSDate dateWithTimeIntervalSinceNow:20]];
         NSLog(@"exiting runloop.........:");
     }
     
 }
+
+- (NSString *)randomStringWithLength:(int)len {
+    NSString *letters = @"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+    NSMutableString *randomString = [NSMutableString stringWithCapacity: len];
+    for (int i = 0; i<len; i++) {
+        [randomString appendFormat: @"%C", [letters characterAtIndex: arc4random_uniform((int)[letters length])]];
+    }
+    return randomString;
+}
+
+- (NSString *)payMD5:(NSString *)string {
+    if (string == nil || [string length] == 0) {
+        return nil;
+    }
+    
+    unsigned char digest[CC_MD5_DIGEST_LENGTH], i;
+    CC_MD5([string UTF8String], (int)[string lengthOfBytesUsingEncoding:NSUTF8StringEncoding], digest);
+    NSMutableString *ms = [NSMutableString string];
+    
+    for (i = 0; i < CC_MD5_DIGEST_LENGTH; i++) {
+        [ms appendFormat:@"%02x", (int)(digest[i])];
+    }
+    
+    return [ms copy];
+}
+
 - (void)testDemo1
 {
     dispatch_async(dispatch_get_global_queue(0, 0), ^{
@@ -228,6 +293,69 @@ static NSArray *titles;
     [self.navigationController pushViewController:viewController animated:NO];
 }
 
+
+-(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
+{
+    //创建监听者
+    /*
+     第一个参数 CFAllocatorRef allocator：分配存储空间 CFAllocatorGetDefault()默认分配
+     第二个参数 CFOptionFlags activities：要监听的状态 kCFRunLoopAllActivities 监听所有状态
+     第三个参数 Boolean repeats：YES:持续监听 NO:不持续
+     第四个参数 CFIndex order：优先级，一般填0即可
+     第五个参数 ：回调 两个参数observer:监听者 activity:监听的事件
+     */
+    /*
+     所有事件
+     typedef CF_OPTIONS(CFOptionFlags, CFRunLoopActivity) {
+     kCFRunLoopEntry = (1UL << 0),   //   即将进入RunLoop
+     kCFRunLoopBeforeTimers = (1UL << 1), // 即将处理Timer
+     kCFRunLoopBeforeSources = (1UL << 2), // 即将处理Source
+     kCFRunLoopBeforeWaiting = (1UL << 5), //即将进入休眠
+     kCFRunLoopAfterWaiting = (1UL << 6),// 刚从休眠中唤醒
+     kCFRunLoopExit = (1UL << 7),// 即将退出RunLoop
+     kCFRunLoopAllActivities = 0x0FFFFFFFU
+     };
+     */
+    CFRunLoopObserverRef observer = CFRunLoopObserverCreateWithHandler(CFAllocatorGetDefault(), kCFRunLoopAllActivities, YES, 0, ^(CFRunLoopObserverRef observer, CFRunLoopActivity activity) {
+        switch (activity) {
+            case kCFRunLoopEntry:
+                NSLog(@"RunLoop进入");
+                break;
+            case kCFRunLoopBeforeTimers:
+                NSLog(@"RunLoop要处理Timers了");
+                break;
+            case kCFRunLoopBeforeSources:
+                NSLog(@"RunLoop要处理Sources了");
+                break;
+            case kCFRunLoopBeforeWaiting:
+                NSLog(@"RunLoop要休息了");
+                break;
+            case kCFRunLoopAfterWaiting:
+                NSLog(@"RunLoop醒来了");
+                break;
+            case kCFRunLoopExit:
+                NSLog(@"RunLoop退出了");
+                break;
+                
+            default:
+                break;
+        }
+    });
+    
+    // 给RunLoop添加监听者
+    /*
+     第一个参数 CFRunLoopRef rl：要监听哪个RunLoop,这里监听的是主线程的RunLoop
+     第二个参数 CFRunLoopObserverRef observer 监听者
+     第三个参数 CFStringRef mode 要监听RunLoop在哪种运行模式下的状态
+     */
+    CFRunLoopAddObserver(CFRunLoopGetCurrent(), observer, kCFRunLoopDefaultMode);
+    /*
+     CF的内存管理（Core Foundation）
+     凡是带有Create、Copy、Retain等字眼的函数，创建出来的对象，都需要在最后做一次release
+     GCD本来在iOS6.0之前也是需要我们释放的，6.0之后GCD已经纳入到了ARC中，所以我们不需要管了
+     */
+    CFRelease(observer);
+}
 
 
 @end
