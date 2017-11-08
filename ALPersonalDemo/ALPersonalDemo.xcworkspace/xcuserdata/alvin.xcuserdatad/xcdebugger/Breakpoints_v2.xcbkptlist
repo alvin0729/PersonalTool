@@ -122,12 +122,28 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ALPersonalDemo/ViewController/ViewController.m"
-            timestampString = "530347041.191274"
+            timestampString = "531750553.587547"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "182"
-            endingLineNumber = "182"
-            landmarkName = "-handlePortMessage:"
+            startingLineNumber = "186"
+            endingLineNumber = "186"
+            landmarkName = "-testDemo2"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ALPersonalDemo/ViewController/ViewController.m"
+            timestampString = "531750553.58847"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "133"
+            endingLineNumber = "133"
+            landmarkName = "-testDemo1"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

@@ -193,6 +193,10 @@ static NSArray *titles;
     });
     
 }
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    NSLog(@"0000000");
+}
 
 - (void)doTimerTask1:(NSTimer *)timer
 {
