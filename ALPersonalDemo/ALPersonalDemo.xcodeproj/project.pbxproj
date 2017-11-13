@@ -269,6 +269,10 @@
 		E17E21F51EDAFE0F0013D3B9 /* UIButton+SSImageTitleStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = E17E21F31EDAFE0F0013D3B9 /* UIButton+SSImageTitleStyle.m */; };
 		E18083791F9BA065003454F7 /* BaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E17DCD6A1F6E38C5002DE738 /* BaseModel.m */; };
 		E1AAB38A1F6E22C90033533E /* ALPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = E1AAB3881F6E22C10033533E /* ALPerson.m */; };
+		E1B5BFE51FB9D51100DC0A34 /* AlOCCallSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B5BFE41FB9D51100DC0A34 /* AlOCCallSwift.swift */; };
+		E1B5BFE81FB9D88E00DC0A34 /* ALOC_Call_SwiftVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E1B5BFE71FB9D88E00DC0A34 /* ALOC_Call_SwiftVC.m */; };
+		E1B5BFEA1FB9D9D800DC0A34 /* ALTestSwiftOneVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B5BFE91FB9D9D800DC0A34 /* ALTestSwiftOneVC.swift */; };
+		E1B5BFEC1FB9E1E900DC0A34 /* ALTestSwiftView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B5BFEB1FB9E1E900DC0A34 /* ALTestSwiftView.swift */; };
 		E1D226491F6D3AD40001E8A3 /* Predicate Programming Guide.rtf in Resources */ = {isa = PBXBuildFile; fileRef = E1D226481F6D3AD40001E8A3 /* Predicate Programming Guide.rtf */; };
 		E1D226531F6D87E10001E8A3 /* ALNSPredicateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E1D226521F6D87E10001E8A3 /* ALNSPredicateViewController.m */; };
 		E1D2265F1F6D8B690001E8A3 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = E1D2265E1F6D8ACA0001E8A3 /* Person.m */; };
@@ -837,6 +841,12 @@
 		E180837A1F9BA213003454F7 /* 线程text.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "线程text.txt"; sourceTree = "<group>"; };
 		E1AAB3881F6E22C10033533E /* ALPerson.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ALPerson.m; sourceTree = "<group>"; };
 		E1AAB3891F6E22C10033533E /* ALPerson.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ALPerson.h; sourceTree = "<group>"; };
+		E1B5BFE31FB9D51000DC0A34 /* ALPersonalDemo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ALPersonalDemo-Bridging-Header.h"; sourceTree = "<group>"; };
+		E1B5BFE41FB9D51100DC0A34 /* AlOCCallSwift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlOCCallSwift.swift; sourceTree = "<group>"; };
+		E1B5BFE61FB9D88E00DC0A34 /* ALOC_Call_SwiftVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ALOC_Call_SwiftVC.h; sourceTree = "<group>"; };
+		E1B5BFE71FB9D88E00DC0A34 /* ALOC_Call_SwiftVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ALOC_Call_SwiftVC.m; sourceTree = "<group>"; };
+		E1B5BFE91FB9D9D800DC0A34 /* ALTestSwiftOneVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ALTestSwiftOneVC.swift; sourceTree = "<group>"; };
+		E1B5BFEB1FB9E1E900DC0A34 /* ALTestSwiftView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ALTestSwiftView.swift; sourceTree = "<group>"; };
 		E1D226481F6D3AD40001E8A3 /* Predicate Programming Guide.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = "Predicate Programming Guide.rtf"; sourceTree = "<group>"; };
 		E1D226511F6D87E10001E8A3 /* ALNSPredicateViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ALNSPredicateViewController.h; sourceTree = "<group>"; };
 		E1D226521F6D87E10001E8A3 /* ALNSPredicateViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ALNSPredicateViewController.m; sourceTree = "<group>"; };
@@ -2051,6 +2061,27 @@
 			path = UIButton;
 			sourceTree = "<group>";
 		};
+		E1B5BFE11FB9D4C500DC0A34 /* swift */ = {
+			isa = PBXGroup;
+			children = (
+				E1B5BFE21FB9D4E000DC0A34 /* demo */,
+			);
+			path = swift;
+			sourceTree = "<group>";
+		};
+		E1B5BFE21FB9D4E000DC0A34 /* demo */ = {
+			isa = PBXGroup;
+			children = (
+				E1B5BFE41FB9D51100DC0A34 /* AlOCCallSwift.swift */,
+				E1B5BFEB1FB9E1E900DC0A34 /* ALTestSwiftView.swift */,
+				E1B5BFE91FB9D9D800DC0A34 /* ALTestSwiftOneVC.swift */,
+				E1B5BFE61FB9D88E00DC0A34 /* ALOC_Call_SwiftVC.h */,
+				E1B5BFE71FB9D88E00DC0A34 /* ALOC_Call_SwiftVC.m */,
+				E1B5BFE31FB9D51000DC0A34 /* ALPersonalDemo-Bridging-Header.h */,
+			);
+			path = demo;
+			sourceTree = "<group>";
+		};
 		E1D2264A1F6D85DB0001E8A3 /* tool */ = {
 			isa = PBXGroup;
 			children = (
@@ -2202,6 +2233,7 @@
 		E1F661A41EDD9FE8001D98E1 /* ALTool */ = {
 			isa = PBXGroup;
 			children = (
+				E1B5BFE11FB9D4C500DC0A34 /* swift */,
 				CF7F435D1F5CDC600055CC81 /* navigationBar */,
 				E14B8A451EF1886E0021D665 /* 第三方 */,
 				E14AD1841EEB01D6003353B6 /* ReactiveCocoa */,
@@ -2403,6 +2435,7 @@
 					E17E216B1EDA73760013D3B9 = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = 75C82FC24V;
+						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 					};
 					E17E21871EDA73760013D3B9 = {
@@ -2607,6 +2640,7 @@
 				E1540B411EF65A9600D2721F /* HHInforDraftCell.m in Sources */,
 				E1F661A81EDDA024001D98E1 /* SSUIAdapter.m in Sources */,
 				CFA999481F9062670034391E /* NSObject+VKMsgSend.m in Sources */,
+				E1B5BFEC1FB9E1E900DC0A34 /* ALTestSwiftView.swift in Sources */,
 				E15D70551EF5372200513AE6 /* UINavigationController+FDFullscreenPopGesture.m in Sources */,
 				E1540A761EF64C8800D2721F /* RSKTouchView.m in Sources */,
 				CF6012E51EFA3EDC007CA737 /* ALFontCache.m in Sources */,
@@ -2619,6 +2653,7 @@
 				E15D70221EF4F4A100513AE6 /* MHCommentCell.m in Sources */,
 				E15D703D1EF5231400513AE6 /* UIImage+MHCrop.m in Sources */,
 				CFC0AAF81EFB80BE00E4FF12 /* AFTableViewCell.m in Sources */,
+				E1B5BFEA1FB9D9D800DC0A34 /* ALTestSwiftOneVC.swift in Sources */,
 				E1540A751EF64C8800D2721F /* RSKInternalUtility.m in Sources */,
 				E1540B171EF6534C00D2721F /* UIImage+New.m in Sources */,
 				E1540A251EF6495F00D2721F /* HHInforDraftModel.m in Sources */,
@@ -2704,6 +2739,7 @@
 				CFFF6F2C1EF91B7B0092132B /* ALRichTextDemoViewController.m in Sources */,
 				E1AAB38A1F6E22C90033533E /* ALPerson.m in Sources */,
 				E1540A341EF64ABC00D2721F /* UIFont+LMText.m in Sources */,
+				E1B5BFE51FB9D51100DC0A34 /* AlOCCallSwift.swift in Sources */,
 				E1540AC71EF64F9700D2721F /* UIViewController+Tracking.m in Sources */,
 				CF5E3ED21F20BCD3009B40A8 /* WWDropDownMenu.m in Sources */,
 				E1D2265F1F6D8B690001E8A3 /* Person.m in Sources */,
@@ -2728,6 +2764,7 @@
 				E15D703F1EF5231400513AE6 /* UIImage+MHFile.m in Sources */,
 				E15D70281EF4F77400513AE6 /* MHYouKuCommentButton.m in Sources */,
 				CFC1EC9D1EEEA1A700641E5D /* MHUser.m in Sources */,
+				E1B5BFE81FB9D88E00DC0A34 /* ALOC_Call_SwiftVC.m in Sources */,
 				E1F661AC1EDDA14B001D98E1 /* CommonBaseTools.m in Sources */,
 				E14B8A791EF1889D0021D665 /* SNCache.m in Sources */,
 				E17E21EE1EDAF6A20013D3B9 /* ALToastTableViewController.m in Sources */,
@@ -2937,6 +2974,7 @@
 			baseConfigurationReference = 172661A0474B4090AF08AC57 /* Pods-ALPersonalDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 75C82FC24V;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -2948,6 +2986,9 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.alvin.test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "ALPersonalDemo/ALTool/swift/demo/ALPersonalDemo-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -2956,6 +2997,7 @@
 			baseConfigurationReference = BF99EDAB6382201CFA99A7A4 /* Pods-ALPersonalDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 75C82FC24V;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -2967,12 +3009,15 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.alvin.test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "ALPersonalDemo/ALTool/swift/demo/ALPersonalDemo-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
 		E17E21A01EDA73760013D3B9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = ALPersonalDemoTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -2985,6 +3030,7 @@
 		E17E21A11EDA73760013D3B9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = ALPersonalDemoTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -2997,6 +3043,7 @@
 		E17E21A31EDA73760013D3B9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = ALPersonalDemoUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.company.ALPersonalDemoUITests;
@@ -3008,6 +3055,7 @@
 		E17E21A41EDA73760013D3B9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = ALPersonalDemoUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.company.ALPersonalDemoUITests;
