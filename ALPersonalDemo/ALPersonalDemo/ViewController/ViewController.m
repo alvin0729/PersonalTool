@@ -14,6 +14,7 @@
 #import "ALReactiveCocoaDemoVC.h"
 #import "FileManagerHelper.h"
 #import <CommonCrypto/CommonDigest.h>
+#import "ALOC_Call_SwiftVC.h"
 
 static NSArray *titles;
 
@@ -53,7 +54,7 @@ static NSArray *titles;
     [self.view addSubview:self.tableView];
     
     
-    titles = @[@"ALNetWorkViewController+网络数据类",@"ALToastTableViewController+提示加载",@"ALReactiveCocoaDemoVC+RAC",@"ALDemo1ViewController+暂时显示"];
+    titles = @[@"ALNetWorkViewController+网络数据类",@"ALToastTableViewController+提示加载",@"ALReactiveCocoaDemoVC+RAC",@"ALDemo1ViewController+暂时显示",@"ALOC_Call_SwiftVC+oc-调用swift"];
     [FileManagerHelper deleteObjectWithFile:[NSString stringWithFormat:@"user_jpg"]  folder:nil sandBoxFolder:kUseDocumentTypeLibraryCaches];
     
     /**单词排序*/
@@ -92,12 +93,12 @@ static NSArray *titles;
     }
     
     
-    [self testDemo3];
-    while (1)
-    {
-        [[NSRunLoop currentRunLoop] runUntilDate:[NSDate dateWithTimeIntervalSinceNow:20]];
-        NSLog(@"exiting runloop.........:");
-    }
+//    [self testDemo3];
+//    while (1)
+//    {
+//        [[NSRunLoop currentRunLoop] runUntilDate:[NSDate dateWithTimeIntervalSinceNow:20]];
+//        NSLog(@"exiting runloop.........:");
+//    }
     
 }
 
