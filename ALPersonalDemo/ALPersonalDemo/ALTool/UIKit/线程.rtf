@@ -217,8 +217,8 @@
 \CocoaLigature1 \
 \pard\pardeftab720\partightenfactor0
 
-\f2\fs28 \cf17 \'b4\'fa\'c2\'eb\'bf\'c9\'d2\'d4\'d4\'da\'d3\'c3\'bb\'a7\'d1\'a1\'d4\'f1\'cd\'ac\'d2\'e2\'bb\'f2\'d5\'df\'be\'dc\'be\'f8\'ba\'f3\'a3\'ac\'c1\'a2\'bc\'b4\'d6\'b4\'d0\'d0\'ca\'a3\'cf\'c2\'b5\'c4\'b4\'fa\'c2\'eb\'a3\'ac\'b6\'f8\'b2\'bb\'ca\'c7\'d6\'b1\'bd\'d3\'b7\'b5\'bb\'d8\'a1\'a3
-\f4\fs40 \
+\f2\fs28 \cf17 \cb15 \'b4\'fa\'c2\'eb\'bf\'c9\'d2\'d4\'d4\'da\'d3\'c3\'bb\'a7\'d1\'a1\'d4\'f1\'cd\'ac\'d2\'e2\'bb\'f2\'d5\'df\'be\'dc\'be\'f8\'ba\'f3\'a3\'ac\'c1\'a2\'bc\'b4\'d6\'b4\'d0\'d0\'ca\'a3\'cf\'c2\'b5\'c4\'b4\'fa\'c2\'eb\'a3\'ac\'b6\'f8\'b2\'bb\'ca\'c7\'d6\'b1\'bd\'d3\'b7\'b5\'bb\'d8\'a1\'a3
+\f4\fs40 \cf17 \cb15 \
 \pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
 \ls1\ilvl0
 \f5\b\fs24 \cf18 CFErrorRef
@@ -300,12 +300,14 @@
 \f1\fs26 \cf6 \cb1 \kerning1\expnd0\expndtw0 \CocoaLigature0 dispatch_semaphore_t\cf3  _preloadedLock;
 \f4\fs40 \cf17 \cb15 \expnd0\expndtw0\kerning0
 \CocoaLigature1 \
-\pard\tx642\pardeftab642\pardirnatural\partightenfactor0
 
 \f1\fs26 \cf11 \cb1 \kerning1\expnd0\expndtw0 \CocoaLigature0 _preloadedLock\cf3  = \cf8 dispatch_semaphore_create\cf3 (\cf7 1\cf3 );\
 \cf8 dispatch_semaphore_wait\cf3 (\cf11 _preloadedLock\cf3 , \cf9 DISPATCH_TIME_FOREVER\cf3 );\
 \cf11 _preloadedFrames\cf3  = \cf5 nil\cf3 ;\
-\cf8 dispatch_semaphore_signal\cf3 (\cf11 _preloadedLock\cf3 );
+\cf8 dispatch_semaphore_signal\cf3 (\cf11 _preloadedLock\cf3 );\
+\
+\pard\tx642\pardeftab642\pardirnatural\partightenfactor0
+
 \f4\fs40 \cf17 \cb15 \expnd0\expndtw0\kerning0
 \CocoaLigature1 \
 \pard\tx560\pardeftab720\partightenfactor0
@@ -321,6 +323,9 @@
     \});\
     \cf5 return\cf3  queue;\
 \}\
+\
+\
+\
 \pard\tx642\pardeftab642\pardirnatural\partightenfactor0
 \cf11 _barrierQueue\cf3  = \cf8 dispatch_queue_create\cf3 (\cf10 "com.NewPan.JPVideoPlayerDownloaderOperationBarrierQueue"\cf3 , \cf9 DISPATCH_QUEUE_CONCURRENT\cf3 );\
 \cf8 dispatch_barrier_async\cf3 (\cf5 self\cf3 .\cf11 barrierQueue\cf3 , ^\{\
@@ -333,6 +338,8 @@
         \}\
 \});\
 \
+\
+\
 - (\cf5 nullable\cf3  \cf6 NSArray\cf3 <\cf5 id\cf3 > *)callbacksForKey:(\cf6 NSString\cf3  *)key \{\
     \
     \cf5 __block\cf3  \cf6 NSMutableArray\cf3 <\cf5 id\cf3 > *callbacks = \cf5 nil\cf3 ;\
@@ -343,6 +350,8 @@
     \});\
     \cf5 return\cf3  [callbacks \cf8 copy\cf3 ];    \cf4 // strip mutability here\cf3 \
 \}\
+\
+\
 \
 \pard\pardeftab720\partightenfactor0
 
@@ -462,5 +471,13 @@ dispatch_group_t group = dispatch_group_create();\
 \pard\pardeftab720\partightenfactor0
 
 \fs40 \cf17 \
+\
+\
+\
+\
+\
+\
+\
+\
 \
 }

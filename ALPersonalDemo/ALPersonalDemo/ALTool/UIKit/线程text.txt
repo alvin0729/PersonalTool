@@ -96,3 +96,5 @@ CFRunLoopRunInMode(kCFRunLoopDefaultMode, 1, YES);
 当我们不需要runloop的时候，直接将cancel置为YES即可。
 
 
+
+
