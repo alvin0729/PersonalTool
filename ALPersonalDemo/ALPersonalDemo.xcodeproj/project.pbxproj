@@ -91,6 +91,8 @@
 		CFFF6F291EF91B580092132B /* SSRollingButtonScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = CFFF6F281EF91B580092132B /* SSRollingButtonScrollView.m */; };
 		CFFF6F2C1EF91B7B0092132B /* ALRichTextDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CFFF6F2B1EF91B7B0092132B /* ALRichTextDemoViewController.m */; };
 		CFFF6F2F1EF925440092132B /* WWFontDownloadTask.m in Sources */ = {isa = PBXBuildFile; fileRef = CFFF6F2E1EF925440092132B /* WWFontDownloadTask.m */; };
+		CFFFC3D81FC407E1006B6E5B /* CAAnimation+CCCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = CFFFC3D71FC407E1006B6E5B /* CAAnimation+CCCategory.m */; };
+		CFFFC3DB1FC4091C006B6E5B /* UIView+BNBoom.m in Sources */ = {isa = PBXBuildFile; fileRef = CFFFC3DA1FC4091C006B6E5B /* UIView+BNBoom.m */; };
 		E13C56631EE4231600005CFD /* FCFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E13C56621EE4231600005CFD /* FCFileManager.m */; };
 		E13C56661EE427B600005CFD /* FileManagerHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = E13C56651EE427B600005CFD /* FileManagerHelper.m */; };
 		E13C566E1EE42B8A00005CFD /* HttpTool.m in Sources */ = {isa = PBXBuildFile; fileRef = E13C566D1EE42B8A00005CFD /* HttpTool.m */; };
@@ -473,6 +475,10 @@
 		CFFF6F2B1EF91B7B0092132B /* ALRichTextDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALRichTextDemoViewController.m; sourceTree = "<group>"; };
 		CFFF6F2D1EF925440092132B /* WWFontDownloadTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WWFontDownloadTask.h; sourceTree = "<group>"; };
 		CFFF6F2E1EF925440092132B /* WWFontDownloadTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WWFontDownloadTask.m; sourceTree = "<group>"; };
+		CFFFC3D61FC407E1006B6E5B /* CAAnimation+CCCategory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CAAnimation+CCCategory.h"; sourceTree = "<group>"; };
+		CFFFC3D71FC407E1006B6E5B /* CAAnimation+CCCategory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "CAAnimation+CCCategory.m"; sourceTree = "<group>"; };
+		CFFFC3D91FC4091C006B6E5B /* UIView+BNBoom.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+BNBoom.h"; sourceTree = "<group>"; };
+		CFFFC3DA1FC4091C006B6E5B /* UIView+BNBoom.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+BNBoom.m"; sourceTree = "<group>"; };
 		E13C56611EE4231600005CFD /* FCFileManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FCFileManager.h; sourceTree = "<group>"; };
 		E13C56621EE4231600005CFD /* FCFileManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FCFileManager.m; sourceTree = "<group>"; };
 		E13C56641EE427B600005CFD /* FileManagerHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileManagerHelper.h; sourceTree = "<group>"; };
@@ -1973,6 +1979,8 @@
 				E17E21EF1EDAFB5C0013D3B9 /* UIButton */,
 				E17E21E11EDACCAD0013D3B9 /* UIView */,
 				E17E21C81EDA86470013D3B9 /* UIDevice */,
+				CFFFC3D61FC407E1006B6E5B /* CAAnimation+CCCategory.h */,
+				CFFFC3D71FC407E1006B6E5B /* CAAnimation+CCCategory.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -2037,6 +2045,8 @@
 				E17E21E91EDAF6160013D3B9 /* UIView+Toast.m */,
 				E17E21E51EDAF3C20013D3B9 /* UIView+ALFrame.h */,
 				E17E21E61EDAF3C20013D3B9 /* UIView+ALFrame.m */,
+				CFFFC3D91FC4091C006B6E5B /* UIView+BNBoom.h */,
+				CFFFC3DA1FC4091C006B6E5B /* UIView+BNBoom.m */,
 			);
 			path = UIView;
 			sourceTree = "<group>";
@@ -2614,6 +2624,7 @@
 				E1F661A31EDD9E2E001D98E1 /* UIColor+SSAdd.m in Sources */,
 				E17DCD781F6E6967002DE738 /* NDSearchTool.m in Sources */,
 				CFC88B781F359B8C002C6CE5 /* LCFCollectionViewFlowLayout.m in Sources */,
+				CFFFC3D81FC407E1006B6E5B /* CAAnimation+CCCategory.m in Sources */,
 				E17E21A81EDA7B3A0013D3B9 /* AppDelegate.m in Sources */,
 				CFFF6F291EF91B580092132B /* SSRollingButtonScrollView.m in Sources */,
 				E1540B101EF6534C00D2721F /* UIColor+CIELAB.m in Sources */,
@@ -2649,6 +2660,7 @@
 				E1F661A81EDDA024001D98E1 /* SSUIAdapter.m in Sources */,
 				CFA999481F9062670034391E /* NSObject+VKMsgSend.m in Sources */,
 				E1B5BFEC1FB9E1E900DC0A34 /* ALTestSwiftView.swift in Sources */,
+				CFFFC3DB1FC4091C006B6E5B /* UIView+BNBoom.m in Sources */,
 				E15D70551EF5372200513AE6 /* UINavigationController+FDFullscreenPopGesture.m in Sources */,
 				E1540A761EF64C8800D2721F /* RSKTouchView.m in Sources */,
 				CF6012E51EFA3EDC007CA737 /* ALFontCache.m in Sources */,

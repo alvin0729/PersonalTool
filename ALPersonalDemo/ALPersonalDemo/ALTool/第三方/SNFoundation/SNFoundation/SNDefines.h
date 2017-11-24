@@ -115,4 +115,12 @@ Stuff; \
 _Pragma("clang diagnostic pop") \
 } while (0)
 
+// Debug logging
+#if DEBUG
+#define ICTextViewLog(fmt, ...) NSLog((@"%s [Line %d] " fmt), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__);
+#else
+#define ICTextViewLog(...)
+#endif
+
+
 #endif
