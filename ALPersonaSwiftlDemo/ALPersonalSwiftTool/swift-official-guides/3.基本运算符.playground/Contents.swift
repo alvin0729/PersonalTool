@@ -49,6 +49,9 @@ if name == "world" {
 (1, "zebra") < (2, "apple")
 (3, "apple") < (3, "bird")
 (4, "dog") == (4, "dog")
+
+("blue", -1) < ("purple", 1)        // OK, evaluates to true
+//("blue", false) < ("purple", true)  // Error because < can't compare Boolean values
 //: ### 三目运算符ternary conditional operator
 let contentHeight = 40
 let hasHeader = true
@@ -74,6 +77,25 @@ let count = names.count
 for i in 0..<count {
     print("第\(i + 1)个人叫\(names[i])")
 }
+
+///❤️4.0
+//One-Sided Ranges
+for name in names[2...] {
+    print(name)
+}
+// Brian
+// Jack
+for name in names[...2] {
+    print(name)
+}
+for name in names[..<2] {
+    print("---"+name)
+}
+let range = ...5
+range.contains(7)   // false
+range.contains(4)   // true
+range.contains(-1)  // true
+
 //:### 逻辑运算 logical operators
 //逻辑非!a
 let allowedEntry = false
