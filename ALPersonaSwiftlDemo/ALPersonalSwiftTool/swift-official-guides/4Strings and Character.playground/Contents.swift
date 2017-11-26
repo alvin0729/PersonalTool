@@ -1,8 +1,27 @@
 import UIKit
-/*:>每一个字符串都是由编码无关的Unicode字符串组成*/
+/*:
+>每一个字符串都是由编码无关的Unicode字符串组成*/
 //:### 字符串字面量String Literals
 //可以用于为常量和变量提供初始值
 let someString = "Some string literal value"
+
+let quotation0 = """
+The White Rabbit put on his spectacles.  "Where shall I begin,
+please your Majesty?" he asked.
+
+"Begin at the beginning," the King said gravely, "and go on
+till you come to the end; then stop."
+"""
+let singleLineString = "These are the same."
+let multilineString = """
+These are the same.
+"""
+
+let threeDoubleQuotes = """
+Escaping the first quote \"""
+Escaping all three quotes \"\"\"
+"""
+
 //:### 初始化空字符串(Initializing an Empty String)
 var emptyString = ""                 //空字符串字面量
 var anotherEmptyString = String()     //初始化方法
@@ -18,12 +37,12 @@ let constantString = "Highlander"
 
 //:### 字符串是值类型(strings are value types)
 //使用字符(working with characters)
-for character in "Dog!?".characters{
+for character in "Dog!🐶".characters{
     print(character)
 }
 let exclamationMark:Character = "!"
 //: - callout(Note):字符串可以通过传递一个值类型的Character的数组作为自变量来初始化
-let catCharacters:[Character] = ["C","a","t","!","?"]
+let catCharacters:[Character] = ["C","a","t","!","🐱"]
 let catString = String(catCharacters)
 print(catString)
 //:### 连接字符串和字符（Concatenating Strings and Characters)
@@ -36,6 +55,24 @@ instuction += string2
 let exclamationMark1: Character = "!"
 welcome.append(exclamationMark1)
 
+let badStart = """
+one
+two
+"""
+let end = """
+three
+"""
+print(badStart + end)
+// Prints two lines:
+// one
+// twothree
+
+let goodStart = """
+one
+two
+
+"""
+print(goodStart + end)
 //:### 字符串插值(string interpolation)
 let multiplier = 3
 let message = "\(multiplier) times 2.5 is \(Double(multiplier) * 2.5)"
@@ -58,7 +95,7 @@ let encloseEAcute: Character = "\u{E9}\u{20DD}"
 //地域性指示符号的Unicode标量可以组合成一个单一character值
 let regionalIndicatorForUS: Character = "\u{1F1FA}\u{1F1F8}"
 //:### 计算字符数量（counting characters)
-let unusualMenagerie = "Koala ?, Snail ?, Penguin ?, Dromedary ?"
+let unusualMenagerie = "Koala 🐨, Snail 🐌, Penguin 🐧, Dromedary 🐪"
 print("unusualMenagerie has \(unusualMenagerie.characters.count) characters")
 
 var word = "cafe"
@@ -87,7 +124,8 @@ for index in greeting.characters.indices{
     print("\(greeting[index])", terminator: " ")
 }
 //: - callout(注意):可以使用startIndex和endIndex属性或者index(before:),index(after),index(_:offsetBy:)方法在任意一个确认的并遵循Collection协议的类型里面，如上文所示使用在String中，您可以使用在Array、Dictionary和Set中
-/*:[插入和删除(Inserting and Removing)](license)*/
+/*:
+>[插入和删除(Inserting and Removing)](license)*/
 //调用insert(_:atIndex:)
 var welcome1 = "hello"
 welcome1.insert("!", at: welcome1.endIndex)
@@ -99,6 +137,14 @@ let range = welcome1.index(welcome1.endIndex, offsetBy: -6)..<welcome1.endIndex
 welcome1.removeSubrange(range)
 print(welcome1)
 //上述方法遵循RangeReplaceableCollection协议，同样的有Array、Dictionary和Set
+//:###  ❤️4.0Substrings
+let greeting1 = "Hello, world!"
+let index1 = greeting1.index(of: ",") ?? greeting1.endIndex
+let beginning = greeting1[..<index1]
+// beginning is "Hello"
+
+// Convert the result to a String for long-term storage.
+let newString = String(beginning)
 //:### 比较字符串Comparing Strings
 //String and Character Equality
 let quotation = "We're a lot alike, you and I."
@@ -154,8 +200,19 @@ print("\(mansionCount) mansion scenes; \(cellCount) cell scenes")
 
 //:### 字符串的Unicode表示形式(Unicode Representations of Strings)
 //代码单元：UTF-8、UTF-16、UTF-32
-let dogString = "Dog??"
+let dogString = "Dog‼🐶"
 for codeUnit in dogString.utf8 {
     print("\(codeUnit) ",terminator: "")
 }
 print("")
+for codeUnit in dogString.utf16 {
+    print("\(codeUnit) ", terminator: "")
+}
+print("")
+for scalar in dogString.unicodeScalars {
+    print("\(scalar.value) ", terminator: "")
+}
+print("")
+for scalar in dogString.unicodeScalars {
+    print("\(scalar) ")
+}

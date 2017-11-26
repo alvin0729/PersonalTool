@@ -134,7 +134,8 @@ if convertedNumber != nil {
 if convertedNumber != nil {
     print("convertedNumber has an integer value of \(convertedNumber!).")
 }
-/*: - callout(Note):可选绑定optional binding来判断可选类型是否包含值\
+/*:
+>可选绑定optional binding来判断可选类型是否包含值\
 >if let constantName = someOptional{\
     //statements\
 >}
@@ -200,3 +201,15 @@ do {
 //:### 断言
 let age = 3
 assert(age >= 0, "A person's age cannot be less than zero")
+
+//❤️4.0
+//:### Enforcing Preconditions
+/*:
+ For example, use a precondition to check that a subscript is not out of bounds, or to check that a function has been passed a valid value.
+ */
+// In the implementation of a subscript...
+var index: Int = 1
+precondition(index > 0, "Index must be greater than zero.")
+
+
+

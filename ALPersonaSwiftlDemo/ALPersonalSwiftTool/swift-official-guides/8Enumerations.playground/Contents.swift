@@ -1,4 +1,5 @@
-/*: ## 枚举-Enumerations */
+/*:
+ >枚举-Enumerations */
 //:在 Swift中，枚举类型是一等(first-class)类型。它们采用了很多在传统上只被类(class)所支持的特性，例如计算型属性(computed properties)，用于提供枚举值的附加信息，实例方法(instance methods)，用于提供和枚举值相关联的功能。枚举也可以定义构造函数(initializers)来提供一个初始值;可以在原始实现的基础上扩展它们的功能;还可以遵守协议(protocols)来提供标准的功能。
 //枚举语法
 enum CompassPoint {

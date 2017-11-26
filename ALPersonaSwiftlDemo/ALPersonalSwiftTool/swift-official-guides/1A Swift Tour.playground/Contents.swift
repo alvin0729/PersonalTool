@@ -67,7 +67,7 @@ for score in individualScores {
 print("-----",teamScore)
 /*:
  >**[在if语句中，条件必须是一个布尔表达式--这意味着像if score{...}这样的代码将报错，而不会隐形地与0做对比]()**\
- >一起使用if和let来处理值缺失的情况。在类型后面加一个`?`来标记这个变量的值是可选的
+ >**一起使用if和let来处理值缺失的情况。在类型后面加一个`?`来标记这个变量的值是可选的**
  */
 var optionalString : String? = "Hello"
 print(optionalString == nil)
@@ -139,7 +139,7 @@ for i in 0..<4 {
     total += i
 }
 print(total)
-/*:   ## 函数和闭包*/
+//: ## 函数和闭包
 func greet(name: String, day: String) -> String{
     return "Hello \(name), today is \(day)."
 }
@@ -349,7 +349,29 @@ print(triangleAndSquare.triangle.sideLength)
  */
 let optionalSquare: Square? = Square(sideLength: 2.5, name: "optional square")
 let sideLength = optionalSquare?.sideLength
-/*:  ## 枚举和结构体*/
+
+enum Rank1: Int {
+    case Ace = 1
+    case Two, Three, Four, Five, Six, Seven, Eight, Nine, Ten
+    case Jack, Queen, King
+    func simpleDescription() -> String {
+        switch self {
+        case .Ace:
+            return "ace"
+        case .Jack:
+            return "jack"
+        case .Queen:
+            return "queen"
+        case .King:
+            return "king"
+        default: //使用rawValue属性来访问一个枚举成员的原始值
+            return String(self.rawValue)
+        }
+    }
+}
+let ace1 = Rank1.Jack
+let aceRawValue1 = ace1.rawValue
+//:  ## 枚举和结构体
 enum Rank: Int {
     case Ace = 1
     case Two, Three, Four, Five, Six, Seven, Eight, Nine, Ten
@@ -429,7 +451,7 @@ case let .Failure(message):
     print("Failure...\(message)")
 }
 
-/*:  ## 协议和扩展*/
+//:  ## 协议和扩展
 protocol ExampleProtocol{
     var simpleDescription: String{get}
     mutating func adjust()
@@ -478,7 +500,7 @@ print(protocolValue.simpleDescription)
  >print(protocolValue.anotherProperty)   //Uncomment to see the error\
  >即使protocolValue变量运行时的类型是simpleClass，编译器会把它的类型当做ExampleProtocol。这表示你不能调用类在它实现的协议之外实现的方法或者属性。
  */
-/*:   ## 错误处理*/
+//:   ## 错误处理
 /*:
  >**采用Errortype协议的类型来表示错误**
  */
@@ -538,7 +560,7 @@ func fridgeContains(itemName: String) ->Bool{
 }
 fridgeContains(itemName: "banana")
 print(fridgeIsOpen)
-/*:   ## 泛型*/
+//:   ## 泛型
 func repeatItem<Item>(item: Item, numberOfTimes: Int) -> [Item]{
     var result = [Item]()
     for _ in 0..<numberOfTimes {
@@ -551,6 +573,15 @@ repeatItem(item: "knock", numberOfTimes: 4)
  >可以创建泛型函数、方法、类、枚举和结构体
  >Reimplement the Swift standard library's optional type
  */
+func makeArray<Item>(repeating item: Item, numberOfTimes: Int) -> [Item] {
+    var result = [Item]()
+    for _ in 0..<numberOfTimes {
+        result.append(item)
+    }
+    return result
+}
+makeArray(repeating: "knock", numberOfTimes: 4)
+
 enum OptionalValue<Wrapped>{
     case None
     case Some(Wrapped)

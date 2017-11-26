@@ -32,7 +32,8 @@ greet1(person: "Dave")
 //: - callout(Note):被调用时，一个函数的返回值可以被忽略
 func printAndCount(string: String) -> Int{
     print(string)
-    return string.characters.count
+    return string.count
+    //return string.characters.count
 }
 func printWithoutCounting(string: String){
     //若定义了有返回值的函数必须返回一个值，若没有。。。。
@@ -196,6 +197,12 @@ reversedNames = names.sorted(by:{(_ s1: String, _ s2 : String) -> Bool in
 })
 //:根据上下文推断类型Inferring type from context
 reversedNames = names.sorted(by:{ s1 , s2 in return s1 > s2 })
+//Shorthand Argument Names
+//reversedNames = names.sorted(by: { $0 > $1 } )
+//Here, $0 and $1 refer to the closure’s first and second String arguments.
+
+//Operator Methods
+//reversedNames = names.sorted(by: >)
 //: - 单表达式闭包隐式返回（Implicit returns from single-expression closures
 reversedNames = names.sorted(by:{ s1 , s2 in s1 > s2 })
 //: - 参数名称缩写shorthand argument names

@@ -154,6 +154,9 @@ for airportName in airports.values {
     print("Airport name: \(airportName)")
 }
 
-let airportCodes = String()
-let airportName = String()
+let airportCodes = [String](airports.keys)
+// airportCodes is ["YYZ", "LHR"]
+
+let airportNames = [String](airports.values)
+// airportNames is ["Toronto Pearson", "London Heathrow"]
 

@@ -1,4 +1,4 @@
-/*: # 下标(Subscripts)*/
+//: ## 下标(Subscripts)
 //:下标允许你通过在实例名称后面的方括号中传入一个或者多个索引值来对实例进行存取。
 /*:
  ```
@@ -62,7 +62,7 @@ var matrix = Matrix(rows: 2, columns: 2)
 matrix[0,1] = 1.5
 matrix[1,0] = 3.2
 //let someValue = matrix[2,2]
-/*: # 继承(Inheritance)*/
+//: # 继承(Inheritance)
 //:在 Swift 中，继承是区分「类」与其它类型的一个基本特征。\
 //:可以为类中继承来的属性添加属性观察器(property observers)\
 //:**定义一个基类(Defining a Base Class)**
@@ -141,11 +141,12 @@ print("AutomaticCar: \(automatic.description)")
 //:在类扩展中的方法，属性或下标也可以在扩展的定义里标记为 final 的。\
 //:你可以通过在关键字class前添加final修饰符(final  class)来将整个类标记为 final 的。这样的类是不可被继承的，试图继承这样的类会导致编译报错。
 
-/*: # 构造过程(Initialization)*/
+//: ## 构造过程(Initialization)
 //:构造过程是使用类、结构体或枚举类型的实例之前的准备过程。\
 //:存储属性的初始赋值(类和结构体在创建实例时，必须为所有存储型属性设置合适的初始值。存储型属性的值不能处于一个未知的状态。)
 //: - callout(注意): 当你为存储型属性设置默认值或者在构造器中为其赋值时，它们的值是被直接设置的，不会触发任何属性观察者( property observers )。
-/*:构造器*/
+
+//:构造器
 struct Fahrenheit {
     var temperature: Double
     init() {
@@ -372,7 +373,7 @@ class ShoppingListItem1: RecipeIngredient {
     var purchased = false
     var description: String {
         var output = "\(quantity) x \(name)"
-        output += purchased ? " ?" : " ?"
+        output += purchased ? " ✔" : " ✘"
         return output
     }
 }
@@ -389,6 +390,23 @@ for item in breakfastList {
 //: ### 可失败构造器
 //:可失败构造器的参数名和参数类型，不能与其它非可失败构造器的参数名，及其参数类型相同。
 //: - callout(注意): 严格来说，构造器都不支持返回值。因为构造器本身的作用，只是为了确保对象能被正确构造。因此你只是用 return nil 表明可失败构造器构造失败，而不要用关键字 return 来表明构造成功。
+print("=====================================")
+let wholeNumber: Double = 12345.0
+let pi = 3.14159
+
+if let valueMaintained = Int(exactly: wholeNumber) {
+    print("\(wholeNumber) conversion to Int maintains value of \(valueMaintained)")
+}
+// Prints "12345.0 conversion to Int maintains value of 12345"
+
+let valueChanged = Int(exactly: pi)
+// valueChanged is of type Int?, not Int
+
+if valueChanged == nil {
+    print("\(pi) conversion to Int does not maintain value")
+}
+// Prints "3.14159 conversion to Int does not maintain value"
+
 struct Animal {
     let species: String
     init?(species: String) {

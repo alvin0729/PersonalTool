@@ -1,4 +1,4 @@
-/*: # 类和结构体*/
+//: # 类和结构体
 //: ## 定义语法
 /*:
  ```
@@ -70,7 +70,7 @@ if tenEighty === alsoTenEighty {
 //:类和结构体的选择
 //:结构体实例总是通过值传递，类实例总是通过引用传递。
 //字符串(String)、数组(Array)、和字典(Dictionary)类型的赋值与复制行为
-/*: ## 属性Properties*/
+//: # 属性Properties
 //:计算属性可以用于类、结构体和枚举，存储属性只能用于类和结构体。\
 //:存储属性和计算属性通常与特定类型的实例关联。但是，属性也可以直接作用于类型本身，这种属性称为类型属性。
 //存储属性
@@ -229,7 +229,7 @@ print(AudioChannel.maxInputLevelForAllChannels)
 rightChannel.currentLevel = 11
 print(rightChannel.currentLevel)
 print(AudioChannel.maxInputLevelForAllChannels)
-/*: ## 方法methods*/
+//: ## 方法methods
 //: #### 实例方法 (Instance Methods)
 //:实例方法能够隐式访问它所属类型的所有的其他实例方法和属性。实例方法只能被它所属的类的某个特定实例调用。实例方法不能脱离于现存的实例而被调用。
 class Counter {
@@ -248,6 +248,7 @@ let counter = Counter()
 counter.increment()
 counter.incrementBy(amount: 5)
 counter.reset()
+
 //:方法的局部参数名称和外部参数名称 (Local and External Parameter Names for Methods)\
 //:Swift默认仅给方法的第一个参数名称一个局部参数名称;默认同时给第二个和后续的参数名称局部参数名称和外部参数名称。
 class Counter1 {
@@ -295,6 +296,9 @@ print("The point is now at (\(somePoint.x), \(somePoint.y))")
 //该方法被调用时修改了这个点，而不是返回一个新的点。
 //: - callout(注意):不能在结构体类型的常量(a constant of structure type)上调用可变方法，因为其属性不能被改变，即使属性是变量属性
 let fixedPoint = Point(x: 3.0, y: 3.0)
+//fixedPoint.moveBy(x: 2.0, y: 3.0)
+// this will report an error
+
 //: - experiment:fixedPoint.moveByX(2.0, y: 3.0)\
 //:这里将会报告一个错误
 
@@ -342,6 +346,7 @@ struct LevelTracker {
         return level <= highestUnlockedLevel
     }
     var currentLevel = 1
+    @discardableResult
     mutating func advanceToLevel(level: Int) -> Bool{
         if LevelTracker.levelIsUnlocked(level: level) {
             currentLevel = level

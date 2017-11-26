@@ -1,5 +1,5 @@
 import UIKit
-/*: ## 可选链式调用(Optional Chaining)*/
+//: ## 可选链式调用(Optional Chaining)
 //: #### 使用可选链式调用代替强制展开
 //willRotateToInterfaceOrientation
 class Person{
@@ -59,7 +59,7 @@ class Address{
     func buildingIdentifier() -> String? {
         if buildingName != nil {
             return buildingName
-        } else if buildingNumber != nil && street != nil{
+        } else if let buildingNumber = buildingNumber, let street = street{
             return "\(buildingNumber) \(street)"
         } else {
             return nil
@@ -118,6 +118,7 @@ if let firstRoomName = john1.residence?[0].name{
 } else {
     print("Unable to retrieve the first room name.")
 }
+
 //: **访问可选类型的下标**
 var testScores = ["Dave":[86,82,84], "Bev": [79,94,81]]
 testScores["Dave"]?[0] = 91
@@ -214,6 +215,8 @@ struct Purchasedsnack {
         self.name = name
     }
 }
+//func canThrowErrors() throws -> String
+//func cannotThrowErrors() -> String
 //:**用 Do-Catch 处理错误**
 /*:
  ```

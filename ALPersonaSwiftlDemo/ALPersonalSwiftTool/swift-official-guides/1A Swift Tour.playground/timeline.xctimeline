@@ -3,32 +3,47 @@
    version = "3.0">
    <TimelineItems>
       <LoggerValueHistoryTimelineItem
-         documentLocation = "file:///Users/alvin/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/swift_4.0/1A%20Swift%20Tour.playground#CharacterRangeLen=9&amp;CharacterRangeLoc=581&amp;EndingColumnNumber=14&amp;EndingLineNumber=30&amp;StartingColumnNumber=5&amp;StartingLineNumber=30&amp;Timestamp=522495289.259267"
+         documentLocation = "file:///Users/alvin/GitLab/PersonalTool/ALPersonaSwiftlDemo/ALPersonalSwiftTool/swift-official-guides/1A%20Swift%20Tour.playground#CharacterRangeLen=9&amp;CharacterRangeLoc=581&amp;EndingColumnNumber=14&amp;EndingLineNumber=30&amp;StartingColumnNumber=5&amp;StartingLineNumber=30&amp;Timestamp=533311530.260554"
          selectedRepresentationIndex = "0"
          shouldTrackSuperviewWidth = "NO">
       </LoggerValueHistoryTimelineItem>
       <LoggerValueHistoryTimelineItem
-         documentLocation = "file:///Users/alvin/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/swift_4.0/1A%20Swift%20Tour.playground#CharacterRangeLen=11&amp;CharacterRangeLoc=952&amp;EndingColumnNumber=16&amp;EndingLineNumber=43&amp;StartingColumnNumber=5&amp;StartingLineNumber=43&amp;Timestamp=522495289.259423"
+         documentLocation = "file:///Users/alvin/GitLab/PersonalTool/ALPersonaSwiftlDemo/ALPersonalSwiftTool/swift-official-guides/1A%20Swift%20Tour.playground#CharacterRangeLen=11&amp;CharacterRangeLoc=952&amp;EndingColumnNumber=16&amp;EndingLineNumber=43&amp;StartingColumnNumber=5&amp;StartingLineNumber=43&amp;Timestamp=533311530.260689"
          selectedRepresentationIndex = "0"
          shouldTrackSuperviewWidth = "NO">
       </LoggerValueHistoryTimelineItem>
       <LoggerValueHistoryTimelineItem
-         documentLocation = "file:///Users/alvin/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/swift_4.0/1A%20Swift%20Tour.playground#CharacterRangeLen=17&amp;CharacterRangeLoc=930&amp;EndingColumnNumber=0&amp;EndingLineNumber=43&amp;StartingColumnNumber=19&amp;StartingLineNumber=42&amp;Timestamp=522495289.25952"
+         documentLocation = "file:///Users/alvin/GitLab/PersonalTool/ALPersonaSwiftlDemo/ALPersonalSwiftTool/swift-official-guides/1A%20Swift%20Tour.playground#CharacterRangeLen=17&amp;CharacterRangeLoc=930&amp;EndingColumnNumber=0&amp;EndingLineNumber=43&amp;StartingColumnNumber=19&amp;StartingLineNumber=42&amp;Timestamp=533311530.260791"
          selectedRepresentationIndex = "0"
          shouldTrackSuperviewWidth = "NO">
       </LoggerValueHistoryTimelineItem>
       <LoggerValueHistoryTimelineItem
-         documentLocation = "file:///Users/alvin/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/swift_4.0/1A%20Swift%20Tour.playground#CharacterRangeLen=12&amp;CharacterRangeLoc=852&amp;EndingColumnNumber=17&amp;EndingLineNumber=41&amp;StartingColumnNumber=5&amp;StartingLineNumber=41&amp;Timestamp=522495289.259725"
+         documentLocation = "file:///Users/alvin/GitLab/PersonalTool/ALPersonaSwiftlDemo/ALPersonalSwiftTool/swift-official-guides/1A%20Swift%20Tour.playground#CharacterRangeLen=12&amp;CharacterRangeLoc=852&amp;EndingColumnNumber=17&amp;EndingLineNumber=41&amp;StartingColumnNumber=5&amp;StartingLineNumber=41&amp;Timestamp=533311530.26089"
          selectedRepresentationIndex = "0"
          shouldTrackSuperviewWidth = "NO">
       </LoggerValueHistoryTimelineItem>
       <LoggerValueHistoryTimelineItem
-         documentLocation = "file:///Users/alvin/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/swift_4.0/1A%20Swift%20Tour.playground#CharacterRangeLen=18&amp;CharacterRangeLoc=1046&amp;EndingColumnNumber=0&amp;EndingLineNumber=47&amp;StartingColumnNumber=24&amp;StartingLineNumber=46&amp;Timestamp=522495289.259918"
+         documentLocation = "file:///Users/alvin/GitLab/PersonalTool/ALPersonaSwiftlDemo/ALPersonalSwiftTool/swift-official-guides/1A%20Swift%20Tour.playground#CharacterRangeLen=18&amp;CharacterRangeLoc=1046&amp;EndingColumnNumber=0&amp;EndingLineNumber=47&amp;StartingColumnNumber=24&amp;StartingLineNumber=46&amp;Timestamp=533311530.260986"
          selectedRepresentationIndex = "0"
          shouldTrackSuperviewWidth = "NO">
       </LoggerValueHistoryTimelineItem>
       <LoggerValueHistoryTimelineItem
-         documentLocation = "file:///Users/alvin/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/swift_4.0/1A%20Swift%20Tour.playground#CharacterRangeLen=28&amp;CharacterRangeLoc=1580&amp;EndingColumnNumber=0&amp;EndingLineNumber=73&amp;StartingColumnNumber=1&amp;StartingLineNumber=72&amp;Timestamp=522495289.260101"
+         documentLocation = "file:///Users/alvin/GitLab/PersonalTool/ALPersonaSwiftlDemo/ALPersonalSwiftTool/swift-official-guides/1A%20Swift%20Tour.playground#CharacterRangeLen=28&amp;CharacterRangeLoc=1584&amp;EndingColumnNumber=0&amp;EndingLineNumber=73&amp;StartingColumnNumber=1&amp;StartingLineNumber=72&amp;Timestamp=533311530.261084"
+         selectedRepresentationIndex = "0"
+         shouldTrackSuperviewWidth = "NO">
+      </LoggerValueHistoryTimelineItem>
+      <LoggerValueHistoryTimelineItem
+         documentLocation = "file:///Users/alvin/GitLab/PersonalTool/ALPersonaSwiftlDemo/ALPersonalSwiftTool/swift-official-guides/1A%20Swift%20Tour.playground#CharacterRangeLen=10&amp;CharacterRangeLoc=4777&amp;EndingColumnNumber=54&amp;EndingLineNumber=232&amp;StartingColumnNumber=44&amp;StartingLineNumber=232&amp;Timestamp=533311530.261178"
+         selectedRepresentationIndex = "0"
+         shouldTrackSuperviewWidth = "NO">
+      </LoggerValueHistoryTimelineItem>
+      <LoggerValueHistoryTimelineItem
+         documentLocation = "file:///Users/alvin/GitLab/PersonalTool/ALPersonaSwiftlDemo/ALPersonalSwiftTool/swift-official-guides/1A%20Swift%20Tour.playground#CharacterRangeLen=38&amp;CharacterRangeLoc=11267&amp;EndingColumnNumber=0&amp;EndingLineNumber=496&amp;StartingColumnNumber=1&amp;StartingLineNumber=495&amp;Timestamp=533311530.261273"
+         selectedRepresentationIndex = "0"
+         shouldTrackSuperviewWidth = "NO">
+      </LoggerValueHistoryTimelineItem>
+      <LoggerValueHistoryTimelineItem
+         documentLocation = "file:///Users/alvin/GitLab/PersonalTool/ALPersonaSwiftlDemo/ALPersonalSwiftTool/swift-official-guides/1A%20Swift%20Tour.playground#CharacterRangeLen=12&amp;CharacterRangeLoc=10676&amp;EndingColumnNumber=17&amp;EndingLineNumber=470&amp;StartingColumnNumber=5&amp;StartingLineNumber=470&amp;Timestamp=533311530.261368"
          selectedRepresentationIndex = "0"
          shouldTrackSuperviewWidth = "NO">
       </LoggerValueHistoryTimelineItem>

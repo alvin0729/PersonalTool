@@ -16,6 +16,26 @@ let names = ["Anna,", "Alex", "Brian", "Jack"]
 for name in names {
     print("Hello, \(name)!")
 }
+
+let numberOfLegs = ["spider": 8, "ant": 6, "cat": 4]
+for (animalName, legCount) in numberOfLegs {
+    print("\(animalName)s have \(legCount) legs")
+}
+let minutes = 60
+for tickMark in 0..<minutes {
+    // render the tick mark each minute (60 times)
+}
+//❤️4.0
+let minuteInterval = 5
+for tickMark in stride(from: 0, to: minutes, by: minuteInterval) {
+    // render the tick mark every 5 minutes (0, 5, 10, 15 ... 45, 50, 55)
+}
+let hours = 12
+let hourInterval = 3
+for tickMark in stride(from: 3, through: hours, by: hourInterval) {
+    // render the tick mark every 3 hours (3, 6, 9, 12)
+}
+
 //: ### While循环
 let finalSquare = 25
 var board = [Int](repeating:0, count: finalSquare + 1)
@@ -131,6 +151,9 @@ switch someCharacter {
 case "a","e","i",
     "o","u":
     print("\(someCharacter) is a vowel")
+case "b", "c", "d", "f", "g", "h", "j", "k", "l", "m",
+     "n", "p", "q", "r", "s", "t", "v", "w", "x", "y", "z":
+    print("\(someCharacter) is a consonant")
 default:
     print("\(someCharacter) is not a vowel")
 }
@@ -149,30 +172,31 @@ default:
 //continue
 let puzzleInput = "great minds think alike"
 var puzzleOutput = ""
-for character in puzzleInput.characters {
-    switch character {
-    case "a","e","i","o","u"," ":
+let charactersToRemove: [Character] = ["a", "e", "i", "o", "u", " "]
+for character in puzzleInput {
+    if charactersToRemove.contains(character) {
         continue
-    default:
+    } else {
         puzzleOutput.append(character)
     }
 }
 print(puzzleOutput)
+// Prints "grtmndsthnklk"
 
 //break
 //循环语句中的break
 //switch语句中的break
 
-let numberSymbol: Character = "三"
+let numberSymbol: Character = "三"  // Chinese symbol for the number 3
 var possibleIntegerValue: Int?
 switch numberSymbol {
-case "1","?","一","?":
+case "1", "١", "一", "๑":
     possibleIntegerValue = 1
-case "2","?","二","?":
+case "2", "٢", "二", "๒":
     possibleIntegerValue = 2
-case "3","?","三","?":
+case "3", "٣", "三", "๓":
     possibleIntegerValue = 3
-case "4","?","四","?":
+case "4", "٤", "四", "๔":
     possibleIntegerValue = 4
 default:
     break

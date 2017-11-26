@@ -3,38 +3,39 @@ import UIKit
 //:析构器实践
 class Bank {
     static var coinsInBank = 10_000
-    static func vendCoins(numberOfCoinsRequested: Int) -> Int {
+    static func distribute(coins numberOfCoinsRequested: Int) -> Int {
         let numberOfCoinsToVend = min(numberOfCoinsRequested, coinsInBank)
         coinsInBank -= numberOfCoinsToVend
         return numberOfCoinsToVend
     }
-    static func receiveCoin(coins: Int) {
+    static func receive(coins: Int) {
         coinsInBank += coins
     }
 }
 class Player {
     var coinsInPurse: Int
     init(coins: Int) {
-        coinsInPurse = Bank.vendCoins(numberOfCoinsRequested: coins)
+        coinsInPurse = Bank.distribute(coins: coins)
     }
-    func winCoins(coins: Int) {
-        coinsInPurse += Bank.vendCoins(numberOfCoinsRequested: coins)
+    func win(coins: Int) {
+        coinsInPurse += Bank.distribute(coins: coins)
     }
     deinit {
-        Bank.receiveCoin(coins: coinsInPurse)
+        Bank.receive(coins: coinsInPurse)
     }
 }
+
 var playerOne: Player? = Player(coins: 100)
 print("A new player has joined the game with \(playerOne!.coinsInPurse) coins")
 print("There are now \(Bank.coinsInBank) coins left in the bank")
-playerOne!.winCoins(coins: 2_000)
+playerOne!.win(coins: 2_000)
 print("PlayerOne won 2000 coins & now has \(playerOne!.coinsInPurse) coins")
 print("The bank now only has \(Bank.coinsInBank) coins left")
 
 playerOne = nil
 print("PlayerOne has left the game")
 print("The bank now has \(Bank.coinsInBank) coins")
-/*: ## 自动引用计数(Automatic Reference Counting*/
+//: ## 自动引用计数(Automatic Reference Counting
 //: **自动引用计数的工作机制**\
 //:无论你将实例赋值给属性、常量或变量，它们都会创建此实例的强引用。
 //:自动引用计数实践
@@ -174,7 +175,7 @@ class HTMLElement {
     let name: String
     let text: String?
     //在默认的闭包中可以使用 self ，因为只有当初始化完成以及 self 确实存在后，才能访问 lazy 属性。
-    lazy var asHTML:(Void) ->String = {
+    lazy var asHTML:() ->String = {
         //无主引用
         [unowned self] in
         if let text = self.text {
@@ -218,7 +219,7 @@ lazy var someClosure:(Int,String) -> String = {
 /*:
  ```
  如果闭包没有指明参数列表或者返回类型，即它们会通过上下文推断，那么可以把捕获列表和关键字 in 放在闭包 最开始的地方:
- lazy var someClosure: Void -> String = {
+ lazy var someClosure: () -> String = {
          [unowned self, weak delegate = self.delegate!] in // 这里是闭包的函数体
  }
  ```*/
