@@ -1,4 +1,76 @@
 import UIKit
+//: ## Memory Safety - 4.0
+
+//: #### Understanding Conflicting Access to Memory
+// A write access to the memory where one is stored.
+var one = 1
+// A read access from the memory where one is stored.
+print("We're number \(one)!")
+//: Characteristics of Memory Access
+func oneMore(than number: Int) -> Int {
+    return number + 1
+}
+var myNumber = 1
+myNumber = oneMore(than: myNumber)
+print(myNumber)
+//: ### Conflicting Access to In-Out Parameters
+var stepSize = 1
+func incrementInPlace(_ number: inout Int) {
+    number += stepSize
+}
+incrementInPlace(&stepSize)
+// Error: conflicting accesses to stepSize
+//One way to solve this conflict is to make an explicit copy of stepSize:
+//: - callout(注意): Make an explicit copy.
+var copyOfStepSize = stepSize
+incrementInPlace(&copyOfStepSize)
+// Update the original.
+stepSize = copyOfStepSize
+// stepSize is now 2
+
+func balance(_ x: inout Int, _ y: inout Int) {
+    let sum = x + y
+    x = sum / 2
+    y = sum - x
+}
+var playerOneScore = 42
+var playerTwoScore = 30
+balance(&playerOneScore, &playerTwoScore)  // OK
+//balance(&playerOneScore, &playerOneScore)
+// Error: Conflicting accesses to playerOneScore
+//: ### Conflicting Access to self in Methods
+struct Player {
+    var name: String
+    var health: Int
+    var energy: Int
+    
+    static let maxHealth = 10
+    mutating func restoreHealth() {
+        health = Player.maxHealth
+    }
+}
+extension Player {
+    mutating func shareHealth(with teammate: inout Player) {
+        balance(&teammate.health, &health)
+    }
+}
+var oscar = Player(name: "Oscar", health: 10, energy: 10)
+var maria = Player(name: "Maria", health: 5, energy: 10)
+oscar.shareHealth(with: &maria)  // OK
+////oscar.shareHealth(with: &oscar)
+// Error: conflicting accesses to oscar
+//: ### Conflicting Access to Properties
+var playerInformation = (health: 10, energy: 20)
+balance(&playerInformation.health, &playerInformation.energy)
+// Error: conflicting access to properties of playerInformation
+
+var holly = Player(name: "Holly", health: 10, energy: 10)
+balance(&holly.health, &holly.energy)  // Error
+
+func someFunction() {
+    var oscar = Player(name: "Oscar", health: 10, energy: 10)
+    balance(&oscar.health, &oscar.energy)  // OK
+}
 //: ## 访问控制
 //: ### 模块和源文件
 //: 模块指的是独立的代码单元，框架或应用程序会作为一个独立的模块来构建和发布。在 Swift 中，一个模块可以使用 import 关键字导入另外一个模块。
@@ -79,12 +151,21 @@ internal class B: A{
         super.someMethod()
     }
 }
+internal class C: A {
+    override internal func someMethod() {
+        super.someMethod()
+    }
+}
+//Because superclass A and subclass C are defined in the same source file, it’s valid for the C implementation of someMethod() to call super.someMethod().
+
 //: 可以在子类中，用子类成员去访问访问级别更低的父类成员，只要这一操作在相应访问级别的限制范围内（也就是说，在同一源文件中访问父类 fileprivate 级别的成员，在同一模块内访问父类 internal 级别的成员）
 //: ### 常量、变量、属性、下标
 //: 常量、变量、属性不能拥有比它们的类型更高的访问级别。
 //: **Getter 和 Setter**\
 //: 常量、变量、属性、下标的 Getters 和 Setters 的访问级别和它们所属类型的访问级别相同。\
 //: Setter 的访问级别可以低于对应的 Getter 的访问级别，这样就可以控制变量、属性或下标的读写权限。在 var 或 subscript 关键字之前，你可以通过 fileprivate(set)，private(set) 或 internal(set) 为它们的写入权限指定更低的访问级别。
+//private var privateInstance = SomePrivateClass()
+
 struct TrackedString {
     private(set) var numberOfEdits = 0
     var value: String = ""{
@@ -127,6 +208,20 @@ print("The number of edits is \(stringToEdit.numberOfEdits)")
 //: 如果你采纳了协议，那么实现了协议的所有要求后，你必须确保这些实现的访问级别不能低于协议的访问级别。例如，一个 public 级别的类型，采纳了 internal 级别的协议，那么协议的实现至少也得是 internal 级别。
 //: ### 扩展
 //: 扩展成员具有和原始类型成员一致的访问级别。例如，你扩展了一个 public 或者 internal 类型，扩展中的成员具有默认的 internal 访问级别，和原始类型中的成员一致 。如果你扩展了一个 private 类型，扩展成员则拥有默认的 private 访问级别。
+protocol SomeProtocol {
+    func doSomething()
+}
+struct SomeStruct {
+    private var privateVariable = 12
+}
+
+extension SomeStruct: SomeProtocol {
+    func doSomething() {
+        print(privateVariable)
+    }
+}
+var structDemo : SomeStruct = SomeStruct();
+structDemo.doSomething()
 
 //: **通过扩展添加协议一致性**\
 //: 如果你通过扩展来采纳协议，那么你就不能显式指定该扩展的访问级别了。协议拥有相应的访问级别，并会为该扩展中所有协议要求的实现提供默认的访问级别。

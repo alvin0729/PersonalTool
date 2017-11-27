@@ -42,7 +42,7 @@ let heartsSymbol = BlackjackCard.Suit.Hearts.rawValue
 //: ## 拓展（Extensions）
 //: - 添加计算型属性和计算型类型属性
 //: - 定义实例方法和类型方法
-//: - 定义实例方法和类型方法
+//: - Provide new initializers
 //: - 定义下标
 //: - 定义和使用新的嵌套类型
 //: - 使一个已有类型符合某个协议\
@@ -73,6 +73,8 @@ let threeFeet = 3.ft
 print("Three feet is \(threeFeet) meters")
 let aMarathon = 42.km + 195.m
 print("A marathon is \(aMarathon) meter long")
+
+/**Extensions can add new computed properties, but they cannot add stored properties, or add property observers to existing properties.*/
 //: - callout(注意): 如果你通过扩展为一个已有类型添加新功能，那么新功能对该类型的所有已有实例都是可用的，即使它们是在这个扩展定义之前创建的。
 //: ### 构造器
 //: - callout(注意): 如果你使用扩展为一个值类型添加构造器，同时该值类型的原始实现中未定义任何定制的构造器且所有存储属性提供了默认值，那么我们就可以在扩展中的构造器里调用默认构造器和逐一成员构造器。
@@ -128,6 +130,10 @@ extension Int{
 }
 746381295[0]
 746381295[8]
+746381295[9]
+// returns 0, as if you had requested:
+0746381295[9]
+
 //: ### 嵌套类型
 extension Int{
     enum Kind {

@@ -268,6 +268,10 @@ print(game.prettyTextDescription)
  protocol SomeClassOnlyProtocol: class, SomeInheritedProtocol {
  // 这里是类类型专属协议的定义部分
  }
+ //4.0
+ protocol SomeClassOnlyProtocol: AnyObject, SomeInheritedProtocol {
+ // class-only protocol definition goes here
+ }
 ```*/
 //: ### 协议合成
 //: 有时候需要同时遵循多个协议，你可以将多个协议采用 SomeProtocol & AnotherProtocol 这样的格式进行组合，称为 协议合成（protocol composition）。你可以罗列任意多个你想要遵循的协议，以与符号(&)分隔。
@@ -286,6 +290,29 @@ func wishHappyBirthday(to celebrator:Named & Aged){
 }
 let birthdayPerson = Person1(name: "Malcolm", age: 21)
 wishHappyBirthday(to: birthdayPerson)
+
+class Location {
+    var latitude: Double
+    var longitude: Double
+    init(latitude: Double, longitude: Double) {
+        self.latitude = latitude
+        self.longitude = longitude
+    }
+}
+class City: Location, Named {
+    var name: String
+    init(name: String, latitude: Double, longitude: Double) {
+        self.name = name
+        super.init(latitude: latitude, longitude: longitude)
+    }
+}
+func beginConcert(in location: Location & Named) {
+    print("Hello, \(location.name)!")
+}
+
+let seattle = City(name: "Seattle", latitude: 47.6, longitude: -122.3)
+beginConcert(in: seattle)
+// Prints "Hello, Seattle!"
 //: - callout(注意): 协议合成并不会生成新的、永久的协议类型，而是将多个协议中的要求合成到一个只在局部作用域有效的临时协议中。
 //: ### 检查协议一致性
 //: -    is 用来检查实例是否符合某个协议，若符合则返回 true，否则返回 false。
