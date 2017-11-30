@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CFBFA2521FCE4F8C00A0EE4B /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFBFA2511FCE4F8600A0EE4B /* Extensions.swift */; };
+		CFBFA2551FCE7A0800A0EE4B /* CollapsibleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFBFA2541FCE7A0800A0EE4B /* CollapsibleTableViewCell.swift */; };
+		CFBFA2571FCE7FCB00A0EE4B /* ExampleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFBFA2561FCE7FCB00A0EE4B /* ExampleData.swift */; };
+		CFBFA2591FCE812B00A0EE4B /* CollapsibleTableViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFBFA2581FCE812B00A0EE4B /* CollapsibleTableViewHeader.swift */; };
+		CFBFA25D1FCEA7CE00A0EE4B /* TopTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFBFA25C1FCEA7CE00A0EE4B /* TopTableViewCell.swift */; };
+		CFBFA25F1FCEB28100A0EE4B /* File0.rtf in Resources */ = {isa = PBXBuildFile; fileRef = CFBFA25E1FCEB28100A0EE4B /* File0.rtf */; };
+		CFBFA2611FCEBC7800A0EE4B /* FriendsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFBFA2601FCEBC7800A0EE4B /* FriendsModel.swift */; };
+		CFBFA2631FCEBE8500A0EE4B /* GroupHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFBFA2621FCEBE8500A0EE4B /* GroupHeaderView.swift */; };
+		CFBFA2651FCEBFD300A0EE4B /* JobSummaryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFBFA2641FCEBFD300A0EE4B /* JobSummaryController.swift */; };
 		E149907D1FC929D000E0A231 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E149907C1FC929D000E0A231 /* AppDelegate.swift */; };
 		E149907F1FC929D000E0A231 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E149907E1FC929D000E0A231 /* ViewController.swift */; };
 		E14990821FC929D000E0A231 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E14990801FC929D000E0A231 /* Main.storyboard */; };
@@ -35,6 +44,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CFBFA2511FCE4F8600A0EE4B /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		CFBFA2541FCE7A0800A0EE4B /* CollapsibleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollapsibleTableViewCell.swift; sourceTree = "<group>"; };
+		CFBFA2561FCE7FCB00A0EE4B /* ExampleData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleData.swift; sourceTree = "<group>"; };
+		CFBFA2581FCE812B00A0EE4B /* CollapsibleTableViewHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollapsibleTableViewHeader.swift; sourceTree = "<group>"; };
+		CFBFA25B1FCEA7AC00A0EE4B /* demo.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = demo.json; sourceTree = "<group>"; };
+		CFBFA25C1FCEA7CE00A0EE4B /* TopTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopTableViewCell.swift; sourceTree = "<group>"; };
+		CFBFA25E1FCEB28100A0EE4B /* File0.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = File0.rtf; sourceTree = "<group>"; };
+		CFBFA2601FCEBC7800A0EE4B /* FriendsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsModel.swift; sourceTree = "<group>"; };
+		CFBFA2621FCEBE8500A0EE4B /* GroupHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupHeaderView.swift; sourceTree = "<group>"; };
+		CFBFA2641FCEBFD300A0EE4B /* JobSummaryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobSummaryController.swift; sourceTree = "<group>"; };
 		E14990791FC929D000E0A231 /* ALPersonalSwiftTool.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ALPersonalSwiftTool.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E149907C1FC929D000E0A231 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E149907E1FC929D000E0A231 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -76,6 +95,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CFBFA2501FCE4F6700A0EE4B /* category */ = {
+			isa = PBXGroup;
+			children = (
+				CFBFA2511FCE4F8600A0EE4B /* Extensions.swift */,
+			);
+			path = category;
+			sourceTree = "<group>";
+		};
+		CFBFA2531FCE546E00A0EE4B /* CustomCell */ = {
+			isa = PBXGroup;
+			children = (
+				CFBFA2541FCE7A0800A0EE4B /* CollapsibleTableViewCell.swift */,
+			);
+			path = CustomCell;
+			sourceTree = "<group>";
+		};
+		CFBFA25A1FCE97AE00A0EE4B /* 每日优鲜 */ = {
+			isa = PBXGroup;
+			children = (
+				CFBFA25B1FCEA7AC00A0EE4B /* demo.json */,
+				CFBFA25C1FCEA7CE00A0EE4B /* TopTableViewCell.swift */,
+				CFBFA2601FCEBC7800A0EE4B /* FriendsModel.swift */,
+				CFBFA2621FCEBE8500A0EE4B /* GroupHeaderView.swift */,
+				CFBFA2641FCEBFD300A0EE4B /* JobSummaryController.swift */,
+			);
+			path = "每日优鲜";
+			sourceTree = "<group>";
+		};
 		E14990701FC929D000E0A231 = {
 			isa = PBXGroup;
 			children = (
@@ -99,8 +146,14 @@
 		E149907B1FC929D000E0A231 /* ALPersonalSwiftTool */ = {
 			isa = PBXGroup;
 			children = (
+				CFBFA25A1FCE97AE00A0EE4B /* 每日优鲜 */,
+				CFBFA2531FCE546E00A0EE4B /* CustomCell */,
+				CFBFA2501FCE4F6700A0EE4B /* category */,
 				E149907C1FC929D000E0A231 /* AppDelegate.swift */,
 				E149907E1FC929D000E0A231 /* ViewController.swift */,
+				CFBFA2561FCE7FCB00A0EE4B /* ExampleData.swift */,
+				CFBFA2581FCE812B00A0EE4B /* CollapsibleTableViewHeader.swift */,
+				CFBFA25E1FCEB28100A0EE4B /* File0.rtf */,
 				E14990801FC929D000E0A231 /* Main.storyboard */,
 				E14990861FC929D000E0A231 /* Assets.xcassets */,
 				E14990881FC929D000E0A231 /* LaunchScreen.storyboard */,
@@ -238,6 +291,7 @@
 				E149908A1FC929D000E0A231 /* LaunchScreen.storyboard in Resources */,
 				E14990871FC929D000E0A231 /* Assets.xcassets in Resources */,
 				E14990821FC929D000E0A231 /* Main.storyboard in Resources */,
+				CFBFA25F1FCEB28100A0EE4B /* File0.rtf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -262,9 +316,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CFBFA2611FCEBC7800A0EE4B /* FriendsModel.swift in Sources */,
+				CFBFA2631FCEBE8500A0EE4B /* GroupHeaderView.swift in Sources */,
+				CFBFA2591FCE812B00A0EE4B /* CollapsibleTableViewHeader.swift in Sources */,
+				CFBFA2651FCEBFD300A0EE4B /* JobSummaryController.swift in Sources */,
 				E149907F1FC929D000E0A231 /* ViewController.swift in Sources */,
 				E14990851FC929D000E0A231 /* ALPersonalSwiftTool.xcdatamodeld in Sources */,
+				CFBFA2571FCE7FCB00A0EE4B /* ExampleData.swift in Sources */,
+				CFBFA2551FCE7A0800A0EE4B /* CollapsibleTableViewCell.swift in Sources */,
 				E149907D1FC929D000E0A231 /* AppDelegate.swift in Sources */,
+				CFBFA2521FCE4F8C00A0EE4B /* Extensions.swift in Sources */,
+				CFBFA25D1FCEA7CE00A0EE4B /* TopTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -431,10 +493,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 9ZG4455KQD;
+				DEVELOPMENT_TEAM = 75C82FC24V;
 				INFOPLIST_FILE = ALPersonalSwiftTool/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.wxp.10086;
+				PRODUCT_BUNDLE_IDENTIFIER = com.alvin.test4;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -446,10 +508,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 9ZG4455KQD;
+				DEVELOPMENT_TEAM = 75C82FC24V;
 				INFOPLIST_FILE = ALPersonalSwiftTool/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.wxp.10086;
+				PRODUCT_BUNDLE_IDENTIFIER = com.alvin.test4;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
