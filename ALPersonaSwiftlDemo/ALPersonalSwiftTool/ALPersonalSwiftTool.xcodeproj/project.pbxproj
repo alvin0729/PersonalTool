@@ -16,6 +16,7 @@
 		CFBFA2611FCEBC7800A0EE4B /* FriendsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFBFA2601FCEBC7800A0EE4B /* FriendsModel.swift */; };
 		CFBFA2631FCEBE8500A0EE4B /* GroupHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFBFA2621FCEBE8500A0EE4B /* GroupHeaderView.swift */; };
 		CFBFA2651FCEBFD300A0EE4B /* JobSummaryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFBFA2641FCEBFD300A0EE4B /* JobSummaryController.swift */; };
+		CFD6C9CB1FD10734001315C3 /* demo.json in Resources */ = {isa = PBXBuildFile; fileRef = CFD6C9CA1FD106A5001315C3 /* demo.json */; };
 		E149907D1FC929D000E0A231 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E149907C1FC929D000E0A231 /* AppDelegate.swift */; };
 		E149907F1FC929D000E0A231 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E149907E1FC929D000E0A231 /* ViewController.swift */; };
 		E14990821FC929D000E0A231 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E14990801FC929D000E0A231 /* Main.storyboard */; };
@@ -48,12 +49,13 @@
 		CFBFA2541FCE7A0800A0EE4B /* CollapsibleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollapsibleTableViewCell.swift; sourceTree = "<group>"; };
 		CFBFA2561FCE7FCB00A0EE4B /* ExampleData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleData.swift; sourceTree = "<group>"; };
 		CFBFA2581FCE812B00A0EE4B /* CollapsibleTableViewHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollapsibleTableViewHeader.swift; sourceTree = "<group>"; };
-		CFBFA25B1FCEA7AC00A0EE4B /* demo.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = demo.json; sourceTree = "<group>"; };
 		CFBFA25C1FCEA7CE00A0EE4B /* TopTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopTableViewCell.swift; sourceTree = "<group>"; };
 		CFBFA25E1FCEB28100A0EE4B /* File0.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = File0.rtf; sourceTree = "<group>"; };
 		CFBFA2601FCEBC7800A0EE4B /* FriendsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsModel.swift; sourceTree = "<group>"; };
 		CFBFA2621FCEBE8500A0EE4B /* GroupHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupHeaderView.swift; sourceTree = "<group>"; };
 		CFBFA2641FCEBFD300A0EE4B /* JobSummaryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobSummaryController.swift; sourceTree = "<group>"; };
+		CFD6C9CA1FD106A5001315C3 /* demo.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = demo.json; sourceTree = "<group>"; };
+		CFD6C9CC1FD119FE001315C3 /* File1.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = File1.rtf; sourceTree = "<group>"; };
 		E14990791FC929D000E0A231 /* ALPersonalSwiftTool.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ALPersonalSwiftTool.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E149907C1FC929D000E0A231 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E149907E1FC929D000E0A231 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -114,7 +116,6 @@
 		CFBFA25A1FCE97AE00A0EE4B /* 每日优鲜 */ = {
 			isa = PBXGroup;
 			children = (
-				CFBFA25B1FCEA7AC00A0EE4B /* demo.json */,
 				CFBFA25C1FCEA7CE00A0EE4B /* TopTableViewCell.swift */,
 				CFBFA2601FCEBC7800A0EE4B /* FriendsModel.swift */,
 				CFBFA2621FCEBE8500A0EE4B /* GroupHeaderView.swift */,
@@ -153,7 +154,9 @@
 				E149907E1FC929D000E0A231 /* ViewController.swift */,
 				CFBFA2561FCE7FCB00A0EE4B /* ExampleData.swift */,
 				CFBFA2581FCE812B00A0EE4B /* CollapsibleTableViewHeader.swift */,
+				CFD6C9CA1FD106A5001315C3 /* demo.json */,
 				CFBFA25E1FCEB28100A0EE4B /* File0.rtf */,
+				CFD6C9CC1FD119FE001315C3 /* File1.rtf */,
 				E14990801FC929D000E0A231 /* Main.storyboard */,
 				E14990861FC929D000E0A231 /* Assets.xcassets */,
 				E14990881FC929D000E0A231 /* LaunchScreen.storyboard */,
@@ -291,6 +294,7 @@
 				E149908A1FC929D000E0A231 /* LaunchScreen.storyboard in Resources */,
 				E14990871FC929D000E0A231 /* Assets.xcassets in Resources */,
 				E14990821FC929D000E0A231 /* Main.storyboard in Resources */,
+				CFD6C9CB1FD10734001315C3 /* demo.json in Resources */,
 				CFBFA25F1FCEB28100A0EE4B /* File0.rtf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -495,6 +499,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 75C82FC24V;
 				INFOPLIST_FILE = ALPersonalSwiftTool/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.alvin.test4;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -510,6 +515,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 75C82FC24V;
 				INFOPLIST_FILE = ALPersonalSwiftTool/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.alvin.test4;
 				PRODUCT_NAME = "$(TARGET_NAME)";

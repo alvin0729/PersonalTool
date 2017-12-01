@@ -35,6 +35,9 @@ public struct Section{
 }
 
 public var sectionsData: [Section] = [
+    Section(name: "dialyemo", items: [
+        Item(name: "每日优鲜", detail: "JobSummaryController")
+        ]),
     Section(name: "Mac", items: [
         Item(name: "MacBook", detail: "Apple's ultraportable laptop, trading portability for speed and connectivity."),
         Item(name: "MacBook Air", detail: "While the screen could be sharper, the updated 11-inch MacBook Air is a very light ultraportable that offers great performance and battery life for the price."),
@@ -56,8 +59,5 @@ public var sectionsData: [Section] = [
         Item(name: "iPhone 6", detail: "The iPhone 6 and iPhone 6 Plus are smartphones designed and marketed by Apple Inc."),
         Item(name: "iPhone SE", detail: "The iPhone SE was received positively by critics, who noted its familiar form factor and design, improved hardware over previous 4-inch iPhone models, as well as its overall performance and battery life."),
         Item(name: "Accessories", detail: "")
-        ]),
-    Section(name: "dialyemo", items: [
-        Item(name: "每日优鲜", detail: "JobSummaryController")
-    ])
+        ])
 ]

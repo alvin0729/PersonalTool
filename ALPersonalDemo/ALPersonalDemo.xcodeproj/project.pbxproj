@@ -441,6 +441,10 @@
 		CFC0AAFA1EFB822100E4FF12 /* ALPanToolView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALPanToolView.m; sourceTree = "<group>"; };
 		CFC0AAFC1EFB8C1600E4FF12 /* ALRichTextCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALRichTextCollectionViewCell.h; sourceTree = "<group>"; };
 		CFC0AAFD1EFB8C1600E4FF12 /* ALRichTextCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALRichTextCollectionViewCell.m; sourceTree = "<group>"; };
+		CFC15A2A1FD138CD001248B7 /* MQGradientProgressView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MQGradientProgressView.m; sourceTree = "<group>"; };
+		CFC15A2B1FD138CD001248B7 /* MQGradientProgressView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MQGradientProgressView.h; sourceTree = "<group>"; };
+		CFC15A2C1FD13B8A001248B7 /* MSGradualProgressView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MSGradualProgressView.h; sourceTree = "<group>"; };
+		CFC15A2D1FD13B8A001248B7 /* MSGradualProgressView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MSGradualProgressView.m; sourceTree = "<group>"; };
 		CFC1EC891EEE617B00641E5D /* UIView+HGCorner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+HGCorner.h"; sourceTree = "<group>"; };
 		CFC1EC8A1EEE617B00641E5D /* UIView+HGCorner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+HGCorner.m"; sourceTree = "<group>"; };
 		CFC1EC8D1EEE895000641E5D /* podSource.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = podSource.rtf; sourceTree = "<group>"; };
@@ -1160,6 +1164,17 @@
 				CFC0AAEC1EFB74E600E4FF12 /* CollectModel.m */,
 			);
 			path = baseModel;
+			sourceTree = "<group>";
+		};
+		CFC15A291FD138B0001248B7 /* 动画 */ = {
+			isa = PBXGroup;
+			children = (
+				CFC15A2C1FD13B8A001248B7 /* MSGradualProgressView.h */,
+				CFC15A2D1FD13B8A001248B7 /* MSGradualProgressView.m */,
+				CFC15A2B1FD138CD001248B7 /* MQGradientProgressView.h */,
+				CFC15A2A1FD138CD001248B7 /* MQGradientProgressView.m */,
+			);
+			path = "动画";
 			sourceTree = "<group>";
 		};
 		CFC1EC8C1EEE882E00641E5D /* 评论组件 */ = {
@@ -2261,6 +2276,7 @@
 		E1F661A51EDDA001001D98E1 /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
+				CFC15A291FD138B0001248B7 /* 动画 */,
 				E1F22BC91F9C73F90097E6F0 /* 缓存音乐播放器 */,
 				E1F22BC51F9C5A8E0097E6F0 /* 转场 */,
 				CF17A8FC1F6F995300BE2BCF /* Gesture */,

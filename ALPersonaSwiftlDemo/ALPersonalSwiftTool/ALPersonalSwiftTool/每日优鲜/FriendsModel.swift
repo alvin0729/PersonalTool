@@ -39,8 +39,8 @@ class FriendsModel: BigGroupModel {
         setValuesForKeys(dic)
     }
     
-    override func setValue(_ value: Any?, forKey key: String) {
-        return;
+    override func setValue(_ value: Any?, forUndefinedKey key: String) {
+        return
     }
     
 }
