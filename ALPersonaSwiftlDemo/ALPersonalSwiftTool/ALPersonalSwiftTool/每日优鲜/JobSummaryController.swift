@@ -11,7 +11,7 @@ import UIKit
 private let kCellIdentify = "kCellIdentify"
 
 class JobSummaryController: UIViewController {
-    lazy var bigGroupsModel :[BigGroupsModel] = [BigGroupsModel]()
+    lazy var bigGroupsModel :[BigGroupModel] = [BigGroupModel]()
     let arr = ["宝贝","详情","评价","推荐"]
     fileprivate var selectIndex = 0
     fileprivate var isScrollDown = true
