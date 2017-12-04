@@ -4,7 +4,12 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>ALPersonalSwiftTool.xcscheme</key>
+		<key>Alamofire.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>0</integer>
+		</dict>
+		<key>Pods-ALPersonalSwiftTool.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>2</integer>
