@@ -280,6 +280,7 @@
 		E1D226491F6D3AD40001E8A3 /* Predicate Programming Guide.rtf in Resources */ = {isa = PBXBuildFile; fileRef = E1D226481F6D3AD40001E8A3 /* Predicate Programming Guide.rtf */; };
 		E1D226531F6D87E10001E8A3 /* ALNSPredicateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E1D226521F6D87E10001E8A3 /* ALNSPredicateViewController.m */; };
 		E1D2265F1F6D8B690001E8A3 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = E1D2265E1F6D8ACA0001E8A3 /* Person.m */; };
+		E1D428E51FDCF8D600D3A51C /* QKYDelayButton.m in Sources */ = {isa = PBXBuildFile; fileRef = E1D428E31FDCF8D000D3A51C /* QKYDelayButton.m */; };
 		E1F22BBE1F9C5A120097E6F0 /* TKGlobal.m in Sources */ = {isa = PBXBuildFile; fileRef = E1F22BBC1F9C5A120097E6F0 /* TKGlobal.m */; };
 		E1F22BC11F9C5A3C0097E6F0 /* UIImage+TKCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = E1F22BBF1F9C5A3C0097E6F0 /* UIImage+TKCategory.m */; };
 		E1F22BC41F9C5A7C0097E6F0 /* TKAlertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E1F22BC21F9C5A7C0097E6F0 /* TKAlertViewController.m */; };
@@ -866,6 +867,8 @@
 		E1D226521F6D87E10001E8A3 /* ALNSPredicateViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ALNSPredicateViewController.m; sourceTree = "<group>"; };
 		E1D2265D1F6D8ACA0001E8A3 /* Person.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
 		E1D2265E1F6D8ACA0001E8A3 /* Person.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
+		E1D428E31FDCF8D000D3A51C /* QKYDelayButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QKYDelayButton.m; sourceTree = "<group>"; };
+		E1D428E41FDCF8D000D3A51C /* QKYDelayButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QKYDelayButton.h; sourceTree = "<group>"; };
 		E1F22BBC1F9C5A120097E6F0 /* TKGlobal.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TKGlobal.m; sourceTree = "<group>"; };
 		E1F22BBD1F9C5A120097E6F0 /* TKGlobal.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TKGlobal.h; sourceTree = "<group>"; };
 		E1F22BBF1F9C5A3C0097E6F0 /* UIImage+TKCategory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+TKCategory.m"; sourceTree = "<group>"; };
@@ -2157,6 +2160,15 @@
 			path = VC;
 			sourceTree = "<group>";
 		};
+		E1D428E21FDCF8B300D3A51C /* 自定义控件 */ = {
+			isa = PBXGroup;
+			children = (
+				E1D428E41FDCF8D000D3A51C /* QKYDelayButton.h */,
+				E1D428E31FDCF8D000D3A51C /* QKYDelayButton.m */,
+			);
+			path = "自定义控件";
+			sourceTree = "<group>";
+		};
 		E1F22BC51F9C5A8E0097E6F0 /* 转场 */ = {
 			isa = PBXGroup;
 			children = (
@@ -2277,6 +2289,7 @@
 			isa = PBXGroup;
 			children = (
 				CFC15A291FD138B0001248B7 /* 动画 */,
+				E1D428E21FDCF8B300D3A51C /* 自定义控件 */,
 				E1F22BC91F9C73F90097E6F0 /* 缓存音乐播放器 */,
 				E1F22BC51F9C5A8E0097E6F0 /* 转场 */,
 				CF17A8FC1F6F995300BE2BCF /* Gesture */,
@@ -2611,6 +2624,7 @@
 				E1540B121EF6534C00D2721F /* UIColor+Hex.m in Sources */,
 				CFC0AACD1EFB64B600E4FF12 /* EHRoundedHorizontalViewCell.m in Sources */,
 				E1540B291EF6584800D2721F /* HHLineStyleCell.m in Sources */,
+				E1D428E51FDCF8D600D3A51C /* QKYDelayButton.m in Sources */,
 				E1F661BF1EDDA36F001D98E1 /* UITableView+SSAdd.m in Sources */,
 				E15D70031EF4DE4900513AE6 /* NSDate+Extension.m in Sources */,
 				E1F22BC11F9C5A3C0097E6F0 /* UIImage+TKCategory.m in Sources */,
