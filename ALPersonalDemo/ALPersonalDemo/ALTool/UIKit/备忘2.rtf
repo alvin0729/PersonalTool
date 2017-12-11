@@ -5,11 +5,13 @@
 {\colortbl;\red255\green255\blue255;\red170\green13\blue145;\red63\green110\blue116;\red255\green255\blue255;
 \red0\green0\blue0;\red46\green13\blue110;\red92\green38\blue153;\red0\green116\blue0;\red28\green0\blue207;
 \red38\green71\blue75;\red53\green53\blue53;\red255\green255\blue255;\red255\green255\blue255;\red196\green26\blue22;
-\red38\green38\blue38;\red74\green74\blue74;\red210\green0\blue5;\red10\green82\blue135;}
+\red38\green38\blue38;\red74\green74\blue74;\red210\green0\blue5;\red10\green82\blue135;\red7\green68\blue184;
+\red27\green31\blue34;\red21\green23\blue26;}
 {\*\expandedcolortbl;;\csgenericrgb\c66500\c5200\c56900;\csgenericrgb\c24700\c43100\c45600;\csgenericrgb\c100000\c100000\c100000;
 \csgenericrgb\c0\c0\c0;\csgenericrgb\c18100\c5200\c43100;\csgenericrgb\c35900\c14900\c60100;\csgenericrgb\c0\c45600\c0;\csgenericrgb\c11000\c0\c81000;
 \csgenericrgb\c14900\c27800\c29400;\cssrgb\c27059\c27059\c27059;\cssrgb\c100000\c100000\c100000;\csgray\c100000;\csgenericrgb\c77000\c10200\c8600;
-\cssrgb\c20000\c20000\c20000;\cssrgb\c36078\c36078\c36078;\cssrgb\c86667\c0\c0;\cssrgb\c0\c40000\c60000;}
+\cssrgb\c20000\c20000\c20000;\cssrgb\c36078\c36078\c36078;\cssrgb\c86667\c0\c0;\cssrgb\c0\c40000\c60000;\cssrgb\c0\c36078\c77255;
+\cssrgb\c14118\c16078\c18039;\cssrgb\c10588\c12157\c13725\c29804;}
 \margl1440\margr1440\vieww9000\viewh8400\viewkind0
 \deftab642
 \pard\tx642\pardeftab642\pardirnatural\partightenfactor0
@@ -51,13 +53,13 @@ layer.masksToBounds\
     \cf8 //imageView.image = [UIImage imageWithColor:[UIColor colorWithHexString:@"ffffff"]];\cf5 \
     imageView.\cf7 backgroundColor\cf5  = [\cf7 UIColor\cf5  \cf6 whiteColor\cf5 ];\
     \cf8 //
-\f2 \cf8 \'bf\'aa\'ca\'bc\'b6\'d4
-\f0 \cf8 imageView
-\f2 \cf8 \'bd\'f8\'d0\'d0\'bb\'ad\'cd\'bc
+\f2 \'bf\'aa\'ca\'bc\'b6\'d4
+\f0 imageView
+\f2 \'bd\'f8\'d0\'d0\'bb\'ad\'cd\'bc
 \f0 \cf5 \
     \cf6 UIGraphicsBeginImageContextWithOptions\cf5 (imageView.\cf7 bounds\cf5 .\cf7 size\cf5 , \cf2 YES\cf5 , [\cf7 UIScreen\cf5  \cf6 mainScreen\cf5 ].\cf7 scale\cf5 );\
     \cf8 //
-\f2 \cf8 \'ca\'b9\'d3\'c3\'b1\'b4\'c8\'fb\'b6\'fb\'c7\'fa\'cf\'df\'bb\'ad\'b3\'f6\'d2\'bb\'b8\'f6\'d4\'b2\'d0\'ce\'cd\'bc
+\f2 \'ca\'b9\'d3\'c3\'b1\'b4\'c8\'fb\'b6\'fb\'c7\'fa\'cf\'df\'bb\'ad\'b3\'f6\'d2\'bb\'b8\'f6\'d4\'b2\'d0\'ce\'cd\'bc
 \f0 \cf5 \
     \cf7 UIBezierPath\cf5  *bezierPath = [\cf7 UIBezierPath\cf5  \cf6 bezierPathWithRoundedRect\cf5 :\cf2 self\cf5 .\cf3 chatSessionInputBarControl\cf5 .\cf7 bounds\cf5  \cf6 byRoundingCorners\cf5 :(\cf6 UIRectCornerTopLeft\cf5  | \cf6 UIRectCornerTopRight\cf5 ) \cf6 cornerRadii\cf5 :\cf6 CGSizeMake\cf5 (\cf9 12\cf5 , \cf9 12\cf5 )];\
     [bezierPath \cf6 addClip\cf5 ];\
@@ -67,21 +69,19 @@ layer.masksToBounds\
     [imageView \cf6 drawRect\cf5 :imageView.\cf7 bounds\cf5 ];\
     imageView.\cf7 image\cf5  = \cf6 UIGraphicsGetImageFromCurrentImageContext\cf5 ();\
     \cf8 //
-\f2 \cf8 \'bd\'e1\'ca\'f8\'bb\'ad\'cd\'bc
+\f2 \'bd\'e1\'ca\'f8\'bb\'ad\'cd\'bc
 \f0 \cf5 \
     \cf6 UIGraphicsEndImageContext\cf5 ();\
     \cf2 self\cf5 .\cf3 layerCornerBgView\cf5  = imageView;\cf2 \
 \
 //
-\f2 \cf2 \'c3\'b6\'be\'d9\'ca\'fd\'d7\'e9
-\f0 \cf2 \
-\pard\tx642\pardeftab642\pardirnatural\partightenfactor0
+\f2 \'c3\'b6\'be\'d9\'ca\'fd\'d7\'e9
+\f0 \
 \cf3 WBadgeAnimType\cf5  animations[] = \{\cf10 WBadgeAnimTypeShake\cf5 , \cf10 WBadgeAnimTypeBounce\cf5 , \cf10 WBadgeAnimTypeBreathe\cf5 , \cf10 WBadgeAnimTypeScale\cf5 \};\cf2 \
 \
-\pard\tx642\pardeftab642\pardirnatural\partightenfactor0
 
-\f2 \cf2 \'d7\'a5\'b0\'fc\'a3\'ba
-\f0 \cf2 \
+\f2 \'d7\'a5\'b0\'fc\'a3\'ba
+\f0 \
 \pard\pardeftab720\partightenfactor0
 
 \f2\fs36 \cf11 \cb12 \expnd0\expndtw0\kerning0
@@ -232,8 +232,26 @@ UIImage\'a0*image\'a0=\'a0[UIImage\'a0imageWithContentsOfFile:path];\
 \pard\pardeftab720\partightenfactor0
 
 \f0 \cf5 \cb13 \kerning1\expnd0\expndtw0 \CocoaLigature0 \
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clmgf \clvertalt \clshdrawnil \clwWidth31724\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadl200 \clpadr200 \gaph\cellx4320
+\clmrg \clvertalt \clshdrawnil \clwWidth31724\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadl200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f4\fs24 \cf19 \cb1 \expnd0\expndtw0\kerning0
+\CocoaLigature1 NSAttributedString\cf20  *attrStr = [[\cf19 NSAttributedString\cf20  \cf19 alloc\cf20 ] \cf19 initWithData:\cf20 [htmlStr \cf19 dataUsingEncoding:NSUnicodeStringEncoding\cf20 ] \cf19 options:\cf20 @\{ \cf19 NSDocumentTypeDocumentAttribute\cf20 : \cf19 NSHTMLTextDocumentType\cf20  \} \cf19 documentAttributes:nil\cf20  \cf19 error:nil\cf20 ];\cell 
+\pard\intbl\itap1\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clshdrawnil \clwWidth1000\clftsWidth3 \clminw1000 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadl200 \clpadr200 \gaph\cellx4320
+\clvertalt \clshdrawnil \clwWidth31724\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadl200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf21 \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf20         self.attributedText = attrStr;\cell \lastrow\row
 \pard\tx642\pardeftab642\pardirnatural\partightenfactor0
-\cf5 \
+
+\f0\fs26 \cf5 \cb13 \kerning1\expnd0\expndtw0 \CocoaLigature0 \
 \
 \
 \
