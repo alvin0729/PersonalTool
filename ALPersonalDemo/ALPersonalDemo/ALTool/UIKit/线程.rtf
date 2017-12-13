@@ -26,7 +26,7 @@
 \f0\fs24 \cf0 \cb2 \
 \pard\tx692\pardeftab692\pardirnatural\partightenfactor0
 
-\f1\fs28 \cf3     
+\f1\fs28 \cf3 \cb2     
 \f0\fs24 \cf0 \
 
 \f1\fs28 \cf3     \cf4 //
@@ -75,6 +75,7 @@
 
 \f1\fs28 \cf3     \cf8 dispatch_resume\cf3 (_timer);\
 \
+\pard\tx692\pardeftab692\pardirnatural\partightenfactor0
 
 \fs26 \cf6 \cb1 \CocoaLigature0   \
 \pard\tx642\pardeftab642\pardirnatural\partightenfactor0
@@ -219,8 +220,8 @@
 \CocoaLigature1 \
 \pard\pardeftab720\partightenfactor0
 
-\f2\fs28 \cf17 \'b4\'fa\'c2\'eb\'bf\'c9\'d2\'d4\'d4\'da\'d3\'c3\'bb\'a7\'d1\'a1\'d4\'f1\'cd\'ac\'d2\'e2\'bb\'f2\'d5\'df\'be\'dc\'be\'f8\'ba\'f3\'a3\'ac\'c1\'a2\'bc\'b4\'d6\'b4\'d0\'d0\'ca\'a3\'cf\'c2\'b5\'c4\'b4\'fa\'c2\'eb\'a3\'ac\'b6\'f8\'b2\'bb\'ca\'c7\'d6\'b1\'bd\'d3\'b7\'b5\'bb\'d8\'a1\'a3
-\f4\fs40 \
+\f2\fs28 \cf17 \cb15 \'b4\'fa\'c2\'eb\'bf\'c9\'d2\'d4\'d4\'da\'d3\'c3\'bb\'a7\'d1\'a1\'d4\'f1\'cd\'ac\'d2\'e2\'bb\'f2\'d5\'df\'be\'dc\'be\'f8\'ba\'f3\'a3\'ac\'c1\'a2\'bc\'b4\'d6\'b4\'d0\'d0\'ca\'a3\'cf\'c2\'b5\'c4\'b4\'fa\'c2\'eb\'a3\'ac\'b6\'f8\'b2\'bb\'ca\'c7\'d6\'b1\'bd\'d3\'b7\'b5\'bb\'d8\'a1\'a3
+\f4\fs40 \cf17 \cb15 \
 \pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
 \ls1\ilvl0
 \f5\b\fs24 \cf18 CFErrorRef
@@ -284,15 +285,15 @@
 \pard\tx642\pardeftab642\pardirnatural\partightenfactor0
 
 \f1\fs26 \cf3 \cb22 \kerning1\expnd0\expndtw0 \CocoaLigature0 \
-    \cf6 dispatch_semaphore_t\cf3  sema = \cf8 dispatch_semaphore_create\cf3 (\cf7 0\cf3 );\
+    \cf6 dispatch_semaphore_t\cf3  sema = \cf8 dispatch_semaphore_create\cf3 (\cf7 \cb22 0\cf3 \cb22 );\
     \cf5 if\cf3  (\cf5 self\cf3 .\cf11 emojiModels\cf3 ) \{\
         \
     \}\
     \
-    \cf5 if\cf3  (\cf5 self\cf3 .\cf11 emoijTitles\cf3 .\cf6 count\cf3  == \cf7 0\cf3 ) \{\
+    \cf5 if\cf3  (\cf5 self\cf3 .\cf11 emoijTitles\cf3 .\cf6 count\cf3  == \cf7 \cb22 0\cf3 \cb22 ) \{\
         \cf8 dispatch_semaphore_signal\cf3 (sema);\
     \}\
-    \cf8 dispatch_semaphore_wait\cf3 (sema, \cf9 DISPATCH_TIME_FOREVER\cf3 );
+    \cf8 dispatch_semaphore_wait\cf3 (sema, \cf9 \cb22 DISPATCH_TIME_FOREVER\cf3 \cb22 );
 \f4\fs40 \cf17 \cb15 \expnd0\expndtw0\kerning0
 \CocoaLigature1 \
 \pard\tx560\pardeftab720\partightenfactor0
@@ -328,7 +329,6 @@
 \
 \
 \
-\pard\tx642\pardeftab642\pardirnatural\partightenfactor0
 \cf11 _barrierQueue\cf3  = \cf8 dispatch_queue_create\cf3 (\cf10 "com.NewPan.JPVideoPlayerDownloaderOperationBarrierQueue"\cf3 , \cf9 DISPATCH_QUEUE_CONCURRENT\cf3 );\
 \cf8 dispatch_barrier_async\cf3 (\cf5 self\cf3 .\cf11 barrierQueue\cf3 , ^\{\
         [\cf5 self\cf3 .\cf11 callbackBlocks\cf3  \cf8 addObject\cf3 :callbacks];\
@@ -372,13 +372,13 @@
 
 \f2\fs32 \cf24 \cb15 \expnd0\expndtw0\kerning0
 \CocoaLigature1 \'d2\'ec\'b2\'bd\'d5\'cf\'b0\'ad\'c8\'ce\'ce\'f1\'d6\'bb\'bb\'e1\'bd\'ab\'b6\'d3\'c1\'d0\'d6\'d0\'b5\'c4\'c8\'ce\'ce\'f1\'c9\'e8\'d6\'c3\'d5\'cf\'b0\'ad\'b6\'f8\'b2\'bb\'bb\'e1\'d7\'e8\'b0\'ad\'ba\'f3\'c3\'e6\'b5\'c4\'d6\'f7\'cf\'df\'b3\'cc\'b5\'c4\'b4\'fa\'c2\'eb.
-\f4\fs40 \cf17 \
+\f4\fs40 \cf17 \cb15 \
 \pard\pardeftab720\partightenfactor0
 
 \f2\fs28 \cf24 dispatch_barrier_sync(queue,void(^block)())\'bb\'e1\'bd\'abqueue\'d6\'d0barrier\'c7\'b0\'c3\'e6\'cc\'ed\'bc\'d3\'b5\'c4\'c8\'ce\'ce\'f1block\'c8\'ab\'b2\'bf\'d6\'b4\'d0\'d0\'ba\'f3,\'d4\'d9\'d6\'b4\'d0\'d0barrier\'c8\'ce\'ce\'f1\'b5\'c4block,\'d4\'d9\'d6\'b4\'d0\'d0barrier\'ba\'f3\'c3\'e6\'cc\'ed\'bc\'d3\'b5\'c4\'c8\'ce\'ce\'f1block.
-\fs32 \cb22 \
+\fs32 \cf24 \cb22 \
 
-\fs28 \cb15 dispatch_barrier_async(queue,void(^block)())\'bb\'e1\'bd\'abqueue\'d6\'d0barrier\'c7\'b0\'c3\'e6\'cc\'ed\'bc\'d3\'b5\'c4\'c8\'ce\'ce\'f1block\'d6\'bb\'cc\'ed\'bc\'d3\'b2\'bb\'d6\'b4\'d0\'d0,\'bc\'cc\'d0\'f8\'cc\'ed\'bc\'d3barrier\'b5\'c4block,\'d4\'d9\'cc\'ed\'bc\'d3barrier\'ba\'f3\'c3\'e6\'b5\'c4block,\'cd\'ac\'ca\'b1\'b2\'bb\'d3\'b0\'cf\'ec\'d6\'f7\'cf\'df\'b3\'cc(\'bb\'f2\'d5\'df\'b2\'d9\'d7\'f7\'cc\'ed\'bc\'d3\'c8\'ce\'ce\'f1\'b5\'c4\'cf\'df\'b3\'cc)\'d6\'d0\'b4\'fa\'c2\'eb\'b5\'c4\'d6\'b4\'d0\'d0!\
+\fs28 \cf24 \cb15 dispatch_barrier_async(queue,void(^block)())\'bb\'e1\'bd\'abqueue\'d6\'d0barrier\'c7\'b0\'c3\'e6\'cc\'ed\'bc\'d3\'b5\'c4\'c8\'ce\'ce\'f1block\'d6\'bb\'cc\'ed\'bc\'d3\'b2\'bb\'d6\'b4\'d0\'d0,\'bc\'cc\'d0\'f8\'cc\'ed\'bc\'d3barrier\'b5\'c4block,\'d4\'d9\'cc\'ed\'bc\'d3barrier\'ba\'f3\'c3\'e6\'b5\'c4block,\'cd\'ac\'ca\'b1\'b2\'bb\'d3\'b0\'cf\'ec\'d6\'f7\'cf\'df\'b3\'cc(\'bb\'f2\'d5\'df\'b2\'d9\'d7\'f7\'cc\'ed\'bc\'d3\'c8\'ce\'ce\'f1\'b5\'c4\'cf\'df\'b3\'cc)\'d6\'d0\'b4\'fa\'c2\'eb\'b5\'c4\'d6\'b4\'d0\'d0!\
 \
 \pard\pardeftab720\partightenfactor0
 
@@ -475,7 +475,7 @@ dispatch_group_t group = dispatch_group_create();\
 \fs40 \cf17 \
 \pard\pardeftab720\sl280\partightenfactor0
 
-\f6\fs24 \cf30 \cb1 \outl0\strokewidth0 \strokec30 - (void)sendAction:(SEL)action to:(id)target forEvent:(UIEvent *)event\
+\f6\fs24 \cf30 \cb1 - (void)sendAction:(SEL)action to:(id)target forEvent:(UIEvent *)event\
 \{\
     if (self.checkLogin)\
     \{\
@@ -513,7 +513,7 @@ dispatch_group_t group = dispatch_group_create();\
 \clmrg \clvertalt \clshdrawnil \clwWidth18565\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadl200 \clpadr200 \gaph\cellx8640
 \pard\intbl\itap1\pardeftab720\partightenfactor0
 
-\f3 \cf31 \outl0\strokewidth0 #\cf32 import\cf31  \cf33 "UIButton+AdCounting.h"\cf31 \cell 
+\f3 \cf31 #\cf32 import\cf31  \cf33 "UIButton+AdCounting.h"\cf31 \cell 
 \pard\intbl\itap1\cell \row
 
 \itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrr\brdrnil 
@@ -827,8 +827,56 @@ dispatch_group_t group = dispatch_group_create();\
 \pard\pardeftab720\partightenfactor0
 
 \f4\fs40 \cf17 \cb15 \
+\pard\tx692\pardeftab692\pardirnatural\partightenfactor0
+
+\f1\fs28 \cf3 \cb2 \kerning1\expnd0\expndtw0 - (\cf5 void\cf3 )startProgressWithButton:(\cf11 JNJProgressButton\cf3  *)button
+\f0\fs24 \cf0 \
+
+\f1\fs28 \cf3 \{
+\f0\fs24 \cf0 \
+
+\f1\fs28 \cf3     \cf8 dispatch_async\cf3 (\cf8 dispatch_get_global_queue\cf3 (\cf9 DISPATCH_QUEUE_PRIORITY_BACKGROUND\cf3 , \cf7 0\cf3 ), ^\{
+\f0\fs24 \cf0 \
+
+\f1\fs28 \cf3         [\cf6 NSThread\cf3  \cf8 sleepForTimeInterval\cf3 :\cf7 3\cf3 ];
+\f0\fs24 \cf0 \
+
+\f1\fs28 \cf3         \cf6 NSInteger\cf3  index = \cf7 0\cf3 ;
+\f0\fs24 \cf0 \
+
+\f1\fs28 \cf3         \cf5 while\cf3  (index <= \cf7 100\cf3 ) \{
+\f0\fs24 \cf0 \
+
+\f1\fs28 \cf3             [\cf6 NSThread\cf3  \cf8 sleepForTimeInterval\cf3 :\cf7 0.04\cf3 ];
+\f0\fs24 \cf0 \
+
+\f1\fs28 \cf3             \cf8 dispatch_async\cf3 (\cf8 dispatch_get_main_queue\cf3 (), ^\{
+\f0\fs24 \cf0 \
+
+\f1\fs28 \cf3                 button.\cf11 progress\cf3  = (index / \cf7 100.0f\cf3 );
+\f0\fs24 \cf0 \
+
+\f1\fs28 \cf3             \});
+\f0\fs24 \cf0 \
+
+\f1\fs28 \cf3             index++;
+\f0\fs24 \cf0 \
 \
+
+\f1\fs28 \cf3             \cf5 if\cf3  (!button.\cf11 progressing\cf3 ) \cf5 return\cf3 ;
+\f0\fs24 \cf0 \
+
+\f1\fs28 \cf3         \}
+\f0\fs24 \cf0 \
+
+\f1\fs28 \cf3     \});
+\f0\fs24 \cf0 \
+
+\f1\fs28 \cf3 \}
+\f4\fs40 \cf17 \cb15 \expnd0\expndtw0\kerning0
 \
+\pard\pardeftab720\partightenfactor0
+\cf17 \
 \
 \
 \

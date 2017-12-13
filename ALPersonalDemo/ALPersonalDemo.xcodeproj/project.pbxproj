@@ -37,6 +37,7 @@
 		CF6012E81EFA3F38007CA737 /* ALFontFile.m in Sources */ = {isa = PBXBuildFile; fileRef = CF6012E71EFA3F38007CA737 /* ALFontFile.m */; };
 		CF6012EB1EFA4A68007CA737 /* ALFontManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CF6012EA1EFA4A68007CA737 /* ALFontManager.m */; };
 		CF61C0551F2340F7007B7731 /* NSDictionary+SafeExpectations.m in Sources */ = {isa = PBXBuildFile; fileRef = CF61C0531F2340F7007B7731 /* NSDictionary+SafeExpectations.m */; };
+		CF66933E1FDF65BA00444670 /* JNJProgressButton.m in Sources */ = {isa = PBXBuildFile; fileRef = CF66933C1FDF65BA00444670 /* JNJProgressButton.m */; };
 		CF6DF6BC1F04D4070093E2D6 /* 备忘录.rtf in Resources */ = {isa = PBXBuildFile; fileRef = CF6DF6BB1F04D4070093E2D6 /* 备忘录.rtf */; };
 		CF730C371F4BC49D0040C187 /* WWCalourseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CF730C361F4BC49D0040C187 /* WWCalourseCell.m */; };
 		CF730C3A1F4BC4E30040C187 /* WWCalourseView.m in Sources */ = {isa = PBXBuildFile; fileRef = CF730C391F4BC4E30040C187 /* WWCalourseView.m */; };
@@ -383,6 +384,8 @@
 		CF61C0521F2340F7007B7731 /* NSDictionary+SafeExpectations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+SafeExpectations.h"; sourceTree = "<group>"; };
 		CF61C0531F2340F7007B7731 /* NSDictionary+SafeExpectations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+SafeExpectations.m"; sourceTree = "<group>"; };
 		CF61C0541F2340F7007B7731 /* NSObject+SafeExpectations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+SafeExpectations.h"; sourceTree = "<group>"; };
+		CF66933C1FDF65BA00444670 /* JNJProgressButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JNJProgressButton.m; sourceTree = "<group>"; };
+		CF66933D1FDF65BA00444670 /* JNJProgressButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JNJProgressButton.h; sourceTree = "<group>"; };
 		CF6DF6BB1F04D4070093E2D6 /* 备忘录.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = "备忘录.rtf"; sourceTree = "<group>"; };
 		CF730C351F4BC49D0040C187 /* WWCalourseCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WWCalourseCell.h; sourceTree = "<group>"; };
 		CF730C361F4BC49D0040C187 /* WWCalourseCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WWCalourseCell.m; sourceTree = "<group>"; };
@@ -2163,6 +2166,8 @@
 		E1D428E21FDCF8B300D3A51C /* 自定义控件 */ = {
 			isa = PBXGroup;
 			children = (
+				CF66933D1FDF65BA00444670 /* JNJProgressButton.h */,
+				CF66933C1FDF65BA00444670 /* JNJProgressButton.m */,
 				E1D428E41FDCF8D000D3A51C /* QKYDelayButton.h */,
 				E1D428E31FDCF8D000D3A51C /* QKYDelayButton.m */,
 			);
@@ -2855,6 +2860,7 @@
 				E17DCD651F6E33EE002DE738 /* NSDictionary+HYBUnicodeReadable.m in Sources */,
 				E15D706A1EF5813700513AE6 /* MHTopicCommentCell.m in Sources */,
 				E1540B4E1EF65BD100D2721F /* MBProgressHUD.m in Sources */,
+				CF66933E1FDF65BA00444670 /* JNJProgressButton.m in Sources */,
 				CF48AC1A1EE4E35B009C4AD7 /* UIImageView+CircleImage.m in Sources */,
 				E1F22BC81F9C611D0097E6F0 /* BSBacktraceLogger.m in Sources */,
 				E17E21711EDA73760013D3B9 /* main.m in Sources */,

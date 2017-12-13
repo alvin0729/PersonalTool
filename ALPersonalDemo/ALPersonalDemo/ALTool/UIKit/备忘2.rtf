@@ -6,12 +6,12 @@
 \red0\green0\blue0;\red46\green13\blue110;\red92\green38\blue153;\red0\green116\blue0;\red28\green0\blue207;
 \red38\green71\blue75;\red53\green53\blue53;\red255\green255\blue255;\red255\green255\blue255;\red196\green26\blue22;
 \red38\green38\blue38;\red74\green74\blue74;\red210\green0\blue5;\red10\green82\blue135;\red7\green68\blue184;
-\red27\green31\blue34;\red21\green23\blue26;}
+\red27\green31\blue34;\red21\green23\blue26;\red100\green56\blue32;}
 {\*\expandedcolortbl;;\csgenericrgb\c66500\c5200\c56900;\csgenericrgb\c24700\c43100\c45600;\csgenericrgb\c100000\c100000\c100000;
 \csgenericrgb\c0\c0\c0;\csgenericrgb\c18100\c5200\c43100;\csgenericrgb\c35900\c14900\c60100;\csgenericrgb\c0\c45600\c0;\csgenericrgb\c11000\c0\c81000;
 \csgenericrgb\c14900\c27800\c29400;\cssrgb\c27059\c27059\c27059;\cssrgb\c100000\c100000\c100000;\csgray\c100000;\csgenericrgb\c77000\c10200\c8600;
 \cssrgb\c20000\c20000\c20000;\cssrgb\c36078\c36078\c36078;\cssrgb\c86667\c0\c0;\cssrgb\c0\c40000\c60000;\cssrgb\c0\c36078\c77255;
-\cssrgb\c14118\c16078\c18039;\cssrgb\c10588\c12157\c13725\c29804;}
+\cssrgb\c14118\c16078\c18039;\cssrgb\c10588\c12157\c13725\c29804;\csgenericrgb\c39100\c22000\c12500;}
 \margl1440\margr1440\vieww9000\viewh8400\viewkind0
 \deftab642
 \pard\tx642\pardeftab642\pardirnatural\partightenfactor0
@@ -252,14 +252,230 @@ UIImage\'a0*image\'a0=\'a0[UIImage\'a0imageWithContentsOfFile:path];\
 \pard\tx642\pardeftab642\pardirnatural\partightenfactor0
 
 \f0\fs26 \cf5 \cb13 \kerning1\expnd0\expndtw0 \CocoaLigature0 \
+\pard\tx692\pardeftab692\pardirnatural\partightenfactor0
+
+\fs28 \cf5 \cb4 \CocoaLigature1 - (\cf2 BOOL\cf5 )table:(\cf7 UITableView\cf5  *)tableView rectVisible:(\cf7 CGRect\cf5 )rect \{
+\f1\fs24 \cf0 \
+
+\f0\fs28 \cf5     \cf7 CGRect\cf5  visibleRect;
+\f1\fs24 \cf0 \
+
+\f0\fs28 \cf5     visibleRect.\cf7 origin\cf5  = tableView.\cf7 contentOffset\cf5 ;
+\f1\fs24 \cf0 \
+
+\f0\fs28 \cf5     visibleRect.\cf7 origin\cf5 .\cf7 y\cf5  += tableView.\cf7 contentInset\cf5 .\cf7 top\cf5 ;
+\f1\fs24 \cf0 \
+
+\f0\fs28 \cf5     visibleRect.\cf7 size\cf5  = tableView.\cf7 bounds\cf5 .\cf7 size\cf5 ;
+\f1\fs24 \cf0 \
+
+\f0\fs28 \cf5     visibleRect.\cf7 size\cf5 .\cf7 height\cf5  -= tableView.\cf7 contentInset\cf5 .\cf7 top\cf5  + tableView.\cf7 contentInset\cf5 .\cf7 bottom\cf5 ;
+\f1\fs24 \cf0 \
+
+\f0\fs28 \cf5     
+\f1\fs24 \cf0 \
+
+\f0\fs28 \cf5     \cf2 return\cf5  \cf6 CGRectContainsRect\cf5 (visibleRect, rect);
+\f1\fs24 \cf0 \
+
+\f0\fs28 \cf5 \}
+\f1\fs24 \cf0 \
 \
+
+\f0\fs28 \cf5 - (\cf2 void\cf5 )scrollToCursorForTextView:(\cf7 UITextView\cf5 *)textView \{
+\f1\fs24 \cf0 \
+
+\f0\fs28 \cf5     \cf7 CGRect\cf5  cursorRect = [textView \cf6 caretRectForPosition\cf5 :textView.\cf7 selectedTextRange\cf5 .\cf7 start\cf5 ];
+\f1\fs24 \cf0 \
+
+\f0\fs28 \cf5     cursorRect = [\cf2 self\cf5 .\cf3 tableView\cf5  \cf6 convertRect\cf5 :cursorRect \cf6 fromView\cf5 :textView];
+\f1\fs24 \cf0 \
+
+\f0\fs28 \cf5     \cf2 if\cf5  (![\cf2 self\cf5  \cf10 \cb4 table\cf5 \cb4 :\cf2 self\cf5 .\cf3 tableView\cf5  \cf10 \cb4 rectVisible\cf5 \cb4 :cursorRect]) \{
+\f1\fs24 \cf0 \
+
+\f0\fs28 \cf5         cursorRect.\cf7 size\cf5 .\cf7 height\cf5  += \cf9 8\cf5 ; \cf8 \cb4 // To add some space underneath the cursor
+\f1\fs24 \cf0 \cb4 \
+
+\f0\fs28 \cf5         [\cf2 self\cf5 .\cf3 tableView\cf5  \cf6 scrollRectToVisible\cf5 :cursorRect \cf6 animated\cf5 :\cf2 YES\cf5 ];
+\f1\fs24 \cf0 \
+
+\f0\fs28 \cf5     \}
+\f1\fs24 \cf0 \
+
+\f0\fs28 \cf5 \}
+\fs26 \cb13 \CocoaLigature0 \
+\pard\tx642\pardeftab642\pardirnatural\partightenfactor0
+\cf5 \
 \
+\pard\tx692\pardeftab692\pardirnatural\partightenfactor0
+
+\fs28 \cf5 \cb4 \CocoaLigature1 - (\cf2 void\cf5 )setBody:(\cf7 NSString\cf5  *)bodyText
+\f1\fs24 \cf0 \
+
+\f0\fs28 \cf5 \{
+\f1\fs24 \cf0 \
+
+\f0\fs28 \cf5 	\cf3 _body\cf5  = bodyText;
+\f1\fs24 \cf0 \
+
+\f0\fs28 \cf5 	
+\f1\fs24 \cf0 \
+
+\f0\fs28 \cf5 	\cf7 NSAttributedString\cf5  *attributedString = [[\cf7 NSAttributedString\cf5  \cf6 alloc\cf5 ] \cf6 initWithData\cf5 :[bodyText \cf6 dataUsingEncoding\cf5 :\cf6 NSUnicodeStringEncoding\cf5 ] \cf6 options\cf5 :\cf9 @\{\cf5  \cf7 NSDocumentTypeDocumentAttribute\cf5 : \cf7 NSHTMLTextDocumentType\cf5  \cf9 \}\cf5  \cf6 documentAttributes\cf5 :\cf2 nil\cf5  \cf6 error\cf5 :\cf2 nil\cf5 ];
+\f1\fs24 \cf0 \
+
+\f0\fs28 \cf5 	\cf2 self\cf5 .\cf7 attributedText\cf5  = attributedString;
+\f1\fs24 \cf0 \
+
+\f0\fs28 \cf5 \}\
 \
-\
-\
-\
-\
-\
+- (\cf2 void\cf5 )prepareForSegue:(\cf7 UIStoryboardSegue\cf5  *)segue sender:(\cf2 id\cf5 )sender \{
+\f1\fs24 \cf0 \
+
+\f0\fs28 \cf5 	\cf2 if\cf5  ([[segue \cf6 identifier\cf5 ] \cf6 isEqualToString\cf5 :\cf14 \cb4 @"showDetail"\cf5 \cb4 ]) \{
+\f1\fs24 \cf0 \
+
+\f0\fs28 \cf5 	    \cf7 NSIndexPath\cf5  *indexPath = [\cf2 self\cf5 .\cf7 tableView\cf5  \cf6 indexPathForSelectedRow\cf5 ];
+\f1\fs24 \cf0 \
+
+\f0\fs28 \cf5 	    \cf7 NSDate\cf5  *object = \cf2 self\cf5 .\cf3 objects\cf5 [indexPath.\cf7 row\cf5 ];
+\f1\fs24 \cf0 \
+
+\f0\fs28 \cf5 	    [[segue \cf6 destinationViewController\cf5 ] \cf10 \cb4 setDetailItem\cf5 \cb4 :object];
+\f1\fs24 \cf0 \
+
+\f0\fs28 \cf5 	\}
+\f1\fs24 \cf0 \
+
+\f0\fs28 \cf5 \}\
+
+\fs26 \cb13 \CocoaLigature0 \
+\pard\tx642\pardeftab642\pardirnatural\partightenfactor0
+\cf5 \
+\pard\tx692\pardeftab692\pardirnatural\partightenfactor0
+
+\fs28 \cf8 \cb4 \CocoaLigature1 // 
+\f2 \'ca\'b9\'d3\'c3
+\f0 edges
+\f2 \'ca\'b9\'b5\'e3\'c2\'fa\'d5\'fb\'b8\'f6
+\f0 self.view
+\f1\fs24 \cf0 \cb4 \
+\pard\tx692\pardeftab692\pardirnatural\partightenfactor0
+
+\f0\fs28 \cf5   [scrollView \cf10 \cb4 mas_makeConstraints\cf5 \cb4 :^(\cf3 MASConstraintMaker\cf5  *make) \{
+\f1\fs24 \cf0 \
+
+\f0\fs28 \cf5     make.\cf3 edges\cf5 .\cf10 \cb4 equalTo\cf5 \cb4 (weakSelf.\cf7 view\cf5 );
+\f1\fs24 \cf0 \
+
+\f0\fs28 \cf5     
+\f1\fs24 \cf0 \
+
+\f0\fs28 \cf5     \cf8 \cb4 // 
+\f2 \'c8\'e7\'b9\'fb\'d5\'e2\'c1\'bd\'b8\'f6\'b1\'ea\'c7\'a9\'b5\'c4\'c4\'da\'c8\'dd\'b6\'bc\'ca\'c7\'b2\'bb\'c8\'b7\'b6\'a8\'b5\'c4\'a3\'ac\'d2\'b2\'be\'cd\'ca\'c7\'b2\'bb\'c8\'b7\'b6\'a8\'c4\'c4\'b8\'f6\'b5\'c4\'c4\'da\'c8\'dd\'b8\'fc\'b6\'e0\'a3\'ac\'c4\'c7\'c3\'b4\'bf\'c9\'d2\'d4\'d5\'e2\'c3\'b4\'c9\'e8\'d6\'c3\'a1\'a3
+\f1\fs24 \cf0 \cb4 \
+
+\f0\fs28 \cf5     \cf8 \cb4 // 
+\f2 \'d5\'e2\'d1\'f9\'be\'cd\'bf\'c9\'d2\'d4\'b1\'a3\'d6\'a4\'ca\'b9\'d3\'c3\'c4\'da\'c8\'dd\'d7\'ee\'b6\'e0\'b5\'c4\'b1\'ea\'c7\'a9\'d7\'f7\'ce\'aa
+\f0 scrollview
+\f2 \'b5\'c4
+\f0 contentSize
+\f2 \'b2\'ce\'bf\'bc\'a1\'a3
+\f1\fs24 \cf0 \cb4 \
+
+\f0\fs28 \cf5     \cf8 \cb4 // 
+\f2 \'d3\'c3\'d3\'da\'c8\'b7\'b6\'a8
+\f0 scrollview
+\f2 \'b5\'c4
+\f0 contentSize.height
+\f1\fs24 \cf0 \cb4 \
+
+\f0\fs28 \cf5     make.\cf3 bottom\cf5 .\cf22 \cb4 mas_greaterThanOrEqualTo\cf5 \cb4 (avgLabel1.\cf3 mas_bottom\cf5 ).\cf10 \cb4 offset\cf5 \cb4 (\cf9 40\cf5 );
+\f1\fs24 \cf0 \
+
+\f0\fs28 \cf5     make.\cf3 bottom\cf5 .\cf22 \cb4 mas_greaterThanOrEqualTo\cf5 \cb4 (avgLabel2.\cf3 mas_bottom\cf5 ).\cf10 \cb4 offset\cf5 \cb4 (\cf9 40\cf5 );
+\f1\fs24 \cf0 \
+
+\f0\fs28 \cf5   \}];
+\fs26 \cb13 \CocoaLigature0 \
+\pard\tx642\pardeftab642\pardirnatural\partightenfactor0
+\cf5 \
+xib
+\f2 \'cd\'bc\'c6\'ac\'cf\'c2\'c0\'ad\'b7\'c5\'b4\'f3
+\f0 \
+\pard\tx692\pardeftab692\pardirnatural\partightenfactor0
+
+\fs28 \cf5 \cb4 \CocoaLigature1 - (\cf2 void\cf5 ) scrollViewDidScroll:(\cf7 UIScrollView\cf5  *)scrollView
+\f1\fs24 \cf0 \
+
+\f0\fs28 \cf5 \{
+\f1\fs24 \cf0 \
+
+\f0\fs28 \cf5     \cf7 CGFloat\cf5  yPos = -scrollView.\cf7 contentOffset\cf5 .\cf7 y\cf5 ;
+\f1\fs24 \cf0 \
+
+\f0\fs28 \cf5     
+\f1\fs24 \cf0 \
+
+\f0\fs28 \cf5     \cf6 NSLog\cf5 (\cf14 \cb4 @"heightis:%f"\cf5 \cb4 ,\cf2 self\cf5 .\cf3 topbg\cf5 .\cf7 frame\cf5 .\cf7 size\cf5 .\cf7 height\cf5 );
+\f1\fs24 \cf0 \
+
+\f0\fs28 \cf5     \cf6 NSLog\cf5 (\cf14 \cb4 @"width:%f"\cf5 \cb4 ,\cf2 self\cf5 .\cf3 topbg\cf5 .\cf7 frame\cf5 .\cf7 size\cf5 .\cf7 width\cf5 );
+\f1\fs24 \cf0 \
+
+\f0\fs28 \cf5     
+\f1\fs24 \cf0 \
+
+\f0\fs28 \cf5     \cf2 if\cf5  (yPos > \cf9 0\cf5 ) \{
+\f1\fs24 \cf0 \
+
+\f0\fs28 \cf5         [\cf2 self\cf5 .\cf3 topbg\cf5  \cf10 \cb4 mas_updateConstraints\cf5 \cb4 :^(\cf3 MASConstraintMaker\cf5  *make) \{
+\f1\fs24 \cf0 \
+
+\f0\fs28 \cf5             make.\cf3 height\cf5 .\cf22 \cb4 mas_equalTo\cf5 \cb4 (\cf9 @(\cf3 Mheight\cf5 +yPos\cf9 )\cf5 );
+\f1\fs24 \cf0 \
+
+\f0\fs28 \cf5             make.\cf3 top\cf5 .\cf22 \cb4 mas_equalTo\cf5 \cb4 (-yPos);
+\f1\fs24 \cf0 \
+
+\f0\fs28 \cf5             make.\cf3 left\cf5 .\cf22 \cb4 mas_equalTo\cf5 \cb4 (-yPos);
+\f1\fs24 \cf0 \
+
+\f0\fs28 \cf5             \cf8 \cb4 //
+\f1\fs24 \cf0 \cb4 \
+
+\f0\fs28 \cf5             make.\cf3 width\cf5 .\cf22 \cb4 mas_equalTo\cf5 \cb4 (\cf9 @(\cf3 Mwidth\cf5 +yPos*\cf9 2)\cf5 );
+\f1\fs24 \cf0 \
+
+\f0\fs28 \cf5             \cf8 \cb4 //make.width.equalTo(self.bgmig.mas_height).with.multipliedBy(300/173);
+\f1\fs24 \cf0 \cb4 \
+
+\f0\fs28 \cf5             [\cf2 self\cf5 .\cf3 scollview\cf5  \cf6 setNeedsLayout\cf5 ];
+\f1\fs24 \cf0 \
+
+\f0\fs28 \cf5         \}];
+\f1\fs24 \cf0 \
+
+\f0\fs28 \cf5         \cf8 \cb4 //            self.height.constant = Mheight+yPos;
+\f1\fs24 \cf0 \cb4 \
+
+\f0\fs28 \cf5         \cf8 \cb4 //            self.left.constant = -yPos;
+\f1\fs24 \cf0 \cb4 \
+
+\f0\fs28 \cf5         \cf8 \cb4 //            self.top.constant = -yPos;
+\f1\fs24 \cf0 \cb4 \
+
+\f0\fs28 \cf5         
+\f1\fs24 \cf0 \
+
+\f0\fs28 \cf5     \}
+\f1\fs24 \cf0 \
+
+\f0\fs28 \cf5 \}
+\fs26 \cb13 \CocoaLigature0 \
+\pard\tx642\pardeftab642\pardirnatural\partightenfactor0
+\cf5 \
 \
 \
 \

@@ -1,16 +1,19 @@
-{\rtf1\ansi\ansicpg936\cocoartf1504\cocoasubrtf600
-{\fonttbl\f0\fnil\fcharset0 Menlo-Regular;\f1\fnil\fcharset134 PingFangSC-Regular;\f2\fswiss\fcharset0 ArialMT;
-\f3\fnil\fcharset0 Consolas;\f4\fnil\fcharset0 HelveticaNeue;}
+{\rtf1\ansi\ansicpg936\cocoartf1504\cocoasubrtf830
+{\fonttbl\f0\fnil\fcharset0 Menlo-Regular;\f1\fnil\fcharset134 PingFangSC-Regular;\f2\fswiss\fcharset0 Helvetica;
+\f3\fswiss\fcharset0 ArialMT;\f4\fnil\fcharset0 Consolas;\f5\fnil\fcharset0 HelveticaNeue;
+}
 {\colortbl;\red255\green255\blue255;\red0\green128\blue0;\red0\green0\blue0;\red163\green21\blue21;
-\red0\green0\blue255;\red43\green131\blue159;\red15\green112\blue1;\red0\green116\blue0;\red170\green13\blue145;
-\red92\green38\blue153;\red46\green13\blue110;\red38\green71\blue75;\red27\green29\blue31;\red255\green255\blue255;
-\red255\green255\blue255;\red235\green236\blue237;\red36\green38\blue41;\red37\green127\blue159;\red13\green0\blue129;
-\red104\green26\blue29;\red38\green38\blue38;}
-{\*\expandedcolortbl;\csgray\c100000;\csgenericrgb\c0\c50200\c0;\csgenericrgb\c0\c0\c0;\csgenericrgb\c63900\c8200\c8200;
-\csgenericrgb\c0\c0\c100000;\csgenericrgb\c16900\c51200\c62500;\csgenericrgb\c5773\c43941\c538;\csgenericrgb\c0\c45600\c0;\csgenericrgb\c66500\c5200\c56900;
-\csgenericrgb\c35900\c14900\c60100;\csgenericrgb\c18100\c5200\c43100;\csgenericrgb\c14900\c27800\c29400;\cssrgb\c14118\c15294\c16078;\cssrgb\c100000\c100000\c100000;
-\csgray\c100000;\cssrgb\c93725\c94118\c94510;\cssrgb\c18824\c20000\c21176;\cssrgb\c16863\c56863\c68627;\cssrgb\c6275\c6275\c58039;
-\cssrgb\c49020\c15294\c15294;\cssrgb\c20000\c20000\c20000;}
+\red0\green0\blue255;\red255\green255\blue255;\red46\green13\blue110;\red63\green110\blue116;\red100\green56\blue32;
+\red28\green0\blue207;\red170\green13\blue145;\red92\green38\blue153;\red38\green71\blue75;\red43\green131\blue159;
+\red15\green112\blue1;\red0\green116\blue0;\red27\green29\blue31;\red255\green255\blue255;\red255\green255\blue255;
+\red235\green236\blue237;\red36\green38\blue41;\red37\green127\blue159;\red13\green0\blue129;\red104\green26\blue29;
+\red38\green38\blue38;\red196\green26\blue22;}
+{\*\expandedcolortbl;;\csgenericrgb\c0\c50200\c0;\csgenericrgb\c0\c0\c0;\csgenericrgb\c63900\c8200\c8200;
+\csgenericrgb\c0\c0\c100000;\csgenericrgb\c100000\c100000\c100000;\csgenericrgb\c18100\c5200\c43100;\csgenericrgb\c24700\c43100\c45600;\csgenericrgb\c39100\c22000\c12500;
+\csgenericrgb\c11000\c0\c81000;\csgenericrgb\c66500\c5200\c56900;\csgenericrgb\c35900\c14900\c60100;\csgenericrgb\c14900\c27800\c29400;\csgenericrgb\c16900\c51200\c62500;
+\csgenericrgb\c5773\c43941\c538;\csgenericrgb\c0\c45600\c0;\cssrgb\c14118\c15294\c16078;\cssrgb\c100000\c100000\c100000;\csgray\c100000;
+\cssrgb\c93725\c94118\c94510;\cssrgb\c18824\c20000\c21176;\cssrgb\c16863\c56863\c68627;\cssrgb\c6275\c6275\c58039;\cssrgb\c49020\c15294\c15294;
+\cssrgb\c20000\c20000\c20000;\csgenericrgb\c77000\c10200\c8600;}
 \margl1440\margr1440\vieww9000\viewh8400\viewkind0
 \deftab692
 \pard\tx692\pardeftab692\pardirnatural\partightenfactor0
@@ -39,13 +42,57 @@
 \fs28 \cf3 \
 
 \fs22 \cf4 \
-\cf5 #import \cf4 <UIKit/UIKit.h>\cf5 \
+\cf5 #import \cf4 <UIKit/UIKit.h>\
+\
+\pard\tx692\pardeftab692\pardirnatural\partightenfactor0
+
+\fs28 \cf3 \cb6 \CocoaLigature1  [self \cf7 scrollViewDidScroll\cf3 :self.\cf8 \cb6 tableView\cf3 \cb6 ];
+\fs22 \cf4 \cb1 \CocoaLigature0 \
+\
+\pard\tx692\pardeftab692\pardirnatural\partightenfactor0
+
+\fs28 \cf9 \cb6 \CocoaLigature1 #define NAVBAR_CHANGE_POINT \cf10 50\
+\
+\pard\tx692\pardeftab692\pardirnatural\partightenfactor0
+\cf3 \cb6 - (\cf11 void\cf3 )scrollViewDidScroll:(\cf12 UIScrollView\cf3  *)scrollView
+\f2\fs24 \cf0 \
+
+\f0\fs28 \cf3 \{
+\f2\fs24 \cf0 \
+
+\f0\fs28 \cf3     \cf12 UIColor\cf3  * color = [\cf12 UIColor\cf3  \cf7 colorWithRed\cf3 :\cf10 \cb6 0\cf3 \cb6 /\cf10 \cb6 255.0\cf3 \cb6  \cf7 green\cf3 :\cf10 \cb6 175\cf3 \cb6 /\cf10 \cb6 255.0\cf3 \cb6  \cf7 blue\cf3 :\cf10 \cb6 240\cf3 \cb6 /\cf10 \cb6 255.0\cf3 \cb6  \cf7 alpha\cf3 :\cf10 \cb6 1\cf3 \cb6 ];
+\f2\fs24 \cf0 \
+
+\f0\fs28 \cf3     \cf12 CGFloat\cf3  offsetY = scrollView.\cf12 contentOffset\cf3 .\cf12 y\cf3 ;
+\f2\fs24 \cf0 \
+
+\f0\fs28 \cf3     if (offsetY > \cf9 \cb6 NAVBAR_CHANGE_POINT\cf3 \cb6 ) \{
+\f2\fs24 \cf0 \
+
+\f0\fs28 \cf3         \cf12 CGFloat\cf3  alpha = \cf9 \cb6 MIN\cf3 \cb6 (\cf10 \cb6 1\cf3 \cb6 , \cf10 \cb6 1\cf3 \cb6  - ((\cf9 \cb6 NAVBAR_CHANGE_POINT\cf3 \cb6  + \cf10 \cb6 64\cf3 \cb6  - offsetY) / \cf10 \cb6 64\cf3 \cb6 ));
+\f2\fs24 \cf0 \
+
+\f0\fs28 \cf3         [self.\cf12 navigationController\cf3 .\cf12 navigationBar\cf3  \cf13 \cb6 lt_setBackgroundColor\cf3 \cb6 :[color \cf7 colorWithAlphaComponent\cf3 :alpha]];
+\f2\fs24 \cf0 \
+
+\f0\fs28 \cf3     \} else \{
+\f2\fs24 \cf0 \
+
+\f0\fs28 \cf3         [self.\cf12 navigationController\cf3 .\cf12 navigationBar\cf3  \cf13 \cb6 lt_setBackgroundColor\cf3 \cb6 :[color \cf7 colorWithAlphaComponent\cf3 :\cf10 \cb6 0\cf3 \cb6 ]];
+\f2\fs24 \cf0 \
+
+\f0\fs28 \cf3     \}
+\f2\fs24 \cf0 \
+
+\f0\fs28 \cf3 \}
+\fs22 \cf5 \cb1 \CocoaLigature0 \
+\pard\tx692\pardeftab692\pardirnatural\partightenfactor0
 
 \fs28 \cf3 \
 
 \fs22 \cf5 @interface
 \fs28 \cf3  MHNavigationController : 
-\fs22 \cf6 UINavigationController
+\fs22 \cf14 UINavigationController
 \fs28 \cf3 \
 \
 
@@ -69,7 +116,7 @@
     [
 \fs22 \cf5 self
 \fs28 \cf3  
-\fs22 \cf6 _setupNavigationBarTheme
+\fs22 \cf14 _setupNavigationBarTheme
 \fs28 \cf3 ];\
     \
     
@@ -81,7 +128,7 @@
     [
 \fs22 \cf5 self
 \fs28 \cf3  
-\fs22 \cf6 _setupBarButtonItemTheme
+\fs22 \cf14 _setupBarButtonItemTheme
 \fs28 \cf3 ];\
 \}\
 \
@@ -92,7 +139,7 @@
     [
 \fs22 \cf5 super
 \fs28 \cf3  
-\fs22 \cf6 viewDidLoad
+\fs22 \cf14 viewDidLoad
 \fs28 \cf3 ];\
 \}\
 \
@@ -107,7 +154,7 @@
 \fs22 \cf5 #pragma mark - 
 \f1 \'c9\'e8\'d6\'c3\'d6\'f7\'cc\'e2
 \f0 \
-\cf7 /**\
+\cf15 /**\
  *  
 \f1 \'c9\'e8\'d6\'c3
 \f0 UINavigationBarTheme
@@ -120,14 +167,14 @@
 \fs28 \cf3 ) _setupNavigationBarTheme\
 \{\
     
-\fs22 \cf6 UINavigationBar
+\fs22 \cf14 UINavigationBar
 \fs28 \cf3  *appearance = [
-\fs22 \cf6 UINavigationBar
+\fs22 \cf14 UINavigationBar
 \fs28 \cf3  
-\fs22 \cf6 appearance
+\fs22 \cf14 appearance
 \fs28 \cf3 ];\
     
-\fs22 \cf7 //!!!: 
+\fs22 \cf15 //!!!: 
 \f1 \'b1\'d8\'d0\'eb\'c9\'e8\'d6\'c3\'ce\'aa\'cd\'b8\'c3\'f7
 \f0   
 \f1 \'b2\'bb\'c8\'bb\'b2\'bc\'be\'d6\'d3\'d0\'ce\'ca\'cc\'e2
@@ -148,7 +195,7 @@
 \f0  self.navigationBar.translucent = YES;
 \fs28 \cf3 \
     [appearance 
-\fs22 \cf6 setTranslucent
+\fs22 \cf14 setTranslucent
 \fs28 \cf3 :
 \fs22 \cf5 YES
 \fs28 \cf3 ];\
@@ -158,9 +205,9 @@
 \f1 \'c9\'e8\'d6\'c3\'b5\'bc\'ba\'bd\'c0\'b8\'b5\'c4\'d1\'f9\'ca\'bd
 \f0\fs28 \cf3 \
     [appearance 
-\fs22 \cf6 setBarStyle
+\fs22 \cf14 setBarStyle
 \fs28 \cf3 :
-\fs22 \cf6 UIBarStyleDefault
+\fs22 \cf14 UIBarStyleDefault
 \fs28 \cf3 ];\
     \
     
@@ -168,11 +215,11 @@
 \f1 \'c9\'e8\'d6\'c3\'b5\'bc\'ba\'bd\'c0\'b8\'b5\'c4\'e4\'d6\'c8\'be\'c9\'ab
 \f0\fs28 \cf3 \
     [appearance 
-\fs22 \cf6 setTintColor
+\fs22 \cf14 setTintColor
 \fs28 \cf3 :[
-\fs22 \cf6 UIColor
+\fs22 \cf14 UIColor
 \fs28 \cf3  
-\fs22 \cf6 whiteColor
+\fs22 \cf14 whiteColor
 \fs28 \cf3 ]];\
     \
     
@@ -180,11 +227,11 @@
 \f1 \'c9\'e8\'d6\'c3\'b5\'bc\'ba\'bd\'c0\'b8\'b5\'c4\'b1\'b3\'be\'b0\'c9\'ab
 \f0\fs28 \cf3 \
     [appearance 
-\fs22 \cf6 setBarTintColor
+\fs22 \cf14 setBarTintColor
 \fs28 \cf3 :[
-\fs22 \cf6 UIColor
+\fs22 \cf14 UIColor
 \fs28 \cf3  
-\fs22 \cf6 whiteColor
+\fs22 \cf14 whiteColor
 \fs28 \cf3 ]];\
     \
     
@@ -192,15 +239,15 @@
 \f1 \'c9\'e8\'d6\'c3\'b1\'b3\'be\'b0\'cd\'bc\'c6\'ac
 \f0\fs28 \cf3 \
     [appearance 
-\fs22 \cf6 setBackgroundImage
+\fs22 \cf14 setBackgroundImage
 \fs28 \cf3 :
 \fs22 \cf5 MHImageNamed
 \fs28 \cf3 (
 \fs22 \cf4 @"navigationbarBackgroundWhite"
 \fs28 \cf3 ) 
-\fs22 \cf6 forBarMetrics
+\fs22 \cf14 forBarMetrics
 \fs28 \cf3 :
-\fs22 \cf6 UIBarMetricsDefault
+\fs22 \cf14 UIBarMetricsDefault
 \fs28 \cf3 ];\
 \
     
@@ -208,29 +255,29 @@
 \f1 \'c9\'e8\'d6\'c3\'ce\'c4\'d7\'d6\'ca\'f4\'d0\'d4
 \f0\fs28 \cf3 \
     
-\fs22 \cf6 NSMutableDictionary
+\fs22 \cf14 NSMutableDictionary
 \fs28 \cf3  *textAttrs = [
-\fs22 \cf6 NSMutableDictionary
+\fs22 \cf14 NSMutableDictionary
 \fs28 \cf3  
-\fs22 \cf6 dictionary
+\fs22 \cf14 dictionary
 \fs28 \cf3 ];\
     textAttrs[
-\fs22 \cf6 NSFontAttributeName
+\fs22 \cf14 NSFontAttributeName
 \fs28 \cf3 ] = [
-\fs22 \cf6 UIFont
+\fs22 \cf14 UIFont
 \fs28 \cf3  
-\fs22 \cf6 systemFontOfSize
+\fs22 \cf14 systemFontOfSize
 \fs28 \cf3 :
 \fs22 \cf5 MHPxConvertPt
 \fs28 \cf3 (
 \fs22 17.0f
 \fs28 )];\
     textAttrs[
-\fs22 \cf6 NSForegroundColorAttributeName
+\fs22 \cf14 NSForegroundColorAttributeName
 \fs28 \cf3 ] = [
-\fs22 \cf6 UIColor
+\fs22 \cf14 UIColor
 \fs28 \cf3  
-\fs22 \cf6 blackColor
+\fs22 \cf14 blackColor
 \fs28 \cf3 ];\
     
 \fs22 \cf2 // UIOffsetZero
@@ -245,29 +292,29 @@
 \f1 \'ca\'fd\'d7\'e9\'d6\'d0
 \f0\fs28 \cf3 \
     
-\fs22 \cf6 NSShadow
+\fs22 \cf14 NSShadow
 \fs28 \cf3  *shadow = [[
-\fs22 \cf6 NSShadow
+\fs22 \cf14 NSShadow
 \fs28 \cf3  
-\fs22 \cf6 alloc
+\fs22 \cf14 alloc
 \fs28 \cf3 ] 
-\fs22 \cf6 init
+\fs22 \cf14 init
 \fs28 \cf3 ];\
     shadow.
-\fs22 \cf6 shadowOffset
+\fs22 \cf14 shadowOffset
 \fs28 \cf3  =  
-\fs22 \cf6 CGSizeZero
+\fs22 \cf14 CGSizeZero
 \fs28 \cf3 ;\
     textAttrs[
-\fs22 \cf6 NSShadowAttributeName
+\fs22 \cf14 NSShadowAttributeName
 \fs28 \cf3 ] = shadow;\
     [appearance 
-\fs22 \cf6 setTitleTextAttributes
+\fs22 \cf14 setTitleTextAttributes
 \fs28 \cf3 :textAttrs];\
 \}\
 \
 
-\fs22 \cf7 /**\
+\fs22 \cf15 /**\
  *  
 \f1 \'c9\'e8\'d6\'c3
 \f0 UIBarButtonItem
@@ -288,14 +335,14 @@
 \f1 \'b5\'c4\'d1\'f9\'ca\'bd
 \f0\fs28 \cf3 \
     
-\fs22 \cf6 UIBarButtonItem
+\fs22 \cf14 UIBarButtonItem
 \fs28 \cf3  *appearance = [
-\fs22 \cf6 UIBarButtonItem
+\fs22 \cf14 UIBarButtonItem
 \fs28 \cf3  
-\fs22 \cf6 appearance
+\fs22 \cf14 appearance
 \fs28 \cf3 ];\
     
-\fs22 \cf6 CGFloat
+\fs22 \cf14 CGFloat
 \fs28 \cf3  fontSize = 
 \fs22 \cf5 MHPxConvertPt
 \fs28 \cf3 (
@@ -303,7 +350,7 @@
 \fs28 );\
     \
     
-\fs22 \cf7 /**
+\fs22 \cf15 /**
 \f1 \'c9\'e8\'d6\'c3\'ce\'c4\'d7\'d6\'ca\'f4\'d0\'d4
 \f0 **/
 \fs28 \cf3 \
@@ -312,47 +359,47 @@
 \f1 \'c9\'e8\'d6\'c3\'c6\'d5\'cd\'a8\'d7\'b4\'cc\'ac\'b5\'c4\'ce\'c4\'d7\'d6\'ca\'f4\'d0\'d4
 \f0\fs28 \cf3 \
     
-\fs22 \cf6 NSMutableDictionary
+\fs22 \cf14 NSMutableDictionary
 \fs28 \cf3  *textAttrs = [
-\fs22 \cf6 NSMutableDictionary
+\fs22 \cf14 NSMutableDictionary
 \fs28 \cf3  
-\fs22 \cf6 dictionary
+\fs22 \cf14 dictionary
 \fs28 \cf3 ];\
     textAttrs[
-\fs22 \cf6 NSForegroundColorAttributeName
+\fs22 \cf14 NSForegroundColorAttributeName
 \fs28 \cf3 ] = 
 \fs22 \cf5 MHGlobalBlackTextColor
 \fs28 \cf3 ;\
     textAttrs[
-\fs22 \cf6 NSFontAttributeName
+\fs22 \cf14 NSFontAttributeName
 \fs28 \cf3 ] = [
-\fs22 \cf6 UIFont
+\fs22 \cf14 UIFont
 \fs28 \cf3  
-\fs22 \cf6 systemFontOfSize
+\fs22 \cf14 systemFontOfSize
 \fs28 \cf3 :fontSize];\
     
-\fs22 \cf6 NSShadow
+\fs22 \cf14 NSShadow
 \fs28 \cf3  *shadow = [[
-\fs22 \cf6 NSShadow
+\fs22 \cf14 NSShadow
 \fs28 \cf3  
-\fs22 \cf6 alloc
+\fs22 \cf14 alloc
 \fs28 \cf3 ] 
-\fs22 \cf6 init
+\fs22 \cf14 init
 \fs28 \cf3 ];\
     shadow.
-\fs22 \cf6 shadowOffset
+\fs22 \cf14 shadowOffset
 \fs28 \cf3  =  
-\fs22 \cf6 CGSizeZero
+\fs22 \cf14 CGSizeZero
 \fs28 \cf3 ;\
     textAttrs[
-\fs22 \cf6 NSShadowAttributeName
+\fs22 \cf14 NSShadowAttributeName
 \fs28 \cf3 ] = shadow;\
     [appearance 
-\fs22 \cf6 setTitleTextAttributes
+\fs22 \cf14 setTitleTextAttributes
 \fs28 \cf3 :textAttrs 
-\fs22 \cf6 forState
+\fs22 \cf14 forState
 \fs28 \cf3 :
-\fs22 \cf6 UIControlStateNormal
+\fs22 \cf14 UIControlStateNormal
 \fs28 \cf3 ];\
     \
     \
@@ -361,23 +408,23 @@
 \f1 \'c9\'e8\'d6\'c3\'b8\'df\'c1\'c1\'d7\'b4\'cc\'ac\'b5\'c4\'ce\'c4\'d7\'d6\'ca\'f4\'d0\'d4
 \f0\fs28 \cf3 \
     
-\fs22 \cf6 NSMutableDictionary
+\fs22 \cf14 NSMutableDictionary
 \fs28 \cf3  *highTextAttrs = [
-\fs22 \cf6 NSMutableDictionary
+\fs22 \cf14 NSMutableDictionary
 \fs28 \cf3  
-\fs22 \cf6 dictionaryWithDictionary
+\fs22 \cf14 dictionaryWithDictionary
 \fs28 \cf3 :textAttrs];\
     highTextAttrs[
-\fs22 \cf6 NSForegroundColorAttributeName
+\fs22 \cf14 NSForegroundColorAttributeName
 \fs28 \cf3 ] = 
 \fs22 \cf5 MHGlobalShadowBlackTextColor
 \fs28 \cf3 ;\
     [appearance 
-\fs22 \cf6 setTitleTextAttributes
+\fs22 \cf14 setTitleTextAttributes
 \fs28 \cf3 :highTextAttrs 
-\fs22 \cf6 forState
+\fs22 \cf14 forState
 \fs28 \cf3 :
-\fs22 \cf6 UIControlStateHighlighted
+\fs22 \cf14 UIControlStateHighlighted
 \fs28 \cf3 ];\
     \
     
@@ -387,27 +434,27 @@
 \f1 \'b5\'c4\'ce\'c4\'d7\'d6\'ca\'f4\'d0\'d4
 \f0\fs28 \cf3 \
     
-\fs22 \cf6 NSMutableDictionary
+\fs22 \cf14 NSMutableDictionary
 \fs28 \cf3  *disableTextAttrs = [
-\fs22 \cf6 NSMutableDictionary
+\fs22 \cf14 NSMutableDictionary
 \fs28 \cf3  
-\fs22 \cf6 dictionaryWithDictionary
+\fs22 \cf14 dictionaryWithDictionary
 \fs28 \cf3 :textAttrs];\
     disableTextAttrs[
-\fs22 \cf6 NSForegroundColorAttributeName
+\fs22 \cf14 NSForegroundColorAttributeName
 \fs28 \cf3 ] = 
 \fs22 \cf5 MHGlobalGrayTextColor
 \fs28 \cf3 ;\
     [appearance 
-\fs22 \cf6 setTitleTextAttributes
+\fs22 \cf14 setTitleTextAttributes
 \fs28 \cf3 :disableTextAttrs 
-\fs22 \cf6 forState
+\fs22 \cf14 forState
 \fs28 \cf3 :
-\fs22 \cf6 UIControlStateDisabled
+\fs22 \cf14 UIControlStateDisabled
 \fs28 \cf3 ];\
     \
     
-\fs22 \cf7 /**
+\fs22 \cf15 /**
 \f1 \'c9\'e8\'d6\'c3\'b1\'b3\'be\'b0
 \f0 **/
 \fs28 \cf3 \
@@ -425,7 +472,7 @@
 \}\
 \
 
-\fs22 \cf7 /**\
+\fs22 \cf15 /**\
  *  
 \f1 \'c4\'dc\'c0\'b9\'bd\'d8\'cb\'f9\'d3\'d0
 \f0 push
@@ -436,7 +483,7 @@
 - (
 \fs22 \cf5 void
 \fs28 \cf3 )pushViewController:(
-\fs22 \cf6 UIViewController
+\fs22 \cf14 UIViewController
 \fs28 \cf3  *)viewController animated:(
 \fs22 \cf5 BOOL
 \fs28 \cf3 )animated\
@@ -457,38 +504,38 @@
 \fs28 \cf3  (
 \fs22 \cf5 self
 \fs28 \cf3 .
-\fs22 \cf6 viewControllers
+\fs22 \cf14 viewControllers
 \fs28 \cf3 .
-\fs22 \cf6 count
+\fs22 \cf14 count
 \fs28 \cf3  > 
 \fs22 0
 \fs28 )\
         \
     \{\
         viewController.
-\fs22 \cf6 hidesBottomBarWhenPushed
+\fs22 \cf14 hidesBottomBarWhenPushed
 \fs28 \cf3  = 
 \fs22 \cf5 YES
 \fs28 \cf3 ;\
         \
         
-\fs22 \cf6 UIBarButtonItem
+\fs22 \cf14 UIBarButtonItem
 \fs28 \cf3  *backItem = [
-\fs22 \cf6 UIBarButtonItem
+\fs22 \cf14 UIBarButtonItem
 \fs28 \cf3  
-\fs22 \cf6 mh_itemWithImageName
+\fs22 \cf14 mh_itemWithImageName
 \fs28 \cf3 :
 \fs22 \cf4 @"navigationButtonReturn"
 \fs28 \cf3  
-\fs22 \cf6 highImageName
+\fs22 \cf14 highImageName
 \fs28 \cf3 :
 \fs22 \cf4 @"navigationButtonReturnClick"
 \fs28 \cf3  
-\fs22 \cf6 target
+\fs22 \cf14 target
 \fs28 \cf3 :
 \fs22 \cf5 self
 \fs28 \cf3  
-\fs22 \cf6 action
+\fs22 \cf14 action
 \fs28 \cf3 :
 \fs22 \cf5 @selector
 \fs28 \cf3 (_back)];\
@@ -499,9 +546,9 @@
 \f1 \'cd\'b3\'d2\'bb\'b9\'dc\'c0\'ed\'b7\'bd\'b7\'a8
 \f0\fs28 \cf3 \
         viewController.
-\fs22 \cf6 navigationItem
+\fs22 \cf14 navigationItem
 \fs28 \cf3 .
-\fs22 \cf6 leftBarButtonItem
+\fs22 \cf14 leftBarButtonItem
 \fs28 \cf3  = backItem;\
     \}\
     \
@@ -516,16 +563,16 @@
 \fs28 \cf3  ([
 \fs22 \cf5 self
 \fs28 \cf3  
-\fs22 \cf6 respondsToSelector
+\fs22 \cf14 respondsToSelector
 \fs28 \cf3 :
 \fs22 \cf5 @selector
 \fs28 \cf3 (interactivePopGestureRecognizer)]) \{\
         
 \fs22 \cf5 self
 \fs28 \cf3 .
-\fs22 \cf6 interactivePopGestureRecognizer
+\fs22 \cf14 interactivePopGestureRecognizer
 \fs28 \cf3 .
-\fs22 \cf6 enabled
+\fs22 \cf14 enabled
 \fs28 \cf3  = 
 \fs22 \cf5 NO
 \fs28 \cf3 ;\
@@ -537,9 +584,9 @@
     [
 \fs22 \cf5 super
 \fs28 \cf3  
-\fs22 \cf6 pushViewController
+\fs22 \cf14 pushViewController
 \fs28 \cf3 :viewController 
-\fs22 \cf6 animated
+\fs22 \cf14 animated
 \fs28 \cf3 :animated];\
 \}\
 \
@@ -551,7 +598,7 @@
     [
 \fs22 \cf5 self
 \fs28 \cf3  
-\fs22 \cf6 popViewControllerAnimated
+\fs22 \cf14 popViewControllerAnimated
 \fs28 \cf3 :
 \fs22 \cf5 YES
 \fs28 \cf3 ];\
@@ -563,7 +610,7 @@
 \
 \pard\tx642\pardeftab642\pardirnatural\partightenfactor0
 
-\fs26 \cf8 /**\
+\fs26 \cf16 /**\
  
 \f1 \'c9\'e8\'d6\'c3
 \f0 UIButton
@@ -572,16 +619,16 @@
 \f1 \'ca\'f4\'d0\'d4
 \f0 \
  ****/\cf3 \
--(\cf9 void\cf3 )setExclusiveTouchForButtons:(\cf10 UIView\cf3  *)myView\
+-(\cf11 void\cf3 )setExclusiveTouchForButtons:(\cf12 UIView\cf3  *)myView\
 \{\
-    \cf9 for\cf3  (\cf10 UIView\cf3  * button \cf9 in\cf3  [myView \cf11 subviews\cf3 ]) \{\
-        \cf9 if\cf3 ([button \cf11 isKindOfClass\cf3 :[\cf10 UIButton\cf3  \cf11 class\cf3 ]])\
+    \cf11 for\cf3  (\cf12 UIView\cf3  * button \cf11 in\cf3  [myView \cf7 subviews\cf3 ]) \{\
+        \cf11 if\cf3 ([button \cf7 isKindOfClass\cf3 :[\cf12 UIButton\cf3  \cf7 class\cf3 ]])\
         \{\
-            [((\cf10 UIButton\cf3  *)button) \cf11 setExclusiveTouch\cf3 :\cf9 YES\cf3 ];\
+            [((\cf12 UIButton\cf3  *)button) \cf7 setExclusiveTouch\cf3 :\cf11 YES\cf3 ];\
         \}\
-        \cf9 else\cf3  \cf9 if\cf3  ([button \cf11 isKindOfClass\cf3 :[\cf10 UIView\cf3  \cf11 class\cf3 ]])\
+        \cf11 else\cf3  \cf11 if\cf3  ([button \cf7 isKindOfClass\cf3 :[\cf12 UIView\cf3  \cf7 class\cf3 ]])\
         \{\
-            [\cf9 self\cf3  \cf12 setExclusiveTouchForButtons\cf3 :button];\
+            [\cf11 self\cf3  \cf13 setExclusiveTouchForButtons\cf3 :button];\
         \}\
     \}\
 \}\
@@ -589,51 +636,51 @@
 \
 \pard\pardeftab720\partightenfactor0
 
-\f2\fs30 \cf13 \cb14 \expnd0\expndtw0\kerning0
-\CocoaLigature1 You are removing the shadow but not the border, you need to do the following:\cb15 \
+\f3\fs30 \cf17 \cb18 \expnd0\expndtw0\kerning0
+\CocoaLigature1 You are removing the shadow but not the border, you need to do the following:\cb19 \
 \pard\pardeftab720\partightenfactor0
 
-\f3\fs26 \cf13 \cb16 [[UINavigationBar appearance] setBackgroundImage:[[UIImage alloc] init] forBarMetrics:UIBarMetricsDefault];\
+\f4\fs26 \cf17 \cb20 [[UINavigationBar appearance] setBackgroundImage:[[UIImage alloc] init] forBarMetrics:UIBarMetricsDefault];\
 [[UINavigationBar appearance] setShadowImage:[[UIImage alloc] init]];\
 \pard\pardeftab720\partightenfactor0
 
-\f2\fs30 \cf13 \cb14 To change the border use an image of 2 pixels width line:\cb15 \
+\f3\fs30 \cf17 \cb18 To change the border use an image of 2 pixels width line:\cb19 \
 \pard\pardeftab720\partightenfactor0
 
-\f3\fs26 \cf13 \cb16 [[UINavigationBar appearance] setShadowImage:[UIImage imageNamed:@"2pxWidthLineImage"]]; 
-\f0 \cf3 \cb15 \kerning1\expnd0\expndtw0 \CocoaLigature0 \
+\f4\fs26 \cf17 \cb20 [[UINavigationBar appearance] setShadowImage:[UIImage imageNamed:@"2pxWidthLineImage"]]; 
+\f0 \cf3 \cb19 \kerning1\expnd0\expndtw0 \CocoaLigature0 \
 \pard\tx642\pardeftab642\pardirnatural\partightenfactor0
 \cf3 \
 \pard\tx642\pardeftab642\pardirnatural\partightenfactor0
-\cf3 \cb1 - (\cf9 void\cf3 )viewWillAppear:(\cf9 BOOL\cf3 )animated \{\
-    [\cf9 super\cf3  \cf11 viewWillAppear\cf3 :animated];\
-    [\cf9 self\cf3 .\cf10 navigationController\cf3 .\cf10 navigationBar\cf3  \cf11 setBackgroundImage\cf3 :\cf9 nil\cf3  \cf11 forBarPosition\cf3 :\cf11 UIBarPositionAny\cf3  \cf11 barMetrics\cf3 :\cf11 UIBarMetricsDefault\cf3 ];\
-    [\cf9 self\cf3 .\cf10 navigationController\cf3 .\cf10 navigationBar\cf3  \cf11 setShadowImage\cf3 :\cf9 nil\cf3 ];\
-    [\cf9 self\cf3 .\cf10 navigationController\cf3 .\cf10 navigationBar\cf3  \cf12 lt_setBackgroundColor\cf3 :[\cf10 UIColor\cf3  \cf11 whiteColor\cf3 ]];\
-    \cf9 self\cf3 .\cf10 tabBarController\cf3 .\cf10 tabBar\cf3 .\cf10 hidden\cf3 =\cf9 NO\cf3 ;\
+\cf3 \cb1 - (\cf11 void\cf3 )viewWillAppear:(\cf11 BOOL\cf3 )animated \{\
+    [\cf11 super\cf3  \cf7 viewWillAppear\cf3 :animated];\
+    [\cf11 self\cf3 .\cf12 navigationController\cf3 .\cf12 navigationBar\cf3  \cf7 setBackgroundImage\cf3 :\cf11 nil\cf3  \cf7 forBarPosition\cf3 :\cf7 UIBarPositionAny\cf3  \cf7 barMetrics\cf3 :\cf7 UIBarMetricsDefault\cf3 ];\
+    [\cf11 self\cf3 .\cf12 navigationController\cf3 .\cf12 navigationBar\cf3  \cf7 setShadowImage\cf3 :\cf11 nil\cf3 ];\
+    [\cf11 self\cf3 .\cf12 navigationController\cf3 .\cf12 navigationBar\cf3  \cf13 lt_setBackgroundColor\cf3 :[\cf12 UIColor\cf3  \cf7 whiteColor\cf3 ]];\
+    \cf11 self\cf3 .\cf12 tabBarController\cf3 .\cf12 tabBar\cf3 .\cf12 hidden\cf3 =\cf11 NO\cf3 ;\
     \
 \}\
-- (\cf9 void\cf3 )viewWillDisappear:(\cf9 BOOL\cf3 )animated \{\
-    [\cf9 super\cf3  \cf11 viewWillDisappear\cf3 :animated];\
-    [\cf9 self\cf3 .\cf10 navigationController\cf3 .\cf10 navigationBar\cf3  \cf11 setBackgroundImage\cf3 :[\cf10 UIImage\cf3  \cf11 new\cf3 ] \cf11 forBarPosition\cf3 :\cf11 UIBarPositionAny\cf3  \cf11 barMetrics\cf3 :\cf11 UIBarMetricsDefault\cf3 ];\
-    [\cf9 self\cf3 .\cf10 navigationController\cf3 .\cf10 navigationBar\cf3  \cf11 setShadowImage\cf3 :[\cf10 UIImage\cf3  \cf11 new\cf3 ]];\
-\}\cb15 \
+- (\cf11 void\cf3 )viewWillDisappear:(\cf11 BOOL\cf3 )animated \{\
+    [\cf11 super\cf3  \cf7 viewWillDisappear\cf3 :animated];\
+    [\cf11 self\cf3 .\cf12 navigationController\cf3 .\cf12 navigationBar\cf3  \cf7 setBackgroundImage\cf3 :[\cf12 UIImage\cf3  \cf7 new\cf3 ] \cf7 forBarPosition\cf3 :\cf7 UIBarPositionAny\cf3  \cf7 barMetrics\cf3 :\cf7 UIBarMetricsDefault\cf3 ];\
+    [\cf11 self\cf3 .\cf12 navigationController\cf3 .\cf12 navigationBar\cf3  \cf7 setShadowImage\cf3 :[\cf12 UIImage\cf3  \cf7 new\cf3 ]];\
+\}\cb19 \
 \
 \
 \pard\pardeftab720\partightenfactor0
 
-\f3 \cf17 \cb16 \expnd0\expndtw0\kerning0
-\CocoaLigature1 func application(application: \cf18 UIApplication\cf17 , didFinishLaunchingWithOptions launchOptions: [\cf18 NSObject\cf17 : \cf18 AnyObject\cf17 ]?) -> \cf18 Bool\cf17  \{\
+\f4 \cf21 \cb20 \expnd0\expndtw0\kerning0
+\CocoaLigature1 func application(application: \cf22 UIApplication\cf21 , didFinishLaunchingWithOptions launchOptions: [\cf22 NSObject\cf21 : \cf22 AnyObject\cf21 ]?) -> \cf22 Bool\cf21  \{\
 \
-    \cf18 UINavigationBar\cf17 .appearance().setBackgroundImage(\cf18 UIImage\cf17 (), forBarPosition: \cf18 UIBarPosition\cf17 .\cf18 Any\cf17 , barMetrics: \cf18 UIBarMetrics\cf17 .\cf18 Default\cf17 )\
-    \cf18 UINavigationBar\cf17 .appearance().shadowImage = \cf18 UIImage\cf17 ()\
-    \cf18 UINavigationBar\cf17 .appearance().tintColor = \cf18 UIColor\cf17 .whiteColor()\
-    \cf18 UINavigationBar\cf17 .appearance().barTintColor = \cf18 UIColor\cf17 .redColor()\
-    \cf18 UINavigationBar\cf17 .appearance().translucent = \cf19 false\cf17 \
-    \cf18 UINavigationBar\cf17 .appearance().clipsToBounds = \cf19 false\cf17 \
-    \cf18 UINavigationBar\cf17 .appearance().backgroundColor = \cf18 UIColor\cf17 .redColor()\
-    \cf18 UINavigationBar\cf17 .appearance().titleTextAttributes = [\cf18 NSFontAttributeName\cf17  : (\cf18 UIFont\cf17 (name: \cf20 "FONT NAME"\cf17 , size: \cf20 18\cf17 ))!, \cf18 NSForegroundColorAttributeName\cf17 : \cf18 UIColor\cf17 .whiteColor()] \}
-\f0 \cf3 \cb15 \kerning1\expnd0\expndtw0 \CocoaLigature0 \
+    \cf22 UINavigationBar\cf21 .appearance().setBackgroundImage(\cf22 UIImage\cf21 (), forBarPosition: \cf22 UIBarPosition\cf21 .\cf22 Any\cf21 , barMetrics: \cf22 UIBarMetrics\cf21 .\cf22 Default\cf21 )\
+    \cf22 UINavigationBar\cf21 .appearance().shadowImage = \cf22 UIImage\cf21 ()\
+    \cf22 UINavigationBar\cf21 .appearance().tintColor = \cf22 UIColor\cf21 .whiteColor()\
+    \cf22 UINavigationBar\cf21 .appearance().barTintColor = \cf22 UIColor\cf21 .redColor()\
+    \cf22 UINavigationBar\cf21 .appearance().translucent = \cf23 false\cf21 \
+    \cf22 UINavigationBar\cf21 .appearance().clipsToBounds = \cf23 false\cf21 \
+    \cf22 UINavigationBar\cf21 .appearance().backgroundColor = \cf22 UIColor\cf21 .redColor()\
+    \cf22 UINavigationBar\cf21 .appearance().titleTextAttributes = [\cf22 NSFontAttributeName\cf21  : (\cf22 UIFont\cf21 (name: \cf24 "FONT NAME"\cf21 , size: \cf24 18\cf21 ))!, \cf22 NSForegroundColorAttributeName\cf21 : \cf22 UIColor\cf21 .whiteColor()] \}
+\f0 \cf3 \cb19 \kerning1\expnd0\expndtw0 \CocoaLigature0 \
 \pard\tx642\pardeftab642\pardirnatural\partightenfactor0
 \cf3 \
 \
@@ -642,10 +689,10 @@
 http://www.jianshu.com/p/5c09c2700038\
 \pard\pardeftab720\partightenfactor0
 
-\f4\b\fs68 \cf21 \expnd0\expndtw0\kerning0
+\f5\b\fs68 \cf25 \expnd0\expndtw0\kerning0
 \CocoaLigature1 ios 
 \f1 \'d7\'b4\'cc\'ac\'c0\'b8
-\f4 statusBar
+\f5 statusBar
 \f1 \'b5\'c4\'b1\'b3\'be\'b0\'d1\'d5\'c9\'ab
 \f0\b0\fs26 \cf3 \kerning1\expnd0\expndtw0 \CocoaLigature0 \
 \pard\tx642\pardeftab642\pardirnatural\partightenfactor0
@@ -661,9 +708,45 @@ if ([self.navigationController respondsToSelector:@selector(interactivePopGestur
     self.navigationController.interactivePopGestureRecognizer.enabled = NO;    \
 \}\
 \
-\
-\
-\
+\pard\tx692\pardeftab692\pardirnatural\partightenfactor0
+
+\fs28 \cf16 \cb6 \CocoaLigature1 //
+\f1 \'c8\'e7\'b9\'fb\'ca\'c7\'b4\'f8\'b5\'bc\'ba\'bd\'cc\'f5\'b5\'c4\'c7\'e9\'bf\'f6\'a3\'ac\'d0\'e8\'d2\'aa\'c3\'bf\'d2\'bb\'d2\'b3\'b2\'bb\'cd\'ac\'b5\'c4\'d7\'b4\'cc\'ac\'c0\'b8\'d1\'d5\'c9\'ab\'d0\'e8\'d2\'aa
+\f0 View controller-based status bar appearance 
+\f1 \'c9\'e8\'d6\'c3\'b3\'c9
+\f0 NO
+\fs26 \cf3 \cb19 \CocoaLigature0 \
+
+\fs28 \cf16 \cb6 \CocoaLigature1 //
+\f1 \'c9\'e8\'d6\'c3\'d7\'b4\'cc\'ac\'c0\'b8\'b1\'b3\'be\'b0\'d1\'d5\'c9\'ab
+\f2\fs24 \cf0 \cb6 \
+\pard\tx692\pardeftab692\pardirnatural\partightenfactor0
+
+\f0\fs28 \cf3 - (\cf11 void\cf3 )setStatusBarBackgroundColor:(\cf12 UIColor\cf3  *)color \{
+\f2\fs24 \cf0 \
+
+\f0\fs28 \cf3     
+\f2\fs24 \cf0 \
+
+\f0\fs28 \cf3     \cf12 UIView\cf3  *statusBar = [[[\cf12 UIApplication\cf3  \cf7 sharedApplication\cf3 ] \cf7 valueForKey\cf3 :\cf26 @"statusBarWindow"\cf3 ] \cf7 valueForKey\cf3 :\cf26 @"statusBar"\cf3 ];
+\f2\fs24 \cf0 \
+
+\f0\fs28 \cf3     
+\f2\fs24 \cf0 \
+
+\f0\fs28 \cf3     if ([statusBar \cf7 respondsToSelector\cf3 :\cf11 @selector\cf3 (setBackgroundColor:)]) \{
+\f2\fs24 \cf0 \
+
+\f0\fs28 \cf3         statusBar.\cf12 backgroundColor\cf3  = color;
+\f2\fs24 \cf0 \
+
+\f0\fs28 \cf3     \}
+\f2\fs24 \cf0 \
+
+\f0\fs28 \cf3 \}
+\fs26 \cf3 \cb19 \CocoaLigature0 \
+\pard\tx642\pardeftab642\pardirnatural\partightenfactor0
+\cf3 \
 \
 \
 \
