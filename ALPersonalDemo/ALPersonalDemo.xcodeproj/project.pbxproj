@@ -338,6 +338,7 @@
 		CF1C924B1FBAB8FB0001D0DB /* animate.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = animate.rtf; sourceTree = "<group>"; };
 		CF2185F51EF36CC800B151DE /* CharacterLimitTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CharacterLimitTextField.h; sourceTree = "<group>"; };
 		CF2185F61EF36CC800B151DE /* CharacterLimitTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CharacterLimitTextField.m; sourceTree = "<group>"; };
+		CF25C1B61FE35745002B5EE7 /* WHUMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WHUMacro.h; sourceTree = "<group>"; };
 		CF27F3531F7DE033000E241C /* UIBarButtonItem+WZLBadge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+WZLBadge.h"; sourceTree = "<group>"; };
 		CF27F3541F7DE033000E241C /* UIBarButtonItem+WZLBadge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+WZLBadge.m"; sourceTree = "<group>"; };
 		CF27F3551F7DE033000E241C /* UITabBarItem+WZLBadge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITabBarItem+WZLBadge.h"; sourceTree = "<group>"; };
@@ -2121,6 +2122,7 @@
 		E1D2264A1F6D85DB0001E8A3 /* tool */ = {
 			isa = PBXGroup;
 			children = (
+				CF25C1B61FE35745002B5EE7 /* WHUMacro.h */,
 				E1D2264D1F6D86860001E8A3 /* NSPredicate */,
 			);
 			path = tool;

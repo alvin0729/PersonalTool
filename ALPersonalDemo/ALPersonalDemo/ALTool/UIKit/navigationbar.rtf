@@ -46,7 +46,7 @@
 \
 \pard\tx692\pardeftab692\pardirnatural\partightenfactor0
 
-\fs28 \cf3 \cb6 \CocoaLigature1  [self \cf7 scrollViewDidScroll\cf3 :self.\cf8 \cb6 tableView\cf3 \cb6 ];
+\fs28 \cf3 \cb6 \CocoaLigature1  [self \cf7 scrollViewDidScroll\cf3 :self.\cf8 tableView\cf3 ];
 \fs22 \cf4 \cb1 \CocoaLigature0 \
 \
 \pard\tx692\pardeftab692\pardirnatural\partightenfactor0
@@ -54,31 +54,31 @@
 \fs28 \cf9 \cb6 \CocoaLigature1 #define NAVBAR_CHANGE_POINT \cf10 50\
 \
 \pard\tx692\pardeftab692\pardirnatural\partightenfactor0
-\cf3 \cb6 - (\cf11 void\cf3 )scrollViewDidScroll:(\cf12 UIScrollView\cf3  *)scrollView
+\cf3 - (\cf11 void\cf3 )scrollViewDidScroll:(\cf12 UIScrollView\cf3  *)scrollView
 \f2\fs24 \cf0 \
 
 \f0\fs28 \cf3 \{
 \f2\fs24 \cf0 \
 
-\f0\fs28 \cf3     \cf12 UIColor\cf3  * color = [\cf12 UIColor\cf3  \cf7 colorWithRed\cf3 :\cf10 \cb6 0\cf3 \cb6 /\cf10 \cb6 255.0\cf3 \cb6  \cf7 green\cf3 :\cf10 \cb6 175\cf3 \cb6 /\cf10 \cb6 255.0\cf3 \cb6  \cf7 blue\cf3 :\cf10 \cb6 240\cf3 \cb6 /\cf10 \cb6 255.0\cf3 \cb6  \cf7 alpha\cf3 :\cf10 \cb6 1\cf3 \cb6 ];
+\f0\fs28 \cf3     \cf12 UIColor\cf3  * color = [\cf12 UIColor\cf3  \cf7 colorWithRed\cf3 :\cf10 0\cf3 /\cf10 255.0\cf3  \cf7 green\cf3 :\cf10 175\cf3 /\cf10 255.0\cf3  \cf7 blue\cf3 :\cf10 240\cf3 /\cf10 255.0\cf3  \cf7 alpha\cf3 :\cf10 1\cf3 ];
 \f2\fs24 \cf0 \
 
 \f0\fs28 \cf3     \cf12 CGFloat\cf3  offsetY = scrollView.\cf12 contentOffset\cf3 .\cf12 y\cf3 ;
 \f2\fs24 \cf0 \
 
-\f0\fs28 \cf3     if (offsetY > \cf9 \cb6 NAVBAR_CHANGE_POINT\cf3 \cb6 ) \{
+\f0\fs28 \cf3     if (offsetY > \cf9 NAVBAR_CHANGE_POINT\cf3 ) \{
 \f2\fs24 \cf0 \
 
-\f0\fs28 \cf3         \cf12 CGFloat\cf3  alpha = \cf9 \cb6 MIN\cf3 \cb6 (\cf10 \cb6 1\cf3 \cb6 , \cf10 \cb6 1\cf3 \cb6  - ((\cf9 \cb6 NAVBAR_CHANGE_POINT\cf3 \cb6  + \cf10 \cb6 64\cf3 \cb6  - offsetY) / \cf10 \cb6 64\cf3 \cb6 ));
+\f0\fs28 \cf3         \cf12 CGFloat\cf3  alpha = \cf9 MIN\cf3 (\cf10 1\cf3 , \cf10 1\cf3  - ((\cf9 NAVBAR_CHANGE_POINT\cf3  + \cf10 64\cf3  - offsetY) / \cf10 64\cf3 ));
 \f2\fs24 \cf0 \
 
-\f0\fs28 \cf3         [self.\cf12 navigationController\cf3 .\cf12 navigationBar\cf3  \cf13 \cb6 lt_setBackgroundColor\cf3 \cb6 :[color \cf7 colorWithAlphaComponent\cf3 :alpha]];
+\f0\fs28 \cf3         [self.\cf12 navigationController\cf3 .\cf12 navigationBar\cf3  \cf13 lt_setBackgroundColor\cf3 :[color \cf7 colorWithAlphaComponent\cf3 :alpha]];
 \f2\fs24 \cf0 \
 
 \f0\fs28 \cf3     \} else \{
 \f2\fs24 \cf0 \
 
-\f0\fs28 \cf3         [self.\cf12 navigationController\cf3 .\cf12 navigationBar\cf3  \cf13 \cb6 lt_setBackgroundColor\cf3 \cb6 :[color \cf7 colorWithAlphaComponent\cf3 :\cf10 \cb6 0\cf3 \cb6 ]];
+\f0\fs28 \cf3         [self.\cf12 navigationController\cf3 .\cf12 navigationBar\cf3  \cf13 lt_setBackgroundColor\cf3 :[color \cf7 colorWithAlphaComponent\cf3 :\cf10 0\cf3 ]];
 \f2\fs24 \cf0 \
 
 \f0\fs28 \cf3     \}
@@ -154,6 +154,7 @@
 \fs22 \cf5 #pragma mark - 
 \f1 \'c9\'e8\'d6\'c3\'d6\'f7\'cc\'e2
 \f0 \
+\pard\tx692\pardeftab692\pardirnatural\partightenfactor0
 \cf15 /**\
  *  
 \f1 \'c9\'e8\'d6\'c3
@@ -603,6 +604,7 @@
 \fs22 \cf5 YES
 \fs28 \cf3 ];\
 \}\
+\pard\tx692\pardeftab692\pardirnatural\partightenfactor0
 
 \fs22 \cf5 @end\
 \
@@ -683,9 +685,45 @@
 \f0 \cf3 \cb19 \kerning1\expnd0\expndtw0 \CocoaLigature0 \
 \pard\tx642\pardeftab642\pardirnatural\partightenfactor0
 \cf3 \
-\
-\
-\
+\pard\pardeftab720\partightenfactor0
+
+\f5\b\fs68 \cf25 \expnd0\expndtw0\kerning0
+\CocoaLigature1 ios 
+\f1 \'cf\'d4\'ca\'be\'b5\'bc\'ba\'bd\'c0\'b8\'b5\'d7\'b2\'bf\'cf\'df\
+\pard\tx692\pardeftab692\pardirnatural\partightenfactor0
+
+\f0\b0\fs28 \cf11 \cb6 \kerning1\expnd0\expndtw0 self\cf3 .\cf12 navigationController\cf3 .\cf12 navigationBar\cf3 .\cf12 translucent\cf3  = \cf11 NO\cf3 ;
+\fs26 \cb19 \CocoaLigature0 \
+\pard\tx692\pardeftab692\pardirnatural\partightenfactor0
+
+\fs28 \cf3 \cb6 \CocoaLigature1 [\cf11 self\cf3 .\cf12 navigationController\cf3 .\cf12 navigationBar\cf3  \cf7 setBackgroundImage\cf3 :\cf11 nil\cf3  \cf7 forBarPosition\cf3 :\cf7 UIBarPositionAny\cf3  \cf7 barMetrics\cf3 :\cf7 UIBarMetricsDefault\cf3 ];
+\f2\fs24 \cf0 \
+
+\f0\fs28 \cf3     [\cf11 self\cf3 .\cf12 navigationController\cf3 .\cf12 navigationBar\cf3  \cf7 setShadowImage\cf3 :\cf11 nil\cf3 ];
+\f2\fs24 \cf0 \
+
+\f0\fs28 \cf3     [\cf11 self\cf3 .\cf12 navigationController\cf3 .\cf12 navigationBar\cf3  \cf13 lt_setBackgroundColor\cf3 :[\cf12 UIColor\cf3  \cf7 whiteColor\cf3 ]];\
+\pard\pardeftab720\partightenfactor0
+
+\f5\b\fs68 \cf25 \cb19 \expnd0\expndtw0\kerning0
+ios 
+\f1 \'d2\'fe\'b2\'d8\'b5\'bc\'ba\'bd\'c0\'b8\'b5\'d7\'b2\'bf\'cf\'df
+\f0\b0\fs26 \cf3 \kerning1\expnd0\expndtw0 \CocoaLigature0 \
+\pard\tx692\pardeftab692\pardirnatural\partightenfactor0
+
+\fs28 \cf11 \cb6 \CocoaLigature1 self\cf3 .\cf12 navigationController\cf3 .\cf12 navigationBar\cf3 .\cf12 translucent\cf3  = \cf11 YES\cf3 ;
+\f2\fs24 \cf0 \
+\pard\tx692\pardeftab692\pardirnatural\partightenfactor0
+
+\f0\fs28 \cf3     [\cf11 self\cf3 .\cf12 navigationController\cf3 .\cf12 navigationBar\cf3  \cf7 setBackgroundImage\cf3 :[\cf12 UIImage\cf3  \cf7 new\cf3 ] \cf7 forBarPosition\cf3 :\cf7 UIBarPositionAny\cf3  \cf7 barMetrics\cf3 :\cf7 UIBarMetricsDefault\cf3 ];
+\f2\fs24 \cf0 \
+
+\f0\fs28 \cf3     [\cf11 self\cf3 .\cf12 navigationController\cf3 .\cf12 navigationBar\cf3  \cf7 setShadowImage\cf3 :[\cf12 UIImage\cf3  \cf7 new\cf3 ]];\
+\pard\tx692\pardeftab692\pardirnatural\partightenfactor0
+
+\fs26 \cf3 \cb19 \CocoaLigature0 \
+\pard\tx642\pardeftab642\pardirnatural\partightenfactor0
+\cf3 \
 http://www.jianshu.com/p/5c09c2700038\
 \pard\pardeftab720\partightenfactor0
 
@@ -719,7 +757,7 @@ if ([self.navigationController respondsToSelector:@selector(interactivePopGestur
 
 \fs28 \cf16 \cb6 \CocoaLigature1 //
 \f1 \'c9\'e8\'d6\'c3\'d7\'b4\'cc\'ac\'c0\'b8\'b1\'b3\'be\'b0\'d1\'d5\'c9\'ab
-\f2\fs24 \cf0 \cb6 \
+\f2\fs24 \cf0 \
 \pard\tx692\pardeftab692\pardirnatural\partightenfactor0
 
 \f0\fs28 \cf3 - (\cf11 void\cf3 )setStatusBarBackgroundColor:(\cf12 UIColor\cf3  *)color \{
@@ -744,12 +782,50 @@ if ([self.navigationController respondsToSelector:@selector(interactivePopGestur
 \f2\fs24 \cf0 \
 
 \f0\fs28 \cf3 \}
-\fs26 \cf3 \cb19 \CocoaLigature0 \
+\fs26 \cb19 \CocoaLigature0 \
 \pard\tx642\pardeftab642\pardirnatural\partightenfactor0
 \cf3 \
-\
-\
-\
+\pard\pardeftab720\partightenfactor0
+
+\f5\b\fs68 \cf25 \cb1 \expnd0\expndtw0\kerning0
+\CocoaLigature1 ios
+\f1 \'d4\'da
+\f5 tableview
+\f1 \'c9\'cf\'cc\'ed\'bc\'d3
+\f5 textField
+\f1 \'ba\'f3\'b1\'dc\'c3\'e2\'bc\'fc\'c5\'cc\'d5\'da\'b5\'b2\'b5\'c4\'bd\'e2\'be\'f6\'b7\'bd\'b0\'b8\'a3\'a8\'ce\'b4\'b2\'e2\'ca\'d4\'a3\'a9
+\f0\b0\fs26 \cf3 \cb19 \kerning1\expnd0\expndtw0 \CocoaLigature0 \
+\pard\tx642\pardeftab642\pardirnatural\partightenfactor0
+\cf3 \
+-(UITableView *)tableView\{\
+    \
+    if (!_tableView) \{\
+        \
+        _tableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 0, kWidth, kHeight-64) style:UITableViewStyleGrouped];\
+       \
+        //
+\f1 \'b4\'a6\'c0\'ed\'bc\'fc\'c5\'cc\'d5\'da\'b5\'b2\'ce\'ca\'cc\'e2
+\f0 \
+        UITableViewController *tvc = [[UITableViewController alloc] initWithStyle:UITableViewStylePlain];\
+        [self addChildViewController:tvc];\
+        _tableView = tvc.tableView;\
+       ----------->
+\f1 \'bc\'d3\'c9\'cf\'d2\'d4\'c9\'cf\'c8\'fd\'d0\'d0\'b4\'fa\'c2\'eb\'cd\'ea\'c3\'c0\'bd\'e2\'be\'f6\'ce\'ca\'cc\'e2\'a3\'a1
+\f0 \
+        \
+        _tableView.backgroundColor = KGrayColor;\
+        _tableView.delegate = self;\
+        _tableView.dataSource = self;\
+        _tableView.rowHeight = 55;\
+        _tableView.separatorStyle = 0;//
+\f1 \'c8\'a5\'b5\'f4\'b7\'d6\'b8\'ee\'cf\'df
+\f0 \
+        _tableView.tableHeaderView = [self headView];\
+        _tableView.tableFooterView = [self footerView];\
+        \
+    \}\
+    return _tableView;\
+\}\
 \
 \
 \
