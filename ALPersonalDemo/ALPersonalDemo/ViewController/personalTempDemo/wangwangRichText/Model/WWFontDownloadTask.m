@@ -162,7 +162,7 @@ NSString * const kFontAdobeSongti = @"AdobeSongStd-Light";    //Adobe 宋体
                     if (succeed) {
                         succeed(nil,1.0);
                     }
-                    return ;
+                    return;
                 });
             }
         }

@@ -9,10 +9,13 @@
 /* Begin PBXBuildFile section */
 		82D04F3E3F207AF8CA483A1E /* libPods-ALPersonalDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 95C4D560735BE5A3E41488ED /* libPods-ALPersonalDemo.a */; };
 		CF04D97D1F48139000F507E7 /* 备忘2.rtf in Resources */ = {isa = PBXBuildFile; fileRef = CF04D97C1F48139000F507E7 /* 备忘2.rtf */; };
+		CF08B11E1FE7521A0015015F /* WHULiveKeeper.m in Sources */ = {isa = PBXBuildFile; fileRef = CF08B11D1FE752160015015F /* WHULiveKeeper.m */; };
 		CF166A511FA95A5C00C81E43 /* ALWindowTapObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = CF166A501FA95A5C00C81E43 /* ALWindowTapObserver.m */; };
 		CF1695A71EE918DF00D174B1 /* UIView+ManualAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = CF1695A41EE918DF00D174B1 /* UIView+ManualAdapter.m */; };
 		CF1695A81EE918DF00D174B1 /* ZHManualAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = CF1695A61EE918DF00D174B1 /* ZHManualAdapter.m */; };
 		CF17A8FF1F6F996B00BE2BCF /* zLetterGestureRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = CF17A8FE1F6F996B00BE2BCF /* zLetterGestureRecognizer.m */; };
+		CF1C56341FEA2FA20011C7C6 /* GCDThrottle.m in Sources */ = {isa = PBXBuildFile; fileRef = CF1C56321FEA2F9D0011C7C6 /* GCDThrottle.m */; };
+		CF1C56371FEA31F20011C7C6 /* RuntimeInvoker.m in Sources */ = {isa = PBXBuildFile; fileRef = CF1C56361FEA31F10011C7C6 /* RuntimeInvoker.m */; };
 		CF1C923C1FBA7D9D0001D0DB /* swift-study1.rtf in Resources */ = {isa = PBXBuildFile; fileRef = CF1C923B1FBA7D9D0001D0DB /* swift-study1.rtf */; };
 		CF1C924C1FBAB8FB0001D0DB /* animate.rtf in Resources */ = {isa = PBXBuildFile; fileRef = CF1C924B1FBAB8FB0001D0DB /* animate.rtf */; };
 		CF2185F71EF36CC800B151DE /* CharacterLimitTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = CF2185F61EF36CC800B151DE /* CharacterLimitTextField.m */; };
@@ -88,7 +91,9 @@
 		CFC88B7B1F359B8C002C6CE5 /* UIColor+LCFImageAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = CFC88B761F359B8C002C6CE5 /* UIColor+LCFImageAdditions.m */; };
 		CFCE04621F0B703F0047D184 /* HexColors.m in Sources */ = {isa = PBXBuildFile; fileRef = CFCE04611F0B703F0047D184 /* HexColors.m */; };
 		CFDC0AF91EF1143C0099E3E5 /* UIImage+HXExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = CFDC0AF81EF1143C0099E3E5 /* UIImage+HXExtension.m */; };
+		CFEAA1491FED059A00007B42 /* UIView+helper.m in Sources */ = {isa = PBXBuildFile; fileRef = CFEAA1481FED059A00007B42 /* UIView+helper.m */; };
 		CFFD4B3A1F29E6F800F2841E /* route.rtf in Resources */ = {isa = PBXBuildFile; fileRef = CFFD4B391F29E6F800F2841E /* route.rtf */; };
+		CFFD79451FEB8AA4009966FE /* UIScrollView+UITouch.m in Sources */ = {isa = PBXBuildFile; fileRef = CFFD79441FEB8AA4009966FE /* UIScrollView+UITouch.m */; };
 		CFFF6F291EF91B580092132B /* SSRollingButtonScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = CFFF6F281EF91B580092132B /* SSRollingButtonScrollView.m */; };
 		CFFF6F2C1EF91B7B0092132B /* ALRichTextDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CFFF6F2B1EF91B7B0092132B /* ALRichTextDemoViewController.m */; };
 		CFFF6F2F1EF925440092132B /* WWFontDownloadTask.m in Sources */ = {isa = PBXBuildFile; fileRef = CFFF6F2E1EF925440092132B /* WWFontDownloadTask.m */; };
@@ -325,6 +330,13 @@
 		95C4D560735BE5A3E41488ED /* libPods-ALPersonalDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ALPersonalDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF99EDAB6382201CFA99A7A4 /* Pods-ALPersonalDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ALPersonalDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-ALPersonalDemo/Pods-ALPersonalDemo.release.xcconfig"; sourceTree = "<group>"; };
 		CF04D97C1F48139000F507E7 /* 备忘2.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = "备忘2.rtf"; sourceTree = "<group>"; };
+		CF08B11C1FE752160015015F /* WHULiveKeeper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WHULiveKeeper.h; sourceTree = "<group>"; };
+		CF08B11D1FE752160015015F /* WHULiveKeeper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WHULiveKeeper.m; sourceTree = "<group>"; };
+		CF08B1201FE753EE0015015F /* WHUBorderMaker.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WHUBorderMaker.m; sourceTree = "<group>"; };
+		CF08B1211FE753EE0015015F /* WHUCornerMaker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WHUCornerMaker.h; sourceTree = "<group>"; };
+		CF08B1221FE753EE0015015F /* WHUCornerMaker.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WHUCornerMaker.m; sourceTree = "<group>"; };
+		CF08B1231FE753EE0015015F /* WHUBorderMaker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WHUBorderMaker.h; sourceTree = "<group>"; };
+		CF08B1241FE753EF0015015F /* WHUCornerMaker_purgeCache.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WHUCornerMaker_purgeCache.h; sourceTree = "<group>"; };
 		CF166A4F1FA95A5C00C81E43 /* ALWindowTapObserver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALWindowTapObserver.h; sourceTree = "<group>"; };
 		CF166A501FA95A5C00C81E43 /* ALWindowTapObserver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALWindowTapObserver.m; sourceTree = "<group>"; };
 		CF16959E1EE8E92A00D174B1 /* testHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = testHeader.h; sourceTree = "<group>"; };
@@ -334,6 +346,19 @@
 		CF1695A61EE918DF00D174B1 /* ZHManualAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZHManualAdapter.m; sourceTree = "<group>"; };
 		CF17A8FD1F6F996B00BE2BCF /* zLetterGestureRecognizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = zLetterGestureRecognizer.h; sourceTree = "<group>"; };
 		CF17A8FE1F6F996B00BE2BCF /* zLetterGestureRecognizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = zLetterGestureRecognizer.m; sourceTree = "<group>"; };
+		CF1C56311FEA2F9D0011C7C6 /* GCDThrottle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GCDThrottle.h; sourceTree = "<group>"; };
+		CF1C56321FEA2F9D0011C7C6 /* GCDThrottle.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GCDThrottle.m; sourceTree = "<group>"; };
+		CF1C56351FEA31F10011C7C6 /* RuntimeInvoker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RuntimeInvoker.h; sourceTree = "<group>"; };
+		CF1C56361FEA31F10011C7C6 /* RuntimeInvoker.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RuntimeInvoker.m; sourceTree = "<group>"; };
+		CF1C563C1FEA54B20011C7C6 /* GCD.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GCD.h; sourceTree = "<group>"; };
+		CF1C563D1FEA54B20011C7C6 /* GCDGroup.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GCDGroup.h; sourceTree = "<group>"; };
+		CF1C563E1FEA54B20011C7C6 /* GCDGroup.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GCDGroup.m; sourceTree = "<group>"; };
+		CF1C563F1FEA54B20011C7C6 /* GCDQueue.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GCDQueue.h; sourceTree = "<group>"; };
+		CF1C56401FEA54B20011C7C6 /* GCDQueue.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GCDQueue.m; sourceTree = "<group>"; };
+		CF1C56411FEA54B20011C7C6 /* GCDSemaphore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GCDSemaphore.h; sourceTree = "<group>"; };
+		CF1C56421FEA54B20011C7C6 /* GCDSemaphore.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GCDSemaphore.m; sourceTree = "<group>"; };
+		CF1C56431FEA54B20011C7C6 /* GCDTimer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GCDTimer.h; sourceTree = "<group>"; };
+		CF1C56441FEA54B20011C7C6 /* GCDTimer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GCDTimer.m; sourceTree = "<group>"; };
 		CF1C923B1FBA7D9D0001D0DB /* swift-study1.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = "swift-study1.rtf"; sourceTree = "<group>"; };
 		CF1C924B1FBAB8FB0001D0DB /* animate.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = animate.rtf; sourceTree = "<group>"; };
 		CF2185F51EF36CC800B151DE /* CharacterLimitTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CharacterLimitTextField.h; sourceTree = "<group>"; };
@@ -477,7 +502,11 @@
 		CFCE04611F0B703F0047D184 /* HexColors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HexColors.m; sourceTree = "<group>"; };
 		CFDC0AF71EF1143C0099E3E5 /* UIImage+HXExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+HXExtension.h"; sourceTree = "<group>"; };
 		CFDC0AF81EF1143C0099E3E5 /* UIImage+HXExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+HXExtension.m"; sourceTree = "<group>"; };
+		CFEAA1471FED059A00007B42 /* UIView+helper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+helper.h"; sourceTree = "<group>"; };
+		CFEAA1481FED059A00007B42 /* UIView+helper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+helper.m"; sourceTree = "<group>"; };
 		CFFD4B391F29E6F800F2841E /* route.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = route.rtf; sourceTree = "<group>"; };
+		CFFD79431FEB8AA4009966FE /* UIScrollView+UITouch.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+UITouch.h"; sourceTree = "<group>"; };
+		CFFD79441FEB8AA4009966FE /* UIScrollView+UITouch.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+UITouch.m"; sourceTree = "<group>"; };
 		CFFF6F271EF91B580092132B /* SSRollingButtonScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSRollingButtonScrollView.h; sourceTree = "<group>"; };
 		CFFF6F281EF91B580092132B /* SSRollingButtonScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSRollingButtonScrollView.m; sourceTree = "<group>"; };
 		CFFF6F2A1EF91B7B0092132B /* ALRichTextDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALRichTextDemoViewController.h; sourceTree = "<group>"; };
@@ -960,6 +989,18 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		CF08B11F1FE753C90015015F /* 圆角 */ = {
+			isa = PBXGroup;
+			children = (
+				CF08B1231FE753EE0015015F /* WHUBorderMaker.h */,
+				CF08B1201FE753EE0015015F /* WHUBorderMaker.m */,
+				CF08B1241FE753EF0015015F /* WHUCornerMaker_purgeCache.h */,
+				CF08B1211FE753EE0015015F /* WHUCornerMaker.h */,
+				CF08B1221FE753EE0015015F /* WHUCornerMaker.m */,
+			);
+			path = "圆角";
+			sourceTree = "<group>";
+		};
 		CF1695A21EE918BA00D174B1 /* UIFont */ = {
 			isa = PBXGroup;
 			children = (
@@ -982,6 +1023,34 @@
 				CF17A8FE1F6F996B00BE2BCF /* zLetterGestureRecognizer.m */,
 			);
 			path = Gesture;
+			sourceTree = "<group>";
+		};
+		CF1C56301FEA2F8E0011C7C6 /* 线程 */ = {
+			isa = PBXGroup;
+			children = (
+				CF1C563B1FEA54B20011C7C6 /* GCD */,
+				CF1C56311FEA2F9D0011C7C6 /* GCDThrottle.h */,
+				CF1C56321FEA2F9D0011C7C6 /* GCDThrottle.m */,
+				CF1C56351FEA31F10011C7C6 /* RuntimeInvoker.h */,
+				CF1C56361FEA31F10011C7C6 /* RuntimeInvoker.m */,
+			);
+			path = "线程";
+			sourceTree = "<group>";
+		};
+		CF1C563B1FEA54B20011C7C6 /* GCD */ = {
+			isa = PBXGroup;
+			children = (
+				CF1C563C1FEA54B20011C7C6 /* GCD.h */,
+				CF1C563D1FEA54B20011C7C6 /* GCDGroup.h */,
+				CF1C563E1FEA54B20011C7C6 /* GCDGroup.m */,
+				CF1C563F1FEA54B20011C7C6 /* GCDQueue.h */,
+				CF1C56401FEA54B20011C7C6 /* GCDQueue.m */,
+				CF1C56411FEA54B20011C7C6 /* GCDSemaphore.h */,
+				CF1C56421FEA54B20011C7C6 /* GCDSemaphore.m */,
+				CF1C56431FEA54B20011C7C6 /* GCDTimer.h */,
+				CF1C56441FEA54B20011C7C6 /* GCDTimer.m */,
+			);
+			path = GCD;
 			sourceTree = "<group>";
 		};
 		CF2185F41EF36C7B00B151DE /* UITextfield */ = {
@@ -1083,6 +1152,8 @@
 		CF7AF7471F2C5E3D00997D53 /* UIScrollView */ = {
 			isa = PBXGroup;
 			children = (
+				CFFD79431FEB8AA4009966FE /* UIScrollView+UITouch.h */,
+				CFFD79441FEB8AA4009966FE /* UIScrollView+UITouch.m */,
 				CF7AF7481F2C5E6200997D53 /* UIScrollView+ScrollAnimation.h */,
 				CF7AF7491F2C5E6200997D53 /* UIScrollView+ScrollAnimation.m */,
 			);
@@ -2059,6 +2130,8 @@
 		E17E21E11EDACCAD0013D3B9 /* UIView */ = {
 			isa = PBXGroup;
 			children = (
+				CFEAA1471FED059A00007B42 /* UIView+helper.h */,
+				CFEAA1481FED059A00007B42 /* UIView+helper.m */,
 				E15D70421EF523A400513AE6 /* UIView+MHExtension.h */,
 				E15D70431EF523A400513AE6 /* UIView+MHExtension.m */,
 				CFC1EC891EEE617B00641E5D /* UIView+HGCorner.h */,
@@ -2124,9 +2197,13 @@
 		E1D2264A1F6D85DB0001E8A3 /* tool */ = {
 			isa = PBXGroup;
 			children = (
+				CF1C56301FEA2F8E0011C7C6 /* 线程 */,
+				CF08B11F1FE753C90015015F /* 圆角 */,
 				E15FEC3A1FE699D0008A9C38 /* AFHTTPSessionManager+RetryPolicy.h */,
 				E15FEC3B1FE699D1008A9C38 /* AFHTTPSessionManager+RetryPolicy.m */,
 				CF25C1B61FE35745002B5EE7 /* WHUMacro.h */,
+				CF08B11C1FE752160015015F /* WHULiveKeeper.h */,
+				CF08B11D1FE752160015015F /* WHULiveKeeper.m */,
 				E1D2264D1F6D86860001E8A3 /* NSPredicate */,
 			);
 			path = tool;
@@ -2749,6 +2826,7 @@
 				E1F6618C1EDD9CBC001D98E1 /* NSArray+SSAdd.m in Sources */,
 				E14B8A7C1EF1889D0021D665 /* SNTimer.m in Sources */,
 				E17DCD641F6E33EB002DE738 /* NSArray+HYBUnicodeReadable.m in Sources */,
+				CF1C56341FEA2FA20011C7C6 /* GCDThrottle.m in Sources */,
 				E13C567C1EE44EC200005CFD /* UIImage+Extension.m in Sources */,
 				E14B8A811EF1889D0021D665 /* UIWebView+SNFoundation.m in Sources */,
 				CF2185F71EF36CC800B151DE /* CharacterLimitTextField.m in Sources */,
@@ -2759,6 +2837,7 @@
 				E1540A2E1EF64A4800D2721F /* HHMenuPullButton.m in Sources */,
 				E15D702B1EF51F2F00513AE6 /* MHYouKuCommentController.m in Sources */,
 				E15D70601EF5802A00513AE6 /* MHTopicTwoController.m in Sources */,
+				CF08B11E1FE7521A0015015F /* WHULiveKeeper.m in Sources */,
 				E1540B111EF6534C00D2721F /* UIColor+Crayola.m in Sources */,
 				CFC1ECA01EEEA1E000641E5D /* MHComment.m in Sources */,
 				CFC0AAEE1EFB74E600E4FF12 /* CategoryModel.m in Sources */,
@@ -2776,6 +2855,7 @@
 				CFC0AAE51EFB737D00E4FF12 /* HorzonItemCell.m in Sources */,
 				CFC0AAFB1EFB822100E4FF12 /* ALPanToolView.m in Sources */,
 				E14B8A771EF1889D0021D665 /* NSDictionary+SNFoundation.m in Sources */,
+				CFFD79451FEB8AA4009966FE /* UIScrollView+UITouch.m in Sources */,
 				CF1695A71EE918DF00D174B1 /* UIView+ManualAdapter.m in Sources */,
 				CF40EC781EE01A0D0003499F /* WWTagButtonTextField.m in Sources */,
 				CF6012E21EFA370E007CA737 /* TZTestCell.m in Sources */,
@@ -2790,6 +2870,7 @@
 				CF730C371F4BC49D0040C187 /* WWCalourseCell.m in Sources */,
 				CFC1EC8B1EEE617B00641E5D /* UIView+HGCorner.m in Sources */,
 				E17E21E41EDACCF30013D3B9 /* UIDevice+ALSystemInfo.m in Sources */,
+				CFEAA1491FED059A00007B42 /* UIView+helper.m in Sources */,
 				E1F22BC41F9C5A7C0097E6F0 /* TKAlertViewController.m in Sources */,
 				E15D70001EF4D6FF00513AE6 /* MHTopic.m in Sources */,
 				E1540ADE1EF6520300D2721F /* AFURLConnectionOperation.m in Sources */,
@@ -2830,6 +2911,7 @@
 				E14B8A791EF1889D0021D665 /* SNCache.m in Sources */,
 				E17E21EE1EDAF6A20013D3B9 /* ALToastTableViewController.m in Sources */,
 				E15D705A1EF540CD00513AE6 /* NSObject+MHRandom.m in Sources */,
+				CF1C56371FEA31F20011C7C6 /* RuntimeInvoker.m in Sources */,
 				E1540A161EF647E100D2721F /* HHInformationViewController.m in Sources */,
 				CF6012DC1EFA3645007CA737 /* LxGridViewFlowLayout.m in Sources */,
 				CFC0AAE41EFB737D00E4FF12 /* HorizontalScrollCell.m in Sources */,
