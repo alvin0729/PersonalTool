@@ -166,7 +166,19 @@ __TIMER = nil;\
 
 
 
-
+//void (^safeAssertCallback)(const char *, int, NSString *, ...);
+//
+//#define SFAssert(condition, ...) \
+//if (!(condition)){ SFLog(__FILE__, __FUNCTION__, __LINE__, __VA_ARGS__); \
+//if (safeAssertCallback) safeAssertCallback(__FUNCTION__, __LINE__, __VA_ARGS__);} \
+//NSAssert(condition, @"%@", __VA_ARGS__);
+//
+//void SFLog(const char* file, const char* func, int line, NSString* fmt, ...)
+//{
+//    va_list args; va_start(args, fmt);
+//    NSLog(@"%s|%s|%d|%@", file, func, line, [[NSString alloc] initWithFormat:fmt arguments:args]);
+//    va_end(args);
+//}
 
 
 #endif /* ALToolMacro_h */

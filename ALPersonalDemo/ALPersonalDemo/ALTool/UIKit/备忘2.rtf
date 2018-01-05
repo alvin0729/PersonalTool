@@ -19,6 +19,10 @@
 \f0\b\fs24 \cf2 \CocoaLigature0 <MMEmotionCentre: 0x1c1c64580> sel:setAppkey:platformId:\
 k51hidwqkextb,\
 464878039ce8441a8a0a9f88d8efed4b\
+\
+select * from t_anchor where id = 9\
+select * from t_anchor_record where user_id = 10020 and id > 945\
+update t_anchor set birthday = NULL where id = 9\
 \pard\tx692\pardeftab692\pardirnatural\partightenfactor0
 
 \f1\b0\fs26 \cf3    \
@@ -76,7 +80,8 @@ layer.masksToBounds\
 
 \f1\fs28 \cf2         [cella.\cf4 view2\cf2 .\cf4 animation\cf2 .\cf7 layer\cf2  \cf6 addAnimation\cf2 :rotationAnimation \cf6 forKey\cf2 :\cf3 nil\cf2 ];\
 \
-(CAGradientLayer *)\cf2 \cb5 \ulth \ulc2 s\cf2 \cb5 \ulnone ideGradLayer.colors = \cf9 @[\cf2 (\cf3 __bridge\cf2  \cf3 id\cf2 )color.CGColor,(\cf3 __bridge\cf2  \cf3 id\cf2 )[color colorWithAlphaComponent:\cf9 0.2\cf2 ].CGColor\cf9 ]\cf2 ;\
+(CAGradientLayer *)\ulth \ulc2 s\ulnone ideGradLayer.colors = \cf9 @[\cf2 (\cf3 __bridge\cf2  \cf3 id\cf2 )color.CGColor,(\cf3 __bridge\cf2  \cf3 id\cf2 )[color colorWithAlphaComponent:\cf9 0.2\cf2 ].CGColor\cf9 ]\cf2 ;\
+\pard\tx692\pardeftab692\pardirnatural\partightenfactor0
 
 \fs26 \cf2 \cb1 \CocoaLigature0 \
 \pard\tx642\pardeftab642\pardirnatural\partightenfactor0
@@ -160,8 +165,8 @@ layer.masksToBounds\
 
 \f3\fs28 \cf16 \cb14 \expnd0\expndtw0\kerning0
 \CocoaLigature1 \'d3\'c3
-\f4 \cf16 \cb14 scrollRangeToVisible
-\f3 \cf16 \cb14 \'ba\'af\'ca\'fd\'bd\'f8\'d0\'d0\'b9\'f6\'b6\'af\'a3\'ac\'bf\'c9\'d2\'d4\'cc\'f8\'b6\'af\'b5\'bd\'d7\'ee\'ba\'f3\'d2\'bb\'d0\'d0\'c4\'da\'c8\'dd\'c9\'cf
+\f4 scrollRangeToVisible
+\f3 \'ba\'af\'ca\'fd\'bd\'f8\'d0\'d0\'b9\'f6\'b6\'af\'a3\'ac\'bf\'c9\'d2\'d4\'cc\'f8\'b6\'af\'b5\'bd\'d7\'ee\'ba\'f3\'d2\'bb\'d0\'d0\'c4\'da\'c8\'dd\'c9\'cf
 \f1\fs26 \cf2 \cb15 \kerning1\expnd0\expndtw0 \CocoaLigature0 \
 \pard\pardeftab720\partightenfactor0
 
@@ -175,17 +180,17 @@ layer.masksToBounds\
 \f5\b0 \cf17 ;\'a0\'a0\
 \pard\pardeftab720\partightenfactor0
 
-\f3\fs28 \cf16 \cb14 \'d5\'e2\'be\'e4\'b4\'fa\'c2\'eb\'c9\'e8\'d6\'c3\'c1\'cb
-\f4 \cf16 \cb14  UITextView 
-\f3 \cf16 \cb14 \'d6\'d0\'b5\'c4
-\f4 \cf16 \cb14  layoutManager(NSLayoutManager) 
-\f3 \cf16 \cb14 \'b5\'c4\'ca\'c7\'b7\'f1\'b7\'c7\'c1\'ac\'d0\'f8\'b2\'bc\'be\'d6\'ca\'f4\'d0\'d4\'a3\'ac\'c4\'ac\'c8\'cf\'ca\'c7
-\f4 \cf16 \cb14  YES
-\f3 \cf16 \cb14 \'a3\'ac\'c9\'e8\'d6\'c3\'ce\'aa
-\f4 \cf16 \cb14  NO 
-\f3 \cf16 \cb14 \'ba\'f3
-\f4 \cf16 \cb14  UITextView 
-\f3 \cf16 \cb14 \'be\'cd\'b2\'bb\'bb\'e1\'d4\'d9\'d7\'d4\'bc\'ba\'d6\'d8\'d6\'c3\'bb\'ac\'b6\'af\'c1\'cb\'a1\'a3
+\f3\fs28 \cf16 \'d5\'e2\'be\'e4\'b4\'fa\'c2\'eb\'c9\'e8\'d6\'c3\'c1\'cb
+\f4  UITextView 
+\f3 \'d6\'d0\'b5\'c4
+\f4  layoutManager(NSLayoutManager) 
+\f3 \'b5\'c4\'ca\'c7\'b7\'f1\'b7\'c7\'c1\'ac\'d0\'f8\'b2\'bc\'be\'d6\'ca\'f4\'d0\'d4\'a3\'ac\'c4\'ac\'c8\'cf\'ca\'c7
+\f4  YES
+\f3 \'a3\'ac\'c9\'e8\'d6\'c3\'ce\'aa
+\f4  NO 
+\f3 \'ba\'f3
+\f4  UITextView 
+\f3 \'be\'cd\'b2\'bb\'bb\'e1\'d4\'d9\'d7\'d4\'bc\'ba\'d6\'d8\'d6\'c3\'bb\'ac\'b6\'af\'c1\'cb\'a1\'a3
 \f1\fs26 \cf2 \cb15 \kerning1\expnd0\expndtw0 \CocoaLigature0 \
 \pard\tx642\pardeftab642\pardirnatural\partightenfactor0
 \cf2 \
@@ -251,7 +256,6 @@ UIImage\'a0*image\'a0=\'a0[UIImage\'a0imageWithContentsOfFile:path];\
 
 \f1\fs28 \cf3 \cb5 \kerning1\expnd0\expndtw0 if\cf2  (\cf3 @available\cf2 (iOS \cf9 11.0\cf2 , *)) \{
 \f2\fs24 \cf0 \
-\pard\tx692\pardeftab692\pardirnatural\partightenfactor0
 
 \f1\fs28 \cf2         \cf3 self\cf2 .\cf4 collectionView\cf2 .\cf7 contentInsetAdjustmentBehavior\cf2  = \cf6 UIScrollViewContentInsetAdjustmentNever\cf2 ;
 \f2\fs24 \cf0 \
@@ -327,8 +331,8 @@ UIImage\'a0*image\'a0=\'a0[UIImage\'a0imageWithContentsOfFile:path];\
 \f1\fs28 \cf2     \cf3 if\cf2  (![\cf3 self\cf2  \cf12 table\cf2 :\cf3 self\cf2 .\cf4 tableView\cf2  \cf12 rectVisible\cf2 :cursorRect]) \{
 \f2\fs24 \cf0 \
 
-\f1\fs28 \cf2         cursorRect.\cf7 size\cf2 .\cf7 height\cf2  += \cf9 8\cf2 ; \cf11 \cb5 // To add some space underneath the cursor
-\f2\fs24 \cf0 \cb5 \
+\f1\fs28 \cf2         cursorRect.\cf7 size\cf2 .\cf7 height\cf2  += \cf9 8\cf2 ; \cf11 // To add some space underneath the cursor
+\f2\fs24 \cf0 \
 
 \f1\fs28 \cf2         [\cf3 self\cf2 .\cf4 tableView\cf2  \cf6 scrollRectToVisible\cf2 :cursorRect \cf6 animated\cf2 :\cf3 YES\cf2 ];
 \f2\fs24 \cf0 \
@@ -394,7 +398,7 @@ UIImage\'a0*image\'a0=\'a0[UIImage\'a0imageWithContentsOfFile:path];\
 \f1 edges
 \f3 \'ca\'b9\'b5\'e3\'c2\'fa\'d5\'fb\'b8\'f6
 \f1 self.view
-\f2\fs24 \cf0 \cb5 \
+\f2\fs24 \cf0 \
 \pard\tx692\pardeftab692\pardirnatural\partightenfactor0
 
 \f1\fs28 \cf2   [scrollView \cf12 mas_makeConstraints\cf2 :^(\cf4 MASConstraintMaker\cf2  *make) \{
@@ -406,24 +410,24 @@ UIImage\'a0*image\'a0=\'a0[UIImage\'a0imageWithContentsOfFile:path];\
 \f1\fs28 \cf2     
 \f2\fs24 \cf0 \
 
-\f1\fs28 \cf2     \cf11 \cb5 // 
+\f1\fs28 \cf2     \cf11 // 
 \f3 \'c8\'e7\'b9\'fb\'d5\'e2\'c1\'bd\'b8\'f6\'b1\'ea\'c7\'a9\'b5\'c4\'c4\'da\'c8\'dd\'b6\'bc\'ca\'c7\'b2\'bb\'c8\'b7\'b6\'a8\'b5\'c4\'a3\'ac\'d2\'b2\'be\'cd\'ca\'c7\'b2\'bb\'c8\'b7\'b6\'a8\'c4\'c4\'b8\'f6\'b5\'c4\'c4\'da\'c8\'dd\'b8\'fc\'b6\'e0\'a3\'ac\'c4\'c7\'c3\'b4\'bf\'c9\'d2\'d4\'d5\'e2\'c3\'b4\'c9\'e8\'d6\'c3\'a1\'a3
-\f2\fs24 \cf0 \cb5 \
+\f2\fs24 \cf0 \
 
-\f1\fs28 \cf2     \cf11 \cb5 // 
+\f1\fs28 \cf2     \cf11 // 
 \f3 \'d5\'e2\'d1\'f9\'be\'cd\'bf\'c9\'d2\'d4\'b1\'a3\'d6\'a4\'ca\'b9\'d3\'c3\'c4\'da\'c8\'dd\'d7\'ee\'b6\'e0\'b5\'c4\'b1\'ea\'c7\'a9\'d7\'f7\'ce\'aa
 \f1 scrollview
 \f3 \'b5\'c4
 \f1 contentSize
 \f3 \'b2\'ce\'bf\'bc\'a1\'a3
-\f2\fs24 \cf0 \cb5 \
+\f2\fs24 \cf0 \
 
-\f1\fs28 \cf2     \cf11 \cb5 // 
+\f1\fs28 \cf2     \cf11 // 
 \f3 \'d3\'c3\'d3\'da\'c8\'b7\'b6\'a8
 \f1 scrollview
 \f3 \'b5\'c4
 \f1 contentSize.height
-\f2\fs24 \cf0 \cb5 \
+\f2\fs24 \cf0 \
 
 \f1\fs28 \cf2     make.\cf4 bottom\cf2 .\cf10 mas_greaterThanOrEqualTo\cf2 (avgLabel1.\cf4 mas_bottom\cf2 ).\cf12 offset\cf2 (\cf9 40\cf2 );
 \f2\fs24 \cf0 \
@@ -476,14 +480,14 @@ xib
 \f1\fs28 \cf2             make.\cf4 left\cf2 .\cf10 mas_equalTo\cf2 (-yPos);
 \f2\fs24 \cf0 \
 
-\f1\fs28 \cf2             \cf11 \cb5 //
-\f2\fs24 \cf0 \cb5 \
+\f1\fs28 \cf2             \cf11 //
+\f2\fs24 \cf0 \
 
 \f1\fs28 \cf2             make.\cf4 width\cf2 .\cf10 mas_equalTo\cf2 (\cf9 @(\cf4 Mwidth\cf2 +yPos*\cf9 2)\cf2 );
 \f2\fs24 \cf0 \
 
-\f1\fs28 \cf2             \cf11 \cb5 //make.width.equalTo(self.bgmig.mas_height).with.multipliedBy(300/173);
-\f2\fs24 \cf0 \cb5 \
+\f1\fs28 \cf2             \cf11 //make.width.equalTo(self.bgmig.mas_height).with.multipliedBy(300/173);
+\f2\fs24 \cf0 \
 
 \f1\fs28 \cf2             [\cf3 self\cf2 .\cf4 scollview\cf2  \cf6 setNeedsLayout\cf2 ];
 \f2\fs24 \cf0 \
@@ -491,14 +495,14 @@ xib
 \f1\fs28 \cf2         \}];
 \f2\fs24 \cf0 \
 
-\f1\fs28 \cf2         \cf11 \cb5 //            self.height.constant = Mheight+yPos;
-\f2\fs24 \cf0 \cb5 \
+\f1\fs28 \cf2         \cf11 //            self.height.constant = Mheight+yPos;
+\f2\fs24 \cf0 \
 
-\f1\fs28 \cf2         \cf11 \cb5 //            self.left.constant = -yPos;
-\f2\fs24 \cf0 \cb5 \
+\f1\fs28 \cf2         \cf11 //            self.left.constant = -yPos;
+\f2\fs24 \cf0 \
 
-\f1\fs28 \cf2         \cf11 \cb5 //            self.top.constant = -yPos;
-\f2\fs24 \cf0 \cb5 \
+\f1\fs28 \cf2         \cf11 //            self.top.constant = -yPos;
+\f2\fs24 \cf0 \
 
 \f1\fs28 \cf2         
 \f2\fs24 \cf0 \
@@ -510,8 +514,67 @@ xib
 \fs26 \cb15 \CocoaLigature0 \
 \pard\tx642\pardeftab642\pardirnatural\partightenfactor0
 \cf2 \
-\
-\
+\pard\tx692\pardeftab692\pardirnatural\partightenfactor0
+
+\fs28 \cf11 \cb5 \CocoaLigature1 //
+\f3 \'cb\'ab\'bb\'f7\'b4\'a6\'c0\'ed
+\f2\fs24 \cf0 \
+\pard\tx692\pardeftab692\pardirnatural\partightenfactor0
+
+\f1\fs28 \cf2     \cf3 if\cf2 ([viewController.\cf7 tabBarItem\cf2 .\cf7 title\cf2  \cf6 isEqualToString\cf2 :\cf8 @"
+\f3 \'c3\'e6\'c1\'c4
+\f1 "\cf2 ])\{
+\f2\fs24 \cf0 \
+
+\f1\fs28 \cf2         \cf3 if\cf2  (!\cf3 self\cf2 .\cf4 lastFaceTalkTabbarTappedTime\cf2 ) \{
+\f2\fs24 \cf0 \
+
+\f1\fs28 \cf2             \cf3 self\cf2 .\cf4 lastFaceTalkTabbarTappedTime\cf2  = [\cf7 NSDate\cf2  \cf6 date\cf2 ];
+\f2\fs24 \cf0 \
+
+\f1\fs28 \cf2         \}\cf3 else\cf2 \{
+\f2\fs24 \cf0 \
+
+\f1\fs28 \cf2             \cf7 NSDate\cf2  *date = [\cf7 NSDate\cf2  \cf6 date\cf2 ];
+\f2\fs24 \cf0 \
+
+\f1\fs28 \cf2             \cf7 NSTimeInterval\cf2  interval = [date \cf6 timeIntervalSinceDate\cf2 :\cf3 self\cf2 .\cf4 lastFaceTalkTabbarTappedTime\cf2 ];
+\f2\fs24 \cf0 \
+
+\f1\fs28 \cf2             \cf3 self\cf2 .\cf4 lastFaceTalkTabbarTappedTime\cf2  = \cf3 nil\cf2 ;
+\f2\fs24 \cf0 \
+
+\f1\fs28 \cf2             \cf3 if\cf2  (interval < \cf9 0.8\cf2 ) \{
+\f2\fs24 \cf0 \
+
+\f1\fs28 \cf2                 \cf4 ZTNavigationViewController\cf2  *nav = (\cf4 ZTNavigationViewController\cf2  *)viewController;
+\f2\fs24 \cf0 \
+
+\f1\fs28 \cf2                 \cf4 DWHostListViewController\cf2  *faceTalkVC = (\cf4 DWHostListViewController\cf2  *)nav.\cf7 viewControllers\cf2 .\cf7 firstObject\cf2 ;
+\f2\fs24 \cf0 \
+
+\f1\fs28 \cf2                 \cf3 if\cf2 ([faceTalkVC \cf6 respondsToSelector\cf2 :\cf3 @selector\cf2 (doubleTapTabbarItemAction)])\{
+\f2\fs24 \cf0 \
+
+\f1\fs28 \cf2                     [faceTalkVC \cf12 doubleTapTabbarItemAction\cf2 ];
+\f2\fs24 \cf0 \
+
+\f1\fs28 \cf2                 \}
+\f2\fs24 \cf0 \
+
+\f1\fs28 \cf2             \}
+\f2\fs24 \cf0 \
+
+\f1\fs28 \cf2         \}
+\f2\fs24 \cf0 \
+
+\f1\fs28 \cf2         
+\f2\fs24 \cf0 \
+
+\f1\fs28 \cf2     \}
+\fs26 \cb15 \CocoaLigature0 \
+\pard\tx642\pardeftab642\pardirnatural\partightenfactor0
+\cf2 \
 \
 \
 \

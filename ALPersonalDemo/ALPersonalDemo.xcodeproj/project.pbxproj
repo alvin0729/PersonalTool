@@ -91,6 +91,7 @@
 		CFC88B7B1F359B8C002C6CE5 /* UIColor+LCFImageAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = CFC88B761F359B8C002C6CE5 /* UIColor+LCFImageAdditions.m */; };
 		CFCE04621F0B703F0047D184 /* HexColors.m in Sources */ = {isa = PBXBuildFile; fileRef = CFCE04611F0B703F0047D184 /* HexColors.m */; };
 		CFDC0AF91EF1143C0099E3E5 /* UIImage+HXExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = CFDC0AF81EF1143C0099E3E5 /* UIImage+HXExtension.m */; };
+		CFE7A3321FF4F96600B45A81 /* BigBang.m in Sources */ = {isa = PBXBuildFile; fileRef = CFE7A3311FF4F96500B45A81 /* BigBang.m */; };
 		CFEAA1491FED059A00007B42 /* UIView+helper.m in Sources */ = {isa = PBXBuildFile; fileRef = CFEAA1481FED059A00007B42 /* UIView+helper.m */; };
 		CFFD4B3A1F29E6F800F2841E /* route.rtf in Resources */ = {isa = PBXBuildFile; fileRef = CFFD4B391F29E6F800F2841E /* route.rtf */; };
 		CFFD79451FEB8AA4009966FE /* UIScrollView+UITouch.m in Sources */ = {isa = PBXBuildFile; fileRef = CFFD79441FEB8AA4009966FE /* UIScrollView+UITouch.m */; };
@@ -502,6 +503,8 @@
 		CFCE04611F0B703F0047D184 /* HexColors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HexColors.m; sourceTree = "<group>"; };
 		CFDC0AF71EF1143C0099E3E5 /* UIImage+HXExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+HXExtension.h"; sourceTree = "<group>"; };
 		CFDC0AF81EF1143C0099E3E5 /* UIImage+HXExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+HXExtension.m"; sourceTree = "<group>"; };
+		CFE7A3301FF4F96400B45A81 /* BigBang.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BigBang.h; sourceTree = "<group>"; };
+		CFE7A3311FF4F96500B45A81 /* BigBang.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BigBang.m; sourceTree = "<group>"; };
 		CFEAA1471FED059A00007B42 /* UIView+helper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+helper.h"; sourceTree = "<group>"; };
 		CFEAA1481FED059A00007B42 /* UIView+helper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+helper.m"; sourceTree = "<group>"; };
 		CFFD4B391F29E6F800F2841E /* route.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = route.rtf; sourceTree = "<group>"; };
@@ -1033,6 +1036,8 @@
 				CF1C56321FEA2F9D0011C7C6 /* GCDThrottle.m */,
 				CF1C56351FEA31F10011C7C6 /* RuntimeInvoker.h */,
 				CF1C56361FEA31F10011C7C6 /* RuntimeInvoker.m */,
+				CFE7A3301FF4F96400B45A81 /* BigBang.h */,
+				CFE7A3311FF4F96500B45A81 /* BigBang.m */,
 			);
 			path = "线程";
 			sourceTree = "<group>";
@@ -2858,6 +2863,7 @@
 				CFFD79451FEB8AA4009966FE /* UIScrollView+UITouch.m in Sources */,
 				CF1695A71EE918DF00D174B1 /* UIView+ManualAdapter.m in Sources */,
 				CF40EC781EE01A0D0003499F /* WWTagButtonTextField.m in Sources */,
+				CFE7A3321FF4F96600B45A81 /* BigBang.m in Sources */,
 				CF6012E21EFA370E007CA737 /* TZTestCell.m in Sources */,
 				E15D70441EF523A400513AE6 /* UIView+MHExtension.m in Sources */,
 				E14B8A761EF1889D0021D665 /* NSDate+SNFoundation.m in Sources */,
