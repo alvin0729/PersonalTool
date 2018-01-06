@@ -96,5 +96,17 @@ CFRunLoopRunInMode(kCFRunLoopDefaultMode, 1, YES);
 当我们不需要runloop的时候，直接将cancel置为YES即可。
 
 
+- (void)clearImagesCache {
+// 放在了非公开的扩展中，但是方法是存在的
+if ([[UIApplication sharedApplication] respondsToSelector:NSSelectorFromString(@"hyb_clearDiskCaches")]) {
+((void (*)(id, SEL))objc_msgSend)([UIApplication sharedApplication],
+NSSelectorFromString(@"hyb_clearDiskCaches"));
+}
+}
+
+
+
+
+
 
 
