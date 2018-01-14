@@ -279,6 +279,10 @@
 		E17E21F41EDAFE0F0013D3B9 /* UIButton+SSAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = E17E21F11EDAFE0F0013D3B9 /* UIButton+SSAdd.m */; };
 		E17E21F51EDAFE0F0013D3B9 /* UIButton+SSImageTitleStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = E17E21F31EDAFE0F0013D3B9 /* UIButton+SSImageTitleStyle.m */; };
 		E18083791F9BA065003454F7 /* BaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E17DCD6A1F6E38C5002DE738 /* BaseModel.m */; };
+		E18F397E200B5BB5006CFC53 /* 性能工具.rtf in Resources */ = {isa = PBXBuildFile; fileRef = E18F397D200B5BB5006CFC53 /* 性能工具.rtf */; };
+		E18F3981200B92EC006CFC53 /* fishhook.mm in Sources */ = {isa = PBXBuildFile; fileRef = E18F3980200B92EB006CFC53 /* fishhook.mm */; };
+		E18F3984200B9902006CFC53 /* PMainThreadWatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = E18F3982200B9902006CFC53 /* PMainThreadWatcher.m */; };
+		E18F3987200B99ED006CFC53 /* PerformanceMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = E18F3985200B99ED006CFC53 /* PerformanceMonitor.m */; };
 		E1AAB38A1F6E22C90033533E /* ALPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = E1AAB3881F6E22C10033533E /* ALPerson.m */; };
 		E1B5BFE51FB9D51100DC0A34 /* AlOCCallSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B5BFE41FB9D51100DC0A34 /* AlOCCallSwift.swift */; };
 		E1B5BFE81FB9D88E00DC0A34 /* ALOC_Call_SwiftVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E1B5BFE71FB9D88E00DC0A34 /* ALOC_Call_SwiftVC.m */; };
@@ -892,6 +896,13 @@
 		E17E21F21EDAFE0F0013D3B9 /* UIButton+SSImageTitleStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+SSImageTitleStyle.h"; sourceTree = "<group>"; };
 		E17E21F31EDAFE0F0013D3B9 /* UIButton+SSImageTitleStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+SSImageTitleStyle.m"; sourceTree = "<group>"; };
 		E180837A1F9BA213003454F7 /* 线程text.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "线程text.txt"; sourceTree = "<group>"; };
+		E18F397D200B5BB5006CFC53 /* 性能工具.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = "性能工具.rtf"; sourceTree = "<group>"; };
+		E18F397F200B92EB006CFC53 /* fishhook.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = fishhook.h; sourceTree = "<group>"; };
+		E18F3980200B92EB006CFC53 /* fishhook.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = fishhook.mm; sourceTree = "<group>"; };
+		E18F3982200B9902006CFC53 /* PMainThreadWatcher.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PMainThreadWatcher.m; sourceTree = "<group>"; };
+		E18F3983200B9902006CFC53 /* PMainThreadWatcher.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PMainThreadWatcher.h; sourceTree = "<group>"; };
+		E18F3985200B99ED006CFC53 /* PerformanceMonitor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PerformanceMonitor.m; sourceTree = "<group>"; };
+		E18F3986200B99ED006CFC53 /* PerformanceMonitor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PerformanceMonitor.h; sourceTree = "<group>"; };
 		E1AAB3881F6E22C10033533E /* ALPerson.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ALPerson.m; sourceTree = "<group>"; };
 		E1AAB3891F6E22C10033533E /* ALPerson.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ALPerson.h; sourceTree = "<group>"; };
 		E1B5BFE31FB9D51000DC0A34 /* ALPersonalDemo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ALPersonalDemo-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -1038,6 +1049,12 @@
 				CF1C56361FEA31F10011C7C6 /* RuntimeInvoker.m */,
 				CFE7A3301FF4F96400B45A81 /* BigBang.h */,
 				CFE7A3311FF4F96500B45A81 /* BigBang.m */,
+				E18F3980200B92EB006CFC53 /* fishhook.mm */,
+				E18F397F200B92EB006CFC53 /* fishhook.h */,
+				E18F3983200B9902006CFC53 /* PMainThreadWatcher.h */,
+				E18F3982200B9902006CFC53 /* PMainThreadWatcher.m */,
+				E18F3986200B99ED006CFC53 /* PerformanceMonitor.h */,
+				E18F3985200B99ED006CFC53 /* PerformanceMonitor.m */,
 			);
 			path = "线程";
 			sourceTree = "<group>";
@@ -2408,6 +2425,7 @@
 				CFB044F11F44271C00B9FFE3 /* WWCustomLimitDatePickerView.h */,
 				CFB044F21F44271C00B9FFE3 /* WWCustomLimitDatePickerView.m */,
 				CFC1EC8D1EEE895000641E5D /* podSource.rtf */,
+				E18F397D200B5BB5006CFC53 /* 性能工具.rtf */,
 				E180837A1F9BA213003454F7 /* 线程text.txt */,
 				E15D70561EF53B0500513AE6 /* navigationbar.rtf */,
 				CF6DF6BB1F04D4070093E2D6 /* 备忘录.rtf */,
@@ -2625,6 +2643,7 @@
 				CF6DF6BC1F04D4070093E2D6 /* 备忘录.rtf in Resources */,
 				CF730C461F4BD07D0040C187 /* gif_2.gif in Resources */,
 				CFC1EC8E1EEE895000641E5D /* podSource.rtf in Resources */,
+				E18F397E200B5BB5006CFC53 /* 性能工具.rtf in Resources */,
 				CF730C4C1F4BD07D0040C187 /* gif_8.gif in Resources */,
 				CF1C923C1FBA7D9D0001D0DB /* swift-study1.rtf in Resources */,
 				E1540A0F1EF6312000D2721F /* RSKImageCropper.zip in Resources */,
@@ -2753,6 +2772,7 @@
 				E1540B101EF6534C00D2721F /* UIColor+CIELAB.m in Sources */,
 				E1F661841EDD9BB9001D98E1 /* UILabel+Copyable.m in Sources */,
 				E1F661881EDD9C66001D98E1 /* NSDate+SSAdd.m in Sources */,
+				E18F3984200B9902006CFC53 /* PMainThreadWatcher.m in Sources */,
 				E1540AC41EF64F9700D2721F /* UITableView+Tracking.m in Sources */,
 				E15D704F1EF52D3600513AE6 /* MHYouKuTopicDetailController.m in Sources */,
 				CF61C0551F2340F7007B7731 /* NSDictionary+SafeExpectations.m in Sources */,
@@ -2800,6 +2820,7 @@
 				E1540A751EF64C8800D2721F /* RSKInternalUtility.m in Sources */,
 				E1540B171EF6534C00D2721F /* UIImage+New.m in Sources */,
 				E1540A251EF6495F00D2721F /* HHInforDraftModel.m in Sources */,
+				E18F3987200B99ED006CFC53 /* PerformanceMonitor.m in Sources */,
 				E1540ADB1EF651E400D2721F /* AFHTTPRequestOperation.m in Sources */,
 				E14B8A7A1EF1889D0021D665 /* SNGraphics.m in Sources */,
 				E13C56831EE44F1800005CFD /* UINavigationBar+Awesome.m in Sources */,
@@ -2847,6 +2868,7 @@
 				CFC1ECA01EEEA1E000641E5D /* MHComment.m in Sources */,
 				CFC0AAEE1EFB74E600E4FF12 /* CategoryModel.m in Sources */,
 				E17E21C01EDA7C970013D3B9 /* ViewController.m in Sources */,
+				E18F3981200B92EC006CFC53 /* fishhook.mm in Sources */,
 				E1540AD11EF6506E00D2721F /* ZHNetworkManager.m in Sources */,
 				E1540B131EF6534C00D2721F /* UIColor+HSB.m in Sources */,
 				E15D701C1EF4EDFA00513AE6 /* UIFont+MHExtension.m in Sources */,
