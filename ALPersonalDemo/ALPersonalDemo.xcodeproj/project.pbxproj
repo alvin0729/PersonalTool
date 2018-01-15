@@ -14,6 +14,7 @@
 		CF1695A71EE918DF00D174B1 /* UIView+ManualAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = CF1695A41EE918DF00D174B1 /* UIView+ManualAdapter.m */; };
 		CF1695A81EE918DF00D174B1 /* ZHManualAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = CF1695A61EE918DF00D174B1 /* ZHManualAdapter.m */; };
 		CF17A8FF1F6F996B00BE2BCF /* zLetterGestureRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = CF17A8FE1F6F996B00BE2BCF /* zLetterGestureRecognizer.m */; };
+		CF1B83292005D74100C7F172 /* CHD_ListView_Structure.m in Sources */ = {isa = PBXBuildFile; fileRef = CF1B83282005D74100C7F172 /* CHD_ListView_Structure.m */; };
 		CF1C56341FEA2FA20011C7C6 /* GCDThrottle.m in Sources */ = {isa = PBXBuildFile; fileRef = CF1C56321FEA2F9D0011C7C6 /* GCDThrottle.m */; };
 		CF1C56371FEA31F20011C7C6 /* RuntimeInvoker.m in Sources */ = {isa = PBXBuildFile; fileRef = CF1C56361FEA31F10011C7C6 /* RuntimeInvoker.m */; };
 		CF1C923C1FBA7D9D0001D0DB /* swift-study1.rtf in Resources */ = {isa = PBXBuildFile; fileRef = CF1C923B1FBA7D9D0001D0DB /* swift-study1.rtf */; };
@@ -31,6 +32,7 @@
 		CF48AC151EE4E32A009C4AD7 /* UIImage+Thumbnail.m in Sources */ = {isa = PBXBuildFile; fileRef = CF48AC101EE4E32A009C4AD7 /* UIImage+Thumbnail.m */; };
 		CF48AC161EE4E32A009C4AD7 /* UIImage+Tools.m in Sources */ = {isa = PBXBuildFile; fileRef = CF48AC121EE4E32A009C4AD7 /* UIImage+Tools.m */; };
 		CF48AC1A1EE4E35B009C4AD7 /* UIImageView+CircleImage.m in Sources */ = {isa = PBXBuildFile; fileRef = CF48AC191EE4E35B009C4AD7 /* UIImageView+CircleImage.m */; };
+		CF581C492004C9B300D6FE17 /* UIControl+ADControl.m in Sources */ = {isa = PBXBuildFile; fileRef = CF581C472004C9B200D6FE17 /* UIControl+ADControl.m */; };
 		CF584CFF1F95E3F100F0DFCC /* UIViewController+Swizzled.m in Sources */ = {isa = PBXBuildFile; fileRef = CF584CFD1F95E3F100F0DFCC /* UIViewController+Swizzled.m */; };
 		CF5E3ED21F20BCD3009B40A8 /* WWDropDownMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = CF5E3ED11F20BCD3009B40A8 /* WWDropDownMenu.m */; };
 		CF6012DC1EFA3645007CA737 /* LxGridViewFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = CF6012DB1EFA3645007CA737 /* LxGridViewFlowLayout.m */; };
@@ -347,6 +349,9 @@
 		CF1695A61EE918DF00D174B1 /* ZHManualAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZHManualAdapter.m; sourceTree = "<group>"; };
 		CF17A8FD1F6F996B00BE2BCF /* zLetterGestureRecognizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = zLetterGestureRecognizer.h; sourceTree = "<group>"; };
 		CF17A8FE1F6F996B00BE2BCF /* zLetterGestureRecognizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = zLetterGestureRecognizer.m; sourceTree = "<group>"; };
+		CF1B83272005D74100C7F172 /* CHD_ListView_Structure.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CHD_ListView_Structure.h; sourceTree = "<group>"; };
+		CF1B83282005D74100C7F172 /* CHD_ListView_Structure.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CHD_ListView_Structure.m; sourceTree = "<group>"; };
+		CF1B832A2005D74E00C7F172 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		CF1C56311FEA2F9D0011C7C6 /* GCDThrottle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GCDThrottle.h; sourceTree = "<group>"; };
 		CF1C56321FEA2F9D0011C7C6 /* GCDThrottle.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GCDThrottle.m; sourceTree = "<group>"; };
 		CF1C56351FEA31F10011C7C6 /* RuntimeInvoker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RuntimeInvoker.h; sourceTree = "<group>"; };
@@ -391,6 +396,8 @@
 		CF48AC121EE4E32A009C4AD7 /* UIImage+Tools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Tools.m"; sourceTree = "<group>"; };
 		CF48AC181EE4E35B009C4AD7 /* UIImageView+CircleImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+CircleImage.h"; sourceTree = "<group>"; };
 		CF48AC191EE4E35B009C4AD7 /* UIImageView+CircleImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+CircleImage.m"; sourceTree = "<group>"; };
+		CF581C472004C9B200D6FE17 /* UIControl+ADControl.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIControl+ADControl.m"; sourceTree = "<group>"; };
+		CF581C482004C9B300D6FE17 /* UIControl+ADControl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIControl+ADControl.h"; sourceTree = "<group>"; };
 		CF584CFD1F95E3F100F0DFCC /* UIViewController+Swizzled.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Swizzled.m"; sourceTree = "<group>"; };
 		CF584CFE1F95E3F100F0DFCC /* UIViewController+Swizzled.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Swizzled.h"; sourceTree = "<group>"; };
 		CF5E3ED01F20BCD3009B40A8 /* WWDropDownMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WWDropDownMenu.h; sourceTree = "<group>"; };
@@ -2167,6 +2174,8 @@
 		E17E21EF1EDAFB5C0013D3B9 /* UIButton */ = {
 			isa = PBXGroup;
 			children = (
+				CF581C482004C9B300D6FE17 /* UIControl+ADControl.h */,
+				CF581C472004C9B200D6FE17 /* UIControl+ADControl.m */,
 				E17E21F01EDAFE0F0013D3B9 /* UIButton+SSAdd.h */,
 				E17E21F11EDAFE0F0013D3B9 /* UIButton+SSAdd.m */,
 				E17E21F21EDAFE0F0013D3B9 /* UIButton+SSImageTitleStyle.h */,
@@ -2206,6 +2215,9 @@
 				CF08B11F1FE753C90015015F /* 圆角 */,
 				E15FEC3A1FE699D0008A9C38 /* AFHTTPSessionManager+RetryPolicy.h */,
 				E15FEC3B1FE699D1008A9C38 /* AFHTTPSessionManager+RetryPolicy.m */,
+				CF1B832A2005D74E00C7F172 /* README.md */,
+				CF1B83272005D74100C7F172 /* CHD_ListView_Structure.h */,
+				CF1B83282005D74100C7F172 /* CHD_ListView_Structure.m */,
 				CF25C1B61FE35745002B5EE7 /* WHUMacro.h */,
 				CF08B11C1FE752160015015F /* WHULiveKeeper.h */,
 				CF08B11D1FE752160015015F /* WHULiveKeeper.m */,
@@ -2711,6 +2723,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF1B83292005D74100C7F172 /* CHD_ListView_Structure.m in Sources */,
 				E1F661901EDD9CE7001D98E1 /* NSDictionary+SSAdd.m in Sources */,
 				CFC88B7A1F359B8C002C6CE5 /* LCFInfiniteScrollViewItem.m in Sources */,
 				E1540B1E1EF6534C00D2721F /* UIDevice+Resolutions.m in Sources */,
@@ -2821,6 +2834,7 @@
 				E14B8A7D1EF1889D0021D665 /* SystemInfo.m in Sources */,
 				E17E21F51EDAFE0F0013D3B9 /* UIButton+SSImageTitleStyle.m in Sources */,
 				E15D704B1EF52B2D00513AE6 /* MHTopicManager.m in Sources */,
+				CF581C492004C9B300D6FE17 /* UIControl+ADControl.m in Sources */,
 				CFC88B7B1F359B8C002C6CE5 /* UIColor+LCFImageAdditions.m in Sources */,
 				E1540A191EF6484300D2721F /* RJBasicViewController.m in Sources */,
 				E1540B1A1EF6534C00D2721F /* UIImage+RoundedCorner.m in Sources */,
