@@ -47,8 +47,9 @@ static void swizzInstance(Class class, SEL originalSelector, SEL swizzledSelecto
     {
         paddingItems = [paddingItems stringByAppendingFormat:@"--"];
     }
-    
-    NSLog(@"%@%@-> %@", logTag, paddingItems, [self.class description]);
+    if (DEBUG) {
+        NSLog(@"%@%@-> %@", logTag, paddingItems, [self.class description]);
+    }
 }
 
 
@@ -69,6 +70,8 @@ static void swizzInstance(Class class, SEL originalSelector, SEL swizzledSelecto
     else if ([[self parentViewController] isMemberOfClass:[UITabBarController class]])
     {
         [self logWithLevel:1];
+    }else{
+        [self logWithLevel:4];
     }
 }
 

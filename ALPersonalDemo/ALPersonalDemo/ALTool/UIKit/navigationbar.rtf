@@ -38,7 +38,9 @@
 \f0  CoderMikeHe. All rights reserved.
 \fs28 \cf3 \
 
-\fs22 \cf2 //
+\fs22 \cf2 //\
+\
+https://github.com/rickytan/RTRootNavigationController
 \fs28 \cf3 \
 
 \fs22 \cf4 \
@@ -46,39 +48,39 @@
 \
 \pard\tx692\pardeftab692\pardirnatural\partightenfactor0
 
-\fs28 \cf3 \cb6 \CocoaLigature1  [self \cf7 scrollViewDidScroll\cf3 :self.\cf8 tableView\cf3 ];
+\fs28 \cf3 \cb6 \CocoaLigature1  [self \cf7 \cb6 scrollViewDidScroll\cf3 \cb6 :self.\cf8 \cb6 tableView\cf3 \cb6 ];
 \fs22 \cf4 \cb1 \CocoaLigature0 \
 \
 \pard\tx692\pardeftab692\pardirnatural\partightenfactor0
 
-\fs28 \cf9 \cb6 \CocoaLigature1 #define NAVBAR_CHANGE_POINT \cf10 50\
+\fs28 \cf9 \cb6 \CocoaLigature1 #define NAVBAR_CHANGE_POINT \cf10 \cb6 50\
 \
 \pard\tx692\pardeftab692\pardirnatural\partightenfactor0
-\cf3 - (\cf11 void\cf3 )scrollViewDidScroll:(\cf12 UIScrollView\cf3  *)scrollView
+\cf3 - (\cf11 \cb6 void\cf3 \cb6 )scrollViewDidScroll:(\cf12 \cb6 UIScrollView\cf3 \cb6  *)scrollView
 \f2\fs24 \cf0 \
 
 \f0\fs28 \cf3 \{
 \f2\fs24 \cf0 \
 
-\f0\fs28 \cf3     \cf12 UIColor\cf3  * color = [\cf12 UIColor\cf3  \cf7 colorWithRed\cf3 :\cf10 0\cf3 /\cf10 255.0\cf3  \cf7 green\cf3 :\cf10 175\cf3 /\cf10 255.0\cf3  \cf7 blue\cf3 :\cf10 240\cf3 /\cf10 255.0\cf3  \cf7 alpha\cf3 :\cf10 1\cf3 ];
+\f0\fs28 \cf3     \cf12 \cb6 UIColor\cf3 \cb6  * color = [\cf12 \cb6 UIColor\cf3 \cb6  \cf7 \cb6 colorWithRed\cf3 \cb6 :\cf10 0\cf3 /\cf10 255.0\cf3  \cf7 \cb6 green\cf3 \cb6 :\cf10 175\cf3 /\cf10 255.0\cf3  \cf7 \cb6 blue\cf3 \cb6 :\cf10 240\cf3 /\cf10 255.0\cf3  \cf7 \cb6 alpha\cf3 \cb6 :\cf10 1\cf3 ];
 \f2\fs24 \cf0 \
 
-\f0\fs28 \cf3     \cf12 CGFloat\cf3  offsetY = scrollView.\cf12 contentOffset\cf3 .\cf12 y\cf3 ;
+\f0\fs28 \cf3     \cf12 \cb6 CGFloat\cf3 \cb6  offsetY = scrollView.\cf12 \cb6 contentOffset\cf3 \cb6 .\cf12 \cb6 y\cf3 \cb6 ;
 \f2\fs24 \cf0 \
 
-\f0\fs28 \cf3     if (offsetY > \cf9 NAVBAR_CHANGE_POINT\cf3 ) \{
+\f0\fs28 \cf3     if (offsetY > \cf9 \cb6 NAVBAR_CHANGE_POINT\cf3 \cb6 ) \{
 \f2\fs24 \cf0 \
 
-\f0\fs28 \cf3         \cf12 CGFloat\cf3  alpha = \cf9 MIN\cf3 (\cf10 1\cf3 , \cf10 1\cf3  - ((\cf9 NAVBAR_CHANGE_POINT\cf3  + \cf10 64\cf3  - offsetY) / \cf10 64\cf3 ));
+\f0\fs28 \cf3         \cf12 \cb6 CGFloat\cf3 \cb6  alpha = \cf9 \cb6 MIN\cf3 \cb6 (\cf10 1\cf3 , \cf10 1\cf3  - ((\cf9 \cb6 NAVBAR_CHANGE_POINT\cf3 \cb6  + \cf10 64\cf3  - offsetY) / \cf10 64\cf3 ));
 \f2\fs24 \cf0 \
 
-\f0\fs28 \cf3         [self.\cf12 navigationController\cf3 .\cf12 navigationBar\cf3  \cf13 lt_setBackgroundColor\cf3 :[color \cf7 colorWithAlphaComponent\cf3 :alpha]];
+\f0\fs28 \cf3         [self.\cf12 \cb6 navigationController\cf3 \cb6 .\cf12 \cb6 navigationBar\cf3 \cb6  \cf13 \cb6 lt_setBackgroundColor\cf3 \cb6 :[color \cf7 \cb6 colorWithAlphaComponent\cf3 \cb6 :alpha]];
 \f2\fs24 \cf0 \
 
 \f0\fs28 \cf3     \} else \{
 \f2\fs24 \cf0 \
 
-\f0\fs28 \cf3         [self.\cf12 navigationController\cf3 .\cf12 navigationBar\cf3  \cf13 lt_setBackgroundColor\cf3 :[color \cf7 colorWithAlphaComponent\cf3 :\cf10 0\cf3 ]];
+\f0\fs28 \cf3         [self.\cf12 \cb6 navigationController\cf3 \cb6 .\cf12 \cb6 navigationBar\cf3 \cb6  \cf13 \cb6 lt_setBackgroundColor\cf3 \cb6 :[color \cf7 \cb6 colorWithAlphaComponent\cf3 \cb6 :\cf10 0\cf3 ]];
 \f2\fs24 \cf0 \
 
 \f0\fs28 \cf3     \}
@@ -666,7 +668,7 @@
     [\cf11 super\cf3  \cf7 viewWillDisappear\cf3 :animated];\
     [\cf11 self\cf3 .\cf12 navigationController\cf3 .\cf12 navigationBar\cf3  \cf7 setBackgroundImage\cf3 :[\cf12 UIImage\cf3  \cf7 new\cf3 ] \cf7 forBarPosition\cf3 :\cf7 UIBarPositionAny\cf3  \cf7 barMetrics\cf3 :\cf7 UIBarMetricsDefault\cf3 ];\
     [\cf11 self\cf3 .\cf12 navigationController\cf3 .\cf12 navigationBar\cf3  \cf7 setShadowImage\cf3 :[\cf12 UIImage\cf3  \cf7 new\cf3 ]];\
-\}\cb19 \
+\}\cf3 \cb19 \
 \
 \
 \pard\pardeftab720\partightenfactor0
@@ -692,17 +694,17 @@
 \f1 \'cf\'d4\'ca\'be\'b5\'bc\'ba\'bd\'c0\'b8\'b5\'d7\'b2\'bf\'cf\'df\
 \pard\tx692\pardeftab692\pardirnatural\partightenfactor0
 
-\f0\b0\fs28 \cf11 \cb6 \kerning1\expnd0\expndtw0 self\cf3 .\cf12 navigationController\cf3 .\cf12 navigationBar\cf3 .\cf12 translucent\cf3  = \cf11 NO\cf3 ;
-\fs26 \cb19 \CocoaLigature0 \
+\f0\b0\fs28 \cf11 \cb6 \kerning1\expnd0\expndtw0 self\cf3 \cb6 .\cf12 \cb6 navigationController\cf3 \cb6 .\cf12 \cb6 navigationBar\cf3 \cb6 .\cf12 \cb6 translucent\cf3 \cb6  = \cf11 \cb6 NO\cf3 \cb6 ;
+\fs26 \cf3 \cb19 \CocoaLigature0 \
 \pard\tx692\pardeftab692\pardirnatural\partightenfactor0
 
-\fs28 \cf3 \cb6 \CocoaLigature1 [\cf11 self\cf3 .\cf12 navigationController\cf3 .\cf12 navigationBar\cf3  \cf7 setBackgroundImage\cf3 :\cf11 nil\cf3  \cf7 forBarPosition\cf3 :\cf7 UIBarPositionAny\cf3  \cf7 barMetrics\cf3 :\cf7 UIBarMetricsDefault\cf3 ];
+\fs28 \cf3 \cb6 \CocoaLigature1 [\cf11 \cb6 self\cf3 \cb6 .\cf12 \cb6 navigationController\cf3 \cb6 .\cf12 \cb6 navigationBar\cf3 \cb6  \cf7 \cb6 setBackgroundImage\cf3 \cb6 :\cf11 \cb6 nil\cf3 \cb6  \cf7 \cb6 forBarPosition\cf3 \cb6 :\cf7 \cb6 UIBarPositionAny\cf3 \cb6  \cf7 \cb6 barMetrics\cf3 \cb6 :\cf7 \cb6 UIBarMetricsDefault\cf3 \cb6 ];
 \f2\fs24 \cf0 \
 
-\f0\fs28 \cf3     [\cf11 self\cf3 .\cf12 navigationController\cf3 .\cf12 navigationBar\cf3  \cf7 setShadowImage\cf3 :\cf11 nil\cf3 ];
+\f0\fs28 \cf3     [\cf11 \cb6 self\cf3 \cb6 .\cf12 \cb6 navigationController\cf3 \cb6 .\cf12 \cb6 navigationBar\cf3 \cb6  \cf7 \cb6 setShadowImage\cf3 \cb6 :\cf11 \cb6 nil\cf3 \cb6 ];
 \f2\fs24 \cf0 \
 
-\f0\fs28 \cf3     [\cf11 self\cf3 .\cf12 navigationController\cf3 .\cf12 navigationBar\cf3  \cf13 lt_setBackgroundColor\cf3 :[\cf12 UIColor\cf3  \cf7 whiteColor\cf3 ]];\
+\f0\fs28 \cf3     [\cf11 \cb6 self\cf3 \cb6 .\cf12 \cb6 navigationController\cf3 \cb6 .\cf12 \cb6 navigationBar\cf3 \cb6  \cf13 \cb6 lt_setBackgroundColor\cf3 \cb6 :[\cf12 \cb6 UIColor\cf3 \cb6  \cf7 \cb6 whiteColor\cf3 \cb6 ]];\
 \pard\pardeftab720\partightenfactor0
 
 \f5\b\fs68 \cf25 \cb19 \expnd0\expndtw0\kerning0
@@ -711,14 +713,14 @@ ios
 \f0\b0\fs26 \cf3 \kerning1\expnd0\expndtw0 \CocoaLigature0 \
 \pard\tx692\pardeftab692\pardirnatural\partightenfactor0
 
-\fs28 \cf11 \cb6 \CocoaLigature1 self\cf3 .\cf12 navigationController\cf3 .\cf12 navigationBar\cf3 .\cf12 translucent\cf3  = \cf11 YES\cf3 ;
+\fs28 \cf11 \cb6 \CocoaLigature1 self\cf3 \cb6 .\cf12 \cb6 navigationController\cf3 \cb6 .\cf12 \cb6 navigationBar\cf3 \cb6 .\cf12 \cb6 translucent\cf3 \cb6  = \cf11 \cb6 YES\cf3 \cb6 ;
 \f2\fs24 \cf0 \
 \pard\tx692\pardeftab692\pardirnatural\partightenfactor0
 
-\f0\fs28 \cf3     [\cf11 self\cf3 .\cf12 navigationController\cf3 .\cf12 navigationBar\cf3  \cf7 setBackgroundImage\cf3 :[\cf12 UIImage\cf3  \cf7 new\cf3 ] \cf7 forBarPosition\cf3 :\cf7 UIBarPositionAny\cf3  \cf7 barMetrics\cf3 :\cf7 UIBarMetricsDefault\cf3 ];
+\f0\fs28 \cf3     [\cf11 \cb6 self\cf3 \cb6 .\cf12 \cb6 navigationController\cf3 \cb6 .\cf12 \cb6 navigationBar\cf3 \cb6  \cf7 \cb6 setBackgroundImage\cf3 \cb6 :[\cf12 \cb6 UIImage\cf3 \cb6  \cf7 \cb6 new\cf3 \cb6 ] \cf7 \cb6 forBarPosition\cf3 \cb6 :\cf7 \cb6 UIBarPositionAny\cf3 \cb6  \cf7 \cb6 barMetrics\cf3 \cb6 :\cf7 \cb6 UIBarMetricsDefault\cf3 \cb6 ];
 \f2\fs24 \cf0 \
 
-\f0\fs28 \cf3     [\cf11 self\cf3 .\cf12 navigationController\cf3 .\cf12 navigationBar\cf3  \cf7 setShadowImage\cf3 :[\cf12 UIImage\cf3  \cf7 new\cf3 ]];\
+\f0\fs28 \cf3     [\cf11 \cb6 self\cf3 \cb6 .\cf12 \cb6 navigationController\cf3 \cb6 .\cf12 \cb6 navigationBar\cf3 \cb6  \cf7 \cb6 setShadowImage\cf3 \cb6 :[\cf12 \cb6 UIImage\cf3 \cb6  \cf7 \cb6 new\cf3 \cb6 ]];\
 \pard\tx692\pardeftab692\pardirnatural\partightenfactor0
 
 \fs26 \cf3 \cb19 \CocoaLigature0 \
@@ -760,29 +762,29 @@ if ([self.navigationController respondsToSelector:@selector(interactivePopGestur
 \f2\fs24 \cf0 \
 \pard\tx692\pardeftab692\pardirnatural\partightenfactor0
 
-\f0\fs28 \cf3 - (\cf11 void\cf3 )setStatusBarBackgroundColor:(\cf12 UIColor\cf3  *)color \{
+\f0\fs28 \cf3 - (\cf11 \cb6 void\cf3 \cb6 )setStatusBarBackgroundColor:(\cf12 \cb6 UIColor\cf3 \cb6  *)color \{
 \f2\fs24 \cf0 \
 
 \f0\fs28 \cf3     
 \f2\fs24 \cf0 \
 
-\f0\fs28 \cf3     \cf12 UIView\cf3  *statusBar = [[[\cf12 UIApplication\cf3  \cf7 sharedApplication\cf3 ] \cf7 valueForKey\cf3 :\cf26 @"statusBarWindow"\cf3 ] \cf7 valueForKey\cf3 :\cf26 @"statusBar"\cf3 ];
+\f0\fs28 \cf3     \cf12 \cb6 UIView\cf3 \cb6  *statusBar = [[[\cf12 \cb6 UIApplication\cf3 \cb6  \cf7 \cb6 sharedApplication\cf3 \cb6 ] \cf7 \cb6 valueForKey\cf3 \cb6 :\cf26 \cb6 @"statusBarWindow"\cf3 \cb6 ] \cf7 \cb6 valueForKey\cf3 \cb6 :\cf26 \cb6 @"statusBar"\cf3 \cb6 ];
 \f2\fs24 \cf0 \
 
 \f0\fs28 \cf3     
 \f2\fs24 \cf0 \
 
-\f0\fs28 \cf3     if ([statusBar \cf7 respondsToSelector\cf3 :\cf11 @selector\cf3 (setBackgroundColor:)]) \{
+\f0\fs28 \cf3     if ([statusBar \cf7 \cb6 respondsToSelector\cf3 \cb6 :\cf11 \cb6 @selector\cf3 \cb6 (setBackgroundColor:)]) \{
 \f2\fs24 \cf0 \
 
-\f0\fs28 \cf3         statusBar.\cf12 backgroundColor\cf3  = color;
+\f0\fs28 \cf3         statusBar.\cf12 \cb6 backgroundColor\cf3 \cb6  = color;
 \f2\fs24 \cf0 \
 
 \f0\fs28 \cf3     \}
 \f2\fs24 \cf0 \
 
 \f0\fs28 \cf3 \}
-\fs26 \cb19 \CocoaLigature0 \
+\fs26 \cf3 \cb19 \CocoaLigature0 \
 \pard\tx642\pardeftab642\pardirnatural\partightenfactor0
 \cf3 \
 \pard\pardeftab720\partightenfactor0
