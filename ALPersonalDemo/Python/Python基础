@@ -1,0 +1,409 @@
+idle3 - 终端运行Python命令
+1.1 在交互式环境中输入表达式
+操作符  操作           例子       求值为
+**     指数           2**3       8
+%      取模/取余数     22 % 8     6
+//     整除/商数取整   22 // 8    2
+/      除法           22/8       2.75
+*      乘法           3*5        15
+-      减法           5-2        3
++      加法           2+2        4
+
+
+1.2 整型、浮点型和字符串数据类型
+
+
+1.3 字符串连接和复制
+>>> 'Alice' + 'Bob'
+*操作符只能用于两个数字(作为乘法)，或一个字符串和一个整型(作为字符 串复制操作符)。
+>>> 'Alice' * 5
+
+1.4 在变量中保存值
+1.4.1 赋值语句
+
+1.5 第一个程序
+str()、int()和 float()函数将分别求值为传入值的字符串、整数和浮点数形式。
+
+2.3 布尔操作符
+3 个布尔操作符(and、or 和 not)用于比较布尔值。
+>>> not not not not True
+>>> 2 + 2 == 4 and not 2 + 2 == 5 and 2 * 2 == 2 + 2
+和算术操作符一样，布尔操作符也有操作顺序。在所有算术和比较操作符求值
+后， Python 先求值 not 操作符， 然后是 and 操作符， 然后是 or 操作符。
+
+
+2.7 控制流语句
+>>> if name == 'Alice':print('Hi, Alice.')
+else:print('Hello, stranger.')
+
+2.7.3 elif 语句
+>>> if name == 'Alice':print('Hi, Alice.')
+elif age < 12:print('You are not Alice, kiddo.')
+elif age > 2000:print('Unlike you, Alice is not an undead, immortal vampire.')
+elif age > 100:print('You are not Alice, grannie.')
+
+
+2.7.4 while 循环语句
+>>> spam = 0
+>>> while spam < 5:
+	print('Hello, world.')
+	spam = spam + 1
+
+>>> while True:
+	print('Please type your name.')
+	name = input()
+	if name == 'your name':
+		break
+	print('Thank you!')
+
+
+2.7.7 continue 语句
+>>> while True:
+        print('Who are you?')
+        name = input()
+        if name != 'Joe':
+                continue
+        print('Hello, Joe. What is the password? (It is a fish.)')
+        password = input()
+        if password == 'swordfish':
+                break
+        print('Access granted.')
+
+
+2.7.8 for 循环和 range()函数
+ >>> for i in range(5):
+	print('Jimmy Five Times (' + str(i) + ')')
+	
+
+2.7.10 range()的开始、 停止和步长参数
+
+>>> for i in range(12, 16):
+	print(i)
+12
+13
+14
+15
+>>> 
+>>> for i in range(5, -1, -1):
+	print(i)	
+5
+4
+3
+2
+1
+0
+>>>
+
+
+2.8 导入模块
+>>> import random
+>>> for i in range(5):
+	print(random.randint(1, 10))
+from import 语句
+import 语句的另一种形式包括 from 关键字，之后是模块名称， import 关键字和
+一个星号， 例如 from random import *。
+使用这种形式的 import 语句，调用 random模块中的函数时不需要 random.前缀。
+但是， 使用完整的名称会让代码更可读， 所以最好是使用普通形式的 import 语句。
+
+
+2.9 用 sys.exit()提前结束程序
+import sys
+while True:
+    print('Type exit to exit.')
+    response = input()
+    if response == 'exit':
+        sys.exit()
+        print('You typed ' + response + '.')
+
+
+3.1 def 语句和参数
+import random
+
+def getAnswer(answerNumber):
+    if answerNumber == 1:
+         return 'It is certain'
+    elif answerNumber == 2:
+         return 'It is decidedly so'
+    elif answerNumber == 3:
+         return 'Yes'
+    elif answerNumber == 4:
+         return 'Reply hazy try again'
+    elif answerNumber == 5:
+         return 'Ask again later'
+    elif answerNumber == 6:
+         return 'Concentrate and ask again'
+    elif answerNumber == 7:
+         return 'My reply is no'
+    elif answerNumber == 8:
+         return 'Outlook not so good'
+    elif answerNumber == 9:
+         return 'Very doubtful'
+#r = random.randint(1, 9)
+#fortune = getAnswer(r)
+#print(fortune)
+print(getAnswer(random.randint(1, 9)))
+
+
+
+3.3 None 值
+
+3.4 关键字参数和 print()
+print('Hello', end='')
+print('---')
+print('cats', 'dogs', 'mice')
+print('cats', 'dogs', 'mice', sep=',')
+
+
+3.5 局部和全局作用域
+3.6 global 语句
+def spam():
+    global eggs
+    eggs = 'spam'
+eggs = 'global'
+spam()
+print(eggs)
+
+3.7 异常处理
+def spam(divideBy):
+    try:
+       return 42 / divideBy
+    except ZeroDivisionError:
+       print('Error: Invalid argument.')
+print(spam(2))
+print(spam(12))
+print(spam(0))
+print(spam(1))
+
+
+# This is a guess the number game.
+import random
+secretNumber = random.randint(1, 20)
+print('I am thinking of a number between 1 and 20.')
+# Ask the player to guess 6 times.
+for guessesTaken in range(1, 7):
+    print('Take a guess.')
+    guess = int(input())
+    if guess < secretNumber:
+        print('Your guess is too low.')
+    elif guess > secretNumber:
+        print('Your guess is too high.')
+    else:
+        break # This condition is the correct guess!
+if guess == secretNumber:
+    print('Good job! You guessed my number in ' + str(guessesTaken) + ' guesses!')
+else:
+    print('Nope. The number I was thinking of was ' + str(secretNumber))
+
+
+4.1 列表数据类型
+[1, 2, 3]
+spam = ['cat', 'bat', 'rat', 'elephant']
+spam
+spam = [['cat', 'bat'], [10, 20, 30, 40, 50]]
+print(spam[1][4])
+
+
+4.1.2 负数下标
+spam = ['cat', 'bat', 'rat', 'elephant']
+pingStr = 'The ' + spam[-1] + ' is afraid of the ' + spam[-3] + '.'
+print(pingStr)
+The elephant is afraid of the bat.
+
+4.1.3 利用切片取得子列表
+print(spam[1:3])     #['bat', 'rat']
+print(spam[0:-1])    #['cat', 'bat', 'rat']
+spam[1:]
+spam[:]
+
+4.1.4 用 len()取得列表的长度
+
+4.1.5 用下标改变列表中的值
+spam[1] = 'aardvark'
+
+
+4.1.6 列表连接和列表复制
+>>> [1, 2, 3] + ['A', 'B', 'C']
+>>> ['X', 'Y', 'Z'] * 3
+
+
+4.1.7 用 del 语句从列表中删除值
+>>> spam = ['cat', 'bat', 'rat', 'elephant']
+>>> del spam[2]
+del 语句也可用于一个简单变量， 删除它， 作用就像是“取消赋值” 语句。如
+果在删除之后试图使用该变量， 就会遇到 NameError 错误， 因为该变量已不再存在。
+
+
+4.2 使用列表
+catNames = []
+while True:
+    print('Enter the name of cat ' + str(len(catNames) + 1) +
+' (Or enter nothing to stop.):')
+    name = input()
+    if name == '':
+        break
+    catNames = catNames + [name] # list concatenation
+print('The cat names are:')
+for name in catNames:
+    print(' ' + name)
+
+
+4.2.1 列表用于循环
+supplies = ['pens', 'staplers', 'flame-throwers', 'binders']
+for i in range(len(supplies)):
+    print('Index ' + str(i) + ' in supplies is: ' + supplies[i])
+
+4.2.2 in 和 not in 操作符
+>>> 'howdy' in ['hello', 'hi', 'howdy', 'heyas']
+True
+>>> 'howdy' not in spam
+False
+
+
+4.2.3 多重赋值技巧
+>>> cat = ['fat', 'black', 'loud']
+>>> size = cat[0]
+>>> color = cat[1]
+>>> disposition = cat[2]
+
+>>> cat = ['fat', 'black', 'loud']
+>>> size, color, disposition = cat
+
+
+4.3 增强的赋值操作
++=    *=
+
+
+4.4 方法
+4.4.1 用 index()方法在列表中查找值
+>>> spam = ['hello', 'hi', 'howdy', 'heyas']
+>>> spam.index('hello')
+
+
+4.4.2 用 append()和 insert()方法在列表中添加值
+>>> spam = ['cat', 'dog', 'bat']
+>>> spam.append('moose')
+
+>>> spam = ['cat', 'dog', 'bat']
+>>> spam.insert(1, 'chicken')
+>>> spam
+['cat', 'chicken', 'dog', 'bat']
+
+
+4.4.3 用 remove()方法从列表中删除值
+>>> spam = ['cat', 'bat', 'rat', 'elephant']
+>>> spam.remove('bat')
+>>> spam
+
+>>> spam = ['cat', 'bat', 'rat', 'cat', 'hat', 'cat']
+>>> spam.remove('cat')
+>>> spam
+['bat', 'rat', 'cat', 'hat', 'cat']
+
+
+4.4.4 用 sort()方法将列表中的值排序
+>>> spam = [2, 5, 3.14, 1, -7]
+>>> spam.sort()
+>>> spam
+>>> spam.sort(reverse=True)
+>>> spam
+
+spam = [1, 3, 2, 4, 'Alice', 'Bob']
+spam.sort()将报错
+
+>>> spam = ['Alice', 'ants', 'Bob', 'badgers', 'Carol', 'cats']
+>>> spam.sort()
+>>> spam
+['Alice', 'Bob', 'Carol', 'ants', 'badgers', 'cats']
+>>> spam.sort(key=str.lower)
+>>> spam
+['Alice', 'ants', 'badgers', 'Bob', 'Carol', 'cats']
+
+
+Python 中缩进规则的例外
+print('Four score and seven ' + \
+'years ago...')
+可以把\看成是“ 这条指令在下一行继续”。 \续行字符之后的一行中，缩进并不重要。
+
+
+4.6 类似列表的类型：字符串和元组
+对列表的许多操作， 也可以作用于字符串：按下标取值、 切片、 用于 for 循环、 用于 len()， 以及用于 in 和 not in 操作符。
+4.6.1 可变和不可变数据类型
+>>> eggs = [1, 2, 3]
+>>> eggs = [4, 5, 6]
+>>> eggs
+这里 eggs 中的列表值并没有改变， 而是整个新的不同的列表值([4, 5, 6])，覆写了老的列表值。
+
+
+4.6.2 元组数据类型
+元组与列表的主要区别还在于，元组像字符串一样， 是不可变的。 元组不能让它们的值被修改、 添加或删除。
+如果元组中只有一个值， 你可以在括号内该值的后面跟上一个逗号， 表明这种情况。 
+>>> type(('hello',))
+<class 'tuple'>
+>>> type(('hello'))
+<class 'str'>
+
+4.6.3 用 list()和 tuple()函数来转换类型
+函数 list()和 tuple()将返回传递给它们的值的列表和元组版本。
+>>> tuple(['cat', 'dog', 5])
+('cat', 'dog', 5)
+>>> list(('cat', 'dog', 5))
+['cat', 'dog', 5]
+>>> list('hello')
+['h', 'e', 'l', 'l', 'o']
+
+
+4.7 引用
+>>> spam = [0, 1, 2, 3, 4, 5]
+>>> cheese = spam
+>>> cheese[1] = 'Hello!'
+>>> spam
+[0, 'Hello!', 2, 3, 4, 5]
+>>> cheese
+[0, 'Hello!', 2, 3, 4, 5]
+
+
+4.7.1 传递引用
+def eggs(someParameter):
+    someParameter.append('Hello')
+spam = [1, 2, 3]
+eggs(spam)
+print(spam)
+
+
+4.7.2 copy 模块的 copy()和 deepcopy()函数
+>>> import copy
+>>> spam = ['A', 'B', 'C', 'D']
+>>> cheese = copy.copy(spam)
+>>> cheese[1] = 42
+>>> spam
+['A', 'B', 'C', 'D']
+>>> cheese
+['A', 42, 'C', 'D']
+deepcopy()函数将同时复制它们内部的列表
+
+
+5.1 字典数据类型
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
