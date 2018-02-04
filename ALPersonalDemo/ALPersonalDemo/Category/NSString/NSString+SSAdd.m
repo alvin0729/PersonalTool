@@ -13,6 +13,29 @@
 
 @implementation NSString (SSAdd)
 
+- (CGSize)textSizeWithFont:(UIFont *)font forWidth:(CGFloat)width NS_AVAILABLE_IOS(6_0)
+{
+    CGSize retSize;
+    CGSize maxSize = CGSizeMake(width, CGFLOAT_MAX);
+    
+    if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 7.0) {
+        NSMutableParagraphStyle *paragraphStyle = [NSMutableParagraphStyle new];
+        paragraphStyle.alignment = NSTextAlignmentLeft;
+        paragraphStyle.lineBreakMode = NSLineBreakByWordWrapping;
+        NSDictionary *attributes = [NSDictionary dictionaryWithObjectsAndKeys:font,NSFontAttributeName,paragraphStyle,NSParagraphStyleAttributeName, nil];
+        CGRect rect = [self boundingRectWithSize:maxSize options:NSStringDrawingUsesLineFragmentOrigin|NSStringDrawingUsesFontLeading attributes:attributes context:nil];
+        retSize = rect.size;
+    }
+    else {
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated-declarations"
+        retSize = [self sizeWithFont:font constrainedToSize:maxSize];
+#pragma clang diagnostic pop
+    }
+    
+    return retSize;
+}
+
 /**
  *  动态计算文字的宽高（单行）
  *  @param font 文字的字体

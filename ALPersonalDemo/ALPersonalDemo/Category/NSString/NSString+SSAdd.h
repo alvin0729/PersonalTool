@@ -27,6 +27,8 @@ typedef NS_ENUM(NSInteger, CalculateType) {
  */
 - (CGSize)mh_sizeWithFont:(UIFont *)font;
 
+- (CGSize)textSizeWithFont:(UIFont *)font forWidth:(CGFloat)width;
+
 
 -(BOOL)containsString:(NSString *)astring;
 - (NSString *)SXstringByReplacingWihtNSRegularExpressionString:(NSString *)expressionString withString:(NSString *)newString;

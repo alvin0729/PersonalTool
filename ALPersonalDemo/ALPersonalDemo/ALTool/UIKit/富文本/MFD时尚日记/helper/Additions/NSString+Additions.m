@@ -342,7 +342,7 @@
 {
     if (IOS7_OR_LATER) {
         CGRect stringRect = [self boundingRectWithSize:CGSizeMake(width, 0) options:(NSStringDrawingUsesFontLeading|NSStringDrawingTruncatesLastVisibleLine|NSStringDrawingUsesLineFragmentOrigin) attributes:@{NSFontAttributeName: font} context:NULL];
-        return stringRect.size.height;
+        return ceil(stringRect.size.height);
     } else {
         CGSize stringSize = [self sizeWithFont:font constrainedToSize:CGSizeMake(width, 0)];
         return stringSize.height;
