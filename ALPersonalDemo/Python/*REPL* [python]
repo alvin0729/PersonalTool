@@ -1,0 +1,68 @@
+Python 2.7.10 (default, Feb  7 2017, 00:08:15) 
+[GCC 4.2.1 Compatible Apple LLVM 8.0.0 (clang-800.0.34)] on darwin
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import shutil,os
+>>> os.chdir('/Users/dongdongkeji/Desktop')
+>>> shutil.copy('/Users/dongdongkeji/Desktop/1024x1024.png','/Users/dongdongkeji/Desktop/123')
+>>> shutil.copy('6666.txt','/Users/dongdongkeji/Desktop/123/hello.txt')
+>>> 
+>>> shutil.copytree('/Users/dongdongkeji/Desktop/judge','/Users/dongdongkeji/Desktop/123')
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/shutil.py", line 177, in copytree
+    os.makedirs(dst)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/os.py", line 157, in makedirs
+    mkdir(name, mode)
+OSError: [Errno 17] File exists: '/Users/dongdongkeji/Desktop/123'
+>>> shutil.copytree('/Users/dongdongkeji/Desktop/judge','/Users/dongdongkeji/Desktop/1234')
+>>> shutil.move('/Users/dongdongkeji/Desktop/u100.png','/Users/dongdongkeji/Desktop/1234')
+>>> shutil.move('/Users/dongdongkeji/Desktop/u100.png','/Users/dongdongkeji/Desktop/12345')
+>>> shutil.move('/Users/dongdongkeji/Desktop/u100.png','/Users/dongdongkeji/Desktop/U1000.png')
+>>> shutil.move('/Users/dongdongkeji/Desktop/U1000.png','/Users/dongdongkeji/Desktop/989/88')
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/shutil.py", line 302, in move
+    copy2(src, real_dst)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/shutil.py", line 130, in copy2
+    copyfile(src, dst)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/shutil.py", line 83, in copyfile
+    with open(dst, 'wb') as fdst:
+IOError: [Errno 2] No such file or directory: '/Users/dongdongkeji/Desktop/989/88'
+>>> shutil.move('/Users/dongdongkeji/Desktop/U1000.png','/Users/dongdongkeji/Desktop/989')
+>>> for filename in os.listdir():
+...     print(filename)
+... 
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: listdir() takes exactly 1 argument (0 given)
+>>> for filename in os.listdir('Users/dongdongkeji/Desktop/123'):
+...     print(filename)
+... 
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+OSError: [Errno 2] No such file or directory: 'Users/dongdongkeji/Desktop/123'
+>>> print(os.path.path())
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+AttributeError: 'module' object has no attribute 'path'
+>>> print(os.listdir())
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: listdir() takes exactly 1 argument (0 given)
+>>> import send2trash
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+ImportError: No module named send2trash
+>>> import send2trash
+>>> baconFile = open('bacon.txt', 'a') # creates the file
+>>> baconFile.write('Bacon is not a vegetable.')
+>>> baconFile.close()
+>>> send2trash.send2trash('bacon.txt')
+>>> import os
+>>> for folderName, subfolders, filenames in os.walk('Users/dongdongkeji'):
+...     print('The current folder is ' + folderName)
+...     for subfolder in subfolders:
+...         print('SUBFOLDER OF ' + folderName + ': ' + subfolder)
+...     for filename in filenames:
+...         print('FILE INSIDE ' + folderName + ': '+ filename)
+...     print('')
