@@ -1,0 +1,301 @@
+{\rtf1\ansi\ansicpg936\cocoartf1504\cocoasubrtf830
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fnil\fcharset134 PingFangSC-Regular;\f2\fnil\fcharset77 ZapfDingbatsITC;
+}
+{\colortbl;\red255\green255\blue255;\red255\green0\blue255;}
+{\*\expandedcolortbl;;\csgenericrgb\c100000\c0\c100000;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww22420\viewh15940\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs36 \cf0 \
+
+\f1 \'b5\'da
+\f0  15 
+\f1 \'d5\'c2
+\f0  
+\f1 \'c9\'fa\'b3\'c9\'ca\'fd\'be\'dd
+\f0 \
+15.1 
+\f1 \'b0\'b2\'d7\'b0
+\f0 matplotlib\
+pip3 install --user matplotlib\
+\
+15.1.5 matplotlib
+\f1 \'bb\'ad\'c0\'c8
+\f0 \
+https://matplotlib.org\
+\
+15.2 
+\f1 \'bb\'e6\'d6\'c6\'bc\'f2\'b5\'a5\'b5\'c4\'d5\'db\'cf\'df\'cd\'bc
+\f0 \
+import matplotlib.pyplot as plt\
+squares = [1, 4, 9, 16, 25]\
+plt.plot(squares)\
+plt.show()\
+\
+15.2.1 
+\f1 \'d0\'de\'b8\'c4\'b1\'ea\'c7\'a9\'ce\'c4\'d7\'d6\'ba\'cd\'cf\'df\'cc\'f5\'b4\'d6\'cf\'b8
+\f0 \
+\cf2 mpl_squares.py\cf0 \
+import matplotlib.pyplot as plt\
+squares = [1, 4, 9, 16, 25]\
+
+\f2 \uc0\u10102 
+\f0  plt.plot(squares, linewidth=5)\
+# 
+\f1 \'c9\'e8\'d6\'c3\'cd\'bc\'b1\'ed\'b1\'ea\'cc\'e2\'a3\'ac
+\f0  
+\f1 \'b2\'a2\'b8\'f8\'d7\'f8\'b1\'ea\'d6\'e1\'bc\'d3\'c9\'cf\'b1\'ea\'c7\'a9
+\f0 \
+
+\f2 \uc0\u10103 
+\f0  plt.title("Square Numbers", fontsize=24)\
+
+\f2 \uc0\u10103 
+\f0  plt.xlabel("Value", fontsize=14)\
+plt.ylabel("Square of Value", fontsize=14)\
+# 
+\f1 \'c9\'e8\'d6\'c3\'bf\'cc\'b6\'c8\'b1\'ea\'bc\'c7\'b5\'c4\'b4\'f3\'d0\'a1
+\f0 \
+
+\f2 \uc0\u10105 
+\f0  plt.tick_params(axis='both', labelsize=14)\
+plt.show()\
+\
+15.2.2 
+\f1 \'d0\'a3\'d5\'fd\'cd\'bc\'d0\'ce
+\f0 \
+import matplotlib.pyplot as plt\
+input_values = [1, 2, 3, 4, 5]\
+squares = [1, 4, 9, 16, 25]\
+plt.plot(input_values, squares, linewidth=5)\
+# 
+\f1 \'c9\'e8\'d6\'c3\'cd\'bc\'b1\'ed\'b1\'ea\'cc\'e2\'b2\'a2\'b8\'f8\'d7\'f8\'b1\'ea\'d6\'e1\'bc\'d3\'c9\'cf\'b1\'ea\'c7\'a9
+\f0 \
+--snip\
+\
+15.2.3 
+\f1 \'ca\'b9\'d3\'c3
+\f0 scatter() 
+\f1 \'bb\'e6\'d6\'c6\'c9\'a2\'b5\'e3\'cd\'bc\'b2\'a2\'c9\'e8\'d6\'c3\'c6\'e4\'d1\'f9\'ca\'bd
+\f0 \
+\cf2 scatter_squares.py\cf0 \
+import matplotlib.pyplot as plt\
+plt.scatter(2, 4)\
+plt.show()\
+\
+import matplotlib.pyplot as plt\
+
+\f2 \uc0\u10102 
+\f0  plt.scatter(2, 4, s=200)\
+# 
+\f1 \'c9\'e8\'d6\'c3\'cd\'bc\'b1\'ed\'b1\'ea\'cc\'e2\'b2\'a2\'b8\'f8\'d7\'f8\'b1\'ea\'d6\'e1\'bc\'d3\'c9\'cf\'b1\'ea\'c7\'a9
+\f0 \
+plt.title("Square Numbers", fontsize=24)\
+plt.xlabel("Value", fontsize=14)\
+plt.ylabel("Square of Value", fontsize=14)\
+# 
+\f1 \'c9\'e8\'d6\'c3\'bf\'cc\'b6\'c8\'b1\'ea\'bc\'c7\'b5\'c4\'b4\'f3\'d0\'a1
+\f0 \
+plt.tick_params(axis='both', which='major', labelsize=14)\
+plt.show()\
+\
+\
+15.2.4 
+\f1 \'ca\'b9\'d3\'c3
+\f0 scatter() 
+\f1 \'bb\'e6\'d6\'c6\'d2\'bb\'cf\'b5\'c1\'d0\'b5\'e3
+\f0 \
+x_values = [1, 2, 3, 4, 5]\
+y_values = [1, 4, 9, 16, 25]\
+plt.scatter(x_values, y_values, s=100)\
+\
+15.2.5 
+\f1 \'d7\'d4\'b6\'af\'bc\'c6\'cb\'e3\'ca\'fd\'be\'dd
+\f0 \
+import matplotlib.pyplot as plt\
+x_values = list(range(1, 1001))\
+\cf2 y_values = [x**2 for x in x_values]\cf0 \
+plt.scatter(x_values, y_values, s=40)\
+# 
+\f1 \'c9\'e8\'d6\'c3\'cd\'bc\'b1\'ed\'b1\'ea\'cc\'e2\'b2\'a2\'b8\'f8\'d7\'f8\'b1\'ea\'d6\'e1\'bc\'d3\'c9\'cf\'b1\'ea\'c7\'a9
+\f0 \
+#--snip--\
+# 
+\f1 \'c9\'e8\'d6\'c3\'c3\'bf\'b8\'f6\'d7\'f8\'b1\'ea\'d6\'e1\'b5\'c4\'c8\'a1\'d6\'b5\'b7\'b6\'ce\'a7
+\f0 \
+plt.axis([0, 1100, 0, 1100000])\
+plt.show()\
+\
+\
+15.2.6 
+\f1 \'c9\'be\'b3\'fd\'ca\'fd\'be\'dd\'b5\'e3\'b5\'c4\'c2\'d6\'c0\'aa
+\f0 \
+plt.scatter(x_values, y_values, edgecolor='none', s=40)\
+\
+15.2.7 
+\f1 \'d7\'d4\'b6\'a8\'d2\'e5\'d1\'d5\'c9\'ab
+\f0 \
+plt.scatter(x_values, y_values, c='red', edgecolor='none', s=40)\
+plt.scatter(x_values, y_values, c=(0, 0, 0.8), edgecolor='none', s=40)\
+\
+15.2.8 
+\f1 \'ca\'b9\'d3\'c3\'d1\'d5\'c9\'ab\'d3\'b3\'c9\'e4\
+\'b8\'f9\'be\'dd\'c3\'bf\'b8\'f6\'b5\'e3\'b5\'c4 y \'d6\'b5\'c0\'b4\'c9\'e8\'d6\'c3\'c6\'e4\'d1\'d5\'c9\'ab\'a3\'ba
+\f0 \
+import matplotlib.pyplot as plt\
+x_values = list(range(1001))\
+y_values = [x**2 for x in x_values]\
+plt.scatter(x_values, y_values, c=y_values, cmap=plt.cm.Blues,\
+edgecolor='none', s=40)\
+# 
+\f1 \'c9\'e8\'d6\'c3\'cd\'bc\'b1\'ed\'b1\'ea\'cc\'e2\'b2\'a2\'b8\'f8\'d7\'f8\'b1\'ea\'d6\'e1\'bc\'d3\'c9\'cf\'b1\'ea\'c7\'a9
+\f0 \
+--snip--\
+
+\f1 \'d1\'d5\'c9\'ab\'d3\'b3\'c9\'e4
+\f0  
+\f1 \'a3\'a8
+\f0  colormap
+\f1 \'a3\'a9
+\f0  
+\f1 \'ca\'c7\'d2\'bb\'cf\'b5\'c1\'d0\'d1\'d5\'c9\'ab\'a3\'ac
+\f0  
+\f1 \'cb\'fc\'c3\'c7\'b4\'d3\'c6\'f0\'ca\'bc\'d1\'d5\'c9\'ab\'bd\'a5\'b1\'e4\'b5\'bd\'bd\'e1\'ca\'f8\'d1\'d5\'c9\'ab\'a1\'a3
+\f0 \
+\
+15.2.9 
+\f1 \'d7\'d4\'b6\'af\'b1\'a3\'b4\'e6\'cd\'bc\'b1\'ed
+\f0 \
+plt.savefig('squares_plot.png', bbox_inches='tight')\
+\
+15.3 
+\f1 \'cb\'e6\'bb\'fa\'c2\'fe\'b2\'bd
+\f0 \
+15.3.1 
+\f1 \'b4\'b4\'bd\'a8
+\f0 RandomWalk() 
+\f1 \'c0\'e0
+\f0 \
+\cf2 random_walk.py\cf0 \
+
+\f2 \uc0\u10102 
+\f0  from random import choice\
+class RandomWalk():\
+	"""
+\f1 \'d2\'bb\'b8\'f6\'c9\'fa\'b3\'c9\'cb\'e6\'bb\'fa\'c2\'fe\'b2\'bd\'ca\'fd\'be\'dd\'b5\'c4\'c0\'e0
+\f0 """\
+
+\f2 	\uc0\u10103 
+\f0  def __init__(self, num_points=5000):\
+			"""
+\f1 \'b3\'f5\'ca\'bc\'bb\'af\'cb\'e6\'bb\'fa\'c2\'fe\'b2\'bd\'b5\'c4\'ca\'f4\'d0\'d4
+\f0 """\
+			self.num_points = num_points\
+			# 
+\f1 \'cb\'f9\'d3\'d0\'cb\'e6\'bb\'fa\'c2\'fe\'b2\'bd\'b6\'bc\'ca\'bc\'d3\'da
+\f0 (0, 0)\
+
+\f2 			\uc0\u10104 
+\f0  self.x_values = [0]\
+			self.y_values = [0]\
+15.3.2 
+\f1 \'d1\'a1\'d4\'f1\'b7\'bd\'cf\'f2
+\f0 \
+def fill_walk(self):\
+	"""
+\f1 \'bc\'c6\'cb\'e3\'cb\'e6\'bb\'fa\'c2\'fe\'b2\'bd\'b0\'fc\'ba\'ac\'b5\'c4\'cb\'f9\'d3\'d0\'b5\'e3
+\f0 """\
+	# 
+\f1 \'b2\'bb\'b6\'cf\'c2\'fe\'b2\'bd\'a3\'ac
+\f0  
+\f1 \'d6\'b1\'b5\'bd\'c1\'d0\'b1\'ed\'b4\'ef\'b5\'bd\'d6\'b8\'b6\'a8\'b5\'c4\'b3\'a4\'b6\'c8
+\f0 \
+
+\f2 	\uc0\u10102 
+\f0  while len(self.x_values) < self.num_points:\
+	# 
+\f1 \'be\'f6\'b6\'a8\'c7\'b0\'bd\'f8\'b7\'bd\'cf\'f2\'d2\'d4\'bc\'b0\'d1\'d8\'d5\'e2\'b8\'f6\'b7\'bd\'cf\'f2\'c7\'b0\'bd\'f8\'b5\'c4\'be\'e0\'c0\'eb
+\f0 \
+
+\f2 		\uc0\u10103 
+\f0  x_direction = choice([1, -1])\
+		x_distance = choice([0, 1, 2, 3, 4])\
+
+\f2 		\uc0\u10104 
+\f0  x_step = x_direction * x_distance\
+		y_direction = choice([1, -1])\
+		y_distance = choice([0, 1, 2, 3, 4])\
+
+\f2 		\uc0\u10105 
+\f0  y_step = y_direction * y_distance\
+		# 
+\f1 \'be\'dc\'be\'f8\'d4\'ad\'b5\'d8\'cc\'a4\'b2\'bd
+\f0 \
+
+\f2 		\uc0\u10106 
+\f0  if x_step == 0 and y_step == 0:\
+				continue\
+		# 
+\f1 \'bc\'c6\'cb\'e3\'cf\'c2\'d2\'bb\'b8\'f6\'b5\'e3\'b5\'c4
+\f0 x
+\f1 \'ba\'cd
+\f0 y
+\f1 \'d6\'b5
+\f0 \
+
+\f2 		\uc0\u10107 
+\f0  next_x = self.x_values[-1] + x_step\
+		next_y = self.y_values[-1] + y_step\
+		self.x_values.append(next_x)\
+		self.y_values.append(next_y)\
+15.3.3 
+\f1 \'bb\'e6\'d6\'c6\'cb\'e6\'bb\'fa\'c2\'fe\'b2\'bd\'cd\'bc
+\f0 \
+\cf2 rw_visual.py\cf0 \
+import matplotlib.pyplot as plt\
+from random_walk import RandomWalk\
+# 
+\f1 \'b4\'b4\'bd\'a8\'d2\'bb\'b8\'f6
+\f0 RandomWalk
+\f1 \'ca\'b5\'c0\'fd\'a3\'ac
+\f0  
+\f1 \'b2\'a2\'bd\'ab\'c6\'e4\'b0\'fc\'ba\'ac\'b5\'c4\'b5\'e3\'b6\'bc\'bb\'e6\'d6\'c6\'b3\'f6\'c0\'b4
+\f0 \
+
+\f2 \uc0\u10102 
+\f0  rw = RandomWalk()\
+rw.fill_walk()\
+
+\f2 \uc0\u10103 
+\f0  plt.scatter(rw.x_values, rw.y_values, s=15)\
+plt.show()\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+}

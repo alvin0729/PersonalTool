@@ -1,0 +1,593 @@
+{\rtf1\ansi\ansicpg936\cocoartf1504\cocoasubrtf830
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fnil\fcharset134 PingFangSC-Regular;\f2\fnil\fcharset77 ZapfDingbatsITC;
+}
+{\colortbl;\red255\green255\blue255;\red255\green0\blue255;}
+{\*\expandedcolortbl;;\csgenericrgb\c100000\c0\c100000;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww22420\viewh15940\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs36 \cf0 \
+\
+\
+10.1 
+\f1 \'b4\'d3\'ce\'c4\'bc\'fe\'d6\'d0\'b6\'c1\'c8\'a1\'ca\'fd\'be\'dd
+\f0 \
+https://www.nostarch.com/pythoncrashcourse/\
+\
+10.1.1 
+\f1 \'b6\'c1\'c8\'a1\'d5\'fb\'b8\'f6\'ce\'c4\'bc\'fe
+\f0 \
+with open('pi_digits.txt') as file_object:\
+    contents = file_object.read()\
+    print(contents)\
+
+\f1 \'b9\'d8\'bc\'fc\'d7\'d6
+\f0 with 
+\f1 \'d4\'da\'b2\'bb\'d4\'d9\'d0\'e8\'d2\'aa\'b7\'c3\'ce\'ca\'ce\'c4\'bc\'fe\'ba\'f3\'bd\'ab\'c6\'e4\'b9\'d8\'b1\'d5\'a1\'a3\'c4\'e3\'d6\'bb\'b9\'dc\'b4\'f2\'bf\'aa\'ce\'c4\'bc\'fe\'a3\'ac \'b2\'a2\'d4\'da\'d0\'e8\'d2\'aa\'ca\'b1\'ca\'b9\'d3\'c3\'cb\'fc\'a3\'ac Python\'d7\'d4\'bb\'e1\'d4\'da\'ba\'cf\'ca\'ca\'b5\'c4\'ca\'b1\'ba\'f2\'d7\'d4\'b6\'af\'bd\'ab\'c6\'e4\'b9\'d8\'b1\'d5\'a1\'a3
+\f0 \
+\
+10.1.2 
+\f1 \'ce\'c4\'bc\'fe\'c2\'b7\'be\'b6
+\f0 \
+\
+10.1.3 
+\f1 \'d6\'f0\'d0\'d0\'b6\'c1\'c8\'a1
+\f0 \
+filename = 'pi_digits.txt'\
+with open(filename) as file_object:\
+    for line in file_object:\
+        print(line)\
+
+\f1 \'d2\'aa\'cf\'fb\'b3\'fd\'d5\'e2\'d0\'a9\'b6\'e0\'d3\'e0\'b5\'c4\'bf\'d5\'b0\'d7\'d0\'d0\'a3\'ac
+\f0  
+\f1 \'bf\'c9\'d4\'da
+\f0 print 
+\f1 \'d3\'ef\'be\'e4\'d6\'d0\'ca\'b9\'d3\'c3
+\f0 rstrip() 
+\f1 \'a3\'ba
+\f0 \
+filename = 'pi_digits.txt'\
+with open(filename) as file_object:\
+    for line in file_object:\
+        print(line.rstrip())\
+\
+10.1.4 
+\f1 \'b4\'b4\'bd\'a8\'d2\'bb\'b8\'f6\'b0\'fc\'ba\'ac\'ce\'c4\'bc\'fe\'b8\'f7\'d0\'d0\'c4\'da\'c8\'dd\'b5\'c4\'c1\'d0\'b1\'ed
+\f0 \
+filename = 'pi_digits.txt'\
+with open(filename) as file_object:\
+    lines = file_object.readlines()\
+    for line in lines:\
+        print(line.rstrip())\
+readlines() 
+\f1 \'b4\'d3\'ce\'c4\'bc\'fe\'d6\'d0\'b6\'c1\'c8\'a1\'c3\'bf\'d2\'bb\'d0\'d0\'a3\'ac
+\f0  
+\f1 \'b2\'a2\'bd\'ab\'c6\'e4\'b4\'e6\'b4\'a2\'d4\'da\'d2\'bb\'b8\'f6\'c1\'d0\'b1\'ed\'d6\'d0
+\f0 \
+\
+\
+10.1.5 
+\f1 \'ca\'b9\'d3\'c3\'ce\'c4\'bc\'fe\'b5\'c4\'c4\'da\'c8\'dd
+\f0 \
+filename = 'pi_digits.txt'\
+with open(filename) as file_object:\
+    lines = file_object.readlines()\
+    pi_string = ''\
+    for line in lines:\
+        pi_string += line.rstrip()\
+        print(pi_string)\
+    print(len(pi_string))\
+\
+10.1.6 
+\f1 \'b0\'fc\'ba\'ac\'d2\'bb\'b0\'d9\'cd\'f2\'ce\'bb\'b5\'c4\'b4\'f3\'d0\'cd\'ce\'c4\'bc\'fe
+\f0 \
+filename = 'pi_million_digits.txt'\
+with open(filename) as file_object:\
+    lines = file_object.readlines()\
+    pi_string = ''\
+    for line in lines:\
+        pi_string += line.strip()\
+        print(pi_string[:52] + "...")\
+    print(len(pi_string))\
+\
+10.1.7 
+\f1 \'d4\'b2\'d6\'dc\'c2\'ca\'d6\'b5\'d6\'d0\'b0\'fc\'ba\'ac\'c4\'e3\'b5\'c4\'c9\'fa\'c8\'d5\'c2\'f0
+\f0 \
+filename = 'pi_million_digits.txt'\
+with open(filename) as file_object:\
+    lines = file_object.readlines()\
+    pi_string = ''\
+    for line in lines:\
+        pi_string += line.rstrip()\
+    birthday = input("Enter your birthday, in the form mmddyy: ")\
+    if birthday in pi_string:\
+        print("Your birthday appears in the first million digits of pi!")\
+    else:\
+        print("Your birthday does not appear in the first million digits of pi.")\
+\
+10.2 
+\f1 \'d0\'b4\'c8\'eb\'ce\'c4\'bc\'fe
+\f0 \
+filename = 'programming.txt'\
+with open(filename, 'w') as file_object:\
+    file_object.write("I love programming.")\
+
+\f1 \'bf\'c9\'d6\'b8\'b6\'a8\'b6\'c1\'c8\'a1\'c4\'a3\'ca\'bd
+\f0  
+\f1 \'a3\'a8
+\f0  'r' 
+\f1 \'a3\'a9
+\f0  
+\f1 \'a1\'a2
+\f0  
+\f1 \'d0\'b4\'c8\'eb\'c4\'a3\'ca\'bd
+\f0  
+\f1 \'a3\'a8
+\f0  'w' 
+\f1 \'a3\'a9
+\f0  
+\f1 \'a1\'a2
+\f0  
+\f1 \'b8\'bd\'bc\'d3\'c4\'a3\'ca\'bd
+\f0  
+\f1 \'a3\'a8
+\f0  'a' 
+\f1 \'a3\'a9
+\f0  
+\f1 \'bb\'f2\'c8\'c3\'c4\'e3\'c4\'dc\'b9\'bb\'b6\'c1\'c8\'a1\'ba\'cd\'d0\'b4\'c8\'eb\'ce\'c4\'bc\'fe\'b5\'c4\'c4\'a3\'ca\'bd\'a3\'a8
+\f0  'r+' 
+\f1 \'a3\'a9
+\f0  
+\f1 \'a1\'a3
+\f0 \
+\
+10.2.2 
+\f1 \'d0\'b4\'c8\'eb\'b6\'e0\'d0\'d0
+\f0 \
+filename = 'programming.txt'\
+with open(filename, 'w') as file_object:\
+    file_object.write("I love programming1.")\
+    file_object.write("I love creating new games.")\
+\
+10.2.3 
+\f1 \'b8\'bd\'bc\'d3\'b5\'bd\'ce\'c4\'bc\'fe
+\f0 \
+filename = 'programming.txt'\
+
+\f2 \uc0\u10102 
+\f0  with open(filename, 'a') as file_object:\
+
+\f2 \uc0\u10103 
+\f0  file_object.write("I also love finding meaning in large datasets.\\n")\
+file_object.write("I love creating apps that can run in a browser.\\n")\
+\
+10.3 
+\f1 \'d2\'ec\'b3\'a3
+\f0 \
+10.3.1 
+\f1 \'b4\'a6\'c0\'ed
+\f0 ZeroDivisionError 
+\f1 \'d2\'ec\'b3\'a3
+\f0 \
+10.3.2 
+\f1 \'ca\'b9\'d3\'c3
+\f0 try-except 
+\f1 \'b4\'fa\'c2\'eb\'bf\'e9
+\f0 \
+try:\
+	print(5/0)\
+except ZeroDivisionError:\
+	print("You can't divide by zero!")\
+\
+10.3.3 
+\f1 \'ca\'b9\'d3\'c3\'d2\'ec\'b3\'a3\'b1\'dc\'c3\'e2\'b1\'c0\'c0\'a3
+\f0 \
+print("Give me two numbers, and I'll divide them.")\
+print("Enter 'q' to quit.")\
+while True:\
+	first_number = input("\\nFirst number: ")\
+	if first_number == 'q':\
+		break\
+	second_number = input("Second number: ")\
+
+\f2 	\uc0\u10102 
+\f0  try:\
+		answer = int(first_number) / int(second_number)\
+
+\f2 	\uc0\u10103 
+\f0  except ZeroDivisionError:\
+		print("You can't divide by 0!")\
+
+\f2 	\uc0\u10104 
+\f0  else:\
+		print(answer)\
+\
+\
+10.3.5 
+\f1 \'b4\'a6\'c0\'ed
+\f0 FileNotFoundError 
+\f1 \'d2\'ec\'b3\'a3
+\f0 \
+filename = 'alice.txt'\
+try:\
+	with open(filename) as f_obj:\
+		contents = f_obj.read()\
+except FileNotFoundError:\
+	msg = "Sorry, the file " + filename + " does not exist."\
+	print(msg)\
+\
+10.3.6 
+\f1 \'b7\'d6\'ce\'f6\'ce\'c4\'b1\'be
+\f0 \
+
+\f1 \'b7\'bd\'b7\'a8
+\f0 split() 
+\f1 \'d2\'d4\'bf\'d5\'b8\'f1\'ce\'aa\'b7\'d6\'b8\'f4\'b7\'fb\'bd\'ab\'d7\'d6\'b7\'fb\'b4\'ae\'b7\'d6\'b2\'f0\'b3\'c9\'b6\'e0\'b8\'f6\'b2\'bf\'b7\'d6\'a3\'ac
+\f0  
+\f1 \'b2\'a2\'bd\'ab\'d5\'e2\'d0\'a9\'b2\'bf\'b7\'d6\'b6\'bc\'b4\'e6\'b4\'a2\'b5\'bd\'d2\'bb\'b8\'f6\'c1\'d0\'b1\'ed\'d6\'d0\'a1\'a3
+\f0 \
+filename = 'alice.txt'\
+try:\
+    with open(filename) as f_obj:\
+        contents = f_obj.read()\
+except FileNotFoundError:\
+    msg = "Sorry, the file " + filename + " does not exist."\
+    print(msg)\
+else:\
+    # 
+\f1 \'bc\'c6\'cb\'e3\'ce\'c4\'bc\'fe\'b4\'f3\'d6\'c2\'b0\'fc\'ba\'ac\'b6\'e0\'c9\'d9\'b8\'f6\'b5\'a5\'b4\'ca
+\f0 \
+    words = contents.split()\
+    num_words = len(words)\
+    print("The file " + filename + " has about " + str(num_words) + " words.")\
+\
+10.3.7 
+\f1 \'ca\'b9\'d3\'c3\'b6\'e0\'b8\'f6\'ce\'c4\'bc\'fe
+\f0 \
+def count_words(filename):\
+	"""
+\f1 \'bc\'c6\'cb\'e3\'d2\'bb\'b8\'f6\'ce\'c4\'bc\'fe\'b4\'f3\'d6\'c2\'b0\'fc\'ba\'ac\'b6\'e0\'c9\'d9\'b8\'f6\'b5\'a5\'b4\'ca
+\f0 """\
+	try:\
+		with open(filename) as f_obj:\
+			contents = f_obj.read()\
+	except FileNotFoundError:\
+		msg = "Sorry, the file " + filename + " does not exist."\
+		print(msg)\
+	else:\
+		# 
+\f1 \'bc\'c6\'cb\'e3\'ce\'c4\'bc\'fe\'b4\'f3\'d6\'c2\'b0\'fc\'ba\'ac\'b6\'e0\'c9\'d9\'b8\'f6\'b5\'a5\'b4\'ca
+\f0 \
+		words = contents.split()\
+		num_words = len(words)\
+		print("The file " + filename + " has about " + str(num_words) +" words.")\
+filename = 'alice.txt'\
+count_words(filename)\
+\
+10.3.8 
+\f1 \'ca\'a7\'b0\'dc\'ca\'b1\'d2\'bb\'c9\'f9\'b2\'bb\'bf\'d4
+\f0 \
+def count_words(filename):\
+"""
+\f1 \'bc\'c6\'cb\'e3\'d2\'bb\'b8\'f6\'ce\'c4\'bc\'fe\'b4\'f3\'d6\'c2\'b0\'fc\'ba\'ac\'b6\'e0\'c9\'d9\'b8\'f6\'b5\'a5\'b4\'ca
+\f0 """\
+try:\
+--snip--\
+except FileNotFoundError:\
+
+\f2 \uc0\u10102 
+\f0  pass\
+else:\
+--snip--\
+filenames = ['alice.txt', 'siddhartha.txt', 'moby_dick.txt', 'little_women.txt']\
+for filename in filenames:\
+count_words(filename)\
+\
+10.3.9 
+\f1 \'be\'f6\'b6\'a8\'b1\'a8\'b8\'e6\'c4\'c4\'d0\'a9\'b4\'ed\'ce\'f3
+\f0\fs24 {{\NeXTGraphic number_writer.py \width640 \height640
+}¬}
+\fs36 \
+\
+10.4 
+\f1 \'b4\'e6\'b4\'a2\'ca\'fd\'be\'dd
+\f0 \
+
+\f1 \'c4\'a3\'bf\'e9
+\f0 json 
+\f1 \'c8\'c3\'c4\'e3\'c4\'dc\'b9\'bb\'bd\'ab\'bc\'f2\'b5\'a5\'b5\'c4
+\f0 Python
+\f1 \'ca\'fd\'be\'dd\'bd\'e1\'b9\'b9\'d7\'aa\'b4\'a2\'b5\'bd\'ce\'c4\'bc\'fe\'d6\'d0\'a3\'ac
+\f0  
+\f1 \'b2\'a2\'d4\'da\'b3\'cc\'d0\'f2\'d4\'d9\'b4\'ce\'d4\'cb\'d0\'d0\'ca\'b1\'bc\'d3\'d4\'d8\'b8\'c3\'ce\'c4\'bc\'fe\'d6\'d0\'b5\'c4\'ca\'fd\'be\'dd\'a1\'a3
+\f0  \
+\
+10.4.1 
+\f1 \'ca\'b9\'d3\'c3
+\f0 json.dump() 
+\f1 \'ba\'cd
+\f0 json.load()\
+import json\
+numbers = [2, 3, 5, 7, 11, 13]\
+filename = 'numbers.json'\
+with open(filename, 'w') as file_object:\
+    json.dump(numbers, file_object)\
+\
+\
+import json\
+filename = 'numbers.json'\
+with open(filename) as file_object:\
+    numbers = json.load(file_object)\
+print(numbers)\
+\
+10.4.2 
+\f1 \'b1\'a3\'b4\'e6\'ba\'cd\'b6\'c1\'c8\'a1\'d3\'c3\'bb\'a7\'c9\'fa\'b3\'c9\'b5\'c4\'ca\'fd\'be\'dd
+\f0 \
+import json\
+\
+def get_stored_username():\
+    """Get stored username if available."""\
+    filename = 'username.json'\
+    try:\
+        with open(filename) as f_obj:\
+            username = json.load(f_obj)\
+    except FileNotFoundError:\
+        return None\
+    else:\
+        return username\
+\
+def get_new_username():\
+    """Prompt for a new username."""\
+    username = input("What is your name? ")\
+    filename = 'username.json'\
+    with open(filename, 'w') as f_obj:\
+        json.dump(username, f_obj)\
+    return username\
+\
+def greet_user():\
+    """Greet the user by name."""\
+    username = get_stored_username()\
+    if username:\
+        print("Welcome back, " + username + "!")\
+    else:\
+        username = get_new_username()\
+        print("We'll remember you when you come back, " + username + "!")\
+\
+greet_user()\
+\
+\
+\
+
+\f1 \'b5\'da
+\f0 11
+\f1 \'d5\'c2
+\f0  
+\f1 \'b2\'e2\'ca\'d4\'b4\'fa\'c2\'eb
+\f0 \
+11.1.1 
+\f1 \'b5\'a5\'d4\'aa\'b2\'e2\'ca\'d4\'ba\'cd\'b2\'e2\'ca\'d4\'d3\'c3\'c0\'fd
+\f0 \
+
+\f1 \'b5\'a5\'d4\'aa\'b2\'e2\'ca\'d4
+\f0  
+\f1 \'d3\'c3\'d3\'da\'ba\'cb\'ca\'b5\'ba\'af\'ca\'fd\'b5\'c4\'c4\'b3\'b8\'f6\'b7\'bd\'c3\'e6\'c3\'bb\'d3\'d0\'ce\'ca\'cc\'e2\'a3\'bb
+\f0  
+\f1 \'b2\'e2\'ca\'d4\'d3\'c3\'c0\'fd
+\f0  
+\f1 \'ca\'c7\'d2\'bb\'d7\'e9\'b5\'a5\'d4\'aa\'b2\'e2\'ca\'d4\'a3\'ac
+\f0  
+\f1 \'d5\'e2\'d0\'a9\'b5\'a5\'d4\'aa\'b2\'e2\'ca\'d4\'d2\'bb\'c6\'f0\'ba\'cb\'ca\'b5\'ba\'af\'ca\'fd\'d4\'da\'b8\'f7\'d6\'d6\'c7\'e9\'d0\'ce\'cf\'c2\'b5\'c4
+\f0 \
+
+\f1 \'d0\'d0\'ce\'aa\'b6\'bc\'b7\'fb\'ba\'cf\'d2\'aa\'c7\'f3\'a1\'a3
+\f0  \
+
+\f1 \'c8\'ab\'b8\'b2\'b8\'c7\'ca\'bd\'b2\'e2\'ca\'d4
+\f0  
+\f1 \'d3\'c3\'c0\'fd\'b0\'fc\'ba\'ac\'d2\'bb\'d5\'fb\'cc\'d7\'b5\'a5\'d4\'aa\'b2\'e2\'ca\'d4
+\f0 \
+\
+def get_formatted_name(first, last):\
+    """Generate a neatly formatted full name."""\
+    full_name = first + ' ' + last\
+    return full_name.title()\
+\
+"""\
+print("Enter 'q' at any time to quit.")\
+while True:\
+    first = input("\\nPlease give me a first name: ")\
+    if first == 'q':\
+        break\
+        \
+    last = input("Please give me a last name: ")\
+    if last == 'q':\
+        break\
+        \
+    formatted_name = get_formatted_name(first, last)\
+    print("\\tNeatly formatted name: " + formatted_name + '.')\
+"""\
+\
+import unittest\
+class NamesTestCase(unittest.TestCase):\
+    """Tests for 'name_function.py'."""\
+    \
+    def test_first_last_name(self):\
+        formatted_name = get_formatted_name('janis', 'joplin')\
+        self.assertEqual(formatted_name, 'Janis Joplin')\
+        \
+    def test_first_last_middle_name(self):\
+        formatted_name = get_formatted_name(\
+            'wolfgang', 'mozart', 'amadeus')\
+        self.assertEqual(formatted_name, 'Wolfgang Amadeus Mozart')\
+            \
+unittest.main()\
+\
+\
+def get_formatted_name(first, last, middle=''):\
+"""
+\f1 \'c9\'fa\'b3\'c9\'d5\'fb\'bd\'e0\'b5\'c4\'d0\'d5\'c3\'fb
+\f0 """\
+if middle:\
+full_name = first + ' ' + middle + ' ' + last\
+else:\
+full_name = first + ' ' + last\
+return full_name.title()\
+\
+11.2 
+\f1 \'b2\'e2\'ca\'d4\'c0\'e0
+\f0 \
+11.2.1 
+\f1 \'b8\'f7\'d6\'d6\'b6\'cf\'d1\'d4\'b7\'bd\'b7\'a8
+\f0 \
+assertEqual(a, b) 
+\f1 \'ba\'cb\'ca\'b5
+\f0 a == b\
+assertNotEqual(a, b) 
+\f1 \'ba\'cb\'ca\'b5
+\f0 a != b\
+assertTrue(x) 
+\f1 \'ba\'cb\'ca\'b5
+\f0 x 
+\f1 \'ce\'aa
+\f0 True\
+assertFalse(x) 
+\f1 \'ba\'cb\'ca\'b5
+\f0 x 
+\f1 \'ce\'aa
+\f0 False\
+assertIn(item , list ) 
+\f1 \'ba\'cb\'ca\'b5
+\f0  item 
+\f1 \'d4\'da
+\f0  list 
+\f1 \'d6\'d0
+\f0 \
+assertNotIn(item , list ) 
+\f1 \'ba\'cb\'ca\'b5
+\f0  item 
+\f1 \'b2\'bb\'d4\'da
+\f0  list 
+\f1 \'d6\'d0
+\f0 \
+\
+\
+11.2.2 
+\f1 \'d2\'bb\'b8\'f6\'d2\'aa\'b2\'e2\'ca\'d4\'b5\'c4\'c0\'e0\
+\cf2 survey.py
+\f0 \cf0 \
+class AnonymousSurvey():\
+"""
+\f1 \'ca\'d5\'bc\'af\'c4\'e4\'c3\'fb\'b5\'f7\'b2\'e9\'ce\'ca\'be\'ed\'b5\'c4\'b4\'f0\'b0\'b8
+\f0 """\
+
+\f2 \uc0\u10102 
+\f0  def __init__(self, question):\
+"""
+\f1 \'b4\'e6\'b4\'a2\'d2\'bb\'b8\'f6\'ce\'ca\'cc\'e2\'a3\'ac
+\f0  
+\f1 \'b2\'a2\'ce\'aa\'b4\'e6\'b4\'a2\'b4\'f0\'b0\'b8\'d7\'f6\'d7\'bc\'b1\'b8
+\f0 """\
+self.question = question\
+self.responses = []\
+
+\f2 \uc0\u10103 
+\f0  def show_question(self):\
+"""
+\f1 \'cf\'d4\'ca\'be\'b5\'f7\'b2\'e9\'ce\'ca\'be\'ed
+\f0 """\
+print(question)\
+
+\f2 \uc0\u10104 
+\f0  def store_response(self, new_response):\
+"""
+\f1 \'b4\'e6\'b4\'a2\'b5\'a5\'b7\'dd\'b5\'f7\'b2\'e9\'b4\'f0\'be\'ed
+\f0 """\
+self.responses.append(new_response)\
+
+\f2 \uc0\u10105 
+\f0  def show_results(self):\
+"""
+\f1 \'cf\'d4\'ca\'be\'ca\'d5\'bc\'af\'b5\'bd\'b5\'c4\'cb\'f9\'d3\'d0\'b4\'f0\'be\'ed
+\f0 """\
+print("Survey results:")\
+for response in responses:\
+print('- ' + response)\
+\
+\cf2 language_survey.py\cf0 \
+from survey import AnonymousSurvey\
+#
+\f1 \'b6\'a8\'d2\'e5\'d2\'bb\'b8\'f6\'ce\'ca\'cc\'e2\'a3\'ac
+\f0  
+\f1 \'b2\'a2\'b4\'b4\'bd\'a8\'d2\'bb\'b8\'f6\'b1\'ed\'ca\'be\'b5\'f7\'b2\'e9\'b5\'c4
+\f0 AnonymousSurvey
+\f1 \'b6\'d4\'cf\'f3
+\f0 \
+question = "What language did you first learn to speak?"\
+my_survey = AnonymousSurvey(question)\
+#
+\f1 \'cf\'d4\'ca\'be\'ce\'ca\'cc\'e2\'b2\'a2\'b4\'e6\'b4\'a2\'b4\'f0\'b0\'b8
+\f0 \
+my_survey.show_question()\
+print("Enter 'q' at any time to quit.\\n")\
+while True:\
+response = input("Language: ")\
+if response == 'q':\
+break\
+my_survey.store_response(response)\
+# 
+\f1 \'cf\'d4\'ca\'be\'b5\'f7\'b2\'e9\'bd\'e1\'b9\'fb
+\f0 \
+print("\\nThank you to everyone who participated in the survey!")\
+my_survey.show_results()\
+\
+\
+11.2.4 
+\f1 \'b7\'bd\'b7\'a8
+\f0 setUp()\
+import unittest\
+from survey import AnonymousSurvey\
+class TestAnonymousSurvey(unittest.TestCase):\
+"""
+\f1 \'d5\'eb\'b6\'d4
+\f0 AnonymousSurvey
+\f1 \'c0\'e0\'b5\'c4\'b2\'e2\'ca\'d4
+\f0 """\
+def setUp(self):\
+"""\
+
+\f1 \'b4\'b4\'bd\'a8\'d2\'bb\'b8\'f6\'b5\'f7\'b2\'e9\'b6\'d4\'cf\'f3\'ba\'cd\'d2\'bb\'d7\'e9\'b4\'f0\'b0\'b8\'a3\'ac
+\f0  
+\f1 \'b9\'a9\'ca\'b9\'d3\'c3\'b5\'c4\'b2\'e2\'ca\'d4\'b7\'bd\'b7\'a8\'ca\'b9\'d3\'c3
+\f0 \
+"""\
+question = "What language did you first learn to speak?"\
+
+\f2 \uc0\u10102 
+\f0  self.my_survey = AnonymousSurvey(question)\
+
+\f2 \uc0\u10103 
+\f0  self.responses = ['English', 'Spanish', 'Mandarin']\
+def test_store_single_response(self):\
+"""
+\f1 \'b2\'e2\'ca\'d4\'b5\'a5\'b8\'f6\'b4\'f0\'b0\'b8\'bb\'e1\'b1\'bb\'cd\'d7\'c9\'c6\'b5\'d8\'b4\'e6\'b4\'a2
+\f0 """\
+self.my_survey.store_response(self.responses[0])\
+self.assertIn(self.responses[0], self.my_survey.responses)\
+def test_store_three_responses(self):\
+"""
+\f1 \'b2\'e2\'ca\'d4\'c8\'fd\'b8\'f6\'b4\'f0\'b0\'b8\'bb\'e1\'b1\'bb\'cd\'d7\'c9\'c6\'b5\'d8\'b4\'e6\'b4\'a2
+\f0 """\
+for response in self.responses:\
+self.my_survey.store_response(response)\
+for response in self.responses:\
+self.assertIn(response, self.my_survey.responses)\
+unittest.main()\
+\
+\
+\
+\
+\
+\
+\
+\
+}
