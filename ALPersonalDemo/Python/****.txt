@@ -1,0 +1,13 @@
+
+2to3 -w /Users/alvin/Desktop/demo.py 
+
+UTF-8转中文
+#.write(json.dumps(datas,ensure_ascii=False,indent=2))
+
+
+
+
+
+
+
+

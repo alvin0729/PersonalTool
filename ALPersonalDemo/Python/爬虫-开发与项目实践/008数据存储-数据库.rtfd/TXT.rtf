@@ -1,0 +1,812 @@
+{\rtf1\ansi\ansicpg936\cocoartf1504\cocoasubrtf830
+{\fonttbl\f0\fnil\fcharset134 PingFangSC-Regular;\f1\fswiss\fcharset0 Helvetica;\f2\fnil\fcharset0 Menlo-Regular;
+\f3\fnil\fcharset0 Menlo-Italic;\f4\fnil\fcharset0 Menlo-Bold;\f5\fnil\fcharset0 Verdana;
+\f6\fmodern\fcharset0 CourierNewPSMT;\f7\froman\fcharset0 Times-Roman;\f8\fnil\fcharset134 STSongti-SC-Regular;
+\f9\fmodern\fcharset0 Courier;}
+{\colortbl;\red255\green255\blue255;\red255\green0\blue255;\red0\green0\blue255;\red255\green255\blue255;
+\red0\green0\blue0;\red163\green21\blue21;\red109\green109\blue109;\red0\green0\blue109;\red14\green110\blue109;
+\red82\green0\blue103;\red0\green0\blue254;\red255\green255\blue255;\red0\green0\blue0;\red38\green38\blue38;
+\red244\green244\blue244;\red53\green65\blue117;\red26\green26\blue26;\red242\green244\blue245;\red254\green254\blue239;
+\red0\green0\blue0;\red242\green242\blue242;\red255\green255\blue255;\red67\green67\blue67;\red62\green62\blue62;
+\red53\green53\blue53;\red244\green246\blue249;\red0\green0\blue117;\red115\green0\blue2;\red255\green255\blue255;
+\red109\green109\blue109;\red0\green0\blue109;\red14\green110\blue109;}
+{\*\expandedcolortbl;;\csgenericrgb\c100000\c0\c100000;\csgenericrgb\c0\c0\c100000;\csgenericrgb\c100000\c100000\c100000;
+\csgenericrgb\c0\c0\c0;\csgenericrgb\c63900\c8200\c8200;\csgenericrgb\c42745\c42745\c42745;\csgenericrgb\c0\c0\c42745;\csgenericrgb\c5490\c43137\c42745;
+\csgenericrgb\c32157\c0\c40392;\csgenericrgb\c0\c0\c99608;\csgray\c100000;\csgray\c0;\cssrgb\c20000\c20000\c20000;
+\cssrgb\c96471\c96471\c96471;\cssrgb\c26667\c33333\c53333;\cssrgb\c13333\c13333\c13333;\cssrgb\c96078\c96471\c96863;\cssrgb\c99608\c99608\c94902;
+\cssrgb\c0\c0\c0;\cssrgb\c96078\c96078\c96078;\cssrgb\c100000\c100000\c100000;\cssrgb\c33333\c33333\c33333;\cssrgb\c30980\c30980\c30980;
+\cssrgb\c27059\c27059\c27059;\cssrgb\c96471\c97255\c98039;\cssrgb\c0\c0\c53333;\cssrgb\c53333\c0\c0;\cssrgb\c100000\c100000\c100000;
+\csgenericrgb\c42745\c42745\c42745;\csgenericrgb\c0\c0\c42745;\csgenericrgb\c5490\c43137\c42745;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww14640\viewh11940\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs36 \cf2 \
+\
+\
+\
+8.1 SQLite\
+\'c7\'b6\'c8\'eb\'ca\'bd\'b9\'d8\'cf\'b5\'ca\'fd\'be\'dd\'bf\'e2\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f1\fs24 \cf0 {{\NeXTGraphic 屏幕快照 2018-02-14 下午9.41.38.png \width4520 \height520
+}�}\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs36 \cf2 \
+\
+Python\'b2\'d9\'d7\'f7SQLite\
+1.\'b5\'bc\'c8\'ebsqlite\'ca\'fd\'be\'dd\'bf\'e2\'c4\'a3\'bf\'e9\
+\pard\tx692\pardeftab692\pardirnatural\partightenfactor0
+
+\f2\fs22 \cf3 \cb4 import
+\fs28 \cf5  sqlite3
+\f1\fs24 \cf0 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs36 \cf2 \cb1 \
+2.\'b4\'b4\'bd\'a8\'a1\'a2\'b4\'f2\'bf\'aa\'ca\'fd\'be\'dd\'bf\'e2\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f1\fs24 \cf0 {{\NeXTGraphic 屏幕快照 2018-02-14 下午10.37.46.png \width9380 \height1740
+}�}\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs36 \cf2 \
+3.\'ca\'fd\'be\'dd\'bf\'e2\'c1\'ac\'bd\'d3\'b6\'d4\'cf\'f3\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f1\fs24 \cf0 {{\NeXTGraphic 屏幕快照 2018-02-14 下午10.38.36.png \width5960 \height2540
+}�}\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs36 \cf2 \
+\pard\tx692\pardeftab692\pardirnatural\partightenfactor0
+
+\f2\fs28 \cf5 \cb4 cur = con.cursor()
+\f1\fs24 \cf0 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs36 \cf2 \cb1 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f1\fs24 \cf0 {{\NeXTGraphic 屏幕快照 2018-02-14 下午10.40.35.png \width9540 \height2540
+}�}\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs36 \cf2 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f1\fs24 \cf0 {{\NeXTGraphic 屏幕快照 2018-02-14 下午10.40.39.png \width6040 \height1660
+}�}\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs36 \cf2 \
+\
+5.\'bd\'a8\'b1\'ed\
+\pard\tx692\pardeftab692\pardirnatural\partightenfactor0
+
+\f2\fs28 \cf5 \cb4 cur.execute(
+\fs22 ' CREATE TABLE person (id integer primary key,name varchar(20),age integer)'
+\fs28 )
+\f1\fs24 \cf0 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs36 \cf2 \cb1 \
+6.\'b2\'e5\'c8\'eb\'ca\'fd\'be\'dd\
+\pard\tx692\pardeftab692\pardirnatural\partightenfactor0
+
+\f2\fs28 \cf5 \cb4 data=
+\fs22 \cf6 "0,'qiye',20"
+\f1\fs24 \cf0 \
+
+\f2\fs28 \cf5 cur.execute(
+\fs22 ' INSERT INTO person VALUES (%s)'
+\fs28 %data)
+\f0\fs36 \cf2 \cb1 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f1\fs24 \cf0 {{\NeXTGraphic 屏幕快照 2018-02-14 下午10.43.44.png \width13380 \height1800
+}�}\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs36 \cf2 \
+\pard\tx692\pardeftab692\pardirnatural\partightenfactor0
+
+\f2\fs28 \cf5 \cb4 cur.executemany(
+\fs22 ' INSERT INTO person VALUES (?,?,?)'
+\fs28 ,[(
+\fs22 3
+\fs28 ,
+\fs22 'marry'
+\fs28 ,
+\fs22 20
+\fs28 ),(
+\fs22 4
+\fs28 ,
+\fs22 'jack'
+\fs28 ,
+\fs22 20
+\fs28 )])
+\f1\fs24 \cf0 \cb1 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 {{\NeXTGraphic 屏幕快照 2018-02-14 下午10.44.37.png \width11720 \height2640
+}�}\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs36 \cf2 \
+7.\'b2\'e9\'d1\'af\'ca\'fd\'be\'dd\
+\pard\tx692\pardeftab692\pardirnatural\partightenfactor0
+
+\f2\fs28 \cf5 \cb4 cur.execute(
+\fs22 'SELECT * FROM person'
+\fs28 )
+\f1\fs24 \cf0 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 \cb1 {{\NeXTGraphic 屏幕快照 2018-02-14 下午10.46.45.png \width13280 \height1500
+}�}\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs36 \cf2 \
+\pard\tx692\pardeftab692\pardirnatural\partightenfactor0
+
+\f2\fs28 \cf5 \cb4 cur.execute(
+\fs22 'SELECT * FROM person'
+\fs28 )
+\f1\fs24 \cf0 \
+
+\f2\fs28 \cf5 res = cur.fetchall()
+\f1\fs24 \cf0 \
+
+\f2\fs22 \cf3 for
+\fs28 \cf5  line 
+\fs22 \cf3 in
+\fs28 \cf5  res:
+\f1\fs24 \cf0 \
+
+\f2\fs28 \cf5     
+\fs22 \cf3 print
+\fs28 \cf5  line
+\f1\fs24 \cf0 \
+
+\f2\fs28 \cf5     cur.execute(
+\fs22 'SELECT * FROM person'
+\fs28 )
+\f1\fs24 \cf0 \
+
+\f2\fs28 \cf5     res = cur.fetchone()
+\f1\fs24 \cf0 \
+
+\f2\fs28 \cf5     
+\fs22 \cf3 print
+\fs28 \cf5  res
+\f0\fs36 \cf2 \cb1 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf2 8.\'d0\'de\'b8\'c4\'ba\'cd\'c9\'be\'b3\'fd\'ca\'fd\'be\'dd\
+\pard\tx692\pardeftab692\pardirnatural\partightenfactor0
+
+\f2\fs28 \cf5 \cb4 cur.execute(
+\fs22 'UPDATE person SET name=? WHERE id=?'
+\fs28 ,(
+\fs22 'rose'
+\fs28 ,
+\fs22 1
+\fs28 ))
+\f1\fs24 \cf0 \
+
+\f2\fs28 \cf5 cur.execute(
+\fs22 'DELETE FROM person WHERE id=?'
+\fs28 ,(
+\fs22 0
+\fs28 ,))
+\f1\fs24 \cf0 \
+
+\f2\fs28 \cf5 con.commit()
+\f1\fs24 \cf0 \
+
+\f2\fs28 \cf5 con.close()
+\f0\fs36 \cf2 \cb1 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf2 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f3\i\fs24 \cf7 #coding:utf-8\
+
+\f4\i0\b \cf8 import 
+\f2\b0 \cf0 sqlite3\
+\
+con = sqlite3.connect(
+\f4\b \cf9 '/Users/alvin/Desktop/pic/test.db'
+\f2\b0 \cf0 )
+\f3\i \cf7 #con = sqlite3.connect(':memory:')\
+
+\f2\i0 \cf0 cur = con.cursor()\
+cur.execute(
+\f4\b \cf9 ' CREATE TABLE person (\cf10 id \cf8 integer\cf9  primary key,\cf10 name \cf8 varchar\cf9 (20),\cf10 age \cf8 integer\cf9 )'
+\f2\b0 \cf0 )\
+\
+data=
+\f4\b \cf9 "0,'qiye',20"\
+
+\f2\b0 \cf0 cur.execute(
+\f4\b \cf9 ' INSERT INTO person VALUES (%s)'
+\f2\b0 \cf0 %data)\
+\
+cur.execute(
+\f4\b \cf9 ' INSERT INTO person VALUES (?,?,?)'
+\f2\b0 \cf0 ,(\cf11 1\cf0 ,
+\f4\b \cf9 'qiye'
+\f2\b0 \cf0 ,\cf11 20\cf0 ))\
+\
+cur.executemany(
+\f4\b \cf9 ' INSERT INTO person VALUES (?,?,?)'
+\f2\b0 \cf0 ,[(\cf11 3\cf0 ,
+\f4\b \cf9 'marry'
+\f2\b0 \cf0 ,\cf11 20\cf0 ),(\cf11 4\cf0 ,
+\f4\b \cf9 'jack'
+\f2\b0 \cf0 ,\cf11 20\cf0 )])\
+\
+\
+cur.execute(
+\f4\b \cf9 'SELECT 
+\f3\i\b0 *
+\f4\i0\b  FROM person'
+\f2\b0 \cf0 )\
+res = cur.fetchall()\
+
+\f4\b \cf8 for 
+\f2\b0 \cf0 line 
+\f4\b \cf8 in 
+\f2\b0 \cf0 res:\
+    \cf8 print\cf0 (line)\
+    cur.execute(
+\f4\b \cf9 'SELECT 
+\f3\i\b0 *
+\f4\i0\b  FROM person'
+\f2\b0 \cf0 )\
+    res = cur.fetchone()\
+    \cf8 print\cf0 (res)\
+\
+cur.execute(
+\f4\b \cf9 'UPDATE person SET name=? WHERE id=?'
+\f2\b0 \cf0 ,(
+\f4\b \cf9 'rose'
+\f2\b0 \cf0 ,\cf11 1\cf0 ))\
+cur.execute(
+\f4\b \cf9 'DELETE FROM person WHERE id=?'
+\f2\b0 \cf0 ,(\cf11 0\cf0 ,))\
+con.commit()\
+con.close()\
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs36 \cf2 8.2 MySQL\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f1\fs24 \cf0 {{\NeXTGraphic 屏幕快照 2018-02-14 下午10.56.26.png \width5680 \height1580
+}�}\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs36 \cf2 \
+sudo netstat -tap | grep mysql\
+\'b5\'c7\'c2\'bc\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f2 \cf2 \cb12 \CocoaLigature0 mysql -u root -p
+\f0 \cb1 \CocoaLigature1 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf2 \
+8.2.3 Python\'b2\'d9\'d7\'f7MySQL\
+pip install MySQL-python\
+Import MySQLdb\
+\
+8.3 MongoDB\
+\'b7\'d6\'b2\'bc\'ca\'bd\'ce\'c4\'bc\'fe\'b4\'e6\'b4\'a2\'b5\'c4\'ca\'fd\'be\'dd\'bf\'e2\
+\
+8.3.1 \'b0\'b2\'d7\'b0MongoDB\
+www.mongodb.org/downloads\
+\
+8.3.2 MongoDB\'bb\'f9\'b4\'a1\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f2\fs22 \cf13 \cb12 \CocoaLigature0 brew install mongodb\
+\
+sudo mkdir -p /data/db\
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs28 \cf14 \cb1 \expnd0\expndtw0\kerning0
+\CocoaLigature1 \'b8\'f8\'b8\'d5\'b2\'c5\'d0\'c2\'bd\'a8\'b5\'c4\'ca\'fd\'be\'dd\'bf\'e2\'c4\'bf\'c2\'bc\'b8\'b3\'d3\'e8\'c8\'a8\'cf\'de\'a3\'ba\
+\pard\pardeftab720\partightenfactor0
+
+\f2\fs26 \cf14 \cb15 sudo chown -
+\f4\b \cf16 R
+\f2\b0 \cf14  guojc /
+\f4\b data\
+\pard\pardeftab720\partightenfactor0
+
+\f2\b0\fs22 \cf13 \cb12 \kerning1\expnd0\expndtw0 \CocoaLigature0 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf13 sudo mongod\
+
+\f1\fs28 \cf17 \cb18 \expnd0\expndtw0\kerning0
+\CocoaLigature1 \
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs26 \cf0 \cb19 \'c6\'f4\'b6\'af
+\f5 MongoDB
+\f0 \'b7\'fe\'ce\'f1\'a3\'ba\
+\pard\pardeftab720\partightenfactor0
+
+\f6\fs24 \cf0 \cb21 brew services start mongodb\
+\
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs26 \cf0 \cb19 \'b9\'d8\'b1\'d5
+\f5 MongoDB
+\f0 \'b7\'fe\'ce\'f1\'a3\'ba\
+\pard\pardeftab720\partightenfactor0
+
+\f6\fs24 \cf0 \cb21 brew services stop mongodb\
+\pard\pardeftab720\partightenfactor0
+
+\f1\fs28 \cf17 \cb18 \
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs26 \cf0 \cb19 \'bd\'f8\'c8\'eb
+\f5 MongoDB
+\f0 \'cd\'bc\'d0\'ce\'bb\'af\'bd\'e7\'c3\'e6\'a3\'ba\
+mongo\
+\
+\'b2\'e9\'bf\'b4
+\f5 homebrew
+\f0 \'b0\'b2\'d7\'b0\'b5\'c4\'b7\'fe\'ce\'f1\'c7\'e9\'bf\'f6\'a3\'ba\
+\pard\pardeftab720\partightenfactor0
+
+\f6\fs24 \cf0 \cb21 brew services list\
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs26 \cf0 \cb19 \
+\pard\pardeftab720\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "http://blog.csdn.net/helloworld_1986/article/details/78969932"}}{\fldrslt 
+\f7\b\fs36 \cf0 \cb22 MAC 
+\f8 \'b0\'b2\'d7\'b0
+\f7 MongoDB
+\f8 \'ba\'f3\'a3\'ac\'c6\'f4\'b6\'af\'ca\'fd\'be\'dd\'bf\'e2\'b7\'fe\'ce\'f1\'b1\'a8\'b4\'ed}}
+\f8\b\fs36 \cb22 \
+\pard\pardeftab720\partightenfactor0
+
+\fs64 \cf23 \cb22 \'bd\'e2\'be\'f6\'b7\'bd\'b0\'b8
+\f7\b0\fs30 \cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\f8\b\fs36 \cf23 \cb22 \'b7\'bd\'b0\'b8\'d2\'bb\'a1\'a2\'d7\'d4\'bc\'ba\'b4\'b4\'bd\'a8\'d2\'bb\'b8\'f6\'ca\'fd\'be\'dd\'bf\'e2\'c2\'b7\'be\'b6
+\f7\b0\fs30 \cb1 \
+
+\f8\b\fs36 \cb22 \'b7\'bd\'b0\'b8\'b6\'fe\'a1\'a2\'d7\'d4\'bc\'ba\'d4\'da\'b1\'f0\'b4\'a6\'b4\'b4\'bd\'a8\'d2\'bb\'b8\'f6\'ca\'fd\'be\'dd\'bf\'e2\'c2\'b7\'be\'b6\'a3\'ac\'b1\'c8\'b8\'fc\'b8\'c4
+\f7 mongoDB
+\f8 \'ca\'fd\'be\'dd\'bf\'e2\'c2\'b7\'be\'b6
+\f7\b0\fs30 \cb1 \
+
+\f8\b\fs36 \cb22 \'c8\'e7\'a3\'ba
+\f7 mongod --dbpath ~/Documents/mongo/db
+\b0\fs30 \cb1 \
+
+\f8\b\fs36 \cb22 \'d4\'da
+\f7 Document
+\f8 \'c4\'bf\'c2\'bc\'cf\'c2\'b4\'b4\'bd\'a8
+\f7 mongo/db
+\f8 \'ce\'c4\'bc\'fe\'bc\'d0\'bc\'b4\'bf\'c9
+\f7\b0\fs30 \cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs26 \cf0 \cb19 \
+\pard\pardeftab720\partightenfactor0
+
+\f6\fs24 \cf0 \cb21 \
+\pard\pardeftab720\qj\partightenfactor0
+
+\f0\b\fs32 \cf24 \cb22 \'b7\'bd\'b7\'a8\'d2\'bb\'a3\'ba\'ca\'b9\'d3\'c3bash\'d6\'d5\'b6\'cb\
+\pard\pardeftab720\partightenfactor0
+
+\b0 \cf25 \cb22 \'c6\'f4\'b6\'af:\
+\pard\pardeftab720\partightenfactor0
+
+\f9\fs28 \cf25 \cb26 mongod --config /usr/\cf27 local\cf25 /etc/mongod.conf  \cf28 # 
+\f0 \'c6\'f4\'b6\'af
+\f9 \cf25 \
+
+\f0 \'bb\'f2
+\f9 \
+mongod --dbpath .   \
+                        \cf28 # 
+\f0 \'c6\'f4\'b6\'af\
+
+\f9 \cf25 mongo                                       \cf28 # 
+\f0 \'bd\'f8\'c8\'eb
+\f9 mongo
+\f0 \'c3\'fc\'c1\'ee\'d0\'d0
+\f9 \cf25 \
+> \cf27 use\cf25  admin\
+> db.shutdownServer()                       \cf28 # 
+\f0 \'cd\'a3\'d6\'b9
+\f9 \cf25 \
+> ctrl+C                                    \cf28 # 
+\f0 \'cd\'cb\'b3\'f6
+\f9 mongo
+\f0 \'c3\'fc\'c1\'ee\'d0\'d0\
+\pard\pardeftab720\partightenfactor0
+
+\f1 \cf17 \cb18 \
+
+\f0\fs36 \cf2 \cb1 \kerning1\expnd0\expndtw0 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f1\fs24 \cf0 {{\NeXTGraphic 屏幕快照 2018-02-15 上午11.58.22.png \width13140 \height4000
+}�}
+\f0\fs36 \cf2 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf2 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f1\fs24 \cf0 {{\NeXTGraphic 屏幕快照 2018-02-15 下午12.04.46.png \width12980 \height8520
+}�}\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs36 \cf2 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf2 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f1\fs24 \cf0 {{\NeXTGraphic 屏幕快照 2018-02-15 下午12.12.07.png \width13500 \height9740
+}�}\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs36 \cf2 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf2 \
+3.\'b4\'b4\'bd\'a8/\'c9\'be\'b3\'fd\'ca\'fd\'be\'dd\'bf\'e2\
+\'b4\'b4\'bd\'a8\'bb\'f2\'c7\'d0\'bb\'bb\'ca\'fd\'be\'dd\'bf\'e2\
+use DATABASE_NAME\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f2\fs22 \cf13 \cb12 \CocoaLigature0 > use pythonSpider\
+switched to db pythonSpider\
+> show dbs\
+admin   0.000GB\
+config  0.000GB\
+local   0.000GB\
+> db.pythonSpider.insert(\{"title":"python"\})\
+WriteResult(\{ "nInserted" : 1 \})\
+> show dbs\
+admin         0.000GB\
+config        0.000GB\
+local         0.000GB\
+pythonSpider  0.000GB\
+> db.dropDatabase()\
+\{ "dropped" : "pythonSpider", "ok" : 1 \}\
+
+\f8\fs28 \cf14 \cb29 \expnd0\expndtw0\kerning0
+\CocoaLigature1 \outl0\strokewidth0 \strokec14 \
+\pard\pardeftab720\sl400\partightenfactor0
+\cf14 \
+4.\'bc\'af\'ba\'cf\'d6\'d0\'ce\'c4\'b5\'b5\'b5\'c4\'d4\'f6\'c9\'be\'b8\'c4\'b2\'e9\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f2\fs22 \cf13 \cb12 \kerning1\expnd0\expndtw0 \CocoaLigature0 \outl0\strokewidth0 db.pythonSpider.insert(\{"title":"python","description":"
+\f0 \'b6\'af\'cc\'ac\'d3\'ef\'d1\'d4
+\f2 ","tags":["
+\f0 \'c5\'c0\'b3\'e6
+\f2 ", "python", "
+\f0 \'cd\'f8\'c2\'e7
+\f2 "],likes:100\})
+\f8\fs28 \cf14 \cb29 \expnd0\expndtw0\kerning0
+\CocoaLigature1 \outl0\strokewidth0 \strokec14 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f1\fs24 \cf0 \cb1 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {{\NeXTGraphic 屏幕快照 2018-02-15 下午4.53.36.png \width13260 \height6140
+}�}\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs36 \cf2 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f2\fs22 \cf13 \cb12 \CocoaLigature0 > db.pythonSpider.find()\
+\{ "_id" : ObjectId("5a854a346de95b3eb401a504"), "title" : "python", "description" : "
+\f0 \'b6\'af\'cc\'ac\'d3\'ef\'d1\'d4
+\f2 ", "tags" : [ "
+\f0 \'c5\'c0\'b3\'e6
+\f2 ", "python", "
+\f0 \'cd\'f8\'c2\'e7
+\f2 " ], "likes" : 100 \}\
+> db.pythonSpider.find().pretty()\
+\{\
+	"_id" : ObjectId("5a854a346de95b3eb401a504"),\
+	"title" : "python",\
+	"description" : "
+\f0 \'b6\'af\'cc\'ac\'d3\'ef\'d1\'d4
+\f2 ",\
+	"tags" : [\
+		"
+\f0 \'c5\'c0\'b3\'e6
+\f2 ",\
+		"python",\
+		"
+\f0 \'cd\'f8\'c2\'e7
+\f2 "\
+	],\
+	"likes" : 100\
+\}
+\f0\fs36 \cf2 \cb1 \CocoaLigature1 \
+\
+
+\f2\fs22 \cf13 \cb12 \CocoaLigature0 > db.pythonSpider.find(\{"likes":100\}).pretty()\
+\{\
+	"_id" : ObjectId("5a854a346de95b3eb401a504"),\
+	"title" : "python",\
+	"description" : "
+\f0 \'b6\'af\'cc\'ac\'d3\'ef\'d1\'d4
+\f2 ",\
+	"tags" : [\
+		"
+\f0 \'c5\'c0\'b3\'e6
+\f2 ",\
+		"python",\
+		"
+\f0 \'cd\'f8\'c2\'e7
+\f2 "\
+	],\
+	"likes" : 100\
+\}\
+\
+> db.pythonSpider.find(\{"likes":\{$gte:100\},"title":"python"\}).pretty()\
+\{\
+	"_id" : ObjectId("5a854a346de95b3eb401a504"),\
+	"title" : "python",\
+	"description" : "
+\f0 \'b6\'af\'cc\'ac\'d3\'ef\'d1\'d4
+\f2 ",\
+	"tags" : [\
+		"
+\f0 \'c5\'c0\'b3\'e6
+\f2 ",\
+		"python",\
+		"
+\f0 \'cd\'f8\'c2\'e7
+\f2 "\
+	],\
+	"likes" : 100\
+\}
+\f0\fs36 \cf2 \cb1 \CocoaLigature1 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f1\fs24 \cf0 {{\NeXTGraphic 屏幕快照 2018-02-15 下午5.00.38.png \width8820 \height3280
+}�}\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs36 \cf2 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f2\fs22 \cf13 \cb12 \CocoaLigature0 > db.pythonSpider.find(\
+... \{\
+...     $or:[\
+...         \{"likes":\{$gte:100\}\},\{"title":"python"\}\
+...     ]\
+... \}).pretty()\
+\{\
+	"_id" : ObjectId("5a854a346de95b3eb401a504"),\
+	"title" : "python",\
+	"description" : "
+\f0 \'b6\'af\'cc\'ac\'d3\'ef\'d1\'d4
+\f2 ",\
+	"tags" : [\
+		"
+\f0 \'c5\'c0\'b3\'e6
+\f2 ",\
+		"python",\
+		"
+\f0 \'cd\'f8\'c2\'e7
+\f2 "\
+	],\
+	"likes" : 100\
+\}
+\f0\fs36 \cf2 \cb1 \CocoaLigature1 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f1\fs24 \cf0 {{\NeXTGraphic 屏幕快照 2018-02-15 下午5.07.04.png \width13080 \height1000
+}�}\
+\
+
+\f0 \'b8\'fc\'d0\'c2\'ce\'c4\'b5\'b5
+\f1 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 {{\NeXTGraphic 屏幕快照 2018-02-15 下午5.08.46.png \width13200 \height7200
+}�}\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs36 \cf2 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f2\fs22 \cf13 \cb12 \CocoaLigature0 > db.pythonSpider.update(\{'title':'python'\},\{$set:\{'title':'python
+\f0 \'c5\'c0\'b3\'e6
+\f2 '\}\})\
+WriteResult(\{ "nMatched" : 1, "nUpserted" : 0, "nModified" : 1 \})
+\f0\fs36 \cf2 \cb1 \CocoaLigature1 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f1\fs24 \cf0 {{\NeXTGraphic 屏幕快照 2018-02-15 下午5.11.19.png \width10400 \height9940
+}�}\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs36 \cf2 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f1\fs24 \cf0 {{\NeXTGraphic 屏幕快照 2018-02-15 下午5.11.51.png \width11480 \height3280
+}�}\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs36 \cf2 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f1\fs24 \cf0 {{\NeXTGraphic 屏幕快照 2018-02-15 下午5.12.13.png \width11020 \height4100
+}�}\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs36 \cf2 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf2 \
+8.3.3 Python\'b2\'d9\'d7\'f7MongoDB\
+\
+pip3 install pymongo\
+\
+Import pymongo\
+\
+2.\'bd\'a8\'c1\'a2\'c1\'ac\'bd\'d3\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f1\fs24 \cf0 {{\NeXTGraphic 屏幕快照 2018-02-15 下午5.19.35.png \width13580 \height2640
+}�}\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs36 \cf2 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f3\i\fs24 \cf30 #coding:utf-8\
+
+\f4\i0\b \cf31 import 
+\f2\b0 \cf0 datetime\
+
+\f4\b \cf31 import 
+\f2\b0 \cf0 pymongo\
+\
+client = pymongo.MongoClient(
+\f4\b \cf32 'mongodb://localhost:27017/'
+\f2\b0 \cf0 )\
+\
+db = client.papers 
+\f3\i \cf30 #db=client['pa-pers']\
+\
+
+\f2\i0 \cf0 collection = db.books\
+\
+book = \{
+\f4\b \cf32 "author"
+\f2\b0 \cf0 : 
+\f4\b \cf32 "Mike"
+\f2\b0 \cf0 ,\
+ 
+\f4\b \cf32 "text"
+\f2\b0 \cf0 : 
+\f4\b \cf32 "My first book!"
+\f2\b0 \cf0 ,\
+ 
+\f4\b \cf32 "tags"
+\f2\b0 \cf0 : [
+\f4\b \cf32 "
+\f0 \'c5\'c0\'b3\'e6
+\f4 "
+\f2\b0 \cf0 , 
+\f4\b \cf32 "python"
+\f2\b0 \cf0 , 
+\f4\b \cf32 "
+\f0 \'cd\'f8\'c2\'e7
+\f4 "
+\f2\b0 \cf0 ],\
+
+\f4\b \cf32 "date"
+\f2\b0 \cf0 : datetime.datetime.utcnow()\
+ \}\
+book_id= collection .insert(book)\
+\
+books = [\{
+\f4\b \cf32 "author"
+\f2\b0 \cf0 : 
+\f4\b \cf32 "Mike"
+\f2\b0 \cf0 ,\
+ 
+\f4\b \cf32 "text"
+\f2\b0 \cf0 : 
+\f4\b \cf32 "My first book!"
+\f2\b0 \cf0 ,\
+ 
+\f4\b \cf32 "tags"
+\f2\b0 \cf0 : [
+\f4\b \cf32 "
+\f0 \'c5\'c0\'b3\'e6
+\f4 "
+\f2\b0 \cf0 , 
+\f4\b \cf32 "python"
+\f2\b0 \cf0 , 
+\f4\b \cf32 "
+\f0 \'cd\'f8\'c2\'e7
+\f4 "
+\f2\b0 \cf0 ],\
+
+\f4\b \cf32 "date"
+\f2\b0 \cf0 : datetime.datetime.utcnow()\
+ \},\{
+\f4\b \cf32 "author"
+\f2\b0 \cf0 : 
+\f4\b \cf32 "qiye"
+\f2\b0 \cf0 ,\
+ 
+\f4\b \cf32 "text"
+\f2\b0 \cf0 : 
+\f4\b \cf32 "My sec book!"
+\f2\b0 \cf0 ,\
+ 
+\f4\b \cf32 "tags"
+\f2\b0 \cf0 : [
+\f4\b \cf32 "hack"
+\f2\b0 \cf0 , 
+\f4\b \cf32 "python"
+\f2\b0 \cf0 , 
+\f4\b \cf32 "
+\f0 \'c9\'f8\'cd\'b8
+\f4 "
+\f2\b0 \cf0 ],\
+
+\f4\b \cf32 "date"
+\f2\b0 \cf0 : datetime.datetime.utcnow()\
+ \}]\
+books_id = collection.insert(books)\
+\
+\
+collection.find_one(\{
+\f4\b \cf32 "author"
+\f2\b0 \cf0 : 
+\f4\b \cf32 "qiye"
+\f2\b0 \cf0 \})\
+
+\f3\i \cf30 #collection.find_one(\{"_id":ObjectId('5a854fea7cee6e4e40dee5e7')\})\
+\
+
+\f4\i0\b \cf31 for 
+\f2\b0 \cf0 book 
+\f4\b \cf31 in 
+\f2\b0 \cf0 collection.find():\
+    \cf31 print\cf0 (book)\
+
+\f4\b \cf31 for 
+\f2\b0 \cf0 book 
+\f4\b \cf31 in 
+\f2\b0 \cf0 collection.find(\{
+\f4\b \cf32 "author"
+\f2\b0 \cf0 : 
+\f4\b \cf32 "qiye"
+\f2\b0 \cf0 \}):\
+    \cf31 print\cf0 (book)\
+\
+collection.find(\{
+\f4\b \cf32 "author"
+\f2\b0 \cf0 : 
+\f4\b \cf32 "qiye"
+\f2\b0 \cf0 \}).count()\
+\
+collection.update(\{
+\f4\b \cf32 "author"
+\f2\b0 \cf0 : 
+\f4\b \cf32 "qiye"
+\f2\b0 \cf0 \},\{
+\f4\b \cf32 "$set"
+\f2\b0 \cf0 :\{
+\f4\b \cf32 "text"
+\f2\b0 \cf0 :
+\f4\b \cf32 "python book"
+\f2\b0 \cf0 \}\})\
+\
+collection.remove(\{
+\f4\b \cf32 "author"
+\f2\b0 \cf0 : 
+\f4\b \cf32 "qiye"
+\f2\b0 \cf0 \})\
+\
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs36 \cf2 \
+\
+\
+}

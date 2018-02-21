@@ -1,0 +1,874 @@
+{\rtf1\ansi\ansicpg936\cocoartf1504\cocoasubrtf830
+{\fonttbl\f0\fnil\fcharset134 PingFangSC-Regular;\f1\fnil\fcharset0 Menlo-Regular;\f2\fswiss\fcharset0 Helvetica;
+\f3\fnil\fcharset0 Menlo-Bold;\f4\fnil\fcharset0 Menlo-Italic;}
+{\colortbl;\red255\green255\blue255;\red255\green0\blue255;\red0\green128\blue0;\red255\green255\blue255;
+\red0\green0\blue255;\red0\green0\blue0;\red163\green21\blue21;\red0\green0\blue0;\red255\green255\blue255;
+\red0\green0\blue109;\red14\green110\blue109;\red109\green109\blue109;\red0\green0\blue254;}
+{\*\expandedcolortbl;;\csgenericrgb\c100000\c0\c100000;\csgenericrgb\c0\c50200\c0;\csgenericrgb\c100000\c100000\c100000;
+\csgenericrgb\c0\c0\c100000;\csgenericrgb\c0\c0\c0;\csgenericrgb\c63900\c8200\c8200;\csgray\c0;\csgray\c100000;
+\csgenericrgb\c0\c0\c42745;\csgenericrgb\c5490\c43137\c42745;\csgenericrgb\c42745\c42745\c42745;\csgenericrgb\c0\c0\c99608;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww17500\viewh12120\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs36 \cf2 \
+\
+\
+5.1 HTML\'d5\'fd\'ce\'c4\'b3\'e9\'c8\'a1\
+5.1.1\'b4\'e6\'b4\'a2\'ce\'aaJSON\
+\pard\tx692\pardeftab692\pardirnatural\partightenfactor0
+
+\f1\fs22 \cf3 \cb4 #coding:utf-8
+\f2\fs24 \cf0 \
+
+\f1\fs22 \cf5 import
+\fs28 \cf6  json
+\f2\fs24 \cf0 \
+
+\f1\fs22 \cf5 from
+\fs28 \cf6  bs4 
+\fs22 \cf5 import
+\fs28 \cf6  BeautifulSoup
+\f2\fs24 \cf0 \
+
+\f1\fs22 \cf5 import
+\fs28 \cf6  requests
+\f2\fs24 \cf0 \
+
+\f1\fs28 \cf6 user_agent = 
+\fs22 'Mozilla/4.0 (compatible; MSIE 5.5; Windows NT)'
+\f2\fs24 \cf0 \
+
+\f1\fs28 \cf6 headers=\{
+\fs22 'User-Agent'
+\fs28 :user_agent\}
+\f2\fs24 \cf0 \
+
+\f1\fs28 \cf6 r = requests.get(
+\fs22 'http://seputu.com/'
+\fs28 ,headers=headers)
+\f2\fs24 \cf0 \
+
+\f1\fs28 \cf6 soup = BeautifulSoup(r.text,
+\fs22 'html.parser'
+\fs28 ,from_encoding=
+\fs22 'utf-8'
+\fs28 )
+\fs22 \cf3 #html.parser
+\f2\fs24 \cf0 \
+
+\f1\fs28 \cf6 content=[]
+\f2\fs24 \cf0 \
+
+\f1\fs22 \cf5 for
+\fs28 \cf6  mulu 
+\fs22 \cf5 in
+\fs28 \cf6  soup.find_all(class_=
+\fs22 \cf7 "mulu"
+\fs28 \cf6 ):
+\f2\fs24 \cf0 \
+
+\f1\fs28 \cf6     h2 = mulu.find(
+\fs22 'h2'
+\fs28 )
+\f2\fs24 \cf0 \
+
+\f1\fs28 \cf6     
+\fs22 \cf5 if
+\fs28 \cf6  h2!=
+\fs22 \cf5 None
+\fs28 \cf6 :
+\f2\fs24 \cf0 \
+
+\f1\fs28 \cf6         h2_title = h2.string
+\fs22 \cf3 #
+\f0 \'bb\'f1\'c8\'a1\'b1\'ea\'cc\'e2
+\f2\fs24 \cf0 \
+
+\f1\fs28 \cf6         list=[]
+\f2\fs24 \cf0 \
+
+\f1\fs28 \cf6         
+\fs22 \cf5 for
+\fs28 \cf6  a 
+\fs22 \cf5 in
+\fs28 \cf6  mulu.find(class_=
+\fs22 'box'
+\fs28 ).find_all(
+\fs22 'a'
+\fs28 ):
+\fs22 \cf3 #
+\f0 \'bb\'f1\'c8\'a1\'cb\'f9\'d3\'d0\'b5\'c4
+\f1 a
+\f0 \'b1\'ea\'c7\'a9\'d6\'d0
+\f1 url
+\f0 \'ba\'cd\'d5\'c2\'bd\'da\'c4\'da\'c8\'dd
+\f2\fs24 \cf0 \
+
+\f1\fs28 \cf6             href = a.get(
+\fs22 'href'
+\fs28 )
+\f2\fs24 \cf0 \
+
+\f1\fs28 \cf6             box_title = a.get(
+\fs22 'title'
+\fs28 )
+\f2\fs24 \cf0 \
+
+\f1\fs28 \cf6             list.append(\{
+\fs22 'href'
+\fs28 :href,
+\fs22 'box_title'
+\fs28 :box_title\})
+\f2\fs24 \cf0 \
+
+\f1\fs28 \cf6         content.append(\{
+\fs22 'title'
+\fs28 :h2_title,
+\fs22 'content'
+\fs28 :list\})
+\f2\fs24 \cf0 \
+
+\f1\fs22 \cf5 with
+\fs28 \cf6  open(
+\fs22 'qiye.json'
+\fs28 ,
+\fs22 'w'
+\fs28 ) 
+\fs22 \cf5 as
+\fs28 \cf6  fp:
+\f2\fs24 \cf0 \
+
+\f1\fs28 \cf6     json.dump(content,fp=fp,indent=
+\fs22 4
+\fs28 ,ensure_ascii=False)
+\f2\fs24 \cf0 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs36 \cf2 \cb1 \
+5.1.2 \'b4\'e6\'b4\'a2\'ce\'aaCSV\
+\pard\tx692\pardeftab692\pardirnatural\partightenfactor0
+
+\f1\fs22 \cf5 \cb4 import
+\fs28 \cf6  csv
+\f2\fs24 \cf0 \
+
+\f1\fs28 \cf6 headers = [
+\fs22 'ID'
+\fs28 ,
+\fs22 'UserName'
+\fs28 ,
+\fs22 'Password'
+\fs28 ,
+\fs22 'Age'
+\fs28 ,
+\fs22 'Country'
+\fs28 ]
+\f2\fs24 \cf0 \
+
+\f1\fs28 \cf6 rows = [(
+\fs22 1001
+\fs28 ,
+\fs22 \cf7 "qiye"
+\fs28 \cf6 ,
+\fs22 \cf7 "qiye_pass"
+\fs28 \cf6 ,
+\fs22 24
+\fs28 ,
+\fs22 \cf7 "China"
+\fs28 \cf6 ),
+\f2\fs24 \cf0 \
+
+\f1\fs28 \cf6         (
+\fs22 1002
+\fs28 ,
+\fs22 \cf7 "Mary"
+\fs28 \cf6 ,
+\fs22 \cf7 "Mary_pass"
+\fs28 \cf6 ,
+\fs22 20
+\fs28 ,
+\fs22 \cf7 "USA"
+\fs28 \cf6 ),
+\f2\fs24 \cf0 \
+
+\f1\fs28 \cf6         (
+\fs22 1003
+\fs28 ,
+\fs22 \cf7 "Jack"
+\fs28 \cf6 ,
+\fs22 \cf7 "Jack_pass"
+\fs28 \cf6 ,
+\fs22 20
+\fs28 ,
+\fs22 \cf7 "USA"
+\fs28 \cf6 ),
+\f2\fs24 \cf0 \
+
+\f1\fs28 \cf6         ]
+\f2\fs24 \cf0 \
+\
+
+\f1\fs22 \cf5 with
+\fs28 \cf6  open(
+\fs22 'qiye.csv'
+\fs28 ,
+\fs22 'w'
+\fs28 ) 
+\fs22 \cf5 as
+\fs28 \cf6  f:
+\f2\fs24 \cf0 \
+
+\f1\fs28 \cf6     f_csv = csv.writer(f)
+\f2\fs24 \cf0 \
+
+\f1\fs28 \cf6     f_csv.writerow(headers)
+\f2\fs24 \cf0 \
+
+\f1\fs28 \cf6     f_csv.writerows(rows)
+\f2\fs24 \cf0 \
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs36 \cf2 \cb1 \
+\pard\tx692\pardeftab692\pardirnatural\partightenfactor0
+
+\f1\fs22 \cf7 \cb4 import csv
+\f2\fs24 \cf0 \
+
+\f1\fs22 \cf7 headers = ['ID','UserName','Password','Age','Country']
+\f2\fs24 \cf0 \
+
+\f1\fs22 \cf7 rows = [\{'ID':1001,'UserName':"qiye",'Password':"qiye_pass",'Age':24,'Country':"China"\},
+\f2\fs24 \cf0 \
+
+\f1\fs22 \cf7 \{'ID':1002,'UserName':"Mary",'Password':"Mary_pass",'Age':20,'Country':"USA"\},
+\f2\fs24 \cf0 \
+
+\f1\fs22 \cf7 \{'ID':1003,'UserName':"Jack",'Password':"Jack_pass",'Age':20,'Country':"USA"\},
+\f2\fs24 \cf0 \
+
+\f1\fs22 \cf7 ]
+\f2\fs24 \cf0 \
+
+\f1\fs22 \cf7 with open('qiye.csv','w') as f:
+\f2\fs24 \cf0 \
+
+\f1\fs22 \cf7     f_csv = csv.DictWriter(f,headers)
+\f2\fs24 \cf0 \
+
+\f1\fs22 \cf7     f_csv.writeheader()
+\f2\fs24 \cf0 \
+
+\f1\fs22 \cf7     f_csv.writerows(rows)
+\f0\fs36 \cf2 \cb1 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf2 \
+\pard\tx692\pardeftab692\pardirnatural\partightenfactor0
+
+\f1\fs22 \cf5 \cb4 import
+\fs28 \cf6  csv
+\f2\fs24 \cf0 \
+
+\f1\fs22 \cf5 with
+\fs28 \cf6  open(
+\fs22 'qiye.csv'
+\fs28 ) 
+\fs22 \cf5 as
+\fs28 \cf6  f:
+\f2\fs24 \cf0 \
+
+\f1\fs28 \cf6     f_csv = csv.reader(f)
+\f2\fs24 \cf0 \
+
+\f1\fs28 \cf6     headers = next(f_csv)
+\f2\fs24 \cf0 \
+
+\f1\fs28 \cf6     
+\fs22 \cf5 print
+\fs28 \cf6 (headers)
+\f2\fs24 \cf0 \
+
+\f1\fs28 \cf6     
+\fs22 \cf5 for
+\fs28 \cf6  row 
+\fs22 \cf5 in
+\fs28 \cf6  f_csv:
+\f2\fs24 \cf0 \
+
+\f1\fs28 \cf6         
+\fs22 \cf5 print
+\fs28 \cf6 (row)
+\f2\fs24 \cf0 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f1\fs22 \cf8 \cb9 \CocoaLigature0 ['ID', 'UserName', 'Password', 'Age', 'Country']\
+['1001', 'qiye', 'qiye_pass', '24', 'China']\
+['1002', 'Mary', 'Mary_pass', '20', 'USA']\
+['1003', 'Jack', 'Jack_pass', '20', 'USA']
+\f0\fs36 \cf2 \cb1 \CocoaLigature1 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf2 \
+\pard\tx692\pardeftab692\pardirnatural\partightenfactor0
+
+\f1\fs22 \cf5 \cb4 from
+\fs28 \cf6  collections 
+\fs22 \cf5 import
+\fs28 \cf6  namedtuple
+\f2\fs24 \cf0 \
+
+\f1\fs22 \cf5 import
+\fs28 \cf6  csv
+\f2\fs24 \cf0 \
+
+\f1\fs22 \cf5 with
+\fs28 \cf6  open(
+\fs22 'qiye.csv'
+\fs28 ) 
+\fs22 \cf5 as
+\fs28 \cf6  f:
+\f2\fs24 \cf0 \
+
+\f1\fs28 \cf6     f_csv = csv.reader(f)
+\f2\fs24 \cf0 \
+
+\f1\fs28 \cf6     headings = next(f_csv)
+\f2\fs24 \cf0 \
+
+\f1\fs28 \cf6     Row = namedtuple(
+\fs22 'Row'
+\fs28 , headings)
+\f2\fs24 \cf0 \
+
+\f1\fs28 \cf6     
+\fs22 \cf5 for
+\fs28 \cf6  r 
+\fs22 \cf5 in
+\fs28 \cf6  f_csv:
+\f2\fs24 \cf0 \
+
+\f1\fs28 \cf6         row = Row(*r)
+\f2\fs24 \cf0 \
+
+\f1\fs28 \cf6         
+\fs22 \cf5 print
+\fs28 \cf6 (row.UserName,row.Password)
+\f2\fs24 \cf0 \
+
+\f1\fs28 \cf6         
+\fs22 \cf5 print
+\fs28 \cf6 (row)
+\f2\fs24 \cf0 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f1\fs22 \cf8 \cb9 \CocoaLigature0 qiye qiye_pass\
+Row(ID='1001', UserName='qiye', Password='qiye_pass', Age='24', Country='China')\
+Mary Mary_pass\
+Row(ID='1002', UserName='Mary', Password='Mary_pass', Age='20', Country='USA')\
+Jack Jack_pass\
+Row(ID='1003', UserName='Jack', Password='Jack_pass', Age='20', Country='USA')
+\f0\fs36 \cf2 \cb1 \CocoaLigature1 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f2\fs24 \cf0 {{\NeXTGraphic 屏幕快照 2018-02-14 上午11.32.27.png \width13160 \height1100
+}�}
+\f0\fs36 \cf2 \
+\pard\tx692\pardeftab692\pardirnatural\partightenfactor0
+
+\fs22 \cf5 \cb4 \'b6\'c1\'c8\'a1\'b5\'bd\'d7\'d6\'b5\'e4\'d0\'f2\'c1\'d0\'d6\'d0
+\f1 \
+import
+\fs28 \cf6  csv
+\f2\fs24 \cf0 \
+
+\f1\fs22 \cf5 with
+\fs28 \cf6  open(
+\fs22 'qiye.csv'
+\fs28 ) 
+\fs22 \cf5 as
+\fs28 \cf6  f:
+\f2\fs24 \cf0 \
+
+\f1\fs28 \cf6     f_csv = csv.DictReader(f)
+\f2\fs24 \cf0 \
+
+\f1\fs28 \cf6     
+\fs22 \cf5 for
+\fs28 \cf6  row 
+\fs22 \cf5 in
+\fs28 \cf6  f_csv:
+\f2\fs24 \cf0 \
+
+\f1\fs28 \cf6         
+\fs22 \cf5 print
+\fs28 \cf6 (row.get(
+\fs22 'UserName'
+\fs28 ),row.get(
+\fs22 'Password'
+\fs28 ))
+\f2\fs24 \cf0 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f1\fs22 \cf8 \cb9 \CocoaLigature0 qiye qiye_pass\
+Mary Mary_pass\
+Jack Jack_pass
+\f0\fs36 \cf2 \cb1 \CocoaLigature1 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf2 \
+\pard\tx692\pardeftab692\pardirnatural\partightenfactor0
+
+\f1\fs22 \cf5 \cb4 from
+\fs28 \cf6  lxml 
+\fs22 \cf5 import
+\fs28 \cf6  etree
+\f2\fs24 \cf0 \
+
+\f1\fs22 \cf5 import
+\fs28 \cf6  requests
+\f2\fs24 \cf0 \
+
+\f1\fs22 \cf5 import
+\fs28 \cf6  re
+\f2\fs24 \cf0 \
+
+\f1\fs22 \cf5 import
+\fs28 \cf6  csv
+\f2\fs24 \cf0 \
+
+\f1\fs28 \cf6 user_agent = 
+\fs22 'Mozilla/4.0 (compatible; MSIE 5.5; Windows NT)'
+\f2\fs24 \cf0 \
+
+\f1\fs28 \cf6 headers=\{
+\fs22 'User-Agent'
+\fs28 :user_agent\}
+\f2\fs24 \cf0 \
+
+\f1\fs28 \cf6 r = requests.get(
+\fs22 'http://seputu.com/'
+\fs28 ,headers=headers)
+\f2\fs24 \cf0 \
+
+\f1\fs22 \cf3 #
+\f0 \'ca\'b9\'d3\'c3
+\f1 lxml
+\f0 \'bd\'e2\'ce\'f6\'cd\'f8\'d2\'b3
+\f2\fs24 \cf0 \
+\
+
+\f1\fs28 \cf6 html = etree.HTML(r.text)
+\f2\fs24 \cf0 \
+
+\f1\fs28 \cf6 div_mulus = html.xpath(
+\fs22 './/*[@class="mulu"]'
+\fs28 )
+\fs22 \cf3 #
+\f0 \'cf\'c8\'d5\'d2\'b5\'bd\'cb\'f9\'d3\'d0\'b5\'c4
+\f1 div class=mulu
+\f0 \'b1\'ea\'c7\'a9
+\f2\fs24 \cf0 \
+
+\f1\fs28 \cf6 pattern = re.compile(r
+\fs22 '\\s*\\[(.*)\\]\\s+(.*)'
+\fs28 )
+\f2\fs24 \cf0 \
+
+\f1\fs28 \cf6 rows=[]
+\f2\fs24 \cf0 \
+
+\f1\fs22 \cf5 for
+\fs28 \cf6  div_mulu 
+\fs22 \cf5 in
+\fs28 \cf6  div_mulus:
+\f2\fs24 \cf0 \
+
+\f1\fs28 \cf6     
+\fs22 \cf3 #
+\f0 \'d5\'d2\'b5\'bd\'cb\'f9\'d3\'d0\'b5\'c4
+\f1 div_h2
+\f0 \'b1\'ea\'c7\'a9
+\f2\fs24 \cf0 \
+
+\f1\fs28 \cf6     div_h2 = div_mulu.xpath(
+\fs22 './div[@class="mulu-title"]/center/h2/text()'
+\fs28 )
+\f2\fs24 \cf0 \
+
+\f1\fs28 \cf6     
+\fs22 \cf5 if
+\fs28 \cf6  len(div_h2)> 
+\fs22 0
+\fs28 :
+\f2\fs24 \cf0 \
+
+\f1\fs28 \cf6         h2_title = div_h2[
+\fs22 0
+\fs28 ]
+\f2\fs24 \cf0 \
+
+\f1\fs28 \cf6         a_s = div_mulu.xpath(
+\fs22 './div[@class="box"]/ul/li/a'
+\fs28 )
+\f2\fs24 \cf0 \
+
+\f1\fs28 \cf6         
+\fs22 \cf5 for
+\fs28 \cf6  a 
+\fs22 \cf5 in
+\fs28 \cf6  a_s:
+\f2\fs24 \cf0 \
+
+\f1\fs28 \cf6             
+\fs22 \cf3 #
+\f0 \'d5\'d2\'b5\'bd
+\f1 href
+\f0 \'ca\'f4\'d0\'d4
+\f2\fs24 \cf0 \
+
+\f1\fs28 \cf6             href=a.xpath(
+\fs22 './@href'
+\fs28 )[
+\fs22 0
+\fs28 ]
+\f2\fs24 \cf0 \
+
+\f1\fs28 \cf6             
+\fs22 \cf3 #
+\f0 \'d5\'d2\'b5\'bd
+\f1 title
+\f0 \'ca\'f4\'d0\'d4
+\f2\fs24 \cf0 \
+
+\f1\fs28 \cf6             box_title = a.xpath(
+\fs22 './@title'
+\fs28 )[
+\fs22 0
+\fs28 ]
+\f2\fs24 \cf0 \
+
+\f1\fs28 \cf6             pattern = re.compile(r
+\fs22 '\\s*\\[(.*)\\]\\s+(.*)'
+\fs28 )
+\f2\fs24 \cf0 \
+
+\f1\fs28 \cf6             match = pattern.search(box_title)
+\f2\fs24 \cf0 \
+
+\f1\fs28 \cf6             
+\fs22 \cf5 if
+\fs28 \cf6  match!=
+\fs22 \cf5 None
+\fs28 \cf6 :
+\f2\fs24 \cf0 \
+
+\f1\fs28 \cf6                 date =match.group(
+\fs22 1
+\fs28 )
+\f2\fs24 \cf0 \
+
+\f1\fs28 \cf6                 real_title= match.group(
+\fs22 2
+\fs28 )
+\f2\fs24 \cf0 \
+
+\f1\fs28 \cf6                 
+\fs22 \cf3 # print real_title
+\f2\fs24 \cf0 \
+
+\f1\fs28 \cf6                 content=(h2_title,real_title,href,date)
+\f2\fs24 \cf0 \
+
+\f1\fs28 \cf6                 
+\fs22 \cf5 print
+\fs28 \cf6 (content)
+\f2\fs24 \cf0 \
+
+\f1\fs28 \cf6                 rows.append(content)
+\f2\fs24 \cf0 \
+
+\f1\fs28 \cf6 headers = [
+\fs22 'title'
+\fs28 ,
+\fs22 'real_title'
+\fs28 ,
+\fs22 'href'
+\fs28 ,
+\fs22 'date'
+\fs28 ]
+\f2\fs24 \cf0 \
+
+\f1\fs22 \cf5 with
+\fs28 \cf6  open(
+\fs22 'qiye.csv'
+\fs28 ,
+\fs22 'w'
+\fs28 ) 
+\fs22 \cf5 as
+\fs28 \cf6  f:
+\f2\fs24 \cf0 \
+
+\f1\fs28 \cf6     f_csv = csv.writer(f,)
+\f2\fs24 \cf0 \
+
+\f1\fs28 \cf6     f_csv.writerow(headers)
+\f2\fs24 \cf0 \
+
+\f1\fs28 \cf6     f_csv.writerows(rows)
+\f2\fs24 \cf0 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs36 \cf2 \cb1 \
+5.2\'b6\'e0\'c3\'bd\'cc\'e5\'ce\'c4\'bc\'fe\'b3\'e9\'c8\'a1\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f2\fs24 \cf0 {{\NeXTGraphic 屏幕快照 2018-02-14 上午11.56.59.png \width13280 \height5400
+}�}\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs36 \cf2 \
+\pard\tx692\pardeftab692\pardirnatural\partightenfactor0
+
+\f1\fs22 \cf3 \cb4 #coding:utf-8
+\f2\fs24 \cf0 \
+\
+
+\f1\fs22 \cf5 import
+\fs28 \cf6  urllib.request, urllib.parse, urllib.error
+\f2\fs24 \cf0 \
+
+\f1\fs22 \cf5 from
+\fs28 \cf6  lxml 
+\fs22 \cf5 import
+\fs28 \cf6  etree
+\f2\fs24 \cf0 \
+
+\f1\fs22 \cf5 import
+\fs28 \cf6  requests
+\f2\fs24 \cf0 \
+
+\f1\fs22 \cf5 def
+\fs28 \cf6  Schedule(blocknum,blocksize,totalsize):
+\f2\fs24 \cf0 \
+
+\f1\fs28 \cf6     
+\fs22 \cf7 '''''
+\f2\fs24 \cf0 \
+
+\f1\fs22 \cf7         blocknum:
+\f0 \'d2\'d1\'be\'ad\'cf\'c2\'d4\'d8\'b5\'c4\'ca\'fd\'be\'dd\'bf\'e9
+\f2\fs24 \cf0 \
+
+\f1\fs22 \cf7         blocksize:
+\f0 \'ca\'fd\'be\'dd\'bf\'e9\'b5\'c4\'b4\'f3\'d0\'a1
+\f2\fs24 \cf0 \
+
+\f1\fs22 \cf7         totalsize:
+\f0 \'d4\'b6\'b3\'cc\'ce\'c4\'bc\'fe\'b5\'c4\'b4\'f3\'d0\'a1
+\f2\fs24 \cf0 \
+
+\f1\fs22 \cf7         '''
+\f2\fs24 \cf0 \
+
+\f1\fs28 \cf6     per = 
+\fs22 100.0
+\fs28  * blocknum * blocksize / totalsize
+\f2\fs24 \cf0 \
+
+\f1\fs28 \cf6     
+\fs22 \cf5 if
+\fs28 \cf6  per > 
+\fs22 100
+\fs28  :
+\f2\fs24 \cf0 \
+
+\f1\fs28 \cf6         per = 
+\fs22 100
+\f2\fs24 \cf0 \
+
+\f1\fs28 \cf6     
+\fs22 \cf5 print
+\fs28 \cf6 (
+\fs22 '
+\f0 \'b5\'b1\'c7\'b0\'cf\'c2\'d4\'d8\'bd\'f8\'b6\'c8\'a3\'ba
+\f1 %d'
+\fs28 %per)
+\f2\fs24 \cf0 \
+
+\f1\fs28 \cf6 user_agent = 
+\fs22 'Mozilla/4.0 (compatible; MSIE 5.5; Windows NT)'
+\f2\fs24 \cf0 \
+
+\f1\fs28 \cf6 headers=\{
+\fs22 'User-Agent'
+\fs28 :user_agent\}
+\f2\fs24 \cf0 \
+
+\f1\fs28 \cf6 r = requests.get(
+\fs22 'http://www.ivsky.com/tupian/ziranfengguang/'
+\fs28 ,headers=headers)
+\f2\fs24 \cf0 \
+
+\f1\fs22 \cf3 #
+\f0 \'ca\'b9\'d3\'c3
+\f1 lxml
+\f0 \'bd\'e2\'ce\'f6\'cd\'f8\'d2\'b3
+\f2\fs24 \cf0 \
+
+\f1\fs28 \cf6 html = etree.HTML(r.text)
+\f2\fs24 \cf0 \
+
+\f1\fs28 \cf6 img_urls = html.xpath(
+\fs22 './/img/@src'
+\fs28 )
+\fs22 \cf3 #
+\f0 \'cf\'c8\'d5\'d2\'b5\'bd\'cb\'f9\'d3\'d0\'b5\'c4
+\f1 img
+\f2\fs24 \cf0 \
+
+\f1\fs28 \cf6 i=
+\fs22 0
+\f2\fs24 \cf0 \
+
+\f1\fs22 \cf5 for
+\fs28 \cf6  img_url 
+\fs22 \cf5 in
+\fs28 \cf6  img_urls:
+\f2\fs24 \cf0 \
+
+\f1\fs28 \cf6     urllib.request.urlretrieve(img_url,
+\fs22 'img'
+\fs28 +str(i)+
+\fs22 '.jpg'
+\fs28 ,Schedule)
+\f2\fs24 \cf0 \
+
+\f1\fs28 \cf6     i+=
+\fs22 1
+\f2\fs24 \cf0 \
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs36 \cf2 \cb1 5.3 Email\'cc\'e1\'d0\'d1\
+\
+\pard\tx692\pardeftab692\pardirnatural\partightenfactor0
+
+\f1\fs22 \cf3 \cb4 #coding:utf-8\
+
+\f2\fs24 \cf0 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f3\b \cf10 \cb1 from 
+\f1\b0 \cf0 email.header 
+\f3\b \cf10 import 
+\f1\b0 \cf0 Header\
+
+\f3\b \cf10 from 
+\f1\b0 \cf0 email.mime.text 
+\f3\b \cf10 import 
+\f1\b0 \cf0 MIMEText\
+
+\f3\b \cf10 from 
+\f1\b0 \cf0 email.utils 
+\f3\b \cf10 import 
+\f1\b0 \cf0 parseaddr, formataddr\
+\
+
+\f3\b \cf10 import 
+\f1\b0 \cf0 smtplib\
+\
+
+\f3\b \cf10 def 
+\f1\b0 \cf0 _format_addr(s):\
+    name, addr = parseaddr(s)\
+    
+\f3\b \cf10 return 
+\f1\b0 \cf0 formataddr((Header(name, 
+\f3\b \cf11 'utf-8'
+\f1\b0 \cf0 ).encode(), addr))\
+
+\f4\i \cf12 #
+\f0\i0 \'b7\'a2\'bc\'fe\'c8\'cb\'b5\'d8\'d6\'b7
+\f4\i \
+
+\f1\i0 \cf0 from_addr = 
+\f3\b \cf11 'feihong729@163.com'\
+
+\f4\i\b0 \cf12 #
+\f0\i0 \'d3\'ca\'cf\'e4\'c3\'dc\'c2\'eb
+\f4\i \
+
+\f1\i0 \cf0 password = 
+\f3\b \cf11 "****"\
+
+\f4\i\b0 \cf12 #
+\f0\i0 \'ca\'d5\'bc\'fe\'c8\'cb\'b5\'d8\'d6\'b7
+\f4\i \
+
+\f1\i0 \cf0 to_addr = 
+\f3\b \cf11 '584859940@qq.com'\
+
+\f4\i\b0 \cf12 #163
+\f0\i0 \'cd\'f8\'d2\'d7\'d3\'ca\'cf\'e4\'b7\'fe\'ce\'f1\'c6\'f7\'b5\'d8\'d6\'b7
+\f4\i \
+
+\f1\i0 \cf0 smtp_server = 
+\f3\b \cf11 'smtp.163.com'\
+
+\f4\i\b0 \cf12 #
+\f0\i0 \'c9\'e8\'d6\'c3\'d3\'ca\'bc\'fe\'d0\'c5\'cf\'a2
+\f4\i \
+
+\f1\i0 \cf0 msg = MIMEText(
+\f3\b \cf11 'Python
+\f0 \'d4\'cb\'d0\'d0\'c7\'e9\'bf\'f6
+\f3 '
+\f1\b0 \cf0 , 
+\f3\b \cf11 'plain'
+\f1\b0 \cf0 , 
+\f3\b \cf11 'utf-8'
+\f1\b0 \cf0 )\
+msg[
+\f3\b \cf11 'From'
+\f1\b0 \cf0 ] = _format_addr(
+\f3\b \cf11 '
+\f0 \'d2\'bb\'ba\'c5
+\f3  <%s>' 
+\f1\b0 \cf0 % from_addr)\
+msg[
+\f3\b \cf11 'To'
+\f1\b0 \cf0 ] = _format_addr(
+\f3\b \cf11 '
+\f0 \'b9\'dc\'c0\'ed\'d4\'b1
+\f3  <%s>' 
+\f1\b0 \cf0 % to_addr)\
+msg[
+\f3\b \cf11 'Subject'
+\f1\b0 \cf0 ] = Header(
+\f3\b \cf11 '
+\f0 \'d2\'bb\'ba\'c5\'c5\'c0\'b3\'e6\'d4\'cb\'d0\'d0\'d7\'b4\'cc\'ac
+\f3 '
+\f1\b0 \cf0 , 
+\f3\b \cf11 'utf-8'
+\f1\b0 \cf0 ).encode()\
+
+\f4\i \cf12 #
+\f0\i0 \'b7\'a2\'cb\'cd\'d3\'ca\'bc\'fe
+\f4\i \
+
+\f1\i0 \cf0 server = smtplib.SMTP(smtp_server, \cf13 25\cf0 )\
+server.login(from_addr, password)\
+server.sendmail(from_addr, [to_addr], msg.as_string())\
+server.quit()\
+\
+\pard\tx692\pardeftab692\pardirnatural\partightenfactor0
+
+\f2 \cf0 \cb4 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs36 \cf2 \cb1 \
+\
+\
+\
+\
+\
+\
+\
+}
