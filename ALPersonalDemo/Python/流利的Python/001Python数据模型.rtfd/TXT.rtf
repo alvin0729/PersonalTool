@@ -1,0 +1,242 @@
+{\rtf1\ansi\ansicpg936\cocoartf1504\cocoasubrtf830
+{\fonttbl\f0\fnil\fcharset134 PingFangSC-Regular;\f1\fnil\fcharset0 Menlo-Regular;\f2\fswiss\fcharset0 Helvetica;
+}
+{\colortbl;\red255\green255\blue255;\red255\green0\blue255;\red170\green13\blue145;\red255\green255\blue255;
+\red0\green0\blue0;\red28\green0\blue207;}
+{\*\expandedcolortbl;;\csgenericrgb\c100000\c0\c100000;\csgenericrgb\c66500\c5200\c56900;\csgenericrgb\c100000\c100000\c100000;
+\csgenericrgb\c0\c0\c0;\csgenericrgb\c11000\c0\c81000;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww16400\viewh17560\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs36 \cf2 \
+1.1 \'d2\'bb\'de\'fbPython\'b7\'e7\'b8\'f1\'b5\'c4\'d6\'bd\'c5\'c6\
+\pard\tx692\pardeftab692\pardirnatural\partightenfactor0
+
+\f1\fs28 \cf3 \cb4 import\cf5  collections
+\f2\fs24 \cf0 \
+\
+
+\f1\fs28 \cf5 Card = collections.namedtuple(\cf6 'Card'\cf5 , [\cf6 'rank'\cf5 , \cf6 'suit'\cf5 ])
+\f2\fs24 \cf0 \
+\
+
+\f1\fs28 \cf3 class\cf5  FrenchDeck:
+\f2\fs24 \cf0 \
+
+\f1\fs28 \cf5     ranks = [str(n) \cf3 for\cf5  n \cf3 in\cf5  range(\cf6 2\cf5 , \cf6 11\cf5 )] + list(\cf6 'JQKA'\cf5 )
+\f2\fs24 \cf0 \
+
+\f1\fs28 \cf5     suits = \cf6 'spades diamonds clubs hearts'\cf5 .split()
+\f2\fs24 \cf0 \
+\
+
+\f1\fs28 \cf5     \cf3 def\cf5  __init__(self):
+\f2\fs24 \cf0 \
+
+\f1\fs28 \cf5         self._cards = [Card(rank, suit) \cf3 for\cf5  suit \cf3 in\cf5  self.suits
+\f2\fs24 \cf0 \
+
+\f1\fs28 \cf5                                         \cf3 for\cf5  rank \cf3 in\cf5  self.ranks]
+\f2\fs24 \cf0 \
+\
+
+\f1\fs28 \cf5     \cf3 def\cf5  __len__(self):
+\f2\fs24 \cf0 \
+
+\f1\fs28 \cf5         \cf3 return\cf5  len(self._cards)
+\f2\fs24 \cf0 \
+\
+
+\f1\fs28 \cf5     \cf3 def\cf5  __getitem__(self, position):
+\f2\fs24 \cf0 \
+
+\f1\fs28 \cf5         \cf3 return\cf5  self._cards[position]\
+
+\f0\fs36 \cf2 \cb1 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf2 =namedtuple \'be\'cd\'bc\'d3\'c8\'eb\'b5\'bd Python \'c0\'ef\'a3\'ac \'d3\'c3\'d2\'d4\'b9\'b9\'bd\'a8\'d6\'bb\'d3\'d0\'c9\'d9\'ca\'fd\'ca\'f4\'d0\'d4\'b5\'ab\'ca\'c7\'c3\'bb\'d3\'d0\'b7\'bd\'b7\'a8\'b5\'c4\'b6\'d4\'cf\'f3\
+>>> from frenchdeck import FrenchDeck, Card\
+>>> beer_card = Card('7', 'diamonds')\
+>>> beer_card\
+Card(rank='7', suit='diamonds')\
+>>> deck = FrenchDeck()\
+>>> len(deck)\
+52\
+\
+=deck[0] \'bb\'f2 deck[-1]\'a1\'a3 \'d5\'e2\'b6\'bc\'ca\'c7\'d3\'c9 __getitem__ \'b7\'bd\'b7\'a8\'cc\'e1\'b9\'a9\'b5\'c4\'a3\'ba\
+>>> deck[0]\
+Card(rank='2', suit='spades')\
+>>> deck[-1]\
+Card(rank='A', suit='hearts')\
+\
+=Python \'d2\'d1\'be\'ad\'c4\'da\'d6\'c3\'c1\'cb\'b4\'d3\'d2\'bb\'b8\'f6\'d0\'f2\'c1\'d0\'d6\'d0\'cb\'e6\'bb\'fa\'d1\'a1\'b3\'f6\'d2\'bb\'b8\'f6\'d4\'aa\'cb\'d8\'b5\'c4\'ba\'af\'ca\'fd random.choice\
+>>> from random import choice\
+>>> choice(deck)\
+Card(rank='3', suit='hearts')\
+>>> choice(deck)\
+Card(rank='7', suit='hearts')\
+\
+>>> deck[:3]\
+[Card(rank='2', suit='spades'), Card(rank='3', suit='spades'), Card(rank='4', suit='spades')]\
+>>> deck[12::13]\
+[Card(rank='A', suit='spades'), Card(rank='A', suit='diamonds'), Card(rank='A', suit='clubs'), Card(rank='A', suit='hearts')]\
+=\'cf\'c8\'b3\'e9\'b3\'f6\'cb\'f7\'d2\'fd\'ca\'c7 12 \'b5\'c4\'c4\'c7\'d5\'c5\'c5\'c6\'a3\'ac \'c8\'bb\'ba\'f3\'c3\'bf\'b8\'f4 13 \'d5\'c5\'c5\'c6\'c4\'c3 1 \'d5\'c5\
+\
+>>> for card in deck: # doctest: +ELLIPSIS\
+...     print(card)\
+... \
+Card(rank='2', suit='spades')\
+Card(rank='3', suit='spades')\
+Card(rank='4', suit='spades')\
+... \
+\
+=\'b7\'b4\'cf\'f2\'b5\'fc\'b4\'fa:\
+>>> for card in reversed(deck): # doctest: +ELLIPSIS\
+... print(card)\
+Card(rank='A', suit='hearts')\
+Card(rank='K', suit='hearts')\
+Card(rank='Q', suit='hearts')\
+... \
+\
+=\'c6\'a9\'c8\'e7\'cb\'b5\'d2\'bb\'b8\'f6\'bc\'af\'ba\'cf\'c0\'e0\'d0\'cd\'c3\'bb\'d3\'d0\'ca\'b5\'cf\'d6 __contains__ \'b7\'bd\'b7\'a8\
+>>> Card('Q', 'hearts') in deck\
+True\
+>>> Card('Z', 'clubs') in deck\
+False\
+\
+=\'d3\'c3\'b5\'e3\'ca\'fd\'c0\'b4\'c5\'d0\'b6\'a8\'c6\'cb\'bf\'cb\'c5\'c6\'b5\'c4\'b4\'f3\'d0\'a1\'a3\'ac 2 \'d7\'ee\'d0\'a1\'a1\'a2 A\'d7\'ee\'b4\'f3\'a3\'bb \'cd\'ac\'ca\'b1\'bb\'b9\'d2\'aa\'bc\'d3\'c9\'cf\'b6\'d4\'bb\'a8\'c9\'ab\'b5\'c4\'c5\'d0\'b6\'a8\'a3\'ac \'ba\'da\'cc\'d2\'d7\'ee\'b4\'f3\'a1\'a2 \'ba\'ec\'cc\'d2\'b4\'ce\'d6\'ae\'a1\'a2 \'b7\'bd\'bf\'e9\'d4\'d9\'b4\'ce\'a1\'a2\'c3\'b7\'bb\'a8\'d7\'ee\'d0\'a1\'a1\'a3 \
+>>> suit_values = dict(spades=3, hearts=2, diamonds=1, clubs=0)\
+>>> def spades_high(card):\
+...     rank_value = FrenchDeck.ranks.index(card.rank)\
+...     return rank_value * len(suit_values) + suit_values[card.suit]\
+\
+Rank test:\
+>>> spades_high(Card('2', 'clubs'))\
+0\
+>>> spades_high(Card('A', 'spades'))\
+51\
+\
+>>> for card in sorted(deck, key=spades_high):  # doctest: +ELLIPSIS\
+...      print(card)\
+Card(rank='2', suit='clubs')\
+Card(rank='2', suit='diamonds')\
+Card(rank='2', suit='hearts')\
+...\
+Card(rank='A', suit='diamonds')\
+Card(rank='A', suit='hearts')\
+Card(rank='A', suit='spades')\
+\
+>>> for n, card in enumerate(deck, 1):  # doctest: +ELLIPSIS\
+...   print(n, card)\
+1 Card(rank='2', suit='spades')\
+2 Card(rank='3', suit='spades')\
+3 Card(rank='4', suit='spades')\
+...\
+\
+1.2 \'c8\'e7\'ba\'ce\'ca\'b9\'d3\'c3\'cc\'d8\'ca\'e2\'b7\'bd\'b7\'a8\
+=\'cc\'d8\'ca\'e2\'b7\'bd\'b7\'a8\'b5\'c4\'b5\'f7\'d3\'c3\'ca\'c7\'d2\'fe\'ca\'bd\'b5\'c4\'a3\'ac \'b1\'c8\'c8\'e7 for i in x: \'d5\'e2\'b8\'f6\'d3\'ef\'be\'e4\'a3\'ac\'b1\'b3\'ba\'f3\'c6\'e4\'ca\'b5\'d3\'c3\'b5\'c4\'ca\'c7 iter(x)\'a3\'ac \'b6\'f8\'d5\'e2\'b8\'f6\'ba\'af\'ca\'fd\'b5\'c4\'b1\'b3\'ba\'f3\'d4\'f2\'ca\'c7 x.__iter__() \'b7\'bd\'b7\'a8\'a1\'a3 \'b5\'b1\'c8\'bb\'c7\'b0\'cc\'e1\'ca\'c7\'d5\'e2\'b8\'f6\'b7\'bd\'b7\'a8\'d4\'da x \'d6\'d0\'b1\'bb\'ca\'b5\'cf\'d6\'c1\'cb\'a1\'a3\
+\
+1.2.1 \'c4\'a3\'c4\'e2\'ca\'fd\'d6\'b5\'c0\'e0\'d0\'cd\
+=Python \'c4\'da\'d6\'c3\'b5\'c4 complex \'c0\'e0\'bf\'c9\'d2\'d4\'d3\'c3\'c0\'b4\'b1\'ed\'ca\'be\'b6\'fe\'ce\'ac\'cf\'f2\'c1\'bf\
+\
+\pard\tx692\pardeftab692\pardirnatural\partightenfactor0
+
+\f1\fs28 \cf3 \cb4 from\cf5  math \cf3 import\cf5  hypot
+\f2\fs24 \cf0 \
+\
+
+\f1\fs28 \cf3 class\cf5  Vector:
+\f2\fs24 \cf0 \
+\
+
+\f1\fs28 \cf5     \cf3 def\cf5  __init__(self, x=\cf6 0\cf5 , y=\cf6 0\cf5 ):
+\f2\fs24 \cf0 \
+
+\f1\fs28 \cf5         self.x = x
+\f2\fs24 \cf0 \
+
+\f1\fs28 \cf5         self.y = y
+\f2\fs24 \cf0 \
+\
+
+\f1\fs28 \cf5     \cf3 def\cf5  __repr__(self):
+\f2\fs24 \cf0 \
+
+\f1\fs28 \cf5         \cf3 return\cf5  \cf6 'Vector(%r, %r)'\cf5  % (self.x, self.y)
+\f2\fs24 \cf0 \
+\
+
+\f1\fs28 \cf5     \cf3 def\cf5  __abs__(self):
+\f2\fs24 \cf0 \
+
+\f1\fs28 \cf5         \cf3 return\cf5  hypot(self.x, self.y)
+\f2\fs24 \cf0 \
+\
+
+\f1\fs28 \cf5     \cf3 def\cf5  __bool__(self):
+\f2\fs24 \cf0 \
+
+\f1\fs28 \cf5         \cf3 return\cf5  bool(abs(self))
+\f2\fs24 \cf0 \
+\
+
+\f1\fs28 \cf5     \cf3 def\cf5  __add__(self, other):
+\f2\fs24 \cf0 \
+
+\f1\fs28 \cf5         x = self.x + other.x
+\f2\fs24 \cf0 \
+
+\f1\fs28 \cf5         y = self.y + other.y
+\f2\fs24 \cf0 \
+
+\f1\fs28 \cf5         \cf3 return\cf5  Vector(x, y)
+\f2\fs24 \cf0 \
+\
+
+\f1\fs28 \cf5     \cf3 def\cf5  __mul__(self, scalar):
+\f2\fs24 \cf0 \
+
+\f1\fs28 \cf5         \cf3 return\cf5  Vector(self.x * scalar, self.y * scalar)
+\f2\fs24 \cf0 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs36 \cf2 \cb1 \
+1.2.2 \'d7\'d6\'b7\'fb\'b4\'ae\'b1\'ed\'ca\'be\'d0\'ce\'ca\'bd\
+=repr \'be\'cd\'ca\'c7\'cd\'a8\'b9\'fd __repr__\'d5\'e2\'b8\'f6\'cc\'d8\'ca\'e2\'b7\'bd\'b7\'a8\'c0\'b4\'b5\'c3\'b5\'bd\'d2\'bb\'b8\'f6\'b6\'d4\'cf\'f3\'b5\'c4\'d7\'d6\'b7\'fb\'b4\'ae\'b1\'ed\'ca\'be\'d0\'ce\'ca\'bd\'b5\'c4\'a1\'a3\
+\
+=__repr__ \'ba\'cd __str__ \'b5\'c4\'c7\'f8\'b1\'f0\'d4\'da\'d3\'da\'a3\'ac \'ba\'f3\'d5\'df\'ca\'c7\'d4\'da str() \'ba\'af\'ca\'fd\'b1\'bb\'ca\'b9\'d3\'c3\'a3\'ac \'bb\'f2\
+\'ca\'c7\'d4\'da\'d3\'c3 print \'ba\'af\'ca\'fd\'b4\'f2\'d3\'a1\'d2\'bb\'b8\'f6\'b6\'d4\'cf\'f3\'b5\'c4\'ca\'b1\'ba\'f2\'b2\'c5\'b1\'bb\'b5\'f7\'d3\'c3\'b5\'c4\'a3\'ac \'b2\'a2\'c7\'d2\'cb\'fc\'b7\'b5\'bb\'d8\'b5\'c4\'d7\'d6\'b7\'fb\'b4\'ae\'b6\'d4\'d6\'d5\'b6\'cb\'d3\'c3\'bb\'a7\'b8\'fc\'d3\'d1\'ba\'c3\'a1\'a3\
+\
+1.2.3 \'cb\'e3\'ca\'f5\'d4\'cb\'cb\'e3\'b7\'fb\
+=\'cd\'a8\'b9\'fd __add__ \'ba\'cd __mul__\'a3\'ac \'ca\'be\'c0\'fd 1-2 \'ce\'aa\'cf\'f2\'c1\'bf\'c0\'e0\'b4\'f8\'c0\'b4\'c1\'cb + \'ba\'cd * \'d5\'e2\'c1\'bd\'b8\'f6\'cb\'e3\'ca\'f5\'d4\'cb\'cb\'e3\'b7\'fb\'a1\'a3\
+=\'b3\'cb\'b7\'a8\'b5\'c4\'bd\'bb\'bb\'bb\'c2\'c9,\'c0\'fb\'d3\'c3 __rmul__ \
+\
+1.2.4 \'d7\'d4\'b6\'a8\'d2\'e5\'b5\'c4\'b2\'bc\'b6\'fb\'d6\'b5\
+=\'c4\'ac\'c8\'cf\'c7\'e9\'bf\'f6\'cf\'c2\'a3\'ac \'ce\'d2\'c3\'c7\'d7\'d4\'bc\'ba\'b6\'a8\'d2\'e5\'b5\'c4\'c0\'e0\'b5\'c4\'ca\'b5\'c0\'fd\'d7\'dc\'b1\'bb\'c8\'cf\'ce\'aa\'ca\'c7\'d5\'e6\'b5\'c4\'a3\'ac \'b3\'fd\'b7\'c7\'d5\'e2\'b8\'f6\'c0\'e0\'b6\'d4__bool__ \'bb\'f2\'d5\'df __len__ \'ba\'af\'ca\'fd\'d3\'d0\'d7\'d4\'bc\'ba\'b5\'c4\'ca\'b5\'cf\'d6\'a1\'a3\
+\
+\'c8\'e7\'b9\'fb\'cf\'eb\'c8\'c3 Vector.__bool__ \'b8\'fc\'b8\'df\'d0\'a7\'a3\'ac \'bf\'c9\'d2\'d4\'b2\'c9\'d3\'c3\'d5\'e2\'d6\'d6\'ca\'b5\'cf\'d6\'a3\'ba\
+def __bool__(self):\
+	return bool(self.x or self.y)\
+\
+1.3 \'cc\'d8\'ca\'e2\'b7\'bd\'b7\'a8\'d2\'bb\'c0\'c0\
+{\field{\*\fldinst{HYPERLINK "https://docs.python.org/3/reference/datamodel.html"}}{\fldrslt https://docs.python.org/3/reference/datamodel.html}}\
+\
+=\'b5\'b1\'bd\'bb\'bb\'bb\'c1\'bd\'b8\'f6\'b2\'d9\'d7\'f7\'ca\'fd\'b5\'c4\'ce\'bb\'d6\'c3\'ca\'b1\'a3\'ac \'be\'cd\'bb\'e1\'b5\'f7\'d3\'c3\'b7\'b4\'cf\'f2\'d4\'cb\'cb\'e3\'b7\'fb\'a3\'a8 b * a\'b6\'f8\'b2\'bb\'ca\'c7 a * b\'a3\'a9 \'a1\'a3 \'d4\'f6\'c1\'bf\'b8\'b3\'d6\'b5\'d4\'cb\'cb\'e3\'b7\'fb\'d4\'f2\'ca\'c7\'d2\'bb\'d6\'d6\'b0\'d1\'d6\'d0\'d7\'ba\'d4\'cb\'cb\'e3\'b7\'fb\'b1\'e4\'b3\'c9\'b8\'b3\'d6\'b5\'d4\'cb\'cb\'e3\'b5\'c4\'bd\'dd\'be\'b6\'a3\'a8 a = a * b \'be\'cd\'b1\'e4\'b3\'c9\'c1\'cb a *= b\'a3\'a9 \'a1\'a3\
+\
+1.4 \'ce\'aa\'ca\'b2\'c3\'b4len\'b2\'bb\'ca\'c7\'c6\'d5\'cd\'a8\'b7\'bd\'b7\'a8\
+{\field{\*\fldinst{HYPERLINK "https://docs.python.org/3/reference/datamodel.html"}}{\fldrslt https://docs.python.org/3/reference/datamodel.html}}\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+}

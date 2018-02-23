@@ -1,0 +1,863 @@
+{\rtf1\ansi\ansicpg936\cocoartf1504\cocoasubrtf830
+{\fonttbl\f0\fnil\fcharset134 PingFangSC-Regular;\f1\fswiss\fcharset0 Helvetica;\f2\fnil\fcharset0 Menlo-Regular;
+}
+{\colortbl;\red255\green255\blue255;\red255\green0\blue255;\red170\green13\blue145;\red255\green255\blue255;
+\red0\green0\blue0;\red28\green0\blue207;\red196\green26\blue22;\red0\green0\blue0;\red255\green255\blue255;
+\red0\green116\blue0;\red127\green127\blue127;}
+{\*\expandedcolortbl;;\csgenericrgb\c100000\c0\c100000;\csgenericrgb\c66500\c5200\c56900;\csgenericrgb\c100000\c100000\c100000;
+\csgenericrgb\c0\c0\c0;\csgenericrgb\c11000\c0\c81000;\csgenericrgb\c77000\c10200\c8600;\csgray\c0;\csgray\c100000;
+\csgenericrgb\c0\c45600\c0;\csgenericrgb\c49804\c49804\c49804;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww16780\viewh17560\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs36 \cf2 \
+2.1 \'c4\'da\'d6\'c3\'d0\'f2\'c1\'d0\'c0\'e0\'d0\'cd\'b8\'c5\'c0\'c0\
+\'c8\'dd\'c6\'f7\'d0\'f2\'c1\'d0: list\'a1\'a2 tuple \'ba\'cd collections.deque \'d5\'e2\'d0\'a9\'d0\'f2\'c1\'d0\'c4\'dc\'b4\'e6\'b7\'c5\'b2\'bb\'cd\'ac\'c0\'e0\'d0\'cd\'b5\'c4\'ca\'fd\'be\'dd\'a1\'a3\
+\'b1\'e2\'c6\'bd\'d0\'f2\'c1\'d0: str\'a1\'a2 bytes\'a1\'a2 bytearray\'a1\'a2 memoryview \'ba\'cd array.array\'a3\'ac \'d5\'e2\'c0\'e0\'d0\'f2\'c1\'d0\'d6\'bb\'c4\'dc\'c8\'dd\'c4\'c9\'d2\'bb\'d6\'d6\'c0\'e0\'d0\'cd\'a1\'a3\
+\
+\'c8\'dd\'c6\'f7\'d0\'f2\'c1\'d0\'b4\'e6\'b7\'c5\'b5\'c4\'ca\'c7\'cb\'fc\'c3\'c7\'cb\'f9\'b0\'fc\'ba\'ac\'b5\'c4\'c8\'ce\'d2\'e2\'c0\'e0\'d0\'cd\'b5\'c4\'b6\'d4\'cf\'f3\'b5\'c4\'d2\'fd\'d3\'c3\'a3\'ac \'b6\'f8\'b1\'e2\'c6\'bd\'d0\'f2\'c1\'d0\
+\'c0\'ef\'b4\'e6\'b7\'c5\'b5\'c4\'ca\'c7\'d6\'b5\'b6\'f8\'b2\'bb\'ca\'c7\'d2\'fd\'d3\'c3\'a1\'a3 \'bb\'bb\'be\'e4\'bb\'b0\'cb\'b5\'a3\'ac \'b1\'e2\'c6\'bd\'d0\'f2\'c1\'d0\'c6\'e4\'ca\'b5\'ca\'c7\'d2\'bb\'b6\'ce\'c1\'ac\'d0\'f8\'b5\'c4\'c4\'da\'b4\'e6\'bf\'d5\'bc\'e4\'a1\'a3\
+\
+\'bf\'c9\'b1\'e4\'d0\'f2\'c1\'d0: list\'a1\'a2 bytearray\'a1\'a2 array.array\'a1\'a2 collections.deque \'ba\'cdmemoryview\'a1\'a3\
+\'b2\'bb\'bf\'c9\'b1\'e4\'d0\'f2\'c1\'d0: tuple\'a1\'a2 str \'ba\'cd bytes\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f1\fs24 \cf0 {{\NeXTGraphic Pasted Graphic.tiff \width11800 \height4160
+}¬}\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs36 \cf2 \
+\'c1\'d0\'b1\'ed\'cd\'c6\'b5\'bc\'a3\'a8 list comprehension\'a3\'a9\
+\
+2.2 \'c1\'d0\'b1\'ed\'cd\'c6\'b5\'bc\'ba\'cd\'c9\'fa\'b3\'c9\'c6\'f7\'b1\'ed\'b4\'ef\'ca\'bd\
+\'c1\'d0\'b1\'ed\'cd\'c6\'b5\'bc\'ca\'c7\'b9\'b9\'bd\'a8\'c1\'d0\'b1\'ed\'a3\'a8 list\'a3\'a9 \'b5\'c4\'bf\'ec\'bd\'dd\'b7\'bd\'ca\'bd\'a3\'ac \'b6\'f8\'c9\'fa\'b3\'c9\'c6\'f7\'b1\'ed\'b4\'ef\'ca\'bd\'d4\'f2\'bf\'c9\'d2\'d4\'d3\'c3\'c0\'b4\'b4\'b4\'bd\'a8\'c6\'e4\'cb\'fb\'c8\'ce\'ba\'ce\'c0\'e0\'d0\'cd\'b5\'c4\'d0\'f2\'c1\'d0\'a1\'a3 \
+\
+\'ba\'dc\'b6\'e0 Python \'b3\'cc\'d0\'f2\'d4\'b1\'b6\'bc\'b0\'d1\'c1\'d0\'b1\'ed\'cd\'c6\'b5\'bc\'a3\'a8 list comprehension\'a3\'a9 \'bc\'f2\'b3\'c6\'ce\'aa listcomps\'a3\'ac \'c9\'fa\'b3\'c9\'ca\'bd\'b1\'ed\'b4\'ef\'c6\'f7\'a3\'a8 generator expression\'a3\'a9 \'d4\'f2\'b3\'c6\'ce\'aa genexps\'a1\'a3\
+\
+2.2.1 \'c1\'d0\'b1\'ed\'cd\'c6\'b5\'bc\'ba\'cd\'bf\'c9\'b6\'c1\'d0\'d4\
+\'ca\'be\'c0\'fd 2-1 \'b0\'d1\'d2\'bb\'b8\'f6\'d7\'d6\'b7\'fb\'b4\'ae\'b1\'e4\'b3\'c9 Unicode \'c2\'eb\'ce\'bb\'b5\'c4\'c1\'d0\'b1\'ed\
+>>> symbols = '$\'a1\'e9\'a1\'ea\'a3\'a4\'a2\'e3\'a1\'e8'\
+>>> codes = []\
+>>> for symbol in symbols:\
+... codes.append(ord(symbol))\
+...\
+>>> codes\
+[36, 162, 163, 165, 8364, 164]\
+\
+\'ca\'be\'c0\'fd 2-2 \'b0\'d1\'d7\'d6\'b7\'fb\'b4\'ae\'b1\'e4\'b3\'c9 Unicode \'c2\'eb\'ce\'bb\'b5\'c4\'c1\'ed\'cd\'e2\'d2\'bb\'d6\'d6\'d0\'b4\'b7\'a8\
+>>> symbols = '$\'a1\'e9\'a1\'ea\'a3\'a4\'a2\'e3\'a1\'e8'\
+>>> codes = [ord(symbol) for symbol in symbols]\
+>>> codes\
+[36, 162, 163, 165, 8364, 164]\
+\
+=\'cd\'a8\'b3\'a3\'b5\'c4\'d4\'ad\'d4\'f2\'ca\'c7\'a3\'ac \'d6\'bb\'d3\'c3\'c1\'d0\'b1\'ed\'cd\'c6\'b5\'bc\'c0\'b4\'b4\'b4\'bd\'a8\'d0\'c2\'b5\'c4\'c1\'d0\'b1\'ed\'a3\'ac \'b2\'a2\'c7\'d2\'be\'a1\'c1\'bf\'b1\'a3\'b3\'d6\'bc\'f2\'b6\'cc\'a1\'a3 \
+\
+\'c1\'d0\'b1\'ed\'cd\'c6\'b5\'bc\'b2\'bb\'bb\'e1\'d4\'d9\'d3\'d0\'b1\'e4\'c1\'bf\'d0\'b9\'c2\'a9\'b5\'c4\'ce\'ca\'cc\'e2\
+\'c1\'d0\'b1\'ed\'cd\'c6\'b5\'bc\'bf\'c9\'d2\'d4\'b0\'ef\'d6\'fa\'ce\'d2\'c3\'c7\'b0\'d1\'d2\'bb\'b8\'f6\'d0\'f2\'c1\'d0\'bb\'f2\'ca\'c7\'c6\'e4\'cb\'fb\'bf\'c9\'b5\'fc\'b4\'fa\'c0\'e0\'d0\'cd\'d6\'d0\'b5\'c4\'d4\'aa\'cb\'d8\'b9\'fd\'c2\'cb\'bb\'f2\'ca\'c7\'bc\'d3\'b9\'a4\'a3\'ac \'c8\'bb\'ba\'f3\'d4\'d9\'d0\'c2\'bd\'a8\'d2\'bb\'b8\'f6\'c1\'d0\'b1\'ed\'a1\'a3\
+\
+=\'c1\'d0\'b1\'ed\'cd\'c6\'b5\'bc\'a1\'a2 \'c9\'fa\'b3\'c9\'c6\'f7\'b1\'ed\'b4\'ef\'ca\'bd\'a3\'ac \'d2\'d4\'bc\'b0\'cd\'ac\'cb\'fc\'c3\'c7\'ba\'dc\'cf\'e0\'cb\'c6\'b5\'c4\'bc\'af\'ba\'cf\'a3\'a8 set\'a3\'a9 \'cd\'c6\'b5\'bc\
+\'ba\'cd\'d7\'d6\'b5\'e4\'a3\'a8 dict\'a3\'a9 \'cd\'c6\'b5\'bc\'a3\'ac \'d4\'da Python 3 \'d6\'d0\'b6\'bc\'d3\'d0\'c1\'cb\'d7\'d4\'bc\'ba\'b5\'c4\'be\'d6\'b2\'bf\'d7\'f7\'d3\'c3\'d3\'f2\'a3\'ac \'be\'cd\
+\'cf\'f1\'ba\'af\'ca\'fd\'cb\'c6\'b5\'c4\'a1\'a3\
+\
+2.2.2 \'c1\'d0\'b1\'ed\'cd\'c6\'b5\'bc\'cd\'acfilter\'ba\'cdmap\'b5\'c4\'b1\'c8\'bd\'cf\
+\'ca\'be\'c0\'fd 2-3 \'d3\'c3\'c1\'d0\'b1\'ed\'cd\'c6\'b5\'bc\'ba\'cd map/filter \'d7\'e9\'ba\'cf\'c0\'b4\'b4\'b4\'bd\'a8\'cd\'ac\'d1\'f9\'b5\'c4\'b1\'ed\'b5\'a5\
+>>> symbols = '$\'a1\'e9\'a1\'ea\'a3\'a4\'a2\'e3\'a1\'e8'\
+>>> beyond_ascii = [ord(s) for s in symbols if ord(s) > 127]\
+>>> beyond_ascii\
+[162, 163, 165, 8364, 164]\
+>>> beyond_ascii = list(filter(lambda c: c > 127, map(ord, symbols)))\
+>>> beyond_ascii\
+[162, 163, 165, 8364, 164]\
+\
+\pard\tx692\pardeftab692\pardirnatural\partightenfactor0
+
+\f2\fs28 \cf3 \cb4 import\cf5  timeit
+\f1\fs24 \cf0 \
+\
+
+\f2\fs28 \cf5 TIMES = \cf6 10000
+\f1\fs24 \cf0 \
+\
+
+\f2\fs28 \cf5 SETUP = \cf7 """
+\f1\fs24 \cf0 \
+
+\f2\fs28 \cf7 symbols = '$\'a2\'a3\'a5\'80\'a4'
+\f1\fs24 \cf0 \
+
+\f2\fs28 \cf7 def non_ascii(c):
+\f1\fs24 \cf0 \
+
+\f2\fs28 \cf7     return c > 127
+\f1\fs24 \cf0 \
+
+\f2\fs28 \cf7 """
+\f1\fs24 \cf0 \
+\
+
+\f2\fs28 \cf3 def\cf5  clock(label, cmd):
+\f1\fs24 \cf0 \
+
+\f2\fs28 \cf5     res = timeit.repeat(cmd, setup=SETUP, number=TIMES)
+\f1\fs24 \cf0 \
+
+\f2\fs28 \cf5     \cf3 print\cf5 (label, *(\cf6 '\{:.3f\}'\cf5 .format(x) \cf3 for\cf5  x \cf3 in\cf5  res))
+\f1\fs24 \cf0 \
+\
+
+\f2\fs28 \cf5 clock(\cf6 'listcomp        :'\cf5 , \cf6 '[ord(s) for s in symbols if ord(s) > 127]'\cf5 )
+\f1\fs24 \cf0 \
+
+\f2\fs28 \cf5 clock(\cf6 'listcomp + func :'\cf5 , \cf6 '[ord(s) for s in symbols if non_ascii(ord(s))]'\cf5 )
+\f1\fs24 \cf0 \
+
+\f2\fs28 \cf5 clock(\cf6 'filter + lambda :'\cf5 , \cf6 'list(filter(lambda c: c > 127, map(ord, symbols)))'\cf5 )
+\f1\fs24 \cf0 \
+
+\f2\fs28 \cf5 clock(\cf6 'filter + func   :'\cf5 , \cf6 'list(filter(non_ascii, map(ord, symbols)))'\cf5 )
+\f0\fs36 \cf2 \cb1 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf2 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f2\fs22 \cf8 \cb9 \CocoaLigature0 listcomp        : 0.014 0.014 0.014\
+listcomp + func : 0.020 0.020 0.020\
+filter + lambda : 0.018 0.018 0.018\
+filter + func   : 0.017 0.017 0.018
+\f0\fs36 \cf2 \cb1 \CocoaLigature1 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf2 \
+2.2.3 \'b5\'d1\'bf\'a8\'b6\'f9\'bb\'fd\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f1\fs24 \cf0 {{\NeXTGraphic Pasted Graphic 1.tiff \width13080 \height8000
+}¬}\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs36 \cf2 \
+\'ca\'be\'c0\'fd 2-4 \'ca\'b9\'d3\'c3\'c1\'d0\'b1\'ed\'cd\'c6\'b5\'bc\'bc\'c6\'cb\'e3\'b5\'d1\'bf\'a8\'b6\'f9\'bb\'fd\
+>>> colors = ['black', 'white']\
+>>> sizes = ['S', 'M', 'L']\
+>>> tshirts = [(color, size) for color in colors for size in sizes] \
+>>> tshirts\
+[('black', 'S'), ('black', 'M'), ('black', 'L'), ('white', 'S'), ('white', 'M'), ('white', 'L')]\
+>>> for color in colors: \
+...        for size in sizes:\
+...  		     print((color, size))\
+... \
+('black', 'S')\
+('black', 'M')\
+('black', 'L')\
+('white', 'S')\
+('white', 'M')\
+('white', 'L')\
+>>> tshirts = [(color, size) for size in sizes\
+...                     		         for color in colors]\
+>>> tshirts\
+[('black', 'S'), ('white', 'S'), ('black', 'M'), ('white', 'M'), ('black', 'L'), ('white', 'L')]\
+\
+2.2.4 \'c9\'fa\'b3\'c9\'c6\'f7\'b1\'ed\'b4\'ef\'ca\'bd\
+\'ca\'be\'c0\'fd 2-5 \'d3\'c3\'c9\'fa\'b3\'c9\'c6\'f7\'b1\'ed\'b4\'ef\'ca\'bd\'b3\'f5\'ca\'bc\'bb\'af\'d4\'aa\'d7\'e9\'ba\'cd\'ca\'fd\'d7\'e9\
+>>> symbols = '$\'a1\'e9\'a1\'ea\'a3\'a4\'a2\'e3\'a1\'e8'\
+>>> tuple(ord(symbol) for symbol in symbols) \
+(36, 162, 163, 165, 8364, 164)\
+>>> import array\
+>>> array.array('I', (ord(symbol) for symbol in symbols))\
+array('I', [36, 162, 163, 165, 8364, 164])\
+\
+\'ca\'be\'c0\'fd 2-6 \'ca\'b9\'d3\'c3\'c9\'fa\'b3\'c9\'c6\'f7\'b1\'ed\'b4\'ef\'ca\'bd\'bc\'c6\'cb\'e3\'b5\'d1\'bf\'a8\'b6\'f9\'bb\'fd\
+\'d3\'eb\'ca\'be\'c0\'fd 2-4\'b2\'bb\'cd\'ac\'b5\'c4\'ca\'c7\'a3\'ac \'d3\'c3\'b5\'bd\'c9\'fa\'b3\'c9\'c6\'f7\'b1\'ed\'b4\'ef\'ca\'bd\'d6\'ae\'ba\'f3\'a3\'ac \'c4\'da\'b4\'e6\'c0\'ef\'b2\'bb\'bb\'e1\'c1\'f4\'cf\'c2\'d2\'bb\'b8\'f6\'d3\'d0 6 \'b8\'f6\'d7\'e9\'ba\'cf\'b5\'c4\'c1\'d0\'b1\'ed\'a3\'ac \'d2\'f2\'ce\'aa\'c9\'fa\'b3\'c9\'c6\'f7\'b1\'ed\'b4\'ef\'ca\'bd\'bb\'e1\'d4\'da\'c3\'bf\'b4\'ce for \'d1\'ad\'bb\'b7\'d4\'cb\'d0\'d0\'ca\'b1\'b2\'c5\'c9\'fa\'b3\'c9\'d2\'bb\'b8\'f6\'d7\'e9\'ba\'cf\'a1\'a3\
+>>> colors = ['black', 'white']\
+>>> sizes = ['S', 'M', 'L']\
+>>> for tshirt in ('%s %s' % (c, s) for c in colors for s in sizes):\
+...     print(tshirt)\
+... \
+black S\
+black M\
+black L\
+white S\
+white M\
+white L\
+\
+2.3 \'d4\'aa\'d7\'e9\'b2\'bb\'bd\'f6\'bd\'f6\'ca\'c7\'b2\'bb\'bf\'c9\'b1\'e4\'b5\'c4\'c1\'d0\'b1\'ed\
+\
+2.3.1 \'d4\'aa\'d7\'e9\'ba\'cd\'bc\'c7\'c2\'bc\
+\
+\'ca\'be\'c0\'fd 2-7 \'b0\'d1\'d4\'aa\'d7\'e9\'d3\'c3\'d7\'f7\'bc\'c7\'c2\'bc\
+>>> lax_coordinates = (33.9425, -118.408056)\
+>>> city, year, pop, chg, area = ('Tokyo', 2003, 32450, 0.66, 8014)\
+>>> traveler_ids = [('USA', '31195855'), ('BRA', 'CE342567'),('ESP', 'XDA205856')]\
+>>> for passport in sorted(traveler_ids):\
+...     print('%s/%s' % passport) \
+... \
+BRA/CE342567\
+ESP/XDA205856\
+USA/31195855\
+>>> for country, _ in traveler_ids:\
+...     print(country)\
+... \
+USA\
+BRA\
+ESP\
+\
+2.3.2 \'d4\'aa\'d7\'e9\'b2\'f0\'b0\'fc\
+\'b1\'bb\'bf\'c9\'b5\'fc\'b4\'fa\'b6\'d4\'cf\'f3\'d6\'d0\'b5\'c4\'d4\'aa\'cb\'d8\'ca\'fd\'c1\'bf\'b1\'d8\'d0\'eb\'d2\'aa\'b8\'fa\'bd\'d3\'ca\'dc\'d5\'e2\'d0\'a9\'d4\'aa\'cb\'d8\'b5\'c4\'d4\'aa\'d7\'e9\'b5\'c4\'bf\'d5\'b5\'b5\'ca\'fd\'d2\'bb\'d6\'c2\
+\'b3\'fd\'b7\'c7\'ce\'d2\'c3\'c7\'d3\'c3 * \'c0\'b4\'b1\'ed\'ca\'be\'ba\'f6\'c2\'d4\'b6\'e0\'d3\'e0\'b5\'c4\'d4\'aa\'cb\'d8\
+>>> lax_coordinates = (33.9425, -118.408056)\
+>>> latitude, longitude = lax_coordinates # \'d4\'aa\'d7\'e9\'b2\'f0\'b0\'fc\
+>>> latitude\
+33.9425\
+>>> longitude\
+\
+\'c1\'ed\'cd\'e2\'d2\'bb\'b8\'f6\'ba\'dc\'d3\'c5\'d1\'c5\'b5\'c4\'d0\'b4\'b7\'a8\'b5\'b1\'ca\'f4\'b2\'bb\'ca\'b9\'d3\'c3\'d6\'d0\'bc\'e4\'b1\'e4\'c1\'bf\'bd\'bb\'bb\'bb\'c1\'bd\'b8\'f6\'b1\'e4\'c1\'bf\'b5\'c4\'d6\'b5\'a3\'ba\
+>>> b, a = a, b\
+\
+\'bb\'b9\'bf\'c9\'d2\'d4\'d3\'c3 * \'d4\'cb\'cb\'e3\'b7\'fb\'b0\'d1\'d2\'bb\'b8\'f6\'bf\'c9\'b5\'fc\'b4\'fa\'b6\'d4\'cf\'f3\'b2\'f0\'bf\'aa\'d7\'f7\'ce\'aa\'ba\'af\'ca\'fd\'b5\'c4\'b2\'ce\'ca\'fd\'a3\'ba\
+>>> divmod(20, 8)\
+(2, 4)\
+>>> t = (20, 8)\
+>>> divmod(*t)\
+(2, 4)\
+>>> quotient, remainder = divmod(*t)\
+>>> quotient, remainder\
+(2, 4)\
+\
+os.path.split() \'ba\'af\'ca\'fd\'be\'cd\'bb\'e1\'b7\'b5\'bb\'d8\'d2\'d4\'c2\'b7\'be\'b6\'ba\'cd\'d7\'ee\'ba\'f3\'d2\'bb\'b8\'f6\'ce\'c4\'bc\'fe\'c3\'fb\'d7\'e9\'b3\'c9\'b5\'c4\'d4\'aa\'d7\'e9 (path, last_part):\
+>>> import os\
+>>> _, filename = os.path.split('/home/luciano/.ssh/idrsa.pub')\
+>>> filename\
+'idrsa.pub'\
+\
+>>> a, b, *rest = range(5)\
+>>> a, b, rest\
+(0, 1, [2, 3, 4])\
+>>> a, b, *rest = range(3)\
+>>> a, b, rest\
+(0, 1, [2])\
+>>> a, b, *rest = range(2)\
+>>> a, b, rest\
+(0, 1, [])\
+\
+=\'d4\'da\'c6\'bd\'d0\'d0\'b8\'b3\'d6\'b5\'d6\'d0\'a3\'ac * \'c7\'b0\'d7\'ba\'d6\'bb\'c4\'dc\'d3\'c3\'d4\'da\'d2\'bb\'b8\'f6\'b1\'e4\'c1\'bf\'c3\'fb\'c7\'b0\'c3\'e6\'a3\'ac \'b5\'ab\'ca\'c7\'d5\'e2\'b8\'f6\'b1\'e4\'c1\'bf\'bf\'c9\'d2\'d4\'b3\'f6\'cf\'d6\'d4\'da\'b8\'b3\'d6\'b5\'b1\'ed\'b4\'ef\'ca\'bd\'b5\'c4\'c8\'ce\'d2\'e2\'ce\'bb\'d6\'c3\'a3\'ba\
+>>> a, *body, c, d = range(5)\
+>>> a, body, c, d\
+(0, [1, 2], 3, 4)\
+>>> *head, b, c, d = range(5)\
+>>> head, b, c, d\
+([0, 1], 2, 3, 4)\
+\
+2.3.3 \'c7\'b6\'cc\'d7\'d4\'aa\'d7\'e9\'b2\'f0\'b0\'fc\
+\
+=\'bd\'d3\'ca\'dc\'b1\'ed\'b4\'ef\'ca\'bd\'b5\'c4\'d4\'aa\'d7\'e9\'bf\'c9\'d2\'d4\'ca\'c7\'c7\'b6\'cc\'d7\'ca\'bd\'b5\'c4\'a3\'ac \'c0\'fd\'c8\'e7 (a, b, (c, d))\'a1\'a3 \'d6\'bb\'d2\'aa\'d5\'e2\'b8\'f6\
+\'bd\'d3\'ca\'dc\'d4\'aa\'d7\'e9\'b5\'c4\'c7\'b6\'cc\'d7\'bd\'e1\'b9\'b9\'b7\'fb\'ba\'cf\'b1\'ed\'b4\'ef\'ca\'bd\'b1\'be\'c9\'ed\'b5\'c4\'c7\'b6\'cc\'d7\'bd\'e1\'b9\'b9\'a3\'ac Python \'be\'cd\'bf\'c9\'d2\'d4\'d7\'f7\'b3\'f6\'d5\'fd\'c8\'b7\'b5\'c4\'b6\'d4\'d3\'a6\'a1\'a3 \
+\'ca\'be\'c0\'fd 2-8 \'d3\'c3\'c7\'b6\'cc\'d7\'d4\'aa\'d7\'e9\'c0\'b4\'bb\'f1\'c8\'a1\'be\'ad\'b6\'c8\
+\pard\tx692\pardeftab692\pardirnatural\partightenfactor0
+
+\f2\fs28 \cf5 \cb4 metro_areas = [
+\f1\fs24 \cf0 \
+
+\f2\fs28 \cf5     (\cf6 'Tokyo'\cf5 , \cf6 'JP'\cf5 , \cf6 36.933\cf5 , (\cf6 35.689722\cf5 , \cf6 139.691667\cf5 )),   \cf10 # <1>
+\f1\fs24 \cf0 \
+
+\f2\fs28 \cf5     (\cf6 'Delhi NCR'\cf5 , \cf6 'IN'\cf5 , \cf6 21.935\cf5 , (\cf6 28.613889\cf5 , \cf6 77.208889\cf5 )),
+\f1\fs24 \cf0 \
+
+\f2\fs28 \cf5     (\cf6 'Mexico City'\cf5 , \cf6 'MX'\cf5 , \cf6 20.142\cf5 , (\cf6 19.433333\cf5 , \cf6 -99.133333\cf5 )),
+\f1\fs24 \cf0 \
+
+\f2\fs28 \cf5     (\cf6 'New York-Newark'\cf5 , \cf6 'US'\cf5 , \cf6 20.104\cf5 , (\cf6 40.808611\cf5 , \cf6 -74.020386\cf5 )),
+\f1\fs24 \cf0 \
+
+\f2\fs28 \cf5     (\cf6 'Sao Paulo'\cf5 , \cf6 'BR'\cf5 , \cf6 19.649\cf5 , (\cf6 -23.547778\cf5 , \cf6 -46.635833\cf5 )),
+\f1\fs24 \cf0 \
+
+\f2\fs28 \cf5 ]
+\f1\fs24 \cf0 \
+\
+
+\f2\fs28 \cf3 print\cf5 (\cf6 '\{:15\} | \{:^9\} | \{:^9\}'\cf5 .format(\cf6 ''\cf5 , \cf6 'lat.'\cf5 , \cf6 'long.'\cf5 ))
+\f1\fs24 \cf0 \
+
+\f2\fs28 \cf5 fmt = \cf6 '\{:15\} | \{:9.4f\} | \{:9.4f\}'
+\f1\fs24 \cf0 \
+
+\f2\fs28 \cf3 for\cf5  name, cc, pop, (latitude, longitude) \cf3 in\cf5  metro_areas:  \cf10 # <2>
+\f1\fs24 \cf0 \
+
+\f2\fs28 \cf5     \cf3 if\cf5  longitude <= \cf6 0\cf5 :  \cf10 # <3>
+\f1\fs24 \cf0 \
+
+\f2\fs28 \cf5         \cf3 print\cf5 (fmt.format(name, latitude, longitude))\
+\pard\tx692\pardeftab692\pardirnatural\partightenfactor0
+
+\f0\fs36 \cf2 \cb1 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f2\fs22 \cf8 \cb9 \CocoaLigature0                 |   lat.    |   long.  \
+Mexico City     |   19.4333 |  -99.1333\
+New York-Newark |   40.8086 |  -74.0204\
+Sao Paulo       |  -23.5478 |  -46.6358
+\f0\fs36 \cf2 \cb1 \CocoaLigature1 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf2 \
+2.3.4 \'be\'df\'c3\'fb\'d4\'aa\'d7\'e9\
+ollections.namedtuple \'ca\'c7\'d2\'bb\'b8\'f6\'b9\'a4\'b3\'a7\'ba\'af\'ca\'fd\'a3\'ac \'cb\'fc\'bf\'c9\'d2\'d4\'d3\'c3\'c0\'b4\'b9\'b9\'bd\'a8\'d2\'bb\'b8\'f6\'b4\'f8\'d7\'d6\'b6\'ce\'c3\'fb\'b5\'c4\'d4\'aa\'d7\'e9\'ba\'cd\'d2\'bb\'b8\'f6\'d3\'d0\'c3\'fb\'d7\'d6\'b5\'c4\'c0\'e0\
+\
+\'ca\'be\'c0\'fd 2-9 \'b6\'a8\'d2\'e5\'ba\'cd\'ca\'b9\'d3\'c3\'be\'df\'c3\'fb\'d4\'aa\'d7\'e9\
+>>> from collections import namedtuple\
+>>> City = namedtuple('City', 'name country population coordinates') \uc0\u10122 \
+>>> tokyo = City('Tokyo', 'JP', 36.933, (35.689722, 139.691667)) \uc0\u10123 \
+>>> tokyo\
+City(name='Tokyo', country='JP', population=36.933, coordinates=(35.689722,\
+139.691667))\
+>>> tokyo.population \uc0\u10124 \
+36.933\
+>>> tokyo.coordinates\
+(35.689722, 139.691667)\
+>>> tokyo[1]\
+'JP\
+\
+\'ca\'be\'c0\'fd 2-10 \'be\'df\'c3\'fb\'d4\'aa\'d7\'e9\'b5\'c4\'ca\'f4\'d0\'d4\'ba\'cd\'b7\'bd\'b7\'a8\'a3\'a8 \'bd\'d3\'d0\'f8\'c7\'b0\'d2\'bb\'b8\'f6\'ca\'be\'c0\'fd\'a3\'a9\
+>>> City._fields \uc0\u10122 \
+('name', 'country', 'population', 'coordinates')\
+>>> LatLong = namedtuple('LatLong', 'lat long')\
+>>> delhi_data = ('Delhi NCR', 'IN', 21.935, LatLong(28.613889, 77.208889))\
+>>> delhi = City._make(delhi_data) \uc0\u10123 \
+>>> delhi._asdict() \uc0\u10124 \
+OrderedDict([('name', 'Delhi NCR'), ('country', 'IN'), ('population',\
+21.935), ('coordinates', LatLong(lat=28.613889, long=77.208889))])\
+>>> for key, value in delhi._asdict().items():\
+print(key + ':', value)\
+name: Delhi NCR\
+country: IN\
+population: 21.935\
+coordinates: LatLong(lat=28.613889, long=77.208889)\
+\
+\uc0\u10103  \'d3\'c3 _make() \'cd\'a8\'b9\'fd\'bd\'d3\'ca\'dc\'d2\'bb\'b8\'f6\'bf\'c9\'b5\'fc\'b4\'fa\'b6\'d4\'cf\'f3\'c0\'b4\'c9\'fa\'b3\'c9\'d5\'e2\'b8\'f6\'c0\'e0\'b5\'c4\'d2\'bb\'b8\'f6\'ca\'b5\'c0\'fd\'a3\'ac \'cb\'fc\
+\'b5\'c4\'d7\'f7\'d3\'c3\'b8\'fa City(*delhi_data) \'ca\'c7\'d2\'bb\'d1\'f9\'b5\'c4\'a1\'a3\
+\
+\uc0\u10104  _asdict() \'b0\'d1\'be\'df\'c3\'fb\'d4\'aa\'d7\'e9\'d2\'d4 collections.OrderedDict \'b5\'c4\'d0\'ce\'ca\'bd\'b7\'b5\
+\'bb\'d8\'a3\'ac \'ce\'d2\'c3\'c7\'bf\'c9\'d2\'d4\'c0\'fb\'d3\'c3\'cb\'fc\'c0\'b4\'b0\'d1\'d4\'aa\'d7\'e9\'c0\'ef\'b5\'c4\'d0\'c5\'cf\'a2\'d3\'d1\'ba\'c3\'b5\'d8\'b3\'ca\'cf\'d6\'b3\'f6\'c0\'b4\'a1\'a3\
+\
+2.3.5 \'d7\'f7\'ce\'aa\'b2\'bb\'bf\'c9\'b1\'e4\'c1\'d0\'b1\'ed\'b5\'c4\'d4\'aa\'d7\'e9\
+P84\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f1\fs24 \cf0 {{\NeXTGraphic Pasted Graphic 2.tiff \width12520 \height7580
+}¬}\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs36 \cf2 \
+\
+2.4 \'c7\'d0\'c6\'ac\
+\'d4\'da Python \'c0\'ef\'a3\'ac \'cf\'f1\'c1\'d0\'b1\'ed\'a3\'a8 list\'a3\'a9 \'a1\'a2 \'d4\'aa\'d7\'e9\'a3\'a8 tuple\'a3\'a9 \'ba\'cd\'d7\'d6\'b7\'fb\'b4\'ae\'a3\'a8 str\'a3\'a9 \'d5\'e2\'c0\'e0\
+\'d0\'f2\'c1\'d0\'c0\'e0\'d0\'cd\'b6\'bc\'d6\'a7\'b3\'d6\'c7\'d0\'c6\'ac\'b2\'d9\'d7\'f7\
+\
+2.4.1 \'ce\'aa\'ca\'b2\'c3\'b4\'c7\'d0\'c6\'ac\'ba\'cd\'c7\'f8\'bc\'e4\'bb\'e1\'ba\'f6\'c2\'d4\'d7\'ee\'ba\'f3\'d2\'bb\'b8\'f6\'d4\'aa\'cb\'d8\
+>>> l = [10, 20, 30, 40, 50, 60]\
+>>> l[:2] # \'d4\'da\'cf\'c2\'b1\'ea2\'b5\'c4\'b5\'d8\'b7\'bd\'b7\'d6\'b8\'ee\
+[10, 20]\
+>>> l[2:]\
+[30, 40, 50, 60]\
+>>> l[:3] # \'d4\'da\'cf\'c2\'b1\'ea3\'b5\'c4\'b5\'d8\'b7\'bd\'b7\'d6\'b8\'ee\
+[10, 20, 30]\
+>>> l[3:]\
+[40, 50, 60]\
+\
+2.4.2 \'b6\'d4\'b6\'d4\'cf\'f3\'bd\'f8\'d0\'d0\'c7\'d0\'c6\'ac\
+\'d2\'bb\'b8\'f6\'d6\'da\'cb\'f9\'d6\'dc\'d6\'aa\'b5\'c4\'c3\'d8\'c3\'dc\'ca\'c7\'a3\'ac \'ce\'d2\'c3\'c7\'bb\'b9\'bf\'c9\'d2\'d4\'d3\'c3 s[a:b:c] \'b5\'c4\'d0\'ce\'ca\'bd\'b6\'d4 s \'d4\'da a \'ba\'cd b\
+\'d6\'ae\'bc\'e4\'d2\'d4 c \'ce\'aa\'bc\'e4\'b8\'f4\'c8\'a1\'d6\'b5\'a1\'a3 c \'b5\'c4\'d6\'b5\'bb\'b9\'bf\'c9\'d2\'d4\'ce\'aa\'b8\'ba\'a3\'ac \'b8\'ba\'d6\'b5\'d2\'e2\'ce\'b6\'d7\'c5\'b7\'b4\'cf\'f2\'c8\'a1\'d6\'b5\'a1\'a3 \
+\
+>>> s = 'bicycle'\
+>>> s[::3]\
+'bye'\
+>>> s[::-1]\
+'elcycib'\
+>>> s[::-2]\
+'eccb'\
+\
+\'ca\'be\'c0\'fd 2-11 \'b4\'bf\'ce\'c4\'b1\'be\'ce\'c4\'bc\'fe\'d0\'ce\'ca\'bd\'b5\'c4\'ca\'d5\'be\'dd\'d2\'d4\'d2\'bb\'d0\'d0\'d7\'d6\'b7\'fb\'b4\'ae\'b5\'c4\'d0\'ce\'ca\'bd\'b1\'bb\'bd\'e2\'ce\'f6\
+>>> invoice = """\
+... 0.....6................................40........52...55........\
+... 1909 Pimoroni PiBrella $17.50 3 $52.50\
+... 1489 6mm Tactile Switch x20 $4.95 2 $9.90\
+... 1510 Panavise Jr. - PV-201 $28.00 1 $28.00\
+... 1601 PiTFT Mini Kit 320x240 $34.95 1 $34.95\
+... """\
+>>> SKU = slice(0, 6)\
+>>> DESCRIPTION = slice(6, 40)\
+>>> UNIT_PRICE = slice(40, 52)\
+>>> QUANTITY = slice(52, 55)\
+>>> ITEM_TOTAL = slice(55, None)\
+>>> line_items = invoice.split('\\n')[2:]\
+>>> for item in line_items:\
+\'a1\'ad		  print(item[UNIT_PRICE], item[DESCRIPTION])\
+...\
+$17.50 Pimoroni PiBrella\
+$4.95 6mm Tactile Switch x20\
+$28.00 Panavise Jr. - PV-201\
+$34.95 PiTFT Mini Kit 320x240\
+\
+2.4.3 \'b6\'e0\'ce\'ac\'c7\'d0\'c6\'ac\'ba\'cd\'ca\'a1\'c2\'d4\
+\'d2\'aa\'d5\'fd\'c8\'b7\'b4\'a6\'c0\'ed\'d5\'e2\'d6\'d6 [] \'d4\'cb\'cb\'e3\'b7\'fb\'b5\'c4\'bb\'b0\'a3\'ac\'b6\'d4\'cf\'f3\'b5\'c4\'cc\'d8\'ca\'e2\'b7\'bd\'b7\'a8 __getitem__ \'ba\'cd __setitem__ \'d0\'e8\'d2\'aa\'d2\'d4\'d4\'aa\'d7\'e9\'b5\'c4\'d0\'ce\'ca\'bd\'c0\'b4\'bd\'d3\'ca\'d5a[i, j] \'d6\'d0\'b5\'c4\'cb\'f7\'d2\'fd\'a1\'a3 \'d2\'b2\'be\'cd\'ca\'c7\'cb\'b5\'a3\'ac \'c8\'e7\'b9\'fb\'d2\'aa\'b5\'c3\'b5\'bd a[i, j] \'b5\'c4\'d6\'b5\'a3\'ac Python \'bb\'e1\'b5\'f7\'d3\'c3 a.__getitem__((i, j))\'a1\'a3\
+\
+Python \'c4\'da\'d6\'c3\'b5\'c4\'d0\'f2\'c1\'d0\'c0\'e0\'d0\'cd\'b6\'bc\'ca\'c7\'d2\'bb\'ce\'ac\'b5\'c4\'a3\'ac \'d2\'f2\'b4\'cb\'cb\'fc\'c3\'c7\'d6\'bb\'d6\'a7\'b3\'d6\'b5\'a5\'d2\'bb\'b5\'c4\'cb\'f7\'d2\'fd\'a3\'ac \'b3\'c9\'b6\'d4\'b3\'f6\'cf\'d6\'b5\'c4\'cb\'f7\'d2\'fd\'ca\'c7\'c3\'bb\'d3\'d0\'d3\'c3\'b5\'c4\'a1\'a3\
+\
+2.4.4 \'b8\'f8\'c7\'d0\'c6\'ac\'b8\'b3\'d6\'b5\
+>>> l = list(range(10))\
+>>> l\
+[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]\
+>>> l[2:5] = [20, 30]\
+>>> l\
+[0, 1, 20, 30, 5, 6, 7, 8, 9]\
+>>> del l[5:7]\
+>>> l\
+[0, 1, 20, 30, 5, 8, 9]\
+>>> l[3::2] = [11, 22]\
+>>> l\
+[0, 1, 20, 11, 5, 22, 9]\
+>>> l[2:5] = 100 \uc0\u10122 \
+Traceback (most recent call last):\
+  File "<stdin>", line 1, in <module>\
+TypeError: can only assign an iterable\
+>>> l[2:5] = [100]\
+>>> l\
+[0, 1, 100, 22, 9]\
+\
+\uc0\u10122  \'c8\'e7\'b9\'fb\'b8\'b3\'d6\'b5\'b5\'c4\'b6\'d4\'cf\'f3\'ca\'c7\'d2\'bb\'b8\'f6\'c7\'d0\'c6\'ac\'a3\'ac \'c4\'c7\'c3\'b4\'b8\'b3\'d6\'b5\'d3\'ef\'be\'e4\'b5\'c4\'d3\'d2\'b2\'e0\'b1\'d8\'d0\'eb\'ca\'c7\'b8\'f6\'bf\'c9\'b5\'fc\'b4\'fa\
+\'b6\'d4\'cf\'f3\'a1\'a3 \'bc\'b4\'b1\'e3\'d6\'bb\'d3\'d0\'b5\'a5\'b6\'c0\'d2\'bb\'b8\'f6\'d6\'b5\'a3\'ac \'d2\'b2\'d2\'aa\'b0\'d1\'cb\'fc\'d7\'aa\'bb\'bb\'b3\'c9\'bf\'c9\'b5\'fc\'b4\'fa\'b5\'c4\'d0\'f2\'c1\'d0\'a1\'a3\
+\
+2.5 \'b6\'d4\'d0\'f2\'c1\'d0\'ca\'b9\'d3\'c3+\'ba\'cd*\
+\
++ \'ba\'cd * \'b6\'bc\'d7\'f1\'d1\'ad\'d5\'e2\'b8\'f6\'b9\'e6\'c2\'c9\'a3\'ac \'b2\'bb\'d0\'de\'b8\'c4\'d4\'ad\'d3\'d0\'b5\'c4\'b2\'d9\'d7\'f7\'b6\'d4\'cf\'f3\'a3\'ac \'b6\'f8\'ca\'c7\'b9\'b9\'bd\'a8\'d2\'bb\'b8\'f6\'c8\'ab\'d0\'c2\'b5\'c4\'d0\'f2\'c1\'d0\'a1\'a3\
+>>> l = [1, 2, 3]\
+>>> l * 5\
+[1, 2, 3, 1, 2, 3, 1, 2, 3, 1, 2, 3, 1, 2, 3]\
+>>> 5 * 'abcd'\
+'abcdabcdabcdabcdabcd'\
+\
+\'bd\'a8\'c1\'a2\'d3\'c9\'c1\'d0\'b1\'ed\'d7\'e9\'b3\'c9\'b5\'c4\'c1\'d0\'b1\'ed\
+\'ca\'be\'c0\'fd 2-12 \'d2\'bb\'b8\'f6\'b0\'fc\'ba\'ac 3 \'b8\'f6\'c1\'d0\'b1\'ed\'b5\'c4\'c1\'d0\'b1\'ed\'a3\'ac \'c7\'b6\'cc\'d7\'b5\'c4 3 \'b8\'f6\'c1\'d0\'b1\'ed\'b8\'f7\'d7\'d4\'d3\'d0 3 \'b8\'f6\'d4\'aa\'cb\'d8\'c0\'b4\'b4\'fa\'b1\'ed\'be\'ae\'d7\'d6\'d3\'ce\'cf\'b7\'b5\'c4\'d2\'bb\'d0\'d0\'b7\'bd\'bf\'e9\
+>>> board = [['_'] * 3 for i in range(3)]\
+>>> board\
+[['_', '_', '_'], ['_', '_', '_'], ['_', '_', '_']]\
+>>> board[1][2] = 'X' \
+>>> board\
+[['_', '_', '_'], ['_', '_', 'X'], ['_', '_', '_']]\
+\
+\'ca\'be\'c0\'fd 2-12 \'d6\'d0\'b5\'c4\'b7\'bd\'b7\'a8\'b5\'c8\'cd\'ac\'d3\'da\'d5\'e2\'d1\'f9\'d7\'f6\'a3\'ba\
+>>> board = []\
+>>> for i in range(3):\
+... row=['_'] * 3 # \uc0\u10122 \
+... board.append(row)\
+...\
+>>> board\
+[['_', '_', '_'], ['_', '_', '_'], ['_', '_', '_']]\
+>>> board[2][0] = 'X'\
+>>> board \
+[['_', '_', '_'], ['_', '_', '_'], ['X', '_', '_']]\
+\uc0\u10122  \'c3\'bf\'b4\'ce\'b5\'fc\'b4\'fa\'d6\'d0\'b6\'bc\'d0\'c2\'bd\'a8\'c1\'cb\'d2\'bb\'b8\'f6\'c1\'d0\'b1\'ed\'a3\'ac \'d7\'f7\'ce\'aa\'d0\'c2\'b5\'c4\'d2\'bb\'d0\'d0\'a3\'a8 row\'a3\'a9 \'d7\'b7\'bc\'d3\'b5\'bd\'d3\'ce\'cf\'b7\'b0\'e5\
+\'a3\'a8 board\'a3\'a9 \'a1\'a3\
+\
+\'ca\'be\'c0\'fd 2-13 \'ba\'ac\'d3\'d0 3 \'b8\'f6\'d6\'b8\'cf\'f2\'cd\'ac\'d2\'bb\'b6\'d4\'cf\'f3\'b5\'c4\'d2\'fd\'d3\'c3\'b5\'c4\'c1\'d0\'b1\'ed\'ca\'c7\'ba\'c1\'ce\'de\'d3\'c3\'b4\'a6\'b5\'c4\
+>>> weird_board = [['_'] * 3] * 3 \uc0\u10122 \
+>>> weird_board\
+[['_', '_', '_'], ['_', '_', '_'], ['_', '_', '_']]\
+>>> weird_board[1][2] = 'O' \uc0\u10123 \
+>>> weird_board\
+[['_', '_', 'O'], ['_', '_', 'O'], ['_', '_', 'O']]\
+\'ca\'be\'c0\'fd 2-13 \'b7\'b8\'b5\'c4\'b4\'ed\'ce\'f3\'b1\'be\'d6\'ca\'c9\'cf\'b8\'fa\'cf\'c2\'c3\'e6\'b5\'c4\'b4\'fa\'c2\'eb\'b7\'b8\'b5\'c4\'b4\'ed\'ce\'f3\'d2\'bb\'d1\'f9\'a3\'ba\
+row=['_'] * 3\
+board = []\
+for i in range(3):\
+board.append(row) \uc0\u10122 \
+\uc0\u10122  \'d7\'b7\'bc\'d3\'cd\'ac\'d2\'bb\'b8\'f6\'d0\'d0\'b6\'d4\'cf\'f3\'a3\'a8 row\'a3\'a9 3 \'b4\'ce\'b5\'bd\'d3\'ce\'cf\'b7\'b0\'e5\'a3\'a8 board\'a3\'a9 \'a1\'a3\
+\
+2.6 \'d0\'f2\'c1\'d0\'b5\'c4\'d4\'f6\'c1\'bf\'b8\'b3\'d6\'b5\
++= \'b1\'b3\'ba\'f3\'b5\'c4\'cc\'d8\'ca\'e2\'b7\'bd\'b7\'a8\'ca\'c7 __iadd__ \'a3\'a8 \'d3\'c3\'d3\'da\'a1\'b0\'be\'cd\'b5\'d8\'bc\'d3\'b7\'a8\'a1\'b1\'a3\'a9 \'a1\'a3 \'b5\'ab\'ca\'c7\'c8\'e7\'b9\'fb\'d2\'bb\'b8\'f6\'c0\'e0\
+\'c3\'bb\'d3\'d0\'ca\'b5\'cf\'d6\'d5\'e2\'b8\'f6\'b7\'bd\'b7\'a8\'b5\'c4\'bb\'b0\'a3\'ac Python \'bb\'e1\'cd\'cb\'d2\'bb\'b2\'bd\'b5\'f7\'d3\'c3 __add__ \'a1\'a3\
+\
+*=\'cf\'e0\'b6\'d4\'d3\'a6\'b5\'c4\'ca\'c7 __imul__\
+>>> l = [1, 2, 3]\
+>>> id(l)\
+4331898248\
+>>> l *= 2\
+>>> l\
+[1, 2, 3, 1, 2, 3]\
+>>> id(l)\
+4331898248\
+>>> t = (1, 2, 3)\
+>>> id(t)\
+4331711440\
+>>> t *= 2\
+>>> id(t)\
+4302706536\
+\'d4\'cb\'d3\'c3\'d4\'f6\'c1\'bf\'b3\'cb\'b7\'a8\'ba\'f3\'a3\'ac \'d0\'c2\'b5\'c4\'d4\'aa\'d7\'e9\'b1\'bb\'b4\'b4\'bd\'a8\'a1\'a3\
+\
+\'d2\'bb\'b8\'f6\'b9\'d8\'d3\'da+=\'b5\'c4\'c3\'d5\'cc\'e2\
+\'ca\'be\'c0\'fd 2-14 \'d2\'bb\'b8\'f6\'c3\'d5\'cc\'e2\
+>>> t = (1, 2, [30, 40])\
+>>> t[2] += [50, 60]\
+a. t \'b1\'e4\'b3\'c9 (1, 2, [30, 40, 50, 60])\'a1\'a3\
+b. \'d2\'f2\'ce\'aa tuple \'b2\'bb\'d6\'a7\'b3\'d6\'b6\'d4\'cb\'fc\'b5\'c4\'d4\'aa\'cb\'d8\'b8\'b3\'d6\'b5\'a3\'ac \'cb\'f9\'d2\'d4\'bb\'e1\'c5\'d7\'b3\'f6 TypeError \'d2\'ec\'b3\'a3\'a1\'a3\
+c. \'d2\'d4\'c9\'cf\'c1\'bd\'b8\'f6\'b6\'bc\'b2\'bb\'ca\'c7\'a1\'a3\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf2 \cb11 d.\cb1  a \'ba\'cd b \'b6\'bc\'ca\'c7\'b6\'d4\'b5\'c4\
+\
+\'d0\'b4\'b3\'c9 t[2].extend([50, 60]) \'be\'cd\'c4\'dc\'b1\'dc\'c3\'e2\'d5\'e2\'b8\'f6\'d2\'ec\'b3\'a3\
+\
+\'ca\'be\'c0\'fd 2-15 \'c3\'bb\'c8\'cb\'c1\'cf\'b5\'bd\'b5\'c4\'bd\'e1\'b9\'fb\'a3\'ba t[2] \'b1\'bb\'b8\'c4\'b6\'af\'c1\'cb\'a3\'ac \'b5\'ab\'ca\'c7\'d2\'b2\'d3\'d0\'d2\'ec\'b3\'a3\'c5\'d7\'b3\'f6\
+{\field{\*\fldinst{HYPERLINK "http://www.pythontutor.com"}}{\fldrslt http://www.pythontutor.com}}\'ca\'c7\'d2\'bb\'b8\'f6\'b6\'d4 Python \'d4\'cb\'d0\'d0\'d4\'ad\'c0\'ed\'bd\'f8\'d0\'d0\'bf\'c9\'ca\'d3\'bb\'af\'b7\'d6\'ce\'f6\'b5\'c4\'b9\'a4\'be\'df\
+\
+\'ca\'be\'c0\'fd 2-16 s[a] = b \'b1\'b3\'ba\'f3\'b5\'c4\'d7\'d6\'bd\'da\'c2\'eb\
+.\'b2\'bb\'d2\'aa\'b0\'d1\'bf\'c9\'b1\'e4\'b6\'d4\'cf\'f3\'b7\'c5\'d4\'da\'d4\'aa\'d7\'e9\'c0\'ef\'c3\'e6\'a1\'a3\
+.\'d4\'f6\'c1\'bf\'b8\'b3\'d6\'b5\'b2\'bb\'ca\'c7\'d2\'bb\'b8\'f6\'d4\'ad\'d7\'d3\'b2\'d9\'d7\'f7\'a1\'a3\
+.\'b2\'e9\'bf\'b4 Python \'b5\'c4\'d7\'d6\'bd\'da\'c2\'eb\'b2\'a2\'b2\'bb\'c4\'d1\'a3\'ac \'b6\'f8\'c7\'d2\'cb\'fc\'b6\'d4\'ce\'d2\'c3\'c7\'c1\'cb\'bd\'e2\'b4\'fa\'c2\'eb\'b1\'b3\'ba\'f3\'b5\'c4\'d4\'cb\'d0\'d0\'bb\'fa\'d6\'c6\'ba\'dc\'d3\'d0\'b0\'ef\'d6\'fa\'a1\'a3\
+\
+>>> import dis\
+>>> dis.dis('s[a] += b')\
+  1           0 LOAD_NAME                0 (s)\
+              2 LOAD_NAME                1 (a)\
+              4 DUP_TOP_TWO\
+              6 BINARY_SUBSCR\
+              8 LOAD_NAME                2 (b)\
+             10 INPLACE_ADD\
+             12 ROT_THREE\
+             14 STORE_SUBSCR\
+             16 LOAD_CONST               0 (None)\
+             18 RETURN_VALUE\
+\
+2.7 list.sort\'b7\'bd\'b7\'a8\'ba\'cd\'c4\'da\'d6\'c3\'ba\'af\'ca\'fdsorted\
+list.sort \'b7\'bd\'b7\'a8\'bb\'e1\'be\'cd\'b5\'d8\'c5\'c5\'d0\'f2\'c1\'d0\'b1\'ed\
+\'d3\'eb list.sort \'cf\'e0\'b7\'b4\'b5\'c4\'ca\'c7\'c4\'da\'d6\'c3\'ba\'af\'ca\'fd sorted\'a3\'ac \'cb\'fc\'bb\'e1\'d0\'c2\'bd\'a8\'d2\'bb\'b8\'f6\'c1\'d0\'b1\'ed\'d7\'f7\'ce\'aa\'b7\'b5\'bb\'d8\'d6\'b5\'a1\'a3\
+\
+ Python \'b5\'c4\'c5\'c5\'d0\'f2\'cb\'e3\'b7\'a8\'a1\'aa\'a1\'aaTimsort\'a1\'aa\'a1\'aa\'ca\'c7\'ce\'c8\'b6\'a8\'b5\'c4\
+\'b9\'d8\'bc\'fc\'d7\'d6\'b2\'ce\'ca\'fd:\
+reverse\
+key: key=str.lower \'c0\'b4\'ca\'b5\'cf\'d6\'ba\'f6\'c2\'d4\'b4\'f3\'d0\'a1\'d0\'b4\'b5\'c4\'c5\'c5\'d0\'f2\'a3\'ac \'bb\'f2\'d5\'df\'ca\'c7\'d3\'c3 key=len \'bd\'f8\'d0\'d0\'bb\'f9\'d3\'da\'d7\'d6\'b7\'fb\'b4\'ae\'b3\'a4\'b6\'c8\'b5\'c4\'c5\'c5\'d0\'f2;\
+\'bf\'c9\'d1\'a1\'b2\'ce\'ca\'fd key \'bb\'b9\'bf\'c9\'d2\'d4\'d4\'da\'c4\'da\'d6\'c3\'ba\'af\'ca\'fd min() \'ba\'cd max() \'d6\'d0\'c6\'f0\'d7\'f7\'d3\'c3\'a1\'a3\
+\
+>>> fruits = ['grape', 'raspberry', 'apple', 'banana']\
+>>> sorted(fruits)\
+['apple', 'banana', 'grape', 'raspberry'] \uc0\u10122 \
+>>> fruits\
+['grape', 'raspberry', 'apple', 'banana'] \uc0\u10123 \
+>>> sorted(fruits, reverse=True)\
+['raspberry', 'grape', 'banana', 'apple'] \uc0\u10124 \
+>>> sorted(fruits, key=len)\
+['grape', 'apple', 'banana', 'raspberry'] \uc0\u10125 \
+>>> sorted(fruits, key=len, reverse=True)\
+['raspberry', 'banana', 'grape', 'apple'] \uc0\u10126 \
+>>> fruits\
+['grape', 'raspberry', 'apple', 'banana'] \uc0\u10127 \
+>>> fruits.sort() \uc0\u10128 \
+>>> fruits\
+['apple', 'banana', 'grape', 'raspberry'] \uc0\u10129 \
+\
+2.8 \'d3\'c3bisect\'c0\'b4\'b9\'dc\'c0\'ed\'d2\'d1\'c5\'c5\'d0\'f2\'b5\'c4\'d0\'f2\'c1\'d0\
+2.8.1 \'d3\'c3bisect\'c0\'b4\'cb\'d1\'cb\'f7\
+\
+\'ca\'be\'c0\'fd 2-17 \'d4\'da\'d3\'d0\'d0\'f2\'d0\'f2\'c1\'d0\'d6\'d0\'d3\'c3 bisect \'b2\'e9\'d5\'d2\'c4\'b3\'b8\'f6\'d4\'aa\'cb\'d8\'b5\'c4\'b2\'e5\'c8\'eb\'ce\'bb\'d6\'c3\
+\pard\tx692\pardeftab692\pardirnatural\partightenfactor0
+
+\f2\fs28 \cf10 \cb4 # BEGIN BISECT_DEMO
+\f1\fs24 \cf0 \
+\pard\tx692\pardeftab692\pardirnatural\partightenfactor0
+
+\f2\fs28 \cf3 import\cf5  bisect
+\f1\fs24 \cf0 \
+
+\f2\fs28 \cf3 import\cf5  sys
+\f1\fs24 \cf0 \
+\
+
+\f2\fs28 \cf5 HAYSTACK = [\cf6 1\cf5 , \cf6 4\cf5 , \cf6 5\cf5 , \cf6 6\cf5 , \cf6 8\cf5 , \cf6 12\cf5 , \cf6 15\cf5 , \cf6 20\cf5 , \cf6 21\cf5 , \cf6 23\cf5 , \cf6 23\cf5 , \cf6 26\cf5 , \cf6 29\cf5 , \cf6 30\cf5 ]
+\f1\fs24 \cf0 \
+
+\f2\fs28 \cf5 NEEDLES = [\cf6 0\cf5 , \cf6 1\cf5 , \cf6 2\cf5 , \cf6 5\cf5 , \cf6 8\cf5 , \cf6 10\cf5 , \cf6 22\cf5 , \cf6 23\cf5 , \cf6 29\cf5 , \cf6 30\cf5 , \cf6 31\cf5 ]
+\f1\fs24 \cf0 \
+\
+
+\f2\fs28 \cf5 ROW_FMT = \cf6 '\{0:2d\} @ \{1:2d\}    \{2\}\{0:<2d\}'
+\f1\fs24 \cf0 \
+\
+
+\f2\fs28 \cf3 def\cf5  demo(bisect_fn):
+\f1\fs24 \cf0 \
+
+\f2\fs28 \cf5     \cf3 for\cf5  needle \cf3 in\cf5  reversed(NEEDLES):
+\f1\fs24 \cf0 \
+
+\f2\fs28 \cf5         position = bisect_fn(HAYSTACK, needle)  \cf10 # <1>
+\f1\fs24 \cf0 \
+
+\f2\fs28 \cf5         offset = position * \cf6 '  |'\cf5   \cf10 # <2>
+\f1\fs24 \cf0 \
+
+\f2\fs28 \cf5         \cf3 print\cf5 (ROW_FMT.format(needle, position, offset))  \cf10 # <3>
+\f1\fs24 \cf0 \
+\
+
+\f2\fs28 \cf3 if\cf5  __name__ == \cf6 '__main__'\cf5 :
+\f1\fs24 \cf0 \
+\
+
+\f2\fs28 \cf5     \cf3 if\cf5  sys.argv[\cf6 -1\cf5 ] == \cf6 'left'\cf5 :    \cf10 # <4>
+\f1\fs24 \cf0 \
+
+\f2\fs28 \cf5         bisect_fn = bisect.bisect_left
+\f1\fs24 \cf0 \
+
+\f2\fs28 \cf5     \cf3 else\cf5 :
+\f1\fs24 \cf0 \
+
+\f2\fs28 \cf5         bisect_fn = bisect.bisect
+\f1\fs24 \cf0 \
+\
+
+\f2\fs28 \cf5     \cf3 print\cf5 (\cf6 'DEMO:'\cf5 , bisect_fn.__name__)  \cf10 # <5>
+\f1\fs24 \cf0 \
+
+\f2\fs28 \cf5     \cf3 print\cf5 (\cf6 'haystack ->'\cf5 , \cf6 ' '\cf5 .join(\cf6 '%2d'\cf5  % n \cf3 for\cf5  n \cf3 in\cf5  HAYSTACK))
+\f1\fs24 \cf0 \
+
+\f2\fs28 \cf5     demo(bisect_fn)
+\f1\fs24 \cf0 \
+\
+\pard\tx692\pardeftab692\pardirnatural\partightenfactor0
+
+\f2\fs28 \cf10 # END BISECT_DEMO
+\f0\fs36 \cf2 \cb1 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f2\fs22 \cf8 \cb9 \CocoaLigature0 DEMO: bisect\
+haystack ->  1  4  5  6  8 12 15 20 21 23 23 26 29 30\
+31 @ 14      |  |  |  |  |  |  |  |  |  |  |  |  |  |31\
+30 @ 14      |  |  |  |  |  |  |  |  |  |  |  |  |  |30\
+29 @ 13      |  |  |  |  |  |  |  |  |  |  |  |  |29\
+23 @ 11      |  |  |  |  |  |  |  |  |  |  |23\
+22 @  9      |  |  |  |  |  |  |  |  |22\
+10 @  5      |  |  |  |  |10\
+ 8 @  5      |  |  |  |  |8 \
+ 5 @  3      |  |  |5 \
+ 2 @  1      |2 \
+ 1 @  1      |1 \
+ 0 @  0    0 
+\f0\fs36 \cf2 \cb1 \CocoaLigature1 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "https://docs.python.org/3/library/bisect.html"}}{\fldrslt \cf2 https://docs.python.org/3/library/bisect.html}}\
+\'ca\'be\'c0\'fd 2-18 \'b8\'f9\'be\'dd\'d2\'bb\'b8\'f6\'b7\'d6\'ca\'fd\'a3\'ac \'d5\'d2\'b5\'bd\'cb\'fc\'cb\'f9\'b6\'d4\'d3\'a6\'b5\'c4\'b3\'c9\'bc\'a8\
+>>> import bisect\
+>>> def grade(score, breakpoints=[60, 70, 80, 90], grades='FDCBA'):\
+... i = bisect.bisect(breakpoints, score)\
+... return grades[i]\
+...\
+>>> [grade(score) for score in [33, 99, 77, 70, 89, 90, 100]]\
+['F', 'A', 'C', 'C', 'B', 'A', 'A']\
+\
+2.8.2 \'d3\'c3bisect.insort\'b2\'e5\'c8\'eb\'d0\'c2\'d4\'aa\'cb\'d8\
+insort(seq, item) \'b0\'d1\'b1\'e4\'c1\'bf item \'b2\'e5\'c8\'eb\'b5\'bd\'d0\'f2\'c1\'d0 seq \'d6\'d0\'a3\'ac \'b2\'a2\'c4\'dc\'b1\'a3\'b3\'d6 seq\'b5\'c4\'c9\'fd\'d0\'f2\'cb\'b3\'d0\'f2\'a1\'a3\
+\pard\tx692\pardeftab692\pardirnatural\partightenfactor0
+
+\f2\fs28 \cf3 \cb4 import\cf5  bisect
+\f1\fs24 \cf0 \
+
+\f2\fs28 \cf3 import\cf5  random
+\f1\fs24 \cf0 \
+\
+
+\f2\fs28 \cf5 SIZE = \cf6 7
+\f1\fs24 \cf0 \
+\
+
+\f2\fs28 \cf5 random.seed(\cf6 1729\cf5 )
+\f1\fs24 \cf0 \
+\
+
+\f2\fs28 \cf5 my_list = []
+\f1\fs24 \cf0 \
+
+\f2\fs28 \cf3 for\cf5  i \cf3 in\cf5  range(SIZE):
+\f1\fs24 \cf0 \
+
+\f2\fs28 \cf5     new_item = random.randrange(SIZE*\cf6 2\cf5 )
+\f1\fs24 \cf0 \
+
+\f2\fs28 \cf5     bisect.insort(my_list, new_item)
+\f1\fs24 \cf0 \
+
+\f2\fs28 \cf5     \cf3 print\cf5 (\cf6 '%2d ->'\cf5  % new_item, my_list)
+\f0\fs36 \cf2 \cb1 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf2 \
+2.9 \'b5\'b1\'c1\'d0\'b1\'ed\'b2\'bb\'ca\'c7\'ca\'d7\'d1\'a1\'ca\'b1\
+\'b1\'c8\'c8\'e7\'a3\'ac \'d2\'aa\'b4\'e6\'b7\'c5 1000 \'cd\'f2\'b8\'f6\'b8\'a1\'b5\'e3\'ca\'fd\'b5\'c4\'bb\'b0\'a3\'ac \'ca\'fd\'d7\'e9\'a3\'a8 array\'a3\'a9 \'b5\'c4\'d0\'a7\'c2\'ca\'d2\'aa\'b8\'df\'b5\'c3\'b6\'e0\
+\
+2.9.1 \'ca\'fd\'d7\'e9\
+\'ca\'fd\'d7\'e9\'d6\'a7\'b3\'d6\'cb\'f9\'d3\'d0\'b8\'fa\'bf\'c9\'b1\'e4\'d0\'f2\'c1\'d0\'d3\'d0\'b9\'d8\'b5\'c4\'b2\'d9\'d7\'f7\'a3\'ac \'b0\'fc\'c0\'a8 .pop\'a1\'a2 .insert \'ba\'cd.extend\'a1\'a3 \'c1\'ed\'cd\'e2\'a3\'ac \'ca\'fd\'d7\'e9\'bb\'b9\'cc\'e1\'b9\'a9\'b4\'d3\'ce\'c4\'bc\'fe\'b6\'c1\'c8\'a1\'ba\'cd\'b4\'e6\'c8\'eb\'ce\'c4\'bc\'fe\'b5\'c4\'b8\'fc\'bf\'ec\'b5\'c4\'b7\'bd\'b7\'a8\'a3\'ac \'c8\'e7.frombytes \'ba\'cd .tofile\'a1\'a3\
+\
+array('b') \'b4\'b4\'bd\'a8\'b3\'f6\'b5\'c4\'ca\'fd\'d7\'e9\'be\'cd\'d6\'bb\'c4\'dc\'b4\'e6\'b7\'c5\'d2\'bb\'b8\'f6\'d7\'d6\'bd\'da\'b4\'f3\'d0\'a1\'b5\'c4\'d5\'fb\'ca\'fd\'a3\'ac \'b7\'b6\'ce\'a7\'b4\'d3 -128 \'b5\'bd 127\
+\'ca\'be\'c0\'fd 2-20 \'d2\'bb\'b8\'f6\'b8\'a1\'b5\'e3\'d0\'cd\'ca\'fd\'d7\'e9\'b5\'c4\'b4\'b4\'bd\'a8\'a1\'a2 \'b4\'e6\'c8\'eb\'ce\'c4\'bc\'fe\'ba\'cd\'b4\'d3\'ce\'c4\'bc\'fe\'b6\'c1\'c8\'a1\'b5\'c4\'b9\'fd\'b3\'cc\
+>>> from array import array \uc0\u10122 \
+>>> from random import random\
+>>> floats = array('d', (random() for i in range(10**7))) \uc0\u10123 \
+>>> floats[-1] \uc0\u10124 \
+0.07802343889111107\
+>>> fp = open('floats.bin', 'wb')\
+>>> floats.tofile(fp) \uc0\u10125 \
+>>> fp.close()\
+>>> floats2 = array('d') \uc0\u10126 \
+>>> fp = open('floats.bin', 'rb')\
+>>> floats2.fromfile(fp, 10**7) \uc0\u10127 \
+>>> fp.close()\
+>>> floats2[-1] \uc0\u10128 \
+0.07802343889111107\
+>>> floats2 == floats \uc0\u10129 \
+True\
+\
+\uc0\u10103  \'c0\'fb\'d3\'c3\'d2\'bb\'b8\'f6\'bf\'c9\'b5\'fc\'b4\'fa\'b6\'d4\'cf\'f3\'c0\'b4\'bd\'a8\'c1\'a2\'d2\'bb\'b8\'f6\'cb\'ab\'be\'ab\'b6\'c8\'b8\'a1\'b5\'e3\'ca\'fd\'d7\'e9\'a3\'a8 \'c0\'e0\'d0\'cd\'c2\'eb\'ca\'c7 'd'\'a3\'a9 \'a3\'ac\
+\'d5\'e2\'c0\'ef\'ce\'d2\'c3\'c7\'d3\'c3\'b5\'c4\'bf\'c9\'b5\'fc\'b4\'fa\'b6\'d4\'cf\'f3\'ca\'c7\'d2\'bb\'b8\'f6\'c9\'fa\'b3\'c9\'c6\'f7\'b1\'ed\'b4\'ef\'ca\'bd\'a1\'a3\
+\uc0\u10106  \'d0\'c2\'bd\'a8\'d2\'bb\'b8\'f6\'cb\'ab\'be\'ab\'b6\'c8\'b8\'a1\'b5\'e3\'bf\'d5\'ca\'fd\'d7\'e9\'a1\'a3\
+\uc0\u10107  \'b0\'d1 1000 \'cd\'f2\'b8\'f6\'b8\'a1\'b5\'e3\'ca\'fd\'b4\'d3\'b6\'fe\'bd\'f8\'d6\'c6\'ce\'c4\'bc\'fe\'c0\'ef\'b6\'c1\'c8\'a1\'b3\'f6\'c0\'b4\'a1\'a3\
+\
+\'c1\'ed\'cd\'e2\'d2\'bb\'b8\'f6\'bf\'ec\'cb\'d9\'d0\'f2\'c1\'d0\'bb\'af\'ca\'fd\'d7\'d6\'c0\'e0\'d0\'cd\'b5\'c4\'b7\'bd\'b7\'a8\'ca\'c7\'ca\'b9\'d3\'c3pickle\'a3\'a8 https://docs.python.org/3/library/pickle.html\'a3\'a9 \'c4\'a3\'bf\'e9\'a1\'a3 \
+P110\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f1\fs24 \cf0 {{\NeXTGraphic Pasted Graphic 3.tiff \width12420 \height8220
+}¬}\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs36 \cf2 \
+\
+\
+2.9.2 \'c4\'da\'b4\'e6\'ca\'d3\'cd\'bc\
+memoryview \'ca\'c7\'d2\'bb\'b8\'f6\'c4\'da\'d6\'c3\'c0\'e0\'a3\'ac \'cb\'fc\'c4\'dc\'c8\'c3\'d3\'c3\'bb\'a7\'d4\'da\'b2\'bb\'b8\'b4\'d6\'c6\'c4\'da\'c8\'dd\'b5\'c4\'c7\'e9\'bf\'f6\'cf\'c2\'b2\'d9\'d7\'f7\'cd\'ac\'d2\'bb\'b8\'f6\'ca\'fd\'d7\'e9\'b5\'c4\'b2\'bb\'cd\'ac\'c7\'d0\'c6\'ac\'a1\'a3\
+\
+memoryview.cast \'b5\'c4\'b8\'c5\'c4\'ee\'b8\'fa\'ca\'fd\'d7\'e9\'c4\'a3\'bf\'e9\'c0\'e0\'cb\'c6\'a3\'ac \'c4\'dc\'d3\'c3\'b2\'bb\'cd\'ac\'b5\'c4\'b7\'bd\'ca\'bd\'b6\'c1\'d0\'b4\'cd\'ac\'d2\'bb\'bf\'e9\'c4\'da\'b4\'e6\'ca\'fd\'be\'dd\'a3\'ac \'b6\'f8\'c7\'d2\'c4\'da\'c8\'dd\'d7\'d6\'bd\'da\'b2\'bb\'bb\'e1\'cb\'e6\'d2\'e2\'d2\'c6\'b6\'af\'a1\'a3 \
+\
+\'ca\'be\'c0\'fd 2-21 \'cd\'a8\'b9\'fd\'b8\'c4\'b1\'e4\'ca\'fd\'d7\'e9\'d6\'d0\'b5\'c4\'d2\'bb\'b8\'f6\'d7\'d6\'bd\'da\'c0\'b4\'b8\'fc\'d0\'c2\'ca\'fd\'d7\'e9\'c0\'ef\'c4\'b3\'b8\'f6\'d4\'aa\'cb\'d8\'b5\'c4\'d6\'b5\
+>>> numbers = array.array('h', [-2, -1, 0, 1, 2])\
+>>> memv = memoryview(numbers) \uc0\u10122 \
+>>> len(memv)\
+5>\
+>> memv[0] \uc0\u10123 \
+-2\
+>>> memv_oct = memv.cast('B') \uc0\u10124 \
+>>> memv_oct.tolist() \uc0\u10125 \
+[254, 255, 255, 255, 0, 0, 1, 0, 2, 0]\
+>>> memv_oct[5] = 4 \uc0\u10126 \
+>>> numbers\
+array('h', [-2, -1, 1024, 1, 2]) \uc0\u10127 \
+\
+\uc0\u10102  \'c0\'fb\'d3\'c3\'ba\'ac\'d3\'d0 5 \'b8\'f6\'b6\'cc\'d5\'fb\'d0\'cd\'d3\'d0\'b7\'fb\'ba\'c5\'d5\'fb\'ca\'fd\'b5\'c4\'ca\'fd\'d7\'e9\'a3\'a8 \'c0\'e0\'d0\'cd\'c2\'eb\'ca\'c7 'h'\'a3\'a9 \'b4\'b4\'bd\'a8\'d2\'bb\'b8\'f6memoryview\'a1\'a3\
+\uc0\u10104  \'b4\'b4\'bd\'a8\'d2\'bb\'b8\'f6 memv_oct\'a3\'ac \'d5\'e2\'d2\'bb\'b4\'ce\'ca\'c7\'b0\'d1 memv \'c0\'ef\'b5\'c4\'c4\'da\'c8\'dd\'d7\'aa\'bb\'bb\'b3\'c9 'B' \'c0\'e0\'d0\'cd\'a3\'ac\
+\'d2\'b2\'be\'cd\'ca\'c7\'ce\'de\'b7\'fb\'ba\'c5\'d7\'d6\'b7\'fb\'a1\'a3\
+\uc0\u10105  \'d2\'d4\'c1\'d0\'b1\'ed\'b5\'c4\'d0\'ce\'ca\'bd\'b2\'e9\'bf\'b4 memv_oct \'b5\'c4\'c4\'da\'c8\'dd\'a1\'a3\
+\uc0\u10106  \'b0\'d1\'ce\'bb\'d3\'da\'ce\'bb\'d6\'c3 5 \'b5\'c4\'d7\'d6\'bd\'da\'b8\'b3\'d6\'b5\'b3\'c9 4\'a1\'a3\
+\uc0\u10107  \'d2\'f2\'ce\'aa\'ce\'d2\'c3\'c7\'b0\'d1\'d5\'bc 2 \'b8\'f6\'d7\'d6\'bd\'da\'b5\'c4\'d5\'fb\'ca\'fd\'b5\'c4\'b8\'df\'ce\'bb\'d7\'d6\'bd\'da\'b8\'c4\'b3\'c9\'c1\'cb 4\'a3\'ac \'cb\'f9\'d2\'d4\'d5\'e2\'b8\'f6\'d3\'d0\'b7\'fb\'ba\'c5\
+\'d5\'fb\'ca\'fd\'b5\'c4\'d6\'b5\'be\'cd\'b1\'e4\'b3\'c9\'c1\'cb 1024\'a1\'a3\
+\
+2.9.3 NumPy\'ba\'cdSciPy\
+SciPy \'ca\'c7\'bb\'f9\'d3\'da NumPy \'b5\'c4\'c1\'ed\'d2\'bb\'b8\'f6\'bf\'e2\'a3\'ac \'cb\'fc\'cc\'e1\'b9\'a9\'c1\'cb\'ba\'dc\'b6\'e0\'b8\'fa\'bf\'c6\'d1\'a7\'bc\'c6\'cb\'e3\'d3\'d0\'b9\'d8\'b5\'c4\'cb\'e3\'b7\'a8\'a3\'ac \'d7\'a8\'ce\'aa\'cf\'df\'d0\'d4\'b4\'fa\'ca\'fd\'a1\'a2 \'ca\'fd\'d6\'b5\'bb\'fd\'b7\'d6\'ba\'cd\'cd\'b3\'bc\'c6\'d1\'a7\'b6\'f8\'c9\'e8\'bc\'c6\'a1\'a3 SciPy \'b5\'c4\'b8\'df\'d0\'a7\'ba\'cd\'bf\'c9\'bf\'bf\'d0\'d4\'b9\'e9\'b9\'a6\'d3\'da\'c6\'e4\'b1\'b3\'ba\'f3\'b5\'c4 C \'ba\'cd Fortran \'b4\'fa\'c2\'eb\'a3\'ac \'b6\'f8\'d5\'e2\'d0\'a9\'b8\'fa\'bc\'c6\'cb\'e3\'d3\'d0\'b9\'d8\'b5\'c4\'b2\'bf\'b7\'d6\'b6\'bc\'d4\'b4\'d7\'d4\'d3\'daNetlib \'bf\'e2\'a3\'a8 http://www.netlib.org\'a3\'a9 \'a1\'a3 \
+\
+\'ca\'be\'c0\'fd 2-22 \'b6\'d4 numpy.ndarray \'b5\'c4\'d0\'d0\'ba\'cd\'c1\'d0\'bd\'f8\'d0\'d0\'bb\'f9\'b1\'be\'b2\'d9\'d7\'f7\
+>>> import numpy \uc0\u10122 \
+>>> a = numpy.arange(12) \uc0\u10123 \
+>>> a\
+array([ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11])\
+>>> type(a)\
+<class 'numpy.ndarray'>\
+>>> a.shape \uc0\u10124 \
+(12,)\
+>>> a.shape = 3, 4 \uc0\u10125 \
+>>> a\
+array([[ 0, 1, 2, 3],\
+[ 4, 5, 6, 7],\
+[ 8, 9, 10, 11]])\
+>>> a[2] \uc0\u10126 \
+array([ 8, 9, 10, 11])\
+>>> a[2, 1] \uc0\u10127 \
+9>\
+>> a[:, 1] \uc0\u10128 \
+array([1, 5, 9])\
+>>> a.transpose() \uc0\u10129 \
+array([[ 0, 4, 8],\
+[ 1, 5, 9],\
+[ 2, 6, 10],\
+[ 3, 7, 11]])\
+\uc0\u10105  \'b0\'d1\'ca\'fd\'d7\'e9\'b1\'e4\'b3\'c9\'b6\'fe\'ce\'ac\'b5\'c4\'a3\'ac \'c8\'bb\'ba\'f3\'b0\'d1\'cb\'fc\'b4\'f2\'d3\'a1\'b3\'f6\'c0\'b4\'bf\'b4\'bf\'b4\'a1\'a3\
+\
+NumPy \'d2\'b2\'bf\'c9\'d2\'d4\'b6\'d4 numpy.ndarray \'d6\'d0\'b5\'c4\'d4\'aa\'cb\'d8\'bd\'f8\'d0\'d0\'b3\'e9\'cf\'f3\'b5\'c4\'b6\'c1\'c8\'a1\'a1\'a2 \'b1\'a3\'b4\'e6\'ba\'cd\'c6\'e4\'cb\'fb\'b2\'d9\'d7\'f7\'a3\'ba\
+>>> import numpy\
+>>> floats = numpy.loadtxt('floats-10M-lines.txt') \uc0\u10122 \
+>>> floats[-3:] \uc0\u10123 \
+array([ 3016362.69195522, 535281.10514262, 4566560.44373946])\
+>>> floats *= .5 \uc0\u10124 \
+>>> floats[-3:]\
+array([ 1508181.34597761, 267640.55257131, 2283280.22186973])\
+>>> from time import perf_counter as pc \uc0\u10125 \
+>>> t0 = pc(); floats /= 3; pc() - t0 \uc0\u10126 \
+0.03690556302899495\
+>>> numpy.save('floats-10M', floats) \uc0\u10127 \
+>>> floats2 = numpy.load('floats-10M.npy', 'r+') \uc0\u10128 \
+>>> floats2 *= 6\
+>>> floats2[-3:] \uc0\u10129 \
+memmap([3016362.69195522, 535281.10514262, 4566560.44373946])\
+\
+\
+2.9.4 \'cb\'ab\'cf\'f2\'b6\'d3\'c1\'d0\'ba\'cd\'c6\'e4\'cb\'fb\'d0\'ce\'ca\'bd\'b5\'c4\'b6\'d3\'c1\'d0\
+collections.deque \'c0\'e0\'a3\'a8 \'cb\'ab\'cf\'f2\'b6\'d3\'c1\'d0\'a3\'a9 \'ca\'c7\'d2\'bb\'b8\'f6\'cf\'df\'b3\'cc\'b0\'b2\'c8\'ab\'a1\'a2 \'bf\'c9\'d2\'d4\'bf\'ec\'cb\'d9\'b4\'d3\'c1\'bd\'b6\'cb\'cc\'ed\'bc\'d3\'bb\'f2\'d5\'df\'c9\'be\'b3\'fd\'d4\'aa\'cb\'d8\'b5\'c4\'ca\'fd\'be\'dd\'c0\'e0\'d0\'cd\'a1\'a3\
+\
+\'ca\'be\'c0\'fd 2-23 \'ca\'b9\'d3\'c3\'cb\'ab\'cf\'f2\'b6\'d3\'c1\'d0\
+>>> from collections import deque\
+>>> dq = deque(range(10), maxlen=10) \uc0\u10122 \
+>>> dq\
+deque([0, 1, 2, 3, 4, 5, 6, 7, 8, 9], maxlen=10)\
+>>> dq.rotate(3) \uc0\u10123 \
+>>> dq\
+deque([7, 8, 9, 0, 1, 2, 3, 4, 5, 6], maxlen=10)\
+>>> dq.rotate(-4)\
+>>> dq\
+deque([1, 2, 3, 4, 5, 6, 7, 8, 9, 0], maxlen=10)\
+>>> dq.appendleft(-1) \uc0\u10124 \
+>>> dq\
+deque([-1, 1, 2, 3, 4, 5, 6, 7, 8, 9], maxlen=10)\
+>>> dq.extend([11, 22, 33]) \uc0\u10125 \
+>>> dq\
+deque([3, 4, 5, 6, 7, 8, 9, 11, 22, 33], maxlen=10)\
+>>> dq.extendleft([10, 20, 30, 40]) \uc0\u10126 \
+>>> dq\
+deque([40, 30, 20, 10, 3, 4, 5, 6, 7, 8], maxlen=10)\
+\
+append \'ba\'cd popleft \'b6\'bc\'ca\'c7\'d4\'ad\'d7\'d3\'b2\'d9\'d7\'f7\'a3\'ac \'d2\'b2\'be\'cd\'cb\'b5\'ca\'c7 deque \'bf\'c9\'d2\'d4\'d4\'da\'b6\'e0\'cf\'df\'b3\'cc\'b3\'cc\'d0\'f2\
+\'d6\'d0\'b0\'b2\'c8\'ab\'b5\'d8\'b5\'b1\'d7\'f7\'cf\'c8\'bd\'f8\'cf\'c8\'b3\'f6\'b5\'c4\'d5\'bb\'ca\'b9\'d3\'c3\'a3\'ac \'b6\'f8\'ca\'b9\'d3\'c3\'d5\'df\'b2\'bb\'d0\'e8\'d2\'aa\'b5\'a3\'d0\'c4\'d7\'ca\'d4\'b4\'cb\'f8\'b5\'c4\'ce\'ca\'cc\'e2\'a1\'a3\
+P119\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f1\fs24 \cf0 {{\NeXTGraphic Pasted Graphic 4.tiff \width12360 \height6260
+}¬}\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs36 \cf2 \
+\
+\'cc\'e1\'b9\'a9\'c1\'cb\'cd\'ac\'b2\'bd\'a3\'a8 \'cf\'df\'b3\'cc\'b0\'b2\'c8\'ab\'a3\'a9 \'c0\'e0 Queue\'a1\'a2 LifoQueue \'ba\'cdPriorityQueue\'a3\'ac \'b2\'bb\'cd\'ac\'b5\'c4\'cf\'df\'b3\'cc\'bf\'c9\'d2\'d4\'c0\'fb\'d3\'c3\'d5\'e2\'d0\'a9\'ca\'fd\'be\'dd\'c0\'e0\'d0\'cd\'c0\'b4\'bd\'bb\'bb\'bb\'d0\'c5\'cf\'a2\'a1\'a3\
+\
+\'d4\'da\'c2\'fa\'d4\'b1\'b5\'c4\'ca\'b1\'ba\'f2\'a3\'ac \'d5\'e2\'d0\'a9\'c0\'e0\'b2\'bb\'bb\'e1\'c8\'d3\'b5\'f4\'be\'c9\'b5\'c4\'d4\'aa\'cb\'d8\'c0\'b4\'cc\'da\'b3\'f6\'ce\'bb\'d6\'c3\'a1\'a3 \'cf\'e0\'b7\'b4\'a3\'ac \'c8\'e7\'b9\'fb\'b6\'d3\'c1\'d0\'c2\'fa\'c1\'cb\'a3\'ac \'cb\'fc\'be\'cd\'bb\'e1\'b1\'bb\'cb\'f8\'d7\'a1\'a3\'ac \'d6\'b1\'b5\'bd\'c1\'ed\'cd\'e2\'b5\'c4\'cf\'df\'b3\'cc\'d2\'c6\'b3\'fd\'c1\'cb\'c4\'b3\'b8\'f6\'d4\'aa\'cb\'d8\'b6\'f8\'cc\'da\'b3\'f6\'c1\'cb\'ce\'bb\'d6\'c3\'a1\'a3 \'d5\'e2\'d2\'bb\'cc\'d8\'d0\'d4\'c8\'c3\'d5\'e2\'d0\'a9\'c0\'e0\'ba\'dc\'ca\'ca\'ba\'cf\'d3\'c3\'c0\'b4\'bf\'d8\'d6\'c6\'bb\'ee\'d4\'be\'cf\'df\'b3\'cc\'b5\'c4\'ca\'fd\'c1\'bf\'a1\'a3\
+\
+multiprocessing:\
+asyncio:\
+heapq:\
+\
+{\field{\*\fldinst{HYPERLINK "https://jupyter.org"}}{\fldrslt https://jupyter.org}}\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+}
