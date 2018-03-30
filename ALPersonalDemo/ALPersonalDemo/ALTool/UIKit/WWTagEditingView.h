@@ -22,3 +22,12 @@
 -(void)creatBtnWithTitle:(NSString*)btnTitle;
 
 @end
+
+
+
+
+
+
+
+
+

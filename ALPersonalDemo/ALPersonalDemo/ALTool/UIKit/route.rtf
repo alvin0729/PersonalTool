@@ -12,30 +12,30 @@
 \pard\tx642\pardeftab642\pardirnatural\partightenfactor0
 
 \f0\fs26 \cf2 \CocoaLigature0     \cf3 //
-\f1 \cf3 \'b9\'ca\'ca\'c2\'a3\'ba
-\f0 \cf3 scheme:wangwangsocial://wangwang?target=story&targetId=110&fromUserId=10015&mediaType=3\cf2 \
+\f1 \'b9\'ca\'ca\'c2\'a3\'ba
+\f0 scheme:wangwangsocial://wangwang?target=story&targetId=110&fromUserId=10015&mediaType=3\cf2 \
     \cf3 //
-\f1 \cf3 \'bb\'b0\'cc\'e2\'a3\'ba
-\f0 \cf3 scheme:wangwangsocial://wangwang?target=topic&targetId=266&fromUserId=10020\cf2 \
+\f1 \'bb\'b0\'cc\'e2\'a3\'ba
+\f0 scheme:wangwangsocial://wangwang?target=topic&targetId=266&fromUserId=10020\cf2 \
     \cf4 NSLog\cf2 (\cf5 @"==========================================URL scheme:%@"\cf2 , url);\
     \cf4 NSLog\cf2 (\cf5 @"==========================================URL scheme:%@"\cf2 , [url \cf4 scheme\cf2 ]);\
     \cf4 NSLog\cf2 (\cf5 @"==========================================URL query: %@"\cf2 , [url \cf4 query\cf2 ]);\
 \pard\tx642\pardeftab642\pardirnatural\partightenfactor0
 \cf3 //    NSString *text = [[url host] stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];\cf2 \
 \cf3 //    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"URL
-\f1 \cf3 \'cc\'f8\'d7\'aa
-\f0 \cf3 "\cf2 \
+\f1 \'cc\'f8\'d7\'aa
+\f0 "\cf2 \
 \cf3 //                                                        message:text\cf2 \
 \cf3 //                                                       delegate:nil\cf2 \
 \cf3 //                                              cancelButtonTitle:@"OK"\cf2 \
 \cf3 //                                              otherButtonTitles:nil];\cf2 \
 \cf3 //    [alertView show];\cf2 \
     \cf3 //app
-\f1 \cf3 \'b7\'d6\'cf\'ed\'a3\'ba
-\f0 \cf3 scheme:wangwangsocial://wangwang?target=app\cf2 \
+\f1 \'b7\'d6\'cf\'ed\'a3\'ba
+\f0 scheme:wangwangsocial://wangwang?target=app\cf2 \
     \cf3 //
-\f1 \cf3 \'c8\'ba\'c3\'fb\'c6\'ac\'a3\'ba
-\f0 \cf3 scheme:wangwangsocial://wangwang?target=group&targetId=118&fromUserId=10020\cf2 \
+\f1 \'c8\'ba\'c3\'fb\'c6\'ac\'a3\'ba
+\f0 scheme:wangwangsocial://wangwang?target=group&targetId=118&fromUserId=10020\cf2 \
     \
 \
 \pard\pardeftab720\sl560\sa400\partightenfactor0
@@ -57,7 +57,7 @@
 \f1\fs28 \cf6 \cb7 \
 \pard\pardeftab720\sl280\partightenfactor0
 
-\f3\fs24 \cf10 \cb1 \outl0\strokewidth0 \strokec10 NSString *className = @"RCChatSessionInputBarView";\
+\f3\fs24 \cf10 \cb1 NSString *className = @"RCChatSessionInputBarView";\
     const char * cClassName = [className UTF8String];\
     id classM = objc_getClass(cClassName);\
     unsigned int outCount, i;\
@@ -67,7 +67,7 @@
     for (i = 0; i < outCount; i++) \{\
         objc_property_t property = properties[i];\
         NSString * attributeName = [NSString stringWithUTF8String:property_getName(property)];\
-        NSLog(@"%@", attributeName);\
+        NSLog(@"%@", attributeName ;\
     \}\
 \
 \
@@ -95,7 +95,7 @@
 \
 \pard\pardeftab720\sl560\sa400\partightenfactor0
 
-\f1\fs28 \cf6 \cb7 \outl0\strokewidth0 \
+\f1\fs28 \cf6 \cb7 \
 \
 \
 

@@ -99,6 +99,8 @@
 		CFC88B7B1F359B8C002C6CE5 /* UIColor+LCFImageAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = CFC88B761F359B8C002C6CE5 /* UIColor+LCFImageAdditions.m */; };
 		CFCE04621F0B703F0047D184 /* HexColors.m in Sources */ = {isa = PBXBuildFile; fileRef = CFCE04611F0B703F0047D184 /* HexColors.m */; };
 		CFDC0AF91EF1143C0099E3E5 /* UIImage+HXExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = CFDC0AF81EF1143C0099E3E5 /* UIImage+HXExtension.m */; };
+		CFE30884206DD4A200007951 /* WWShapeView.m in Sources */ = {isa = PBXBuildFile; fileRef = CFE30883206DD4A200007951 /* WWShapeView.m */; };
+		CFE308C1206DE00A00007951 /* LGGradientBackgroundView.m in Sources */ = {isa = PBXBuildFile; fileRef = CFE308C0206DE00A00007951 /* LGGradientBackgroundView.m */; };
 		CFE7A3321FF4F96600B45A81 /* BigBang.m in Sources */ = {isa = PBXBuildFile; fileRef = CFE7A3311FF4F96500B45A81 /* BigBang.m */; };
 		CFEAA1491FED059A00007B42 /* UIView+helper.m in Sources */ = {isa = PBXBuildFile; fileRef = CFEAA1481FED059A00007B42 /* UIView+helper.m */; };
 		CFFD4B3A1F29E6F800F2841E /* route.rtf in Resources */ = {isa = PBXBuildFile; fileRef = CFFD4B391F29E6F800F2841E /* route.rtf */; };
@@ -533,6 +535,10 @@
 		CFCE04611F0B703F0047D184 /* HexColors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HexColors.m; sourceTree = "<group>"; };
 		CFDC0AF71EF1143C0099E3E5 /* UIImage+HXExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+HXExtension.h"; sourceTree = "<group>"; };
 		CFDC0AF81EF1143C0099E3E5 /* UIImage+HXExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+HXExtension.m"; sourceTree = "<group>"; };
+		CFE30882206DD4A200007951 /* WWShapeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WWShapeView.h; sourceTree = "<group>"; };
+		CFE30883206DD4A200007951 /* WWShapeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WWShapeView.m; sourceTree = "<group>"; };
+		CFE308BF206DE00A00007951 /* LGGradientBackgroundView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LGGradientBackgroundView.h; sourceTree = "<group>"; };
+		CFE308C0206DE00A00007951 /* LGGradientBackgroundView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LGGradientBackgroundView.m; sourceTree = "<group>"; };
 		CFE7A3301FF4F96400B45A81 /* BigBang.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BigBang.h; sourceTree = "<group>"; };
 		CFE7A3311FF4F96500B45A81 /* BigBang.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BigBang.m; sourceTree = "<group>"; };
 		CFEAA1471FED059A00007B42 /* UIView+helper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+helper.h"; sourceTree = "<group>"; };
@@ -1032,6 +1038,8 @@
 		CF08B11F1FE753C90015015F /* 圆角 */ = {
 			isa = PBXGroup;
 			children = (
+				CFE30882206DD4A200007951 /* WWShapeView.h */,
+				CFE30883206DD4A200007951 /* WWShapeView.m */,
 				CF08B1231FE753EE0015015F /* WHUBorderMaker.h */,
 				CF08B1201FE753EE0015015F /* WHUBorderMaker.m */,
 				CF08B1241FE753EF0015015F /* WHUCornerMaker_purgeCache.h */,
@@ -1403,6 +1411,15 @@
 				CFC88B761F359B8C002C6CE5 /* UIColor+LCFImageAdditions.m */,
 			);
 			path = LCFInfiniteScrollView;
+			sourceTree = "<group>";
+		};
+		CFE308BE206DDFFA00007951 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+				CFE308BF206DE00A00007951 /* LGGradientBackgroundView.h */,
+				CFE308C0206DE00A00007951 /* LGGradientBackgroundView.m */,
+			);
+			path = "New Group";
 			sourceTree = "<group>";
 		};
 		CFFF6F1E1EF919FA0092132B /* personalTempDemo */ = {
@@ -2255,6 +2272,7 @@
 		E1D2264A1F6D85DB0001E8A3 /* tool */ = {
 			isa = PBXGroup;
 			children = (
+				CFE308BE206DDFFA00007951 /* New Group */,
 				CF1C56301FEA2F8E0011C7C6 /* 线程 */,
 				CF08B11F1FE753C90015015F /* 圆角 */,
 				E15FEC3A1FE699D0008A9C38 /* AFHTTPSessionManager+RetryPolicy.h */,
@@ -2888,6 +2906,7 @@
 				E15D702E1EF51FC700513AE6 /* MHYouKuCommentToolBar.m in Sources */,
 				E14B8A7D1EF1889D0021D665 /* SystemInfo.m in Sources */,
 				CF862E6A2011B96300140F31 /* UIImageView+download.m in Sources */,
+				CFE30884206DD4A200007951 /* WWShapeView.m in Sources */,
 				E17E21F51EDAFE0F0013D3B9 /* UIButton+SSImageTitleStyle.m in Sources */,
 				E15D704B1EF52B2D00513AE6 /* MHTopicManager.m in Sources */,
 				CF581C492004C9B300D6FE17 /* UIControl+ADControl.m in Sources */,
@@ -2895,6 +2914,7 @@
 				E1540A191EF6484300D2721F /* RJBasicViewController.m in Sources */,
 				E1540B1A1EF6534C00D2721F /* UIImage+RoundedCorner.m in Sources */,
 				E15D70671EF5811600513AE6 /* MHTopicCell.m in Sources */,
+				CFE308C1206DE00A00007951 /* LGGradientBackgroundView.m in Sources */,
 				E13C56661EE427B600005CFD /* FileManagerHelper.m in Sources */,
 				CF166A511FA95A5C00C81E43 /* ALWindowTapObserver.m in Sources */,
 				E1540A5A1EF64C2B00D2721F /* AJPhotoListCell.m in Sources */,

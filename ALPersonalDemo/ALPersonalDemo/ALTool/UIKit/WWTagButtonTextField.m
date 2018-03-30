@@ -8,6 +8,7 @@
 
 #import "WWTagButtonTextField.h"
 
+
 @implementation WWTagButtonTextField
 
 -(void)deleteBackward{
@@ -16,7 +17,6 @@
         self.block();
     }
     [super deleteBackward];
-    
 }
 
 @end
