@@ -1,12 +1,832 @@
 {\rtf1\ansi\ansicpg936\cocoartf1504\cocoasubrtf830
-{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
-{\colortbl;\red255\green255\blue255;}
-{\*\expandedcolortbl;;}
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fnil\fcharset134 .PingFangSC-Regular;\f2\fnil\fcharset0 HelveticaNeue;
+\f3\fnil\fcharset0 Menlo-Regular;\f4\fnil\fcharset134 PingFangSC-Regular;}
+{\colortbl;\red255\green255\blue255;\red35\green35\blue35;\red255\green255\blue255;\red28\green0\blue207;
+\red255\green255\blue255;\red0\green0\blue0;\red170\green13\blue145;\red0\green116\blue0;\red92\green38\blue153;
+\red46\green13\blue110;\red196\green26\blue22;\red100\green56\blue32;\red38\green71\blue75;\red63\green110\blue116;
+\red83\green104\blue112;\red244\green244\blue244;}
+{\*\expandedcolortbl;;\cssrgb\c18431\c18431\c18431;\cssrgb\c100000\c100000\c100000;\csgenericrgb\c11000\c0\c81000;
+\csgenericrgb\c100000\c100000\c100000;\csgenericrgb\c0\c0\c0;\csgenericrgb\c66500\c5200\c56900;\csgenericrgb\c0\c45600\c0;\csgenericrgb\c35900\c14900\c60100;
+\csgenericrgb\c18100\c5200\c43100;\csgenericrgb\c77000\c10200\c8600;\csgenericrgb\c39100\c22000\c12500;\csgenericrgb\c14900\c27800\c29400;\csgenericrgb\c24700\c43100\c45600;
+\cssrgb\c39608\c48235\c51373;\cssrgb\c96471\c96471\c96471;}
 \margl1440\margr1440\vieww9000\viewh8400\viewkind0
 \pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
 
 \f0\fs24 \cf0 \
+\pard\pardeftab720\sl360\partightenfactor0
 
-\b YYLabel
-\b0 \
+\f1\fs32 \cf2 \cb3 \expnd0\expndtw0\kerning0
+\'c8\'e7\'b9\'fb
+\f2 NSObject
+\f1 \'d6\'d0\'c8\'d4\'c8\'bb\'c3\'bb\'d5\'d2\'b5\'bd\'a3\'ac\'b3\'cc\'d0\'f2\'b2\'a2\'b2\'bb\'bb\'e1\'c1\'a2\'bc\'b4
+\f2 crash
+\f1 \'a3\'ac\'b6\'f8\'ca\'c7\'b0\'b4\'d5\'d5\'d3\'c5\'cf\'c8\'bc\'b6\'d6\'b4\'d0\'d0\'cf\'c2\'c1\'d0\'c8\'fd\'b8\'f6\'b7\'bd\'b7\'a8\'a3\'a8\'cf\'c2\'c1\'d0\'b7\'bd\'b7\'a8\'d3\'c5\'cf\'c8\'bc\'b6\'d2\'c0\'b4\'ce\'b5\'dd\'bc\'f5\'a3\'ac\'b8\'df\'d3\'c5\'cf\'c8\'bc\'b6\'b7\'bd\'b7\'a8\'cf\'fb\'cf\'a2\'d7\'aa\'b7\'a2\'b3\'c9\'b9\'a6\'b2\'bb\'bb\'e1\'d4\'d9\'d6\'b4\'d0\'d0\'b5\'cd\'d3\'c5\'cf\'c8\'bc\'b6\'b7\'bd\'b7\'a8\'a3\'a9\'a3\'ba\
+\
+\pard\tx692\pardeftab692\pardirnatural\partightenfactor0
+
+\f3\fs28 \cf4 \cb5 \kerning1\expnd0\expndtw0 1.\cf6 + resolveInstanceMethod:(\cf7 SEL\cf6 )sel \cf8 // 
+\f4 \'b6\'d4\'d3\'a6\'ca\'b5\'c0\'fd\'b7\'bd\'b7\'a8
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6   + resolveClassMethod:(\cf7 SEL\cf6 )sel \cf8 // 
+\f4 \'b6\'d4\'d3\'a6\'c0\'e0\'b7\'bd\'b7\'a8
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf4 2.\cf6 - (\cf7 id\cf6 )forwardingTargetForSelector:(\cf7 SEL\cf6 )aSelector
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf4 3.\cf6 - (\cf7 void\cf6 )forwardInvocation:(NSInvocation *)anInvocation
+\f1\fs32 \cf2 \cb3 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720\sl360\partightenfactor0
+\cf2 \
+\pard\tx692\pardeftab692\pardirnatural\partightenfactor0
+
+\f3\fs28 \cf7 \cb5 \kerning1\expnd0\expndtw0 @interface\cf6  Message : \cf9 NSObject
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6 -(\cf7 void\cf6 )sayHello:(\cf9 NSString\cf6  *)name;
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf7 @end
+\f0\fs24 \cf0 \
+\
+
+\f3\fs28 \cf7 @implementation\cf6  Message
+\f0\fs24 \cf0 \
+\
+
+\f3\fs28 \cf6 -(\cf7 void\cf6 )sayHello:(\cf9 NSString\cf6  *)name\{
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6     \cf10 NSLog\cf6 (\cf11 @"hello %@"\cf6 ,name);
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6 \}
+\f0\fs24 \cf0 \
+\
+
+\f3\fs28 \cf7 @end
+\f0\fs24 \cf0 \
+\
+\pard\tx692\pardeftab692\pardirnatural\partightenfactor0
+
+\f3\fs28 \cf12 #import \cf11 <objc/runtime.h>
+\f0\fs24 \cf0 \
+\pard\tx692\pardeftab692\pardirnatural\partightenfactor0
+
+\f3\fs28 \cf7 @interface\cf6  ViewController : \cf9 UIViewController
+\f0\fs24 \cf0 \
+\
+
+\f3\fs28 \cf6 -(\cf7 void\cf6 )sayHello:(\cf9 NSString\cf6  *)name;
+\f0\fs24 \cf0 \
+\
+
+\f3\fs28 \cf7 @end
+\f0\fs24 \cf0 \
+\
+
+\f3\fs28 \cf7 @implementation\cf6  \ulth \ulc6 V\ulnone iewController
+\f0\fs24 \cf0 \
+\
+\pard\tx692\pardeftab692\pardirnatural\partightenfactor0
+
+\f3\fs28 \cf6 -(\cf7 void\cf6 )viewDidLoad\{
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6     [\cf7 super\cf6  \cf10 viewDidLoad\cf6 ];
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6     [\cf7 self\cf6  \cf13 sayHello\cf6 :\cf11 @"runtime"\cf6 ];
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6 \}
+\f0\fs24 \cf0 \
+\pard\tx692\pardeftab692\pardirnatural\partightenfactor0
+
+\f3\fs28 \cf12 #pragma mark - 1
+\f0\fs24 \cf0 \
+\pard\tx692\pardeftab692\pardirnatural\partightenfactor0
+
+\f3\fs28 \cf6 +(\cf7 BOOL\cf6 )resolveInstanceMethod:(\cf7 SEL\cf6 )sel\{
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6     \cf7 if\cf6  (sel == \cf7 @selector\cf6 (sayHello:)) \{
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6         \cf10 class_addMethod\cf6 ([\cf7 self\cf6  \cf10 class\cf6 ], sel, \cf10 imp_implementationWithBlock\cf6 (^(\cf7 id\cf6  \cf7 self\cf6 , \cf9 NSString\cf6  *name)\{
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6             \cf10 NSLog\cf6 (\cf11 @"hello %@"\cf6 ,name);
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6         \}), \cf11 "v@:@"\cf6 );
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6         \cf8 //other
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6         \cf10 class_addMethod\cf6 ([\cf7 self\cf6  \cf10 class\cf6 ], sel, (\cf7 IMP\cf6 )\cf13 say\cf6 , \cf11 "v@:@"\cf6 );
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6     \}
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6     \cf7 return\cf6  [\cf7 super\cf6  \cf10 resolveInstanceMethod\cf6 :sel];
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6 \}
+\f0\fs24 \cf0 \
+\
+
+\f3\fs28 \cf7 void\cf6  say(\cf7 id\cf6  \cf7 self\cf6 , \cf7 SEL\cf6  \cf7 _cmd\cf6 , \cf9 NSString\cf6  *name)\{
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6     \cf10 NSLog\cf6 (\cf11 @"hello %@"\cf6 ,name);
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6 \}
+\f0\fs24 \cf0 \
+\
+\pard\tx692\pardeftab692\pardirnatural\partightenfactor0
+
+\f3\fs28 \cf12 #pragma mark - 2
+\f0\fs24 \cf0 \
+\
+\pard\tx692\pardeftab692\pardirnatural\partightenfactor0
+
+\f3\fs28 \cf6 -(\cf7 id\cf6 )forwardingTargetForSelector:(\cf7 SEL\cf6 )aSelector\{
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6     \cf7 if\cf6  (aSelector == \cf7 @selector\cf6 (sayHello:)) \{
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6         \cf7 return\cf6  [\cf14 Message\cf6  \cf10 new\cf6 ];
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6     \}
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6     \cf7 return\cf6  [\cf7 super\cf6  \cf10 forwardingTargetForSelector\cf6 :aSelector];
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6 \}
+\f0\fs24 \cf0 \
+\
+\pard\tx692\pardeftab692\pardirnatural\partightenfactor0
+
+\f3\fs28 \cf12 #pragma mark - 3
+\f0\fs24 \cf0 \
+\pard\tx692\pardeftab692\pardirnatural\partightenfactor0
+
+\f4 \cf0 //\cf15 \cb16 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec15 \'d4\'da\'cf\'c2\'c3\'e6\'b7\'bd\'b7\'a8\'d6\'d0\'b7\'b5\'bb\'d8\'d2\'bb\'b8\'f6\'b7\'bd\'b7\'a8\'c7\'a9\'c3\'fb
+\f0 \cf0 \cb5 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 \
+
+\f3\fs28 \cf6 -(\cf9 NSMethodSignature\cf6  *)methodSignatureForSelector:(\cf7 SEL\cf6 )aSelector\{
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6     \cf9 NSMethodSignature\cf6  *methodSignature = [\cf7 super\cf6  \cf10 methodSignatureForSelector\cf6 :aSelector];
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6     \cf7 if\cf6  (!methodSignature) \{
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6         methodSignature = [\cf14 Message\cf6  \cf10 instanceMethodSignatureForSelector\cf6 :aSelector];
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6     \}
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6     \cf7 return\cf6  methodSignature;
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6 \}
+\f0\fs24 \cf0 \
+\
+
+\f3\fs28 \cf6 -(\cf7 void\cf6 )forwardInvocation:(\cf9 NSInvocation\cf6  *)anInvocation\{
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6     \cf14 Message\cf6  *message = [\cf14 Message\cf6  \cf10 new\cf6 ];
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6     \cf7 if\cf6  ([message \cf10 respondsToSelector\cf6 :anInvocation.\cf9 selector\cf6 ]) \{
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6         [anInvocation \cf10 invokeWithTarget\cf6 :message];
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6     \}
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6 \}
+\f0\fs24 \cf0 \
+\
+
+\f3\fs28 \cf7 @end
+\f0\fs24 \cf0 \
+\
+\pard\pardeftab720\sl360\partightenfactor0
+
+\f1\fs32 \cf2 \cb3 \expnd0\expndtw0\kerning0
+\
+\pard\tx692\pardeftab692\pardirnatural\partightenfactor0
+
+\f3\fs28 \cf12 \cb5 \kerning1\expnd0\expndtw0 #pragma mark - 
+\f4 \'d4\'da\'c4\'b3\'b8\'f6\'b7\'bd\'b7\'a8\'d6\'d0\'c9\'e8\'d6\'c3\'b6\'e0\'b8\'f6\'ca\'f4\'d0\'d4\'cd\'a8\'d6\'aa\'b4\'d3\'b6\'f8\'b4\'ef\'b5\'bd\'d2\'c0\'c0\'b5\'b5\'c4\'c4\'bf\'b5\'c4\'a1\'a3
+\f0\fs24 \cf0 \
+\pard\tx692\pardeftab692\pardirnatural\partightenfactor0
+
+\f3\fs28 \cf7 @interface\cf6  Observer : \cf9 NSObject
+\f0\fs24 \cf0 \
+\
+
+\f3\fs28 \cf7 @end
+\f0\fs24 \cf0 \
+\
+
+\f3\fs28 \cf7 @implementation\cf6  Observer
+\f0\fs24 \cf0 \
+\
+
+\f3\fs28 \cf6 -(\cf7 void\cf6 )observeValueForKeyPath:(\cf9 NSString\cf6  *)keyPath ofObject:(\cf7 id\cf6 )object change:(\cf9 NSDictionary\cf6 <\cf9 NSKeyValueChangeKey\cf6 ,\cf7 id\cf6 > *)change context:(\cf7 void\cf6  *)context\{
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6     \cf10 NSLog\cf6 (\cf11 @"%@--%@--%@"\cf6 ,[\cf7 self\cf6  \cf10 class\cf6 ], object, change);
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6 \}
+\f0\fs24 \cf0 \
+\
+
+\f3\fs28 \cf7 @end
+\f0\fs24 \cf0 \
+\
+
+\f3\fs28 \cf7 @interface\cf6  Person : \cf9 NSObject\cf6 \{
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6     \cf14 Observer\cf6  *_observer;
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6 \}
+\f0\fs24 \cf0 \
+\
+
+\f3\fs28 \cf7 @property\cf6  (\cf7 nonatomic\cf6 , \cf7 copy\cf6 ) \cf9 NSString\cf6  *familyName;
+\f0\fs24 \cf0 \
+\
+
+\f3\fs28 \cf7 @property\cf6  (\cf7 nonatomic\cf6 , \cf7 copy\cf6 ) \cf9 NSString\cf6  *givenName;
+\f0\fs24 \cf0 \
+\
+
+\f3\fs28 \cf7 @property\cf6  (\cf7 nonatomic\cf6 , \cf7 copy\cf6 ) \cf9 NSString\cf6  *fullName;
+\f0\fs24 \cf0 \
+\
+
+\f3\fs28 \cf7 @end
+\f0\fs24 \cf0 \
+\
+
+\f3\fs28 \cf7 @implementation\cf6  Person
+\f0\fs24 \cf0 \
+\
+
+\f3\fs28 \cf6 -(\cf7 instancetype\cf6 )init\{
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6     \cf7 if\cf6  (\cf7 self\cf6  = [\cf7 super\cf6  \cf10 init\cf6 ]) \{
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6         \cf14 _familyName\cf6  = \cf11 @"li"\cf6 ;
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6         \cf14 _givenName\cf6  = \cf11 @"lei"\cf6 ;
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6         \cf14 _observer\cf6  = [\cf14 Observer\cf6  \cf10 new\cf6 ];
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6         [\cf7 self\cf6  \cf10 addObserver\cf6 :\cf14 _observer\cf6  \cf10 forKeyPath\cf6 :\cf11 @"fullName"\cf6  \cf10 options\cf6 :\cf10 NSKeyValueObservingOptionNew\cf6  | \cf10 NSKeyValueObservingOptionOld\cf6  \cf10 context\cf6 :\cf7 NULL\cf6 ];
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6     \}
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6     \cf7 return\cf6  \cf7 self\cf6 ;
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6 \}
+\f0\fs24 \cf0 \
+\
+
+\f3\fs28 \cf6 -(\cf9 NSString\cf6  *)fullName\{
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6     \cf7 return\cf6  [\cf9 NSString\cf6  \cf10 stringWithFormat\cf6 :\cf11 @"%@  %@"\cf6 , \cf14 _givenName\cf6 , \cf14 _familyName\cf6 ];
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6 \}
+\f0\fs24 \cf0 \
+\
+
+\f3\fs28 \cf6 -(\cf7 void\cf6 )dealloc\{
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6     [\cf7 self\cf6  \cf10 removeObserver\cf6 :\cf14 _observer\cf6  \cf10 forKeyPath\cf6 :\cf11 @"fullName"\cf6 ];
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6 \}
+\f0\fs24 \cf0 \
+\
+
+\f3\fs28 \cf6 +(\cf9 NSSet\cf6 <\cf9 NSString\cf6  *> *)keyPathsForValuesAffectingValueForKey:(\cf9 NSString\cf6  *)key\{
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6     \cf9 NSSet\cf6  *keyPaths = [\cf7 super\cf6  \cf10 keyPathsForValuesAffectingValueForKey\cf6 :key];
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6     \cf7 if\cf6  ([key \cf10 isEqualToString\cf6 :\cf11 @"fullName"\cf6 ]) \{
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6         \cf9 NSArray\cf6  *affectingKeys = \cf4 @[\cf11 @"givenName"\cf6 , \cf11 @"familyName"\cf4 ]\cf6 ;
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6         keyPaths = [keyPaths \cf10 setByAddingObjectsFromArray\cf6 :affectingKeys];
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6     \}
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6     \cf7 return\cf6  keyPaths;
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6 \}
+\f0\fs24 \cf0 \
+\
+
+\f3\fs28 \cf7 @end
+\f0\fs24 \cf0 \
+\pard\pardeftab720\sl360\partightenfactor0
+
+\f1\fs32 \cf2 \cb3 \expnd0\expndtw0\kerning0
+\
+\
+\pard\tx692\pardeftab692\pardirnatural\partightenfactor0
+
+\f3\fs28 \cf7 \cb5 \kerning1\expnd0\expndtw0 void\cf6  class_swizzleInstanceMethod(\cf14 Class\cf6  class, \cf7 SEL\cf6  originalSEL, \cf7 SEL\cf6  replacementSEL)
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6 \{
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6     \cf8 //class_getInstanceMethod()
+\f4 \'a3\'ac\'c8\'e7\'b9\'fb\'d7\'d3\'c0\'e0\'c3\'bb\'d3\'d0\'ca\'b5\'cf\'d6\'cf\'e0\'d3\'a6\'b5\'c4\'b7\'bd\'b7\'a8\'a3\'ac\'d4\'f2\'bb\'e1\'b7\'b5\'bb\'d8\'b8\'b8\'c0\'e0\'b5\'c4\'b7\'bd\'b7\'a8\'a1\'a3
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6     \cf9 Method\cf6  originMethod = \cf10 class_getInstanceMethod\cf6 (class, originalSEL);
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6     \cf9 Method\cf6  replaceMethod = \cf10 class_getInstanceMethod\cf6 (class, replacementSEL);
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6     \cf7 if\cf6  (!originMethod || !replaceMethod)\cf7 return\cf6 ;
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6     \cf8 //class_addMethod() 
+\f4 \'c5\'d0\'b6\'cf
+\f3 originalSEL
+\f4 \'ca\'c7\'b7\'f1\'d4\'da\'d7\'d3\'c0\'e0\'d6\'d0\'ca\'b5\'cf\'d6\'a3\'ac\'c8\'e7\'b9\'fb\'d6\'bb\'ca\'c7\'bc\'cc\'b3\'d0\'c1\'cb\'b8\'b8\'c0\'e0\'b5\'c4\'b7\'bd\'b7\'a8\'a3\'ac\'c3\'bb\'d3\'d0\'d6\'d8\'d0\'b4\'a3\'ac\'c4\'c7\'c3\'b4\'d6\'b1\'bd\'d3\'b5\'f7\'d3\'c3
+\f3 method_exchangeImplementations
+\f4 \'a3\'ac\'d4\'f2\'bb\'e1\'bd\'bb\'bb\'bb\'b8\'b8\'c0\'e0\'d6\'d0\'b5\'c4\'b7\'bd\'b7\'a8\'ba\'cd\'b5\'b1\'c7\'b0\'b5\'c4\'ca\'b5\'cf\'d6\'b7\'bd\'b7\'a8\'a1\'a3\'b4\'cb\'ca\'b1\'c8\'e7\'b9\'fb\'d3\'c3\'b8\'b8\'c0\'e0\'b5\'f7\'d3\'c3
+\f3 originalSEL
+\f4 \'a3\'ac\'d2\'f2\'ce\'aa\'b7\'bd\'b7\'a8\'d2\'d1\'be\'ad\'d3\'eb\'d7\'d3\'c0\'e0\'d6\'d0\'b5\'f7\'bb\'bb\'a3\'ac\'cb\'f9\'d2\'d4\'b8\'b8\'c0\'e0\'d6\'d0\'d5\'d2\'b2\'bb\'b5\'bd\'cf\'e0\'d3\'a6\'b5\'c4\'ca\'b5\'cf\'d6\'a3\'ac\'bb\'e1\'c5\'d7\'b3\'f6\'d2\'ec\'b3\'a3
+\f3 unrecognized selector.
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6     \cf8 //
+\f4 \'b5\'b1
+\f3 class_addMethod() 
+\f4 \'b7\'b5\'bb\'d8
+\f3 YES
+\f4 \'ca\'b1\'a3\'ac\'cb\'b5\'c3\'f7\'d7\'d3\'c0\'e0\'ce\'b4\'ca\'b5\'cf\'d6\'b4\'cb\'b7\'bd\'b7\'a8
+\f3 (
+\f4 \'b8\'f9\'be\'dd
+\f3 SEL
+\f4 \'c5\'d0\'b6\'cf
+\f3 )
+\f4 \'a3\'ac\'b4\'cb\'ca\'b1
+\f3 class_addMethod
+\f4 \'bb\'e1\'cc\'ed\'bc\'d3\'a3\'a8\'c3\'fb\'d7\'d6\'ce\'aa
+\f3 originalSEL
+\f4 \'a3\'ac\'ca\'b5\'cf\'d6\'ce\'aa
+\f3 replaceMethod
+\f4 \'a3\'a9\'b5\'c4\'b7\'bd\'b7\'a8\'a1\'a3\'b4\'cb\'ca\'b1\'d4\'da\'bd\'ab
+\f3 replacementSEL
+\f4 \'b5\'c4\'ca\'b5\'cf\'d6\'cc\'e6\'bb\'bb\'ce\'aa
+\f3 originMethod
+\f4 \'b5\'c4\'ca\'b5\'cf\'d6\'bc\'b4\'bf\'c9\'a1\'a3
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6     \cf8 //
+\f4 \'b5\'b1
+\f3 class_addMethod() 
+\f4 \'b7\'b5\'bb\'d8
+\f3 NO
+\f4 \'ca\'b1\'a3\'ac\'cb\'b5\'c3\'f7\'d7\'d3\'c0\'e0\'d6\'d0\'d3\'d0\'b8\'c3\'ca\'b5\'cf\'d6\'b7\'bd\'b7\'a8\'a3\'ac\'b4\'cb\'ca\'b1\'d6\'b1\'bd\'d3\'b5\'f7\'d3\'c3
+\f3 method_exchangeImplementations
+\f4 \'bd\'bb\'bb\'bb\'c1\'bd\'b8\'f6\'b7\'bd\'b7\'a8\'b5\'c4\'ca\'b5\'cf\'d6\'bc\'b4\'bf\'c9\'a1\'a3
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6     \cf8 //
+\f4 \'d7\'a2\'a3\'ba\'c8\'e7\'b9\'fb\'d4\'da\'d7\'d3\'c0\'e0\'d6\'d0\'ca\'b5\'cf\'d6\'b4\'cb\'b7\'bd\'b7\'a8\'c1\'cb\'a3\'ac\'bc\'b4\'ca\'b9\'d6\'bb\'ca\'c7\'b5\'a5\'b4\'bf\'b5\'c4\'b5\'f7\'d3\'c3
+\f3 super
+\f4 \'a3\'ac\'d2\'bb\'d1\'f9\'cb\'e3\'d6\'d8\'d0\'b4\'c1\'cb\'b8\'b8\'c0\'e0\'b5\'c4\'b7\'bd\'b7\'a8\'a3\'ac\'cb\'f9\'d2\'d4
+\f3 class_addMethod() 
+\f4 \'bb\'e1\'b7\'b5\'bb\'d8
+\f3 NO
+\f4 \'a1\'a3
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6     
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6     \cf8 //
+\f4 \'bf\'c9\'d3\'c3
+\f3 BaseClass
+\f4 \'ca\'b5\'d1\'e9
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6     \cf7 if\cf6 (\cf10 class_addMethod\cf6 (class, originalSEL, \cf10 method_getImplementation\cf6 (replaceMethod),\cf10 method_getTypeEncoding\cf6 (replaceMethod)))
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6     \{
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6         \cf10 class_replaceMethod\cf6 (class,replacementSEL, \cf10 method_getImplementation\cf6 (originMethod), \cf10 method_getTypeEncoding\cf6 (originMethod));
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6     \}\cf7 else\cf6  \{
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6         \cf10 method_exchangeImplementations\cf6 (originMethod, replaceMethod);
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6     \}
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6 \}
+\f0\fs24 \cf0 \
+\
+
+\f3\fs28 \cf7 void\cf6  class_swizzleClassMethod(\cf14 Class\cf6  class, \cf7 SEL\cf6  originalSEL, \cf7 SEL\cf6  replacementSEL)
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6 \{
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6     \cf8 //
+\f4 \'c0\'e0\'b7\'bd\'b7\'a8\'ca\'b5\'bc\'ca\'c9\'cf\'ca\'c7\'b4\'a2\'b4\'e6\'d4\'da\'c0\'e0\'b6\'d4\'cf\'f3\'b5\'c4\'c0\'e0
+\f3 (
+\f4 \'bc\'b4\'d4\'aa\'c0\'e0
+\f3 )
+\f4 \'d6\'d0\'a3\'ac\'bc\'b4\'c0\'e0\'b7\'bd\'b7\'a8\'cf\'e0\'b5\'b1\'d3\'da\'d4\'aa\'c0\'e0\'b5\'c4\'ca\'b5\'c0\'fd\'b7\'bd\'b7\'a8
+\f3 ,
+\f4 \'cb\'f9\'d2\'d4\'d6\'bb\'d0\'e8\'d2\'aa\'b0\'d1\'d4\'aa\'c0\'e0\'b4\'ab\'c8\'eb\'a3\'ac\'c6\'e4\'cb\'fb\'c2\'df\'bc\'ad\'ba\'cd\'bd\'bb\'bb\'a5\'ca\'b5\'c0\'fd\'b7\'bd\'b7\'a8\'d2\'bb\'d1\'f9\'a1\'a3
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6     \cf14 Class\cf6  class2 = \cf10 object_getClass\cf6 (class);
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6     \cf13 class_swizzleInstanceMethod\cf6 (class2, originalSEL, replacementSEL);
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6 \}
+\f0\fs24 \cf0 \
+\
+
+\f3\fs28 \cf7 void\cf6  WWSwizzleMethod(\cf14 Class\cf6  c, \cf7 SEL\cf6  origSEL, \cf7 SEL\cf6  newSEL) \{
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6     \cf9 Method\cf6  origMethod = \cf10 class_getInstanceMethod\cf6 (c, origSEL);
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6     \cf9 Method\cf6  newMethod = \cf7 nil\cf6 ;
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6     \cf7 if\cf6  (!origMethod) \{
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6         origMethod = \cf10 class_getClassMethod\cf6 (c, origSEL);
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6         \cf7 if\cf6  (!origMethod) \{
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6             \cf7 return\cf6 ;
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6         \}
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6         newMethod = \cf10 class_getClassMethod\cf6 (c, newSEL);
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6         \cf7 if\cf6  (!newMethod) \{
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6             \cf7 return\cf6 ;
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6         \}
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6     \}\cf7 else\cf6 \{
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6         newMethod = \cf10 class_getInstanceMethod\cf6 (c, newSEL);
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6         \cf7 if\cf6  (!newMethod) \{
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6             \cf7 return\cf6 ;
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6         \}
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6     \}
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6     
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6     \cf7 if\cf6 (\cf10 class_addMethod\cf6 (c, origSEL, \cf10 method_getImplementation\cf6 (newMethod), \cf10 method_getTypeEncoding\cf6 (newMethod)))\{
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6         \cf10 class_replaceMethod\cf6 (c, newSEL, \cf10 method_getImplementation\cf6 (origMethod), \cf10 method_getTypeEncoding\cf6 (origMethod));
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6     \}\cf7 else\cf6 \{
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6         \cf10 method_exchangeImplementations\cf6 (origMethod, newMethod);
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6     \}
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6 \}
+\f0\fs24 \cf0 \
+\pard\pardeftab720\sl360\partightenfactor0
+
+\f1\fs32 \cf2 \cb3 \expnd0\expndtw0\kerning0
+\
+\pard\tx692\pardeftab692\pardirnatural\partightenfactor0
+
+\f3\fs28 \cf12 \cb5 \kerning1\expnd0\expndtw0 #include \cf11 <stdio.h>
+\f1\fs32 \cf2 \cb3 \expnd0\expndtw0\kerning0
+\
+\pard\tx692\pardeftab692\pardirnatural\partightenfactor0
+
+\f3\fs28 \cf7 \cb5 \kerning1\expnd0\expndtw0 @interface\cf6  TargetProxy : \cf9 NSProxy\cf6  \{
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6     \cf7 id\cf6  realObject1;
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6     \cf7 id\cf6  realObject2;
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6 \}
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6 - (\cf7 id\cf6 )initWithTarget1:(\cf7 id\cf6 )t1 target2:(\cf7 id\cf6 )t2;
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf7 @end
+\f0\fs24 \cf0 \
+\
+
+\f3\fs28 \cf7 @implementation\cf6  TargetProxy
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6 - (\cf7 id\cf6 )initWithTarget1:(\cf7 id\cf6 )t1 target2:(\cf7 id\cf6 )t2 \{
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6     \cf14 realObject1\cf6  = t1;
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6     \cf14 realObject2\cf6  = t2;
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6     \cf7 return\cf6  \cf7 self\cf6 ;
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6 \}
+\f0\fs24 \cf0 \
+\
+
+\f3\fs28 \cf8 // The compiler knows the types at the call site but unfortunately doesn't
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf8 // leave them around for us to use, so we must poke around and find the types
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf8 // so that the invocation can be initialized from the stack frame.
+\f0\fs24 \cf0 \
+\
+
+\f3\fs28 \cf8 // Here, we ask the two real objects, realObject1 first, for their method
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf8 // signatures, since we'll be forwarding the message to one or the other
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf8 // of them in -forwardInvocation:.  If realObject1 returns a non-nil
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf8 // method signature, we use that, so in effect it has priority.
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6 - (\cf9 NSMethodSignature\cf6  *)methodSignatureForSelector:(\cf7 SEL\cf6 )aSelector \{
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6     \cf9 NSMethodSignature\cf6  *sig;
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6     sig = [\cf14 realObject1\cf6  \cf10 methodSignatureForSelector\cf6 :aSelector];
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6     \cf7 if\cf6  (sig) \cf7 return\cf6  sig;
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6     sig = [\cf14 realObject2\cf6  \cf10 methodSignatureForSelector\cf6 :aSelector];
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6     \cf7 return\cf6  sig;
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6 \}
+\f0\fs24 \cf0 \
+\
+
+\f3\fs28 \cf8 // Invoke the invocation on whichever real object had a signature for it.
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6 - (\cf7 void\cf6 )forwardInvocation:(\cf9 NSInvocation\cf6  *)invocation \{
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6     \cf7 id\cf6  target = [\cf14 realObject1\cf6  \cf10 methodSignatureForSelector\cf6 :[invocation \cf10 selector\cf6 ]] ? \cf14 realObject1\cf6  : \cf14 realObject2\cf6 ;
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6     [invocation \cf10 invokeWithTarget\cf6 :target];
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6 \}
+\f0\fs24 \cf0 \
+\
+
+\f3\fs28 \cf8 // Override some of NSProxy's implementations to forward them...
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6 - (\cf7 BOOL\cf6 )respondsToSelector:(\cf7 SEL\cf6 )aSelector \{
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6     \cf7 if\cf6  ([\cf14 realObject1\cf6  \cf10 respondsToSelector\cf6 :aSelector]) \cf7 return\cf6  \cf7 YES\cf6 ;
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6     \cf7 if\cf6  ([\cf14 realObject2\cf6  \cf10 respondsToSelector\cf6 :aSelector]) \cf7 return\cf6  \cf7 YES\cf6 ;
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6     \cf7 return\cf6  \cf7 NO\cf6 ;
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6 \}
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf7 @end
+\f0\fs24 \cf0 \
+\pard\tx692\pardeftab692\pardirnatural\partightenfactor0
+
+\f1\fs32 \cf2 \cb3 \expnd0\expndtw0\kerning0
+\
+\pard\tx692\pardeftab692\pardirnatural\partightenfactor0
+
+\f3\fs28 \cf6 \cb5 \kerning1\expnd0\expndtw0 -(\cf7 void\cf6 )test\{
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6     \cf8 // Create an empty mutable string, which will be one of the
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6     \cf8 // real objects for the proxy.
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6     \cf9 NSMutableString\cf6  *string = [[\cf9 NSMutableString\cf6  \cf10 alloc\cf6 ] \cf10 init\cf6 ];
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6     
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6     \cf8 // Create an empty mutable array, which will be the other
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6     \cf8 // real object for the proxy.
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6     \cf9 NSMutableArray\cf6  *array = [[\cf9 NSMutableArray\cf6  \cf10 alloc\cf6 ] \cf10 init\cf6 ];
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6     
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6     \cf8 // Create a proxy to wrap the real objects.  This is rather
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6     \cf8 // artificial for the purposes of this example -- you'd rarely
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6     \cf8 // have a single proxy covering two objects.  But it is possible.
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6     \cf7 id\cf6  proxy = [[\cf6 \cb5 \ulth \ulc6 T\cf6 \cb5 \ulnone argetProxy alloc] initWithTarget1:string target2:array];
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6     
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6     \cf8 // Note that we can't use appendFormat:, because vararg methods
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6     \cf8 // cannot be forwarded!
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6     [proxy \cf10 appendString\cf6 :\cf11 \cb5 @"This "\cf6 \cb5 ];
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6     [proxy \cf10 appendString\cf6 :\cf11 \cb5 @"is "\cf6 \cb5 ];
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6     [proxy \cf10 addObject\cf6 :string];
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6     [proxy \cf10 appendString\cf6 :\cf11 \cb5 @"a "\cf6 \cb5 ];
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6     [proxy \cf10 appendString\cf6 :\cf11 \cb5 @"test!"\cf6 \cb5 ];
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6     
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6     \cf10 NSLog\cf6 (\cf11 \cb5 @"count should be 1, it is: %lu"\cf6 \cb5 , (\cf7 unsigned\cf6  \cf7 long\cf6 )[proxy \cf10 count\cf6 ]);
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6     
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6     \cf7 if\cf6  ([[proxy \cf10 objectAtIndex\cf6 :\cf4 \cb5 0\cf6 \cb5 ] \cf10 isEqualToString\cf6 :\cf11 \cb5 @"This is a test!"\cf6 \cb5 ]) \{
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6         \cf10 NSLog\cf6 (\cf11 \cb5 @"Appending successful.___%@"\cf6 \cb5 , proxy);
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6     \} \cf7 else\cf6  \{
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6         \cf10 NSLog\cf6 (\cf11 \cb5 @"Appending failed, got: '%@'"\cf6 \cb5 , proxy);
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6     \}
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6     
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6     \cf10 NSLog\cf6 (\cf11 \cb5 @"Example finished without errors."\cf6 \cb5 );
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6     
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6 \}
+\f0\fs24 \cf0 \
+\pard\pardeftab720\sl360\partightenfactor0
+
+\f1\fs32 \cf2 \cb3 \expnd0\expndtw0\kerning0
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
 }

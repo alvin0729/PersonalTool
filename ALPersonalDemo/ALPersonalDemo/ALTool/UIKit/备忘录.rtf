@@ -39,37 +39,37 @@
 \f0\fs28 \cf2 \cb3 - (\cf4 UIBezierPath\cf2  *)pathForProgress:(\cf4 CGFloat\cf2 )progress\{
 \f1\fs24 \cf0 \
 
-\f0\fs28 \cf2     \cf4 CGFloat\cf2  radius = \cf5 self\cf2 .\cf6 topShowBackgroundView\cf2 .\cf4 frame\cf2 .\cf4 size\cf2 .\cf4 height\cf2  * \cf7 0.5\cf2 ;
+\f0\fs28 \cf2     \cf4 CGFloat\cf2  radius = \cf5 self\cf2 .\cf6 topShowBackgroundView\cf2 .\cf4 frame\cf2 .\cf4 size\cf2 .\cf4 height\cf2  * \cf7 \cb3 0.5\cf2 \cb3 ;
 \f1\fs24 \cf0 \
 
-\f0\fs28 \cf2     \cf4 CGPoint\cf2  center1 = \cf8 CGPointMake\cf2 (\cf5 self\cf2 .\cf6 topShowBackgroundView\cf2 .\cf4 frame\cf2 .\cf4 size\cf2 .\cf4 width\cf2  * progress+radius, \cf5 self\cf2 .\cf6 topShowBackgroundView\cf2 .\cf4 frame\cf2 .\cf4 size\cf2 .\cf4 height\cf2  * \cf7 0.5\cf2 );
+\f0\fs28 \cf2     \cf4 CGPoint\cf2  center1 = \cf8 CGPointMake\cf2 (\cf5 self\cf2 .\cf6 topShowBackgroundView\cf2 .\cf4 frame\cf2 .\cf4 size\cf2 .\cf4 width\cf2  * progress+radius, \cf5 self\cf2 .\cf6 topShowBackgroundView\cf2 .\cf4 frame\cf2 .\cf4 size\cf2 .\cf4 height\cf2  * \cf7 \cb3 0.5\cf2 \cb3 );
 \f1\fs24 \cf0 \
 
 \f0\fs28 \cf2     \cf4 UIBezierPath\cf2  *path = [\cf4 UIBezierPath\cf2  \cf8 bezierPath\cf2 ];
 \f1\fs24 \cf0 \
 
-\f0\fs28 \cf2     [path \cf8 moveToPoint\cf2 :\cf8 CGPointMake\cf2 (\cf5 self\cf2 .\cf6 topShowBackgroundView\cf2 .\cf4 frame\cf2 .\cf4 size\cf2 .\cf4 width\cf2  * progress+radius, \cf7 0\cf2 )];
+\f0\fs28 \cf2     [path \cf8 moveToPoint\cf2 :\cf8 CGPointMake\cf2 (\cf5 self\cf2 .\cf6 topShowBackgroundView\cf2 .\cf4 frame\cf2 .\cf4 size\cf2 .\cf4 width\cf2  * progress+radius, \cf7 \cb3 0\cf2 \cb3 )];
 \f1\fs24 \cf0 \
 
-\f0\fs28 \cf2     [path \cf8 addArcWithCenter\cf2 :center1 \cf8 radius\cf2 :radius \cf8 startAngle\cf2 :\cf9 M_PI\cf2 *\cf7 1.5\cf2   \cf8 endAngle\cf2 : \cf9 M_PI\cf2 *\cf7 0.5\cf2  \cf8 clockwise\cf2 :\cf5 NO\cf2 ];
+\f0\fs28 \cf2     [path \cf8 addArcWithCenter\cf2 :center1 \cf8 radius\cf2 :radius \cf8 startAngle\cf2 :\cf9 \cb3 M_PI\cf2 \cb3 *\cf7 \cb3 1.5\cf2 \cb3   \cf8 endAngle\cf2 : \cf9 \cb3 M_PI\cf2 \cb3 *\cf7 \cb3 0.5\cf2 \cb3  \cf8 clockwise\cf2 :\cf5 NO\cf2 ];
 \f1\fs24 \cf0 \
 
 \f0\fs28 \cf2     [path \cf8 addLineToPoint\cf2 :\cf8 CGPointMake\cf2 (\cf5 self\cf2 .\cf6 topShowBackgroundView\cf2 .\cf4 frame\cf2 .\cf4 size\cf2 .\cf4 width\cf2  - radius, \cf5 self\cf2 .\cf6 topShowBackgroundView\cf2 .\cf4 frame\cf2 .\cf4 size\cf2 .\cf4 height\cf2 )];
 \f1\fs24 \cf0 \
 
-\f0\fs28 \cf2     \cf4 CGPoint\cf2  center2 = \cf8 CGPointMake\cf2 (\cf5 self\cf2 .\cf6 topShowBackgroundView\cf2 .\cf4 frame\cf2 .\cf4 size\cf2 .\cf4 width\cf2  - radius, \cf5 self\cf2 .\cf6 topShowBackgroundView\cf2 .\cf4 frame\cf2 .\cf4 size\cf2 .\cf4 height\cf2  * \cf7 0.5\cf2 );
+\f0\fs28 \cf2     \cf4 CGPoint\cf2  center2 = \cf8 CGPointMake\cf2 (\cf5 self\cf2 .\cf6 topShowBackgroundView\cf2 .\cf4 frame\cf2 .\cf4 size\cf2 .\cf4 width\cf2  - radius, \cf5 self\cf2 .\cf6 topShowBackgroundView\cf2 .\cf4 frame\cf2 .\cf4 size\cf2 .\cf4 height\cf2  * \cf7 \cb3 0.5\cf2 \cb3 );
 \f1\fs24 \cf0 \
 
-\f0\fs28 \cf2     [path \cf8 addArcWithCenter\cf2 :center2 \cf8 radius\cf2 : radius \cf8 startAngle\cf2 :\cf9 M_PI\cf2 *\cf7 0.5\cf2  \cf8 endAngle\cf2 :\cf9 M_PI\cf2 *\cf7 1.5\cf2  \cf8 clockwise\cf2 :\cf5 NO\cf2 ];
+\f0\fs28 \cf2     [path \cf8 addArcWithCenter\cf2 :center2 \cf8 radius\cf2 : radius \cf8 startAngle\cf2 :\cf9 \cb3 M_PI\cf2 \cb3 *\cf7 \cb3 0.5\cf2 \cb3  \cf8 endAngle\cf2 :\cf9 \cb3 M_PI\cf2 \cb3 *\cf7 \cb3 1.5\cf2 \cb3  \cf8 clockwise\cf2 :\cf5 NO\cf2 ];
 \f1\fs24 \cf0 \
 
-\f0\fs28 \cf2     [path \cf8 addLineToPoint\cf2 :\cf8 CGPointMake\cf2 (\cf5 self\cf2 .\cf6 topShowBackgroundView\cf2 .\cf4 frame\cf2 .\cf4 size\cf2 .\cf4 width\cf2  * progress+radius, \cf7 0\cf2 )];
+\f0\fs28 \cf2     [path \cf8 addLineToPoint\cf2 :\cf8 CGPointMake\cf2 (\cf5 self\cf2 .\cf6 topShowBackgroundView\cf2 .\cf4 frame\cf2 .\cf4 size\cf2 .\cf4 width\cf2  * progress+radius, \cf7 \cb3 0\cf2 \cb3 )];
 \f1\fs24 \cf0 \
 
 \f0\fs28 \cf2     [path \cf8 closePath\cf2 ];
 \f1\fs24 \cf0 \
 
-\f0\fs28 \cf2     path.\cf4 lineWidth\cf2  = \cf7 1\cf2 ;
+\f0\fs28 \cf2     path.\cf4 lineWidth\cf2  = \cf7 \cb3 1\cf2 \cb3 ;
 \f1\fs24 \cf0 \
 
 \f0\fs28 \cf2     \cf5 return\cf2  path;
@@ -150,45 +150,45 @@
 \fs36 \'a0 \'a0 \}];\
 \pard\tx642\pardeftab642\pardirnatural\partightenfactor0
 
-\f0\fs26 \cf2 \cb11 \kerning1\expnd0\expndtw0 \CocoaLigature0 - (\cf5 void\cf2 )rn_addChildViewController:(\cf4 UIViewController\cf2  *)controller \{\
-    [controller \cf8 beginAppearanceTransition\cf2 :\cf5 YES\cf2  \cf8 animated\cf2 :\cf5 NO\cf2 ];\
-    [controller \cf8 willMoveToParentViewController\cf2 :\cf5 self\cf2 ];\
-    [\cf5 self\cf2  \cf8 addChildViewController\cf2 :controller];\
-    [\cf5 self\cf2 .\cf4 view\cf2  \cf8 addSubview\cf2 :controller.\cf4 view\cf2 ];\
-    [controller \cf8 didMoveToParentViewController\cf2 :controller];\
-    [controller \cf8 endAppearanceTransition\cf2 ];\
+\f0\fs26 \cf2 \cb11 \kerning1\expnd0\expndtw0 \CocoaLigature0 - (\cf5 \cb11 void\cf2 \cb11 )rn_addChildViewController:(\cf4 \cb11 UIViewController\cf2 \cb11  *)controller \{\
+    [controller \cf8 \cb11 beginAppearanceTransition\cf2 \cb11 :\cf5 \cb11 YES\cf2 \cb11  \cf8 \cb11 animated\cf2 \cb11 :\cf5 \cb11 NO\cf2 \cb11 ];\
+    [controller \cf8 \cb11 willMoveToParentViewController\cf2 \cb11 :\cf5 \cb11 self\cf2 \cb11 ];\
+    [\cf5 \cb11 self\cf2 \cb11  \cf8 \cb11 addChildViewController\cf2 \cb11 :controller];\
+    [\cf5 \cb11 self\cf2 \cb11 .\cf4 \cb11 view\cf2 \cb11  \cf8 \cb11 addSubview\cf2 \cb11 :controller.\cf4 \cb11 view\cf2 \cb11 ];\
+    [controller \cf8 \cb11 didMoveToParentViewController\cf2 \cb11 :controller];\
+    [controller \cf8 \cb11 endAppearanceTransition\cf2 \cb11 ];\
 \}\
-- (\cf5 void\cf2 )rn_removeChildViewController:(\cf4 UIViewController\cf2  *)controller \{\
-    \cf5 if\cf2  ([\cf5 self\cf2 .\cf4 childViewControllers\cf2  \cf8 containsObject\cf2 :controller]) \{\
-        [controller \cf8 beginAppearanceTransition\cf2 :\cf5 NO\cf2  \cf8 animated\cf2 :\cf5 NO\cf2 ];\
-        [controller \cf8 willMoveToParentViewController\cf2 :\cf5 nil\cf2 ];\
-        [controller.\cf4 view\cf2  \cf8 removeFromSuperview\cf2 ];\
-        [controller \cf8 removeFromParentViewController\cf2 ];\
-        [controller \cf8 didMoveToParentViewController\cf2 :\cf5 nil\cf2 ];\
-        [controller \cf8 endAppearanceTransition\cf2 ];\
+- (\cf5 \cb11 void\cf2 \cb11 )rn_removeChildViewController:(\cf4 \cb11 UIViewController\cf2 \cb11  *)controller \{\
+    \cf5 \cb11 if\cf2 \cb11  ([\cf5 \cb11 self\cf2 \cb11 .\cf4 \cb11 childViewControllers\cf2 \cb11  \cf8 \cb11 containsObject\cf2 \cb11 :controller]) \{\
+        [controller \cf8 \cb11 beginAppearanceTransition\cf2 \cb11 :\cf5 \cb11 NO\cf2 \cb11  \cf8 \cb11 animated\cf2 \cb11 :\cf5 \cb11 NO\cf2 \cb11 ];\
+        [controller \cf8 \cb11 willMoveToParentViewController\cf2 \cb11 :\cf5 \cb11 nil\cf2 \cb11 ];\
+        [controller.\cf4 \cb11 view\cf2 \cb11  \cf8 \cb11 removeFromSuperview\cf2 \cb11 ];\
+        [controller \cf8 \cb11 removeFromParentViewController\cf2 \cb11 ];\
+        [controller \cf8 \cb11 didMoveToParentViewController\cf2 \cb11 :\cf5 \cb11 nil\cf2 \cb11 ];\
+        [controller \cf8 \cb11 endAppearanceTransition\cf2 \cb11 ];\
     \}\
 \}\
 \
-- (\cf5 void\cf2 ) flipFromViewController:(\cf4 UIViewController\cf2 *) fromController toViewController:(\cf4 UIViewController\cf2 *) toController  withDirection:(\cf4 UIViewAnimationOptions\cf2 ) direction andDelay:(\cf5 double\cf2 ) delay\
+- (\cf5 \cb11 void\cf2 \cb11 ) flipFromViewController:(\cf4 \cb11 UIViewController\cf2 \cb11 *) fromController toViewController:(\cf4 \cb11 UIViewController\cf2 \cb11 *) toController  withDirection:(\cf4 \cb11 UIViewAnimationOptions\cf2 \cb11 ) direction andDelay:(\cf5 \cb11 double\cf2 \cb11 ) delay\
 \{\
-    \cf4 dispatch_time_t\cf2  popTime = \cf8 dispatch_time\cf2 (\cf9 DISPATCH_TIME_NOW\cf2 , delay * \cf9 NSEC_PER_SEC\cf2 );\
+    \cf4 \cb11 dispatch_time_t\cf2 \cb11  popTime = \cf8 \cb11 dispatch_time\cf2 \cb11 (\cf9 \cb11 DISPATCH_TIME_NOW\cf2 \cb11 , delay * \cf9 \cb11 NSEC_PER_SEC\cf2 \cb11 );\
 \
-    \cf8 dispatch_after\cf2 (popTime, \cf8 dispatch_get_main_queue\cf2 (), ^(\cf5 void\cf2 )\{\
+    \cf8 \cb11 dispatch_after\cf2 \cb11 (popTime, \cf8 \cb11 dispatch_get_main_queue\cf2 \cb11 (), ^(\cf5 \cb11 void\cf2 \cb11 )\{\
         \
-        toController.\cf4 view\cf2 .\cf4 frame\cf2  = fromController.\cf4 view\cf2 .\cf4 bounds\cf2 ;                           \cf20 //  1\cf2 \
-        [\cf5 self\cf2  \cf8 addChildViewController\cf2 :toController];                                     \cf20 //  2\cf2 \
-        [fromController \cf8 willMoveToParentViewController\cf2 :\cf5 nil\cf2 ];                            \cf20 //  3\cf2 \
+        toController.\cf4 \cb11 view\cf2 \cb11 .\cf4 \cb11 frame\cf2 \cb11  = fromController.\cf4 \cb11 view\cf2 \cb11 .\cf4 \cb11 bounds\cf2 \cb11 ;                           \cf20 \cb11 //  1\cf2 \cb11 \
+        [\cf5 \cb11 self\cf2 \cb11  \cf8 \cb11 addChildViewController\cf2 \cb11 :toController];                                     \cf20 \cb11 //  2\cf2 \cb11 \
+        [fromController \cf8 \cb11 willMoveToParentViewController\cf2 \cb11 :\cf5 \cb11 nil\cf2 \cb11 ];                            \cf20 \cb11 //  3\cf2 \cb11 \
         \
-        [\cf5 self\cf2  \cf8 transitionFromViewController\cf2 :fromController\
-                          \cf8 toViewController\cf2 :toController\
-                                  \cf8 duration\cf2 :\cf7 0.2\cf2 \
-                                   \cf8 options\cf2 :direction | \cf8 UIViewAnimationOptionCurveEaseIn\cf2 \
-                                \cf8 animations\cf2 :\cf5 nil\cf2 \
-                                \cf8 completion\cf2 :^(\cf5 BOOL\cf2  finished) \{\
+        [\cf5 \cb11 self\cf2 \cb11  \cf8 \cb11 transitionFromViewController\cf2 \cb11 :fromController\
+                          \cf8 \cb11 toViewController\cf2 \cb11 :toController\
+                                  \cf8 \cb11 duration\cf2 \cb11 :\cf7 \cb11 0.2\cf2 \cb11 \
+                                   \cf8 \cb11 options\cf2 \cb11 :direction | \cf8 \cb11 UIViewAnimationOptionCurveEaseIn\cf2 \cb11 \
+                                \cf8 \cb11 animations\cf2 \cb11 :\cf5 \cb11 nil\cf2 \cb11 \
+                                \cf8 \cb11 completion\cf2 \cb11 :^(\cf5 \cb11 BOOL\cf2 \cb11  finished) \{\
                                     \
-                                    [toController \cf8 didMoveToParentViewController\cf2 :\cf5 self\cf2 ];  \cf20 //  4\cf2 \
-                                    [fromController \cf8 removeFromParentViewController\cf2 ];    \cf20 //  5\cf2 \
-                                    [\cf6 infoButton\cf2  \cf8 setEnabled\cf2 :\cf5 YES\cf2 ];\
+                                    [toController \cf8 \cb11 didMoveToParentViewController\cf2 \cb11 :\cf5 \cb11 self\cf2 \cb11 ];  \cf20 \cb11 //  4\cf2 \cb11 \
+                                    [fromController \cf8 \cb11 removeFromParentViewController\cf2 \cb11 ];    \cf20 \cb11 //  5\cf2 \cb11 \
+                                    [\cf6 \cb11 infoButton\cf2 \cb11  \cf8 \cb11 setEnabled\cf2 \cb11 :\cf5 \cb11 YES\cf2 \cb11 ];\
                                 \}];\
     \});\
 \}\
@@ -199,7 +199,7 @@
 \clvertalt \clshdrawnil \clwWidth13200\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadl0 \clpadr0 \gaph\cellx8640
 \pard\intbl\itap1\pardeftab720\qc\partightenfactor0
 
-\f3\fs2 \cf21 \expnd0\expndtw0\kerning0
+\f3\fs2 \cf21 \cb11 \expnd0\expndtw0\kerning0
 \CocoaLigature1 \cell 
 \pard\intbl\itap1\pardeftab720\partightenfactor0
 
@@ -237,7 +237,8 @@
 \f0 \cf2 \cb11 \kerning1\expnd0\expndtw0 \CocoaLigature0 \
 \
 \
-\cf5 self\cf2 .\cf6 searchController\cf2  = [[\cf4 UISearchDisplayController\cf2  \cf8 alloc\cf2 ] \cf8 initWithSearchBar\cf2 :\cf5 self\cf2 .\cf6 searchBar\cf2  \cf8 contentsController\cf2 :\cf5 self\cf2 ];\
+\pard\tx642\pardeftab642\pardirnatural\partightenfactor0
+\cf5 \cb11 self\cf2 \cb11 .\cf6 \cb11 searchController\cf2 \cb11  = [[\cf4 \cb11 UISearchDisplayController\cf2 \cb11  \cf8 \cb11 alloc\cf2 \cb11 ] \cf8 \cb11 initWithSearchBar\cf2 \cb11 :\cf5 \cb11 self\cf2 \cb11 .\cf6 \cb11 searchBar\cf2 \cb11  \cf8 \cb11 contentsController\cf2 \cb11 :\cf5 \cb11 self\cf2 \cb11 ];\
 \
 \pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
 \ls1\ilvl0
@@ -265,23 +266,23 @@
 \}\'a0
 \f0\fs26 \cf2 \cb11 \kerning1\expnd0\expndtw0 \CocoaLigature0 \
 \pard\tx642\pardeftab642\pardirnatural\partightenfactor0
-\cf2 \
+\cf2 \cb11 \
 \
-stringRect = [string \cf8 boundingRectWithSize\cf2 :constraintSize\
-                                              \cf8 options\cf2 :(\cf4 NSStringDrawingOptions\cf2 )(\cf8 NSStringDrawingUsesFontLeading\cf2 |\cf8 NSStringDrawingTruncatesLastVisibleLine\cf2 |\cf8 NSStringDrawingUsesLineFragmentOrigin\cf2 )\
-                                           \cf8 attributes\cf2 :\cf7 @\{\cf4 NSFontAttributeName\cf2 : \cf5 self\cf2 .\cf6 statusLabel\cf2 .\cf4 font\cf7 \}\cf2 \
-                                              \cf8 context\cf2 :\cf5 NULL\cf2 ];\
+stringRect = [string \cf8 \cb11 boundingRectWithSize\cf2 \cb11 :constraintSize\
+                                              \cf8 \cb11 options\cf2 \cb11 :(\cf4 \cb11 NSStringDrawingOptions\cf2 \cb11 )(\cf8 \cb11 NSStringDrawingUsesFontLeading\cf2 \cb11 |\cf8 \cb11 NSStringDrawingTruncatesLastVisibleLine\cf2 \cb11 |\cf8 \cb11 NSStringDrawingUsesLineFragmentOrigin\cf2 \cb11 )\
+                                           \cf8 \cb11 attributes\cf2 \cb11 :\cf7 \cb11 @\{\cf4 NSFontAttributeName\cf2 \cb11 : \cf5 \cb11 self\cf2 \cb11 .\cf6 \cb11 statusLabel\cf2 \cb11 .\cf4 \cb11 font\cf7 \}\cf2 \cb11 \
+                                              \cf8 \cb11 context\cf2 \cb11 :\cf5 \cb11 NULL\cf2 \cb11 ];\
 \
-\cf4 NSMutableAttributedString\cf2  *selectedAttrituteTitle = [[\cf4 NSMutableAttributedString\cf2  \cf8 alloc\cf2 ] \cf8 initWithString\cf2 :[\cf4 NSString\cf2  \cf8 stringWithFormat\cf2 :\cf32 @"%@"\cf2 ,btnTitle]];\
-    [selectedAttrituteTitle \cf8 setAttributes\cf2 :\cf7 @\{\cf4 NSForegroundColorAttributeName\cf2  : [\cf4 UIColor\cf2  \cf8 blackColor\cf2 ], \cf4 NSFontAttributeName\cf2  : \cf9 DDPingFangSCMediumFONT\cf2 (\cf7 12\cf2 )\cf7 \}\cf2  \cf8 range\cf2 :\cf8 NSMakeRange\cf2 (\cf7 0\cf2 , attrituteTitle.\cf4 length\cf2 )];\
+\pard\tx642\pardeftab642\pardirnatural\partightenfactor0
+\cf4 \cb11 NSMutableAttributedString\cf2 \cb11  *selectedAttrituteTitle = [[\cf4 \cb11 NSMutableAttributedString\cf2 \cb11  \cf8 \cb11 alloc\cf2 \cb11 ] \cf8 \cb11 initWithString\cf2 \cb11 :[\cf4 \cb11 NSString\cf2 \cb11  \cf8 \cb11 stringWithFormat\cf2 \cb11 :\cf32 \cb11 @"%@"\cf2 \cb11 ,btnTitle]];\
+    [selectedAttrituteTitle \cf8 \cb11 setAttributes\cf2 \cb11 :\cf7 \cb11 @\{\cf4 NSForegroundColorAttributeName\cf2 \cb11  : [\cf4 \cb11 UIColor\cf2 \cb11  \cf8 \cb11 blackColor\cf2 \cb11 ], \cf4 \cb11 NSFontAttributeName\cf2 \cb11  : \cf9 \cb11 DDPingFangSCMediumFONT\cf2 \cb11 (\cf7 \cb11 12\cf2 \cb11 )\cf7 \cb11 \}\cf2 \cb11  \cf8 \cb11 range\cf2 \cb11 :\cf8 \cb11 NSMakeRange\cf2 \cb11 (\cf7 \cb11 0\cf2 \cb11 , attrituteTitle.\cf4 \cb11 length\cf2 \cb11 )];\
 \
 \pard\tx692\pardeftab692\pardirnatural\partightenfactor0
 
 \fs28 \cf4 \cb3 \CocoaLigature1 NSMutableAttributedString\cf2  *contentAttributeStr = [[\cf4 NSMutableAttributedString\cf2  \cf8 alloc\cf2 ] \cf8 initWithString\cf2 :[\cf4 NSString\cf2  \cf8 stringWithFormat\cf2 :\cf32 \cb3 @"%@"\cf2 \cb3 ,text]];
 \f1\fs24 \cf0 \
-\pard\tx692\pardeftab692\pardirnatural\partightenfactor0
 
-\f0\fs28 \cf2     [contentAttributeStr \cf8 setAttributes\cf2 :\cf7 @\{\cf4 NSForegroundColorAttributeName\cf2  : \cf9 UIColorHex\cf2 (\cf7 0xf1cbb2\cf2 ), \cf4 NSFontAttributeName\cf2  : \cf9 DDFONT\cf2 (\cf7 13\cf2 )\cf7 \}\cf2  \cf8 range\cf2 :\cf8 NSMakeRange\cf2 (\cf7 0\cf2 , contentAttributeStr.\cf4 length\cf2 )];
+\f0\fs28 \cf2     [contentAttributeStr \cf8 setAttributes\cf2 :\cf7 \cb3 @\{\cf4 \cb3 NSForegroundColorAttributeName\cf2  : \cf9 \cb3 UIColorHex\cf2 \cb3 (\cf7 \cb3 0xf1cbb2\cf2 \cb3 ), \cf4 NSFontAttributeName\cf2  : \cf9 \cb3 DDFONT\cf2 \cb3 (\cf7 \cb3 13\cf2 \cb3 )\cf7 \cb3 \}\cf2 \cb3  \cf8 range\cf2 :\cf8 NSMakeRange\cf2 (\cf7 \cb3 0\cf2 \cb3 , contentAttributeStr.\cf4 length\cf2 )];
 \f1\fs24 \cf0 \
 
 \f0\fs28 \cf2     
@@ -291,8 +292,8 @@ stringRect = [string \cf8 boundingRectWithSize\cf2 :constraintSize\
 \f1\fs24 \cf0 \
 
 \f0\fs28 \cf2         [contentAttributeStr \cf8 appendAttributedString\cf2 :[[\cf4 NSAttributedString\cf2  \cf8 alloc\cf2 ] \cf8 initWithString\cf2 :\cf32 \cb3 @" 
-\f2 \'bb\'d8\'b8\'b4
-\f0  "\cf2 \cb3 ]];
+\f2 \cf32 \cb3 \'bb\'d8\'b8\'b4
+\f0 \cf32 \cb3  "\cf2 \cb3 ]];
 \f1\fs24 \cf0 \
 
 \f0\fs28 \cf2         
@@ -301,7 +302,7 @@ stringRect = [string \cf8 boundingRectWithSize\cf2 :constraintSize\
 \f0\fs28 \cf2         \cf4 NSMutableAttributedString\cf2  *contentAppendingStr = [[\cf4 NSMutableAttributedString\cf2  \cf8 alloc\cf2 ] \cf8 initWithString\cf2 :[\cf4 NSString\cf2  \cf8 stringWithFormat\cf2 :\cf32 \cb3 @"%@"\cf2 \cb3 ,model.\cf6 balkNickName\cf2 ]];
 \f1\fs24 \cf0 \
 
-\f0\fs28 \cf2         [contentAppendingStr \cf8 setAttributes\cf2 :\cf7 @\{\cf4 NSForegroundColorAttributeName\cf2  : \cf9 UIColorHex\cf2 (\cf7 0xf1cbb2\cf2 ), \cf4 NSFontAttributeName\cf2  : \cf9 DDFONT\cf2 (\cf7 13\cf2 )\cf7 \}\cf2  \cf8 range\cf2 :\cf8 NSMakeRange\cf2 (\cf7 0\cf2 , contentAppendingStr.\cf4 length\cf2 )];
+\f0\fs28 \cf2         [contentAppendingStr \cf8 setAttributes\cf2 :\cf7 \cb3 @\{\cf4 \cb3 NSForegroundColorAttributeName\cf2  : \cf9 \cb3 UIColorHex\cf2 \cb3 (\cf7 \cb3 0xf1cbb2\cf2 \cb3 ), \cf4 NSFontAttributeName\cf2  : \cf9 \cb3 DDFONT\cf2 \cb3 (\cf7 \cb3 13\cf2 \cb3 )\cf7 \cb3 \}\cf2 \cb3  \cf8 range\cf2 :\cf8 NSMakeRange\cf2 (\cf7 \cb3 0\cf2 \cb3 , contentAppendingStr.\cf4 length\cf2 )];
 \f1\fs24 \cf0 \
 
 \f0\fs28 \cf2         
@@ -317,8 +318,8 @@ stringRect = [string \cf8 boundingRectWithSize\cf2 :constraintSize\
 \f1\fs24 \cf0 \
 
 \f0\fs28 \cf2     \cf4 NSMutableAttributedString\cf2  *contentAppendingStr = [[\cf4 NSMutableAttributedString\cf2  \cf8 alloc\cf2 ] \cf8 initWithString\cf2 :[\cf4 NSString\cf2  \cf8 stringWithFormat\cf2 :\cf32 \cb3 @"
-\f2 \'a3\'ba
-\f0 %@"\cf2 \cb3 , model.\cf6 balkContent\cf2 ]];
+\f2 \cf32 \cb3 \'a3\'ba
+\f0 \cf32 \cb3 %@"\cf2 \cb3 , model.\cf6 balkContent\cf2 ]];
 \f1\fs24 \cf0 \
 
 \f0\fs28 \cf2     [contentAttributeStr \cf8 appendAttributedString\cf2 :contentAppendingStr];\
@@ -379,26 +380,26 @@ UIFont
 \
 \pard\tx642\pardeftab642\pardirnatural\partightenfactor0
 
-\f0\fs26 \cf2 \cb11 \kerning1\expnd0\expndtw0 \CocoaLigature0 - (\cf4 CAShapeLayer\cf2  *)addLineOriginPoint:(\cf4 CGPoint\cf2 )p0 toPoint:(\cf4 CGPoint\cf2 )p1 color:(\cf4 UIColor\cf2  *)color borderWidth:(\cf4 CGFloat\cf2 )borderWidth \{\
-    \cf20 /// 
+\f0\fs26 \cf2 \cb11 \kerning1\expnd0\expndtw0 \CocoaLigature0 - (\cf4 \cb11 CAShapeLayer\cf2 \cb11  *)addLineOriginPoint:(\cf4 \cb11 CGPoint\cf2 \cb11 )p0 toPoint:(\cf4 \cb11 CGPoint\cf2 \cb11 )p1 color:(\cf4 \cb11 UIColor\cf2 \cb11  *)color borderWidth:(\cf4 \cb11 CGFloat\cf2 \cb11 )borderWidth \{\
+    \cf20 \cb11 /// 
 \f2 \'cf\'df\'b5\'c4\'c2\'b7\'be\'b6
-\f0 \cf2 \
-    \cf4 UIBezierPath\cf2  * bezierPath = [\cf4 UIBezierPath\cf2  \cf8 bezierPath\cf2 ];\
-    [bezierPath \cf8 moveToPoint\cf2 :p0];\
-    [bezierPath \cf8 addLineToPoint\cf2 :p1];\
+\f0 \cf2 \cb11 \
+    \cf4 \cb11 UIBezierPath\cf2 \cb11  * bezierPath = [\cf4 \cb11 UIBezierPath\cf2 \cb11  \cf8 \cb11 bezierPath\cf2 \cb11 ];\
+    [bezierPath \cf8 \cb11 moveToPoint\cf2 \cb11 :p0];\
+    [bezierPath \cf8 \cb11 addLineToPoint\cf2 \cb11 :p1];\
     \
-    \cf4 CAShapeLayer\cf2  * shapeLayer = [\cf4 CAShapeLayer\cf2  \cf8 layer\cf2 ];\
-    shapeLayer.\cf4 strokeColor\cf2  = color.\cf4 CGColor\cf2 ;\
-    shapeLayer.\cf4 fillColor\cf2   = [\cf4 UIColor\cf2  \cf8 clearColor\cf2 ].\cf4 CGColor\cf2 ;\
-    \cf20 /// 
+    \cf4 \cb11 CAShapeLayer\cf2 \cb11  * shapeLayer = [\cf4 \cb11 CAShapeLayer\cf2 \cb11  \cf8 \cb11 layer\cf2 \cb11 ];\
+    shapeLayer.\cf4 \cb11 strokeColor\cf2 \cb11  = color.\cf4 \cb11 CGColor\cf2 \cb11 ;\
+    shapeLayer.\cf4 \cb11 fillColor\cf2 \cb11   = [\cf4 \cb11 UIColor\cf2 \cb11  \cf8 \cb11 clearColor\cf2 \cb11 ].\cf4 \cb11 CGColor\cf2 \cb11 ;\
+    \cf20 \cb11 /// 
 \f2 \'cc\'ed\'bc\'d3\'c2\'b7\'be\'b6
-\f0 \cf2 \
-    shapeLayer.\cf4 path\cf2  = bezierPath.\cf4 CGPath\cf2 ;\
-    \cf20 /// 
+\f0 \cf2 \cb11 \
+    shapeLayer.\cf4 \cb11 path\cf2 \cb11  = bezierPath.\cf4 \cb11 CGPath\cf2 \cb11 ;\
+    \cf20 \cb11 /// 
 \f2 \'cf\'df\'bf\'ed\'b6\'c8
-\f0 \cf2 \
-    shapeLayer.\cf4 lineWidth\cf2  = borderWidth;\
-    \cf5 return\cf2  shapeLayer;\
+\f0 \cf2 \cb11 \
+    shapeLayer.\cf4 \cb11 lineWidth\cf2 \cb11  = borderWidth;\
+    \cf5 \cb11 return\cf2 \cb11  shapeLayer;\
 \}
 \f3\fs28 \cf0 \cb10 \expnd0\expndtw0\kerning0
 \CocoaLigature1 \
@@ -407,9 +408,8 @@ UIFont
 \f2 \cf0 \
 \pard\tx692\pardeftab692\pardirnatural\partightenfactor0
 
-\f0 \cf4 \cb3 \kerning1\expnd0\expndtw0 UIBezierPath\cf2  *maskPath = [\cf4 UIBezierPath\cf2  \cf8 bezierPathWithRoundedRect\cf2 :cellBounds \cf8 byRoundingCorners\cf2 :\cf8 UIRectCornerTopLeft\cf2  | \cf8 UIRectCornerTopRight\cf2  \cf8 cornerRadii\cf2 :\cf8 CGSizeMake\cf2 (\cf7 15\cf2 , \cf7 15\cf2 )];
+\f0 \cf4 \cb3 \kerning1\expnd0\expndtw0 UIBezierPath\cf2  *maskPath = [\cf4 UIBezierPath\cf2  \cf8 bezierPathWithRoundedRect\cf2 :cellBounds \cf8 byRoundingCorners\cf2 :\cf8 UIRectCornerTopLeft\cf2  | \cf8 UIRectCornerTopRight\cf2  \cf8 cornerRadii\cf2 :\cf8 CGSizeMake\cf2 (\cf7 \cb3 15\cf2 \cb3 , \cf7 \cb3 15\cf2 \cb3 )];
 \f1\fs24 \cf0 \
-\pard\tx692\pardeftab692\pardirnatural\partightenfactor0
 
 \f0\fs28 \cf2                 
 \f1\fs24 \cf0 \
@@ -440,40 +440,40 @@ UIFont
 \
 \pard\tx642\pardeftab642\pardirnatural\partightenfactor0
 
-\f0\fs26 \cf20 \cb11 \kerning1\expnd0\expndtw0 \CocoaLigature0 //- (void)downLoadMusicWithModel:(WWMusicModel *)model Progress:(void (^)(NSProgress *))progressBlock Success:(SuccessStringBlock)success Fail:(FailBlock)fail\{\cf2 \
-\cf20 //    \cf2 \
-\cf20 //    NSString *url = model.music_desc;\cf2 \
-\cf20 //    NSLog(@"
+\f0\fs26 \cf20 \cb11 \kerning1\expnd0\expndtw0 \CocoaLigature0 //- (void)downLoadMusicWithModel:(WWMusicModel *)model Progress:(void (^)(NSProgress *))progressBlock Success:(SuccessStringBlock)success Fail:(FailBlock)fail\{\cf2 \cb11 \
+\cf20 \cb11 //    \cf2 \cb11 \
+\cf20 \cb11 //    NSString *url = model.music_desc;\cf2 \cb11 \
+\cf20 \cb11 //    NSLog(@"
 \f2 \'cf\'c2\'d4\'d8
-\f0 mp3 = %@",url);\cf2 \
-\cf20 //    \cf2 \
-\cf20 //    NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration defaultSessionConfiguration];\cf2 \
-\cf20 //    AFURLSessionManager *manager = [[AFURLSessionManager alloc] initWithSessionConfiguration:configuration];\cf2 \
-\cf20 //    \cf2 \
-\cf20 //    NSURL *URL = [NSURL URLWithString:url];\cf2 \
-\cf20 //    NSURLRequest *request = [NSURLRequest requestWithURL:URL];\cf2 \
-\cf20 //    NSURLSessionDownloadTask *downloadTask = [manager downloadTaskWithRequest:request progress:^(NSProgress * _Nonnull downloadProgress) \{\cf2 \
-\cf20 //        progressBlock(downloadProgress);\cf2 \
-\cf20 //    \} destination:^NSURL * _Nonnull(NSURL * _Nonnull targetPath, NSURLResponse * _Nonnull response) \{\cf2 \
-\cf20 //        NSURL *documentsDirectoryURL = [[NSFileManager defaultManager] URLForDirectory:NSDocumentDirectory inDomain:NSUserDomainMask appropriateForURL:nil create:NO error:nil];\cf2 \
-\cf20 //        NSURL *returnURL = [documentsDirectoryURL URLByAppendingPathComponent:[response suggestedFilename]];\cf2 \
-\cf20 //        return returnURL;\cf2 \
-\cf20 //    \} completionHandler:^(NSURLResponse * _Nonnull response, NSURL * _Nullable filePath, NSError * _Nullable error) \{\cf2 \
-\cf20 //        if (!error) \{\cf2 \
-\cf20 //            NSLog(@"F
+\f0 mp3 = %@",url);\cf2 \cb11 \
+\cf20 \cb11 //    \cf2 \cb11 \
+\cf20 \cb11 //    NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration defaultSessionConfiguration];\cf2 \cb11 \
+\cf20 \cb11 //    AFURLSessionManager *manager = [[AFURLSessionManager alloc] initWithSessionConfiguration:configuration];\cf2 \cb11 \
+\cf20 \cb11 //    \cf2 \cb11 \
+\cf20 \cb11 //    NSURL *URL = [NSURL URLWithString:url];\cf2 \cb11 \
+\cf20 \cb11 //    NSURLRequest *request = [NSURLRequest requestWithURL:URL];\cf2 \cb11 \
+\cf20 \cb11 //    NSURLSessionDownloadTask *downloadTask = [manager downloadTaskWithRequest:request progress:^(NSProgress * _Nonnull downloadProgress) \{\cf2 \cb11 \
+\cf20 \cb11 //        progressBlock(downloadProgress);\cf2 \cb11 \
+\cf20 \cb11 //    \} destination:^NSURL * _Nonnull(NSURL * _Nonnull targetPath, NSURLResponse * _Nonnull response) \{\cf2 \cb11 \
+\cf20 \cb11 //        NSURL *documentsDirectoryURL = [[NSFileManager defaultManager] URLForDirectory:NSDocumentDirectory inDomain:NSUserDomainMask appropriateForURL:nil create:NO error:nil];\cf2 \cb11 \
+\cf20 \cb11 //        NSURL *returnURL = [documentsDirectoryURL URLByAppendingPathComponent:[response suggestedFilename]];\cf2 \cb11 \
+\cf20 \cb11 //        return returnURL;\cf2 \cb11 \
+\cf20 \cb11 //    \} completionHandler:^(NSURLResponse * _Nonnull response, NSURL * _Nullable filePath, NSError * _Nullable error) \{\cf2 \cb11 \
+\cf20 \cb11 //        if (!error) \{\cf2 \cb11 \
+\cf20 \cb11 //            NSLog(@"F
 \f2 \'ce\'c4\'bc\'fe\'cf\'c2\'d4\'d8\'b5\'bd
-\f0 : %@", filePath);\cf2 \
-\cf20 //            NSString *filePathStr = [NSString stringWithFormat:@"%@",filePath];\cf2 \
-\cf20 //            filePathStr = [filePathStr substringWithRange:NSMakeRange(8, filePathStr.length - 8)];\cf2 \
-\cf20 //            [[MusicCacheManager sharedManager] saveMusicArrayWithModel:model];\cf2 \
-\cf20 //            \cf2 \
-\cf20 //            success(filePathStr);\cf2 \
-\cf20 //        \}else\{\cf2 \
-\cf20 //            fail(error.localizedDescription);\cf2 \
-\cf20 //        \}\cf2 \
-\cf20 //    \}];\cf2 \
-\cf20 //    [downloadTask resume];\cf2 \
-\cf20 //\}\
+\f0 : %@", filePath);\cf2 \cb11 \
+\cf20 \cb11 //            NSString *filePathStr = [NSString stringWithFormat:@"%@",filePath];\cf2 \cb11 \
+\cf20 \cb11 //            filePathStr = [filePathStr substringWithRange:NSMakeRange(8, filePathStr.length - 8)];\cf2 \cb11 \
+\cf20 \cb11 //            [[MusicCacheManager sharedManager] saveMusicArrayWithModel:model];\cf2 \cb11 \
+\cf20 \cb11 //            \cf2 \cb11 \
+\cf20 \cb11 //            success(filePathStr);\cf2 \cb11 \
+\cf20 \cb11 //        \}else\{\cf2 \cb11 \
+\cf20 \cb11 //            fail(error.localizedDescription);\cf2 \cb11 \
+\cf20 \cb11 //        \}\cf2 \cb11 \
+\cf20 \cb11 //    \}];\cf2 \cb11 \
+\cf20 \cb11 //    [downloadTask resume];\cf2 \cb11 \
+\cf20 \cb11 //\}\
 \
 \pard\tx642\pardeftab642\pardirnatural\partightenfactor0
 
@@ -482,26 +482,26 @@ UIFont
 \
 \pard\tx642\pardeftab642\pardirnatural\partightenfactor0
 
-\f0\fs26 \cf20 \cb11 \kerning1\expnd0\expndtw0 \CocoaLigature0 //    UIImage *backButtonImage = [UIImage imageNamed:@"fabugushi_back_btn_red"];\cf2 \
-\cf20 //    [self.backButton setImage:[backButtonImage imageWithRenderingMode:(UIImageRenderingModeAlwaysTemplate)] forState:UIControlStateNormal];\cf2 \
-\cf20 //    [self.backButton setTintColor:UIColorHex(0x7269ff)];\
+\f0\fs26 \cf20 \cb11 \kerning1\expnd0\expndtw0 \CocoaLigature0 //    UIImage *backButtonImage = [UIImage imageNamed:@"fabugushi_back_btn_red"];\cf2 \cb11 \
+\cf20 \cb11 //    [self.backButton setImage:[backButtonImage imageWithRenderingMode:(UIImageRenderingModeAlwaysTemplate)] forState:UIControlStateNormal];\cf2 \cb11 \
+\cf20 \cb11 //    [self.backButton setTintColor:UIColorHex(0x7269ff)];\
 \
-\cf4 NSString\cf2  *script = [\cf4 NSString\cf2  \cf8 stringWithFormat\cf2 :\
-                        \cf32 @"var script = document.createElement('script');"\cf2 \
-                        \cf32 "script.type = 'text/javascript';"\cf2 \
-                        \cf32 "script.text = \\"function ResizeImages() \{ "\cf2 \
-                        \cf32 "var img;"\cf2 \
-                        \cf32 "var maxwidth=%f;"\cf2 \
-                        \cf32 "for(i=0;i <document.images.length;i++)\{"\cf2 \
-                        \cf32 "img = document.images[i];"\cf2 \
-                        \cf32 "if(img.width > maxwidth)\{"\cf2 \
-                        \cf32 "img.width = maxwidth;"\cf2 \
-                        \cf32 "\}"\cf2 \
-                        \cf32 "\}"\cf2 \
-                        \cf32 "\}\\";"\cf2 \
-                        \cf32 "document.getElementsByTagName('head')[0].appendChild(script);"\cf2 , \cf9 SCREEN_WIDTH\cf2  - \cf7 20\cf2 ];\
-    [webView \cf8 stringByEvaluatingJavaScriptFromString\cf2 : script];\
-    [webView \cf8 stringByEvaluatingJavaScriptFromString\cf2 :\cf32 @"ResizeImages();"\cf2 ];\
+\cf4 NSString\cf2 \cb11  *script = [\cf4 \cb11 NSString\cf2 \cb11  \cf8 \cb11 stringWithFormat\cf2 \cb11 :\
+                        \cf32 \cb11 @"var script = document.createElement('script');"\cf2 \cb11 \
+                        \cf32 \cb11 "script.type = 'text/javascript';"\cf2 \cb11 \
+                        \cf32 \cb11 "script.text = \\"function ResizeImages() \{ "\cf2 \cb11 \
+                        \cf32 \cb11 "var img;"\cf2 \cb11 \
+                        \cf32 \cb11 "var maxwidth=%f;"\cf2 \cb11 \
+                        \cf32 \cb11 "for(i=0;i <document.images.length;i++)\{"\cf2 \cb11 \
+                        \cf32 \cb11 "img = document.images[i];"\cf2 \cb11 \
+                        \cf32 \cb11 "if(img.width > maxwidth)\{"\cf2 \cb11 \
+                        \cf32 \cb11 "img.width = maxwidth;"\cf2 \cb11 \
+                        \cf32 \cb11 "\}"\cf2 \cb11 \
+                        \cf32 \cb11 "\}"\cf2 \cb11 \
+                        \cf32 \cb11 "\}\\";"\cf2 \cb11 \
+                        \cf32 \cb11 "document.getElementsByTagName('head')[0].appendChild(script);"\cf2 \cb11 , \cf9 \cb11 SCREEN_WIDTH\cf2 \cb11  - \cf7 \cb11 20\cf2 \cb11 ];\
+    [webView \cf8 \cb11 stringByEvaluatingJavaScriptFromString\cf2 \cb11 : script];\
+    [webView \cf8 \cb11 stringByEvaluatingJavaScriptFromString\cf2 \cb11 :\cf32 \cb11 @"ResizeImages();"\cf2 \cb11 ];\
 \
 \
 \pard\pardeftab720\partightenfactor0
@@ -640,19 +640,19 @@ CGFloat documentWidth = [[webView stringByEvaluatingJavaScriptFromString:@"docum
 CGFloat documentHeight = [[webView stringByEvaluatingJavaScriptFromString:@"document.getElementById(\\"content\\").offsetHeight;"] floatValue];\
 NSLog(@"documentSize = \{%f, %f\}", documentWidth, documentHeight);\
 \
-[webView evaluateJavaScript:\cf32 @"document.body.scrollHeight"\cf2 completionHandler:^(\cf5 id\cf2  \cf5 _Nullable\cf2  result,NSError *\cf5 _Nullable\cf2  error) \{\
-        \cf20 //
+[webView evaluateJavaScript:\cf32 \cb11 @"document.body.scrollHeight"\cf2 \cb11 completionHandler:^(\cf5 \cb11 id\cf2 \cb11  \cf5 \cb11 _Nullable\cf2 \cb11  result,NSError *\cf5 \cb11 _Nullable\cf2 \cb11  error) \{\
+        \cf20 \cb11 //
 \f2 \'bb\'f1\'c8\'a1\'d2\'b3\'c3\'e6\'b8\'df\'b6\'c8\'a3\'ac\'b2\'a2\'d6\'d8\'d6\'c3
 \f0 webview
 \f2 \'b5\'c4
-\f0 frame\cf2 \
+\f0 frame\cf2 \cb11 \
         CGFloat documentHeight = [result doubleValue];\
-        [UIView animateWithDuration:\cf7 0.2\cf2  animations:^\{\
-            scr.contentSize = CGSizeMake(scrW, \cf7 80\cf2  + documentHeight);\
-            detailWeb.frame = CGRectMake(\cf7 0\cf2 , \cf7 0\cf2 , scrW, documentHeight);\
-        \}completion:^(\cf5 BOOL\cf2  finished) \{\
-            \cf5 if\cf2  ((\cf5 int\cf2 )documentHeight != \cf7 0\cf2 ) \{\
-                shareView.frame = CGRectMake(\cf7 0\cf2 , maxY(detailWeb), scrW, \cf7 80\cf2 );\
+        [UIView animateWithDuration:\cf7 \cb11 0.2\cf2 \cb11  animations:^\{\
+            scr.contentSize = CGSizeMake(scrW, \cf7 \cb11 80\cf2 \cb11  + documentHeight);\
+            detailWeb.frame = CGRectMake(\cf7 \cb11 0\cf2 \cb11 , \cf7 \cb11 0\cf2 \cb11 , scrW, documentHeight);\
+        \}completion:^(\cf5 \cb11 BOOL\cf2 \cb11  finished) \{\
+            \cf5 \cb11 if\cf2 \cb11  ((\cf5 \cb11 int\cf2 \cb11 )documentHeight != \cf7 \cb11 0\cf2 \cb11 ) \{\
+                shareView.frame = CGRectMake(\cf7 \cb11 0\cf2 \cb11 , maxY(detailWeb), scrW, \cf7 \cb11 80\cf2 \cb11 );\
                 [shareView createShareViewUI];\
             \}\
         \}];\
@@ -671,159 +671,161 @@ NSLog(@"frame = %@", [NSValue valueWithCGRect:frame]);\
 webView.frame = frame;\
 \}\
 \
-        \cf4 CGSize\cf2  actualSize = [webView \cf8 sizeThatFits\cf2 :\cf4 CGSizeZero\cf2 ];\
-        \cf4 CGRect\cf2  newFrame = webView.\cf4 frame\cf2 ;\
-        newFrame.\cf4 size\cf2 .\cf4 height\cf2  = actualSize.\cf4 height\cf2 ;\
-        \cf5 self\cf2 .\cf6 contentWebview\cf2 .\cf4 frame\cf2  = newFrame;\
-        \cf5 self\cf2 .\cf6 contentWebviewHeight\cf2  = newFrame.\cf4 size\cf2 .\cf4 height\cf2 ;\
-        \cf8 NSLog\cf2 (\cf32 @"frame = %@"\cf2 , [\cf4 NSValue\cf2  \cf8 valueWithCGRect\cf2 :newFrame]);\
+        \cf4 \cb11 CGSize\cf2 \cb11  actualSize = [webView \cf8 \cb11 sizeThatFits\cf2 \cb11 :\cf4 \cb11 CGSizeZero\cf2 \cb11 ];\
+        \cf4 \cb11 CGRect\cf2 \cb11  newFrame = webView.\cf4 \cb11 frame\cf2 \cb11 ;\
+        newFrame.\cf4 \cb11 size\cf2 \cb11 .\cf4 \cb11 height\cf2 \cb11  = actualSize.\cf4 \cb11 height\cf2 \cb11 ;\
+        \cf5 \cb11 self\cf2 \cb11 .\cf6 \cb11 contentWebview\cf2 \cb11 .\cf4 \cb11 frame\cf2 \cb11  = newFrame;\
+        \cf5 \cb11 self\cf2 \cb11 .\cf6 \cb11 contentWebviewHeight\cf2 \cb11  = newFrame.\cf4 \cb11 size\cf2 \cb11 .\cf4 \cb11 height\cf2 \cb11 ;\
+        \cf8 \cb11 NSLog\cf2 \cb11 (\cf32 \cb11 @"frame = %@"\cf2 \cb11 , [\cf4 \cb11 NSValue\cf2 \cb11  \cf8 \cb11 valueWithCGRect\cf2 \cb11 :newFrame]);\
 //
 \f2 \'b7\'bd\'b7\'a8
 \f0 3\
-\cf4 NSString\cf2  * htmlcontent = [\cf4 NSString\cf2  \cf8 stringWithFormat\cf2 :\cf32 @"<div id=\\"webview_content_wrapper\\">%@</div>"\cf2 , model.\cf6 content\cf2 ];\
-    [\cf5 self\cf2 .\cf6 contentWebview\cf2  \cf8 loadHTMLString\cf2 :htmlcontent \cf8 baseURL\cf2 :\cf5 nil\cf2 ];\
-\cf20 //
+\pard\tx642\pardeftab642\pardirnatural\partightenfactor0
+\cf4 \cb11 NSString\cf2 \cb11  * htmlcontent = [\cf4 \cb11 NSString\cf2 \cb11  \cf8 \cb11 stringWithFormat\cf2 \cb11 :\cf32 \cb11 @"<div id=\\"webview_content_wrapper\\">%@</div>"\cf2 \cb11 , model.\cf6 \cb11 content\cf2 \cb11 ];\
+    [\cf5 \cb11 self\cf2 \cb11 .\cf6 \cb11 contentWebview\cf2 \cb11  \cf8 \cb11 loadHTMLString\cf2 \cb11 :htmlcontent \cf8 \cb11 baseURL\cf2 \cb11 :\cf5 \cb11 nil\cf2 \cb11 ];\
+\cf20 \cb11 //
 \f2 \'bb\'f1\'c8\'a1\'d2\'b3\'c3\'e6\'b8\'df\'b6\'c8\'a3\'a8\'cf\'f1\'cb\'d8\'a3\'a9
-\f0 \cf2 \
-    \cf4 NSString\cf2  * clientheight_str = [webView \cf8 stringByEvaluatingJavaScriptFromString\cf2 : \cf32 @"document.body.offsetHeight"\cf2 ];\
-    \cf5 float\cf2  clientheight = [clientheight_str \cf8 floatValue\cf2 ];\
-    \cf20 //
+\f0 \cf2 \cb11 \
+    \cf4 \cb11 NSString\cf2 \cb11  * clientheight_str = [webView \cf8 \cb11 stringByEvaluatingJavaScriptFromString\cf2 \cb11 : \cf32 \cb11 @"document.body.offsetHeight"\cf2 \cb11 ];\
+    \cf5 \cb11 float\cf2 \cb11  clientheight = [clientheight_str \cf8 \cb11 floatValue\cf2 \cb11 ];\
+    \cf20 \cb11 //
 \f2 \'c9\'e8\'d6\'c3\'b5\'bd
 \f0 WebView
 \f2 \'c9\'cf
-\f0 \cf2 \
-    webView.\cf4 frame\cf2  = \cf8 CGRectMake\cf2 (\cf7 0\cf2 , \cf7 0\cf2 , webView.\cf4 frame\cf2 .\cf4 size\cf2 .\cf4 width\cf2 , clientheight);\
-    \cf20 //
+\f0 \cf2 \cb11 \
+    webView.\cf4 \cb11 frame\cf2 \cb11  = \cf8 \cb11 CGRectMake\cf2 \cb11 (\cf7 \cb11 0\cf2 \cb11 , \cf7 \cb11 0\cf2 \cb11 , webView.\cf4 \cb11 frame\cf2 \cb11 .\cf4 \cb11 size\cf2 \cb11 .\cf4 \cb11 width\cf2 \cb11 , clientheight);\
+    \cf20 \cb11 //
 \f2 \'bb\'f1\'c8\'a1
 \f0 WebView
 \f2 \'d7\'ee\'bc\'d1\'b3\'df\'b4\'e7\'a3\'a8\'b5\'e3\'a3\'a9
-\f0 \cf2 \
-    \cf4 CGSize\cf2  frame = [webView \cf8 sizeThatFits\cf2 :webView.\cf4 frame\cf2 .\cf4 size\cf2 ];\
+\f0 \cf2 \cb11 \
+    \cf4 \cb11 CGSize\cf2 \cb11  frame = [webView \cf8 \cb11 sizeThatFits\cf2 \cb11 :webView.\cf4 \cb11 frame\cf2 \cb11 .\cf4 \cb11 size\cf2 \cb11 ];\
     \
-    \cf4 NSString\cf2  * height_str= [webView \cf8 stringByEvaluatingJavaScriptFromString\cf2 : \cf32 @"document.getElementById('webview_content_wrapper').offsetHeight + parseInt(window.getComputedStyle(document.getElementsByTagName('body')[0]).getPropertyValue('margin-top'))  + parseInt(window.getComputedStyle(document.getElementsByTagName('body')[0]).getPropertyValue('margin-bottom'))"\cf2 ];\
-    \cf5 float\cf2  height = [height_str \cf8 floatValue\cf2 ];\
-    \cf20 //
+    \cf4 \cb11 NSString\cf2 \cb11  * height_str= [webView \cf8 \cb11 stringByEvaluatingJavaScriptFromString\cf2 \cb11 : \cf32 \cb11 @"document.getElementById('webview_content_wrapper').offsetHeight + parseInt(window.getComputedStyle(document.getElementsByTagName('body')[0]).getPropertyValue('margin-top'))  + parseInt(window.getComputedStyle(document.getElementsByTagName('body')[0]).getPropertyValue('margin-bottom'))"\cf2 \cb11 ];\
+    \cf5 \cb11 float\cf2 \cb11  height = [height_str \cf8 \cb11 floatValue\cf2 \cb11 ];\
+    \cf20 \cb11 //
 \f2 \'c4\'da\'c8\'dd\'ca\'b5\'bc\'ca\'b8\'df\'b6\'c8\'a3\'a8\'cf\'f1\'cb\'d8\'a3\'a9
 \f0 * 
 \f2 \'b5\'e3\'ba\'cd\'cf\'f1\'cb\'d8\'b5\'c4\'b1\'c8
-\f0 \cf2 \
-    height = height * frame.\cf4 height\cf2  / clientheight;\
-    \cf20 //
+\f0 \cf2 \cb11 \
+    height = height * frame.\cf4 \cb11 height\cf2 \cb11  / clientheight;\
+    \cf20 \cb11 //
 \f2 \'d4\'d9\'b4\'ce\'c9\'e8\'d6\'c3
 \f0 WebView
 \f2 \'b8\'df\'b6\'c8\'a3\'a8\'b5\'e3\'a3\'a9
-\f0 \cf2 \
-    webView.\cf4 frame\cf2  = \cf8 CGRectMake\cf2 (\cf7 0\cf2 , \cf7 0\cf2 , \cf5 self\cf2 .\cf4 view\cf2 .\cf4 frame\cf2 .\cf4 size\cf2 .\cf4 width\cf2 , height);\
+\f0 \cf2 \cb11 \
+    webView.\cf4 \cb11 frame\cf2 \cb11  = \cf8 \cb11 CGRectMake\cf2 \cb11 (\cf7 \cb11 0\cf2 \cb11 , \cf7 \cb11 0\cf2 \cb11 , \cf5 \cb11 self\cf2 \cb11 .\cf4 \cb11 view\cf2 \cb11 .\cf4 \cb11 frame\cf2 \cb11 .\cf4 \cb11 size\cf2 \cb11 .\cf4 \cb11 width\cf2 \cb11 , height);\
 //
 \f2 \'b7\'bd\'b7\'a8
 \f0 4\
-\cf20 //-(void)webViewDidFinishLoad:(UIWebView *)webView\{\cf2 \
-\cf20 //    NSString *cssString = @"img\{max-width: 100%;-webkit-border-radius: 20px;border-radius: 20px;border: 0px solid black;\} body\{word-wrap:break-word;\}";\cf2 \
-\cf20 //    NSString *javascriptString = @"var style = document.createElement('style'); style.innerHTML = '%@'; document.head.appendChild(style)";\cf2 \
-\cf20 //    NSString *javascriptWithCSSString = [NSString stringWithFormat:javascriptString, cssString];\cf2 \
-\cf20 //    [webView stringByEvaluatingJavaScriptFromString: javascriptWithCSSString];\cf2 \
-\cf20 //    \cf2 \
-\cf20 //    \cf2 \
-\cf20 //    //
+\cf20 \cb11 //-(void)webViewDidFinishLoad:(UIWebView *)webView\{\cf2 \cb11 \
+\cf20 \cb11 //    NSString *cssString = @"img\{max-width: 100%;-webkit-border-radius: 20px;border-radius: 20px;border: 0px solid black;\} body\{word-wrap:break-word;\}";\cf2 \cb11 \
+\cf20 \cb11 //    NSString *javascriptString = @"var style = document.createElement('style'); style.innerHTML = '%@'; document.head.appendChild(style)";\cf2 \cb11 \
+\cf20 \cb11 //    NSString *javascriptWithCSSString = [NSString stringWithFormat:javascriptString, cssString];\cf2 \cb11 \
+\cf20 \cb11 //    [webView stringByEvaluatingJavaScriptFromString: javascriptWithCSSString];\cf2 \cb11 \
+\cf20 \cb11 //    \cf2 \cb11 \
+\cf20 \cb11 //    \cf2 \cb11 \
+\cf20 \cb11 //    //
 \f2 \'bb\'f1\'c8\'a1\'d2\'b3\'c3\'e6\'b8\'df\'b6\'c8\'a3\'a8\'cf\'f1\'cb\'d8\'a3\'a9
-\f0 \cf2 \
-\cf20 //    NSString * clientheight_str = [webView stringByEvaluatingJavaScriptFromString: @"document.body.offsetHeight"];\cf2 \
-\cf20 //    float clientheight = [clientheight_str floatValue];\cf2 \
-\cf20 //    //
+\f0 \cf2 \cb11 \
+\cf20 \cb11 //    NSString * clientheight_str = [webView stringByEvaluatingJavaScriptFromString: @"document.body.offsetHeight"];\cf2 \cb11 \
+\cf20 \cb11 //    float clientheight = [clientheight_str floatValue];\cf2 \cb11 \
+\cf20 \cb11 //    //
 \f2 \'c9\'e8\'d6\'c3\'b5\'bd
 \f0 WebView
 \f2 \'c9\'cf
-\f0 \cf2 \
-\cf20 //    webView.frame = CGRectMake(0, 0, webView.frame.size.width, clientheight);\cf2 \
-\cf20 //    //
+\f0 \cf2 \cb11 \
+\cf20 \cb11 //    webView.frame = CGRectMake(0, 0, webView.frame.size.width, clientheight);\cf2 \cb11 \
+\cf20 \cb11 //    //
 \f2 \'bb\'f1\'c8\'a1
 \f0 WebView
 \f2 \'d7\'ee\'bc\'d1\'b3\'df\'b4\'e7\'a3\'a8\'b5\'e3\'a3\'a9
-\f0 \cf2 \
-\cf20 //    CGSize frame = [webView sizeThatFits:webView.frame.size];\cf2 \
-\cf20 //    \cf2 \
-\cf20 //    NSString * height_str= [webView stringByEvaluatingJavaScriptFromString: @"document.getElementById('webview_content_wrapper').offsetHeight + parseInt(window.getComputedStyle(document.getElementsByTagName('body')[0]).getPropertyValue('margin-top'))  + parseInt(window.getComputedStyle(document.getElementsByTagName('body')[0]).getPropertyValue('margin-bottom'))"];\cf2 \
-\cf20 //    float height = [height_str floatValue];\cf2 \
-\cf20 //    //
+\f0 \cf2 \cb11 \
+\cf20 \cb11 //    CGSize frame = [webView sizeThatFits:webView.frame.size];\cf2 \cb11 \
+\cf20 \cb11 //    \cf2 \cb11 \
+\cf20 \cb11 //    NSString * height_str= [webView stringByEvaluatingJavaScriptFromString: @"document.getElementById('webview_content_wrapper').offsetHeight + parseInt(window.getComputedStyle(document.getElementsByTagName('body')[0]).getPropertyValue('margin-top'))  + parseInt(window.getComputedStyle(document.getElementsByTagName('body')[0]).getPropertyValue('margin-bottom'))"];\cf2 \cb11 \
+\cf20 \cb11 //    float height = [height_str floatValue];\cf2 \cb11 \
+\cf20 \cb11 //    //
 \f2 \'c4\'da\'c8\'dd\'ca\'b5\'bc\'ca\'b8\'df\'b6\'c8\'a3\'a8\'cf\'f1\'cb\'d8\'a3\'a9
 \f0 * 
 \f2 \'b5\'e3\'ba\'cd\'cf\'f1\'cb\'d8\'b5\'c4\'b1\'c8
-\f0 \cf2 \
-\cf20 //    height = height * frame.height / clientheight;\cf2 \
-\cf20 //    //
+\f0 \cf2 \cb11 \
+\cf20 \cb11 //    height = height * frame.height / clientheight;\cf2 \cb11 \
+\cf20 \cb11 //    //
 \f2 \'d4\'d9\'b4\'ce\'c9\'e8\'d6\'c3
 \f0 WebView
 \f2 \'b8\'df\'b6\'c8\'a3\'a8\'b5\'e3\'a3\'a9
-\f0 \cf2 \
-\cf20 //    webView.frame = CGRectMake(0, 0, self.contentWebview.frame.size.width, height);\cf2 \
-\cf20 //    self.contentWebviewHeight = height;\cf2 \
-\cf20 //    [self.tableView reloadData];\cf2 \
-\cf20 //    \cf2 \
-\cf20 //\}\cf2 \
+\f0 \cf2 \cb11 \
+\cf20 \cb11 //    webView.frame = CGRectMake(0, 0, self.contentWebview.frame.size.width, height);\cf2 \cb11 \
+\cf20 \cb11 //    self.contentWebviewHeight = height;\cf2 \cb11 \
+\cf20 \cb11 //    [self.tableView reloadData];\cf2 \cb11 \
+\cf20 \cb11 //    \cf2 \cb11 \
+\cf20 \cb11 //\}\cf2 \cb11 \
 \
-\cf20 //- (void)webView:(WKWebView *)webView didFinishNavigation:(WKNavigation *)navigation\cf2 \
-\cf20 //\{\cf2 \
-\cf20 //    NSString *cssString = @"img\{max-width: 100%;-webkit-border-radius: 20px;border-radius: 20px;border: 0px solid black;\} body\{word-wrap:break-word;\}";\cf2 \
-\cf20 //    NSString *javascriptString = @"var style = document.createElement('style'); style.innerHTML = '%@'; document.head.appendChild(style)";\cf2 \
-\cf20 //    NSString *javascriptWithCSSString = [NSString stringWithFormat:javascriptString, cssString];\cf2 \
-\cf20 //    [webView evaluateJavaScript:javascriptWithCSSString completionHandler:^(id _Nullable result, NSError * _Nullable error) \{\cf2 \
-\cf20 //        [webView evaluateJavaScript:@"document.body.scrollHeight"completionHandler:^(id _Nullable result,NSError *_Nullable error) \{\cf2 \
-\cf20 //            CGFloat documentHeight = [result doubleValue];\cf2 \
-\cf20 //            self.contentWebviewHeight = documentHeight;\cf2 \
-\cf20 //            [UIView animateWithDuration:0.2 animations:^\{\cf2 \
-\cf20 //                CGRect webFrame = self.contentWebview.frame;\cf2 \
-\cf20 //                webFrame.size.height = documentHeight;\cf2 \
-\cf20 //                self.contentWebview.frame = webFrame;\cf2 \
-\cf20 //            \}completion:^(BOOL finished) \{\cf2 \
-\cf20 //                [self.tableView reloadData];\cf2 \
-\cf20 //            \}];\cf2 \
-\cf20 //        \}];\cf2 \
-\cf20 //    \}];\cf2 \
-\cf20 //\}\cf2 \
+\cf20 \cb11 //- (void)webView:(WKWebView *)webView didFinishNavigation:(WKNavigation *)navigation\cf2 \cb11 \
+\cf20 \cb11 //\{\cf2 \cb11 \
+\cf20 \cb11 //    NSString *cssString = @"img\{max-width: 100%;-webkit-border-radius: 20px;border-radius: 20px;border: 0px solid black;\} body\{word-wrap:break-word;\}";\cf2 \cb11 \
+\cf20 \cb11 //    NSString *javascriptString = @"var style = document.createElement('style'); style.innerHTML = '%@'; document.head.appendChild(style)";\cf2 \cb11 \
+\cf20 \cb11 //    NSString *javascriptWithCSSString = [NSString stringWithFormat:javascriptString, cssString];\cf2 \cb11 \
+\cf20 \cb11 //    [webView evaluateJavaScript:javascriptWithCSSString completionHandler:^(id _Nullable result, NSError * _Nullable error) \{\cf2 \cb11 \
+\cf20 \cb11 //        [webView evaluateJavaScript:@"document.body.scrollHeight"completionHandler:^(id _Nullable result,NSError *_Nullable error) \{\cf2 \cb11 \
+\cf20 \cb11 //            CGFloat documentHeight = [result doubleValue];\cf2 \cb11 \
+\cf20 \cb11 //            self.contentWebviewHeight = documentHeight;\cf2 \cb11 \
+\cf20 \cb11 //            [UIView animateWithDuration:0.2 animations:^\{\cf2 \cb11 \
+\cf20 \cb11 //                CGRect webFrame = self.contentWebview.frame;\cf2 \cb11 \
+\cf20 \cb11 //                webFrame.size.height = documentHeight;\cf2 \cb11 \
+\cf20 \cb11 //                self.contentWebview.frame = webFrame;\cf2 \cb11 \
+\cf20 \cb11 //            \}completion:^(BOOL finished) \{\cf2 \cb11 \
+\cf20 \cb11 //                [self.tableView reloadData];\cf2 \cb11 \
+\cf20 \cb11 //            \}];\cf2 \cb11 \
+\cf20 \cb11 //        \}];\cf2 \cb11 \
+\cf20 \cb11 //    \}];\cf2 \cb11 \
+\cf20 \cb11 //\}\cf2 \cb11 \
 \
--(\cf4 UIView\cf2  *)hitTest:(\cf4 CGPoint\cf2 )point withEvent:(\cf4 UIEvent\cf2  *)event\{\
+-(\cf4 \cb11 UIView\cf2 \cb11  *)hitTest:(\cf4 \cb11 CGPoint\cf2 \cb11 )point withEvent:(\cf4 \cb11 UIEvent\cf2 \cb11  *)event\{\
     \
-    \cf4 UIView\cf2  *hitView = [\cf5 super\cf2  \cf8 hitTest\cf2 :point \cf8 withEvent\cf2 :event];\
-    \cf5 if\cf2 (hitView ==\cf5 self\cf2  && \cf8 CGRectContainsPoint\cf2 (\cf8 CGRectMake\cf2 (\cf7 0\cf2 , \cf7 0\cf2 , \cf9 SCREEN_WIDTH\cf2  - \cf7 60\cf2 , \cf5 self\cf2 .\cf4 bounds\cf2 .\cf4 size\cf2 .\cf4 height\cf2 ), point)) \{\
-        \cf5 return\cf2  \cf5 self\cf2 ;\
-    \}\cf5 else\cf2   \cf5 if\cf2 (hitView ==\cf5 self\cf2  && !\cf8 CGRectContainsPoint\cf2 (\cf8 CGRectMake\cf2 (\cf7 0\cf2 , \cf7 0\cf2 , \cf9 SCREEN_WIDTH\cf2  - \cf7 60\cf2 , \cf5 self\cf2 .\cf4 bounds\cf2 .\cf4 size\cf2 .\cf4 height\cf2 ), point)) \{\
-        \cf5 return\cf2   \cf5 nil\cf2 ;\
-    \}\cf5 else\cf2 \{\
-        \cf5 return\cf2   hitView;\
+    \cf4 \cb11 UIView\cf2 \cb11  *hitView = [\cf5 \cb11 super\cf2 \cb11  \cf8 \cb11 hitTest\cf2 \cb11 :point \cf8 \cb11 withEvent\cf2 \cb11 :event];\
+    \cf5 \cb11 if\cf2 \cb11 (hitView ==\cf5 \cb11 self\cf2 \cb11  && \cf8 \cb11 CGRectContainsPoint\cf2 \cb11 (\cf8 \cb11 CGRectMake\cf2 \cb11 (\cf7 \cb11 0\cf2 \cb11 , \cf7 \cb11 0\cf2 \cb11 , \cf9 \cb11 SCREEN_WIDTH\cf2 \cb11  - \cf7 \cb11 60\cf2 \cb11 , \cf5 \cb11 self\cf2 \cb11 .\cf4 \cb11 bounds\cf2 \cb11 .\cf4 \cb11 size\cf2 \cb11 .\cf4 \cb11 height\cf2 \cb11 ), point)) \{\
+        \cf5 \cb11 return\cf2 \cb11  \cf5 \cb11 self\cf2 \cb11 ;\
+    \}\cf5 \cb11 else\cf2 \cb11   \cf5 \cb11 if\cf2 \cb11 (hitView ==\cf5 \cb11 self\cf2 \cb11  && !\cf8 \cb11 CGRectContainsPoint\cf2 \cb11 (\cf8 \cb11 CGRectMake\cf2 \cb11 (\cf7 \cb11 0\cf2 \cb11 , \cf7 \cb11 0\cf2 \cb11 , \cf9 \cb11 SCREEN_WIDTH\cf2 \cb11  - \cf7 \cb11 60\cf2 \cb11 , \cf5 \cb11 self\cf2 \cb11 .\cf4 \cb11 bounds\cf2 \cb11 .\cf4 \cb11 size\cf2 \cb11 .\cf4 \cb11 height\cf2 \cb11 ), point)) \{\
+        \cf5 \cb11 return\cf2 \cb11   \cf5 \cb11 nil\cf2 \cb11 ;\
+    \}\cf5 \cb11 else\cf2 \cb11 \{\
+        \cf5 \cb11 return\cf2 \cb11   hitView;\
     \}\
 \}\
-\cf20 \
+\cf20 \cb11 \
 \
-\cf2 - (\cf4 CGFloat\cf2 )screenViewY \{\
-    \cf4 CGFloat\cf2  y = \cf7 0\cf2 ;\
-    \cf5 for\cf2  (\cf4 UIView\cf2 * view = \cf5 self\cf2 ; view; view = view.\cf4 superview\cf2 ) \{\
-        y += view.\cf6 y\cf2 ;\
+\pard\tx642\pardeftab642\pardirnatural\partightenfactor0
+\cf2 \cb11 - (\cf4 \cb11 CGFloat\cf2 \cb11 )screenViewY \{\
+    \cf4 \cb11 CGFloat\cf2 \cb11  y = \cf7 \cb11 0\cf2 \cb11 ;\
+    \cf5 \cb11 for\cf2 \cb11  (\cf4 \cb11 UIView\cf2 \cb11 * view = \cf5 \cb11 self\cf2 \cb11 ; view; view = view.\cf4 \cb11 superview\cf2 \cb11 ) \{\
+        y += view.\cf6 \cb11 y\cf2 \cb11 ;\
         \
-        \cf5 if\cf2  ([view \cf8 isKindOfClass\cf2 :[\cf4 UIScrollView\cf2  \cf8 class\cf2 ]]) \{\
-            \cf4 UIScrollView\cf2 * scrollView = (\cf4 UIScrollView\cf2 *)view;\
-            y -= scrollView.\cf4 contentOffset\cf2 .\cf4 y\cf2 ;\
+        \cf5 \cb11 if\cf2 \cb11  ([view \cf8 \cb11 isKindOfClass\cf2 \cb11 :[\cf4 \cb11 UIScrollView\cf2 \cb11  \cf8 \cb11 class\cf2 \cb11 ]]) \{\
+            \cf4 \cb11 UIScrollView\cf2 \cb11 * scrollView = (\cf4 \cb11 UIScrollView\cf2 \cb11 *)view;\
+            y -= scrollView.\cf4 \cb11 contentOffset\cf2 \cb11 .\cf4 \cb11 y\cf2 \cb11 ;\
         \}\
     \}\
-    \cf5 return\cf2  y;\
-\}\cf20 \
+    \cf5 \cb11 return\cf2 \cb11  y;\
+\}\cf20 \cb11 \
 \
-\cf2 - (\cf4 UIView\cf2  *)hitTest:(\cf4 CGPoint\cf2 )point withEvent:(\cf4 UIEvent\cf2  *)event \{\
-    \cf5 if\cf2  (!\cf5 self\cf2 .\cf8 isUserInteractionEnabled\cf2  || \cf5 self\cf2 .\cf8 isHidden\cf2  || \cf5 self\cf2 .\cf4 alpha\cf2  <= \cf7 0.01\cf2 ) \{\
-        \cf5 return\cf2  \cf5 nil\cf2 ;\
+\cf2 \cb11 - (\cf4 \cb11 UIView\cf2 \cb11  *)hitTest:(\cf4 \cb11 CGPoint\cf2 \cb11 )point withEvent:(\cf4 \cb11 UIEvent\cf2 \cb11  *)event \{\
+    \cf5 \cb11 if\cf2 \cb11  (!\cf5 \cb11 self\cf2 \cb11 .\cf8 \cb11 isUserInteractionEnabled\cf2 \cb11  || \cf5 \cb11 self\cf2 \cb11 .\cf8 \cb11 isHidden\cf2 \cb11  || \cf5 \cb11 self\cf2 \cb11 .\cf4 \cb11 alpha\cf2 \cb11  <= \cf7 \cb11 0.01\cf2 \cb11 ) \{\
+        \cf5 \cb11 return\cf2 \cb11  \cf5 \cb11 nil\cf2 \cb11 ;\
     \}\
-    \cf4 CGRect\cf2  touchRect = \cf8 CGRectMake\cf2 (\cf7 0\cf2 , \cf7 0\cf2 , \cf9 SCREEN_WIDTH\cf2 , \cf7 44\cf2 );\
-    \cf5 if\cf2  (\cf8 CGRectContainsPoint\cf2 (touchRect, point)) \{\
-        \cf5 for\cf2  (\cf4 UIView\cf2  *subview \cf5 in\cf2  [\cf5 self\cf2 .\cf4 subviews\cf2  \cf8 reverseObjectEnumerator\cf2 ]) \{\
-            \cf4 CGPoint\cf2  convertedPoint = [subview \cf8 convertPoint\cf2 :point \cf8 fromView\cf2 :\cf5 self\cf2 ];\
-            \cf4 UIView\cf2  *hitTestView = [subview \cf8 hitTest\cf2 :convertedPoint \cf8 withEvent\cf2 :event];\
-            \cf5 if\cf2  (hitTestView) \{\
-                \cf5 return\cf2  hitTestView;\
+    \cf4 \cb11 CGRect\cf2 \cb11  touchRect = \cf8 \cb11 CGRectMake\cf2 \cb11 (\cf7 \cb11 0\cf2 \cb11 , \cf7 \cb11 0\cf2 \cb11 , \cf9 \cb11 SCREEN_WIDTH\cf2 \cb11 , \cf7 \cb11 44\cf2 \cb11 );\
+    \cf5 \cb11 if\cf2 \cb11  (\cf8 \cb11 CGRectContainsPoint\cf2 \cb11 (touchRect, point)) \{\
+        \cf5 \cb11 for\cf2 \cb11  (\cf4 \cb11 UIView\cf2 \cb11  *subview \cf5 \cb11 in\cf2 \cb11  [\cf5 \cb11 self\cf2 \cb11 .\cf4 \cb11 subviews\cf2 \cb11  \cf8 \cb11 reverseObjectEnumerator\cf2 \cb11 ]) \{\
+            \cf4 \cb11 CGPoint\cf2 \cb11  convertedPoint = [subview \cf8 \cb11 convertPoint\cf2 \cb11 :point \cf8 \cb11 fromView\cf2 \cb11 :\cf5 \cb11 self\cf2 \cb11 ];\
+            \cf4 \cb11 UIView\cf2 \cb11  *hitTestView = [subview \cf8 \cb11 hitTest\cf2 \cb11 :convertedPoint \cf8 \cb11 withEvent\cf2 \cb11 :event];\
+            \cf5 \cb11 if\cf2 \cb11  (hitTestView) \{\
+                \cf5 \cb11 return\cf2 \cb11  hitTestView;\
             \}\
         \}\
-        \cf5 return\cf2  \cf5 self\cf2 ;\
+        \cf5 \cb11 return\cf2 \cb11  \cf5 \cb11 self\cf2 \cb11 ;\
     \}\
-    \cf5 return\cf2  \cf5 self\cf2 ;\
-\}\cf20 \
+    \cf5 \cb11 return\cf2 \cb11  \cf5 \cb11 self\cf2 \cb11 ;\
+\}\cf20 \cb11 \
 \
 \
 \pard\pardeftab720\partightenfactor0
@@ -1097,26 +1099,26 @@ NSMutableAttributedString *messageAtt = [[NSMutableAttributedString alloc] initW
 \
 \pard\tx642\pardeftab642\pardirnatural\partightenfactor0
 
-\f0\fs26 \cf2 \cb11 \kerning1\expnd0\expndtw0 \CocoaLigature0 - (\cf5 void\cf2 )generateAttributedStringWithCommentItemModel:(\cf6 WWCommentItemModel\cf2  *)model\
+\f0\fs26 \cf2 \cb11 \kerning1\expnd0\expndtw0 \CocoaLigature0 - (\cf5 \cb11 void\cf2 \cb11 )generateAttributedStringWithCommentItemModel:(\cf6 \cb11 WWCommentItemModel\cf2 \cb11  *)model\
 \{\
-    \cf4 NSString\cf2  *text = model.\cf6 firstUserName\cf2 ;\
-    \cf5 if\cf2  (model.\cf6 secondUserName\cf2 .\cf4 length\cf2 ) \{\
-        text = [text \cf8 stringByAppendingString\cf2 :[\cf4 NSString\cf2  \cf8 stringWithFormat\cf2 :\cf32 @"
+    \cf4 \cb11 NSString\cf2 \cb11  *text = model.\cf6 \cb11 firstUserName\cf2 \cb11 ;\
+    \cf5 \cb11 if\cf2 \cb11  (model.\cf6 \cb11 secondUserName\cf2 \cb11 .\cf4 \cb11 length\cf2 \cb11 ) \{\
+        text = [text \cf8 \cb11 stringByAppendingString\cf2 \cb11 :[\cf4 \cb11 NSString\cf2 \cb11  \cf8 \cb11 stringWithFormat\cf2 \cb11 :\cf32 \cb11 @"
 \f2 \'bb\'d8\'b8\'b4
-\f0 %@"\cf2 , model.\cf6 secondUserName\cf2 ]];\
+\f0 %@"\cf2 \cb11 , model.\cf6 \cb11 secondUserName\cf2 \cb11 ]];\
     \}\
-    text = [text \cf8 stringByAppendingString\cf2 :[\cf4 NSString\cf2  \cf8 stringWithFormat\cf2 :\cf32 @"
+    text = [text \cf8 \cb11 stringByAppendingString\cf2 \cb11 :[\cf4 \cb11 NSString\cf2 \cb11  \cf8 \cb11 stringWithFormat\cf2 \cb11 :\cf32 \cb11 @"
 \f2 \'a3\'ba
-\f0 %@"\cf2 , model.\cf6 commentString\cf2 ]];\
-    \cf4 NSMutableAttributedString\cf2  *attString = [[\cf4 NSMutableAttributedString\cf2  \cf8 alloc\cf2 ] \cf8 initWithString\cf2 :text];\
-    [attString setAttributes:\cf7 @\{\cf2 NSForegroundColorAttributeName:UIColorHex(\cf7 0x333333\cf2 ),NSFontAttributeName:[UIFont fontWithName:\cf32 @"PingFang-SC-Medium"\cf2  size:\cf7 14\cf2 ]\cf7 \}\cf2 ];\
-    [attString setAttributes:\cf7 @\{\cf2 NSForegroundColorAttributeName:UIColorHex(\cf7 0x75a5fa\cf2 )\cf7 \}\cf2  range:[text rangeOfString:model.firstUserName]];\
-    \cf5 if\cf2  (model.\cf6 secondUserName\cf2 ) \{\
-        [attString setAttributes:\cf7 @\{\cf2 NSForegroundColorAttributeName:UIColorHex(\cf7 0x75a5fa\cf2 )\cf7 \}\cf2  range:[text rangeOfString:model.secondUserName]];\
+\f0 %@"\cf2 \cb11 , model.\cf6 \cb11 commentString\cf2 \cb11 ]];\
+    \cf4 \cb11 NSMutableAttributedString\cf2 \cb11  *attString = [[\cf4 \cb11 NSMutableAttributedString\cf2 \cb11  \cf8 \cb11 alloc\cf2 \cb11 ] \cf8 \cb11 initWithString\cf2 \cb11 :text];\
+    [attString setAttributes:\cf7 \cb11 @\{\cf2 \cb11 NSForegroundColorAttributeName:UIColorHex(\cf7 \cb11 0x333333\cf2 \cb11 ),NSFontAttributeName:[UIFont fontWithName:\cf32 \cb11 @"PingFang-SC-Medium"\cf2 \cb11  size:\cf7 \cb11 14\cf2 \cb11 ]\cf7 \cb11 \}\cf2 \cb11 ];\
+    [attString setAttributes:\cf7 \cb11 @\{\cf2 \cb11 NSForegroundColorAttributeName:UIColorHex(\cf7 \cb11 0x75a5fa\cf2 \cb11 )\cf7 \cb11 \}\cf2 \cb11  range:[text rangeOfString:model.firstUserName]];\
+    \cf5 \cb11 if\cf2 \cb11  (model.\cf6 \cb11 secondUserName\cf2 \cb11 ) \{\
+        [attString setAttributes:\cf7 \cb11 @\{\cf2 \cb11 NSForegroundColorAttributeName:UIColorHex(\cf7 \cb11 0x75a5fa\cf2 \cb11 )\cf7 \cb11 \}\cf2 \cb11  range:[text rangeOfString:model.secondUserName]];\
     \}\
-    \cf5 self\cf2 .\cf6 contentLabel\cf2 .\cf6 attributedText\cf2  = attString;\
-    [\cf5 self\cf2 .\cf6 contentLabel\cf2  \cf49 addLinkToTransitInformation\cf2 :\cf7 @\{\cf32 @"name"\cf2 :model.\cf6 firstUserName\cf7 \}\cf2  \cf49 withRange\cf2 :[text \cf8 rangeOfString\cf2 :model.\cf6 firstUserName\cf2 ]];\
-    [\cf5 self\cf2 .\cf6 contentLabel\cf2  \cf49 addLinkToTransitInformation\cf2 :\cf7 @\{\cf32 @"name"\cf2 :model.\cf6 secondUserName\cf7 \}\cf2  \cf49 withRange\cf2 :[text \cf8 rangeOfString\cf2 :model.\cf6 secondUserName\cf2 ]];\
+    \cf5 \cb11 self\cf2 \cb11 .\cf6 \cb11 contentLabel\cf2 \cb11 .\cf6 \cb11 attributedText\cf2 \cb11  = attString;\
+    [\cf5 \cb11 self\cf2 \cb11 .\cf6 \cb11 contentLabel\cf2 \cb11  \cf49 \cb11 addLinkToTransitInformation\cf2 \cb11 :\cf7 \cb11 @\{\cf32 @"name"\cf2 \cb11 :model.\cf6 \cb11 firstUserName\cf7 \}\cf2 \cb11  \cf49 \cb11 withRange\cf2 \cb11 :[text \cf8 \cb11 rangeOfString\cf2 \cb11 :model.\cf6 \cb11 firstUserName\cf2 \cb11 ]];\
+    [\cf5 \cb11 self\cf2 \cb11 .\cf6 \cb11 contentLabel\cf2 \cb11  \cf49 \cb11 addLinkToTransitInformation\cf2 \cb11 :\cf7 \cb11 @\{\cf32 @"name"\cf2 \cb11 :model.\cf6 \cb11 secondUserName\cf7 \}\cf2 \cb11  \cf49 \cb11 withRange\cf2 \cb11 :[text \cf8 \cb11 rangeOfString\cf2 \cb11 :model.\cf6 \cb11 secondUserName\cf2 \cb11 ]];\
 \}
 \f2\fs28 \cf0 \cb10 \expnd0\expndtw0\kerning0
 \CocoaLigature1 \
@@ -1335,7 +1337,6 @@ NSLog(@"Linked in %f ms", linkTime *1000.0);\
 
 \f0 \cf4 \cb3 \kerning1\expnd0\expndtw0 NSMutableArray\cf2  *dataArr = [\cf4 NSMutableArray\cf2  \cf8 array\cf2 ];
 \f1\fs24 \cf0 \
-\pard\tx692\pardeftab692\pardirnatural\partightenfactor0
 
 \f0\fs28 \cf2     \cf4 NSError\cf2 *error;
 \f1\fs24 \cf0 \
@@ -1391,13 +1392,13 @@ NSLog(@"Linked in %f ms", linkTime *1000.0);\
 \f0\fs28 \cf2         \cf5 if\cf2  ([JsonObject1.\cf4 allKeys\cf2  \cf8 containsObject\cf2 :key]) \{
 \f1\fs24 \cf0 \
 
-\f0\fs28 \cf2             [dataArr \cf8 addObject\cf2 :\cf7 @\{\cf32 \cb3 @"code"\cf2 \cb3 :key,\cf32 \cb3 @"name"\cf2 \cb3 :JsonObject[key][\cf32 \cb3 @"name"\cf2 \cb3 ],\cf32 \cb3 @"cities"\cf2 \cb3 :JsonObject1[key]\cf7 \}\cf2 ];
+\f0\fs28 \cf2             [dataArr \cf8 addObject\cf2 :\cf7 \cb3 @\{\cf32 \cb3 @"code"\cf2 \cb3 :key,\cf32 \cb3 @"name"\cf2 \cb3 :JsonObject[key][\cf32 \cb3 @"name"\cf2 \cb3 ],\cf32 \cb3 @"cities"\cf2 \cb3 :JsonObject1[key]\cf7 \cb3 \}\cf2 \cb3 ];
 \f1\fs24 \cf0 \
 
 \f0\fs28 \cf2         \}\cf5 else\cf2 \{
 \f1\fs24 \cf0 \
 
-\f0\fs28 \cf2             [dataArr \cf8 addObject\cf2 :\cf7 @\{\cf32 \cb3 @"code"\cf2 \cb3 :key,\cf32 \cb3 @"name"\cf2 \cb3 :JsonObject[key][\cf32 \cb3 @"name"\cf2 \cb3 ],\cf32 \cb3 @"cities"\cf2 \cb3 :\cf32 \cb3 @""\cf7 \cb3 \}\cf2 ];
+\f0\fs28 \cf2             [dataArr \cf8 addObject\cf2 :\cf7 \cb3 @\{\cf32 \cb3 @"code"\cf2 \cb3 :key,\cf32 \cb3 @"name"\cf2 \cb3 :JsonObject[key][\cf32 \cb3 @"name"\cf2 \cb3 ],\cf32 \cb3 @"cities"\cf2 \cb3 :\cf32 \cb3 @""\cf7 \cb3 \}\cf2 \cb3 ];
 \f1\fs24 \cf0 \
 
 \f0\fs28 \cf2         \}
@@ -1413,7 +1414,7 @@ NSLog(@"Linked in %f ms", linkTime *1000.0);\
 \f0\fs28 \cf2     \cf5 if\cf2  (isYes) \{
 \f1\fs24 \cf0 \
 
-\f0\fs28 \cf2         \cf4 NSData\cf2  *data = [\cf4 NSJSONSerialization\cf2  \cf8 dataWithJSONObject\cf2 :dataArr \cf8 options\cf2 :\cf7 0\cf2  \cf8 error\cf2 :\cf5 NULL\cf2 ];
+\f0\fs28 \cf2         \cf4 NSData\cf2  *data = [\cf4 NSJSONSerialization\cf2  \cf8 dataWithJSONObject\cf2 :dataArr \cf8 options\cf2 :\cf7 \cb3 0\cf2 \cb3  \cf8 error\cf2 :\cf5 NULL\cf2 ];
 \f1\fs24 \cf0 \
 
 \f0\fs28 \cf2         [\cf6 FCFileManager\cf2  \cf49 \cb3 writeFileAtPath\cf2 \cb3 :\cf32 \cb3 @"002.json"\cf2 \cb3  \cf49 \cb3 content\cf2 \cb3 :data];
@@ -1424,8 +1425,76 @@ NSLog(@"Linked in %f ms", linkTime *1000.0);\
 \
 \pard\pardeftab720\partightenfactor0
 \cf0 \
+\pard\tx692\pardeftab692\pardirnatural\partightenfactor0
+
+\f0 \cf2 \cb3 \kerning1\expnd0\expndtw0 - (\cf5 instancetype\cf2 )initWithMultiDelegates:(\cf5 id\cf2 )firstObject, ... \{
+\f1\fs24 \cf0 \
+
+\f0\fs28 \cf2     \cf5 self\cf2  = [\cf5 super\cf2  \cf8 init\cf2 ];
+\f1\fs24 \cf0 \
+
+\f0\fs28 \cf2     \cf5 if\cf2  (\cf5 self\cf2 ) \{
+\f1\fs24 \cf0 \
+
+\f0\fs28 \cf2         \cf6 _pointerArray\cf2  = [\cf4 NSPointerArray\cf2  \cf8 weakObjectsPointerArray\cf2 ];
+\f1\fs24 \cf0 \
+
+\f0\fs28 \cf2         
+\f1\fs24 \cf0 \
+
+\f0\fs28 \cf2         \cf4 va_list\cf2  params;
+\f1\fs24 \cf0 \
+
+\f0\fs28 \cf2         \cf9 \cb3 va_start\cf2 \cb3 (params, firstObject);
+\f1\fs24 \cf0 \
+
+\f0\fs28 \cf2         \cf5 id\cf2  arg;
+\f1\fs24 \cf0 \
+
+\f0\fs28 \cf2         
+\f1\fs24 \cf0 \
+
+\f0\fs28 \cf2         \cf5 if\cf2  (firstObject) \{
+\f1\fs24 \cf0 \
+
+\f0\fs28 \cf2             [\cf6 _pointerArray\cf2  \cf8 addPointer\cf2 :(\cf5 __bridge\cf2  \cf5 void\cf2  *)firstObject];
+\f1\fs24 \cf0 \
+
+\f0\fs28 \cf2             arg = \cf9 \cb3 va_arg\cf2 \cb3 (params, \cf5 id\cf2 );
+\f1\fs24 \cf0 \
+
+\f0\fs28 \cf2             \cf5 while\cf2  (arg) \{
+\f1\fs24 \cf0 \
+
+\f0\fs28 \cf2                 [\cf6 _pointerArray\cf2  \cf8 addPointer\cf2 :(\cf5 __bridge\cf2  \cf5 void\cf2  *)arg];
+\f1\fs24 \cf0 \
+
+\f0\fs28 \cf2                 arg = \cf9 \cb3 va_arg\cf2 \cb3 (params, \cf5 id\cf2 );
+\f1\fs24 \cf0 \
+
+\f0\fs28 \cf2             \}
+\f1\fs24 \cf0 \
+
+\f0\fs28 \cf2         \}
+\f1\fs24 \cf0 \
+
+\f0\fs28 \cf2         
+\f1\fs24 \cf0 \
+
+\f0\fs28 \cf2         \cf9 \cb3 va_end\cf2 \cb3 (params);
+\f1\fs24 \cf0 \
+
+\f0\fs28 \cf2     \}
+\f1\fs24 \cf0 \
+
+\f0\fs28 \cf2     \cf5 return\cf2  \cf5 self\cf2 ;
+\f1\fs24 \cf0 \
+
+\f0\fs28 \cf2 \}
+\f2 \cf0 \cb10 \expnd0\expndtw0\kerning0
 \
-\
+\pard\pardeftab720\partightenfactor0
+\cf0 \
 \
 \
 \

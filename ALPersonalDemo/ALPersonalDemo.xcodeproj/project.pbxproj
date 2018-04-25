@@ -68,6 +68,8 @@
 		CF862E6F2011BA8000140F31 /* TGFileTool.m in Sources */ = {isa = PBXBuildFile; fileRef = CF862E6D2011BA8000140F31 /* TGFileTool.m */; };
 		CF862E722011BBBE00140F31 /* UIImage+image.m in Sources */ = {isa = PBXBuildFile; fileRef = CF862E702011BBB900140F31 /* UIImage+image.m */; };
 		CF970B3B1EF76F0300955D4A /* LLRollingButtonScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = CF970B3A1EF76F0300955D4A /* LLRollingButtonScrollView.m */; };
+		CFA53FA3207B1876002EEDDF /* JKProtocolHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = CFA53FA1207B1876002EEDDF /* JKProtocolHelper.m */; };
+		CFA53FA6207B864D002EEDDF /* KVOArray.m in Sources */ = {isa = PBXBuildFile; fileRef = CFA53FA5207B864D002EEDDF /* KVOArray.m */; };
 		CFA999481F9062670034391E /* NSObject+VKMsgSend.m in Sources */ = {isa = PBXBuildFile; fileRef = CFA999461F9062670034391E /* NSObject+VKMsgSend.m */; };
 		CFB044F31F44271C00B9FFE3 /* WWCustomLimitDatePickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = CFB044F21F44271C00B9FFE3 /* WWCustomLimitDatePickerView.m */; };
 		CFC0AACA1EFB64B600E4FF12 /* EHHorizontalLineViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CFC0AAC11EFB64B600E4FF12 /* EHHorizontalLineViewCell.m */; };
@@ -469,6 +471,10 @@
 		CF862E712011BBBD00140F31 /* UIImage+image.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+image.h"; sourceTree = "<group>"; };
 		CF970B391EF76F0300955D4A /* LLRollingButtonScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LLRollingButtonScrollView.h; sourceTree = "<group>"; };
 		CF970B3A1EF76F0300955D4A /* LLRollingButtonScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LLRollingButtonScrollView.m; sourceTree = "<group>"; };
+		CFA53FA1207B1876002EEDDF /* JKProtocolHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JKProtocolHelper.m; sourceTree = "<group>"; };
+		CFA53FA2207B1876002EEDDF /* JKProtocolHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JKProtocolHelper.h; sourceTree = "<group>"; };
+		CFA53FA4207B864D002EEDDF /* KVOArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KVOArray.h; sourceTree = "<group>"; };
+		CFA53FA5207B864D002EEDDF /* KVOArray.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KVOArray.m; sourceTree = "<group>"; };
 		CFA999451F9062670034391E /* NSObject+VKMsgSend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+VKMsgSend.h"; sourceTree = "<group>"; };
 		CFA999461F9062670034391E /* NSObject+VKMsgSend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+VKMsgSend.m"; sourceTree = "<group>"; };
 		CFA999471F9062670034391E /* VKMsgSend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VKMsgSend.h; sourceTree = "<group>"; };
@@ -1236,6 +1242,15 @@
 				CF970B3A1EF76F0300955D4A /* LLRollingButtonScrollView.m */,
 			);
 			path = BTNScrollView;
+			sourceTree = "<group>";
+		};
+		CFA53FA0207B17C4002EEDDF /* 消息转发 */ = {
+			isa = PBXGroup;
+			children = (
+				CFA53FA2207B1876002EEDDF /* JKProtocolHelper.h */,
+				CFA53FA1207B1876002EEDDF /* JKProtocolHelper.m */,
+			);
+			path = "消息转发";
 			sourceTree = "<group>";
 		};
 		CFA999441F9062670034391E /* VKMsgSend */ = {
@@ -2274,6 +2289,7 @@
 		E1D2264A1F6D85DB0001E8A3 /* tool */ = {
 			isa = PBXGroup;
 			children = (
+				CFA53FA0207B17C4002EEDDF /* 消息转发 */,
 				CFE308BE206DDFFA00007951 /* New Group */,
 				CF1C56301FEA2F8E0011C7C6 /* 线程 */,
 				CF08B11F1FE753C90015015F /* 圆角 */,
@@ -2285,6 +2301,8 @@
 				CF25C1B61FE35745002B5EE7 /* WHUMacro.h */,
 				CF08B11C1FE752160015015F /* WHULiveKeeper.h */,
 				CF08B11D1FE752160015015F /* WHULiveKeeper.m */,
+				CFA53FA4207B864D002EEDDF /* KVOArray.h */,
+				CFA53FA5207B864D002EEDDF /* KVOArray.m */,
 				E1D2264D1F6D86860001E8A3 /* NSPredicate */,
 			);
 			path = tool;
@@ -2803,6 +2821,7 @@
 				E1540B121EF6534C00D2721F /* UIColor+Hex.m in Sources */,
 				CFC0AACD1EFB64B600E4FF12 /* EHRoundedHorizontalViewCell.m in Sources */,
 				E1540B291EF6584800D2721F /* HHLineStyleCell.m in Sources */,
+				CFA53FA6207B864D002EEDDF /* KVOArray.m in Sources */,
 				E1D428E51FDCF8D600D3A51C /* QKYDelayButton.m in Sources */,
 				E1F661BF1EDDA36F001D98E1 /* UITableView+SSAdd.m in Sources */,
 				E15D70031EF4DE4900513AE6 /* NSDate+Extension.m in Sources */,
@@ -2872,6 +2891,7 @@
 				CFA999481F9062670034391E /* NSObject+VKMsgSend.m in Sources */,
 				E1B5BFEC1FB9E1E900DC0A34 /* ALTestSwiftView.swift in Sources */,
 				CFFFC3DB1FC4091C006B6E5B /* UIView+BNBoom.m in Sources */,
+				CFA53FA3207B1876002EEDDF /* JKProtocolHelper.m in Sources */,
 				E15D70551EF5372200513AE6 /* UINavigationController+FDFullscreenPopGesture.m in Sources */,
 				E1540A761EF64C8800D2721F /* RSKTouchView.m in Sources */,
 				CF6012E51EFA3EDC007CA737 /* ALFontCache.m in Sources */,

@@ -48,7 +48,7 @@ https://github.com/rickytan/RTRootNavigationController
 \
 \pard\tx692\pardeftab692\pardirnatural\partightenfactor0
 
-\fs28 \cf3 \cb6 \CocoaLigature1  [self \cf7 \cb6 scrollViewDidScroll\cf3 \cb6 :self.\cf8 \cb6 tableView\cf3 \cb6 ];
+\fs28 \cf3 \cb6 \CocoaLigature1  [self \cf7 scrollViewDidScroll\cf3 :self.\cf8 tableView\cf3 ];
 \fs22 \cf4 \cb1 \CocoaLigature0 \
 \
 \pard\tx692\pardeftab692\pardirnatural\partightenfactor0
@@ -56,31 +56,31 @@ https://github.com/rickytan/RTRootNavigationController
 \fs28 \cf9 \cb6 \CocoaLigature1 #define NAVBAR_CHANGE_POINT \cf10 \cb6 50\
 \
 \pard\tx692\pardeftab692\pardirnatural\partightenfactor0
-\cf3 - (\cf11 \cb6 void\cf3 \cb6 )scrollViewDidScroll:(\cf12 \cb6 UIScrollView\cf3 \cb6  *)scrollView
+\cf3 \cb6 - (\cf11 void\cf3 )scrollViewDidScroll:(\cf12 UIScrollView\cf3  *)scrollView
 \f2\fs24 \cf0 \
 
 \f0\fs28 \cf3 \{
 \f2\fs24 \cf0 \
 
-\f0\fs28 \cf3     \cf12 \cb6 UIColor\cf3 \cb6  * color = [\cf12 \cb6 UIColor\cf3 \cb6  \cf7 \cb6 colorWithRed\cf3 \cb6 :\cf10 0\cf3 /\cf10 255.0\cf3  \cf7 \cb6 green\cf3 \cb6 :\cf10 175\cf3 /\cf10 255.0\cf3  \cf7 \cb6 blue\cf3 \cb6 :\cf10 240\cf3 /\cf10 255.0\cf3  \cf7 \cb6 alpha\cf3 \cb6 :\cf10 1\cf3 ];
+\f0\fs28 \cf3     \cf12 UIColor\cf3  * color = [\cf12 UIColor\cf3  \cf7 colorWithRed\cf3 :\cf10 \cb6 0\cf3 \cb6 /\cf10 \cb6 255.0\cf3 \cb6  \cf7 green\cf3 :\cf10 \cb6 175\cf3 \cb6 /\cf10 \cb6 255.0\cf3 \cb6  \cf7 blue\cf3 :\cf10 \cb6 240\cf3 \cb6 /\cf10 \cb6 255.0\cf3 \cb6  \cf7 alpha\cf3 :\cf10 \cb6 1\cf3 \cb6 ];
 \f2\fs24 \cf0 \
 
-\f0\fs28 \cf3     \cf12 \cb6 CGFloat\cf3 \cb6  offsetY = scrollView.\cf12 \cb6 contentOffset\cf3 \cb6 .\cf12 \cb6 y\cf3 \cb6 ;
+\f0\fs28 \cf3     \cf12 CGFloat\cf3  offsetY = scrollView.\cf12 contentOffset\cf3 .\cf12 y\cf3 ;
 \f2\fs24 \cf0 \
 
 \f0\fs28 \cf3     if (offsetY > \cf9 \cb6 NAVBAR_CHANGE_POINT\cf3 \cb6 ) \{
 \f2\fs24 \cf0 \
 
-\f0\fs28 \cf3         \cf12 \cb6 CGFloat\cf3 \cb6  alpha = \cf9 \cb6 MIN\cf3 \cb6 (\cf10 1\cf3 , \cf10 1\cf3  - ((\cf9 \cb6 NAVBAR_CHANGE_POINT\cf3 \cb6  + \cf10 64\cf3  - offsetY) / \cf10 64\cf3 ));
+\f0\fs28 \cf3         \cf12 CGFloat\cf3  alpha = \cf9 \cb6 MIN\cf3 \cb6 (\cf10 \cb6 1\cf3 \cb6 , \cf10 \cb6 1\cf3 \cb6  - ((\cf9 \cb6 NAVBAR_CHANGE_POINT\cf3 \cb6  + \cf10 \cb6 64\cf3 \cb6  - offsetY) / \cf10 \cb6 64\cf3 \cb6 ));
 \f2\fs24 \cf0 \
 
-\f0\fs28 \cf3         [self.\cf12 \cb6 navigationController\cf3 \cb6 .\cf12 \cb6 navigationBar\cf3 \cb6  \cf13 \cb6 lt_setBackgroundColor\cf3 \cb6 :[color \cf7 \cb6 colorWithAlphaComponent\cf3 \cb6 :alpha]];
+\f0\fs28 \cf3         [self.\cf12 navigationController\cf3 .\cf12 navigationBar\cf3  \cf13 \cb6 lt_setBackgroundColor\cf3 \cb6 :[color \cf7 colorWithAlphaComponent\cf3 :alpha]];
 \f2\fs24 \cf0 \
 
 \f0\fs28 \cf3     \} else \{
 \f2\fs24 \cf0 \
 
-\f0\fs28 \cf3         [self.\cf12 \cb6 navigationController\cf3 \cb6 .\cf12 \cb6 navigationBar\cf3 \cb6  \cf13 \cb6 lt_setBackgroundColor\cf3 \cb6 :[color \cf7 \cb6 colorWithAlphaComponent\cf3 \cb6 :\cf10 0\cf3 ]];
+\f0\fs28 \cf3         [self.\cf12 navigationController\cf3 .\cf12 navigationBar\cf3  \cf13 \cb6 lt_setBackgroundColor\cf3 \cb6 :[color \cf7 colorWithAlphaComponent\cf3 :\cf10 \cb6 0\cf3 \cb6 ]];
 \f2\fs24 \cf0 \
 
 \f0\fs28 \cf3     \}
@@ -668,7 +668,7 @@ https://github.com/rickytan/RTRootNavigationController
     [\cf11 super\cf3  \cf7 viewWillDisappear\cf3 :animated];\
     [\cf11 self\cf3 .\cf12 navigationController\cf3 .\cf12 navigationBar\cf3  \cf7 setBackgroundImage\cf3 :[\cf12 UIImage\cf3  \cf7 new\cf3 ] \cf7 forBarPosition\cf3 :\cf7 UIBarPositionAny\cf3  \cf7 barMetrics\cf3 :\cf7 UIBarMetricsDefault\cf3 ];\
     [\cf11 self\cf3 .\cf12 navigationController\cf3 .\cf12 navigationBar\cf3  \cf7 setShadowImage\cf3 :[\cf12 UIImage\cf3  \cf7 new\cf3 ]];\
-\}\cf3 \cb19 \
+\}\cb19 \
 \
 \
 \pard\pardeftab720\partightenfactor0
@@ -694,17 +694,16 @@ https://github.com/rickytan/RTRootNavigationController
 \f1 \'cf\'d4\'ca\'be\'b5\'bc\'ba\'bd\'c0\'b8\'b5\'d7\'b2\'bf\'cf\'df\
 \pard\tx692\pardeftab692\pardirnatural\partightenfactor0
 
-\f0\b0\fs28 \cf11 \cb6 \kerning1\expnd0\expndtw0 self\cf3 \cb6 .\cf12 \cb6 navigationController\cf3 \cb6 .\cf12 \cb6 navigationBar\cf3 \cb6 .\cf12 \cb6 translucent\cf3 \cb6  = \cf11 \cb6 NO\cf3 \cb6 ;
+\f0\b0\fs28 \cf11 \cb6 \kerning1\expnd0\expndtw0 self\cf3 .\cf12 navigationController\cf3 .\cf12 navigationBar\cf3 .\cf12 translucent\cf3  = \cf11 NO\cf3 ;
 \fs26 \cf3 \cb19 \CocoaLigature0 \
-\pard\tx692\pardeftab692\pardirnatural\partightenfactor0
 
-\fs28 \cf3 \cb6 \CocoaLigature1 [\cf11 \cb6 self\cf3 \cb6 .\cf12 \cb6 navigationController\cf3 \cb6 .\cf12 \cb6 navigationBar\cf3 \cb6  \cf7 \cb6 setBackgroundImage\cf3 \cb6 :\cf11 \cb6 nil\cf3 \cb6  \cf7 \cb6 forBarPosition\cf3 \cb6 :\cf7 \cb6 UIBarPositionAny\cf3 \cb6  \cf7 \cb6 barMetrics\cf3 \cb6 :\cf7 \cb6 UIBarMetricsDefault\cf3 \cb6 ];
+\fs28 \cf3 \cb6 \CocoaLigature1 [\cf11 self\cf3 .\cf12 navigationController\cf3 .\cf12 navigationBar\cf3  \cf7 setBackgroundImage\cf3 :\cf11 nil\cf3  \cf7 forBarPosition\cf3 :\cf7 UIBarPositionAny\cf3  \cf7 barMetrics\cf3 :\cf7 UIBarMetricsDefault\cf3 ];
 \f2\fs24 \cf0 \
 
-\f0\fs28 \cf3     [\cf11 \cb6 self\cf3 \cb6 .\cf12 \cb6 navigationController\cf3 \cb6 .\cf12 \cb6 navigationBar\cf3 \cb6  \cf7 \cb6 setShadowImage\cf3 \cb6 :\cf11 \cb6 nil\cf3 \cb6 ];
+\f0\fs28 \cf3     [\cf11 self\cf3 .\cf12 navigationController\cf3 .\cf12 navigationBar\cf3  \cf7 setShadowImage\cf3 :\cf11 nil\cf3 ];
 \f2\fs24 \cf0 \
 
-\f0\fs28 \cf3     [\cf11 \cb6 self\cf3 \cb6 .\cf12 \cb6 navigationController\cf3 \cb6 .\cf12 \cb6 navigationBar\cf3 \cb6  \cf13 \cb6 lt_setBackgroundColor\cf3 \cb6 :[\cf12 \cb6 UIColor\cf3 \cb6  \cf7 \cb6 whiteColor\cf3 \cb6 ]];\
+\f0\fs28 \cf3     [\cf11 self\cf3 .\cf12 navigationController\cf3 .\cf12 navigationBar\cf3  \cf13 \cb6 lt_setBackgroundColor\cf3 \cb6 :[\cf12 UIColor\cf3  \cf7 whiteColor\cf3 ]];\
 \pard\pardeftab720\partightenfactor0
 
 \f5\b\fs68 \cf25 \cb19 \expnd0\expndtw0\kerning0
@@ -713,14 +712,13 @@ ios
 \f0\b0\fs26 \cf3 \kerning1\expnd0\expndtw0 \CocoaLigature0 \
 \pard\tx692\pardeftab692\pardirnatural\partightenfactor0
 
-\fs28 \cf11 \cb6 \CocoaLigature1 self\cf3 \cb6 .\cf12 \cb6 navigationController\cf3 \cb6 .\cf12 \cb6 navigationBar\cf3 \cb6 .\cf12 \cb6 translucent\cf3 \cb6  = \cf11 \cb6 YES\cf3 \cb6 ;
-\f2\fs24 \cf0 \
-\pard\tx692\pardeftab692\pardirnatural\partightenfactor0
-
-\f0\fs28 \cf3     [\cf11 \cb6 self\cf3 \cb6 .\cf12 \cb6 navigationController\cf3 \cb6 .\cf12 \cb6 navigationBar\cf3 \cb6  \cf7 \cb6 setBackgroundImage\cf3 \cb6 :[\cf12 \cb6 UIImage\cf3 \cb6  \cf7 \cb6 new\cf3 \cb6 ] \cf7 \cb6 forBarPosition\cf3 \cb6 :\cf7 \cb6 UIBarPositionAny\cf3 \cb6  \cf7 \cb6 barMetrics\cf3 \cb6 :\cf7 \cb6 UIBarMetricsDefault\cf3 \cb6 ];
+\fs28 \cf11 \cb6 \CocoaLigature1 self\cf3 .\cf12 navigationController\cf3 .\cf12 navigationBar\cf3 .\cf12 translucent\cf3  = \cf11 YES\cf3 ;
 \f2\fs24 \cf0 \
 
-\f0\fs28 \cf3     [\cf11 \cb6 self\cf3 \cb6 .\cf12 \cb6 navigationController\cf3 \cb6 .\cf12 \cb6 navigationBar\cf3 \cb6  \cf7 \cb6 setShadowImage\cf3 \cb6 :[\cf12 \cb6 UIImage\cf3 \cb6  \cf7 \cb6 new\cf3 \cb6 ]];\
+\f0\fs28 \cf3     [\cf11 self\cf3 .\cf12 navigationController\cf3 .\cf12 navigationBar\cf3  \cf7 setBackgroundImage\cf3 :[\cf12 UIImage\cf3  \cf7 new\cf3 ] \cf7 forBarPosition\cf3 :\cf7 UIBarPositionAny\cf3  \cf7 barMetrics\cf3 :\cf7 UIBarMetricsDefault\cf3 ];
+\f2\fs24 \cf0 \
+
+\f0\fs28 \cf3     [\cf11 self\cf3 .\cf12 navigationController\cf3 .\cf12 navigationBar\cf3  \cf7 setShadowImage\cf3 :[\cf12 UIImage\cf3  \cf7 new\cf3 ]];\
 \pard\tx692\pardeftab692\pardirnatural\partightenfactor0
 
 \fs26 \cf3 \cb19 \CocoaLigature0 \
@@ -751,33 +749,32 @@ if ([self.navigationController respondsToSelector:@selector(interactivePopGestur
 \pard\tx692\pardeftab692\pardirnatural\partightenfactor0
 
 \fs28 \cf16 \cb6 \CocoaLigature1 //
-\f1 \'c8\'e7\'b9\'fb\'ca\'c7\'b4\'f8\'b5\'bc\'ba\'bd\'cc\'f5\'b5\'c4\'c7\'e9\'bf\'f6\'a3\'ac\'d0\'e8\'d2\'aa\'c3\'bf\'d2\'bb\'d2\'b3\'b2\'bb\'cd\'ac\'b5\'c4\'d7\'b4\'cc\'ac\'c0\'b8\'d1\'d5\'c9\'ab\'d0\'e8\'d2\'aa
-\f0 View controller-based status bar appearance 
-\f1 \'c9\'e8\'d6\'c3\'b3\'c9
-\f0 NO
+\f1 \cf16 \cb6 \'c8\'e7\'b9\'fb\'ca\'c7\'b4\'f8\'b5\'bc\'ba\'bd\'cc\'f5\'b5\'c4\'c7\'e9\'bf\'f6\'a3\'ac\'d0\'e8\'d2\'aa\'c3\'bf\'d2\'bb\'d2\'b3\'b2\'bb\'cd\'ac\'b5\'c4\'d7\'b4\'cc\'ac\'c0\'b8\'d1\'d5\'c9\'ab\'d0\'e8\'d2\'aa
+\f0 \cf16 \cb6 View controller-based status bar appearance 
+\f1 \cf16 \cb6 \'c9\'e8\'d6\'c3\'b3\'c9
+\f0 \cf16 \cb6 NO
 \fs26 \cf3 \cb19 \CocoaLigature0 \
 
 \fs28 \cf16 \cb6 \CocoaLigature1 //
-\f1 \'c9\'e8\'d6\'c3\'d7\'b4\'cc\'ac\'c0\'b8\'b1\'b3\'be\'b0\'d1\'d5\'c9\'ab
-\f2\fs24 \cf0 \
-\pard\tx692\pardeftab692\pardirnatural\partightenfactor0
+\f1 \cf16 \cb6 \'c9\'e8\'d6\'c3\'d7\'b4\'cc\'ac\'c0\'b8\'b1\'b3\'be\'b0\'d1\'d5\'c9\'ab
+\f2\fs24 \cf0 \cb6 \
 
-\f0\fs28 \cf3 - (\cf11 \cb6 void\cf3 \cb6 )setStatusBarBackgroundColor:(\cf12 \cb6 UIColor\cf3 \cb6  *)color \{
-\f2\fs24 \cf0 \
-
-\f0\fs28 \cf3     
-\f2\fs24 \cf0 \
-
-\f0\fs28 \cf3     \cf12 \cb6 UIView\cf3 \cb6  *statusBar = [[[\cf12 \cb6 UIApplication\cf3 \cb6  \cf7 \cb6 sharedApplication\cf3 \cb6 ] \cf7 \cb6 valueForKey\cf3 \cb6 :\cf26 \cb6 @"statusBarWindow"\cf3 \cb6 ] \cf7 \cb6 valueForKey\cf3 \cb6 :\cf26 \cb6 @"statusBar"\cf3 \cb6 ];
+\f0\fs28 \cf3 - (\cf11 void\cf3 )setStatusBarBackgroundColor:(\cf12 UIColor\cf3  *)color \{
 \f2\fs24 \cf0 \
 
 \f0\fs28 \cf3     
 \f2\fs24 \cf0 \
 
-\f0\fs28 \cf3     if ([statusBar \cf7 \cb6 respondsToSelector\cf3 \cb6 :\cf11 \cb6 @selector\cf3 \cb6 (setBackgroundColor:)]) \{
+\f0\fs28 \cf3     \cf12 UIView\cf3  *statusBar = [[[\cf12 UIApplication\cf3  \cf7 sharedApplication\cf3 ] \cf7 valueForKey\cf3 :\cf26 \cb6 @"statusBarWindow"\cf3 \cb6 ] \cf7 valueForKey\cf3 :\cf26 \cb6 @"statusBar"\cf3 \cb6 ];
 \f2\fs24 \cf0 \
 
-\f0\fs28 \cf3         statusBar.\cf12 \cb6 backgroundColor\cf3 \cb6  = color;
+\f0\fs28 \cf3     
+\f2\fs24 \cf0 \
+
+\f0\fs28 \cf3     if ([statusBar \cf7 respondsToSelector\cf3 :\cf11 @selector\cf3 (setBackgroundColor:)]) \{
+\f2\fs24 \cf0 \
+
+\f0\fs28 \cf3         statusBar.\cf12 backgroundColor\cf3  = color;
 \f2\fs24 \cf0 \
 
 \f0\fs28 \cf3     \}
@@ -828,6 +825,293 @@ if ([self.navigationController respondsToSelector:@selector(interactivePopGestur
     \}\
     return _tableView;\
 \}\
+\
+\pard\tx692\pardeftab692\pardirnatural\partightenfactor0
+
+\fs28 \cf9 \cb6 \CocoaLigature1 #pragma mark 
+\f1 \'bd\'d3\'ca\'d5\'cd\'c6\'cb\'cd\'cf\'fb\'cf\'a2
+\f2\fs24 \cf0 \cb6 \
+\pard\tx692\pardeftab692\pardirnatural\partightenfactor0
+
+\f0\fs28 \cf3 - (\cf11 void\cf3 )application:(\cf12 UIApplication\cf3  *)application didReceiveRemoteNotification:(\cf12 NSDictionary\cf3  *)userInfo
+\f2\fs24 \cf0 \
+
+\f0\fs28 \cf3 \{
+\f2\fs24 \cf0 \
+
+\f0\fs28 \cf3     \cf16 // 
+\f1 \cf16 \cb6 \'d5\'e2\'b8\'f6\'b9\'e6\'d4\'f2\'bf\'cf\'b6\'a8\'ca\'c2\'cf\'c8\'b8\'fa\'b7\'fe\'ce\'f1\'b6\'cb\'b9\'b5\'cd\'a8\'ba\'c3\'a3\'ac\'cc\'f8\'d7\'aa\'b6\'d4\'d3\'a6\'b5\'c4\'bd\'e7\'c3\'e6\'d0\'e8\'d2\'aa\'b6\'d4\'d3\'a6\'b5\'c4\'b2\'ce\'ca\'fd
+\f2\fs24 \cf0 \cb6 \
+
+\f0\fs28 \cf16 //NSDictionary *userInfo = @\{
+\f2\fs24 \cf0 \
+
+\f0\fs28 \cf16 //                           @"class": @"HSFeedsViewController",
+\f2\fs24 \cf0 \
+
+\f0\fs28 \cf16 //                           @"property": @\{
+\f2\fs24 \cf0 \
+
+\f0\fs28 \cf16 //                                        @"ID": @"123",
+\f2\fs24 \cf0 \
+
+\f0\fs28 \cf16 //                                        @"type": @"12"
+\f2\fs24 \cf0 \
+
+\f0\fs28 \cf16 //                                   \}
+\f2\fs24 \cf0 \
+
+\f0\fs28 \cf16 //                           \};
+\f2\fs24 \cf0 \
+
+\f0\fs28 \cf3     
+\f2\fs24 \cf0 \
+
+\f0\fs28 \cf3     [\cf11 self\cf3  \cf13 \cb6 push\cf3 \cb6 :userInfo];
+\f2\fs24 \cf0 \
+
+\f0\fs28 \cf3 \}
+\fs26 \cf3 \cb19 \CocoaLigature0 \
+\pard\tx642\pardeftab642\pardirnatural\partightenfactor0
+\cf3 \
+\pard\tx692\pardeftab692\pardirnatural\partightenfactor0
+
+\fs28 \cf16 \cb6 \CocoaLigature1 /**
+\f2\fs24 \cf0 \
+
+\f0\fs28 \cf16  *  
+\f1 \cf16 \cb6 \'cc\'f8\'d7\'aa\'bd\'e7\'c3\'e6
+\f2\fs24 \cf0 \cb6 \
+
+\f0\fs28 \cf16  */
+\f2\fs24 \cf0 \
+
+\f0\fs28 \cf3 - (\cf11 void\cf3 )push:(\cf12 NSDictionary\cf3  *)params
+\f2\fs24 \cf0 \
+
+\f0\fs28 \cf3 \{
+\f2\fs24 \cf0 \
+
+\f0\fs28 \cf3     \cf16 // 
+\f1 \cf16 \cb6 \'c0\'e0\'c3\'fb
+\f2\fs24 \cf0 \cb6 \
+
+\f0\fs28 \cf3     \cf12 NSString\cf3  *class =[\cf12 NSString\cf3  \cf7 stringWithFormat\cf3 :\cf26 \cb6 @"%@"\cf3 \cb6 , params[\cf26 \cb6 @"class"\cf3 \cb6 ]];
+\f2\fs24 \cf0 \
+
+\f0\fs28 \cf3     \cf11 const\cf3  \cf11 char\cf3  *className = [class \cf7 cStringUsingEncoding\cf3 :\cf7 NSASCIIStringEncoding\cf3 ];
+\f2\fs24 \cf0 \
+
+\f0\fs28 \cf3     
+\f2\fs24 \cf0 \
+
+\f0\fs28 \cf3     \cf16 // 
+\f1 \cf16 \cb6 \'b4\'d3\'d2\'bb\'b8\'f6\'d7\'d6\'b4\'ae\'b7\'b5\'bb\'d8\'d2\'bb\'b8\'f6\'c0\'e0
+\f2\fs24 \cf0 \cb6 \
+
+\f0\fs28 \cf3     \cf8 Class\cf3  newClass = \cf7 objc_getClass\cf3 (className);
+\f2\fs24 \cf0 \
+
+\f0\fs28 \cf3     \cf11 if\cf3  (!newClass)
+\f2\fs24 \cf0 \
+
+\f0\fs28 \cf3     \{
+\f2\fs24 \cf0 \
+
+\f0\fs28 \cf3         \cf16 // 
+\f1 \cf16 \cb6 \'b4\'b4\'bd\'a8\'d2\'bb\'b8\'f6\'c0\'e0
+\f2\fs24 \cf0 \cb6 \
+
+\f0\fs28 \cf3         \cf8 Class\cf3  superClass = [\cf12 NSObject\cf3  \cf7 class\cf3 ];
+\f2\fs24 \cf0 \
+
+\f0\fs28 \cf3         newClass = \cf7 objc_allocateClassPair\cf3 (superClass, className, \cf10 \cb6 0\cf3 \cb6 );
+\f2\fs24 \cf0 \
+
+\f0\fs28 \cf3         \cf16 // 
+\f1 \cf16 \cb6 \'d7\'a2\'b2\'e1\'c4\'e3\'b4\'b4\'bd\'a8\'b5\'c4\'d5\'e2\'b8\'f6\'c0\'e0
+\f2\fs24 \cf0 \cb6 \
+
+\f0\fs28 \cf3         \cf7 objc_registerClassPair\cf3 (newClass);
+\f2\fs24 \cf0 \
+
+\f0\fs28 \cf3     \}
+\f2\fs24 \cf0 \
+
+\f0\fs28 \cf3     \cf16 // 
+\f1 \cf16 \cb6 \'b4\'b4\'bd\'a8\'b6\'d4\'cf\'f3
+\f2\fs24 \cf0 \cb6 \
+
+\f0\fs28 \cf3     \cf11 id\cf3  instance = [[newClass \cf7 alloc\cf3 ] \cf7 init\cf3 ];
+\f2\fs24 \cf0 \
+
+\f0\fs28 \cf3     
+\f2\fs24 \cf0 \
+
+\f0\fs28 \cf3     \cf12 NSDictionary\cf3  *propertys = params[\cf26 \cb6 @"property"\cf3 \cb6 ];
+\f2\fs24 \cf0 \
+
+\f0\fs28 \cf3     [propertys \cf7 enumerateKeysAndObjectsUsingBlock\cf3 :^(\cf11 id\cf3  key, \cf11 id\cf3  obj, \cf11 BOOL\cf3  *stop) \{
+\f2\fs24 \cf0 \
+
+\f0\fs28 \cf3         \cf16 // 
+\f1 \cf16 \cb6 \'bc\'ec\'b2\'e2\'d5\'e2\'b8\'f6\'b6\'d4\'cf\'f3\'ca\'c7\'b7\'f1\'b4\'e6\'d4\'da\'b8\'c3\'ca\'f4\'d0\'d4
+\f2\fs24 \cf0 \cb6 \
+
+\f0\fs28 \cf3         \cf11 if\cf3  ([\cf11 self\cf3  \cf13 \cb6 checkIsExistPropertyWithInstance\cf3 \cb6 :instance \cf13 \cb6 verifyPropertyName\cf3 \cb6 :key]) \{
+\f2\fs24 \cf0 \
+
+\f0\fs28 \cf3             \cf16 // 
+\f1 \cf16 \cb6 \'c0\'fb\'d3\'c3
+\f0 \cf16 \cb6 kvc
+\f1 \cf16 \cb6 \'b8\'b3\'d6\'b5
+\f2\fs24 \cf0 \cb6 \
+
+\f0\fs28 \cf3             [instance \cf7 setValue\cf3 :obj \cf7 forKey\cf3 :key];
+\f2\fs24 \cf0 \
+
+\f0\fs28 \cf3         \}
+\f2\fs24 \cf0 \
+
+\f0\fs28 \cf3     \}];
+\f2\fs24 \cf0 \
+\
+
+\f0\fs28 \cf3     
+\f2\fs24 \cf0 \
+
+\f0\fs28 \cf3     \cf16 // 
+\f1 \cf16 \cb6 \'bb\'f1\'c8\'a1\'b5\'bc\'ba\'bd\'bf\'d8\'d6\'c6\'c6\'f7
+\f2\fs24 \cf0 \cb6 \
+
+\f0\fs28 \cf3     \cf12 UITabBarController\cf3  *tabVC = (\cf12 UITabBarController\cf3  *)\cf11 self\cf3 .\cf8 window\cf3 .\cf12 rootViewController\cf3 ;
+\f2\fs24 \cf0 \
+
+\f0\fs28 \cf3     \cf12 UINavigationController\cf3  *pushClassStance = (\cf12 UINavigationController\cf3  *)tabVC.\cf12 viewControllers\cf3 [tabVC.\cf12 selectedIndex\cf3 ];
+\f2\fs24 \cf0 \
+
+\f0\fs28 \cf3     
+\f2\fs24 \cf0 \
+
+\f0\fs28 \cf3     \cf16 // 
+\f1 \cf16 \cb6 \'cc\'f8\'d7\'aa\'b5\'bd\'b6\'d4\'d3\'a6\'b5\'c4\'bf\'d8\'d6\'c6\'c6\'f7
+\f2\fs24 \cf0 \cb6 \
+
+\f0\fs28 \cf3     [pushClassStance \cf7 pushViewController\cf3 :instance \cf7 animated\cf3 :\cf11 YES\cf3 ];
+\f2\fs24 \cf0 \
+
+\f0\fs28 \cf3 \}
+\f2\fs24 \cf0 \
+\pard\tx642\pardeftab642\pardirnatural\partightenfactor0
+
+\f0\fs26 \cf3 \cb19 \CocoaLigature0 \
+\pard\tx692\pardeftab692\pardirnatural\partightenfactor0
+
+\fs28 \cf16 \cb6 \CocoaLigature1 /**
+\f2\fs24 \cf0 \
+
+\f0\fs28 \cf16  *  
+\f1 \cf16 \cb6 \'bc\'ec\'b2\'e2\'b6\'d4\'cf\'f3\'ca\'c7\'b7\'f1\'b4\'e6\'d4\'da\'b8\'c3\'ca\'f4\'d0\'d4
+\f2\fs24 \cf0 \cb6 \
+
+\f0\fs28 \cf16  */
+\f2\fs24 \cf0 \
+
+\f0\fs28 \cf3 - (\cf11 BOOL\cf3 )checkIsExistPropertyWithInstance:(\cf11 id\cf3 )instance verifyPropertyName:(\cf12 NSString\cf3  *)verifyPropertyName
+\f2\fs24 \cf0 \
+
+\f0\fs28 \cf3 \{
+\f2\fs24 \cf0 \
+
+\f0\fs28 \cf3     \cf11 unsigned\cf3  \cf11 int\cf3  outCount, i;
+\f2\fs24 \cf0 \
+
+\f0\fs28 \cf3     
+\f2\fs24 \cf0 \
+
+\f0\fs28 \cf3     \cf16 // 
+\f1 \cf16 \cb6 \'bb\'f1\'c8\'a1\'b6\'d4\'cf\'f3\'c0\'ef\'b5\'c4\'ca\'f4\'d0\'d4\'c1\'d0\'b1\'ed
+\f2\fs24 \cf0 \cb6 \
+
+\f0\fs28 \cf3     \cf12 objc_property_t\cf3  * properties = \cf7 class_copyPropertyList\cf3 ([instance
+\f2\fs24 \cf0 \
+
+\f0\fs28 \cf3                                                            \cf7 class\cf3 ], &outCount);
+\f2\fs24 \cf0 \
+
+\f0\fs28 \cf3     
+\f2\fs24 \cf0 \
+
+\f0\fs28 \cf3     \cf11 for\cf3  (i = \cf10 \cb6 0\cf3 \cb6 ; i < outCount; i++) \{
+\f2\fs24 \cf0 \
+
+\f0\fs28 \cf3         \cf12 objc_property_t\cf3  property =properties[i];
+\f2\fs24 \cf0 \
+
+\f0\fs28 \cf3         \cf16 //  
+\f1 \cf16 \cb6 \'ca\'f4\'d0\'d4\'c3\'fb\'d7\'aa\'b3\'c9\'d7\'d6\'b7\'fb\'b4\'ae
+\f2\fs24 \cf0 \cb6 \
+
+\f0\fs28 \cf3         \cf12 NSString\cf3  *propertyName = [[\cf12 NSString\cf3  \cf7 alloc\cf3 ] \cf7 initWithCString\cf3 :\cf7 property_getName\cf3 (property) \cf7 encoding\cf3 :\cf7 NSUTF8StringEncoding\cf3 ];
+\f2\fs24 \cf0 \
+
+\f0\fs28 \cf3         \cf16 // 
+\f1 \cf16 \cb6 \'c5\'d0\'b6\'cf\'b8\'c3\'ca\'f4\'d0\'d4\'ca\'c7\'b7\'f1\'b4\'e6\'d4\'da
+\f2\fs24 \cf0 \cb6 \
+
+\f0\fs28 \cf3         \cf11 if\cf3  ([propertyName \cf7 isEqualToString\cf3 :verifyPropertyName]) \{
+\f2\fs24 \cf0 \
+
+\f0\fs28 \cf3             \cf7 free\cf3 (properties);
+\f2\fs24 \cf0 \
+
+\f0\fs28 \cf3             \cf11 return\cf3  \cf11 YES\cf3 ;
+\f2\fs24 \cf0 \
+
+\f0\fs28 \cf3         \}
+\f2\fs24 \cf0 \
+
+\f0\fs28 \cf3     \}
+\f2\fs24 \cf0 \
+
+\f0\fs28 \cf3     \cf7 free\cf3 (properties);
+\f2\fs24 \cf0 \
+
+\f0\fs28 \cf3     
+\f2\fs24 \cf0 \
+
+\f0\fs28 \cf3     \cf11 return\cf3  \cf11 NO\cf3 ;
+\f2\fs24 \cf0 \
+
+\f0\fs28 \cf3 \}
+\f2\fs24 \cf0 \
+\pard\tx642\pardeftab642\pardirnatural\partightenfactor0
+
+\f0\fs26 \cf3 \cb19 \CocoaLigature0 \
+view
+\f1 \'b4\'a6\'c0\'ed\'a1\'a2\'b5\'bc\'ba\'bd\'c0\'b8\'cf\'d4\'ca\'be\'d2\'ec\'b3\'a3
+\f0 \
+\pard\tx692\pardeftab692\pardirnatural\partightenfactor0
+
+\fs28 \cf3 \cb6 \CocoaLigature1 - (\cf12 CGSize\cf3 )intrinsicContentSize
+\f2\fs24 \cf0 \
+
+\f0\fs28 \cf3 \{
+\f2\fs24 \cf0 \
+
+\f0\fs28 \cf3     \cf11 return\cf3  \cf11 self\cf3 .\cf12 frame\cf3 .\cf12 size\cf3 ;
+\f2\fs24 \cf0 \
+
+\f0\fs28 \cf3 \}
+\fs26 \cf3 \cb19 \CocoaLigature0 \
+\pard\tx642\pardeftab642\pardirnatural\partightenfactor0
+\cf3 \
+\
+\
+\
+\
+\
+\
 \
 \
 \
