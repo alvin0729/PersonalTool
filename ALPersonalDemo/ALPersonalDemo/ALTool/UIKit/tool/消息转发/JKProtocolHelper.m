@@ -92,30 +92,31 @@
 @end
 
 
-@interface ViewController : UIViewController <UITableViewDelegate>
-@property (nonatomic, strong) Test *test;
-@property (nonatomic, strong) id helper;
-@end
+//@interface ViewController : UIViewController <UITableViewDelegate>
+//@property (nonatomic, strong) Test *test;
+//@property (nonatomic, strong) id helper;
+//@end
+//
+//@implementation ViewController
+//
+//- (void)viewDidLoad {
+//    [super viewDidLoad];
+//
+//    UITableView *tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
+//    [self.view addSubview:tableView];
+//
+//    _test = [Test new];
+//    _helper = [JKProtocolHelper helperWithProtocol:@protocol(UIScrollViewDelegate) executors:@[self, _test]];
+//    tableView.delegate = _helper;
+//}
+//
+//- (void)dealloc {
+//    NSLog(@"%s", __func__);
+//}
+//
+//- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+//    NSLog(@"view controller");
+//}
 
-@implementation ViewController
+//@end
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    
-    UITableView *tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
-    [self.view addSubview:tableView];
-    
-    _test = [Test new];
-    _helper = [JKProtocolHelper helperWithProtocol:@protocol(UIScrollViewDelegate) executors:@[self, _test]];
-    tableView.delegate = _helper;
-}
-
-- (void)dealloc {
-    NSLog(@"%s", __func__);
-}
-
-- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
-    NSLog(@"view controller");
-}
-
-@end

@@ -24,13 +24,13 @@
 \
 \pard\tx692\pardeftab692\pardirnatural\partightenfactor0
 
-\f3\fs28 \cf4 \cb5 \kerning1\expnd0\expndtw0 1.\cf6 + resolveInstanceMethod:(\cf7 SEL\cf6 )sel \cf8 // 
+\f3\fs28 \cf4 \cb5 \kerning1\expnd0\expndtw0 1.\cf6 + resolveInstanceMethod:(\cf7 SEL\cf6 )sel \cf8 \cb5 // 
 \f4 \'b6\'d4\'d3\'a6\'ca\'b5\'c0\'fd\'b7\'bd\'b7\'a8
-\f0\fs24 \cf0 \
+\f0\fs24 \cf0 \cb5 \
 
-\f3\fs28 \cf6   + resolveClassMethod:(\cf7 SEL\cf6 )sel \cf8 // 
+\f3\fs28 \cf6   + resolveClassMethod:(\cf7 SEL\cf6 )sel \cf8 \cb5 // 
 \f4 \'b6\'d4\'d3\'a6\'c0\'e0\'b7\'bd\'b7\'a8
-\f0\fs24 \cf0 \
+\f0\fs24 \cf0 \cb5 \
 
 \f3\fs28 \cf4 2.\cf6 - (\cf7 id\cf6 )forwardingTargetForSelector:(\cf7 SEL\cf6 )aSelector
 \f0\fs24 \cf0 \
@@ -59,7 +59,7 @@
 \f3\fs28 \cf6 -(\cf7 void\cf6 )sayHello:(\cf9 NSString\cf6  *)name\{
 \f0\fs24 \cf0 \
 
-\f3\fs28 \cf6     \cf10 NSLog\cf6 (\cf11 @"hello %@"\cf6 ,name);
+\f3\fs28 \cf6     \cf10 \cb5 NSLog\cf6 \cb5 (\cf11 @"hello %@"\cf6 ,name);
 \f0\fs24 \cf0 \
 
 \f3\fs28 \cf6 \}
@@ -71,7 +71,7 @@
 \
 \pard\tx692\pardeftab692\pardirnatural\partightenfactor0
 
-\f3\fs28 \cf12 #import \cf11 <objc/runtime.h>
+\f3\fs28 \cf12 \cb5 #import \cf11 \cb5 <objc/runtime.h>
 \f0\fs24 \cf0 \
 \pard\tx692\pardeftab692\pardirnatural\partightenfactor0
 
@@ -87,7 +87,7 @@
 \f0\fs24 \cf0 \
 \
 
-\f3\fs28 \cf7 @implementation\cf6  \ulth \ulc6 V\ulnone iewController
+\f3\fs28 \cf7 @implementation\cf6  \cf6 \cb5 \ulth \ulc6 V\ulnone iewController
 \f0\fs24 \cf0 \
 \
 \pard\tx692\pardeftab692\pardirnatural\partightenfactor0
@@ -139,9 +139,11 @@
 \f3\fs28 \cf6 \}
 \f0\fs24 \cf0 \
 \
+\pard\tx692\pardeftab692\pardirnatural\partightenfactor0
 
 \f3\fs28 \cf7 void\cf6  say(\cf7 id\cf6  \cf7 self\cf6 , \cf7 SEL\cf6  \cf7 _cmd\cf6 , \cf9 NSString\cf6  *name)\{
 \f0\fs24 \cf0 \
+\pard\tx692\pardeftab692\pardirnatural\partightenfactor0
 
 \f3\fs28 \cf6     \cf10 NSLog\cf6 (\cf11 @"hello %@"\cf6 ,name);
 \f0\fs24 \cf0 \
@@ -181,8 +183,9 @@
 \pard\tx692\pardeftab692\pardirnatural\partightenfactor0
 
 \f4 \cf0 //\cf15 \cb16 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \strokec15 \'d4\'da\'cf\'c2\'c3\'e6\'b7\'bd\'b7\'a8\'d6\'d0\'b7\'b5\'bb\'d8\'d2\'bb\'b8\'f6\'b7\'bd\'b7\'a8\'c7\'a9\'c3\'fb
-\f0 \cf0 \cb5 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 \
+\'d4\'da\'cf\'c2\'c3\'e6\'b7\'bd\'b7\'a8\'d6\'d0\'b7\'b5\'bb\'d8\'d2\'bb\'b8\'f6\'b7\'bd\'b7\'a8\'c7\'a9\'c3\'fb
+\f0 \cf0 \cb5 \kerning1\expnd0\expndtw0 \
+\pard\tx692\pardeftab692\pardirnatural\partightenfactor0
 
 \f3\fs28 \cf6 -(\cf9 NSMethodSignature\cf6  *)methodSignatureForSelector:(\cf7 SEL\cf6 )aSelector\{
 \f0\fs24 \cf0 \
@@ -224,6 +227,7 @@
 \f3\fs28 \cf6 \}
 \f0\fs24 \cf0 \
 \
+\pard\tx692\pardeftab692\pardirnatural\partightenfactor0
 
 \f3\fs28 \cf7 @end
 \f0\fs24 \cf0 \
@@ -250,6 +254,7 @@
 \f3\fs28 \cf7 @implementation\cf6  Observer
 \f0\fs24 \cf0 \
 \
+\pard\tx692\pardeftab692\pardirnatural\partightenfactor0
 
 \f3\fs28 \cf6 -(\cf7 void\cf6 )observeValueForKeyPath:(\cf9 NSString\cf6  *)keyPath ofObject:(\cf7 id\cf6 )object change:(\cf9 NSDictionary\cf6 <\cf9 NSKeyValueChangeKey\cf6 ,\cf7 id\cf6 > *)change context:(\cf7 void\cf6  *)context\{
 \f0\fs24 \cf0 \
@@ -260,6 +265,7 @@
 \f3\fs28 \cf6 \}
 \f0\fs24 \cf0 \
 \
+\pard\tx692\pardeftab692\pardirnatural\partightenfactor0
 
 \f3\fs28 \cf7 @end
 \f0\fs24 \cf0 \
@@ -267,6 +273,7 @@
 
 \f3\fs28 \cf7 @interface\cf6  Person : \cf9 NSObject\cf6 \{
 \f0\fs24 \cf0 \
+\pard\tx692\pardeftab692\pardirnatural\partightenfactor0
 
 \f3\fs28 \cf6     \cf14 Observer\cf6  *_observer;
 \f0\fs24 \cf0 \
@@ -274,6 +281,7 @@
 \f3\fs28 \cf6 \}
 \f0\fs24 \cf0 \
 \
+\pard\tx692\pardeftab692\pardirnatural\partightenfactor0
 
 \f3\fs28 \cf7 @property\cf6  (\cf7 nonatomic\cf6 , \cf7 copy\cf6 ) \cf9 NSString\cf6  *familyName;
 \f0\fs24 \cf0 \
@@ -294,6 +302,7 @@
 \f3\fs28 \cf7 @implementation\cf6  Person
 \f0\fs24 \cf0 \
 \
+\pard\tx692\pardeftab692\pardirnatural\partightenfactor0
 
 \f3\fs28 \cf6 -(\cf7 instancetype\cf6 )init\{
 \f0\fs24 \cf0 \
@@ -367,6 +376,7 @@
 \f3\fs28 \cf6 \}
 \f0\fs24 \cf0 \
 \
+\pard\tx692\pardeftab692\pardirnatural\partightenfactor0
 
 \f3\fs28 \cf7 @end
 \f0\fs24 \cf0 \
@@ -379,6 +389,7 @@
 
 \f3\fs28 \cf7 \cb5 \kerning1\expnd0\expndtw0 void\cf6  class_swizzleInstanceMethod(\cf14 Class\cf6  class, \cf7 SEL\cf6  originalSEL, \cf7 SEL\cf6  replacementSEL)
 \f0\fs24 \cf0 \
+\pard\tx692\pardeftab692\pardirnatural\partightenfactor0
 
 \f3\fs28 \cf6 \{
 \f0\fs24 \cf0 \
@@ -481,9 +492,11 @@
 \f3\fs28 \cf6 \}
 \f0\fs24 \cf0 \
 \
+\pard\tx692\pardeftab692\pardirnatural\partightenfactor0
 
 \f3\fs28 \cf7 void\cf6  class_swizzleClassMethod(\cf14 Class\cf6  class, \cf7 SEL\cf6  originalSEL, \cf7 SEL\cf6  replacementSEL)
 \f0\fs24 \cf0 \
+\pard\tx692\pardeftab692\pardirnatural\partightenfactor0
 
 \f3\fs28 \cf6 \{
 \f0\fs24 \cf0 \
@@ -507,9 +520,11 @@
 \f3\fs28 \cf6 \}
 \f0\fs24 \cf0 \
 \
+\pard\tx692\pardeftab692\pardirnatural\partightenfactor0
 
 \f3\fs28 \cf7 void\cf6  WWSwizzleMethod(\cf14 Class\cf6  c, \cf7 SEL\cf6  origSEL, \cf7 SEL\cf6  newSEL) \{
 \f0\fs24 \cf0 \
+\pard\tx692\pardeftab692\pardirnatural\partightenfactor0
 
 \f3\fs28 \cf6     \cf9 Method\cf6  origMethod = \cf10 class_getInstanceMethod\cf6 (c, origSEL);
 \f0\fs24 \cf0 \
@@ -595,6 +610,7 @@
 
 \f3\fs28 \cf7 \cb5 \kerning1\expnd0\expndtw0 @interface\cf6  TargetProxy : \cf9 NSProxy\cf6  \{
 \f0\fs24 \cf0 \
+\pard\tx692\pardeftab692\pardirnatural\partightenfactor0
 
 \f3\fs28 \cf6     \cf7 id\cf6  realObject1;
 \f0\fs24 \cf0 \
@@ -607,6 +623,7 @@
 
 \f3\fs28 \cf6 - (\cf7 id\cf6 )initWithTarget1:(\cf7 id\cf6 )t1 target2:(\cf7 id\cf6 )t2;
 \f0\fs24 \cf0 \
+\pard\tx692\pardeftab692\pardirnatural\partightenfactor0
 
 \f3\fs28 \cf7 @end
 \f0\fs24 \cf0 \
@@ -614,6 +631,7 @@
 
 \f3\fs28 \cf7 @implementation\cf6  TargetProxy
 \f0\fs24 \cf0 \
+\pard\tx692\pardeftab692\pardirnatural\partightenfactor0
 
 \f3\fs28 \cf6 - (\cf7 id\cf6 )initWithTarget1:(\cf7 id\cf6 )t1 target2:(\cf7 id\cf6 )t2 \{
 \f0\fs24 \cf0 \
@@ -630,6 +648,7 @@
 \f3\fs28 \cf6 \}
 \f0\fs24 \cf0 \
 \
+\pard\tx692\pardeftab692\pardirnatural\partightenfactor0
 
 \f3\fs28 \cf8 // The compiler knows the types at the call site but unfortunately doesn't
 \f0\fs24 \cf0 \
@@ -652,6 +671,7 @@
 
 \f3\fs28 \cf8 // method signature, we use that, so in effect it has priority.
 \f0\fs24 \cf0 \
+\pard\tx692\pardeftab692\pardirnatural\partightenfactor0
 
 \f3\fs28 \cf6 - (\cf9 NSMethodSignature\cf6  *)methodSignatureForSelector:(\cf7 SEL\cf6 )aSelector \{
 \f0\fs24 \cf0 \
@@ -674,9 +694,11 @@
 \f3\fs28 \cf6 \}
 \f0\fs24 \cf0 \
 \
+\pard\tx692\pardeftab692\pardirnatural\partightenfactor0
 
 \f3\fs28 \cf8 // Invoke the invocation on whichever real object had a signature for it.
 \f0\fs24 \cf0 \
+\pard\tx692\pardeftab692\pardirnatural\partightenfactor0
 
 \f3\fs28 \cf6 - (\cf7 void\cf6 )forwardInvocation:(\cf9 NSInvocation\cf6  *)invocation \{
 \f0\fs24 \cf0 \
@@ -690,9 +712,11 @@
 \f3\fs28 \cf6 \}
 \f0\fs24 \cf0 \
 \
+\pard\tx692\pardeftab692\pardirnatural\partightenfactor0
 
 \f3\fs28 \cf8 // Override some of NSProxy's implementations to forward them...
 \f0\fs24 \cf0 \
+\pard\tx692\pardeftab692\pardirnatural\partightenfactor0
 
 \f3\fs28 \cf6 - (\cf7 BOOL\cf6 )respondsToSelector:(\cf7 SEL\cf6 )aSelector \{
 \f0\fs24 \cf0 \
@@ -708,6 +732,7 @@
 
 \f3\fs28 \cf6 \}
 \f0\fs24 \cf0 \
+\pard\tx692\pardeftab692\pardirnatural\partightenfactor0
 
 \f3\fs28 \cf7 @end
 \f0\fs24 \cf0 \
@@ -753,7 +778,7 @@
 \f3\fs28 \cf6     \cf8 // have a single proxy covering two objects.  But it is possible.
 \f0\fs24 \cf0 \
 
-\f3\fs28 \cf6     \cf7 id\cf6  proxy = [[\cf6 \cb5 \ulth \ulc6 T\cf6 \cb5 \ulnone argetProxy alloc] initWithTarget1:string target2:array];
+\f3\fs28 \cf6     \cf7 id\cf6  proxy = [[\ulth T\ulnone argetProxy alloc] initWithTarget1:string target2:array];
 \f0\fs24 \cf0 \
 
 \f3\fs28 \cf6     
@@ -765,40 +790,40 @@
 \f3\fs28 \cf6     \cf8 // cannot be forwarded!
 \f0\fs24 \cf0 \
 
-\f3\fs28 \cf6     [proxy \cf10 appendString\cf6 :\cf11 \cb5 @"This "\cf6 \cb5 ];
+\f3\fs28 \cf6     [proxy \cf10 appendString\cf6 :\cf11 @"This "\cf6 ];
 \f0\fs24 \cf0 \
 
-\f3\fs28 \cf6     [proxy \cf10 appendString\cf6 :\cf11 \cb5 @"is "\cf6 \cb5 ];
+\f3\fs28 \cf6     [proxy \cf10 appendString\cf6 :\cf11 @"is "\cf6 ];
 \f0\fs24 \cf0 \
 
 \f3\fs28 \cf6     [proxy \cf10 addObject\cf6 :string];
 \f0\fs24 \cf0 \
 
-\f3\fs28 \cf6     [proxy \cf10 appendString\cf6 :\cf11 \cb5 @"a "\cf6 \cb5 ];
+\f3\fs28 \cf6     [proxy \cf10 appendString\cf6 :\cf11 @"a "\cf6 ];
 \f0\fs24 \cf0 \
 
-\f3\fs28 \cf6     [proxy \cf10 appendString\cf6 :\cf11 \cb5 @"test!"\cf6 \cb5 ];
-\f0\fs24 \cf0 \
-
-\f3\fs28 \cf6     
-\f0\fs24 \cf0 \
-
-\f3\fs28 \cf6     \cf10 NSLog\cf6 (\cf11 \cb5 @"count should be 1, it is: %lu"\cf6 \cb5 , (\cf7 unsigned\cf6  \cf7 long\cf6 )[proxy \cf10 count\cf6 ]);
+\f3\fs28 \cf6     [proxy \cf10 appendString\cf6 :\cf11 @"test!"\cf6 ];
 \f0\fs24 \cf0 \
 
 \f3\fs28 \cf6     
 \f0\fs24 \cf0 \
 
-\f3\fs28 \cf6     \cf7 if\cf6  ([[proxy \cf10 objectAtIndex\cf6 :\cf4 \cb5 0\cf6 \cb5 ] \cf10 isEqualToString\cf6 :\cf11 \cb5 @"This is a test!"\cf6 \cb5 ]) \{
+\f3\fs28 \cf6     \cf10 NSLog\cf6 (\cf11 @"count should be 1, it is: %lu"\cf6 , (\cf7 unsigned\cf6  \cf7 long\cf6 )[proxy \cf10 count\cf6 ]);
 \f0\fs24 \cf0 \
 
-\f3\fs28 \cf6         \cf10 NSLog\cf6 (\cf11 \cb5 @"Appending successful.___%@"\cf6 \cb5 , proxy);
+\f3\fs28 \cf6     
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6     \cf7 if\cf6  ([[proxy \cf10 objectAtIndex\cf6 :\cf4 0\cf6 ] \cf10 isEqualToString\cf6 :\cf11 @"This is a test!"\cf6 ]) \{
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6         \cf10 NSLog\cf6 (\cf11 @"Appending successful.___%@"\cf6 , proxy);
 \f0\fs24 \cf0 \
 
 \f3\fs28 \cf6     \} \cf7 else\cf6  \{
 \f0\fs24 \cf0 \
 
-\f3\fs28 \cf6         \cf10 NSLog\cf6 (\cf11 \cb5 @"Appending failed, got: '%@'"\cf6 \cb5 , proxy);
+\f3\fs28 \cf6         \cf10 NSLog\cf6 (\cf11 @"Appending failed, got: '%@'"\cf6 , proxy);
 \f0\fs24 \cf0 \
 
 \f3\fs28 \cf6     \}
@@ -807,7 +832,7 @@
 \f3\fs28 \cf6     
 \f0\fs24 \cf0 \
 
-\f3\fs28 \cf6     \cf10 NSLog\cf6 (\cf11 \cb5 @"Example finished without errors."\cf6 \cb5 );
+\f3\fs28 \cf6     \cf10 NSLog\cf6 (\cf11 @"Example finished without errors."\cf6 );
 \f0\fs24 \cf0 \
 
 \f3\fs28 \cf6     
@@ -818,6 +843,256 @@
 \pard\pardeftab720\sl360\partightenfactor0
 
 \f1\fs32 \cf2 \cb3 \expnd0\expndtw0\kerning0
+\
+\
+//\'bb\'f1\'c8\'a1\'b5\'b1\'c7\'b0\'ca\'b1\'bc\'e4\'c8\'f4\'b8\'c9\'c4\'ea\'a1\'a2\'d4\'c2\'a1\'a2\'c8\'d5\'d6\'ae\'ba\'f3\'b5\'c4\'ca\'b1\'bc\'e4\
++ (NSDate *)dateWithFromDate:(NSDate *)date years:(NSInteger)years months:(NSInteger)months days:(NSInteger)days\{\
+    NSDate  * latterDate;\
+    if (date) \{\
+        latterDate = date;\
+    \}else\{\
+        latterDate = [NSDate date];\
+    \}\
+    NSCalendar *calendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian];\
+    NSDateComponents *comps = [calendar components:NSCalendarUnitYear|NSCalendarUnitMonth|NSCalendarUnitDay|NSCalendarUnitHour|NSCalendarUnitMinute\
+                                          fromDate:latterDate];\
+\
+    [comps setYear:years];\
+    [comps setMonth:months];\
+    [comps setDay:days];\
+\
+    return [calendar dateByAddingComponents:comps toDate:latterDate options:0];\
+\}\
+\
+/**\
+ * @method\
+ *\
+ * @brief \'bb\'f1\'c8\'a1\'c1\'bd\'b8\'f6\'c8\'d5\'c6\'da\'d6\'ae\'bc\'e4\'b5\'c4\'cc\'ec\'ca\'fd\
+ * @param fromDate       \'c6\'f0\'ca\'bc\'c8\'d5\'c6\'da\
+ * @param toDate         \'d6\'d5\'d6\'b9\'c8\'d5\'c6\'da\
+ * @return    \'d7\'dc\'cc\'ec\'ca\'fd\
+ */\
++ (NSInteger)numberOfDaysWithFromDate:(NSDate *)fromDate toDate:(NSDate *)toDate\{\
+    NSCalendar *calendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian];\
+\
+    NSDateComponents    * comp = [calendar components:NSCalendarUnitDay\
+                                             fromDate:fromDate\
+                                               toDate:toDate\
+                                              options:NSCalendarWrapComponents];\
+    NSLog(@" -- >>  comp : %@  << --",comp);\
+    return comp.day;\
+\}\
+\
+\
+\pard\tx692\pardeftab692\pardirnatural\partightenfactor0
+
+\f3\fs28 \cf6 \cb5 \kerning1\expnd0\expndtw0 - (\cf9 UIImage\cf6  *)getImageWithSize:(\cf9 CGSize\cf6 )size color:(\cf9 UIColor\cf6  *)color radius:(\cf9 CGFloat\cf6 )radius \{
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6     
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6     \cf10 UIGraphicsBeginImageContextWithOptions\cf6 (size, \cf7 NO\cf6 , \cf4 0.0\cf6 );
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6     \cf9 UIBezierPath\cf6  *aPath = [\cf9 UIBezierPath\cf6  \cf10 bezierPathWithRect\cf6 :\cf10 CGRectMake\cf6 (\cf4 0\cf6 ,\cf4 0\cf6 ,size.\cf9 width\cf6 ,size.\cf9 height\cf6 )];
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6     \cf9 UIBezierPath\cf6  *bPath = [\cf9 UIBezierPath\cf6  \cf10 bezierPathWithRoundedRect\cf6 :aPath.\cf9 bounds\cf6  \cf10 cornerRadius\cf6 :radius];
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6     [aPath \cf10 appendPath\cf6 :[bPath \cf10 bezierPathByReversingPath\cf6 ]];
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6     [color \cf10 setFill\cf6 ];
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6     [aPath \cf10 fill\cf6 ];
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6     
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6     \cf9 UIImage\cf6  *image = \cf10 UIGraphicsGetImageFromCurrentImageContext\cf6 ();
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6     \cf10 UIGraphicsEndImageContext\cf6 ();
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6     \cf7 return\cf6  image;
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6 \}
+\f1\fs32 \cf2 \cb3 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720\sl360\partightenfactor0
+\cf2 \'bb\'e6\'d6\'c6\'ef\'ce\'bf\'d5\'cd\'bc\
+\pard\tx692\pardeftab692\pardirnatural\partightenfactor0
+
+\f3\fs28 \cf6 \cb5 \kerning1\expnd0\expndtw0 - (\cf7 void\cf6 )drawRect:(\cf9 CGRect\cf6 )rect \{
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6     [\cf7 super\cf6  \cf10 drawRect\cf6 :rect];
+\f0\fs24 \cf0 \
+\
+
+\f3\fs28 \cf6     \cf8 //
+\f4 \'c9\'e8\'d6\'c3\'cc\'ee\'b3\'e4
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6     [\cf7 self\cf6 .\cf14 fillColor\cf6  \cf10 setFill\cf6 ];
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6     \cf10 UIRectFill\cf6 (rect);
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6     
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6     \cf9 CGContextRef\cf6  context = \cf10 UIGraphicsGetCurrentContext\cf6 ();
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6     \cf8 //
+\f4 \'bb\'e6\'d6\'c6
+\f3 bezierPath
+\f4 \'c2\'b7\'be\'b6
+\f3  
+\f4 \'c8\'c3\'c6\'e4\'cc\'ee\'b3\'e4
+\f3 ClearColor
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6     \cf7 for\cf6  (\cf9 UIBezierPath\cf6  *path \cf7 in\cf6  \cf7 self\cf6 .\cf14 paths\cf6 ) \{
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6         \cf10 CGContextAddPath\cf6 (context, path.\cf9 CGPath\cf6 );
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6         \cf10 CGContextSetBlendMode\cf6 (context, \cf10 kCGBlendModeClear\cf6 );
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6         \cf10 CGContextFillPath\cf6 (context);
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6     \}
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6 \}
+\f1\fs32 \cf2 \cb3 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720\sl360\partightenfactor0
+\cf2 \
+\pard\tx692\pardeftab692\pardirnatural\partightenfactor0
+
+\f3\fs28 \cf9 \cb5 \kerning1\expnd0\expndtw0 UIBezierPath\cf6  *path = [\cf9 UIBezierPath\cf6  \cf10 bezierPathWithRect\cf6 :\cf7 self\cf6 .\cf9 view\cf6 .\cf9 frame\cf6 ];
+\f0\fs24 \cf0 \
+\pard\tx692\pardeftab692\pardirnatural\partightenfactor0
+
+\f3\fs28 \cf6     \cf9 UIBezierPath\cf6  *circlePath1 = [\cf9 UIBezierPath\cf6  \cf10 bezierPathWithArcCenter\cf6 :\cf7 self\cf6 .\cf14 button1\cf6 .\cf9 center\cf6  \cf10 radius\cf6 :(\cf7 self\cf6 .\cf14 button1\cf6 .\cf9 frame\cf6 .\cf9 size\cf6 .\cf9 height\cf6 /\cf4 2\cf6  + \cf4 5\cf6 ) \cf10 startAngle\cf6 :\cf4 0.0\cf6  \cf10 endAngle\cf6 :\cf4 2\cf6 *\cf12 M_PI\cf6  \cf10 clockwise\cf6 :\cf7 NO\cf6 ];
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6     \cf9 UIBezierPath\cf6  *circlePath2 = [\cf9 UIBezierPath\cf6  \cf10 bezierPathWithArcCenter\cf6 :\cf7 self\cf6 .\cf14 button2\cf6 .\cf9 center\cf6  \cf10 radius\cf6 :(\cf7 self\cf6 .\cf14 button2\cf6 .\cf9 frame\cf6 .\cf9 size\cf6 .\cf9 width\cf6 /\cf4 2\cf6  + \cf4 5\cf6 ) \cf10 startAngle\cf6 :\cf4 0.0\cf6  \cf10 endAngle\cf6 :\cf4 2\cf6 *\cf12 M_PI\cf6  \cf10 clockwise\cf6 :\cf7 NO\cf6 ];
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6     
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6     [path \cf10 appendPath\cf6 :circlePath1];
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6     [path \cf10 appendPath\cf6 :circlePath2];
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6     \cf8 /*method one*/
+\f0\fs24 \cf0 \
+\pard\tx692\pardeftab692\pardirnatural\partightenfactor0
+
+\f3\fs28 \cf8 //    CAShapeLayer *layer = [CAShapeLayer layer];
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf8 //    layer.path = path.CGPath;
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf8 //    
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf8 //    backgroundView.layer.mask = layer;
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf8 //    [self.view addSubview:backgroundView];
+\f0\fs24 \cf0 \
+\pard\tx692\pardeftab692\pardirnatural\partightenfactor0
+
+\f3\fs28 \cf6     
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6     \cf8 /*method two*/
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6     \cf9 CAShapeLayer\cf6  *layer = [\cf9 CAShapeLayer\cf6  \cf10 layer\cf6 ];
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6     layer.\cf9 path\cf6  = path.\cf9 CGPath\cf6 ;
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6     
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6     layer.\cf9 fillColor\cf6  = [\cf9 UIColor\cf6  \cf10 colorWithWhite\cf6 :\cf4 0.0\cf6  \cf10 alpha\cf6 :\cf4 0.6\cf6 ].\cf9 CGColor\cf6 ;
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6     [\cf7 self\cf6 .\cf9 view\cf6 .\cf9 layer\cf6  \cf10 addSublayer\cf6 :layer];
+\f1\fs32 \cf2 \cb3 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720\sl360\partightenfactor0
+\cf2 \
+\pard\tx692\pardeftab692\pardirnatural\partightenfactor0
+
+\f3\fs28 \cf7 \cb5 \kerning1\expnd0\expndtw0 static\cf6  \cf9 NSInteger\cf6  sortMoneyTreeResultObjects(\cf14 \cb5 WWGameResultItem\cf6 \cb5  *co1, \cf14 \cb5 WWGameResultItem\cf6 \cb5  *co2, \cf7 void\cf6  *keyForSorting)
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6 \{
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6     \cf9 NSNumber\cf6  *gotDia1 = \cf4 @(\cf6 co1.\cf14 \cb5 gotDiamond\cf4 \cb5 )\cf6 ;
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6     \cf9 NSNumber\cf6  *gotDia2 = \cf4 @(\cf6 co1.\cf14 \cb5 gotDiamond\cf4 \cb5 )\cf6 ;
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6     \cf7 return\cf6  [gotDia2 \cf10 \cb5 compare\cf6 \cb5 :gotDia1];
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6 \}
+\f1\fs32 \cf2 \cb3 \expnd0\expndtw0\kerning0
+\
+
+\f3\fs28 \cf7 \cb5 \kerning1\expnd0\expndtw0 self\cf6 .\cf14 \cb5 messagedata\cf6 \cb5 .\cf14 \cb5 list\cf6 \cb5  = [\cf9 NSArray\cf6  \cf13 \cb5 modelArrayWithClass\cf6 \cb5 :[\cf14 \cb5 WWGameResultItem\cf6 \cb5  \cf10 \cb5 class\cf6 \cb5 ] \cf13 \cb5 json\cf6 \cb5 :messageDataDic[\cf11 @"list"\cf6 ]];
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6                     [\cf7 self\cf6 .\cf14 \cb5 messagedata\cf6 \cb5 .\cf14 \cb5 list\cf6 \cb5  \cf10 \cb5 sortedArrayUsingFunction\cf6 \cb5 :\cf13 \cb5 sortMoneyTreeResultObjects\cf6 \cb5  \cf10 \cb5 context\cf6 \cb5 :\cf7 NULL\cf6 ];
+\f1\fs32 \cf2 \cb3 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720\sl360\partightenfactor0
+\cf2 \
+\
+\
+\pard\tx692\pardeftab692\pardirnatural\partightenfactor0
+
+\f3\fs28 \cf9 \cb5 \kerning1\expnd0\expndtw0 NSSortDescriptor\cf6  *firstnameDesc = [\cf9 NSSortDescriptor\cf6  \cf10 \cb5 sortDescriptorWithKey\cf6 \cb5 :\cf11 @"gotDiamond"\cf6  \cf10 \cb5 ascending\cf6 \cb5 :\cf7 NO\cf6 ];
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6                 \cf8 \cb5 // 
+\f4 \'b0\'b4\'cb\'b3\'d0\'f2\'cc\'ed\'bc\'d3\'c5\'c5\'d0\'f2\'c3\'e8\'ca\'f6\'c6\'f7
+\f0\fs24 \cf0 \cb5 \
+
+\f3\fs28 \cf6                 \cf9 NSArray\cf6  *descs = [\cf9 NSArray\cf6  \cf10 \cb5 arrayWithObjects\cf6 \cb5 :firstnameDesc, \cf7 nil\cf6 ];
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6                 \cf14 \cb5 diamondRankList\cf6 \cb5  = [\cf14 \cb5 _moneyTreeMessageModel\cf6 \cb5 .\cf14 \cb5 messagedata\cf6 \cb5 .\cf14 \cb5 list\cf6 \cb5  \cf10 \cb5 sortedArrayUsingDescriptors\cf6 \cb5 :descs];
+\f1\fs32 \cf2 \cb3 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720\sl360\partightenfactor0
+\cf2 \
 \
 \
 \
