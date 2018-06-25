@@ -1,0 +1,41 @@
+body {
+	font-family: sans-serif;
+}
+
+.hdg {
+	font-size: 1.5em;
+	margin-bottom: 0;
+}
+
+.hdg + ul {
+	margin-top: .4em;
+}
+
+ul {
+	/* turn off the default markers */
+	list-style: none;
+
+	/* remove indentation of list items */
+	margin-left: 0;
+	padding-left: 0;
+}
+
+li {
+	/* show image slightly down from top of item. */
+	/*	Note that the url to your image may be different depending on where you 
+		store your image relative to the location of your CSS file. Of course, 
+		your filename will probably be different than checkmark.png, too.
+	*/
+	background: url(../img/checkmark.png) no-repeat 0 .1em;
+	
+	/* make line tall enough to show full checkmark */
+	line-height: 1.8;/* 让行高变大，从而可以容纳整个标记 */
+
+	/* bump the text over to make room for the checkmark */
+	padding-left: 1.75em;/* 将文本推开，为标记腾出位置 */
+}
+
+/*
+提 示 默认标记在默认情况下位于列表项目的外面，而定制标记显示在列表项目的里面，因为定制标记是为列表项目本身应用的背௿图像。
+二者的对比参见 15.1 节的图 15.1.5 ～图 15.1.7。那些内容还演示了如何实现本节图 15.3.7 所示的减小标题下面的间距和格式化文本的样式。
+ */

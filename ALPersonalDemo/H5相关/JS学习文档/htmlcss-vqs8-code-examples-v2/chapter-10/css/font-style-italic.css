@@ -1,0 +1,20 @@
+body {
+	font-family: Geneva, Tahoma, Verdana, sans-serif;
+}
+
+h1,
+h2 {
+	font-family: "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
+}
+
+p {
+	font-style: italic;
+}
+
+/*
+italic(创建斜
+体文本)或 oblique(创建倾斜文本)。(99% 的情况下都会使用 italic。在所有情况下， 很难察觉使用 oblique 与 italic 的差异。
+
+取消斜体
+输入 font-style: normal。
+ */

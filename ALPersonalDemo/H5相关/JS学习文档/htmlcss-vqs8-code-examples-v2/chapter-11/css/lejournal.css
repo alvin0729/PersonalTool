@@ -1,0 +1,442 @@
+/*  
+=========================
+Le Journal
+=========================
+*/
+
+
+/* normalize.css v2.1.2 | MIT License | git.io/normalize
+    (truncated for example in book)
+---------------------------------------------------------------- */
+
+/* ::: HTML5 display definitions ::: */
+/**
+ * Correct `block` display not defined in IE 8/9.
+ */
+article,
+aside,
+figcaption,
+figure,
+footer,
+header,
+main,
+nav,
+section {
+  display: block;
+}
+
+/* ::: Base ::: */
+/**
+ * Prevent iOS text size adjust after orientation change, without disabling
+ *    user zoom.
+ */
+html {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+/**
+ * Remove default margin.
+ */
+body {
+  margin: 0;
+}
+
+/* ::: Links ::: */
+/**
+ * Address `outline` inconsistency between Chrome and other browsers.
+ */
+a:focus {
+  outline: thin dotted;
+}
+
+a:active,
+a:hover {
+  outline: 0;
+}
+
+/* ::: Typography ::: */
+/**
+ * Address inconsistent and variable font size in all browsers.
+ */
+small {
+  font-size: 80%;
+}
+
+/* ::: Embedded content ::: */
+/**
+ * Remove border when inside `a` element in IE 8/9.
+ */
+img {
+  border: 0;
+}
+/* -- end of abridged normalize -- */
+
+
+/* WEB ICON FONT
+  (the social icons that appear
+  in the upper-right corner)
+------------------------------------------ */
+@font-face {
+  font-family: 'Social Icons';
+  src: url("font/socialico-webfont.eot");
+  src: url("font/socialico-webfont.eot?#iefix") format("embedded-opentype"), 
+        url("font/socialico-webfont.woff") format("woff"), 
+        url("font/socialico-webfont.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+/* GENERAL (APPLIED TO ELEMENTS)
+------------------------------------------ */
+body {
+  font: 100%/1.2 Georgia, "Times New Roman", serif;
+}
+
+h1 {
+  color: #212121;
+  font-family: 'Lato', sans-serif;
+  font-size: 3.25em;
+  font-weight: 300;
+  letter-spacing: -2px;
+  line-height: .975;
+}
+
+.about h2,
+.mod h2,
+.nav-main a {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.about h2,
+.mod h2 {
+  font-size: .875em; /* 15px/16px */
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  color: #1162a4;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.more:after {
+  content: ' »';
+  color: red;
+}
+
+img {
+  border: 0;
+}
+
+
+/* CONTAINERS
+------------------------------------------ */
+.page {
+  margin: 0 auto;
+  width: 960px;
+}
+
+.container {
+  background: url(../img/bg.png) repeat-y 629px 0;
+  padding-bottom: 1.9375em;
+}
+
+main {
+  float: left;
+  width: 600px;
+}
+
+.sidebar {
+  float: right;
+  margin-top: 1.875em;
+  width: 300px;
+}
+
+
+/* MASTHEAD
+------------------------------------------ */
+.masthead {
+  padding-top: 10px;
+  position: relative;
+}
+
+.logo {
+  font-size: 10px;
+  line-height: 1;
+  margin-bottom: -8px;
+  margin-top: 0;
+  text-align: left;
+}
+
+/* ::: Main Navigation ::: */
+.nav-main {
+  border-bottom: 1px solid #c7c7c8;
+  border-top: 5px solid #019443;
+  margin-bottom: 0;
+  padding: .45em 0 .5em;
+}
+
+.nav-main li {
+  border-left: 1px solid #c8c8c8;
+  display: inline-block;
+  text-align: left;
+}
+
+.nav-main li:first-child {
+  border-left: none;
+}
+
+.nav-main li:last-child a {
+  padding-right: 0;
+}
+
+.nav-main a {
+  color: #292929;
+  display: inline-block;
+  font-size: 1.125em; /* 18px/16px */
+  padding: .5em 1.15em .5em 1.4em;
+}
+
+.nav-main a:hover {
+  color: #029443;
+  text-decoration: none;
+}
+
+.nav-main .current-page,
+.nav-main .current-page:hover {
+  color: #747474;
+  cursor: default;
+  /*
+  输入 pointer 表示停留在链接上时通常显示的指针形状（ ）或default表示箭头（ ），
+或者输入crosshair（ ）、move（ ）、wait（ ）、help（ ）、text（ ）或 progress（ ）；
+或者输入 auto 显示特定情形下通常使用的指针形状；
+或者输入 x-resize 显示双向箭头，这里的 x 是其中一个箭头需要指向的方向，可以是 n（北）、nw（西北）、e（东），等等。例如，e-resize 指针显示成 。
+   */
+}
+
+/* ::: Social Sites Icons ::: */
+.social-sites {
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  right: -3px;
+  top: 41px;
+}
+
+.social-sites li {
+  display: inline;
+  margin-left: -1px;
+}
+
+.social-sites a {
+  color: #019443;
+  font-family: 'Social Icons', sans-serif;
+  font-size: 46px;
+  line-height: .8;
+  vertical-align: middle;
+}
+
+.social-sites a:hover {
+  color: #1162a4;
+  text-decoration: none;
+}
+
+
+/* MAIN CONTENT
+------------------------------------------ */
+main > .post:first-child > h1 {
+  margin-top: 0.904em;
+  border: dashed red;
+}
+
+h1 {
+  margin-bottom: .4125em;
+}
+
+.post-photo {
+  float: left;
+  margin-bottom: 2px;
+  margin-right: 22px;
+  max-width: 61.667%;
+}
+
+.post-blurb p {
+  color: #363636;
+  font-size: 1em;
+  line-height: 1.4;
+}
+
+/* ::: Blog Post Footer ::: */
+.post-footer {
+  border-bottom: 1px solid #dbdbdb;
+  border-top: 1px solid #dbdbdb;
+  padding-bottom: .7em;
+  padding-top: .7em;
+}
+
+.post-footer time:before {
+  content: '•  ';
+}
+
+.post-footer a {
+  font-weight: bold;
+}
+
+.footer p {
+  color: #3a3a3a;
+  font-family: arial, helvetica, sans-serif;
+  font-size: 0.688em;
+}
+
+.footer p small {
+  font-size: inherit;
+}
+
+/* ::: Pagination Links Below Blog Posts ::: */
+.pagination {
+  margin: 45px 0 0;
+  padding: 0;
+}
+
+.pagination li {
+  display: inline-block;
+  font: 0.875em arial, helvetica, sans-serif;
+  margin-right: 0.25em;
+}
+
+
+/* SIDEBAR
+------------------------------------------ */
+.mod h2 {
+  border-bottom: 1px solid #dbdbdb;
+  margin-top: 2.571em;
+  padding-bottom: .75em;
+}
+
+/* ::: About Me ::: */
+.about {
+  background: #2b2b2b;
+  padding: 0.313em 0.625em 0.625em;
+}
+
+.about img {
+  border: 5px solid #bebebe;
+}
+
+.about h2,
+.about p {
+  color: #dadada;
+}
+
+.about p {
+  font-size: 0.813em;
+  line-height: 1.5;
+}
+
+.map {
+  margin: 1.438em 0 0.813em;
+}
+
+/* ::: Previous and Shared Posts ::: */
+.links {
+  margin: 1.5em 0 4.125em;
+  padding-left: 0;
+  width: 270px;
+}
+
+.links li {
+  margin-bottom: 1.1em;
+}
+
+.links a {
+  font-size: 1.125em;
+  line-height: 1.195;
+}
+
+
+/* FOOTER
+------------------------------------------ */
+footer[role="contentinfo"] {
+  border-top: 1px solid #cacbcb;
+}
+
+
+/* html5boilerplate.com Clearfix
+--------------------------------- */
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  display: table;
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+/*
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+.clearfix {
+  *zoom: 1;
+}
+
+/*
+https://modernizr.com
+http://necolas.github.io/normalize.css/ 对默认样式进行重置或标准化
+http://meyerweb.com/eric/tools/css/reset/
+对元素设置 box-sizing: borderbox;（如图11.7.4 所示），让宽度和高度包含内边距和边框的方法。
+
+* {
+-webkit-box-sizing: border-box;
+-moz-box-sizing: border-box;
+box-sizing: border-box;
+}
+可以使用 * 通配符对所有元素应用border-box 的规则。
+(1) 输入 width: w，其中的 w 是元素内容区域的宽度，可以表示为长度（带单位，如 px、em 等）或父元素的百分数。或者使用auto 让浏览器计算宽度（这是默认值）。
+提 示 百分数是相对于父元素的宽度的，而不是相对于元素本身的原始宽度的。
+提 示 还有min-width、min-height、max-width和 max-height 属性用来设置最小和最大尺寸。
+提 示 width 和 height 不是继承的。
+
+对于大多数默认显示为块级元素的元素，width 的 auto 值是由包含块的宽度减去元素的内边距、边框和外边距计算出
+来的，参见图 11.7.5 和图 11.7.6。简单说来，包含块的宽度指的是父元素给元素留出的宽度。
+
+提 示 默认情况下，元素的 width 和 height不包含 padding 的大小。
+
+如果手动设置 width，并将左右外边距都设为 auto，那么两个外边距就将设为相等的最大值，这样会导致元素居中。
+例如，.page { margin: 0 auto; } 会使对应的元素在页面居中显示。
+
+
+.about {
+ background-color: #2b2b2b;
+padding: .3125em .625em .625em;
+}
+为 padding 设置四个值，那么它们分别表示上、右、下、左（按时钟顺序）内边距。
+
+ padding: 5px;——使用一个值，这个值就会应用于全部四个边。
+ padding: 5px 9px;——使用两个值，则前一个值会应用于上下两边，后一个值会应用于左右两边。.
+ padding: 5px 9px 11px;——使用三个值，则第一个值会应用于上边，第二个值会应用于左右两边，第三个值会应用于下边（如图 11.8.1 和图 11.8.2 所示）。
+ padding: 5px 9px 11px 0;——使用四个值，它们会按照时钟顺序，依次应用于上、右、下、左四个边
+提 示 内边距不是继承的。
+
+1. 定义边框风格
+输入 border-style: type，其中的 type可以是 none、dotted（点线）、dashed（虚线）、solid（实线）、double（双线）、groove（槽线）、ridge（脊线）、inset（凹边）或outset（凸边）。
+边 框 属 性（ 如 border:1px solid 和 borderright:2px dashed green;）
+提 示 边框不是继承的。
+
+提 示 如果元素位于另一个元素的上面，对于相互接触的两个 margin（即元素相互接触的下外边距和上外边距），仅使用其中较大的一个，另一个外边距会被叠加。左右外边距不叠加。
+提 示 外边距不是继承的。
+http://pxtoem.com/
+
+ */

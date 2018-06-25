@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>Box Shadow</title>
+	<link rel="stylesheet" href="css/box-shadow.css" />
+</head>
+<body>
+
+<div class="shadow">
+	<p>Shadow with Blur</p>
+</div>
+
+<div class="shadow-negative">
+	<p>Shadow with Negative Offsets and Blur</p>
+</div>
+
+<div class="shadow-spread">
+	<p>Shadow with Blur and Spread</p>
+</div>
+
+<div class="shadow-offsets-0">
+	<p>Shadow with Offsets Zero, Blur, and Spread</p>
+</div>
+
+<div class="inset-shadow">
+	<p>Inset Shadow</p>
+</div>
+
+<div class="multiple">
+	<p>Multiple Shadows</p>
+</div>
+
+<div class="shadow-negative-spread">
+	<p>Shadow with Blur and Negative Spread</p>
+</div>
+
+</body>
+</html>
+<!--
+1. 渐进增强
+2. 为不支持某些属性的浏览器使用 polyfill
+如果你想弥合较弱的浏览器与较强的浏览器之间的功能差异，可以使用 polyfill（通常又称垫片，shim）。http://css3pie.com/
+提 示 HTML5 Please（http://html5please.com）是一个不错的资源，使用它可以找出哪些 HTML5 和 CSS3 可以放心使用，以及有哪些好的填补差距的 polyfill。
+提 示 Modernizr（www.modernizr.com）是一个 JavaScript 库，它允许你探测浏览器是否支持创建优化的网站体验所需的特定的HTML5、CSS3 及其他的特性。
+
+创建滑过链接时渐变的效果：
+a { / 简单起见，省略了前缀 /
+color: #007c21;
+transition: color .4s ease;
+}
+a:hover { color: #00bf32; }
+
+学习更多内容的链接:www.htmlcssvqs.com/resources/
+-->
+
+
+
+
+
+<!--14.2　理解厂商前缀
+div {
+-webkit-border-radius: 10px;
+border-radius: 10px;
+}
+
+前缀：
+-webkit-（Webkit/Safari/ 旧版本的 Chrome）、-moz-（Firefox）、-ms-（Internet Explorer）、-o-（Opera）。
+
+Randy Jensen 的 CSS3 Generator（www.css3generator.com），以及 Paul Irish 和 Jonathan Neal的 CSS3, Please!（css3please.com）可以让你避免书
+写带前缀和不带前缀的 CSS 属性这种重复劳动。像LESS、Sass 和 Stylus 这样的 CSS 预处理器处理这
+个问题会更方便。关于其他厂商前缀的信息，参见http://css-tricks.com/how-to-dealwith-vendor-prefixes/
+-->
+
+
+
+
+
+
+<!--14.3　为元素创建圆角
+-->

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+	<title>Loading an External Script in the head</title>
+	<!-- Load style sheets before any JS files -->
+	<link rel="stylesheet" href="css/global.css" />
+	<script src="behavior.js"></script>
+	
+	<!-- Although it is best from a performance standpoint to avoid loading scripts in the <head> whenever possible, sometimes it is necessary. One example is loading the HTML5 shiv. See "Styling HTML5 Elements in Older Browsers" and "The HTML5 Shiv" in Chapter 11 (pgs. 286-287) and that chapter's code examples for details. You can also learn about the HTML5 shiv at http://code.google.com/p/html5shiv/. 
+	
+	Please also see the comments in load-before-body-end-tag.html and load-before-body-end-tag-subfolder.html regarding placing your JS files in a sub-directory for organizational purposes.
+	-->
+</head>
+<body>
+	<p>... All of your HTML content is here ...</p>
+	
+	<p>See the HTML code and comments regarding how to load external JavaScript files in a page's <code>head</code> element.</p>
+</body>
+</html>
+
+<!--
+可以看看 Ivo Wetzel 和 Zhang Yi Jiang 的JavaScript Garden（http://bonsaiden.github.io/JavaScript-Garden/），这是个学习 JavaScript语言精华和怪异特性的免费、简洁的资源。
+随着页面的加载，在默认情况下，浏览器会按照脚本在 HTML 中出现的顺序依次对每个脚本进行下载（对于外部脚本）、解析和执行。在处理脚本的过程中，浏览器既不会下载该 script 元素后面出现的内容
+（哪怕是文本），也不会呈现这些内容。这称为阻塞行为（blocking behavior）。
+
+可以使用以下工具压缩脚本
+
+ Google Closure Compiler
+http://code.google.com/closure/compiler/（供下载的版本及文档）
+http://closure-compiler.appspot.com（在线版本）
+
+ UglifyJS（使用第二个链接）
+https://github.com/mishoo/UglifyJS2（供下载的版本及文档）
+http://lisperator.net/uglifyjs/（在线版本，选择“Open demo”)
+
+ YUI Compressor（使用第二个链接）
+http://developer.yahoo.com/yui/compressor/（供下载的版本及文档）
+http://refresh-sf.com/yui/（非官方的在线版本）
+
+19.2　添加嵌入脚本
+提 示 每个脚本都按照它们出现在 HTML中的顺序依次进行处理，无论是嵌入脚本还是外部脚本（参见 19.1 节）。
+提 示 尽 管 script 元素必须有结束标签（</script>），但在有 src 属性的情况下，不能在该元素的开始标签和结束标签之间嵌
+入脚本（参见 19.1 节）。也就是说，<scriptsrc="your-functions.js"> 此处输入其他功能</script> 是无效的。对于任何 script 元素，
+要么仅通过 src 加载外部脚本，要么嵌入脚本并不含 src。
+
+HTML5 事件处理程序的完整列表参见
+http://dev.w3.org/html5/spec-author-view/globalattributes.html。一些触屏设备（如智能手机、平板电脑）包含的与触摸相关的事件处理程
+序包括 touchstart、touchend、touchmove 等（www.w3.org/TR/touch-events/）。
+
+
+
+-->

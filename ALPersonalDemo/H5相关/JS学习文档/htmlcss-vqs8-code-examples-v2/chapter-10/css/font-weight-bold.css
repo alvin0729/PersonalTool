@@ -1,0 +1,26 @@
+body {
+	font-family: Geneva, Tahoma, Verdana, sans-serif;
+}
+
+h1,
+h2 {
+	font-family: "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
+	font-weight: normal;
+}
+
+em,
+a:link,
+.intro .subhead {
+	font-weight: bold;
+}
+
+/*
+   输入 bold，让文本显示为具有平均加 粗值的粗体。这一属性值适用于大多数情况。
+   或者输入 100 ~ 900 之间的 100 的倍数， 其中 400 代表正常粗细，700 代表粗体。如果
+使用的是具有多种粗细版本的字体，这种方法 10 就很有用(有些 Web 字体就采用了这种方法)。
+   或者输入 bolder(更粗)或 lighter(更 细)以设置相对当前粗细的值。
+
+   取消粗体
+   输入font-weight: normal。(有些Web 字体服务，如 Google Fonts，要求使用 font- weight: 400。)
+ */
+

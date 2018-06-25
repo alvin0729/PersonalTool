@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Indicating Progress</title>
+</head>
+<body>
+
+<p>Please wait while we save your data.</p>
+
+<p>Current progress: <progress max="100" value="0">0% saved</progress></p>
+
+</body>
+</html>
+<!--
+progress 元素支持三个属性：max、
+value 和 form。它们都是可选的，max 属性指
+定任务的总工作量，其值必须大于 0。value
+是任务已完成的量。如果 progress 没有嵌套
+在 form 元素里面，又需要将它们联系起来，可
+以添加 form 属性并将其值设为该 form 的 id。
+
+下面简单地看看如何用 JavaScript 修
+改 progress 元素。假定进度条已经设定了一
+个 id，如：
+ <progress max="100" value="0" id=
+➝ "progressBar">0% saved</progress>
+下面的 JavaScript 可以让你获取该元素：
+ var bar = document.getElementById
+➝ ('progressBar');
+然后就可以通过 bar.value 获取或设定 value
+的值。例如，bar.value=37; 可以将值设为 37。
+-->

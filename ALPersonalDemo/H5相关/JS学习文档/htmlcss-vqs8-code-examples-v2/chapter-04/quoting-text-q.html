@@ -1,0 +1,21 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Quoting Text: q</title>
+</head>
+<body>
+
+<p>And then she said, <q>Have you read Barbara Kingsolver's <cite>High Tide in Tucson</cite>? It's inspiring.</q></p>
+
+<p>She tried again, this time in French: <q lang="fr">Avez-vous lu le livre <cite lang="en">High Tide in Tucson</cite> de Kingsolver? C'est inspirational.</q></p>
+		
+</body> 
+</html>
+<!--
+这里是两个 q 的例子。如果引述文本的语言与页面默认语言（通过 html 元素的 lang 属性指定）不同，就在 q 元素中加上 lang 属性
+
+q 元素引用的内容不能跨越不同的段落，在这种情况下应使用 blockquote。
+
+由于 q 元素的跨浏览器问题（参见图 4.6.5），很多（可能是大多数）开发人员避免使用 q 元素，而是选择直接输入正确的引号或使用字符实体。
+-->

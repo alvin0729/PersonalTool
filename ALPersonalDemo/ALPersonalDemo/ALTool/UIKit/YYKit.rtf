@@ -24,13 +24,13 @@
 \
 \pard\tx692\pardeftab692\pardirnatural\partightenfactor0
 
-\f3\fs28 \cf4 \cb5 \kerning1\expnd0\expndtw0 1.\cf6 + resolveInstanceMethod:(\cf7 SEL\cf6 )sel \cf8 \cb5 // 
+\f3\fs28 \cf4 \cb5 \kerning1\expnd0\expndtw0 1.\cf6 + resolveInstanceMethod:(\cf7 SEL\cf6 )sel \cf8 // 
 \f4 \'b6\'d4\'d3\'a6\'ca\'b5\'c0\'fd\'b7\'bd\'b7\'a8
-\f0\fs24 \cf0 \cb5 \
+\f0\fs24 \cf0 \
 
-\f3\fs28 \cf6   + resolveClassMethod:(\cf7 SEL\cf6 )sel \cf8 \cb5 // 
+\f3\fs28 \cf6   + resolveClassMethod:(\cf7 SEL\cf6 )sel \cf8 // 
 \f4 \'b6\'d4\'d3\'a6\'c0\'e0\'b7\'bd\'b7\'a8
-\f0\fs24 \cf0 \cb5 \
+\f0\fs24 \cf0 \
 
 \f3\fs28 \cf4 2.\cf6 - (\cf7 id\cf6 )forwardingTargetForSelector:(\cf7 SEL\cf6 )aSelector
 \f0\fs24 \cf0 \
@@ -59,7 +59,7 @@
 \f3\fs28 \cf6 -(\cf7 void\cf6 )sayHello:(\cf9 NSString\cf6  *)name\{
 \f0\fs24 \cf0 \
 
-\f3\fs28 \cf6     \cf10 \cb5 NSLog\cf6 \cb5 (\cf11 @"hello %@"\cf6 ,name);
+\f3\fs28 \cf6     \cf10 NSLog\cf6 (\cf11 @"hello %@"\cf6 ,name);
 \f0\fs24 \cf0 \
 
 \f3\fs28 \cf6 \}
@@ -71,7 +71,7 @@
 \
 \pard\tx692\pardeftab692\pardirnatural\partightenfactor0
 
-\f3\fs28 \cf12 \cb5 #import \cf11 \cb5 <objc/runtime.h>
+\f3\fs28 \cf12 #import \cf11 <objc/runtime.h>
 \f0\fs24 \cf0 \
 \pard\tx692\pardeftab692\pardirnatural\partightenfactor0
 
@@ -87,7 +87,7 @@
 \f0\fs24 \cf0 \
 \
 
-\f3\fs28 \cf7 @implementation\cf6  \cf6 \cb5 \ulth \ulc6 V\ulnone iewController
+\f3\fs28 \cf7 @implementation\cf6  \ulth \ulc6 V\ulnone iewController
 \f0\fs24 \cf0 \
 \
 \pard\tx692\pardeftab692\pardirnatural\partightenfactor0
@@ -139,11 +139,9 @@
 \f3\fs28 \cf6 \}
 \f0\fs24 \cf0 \
 \
-\pard\tx692\pardeftab692\pardirnatural\partightenfactor0
 
 \f3\fs28 \cf7 void\cf6  say(\cf7 id\cf6  \cf7 self\cf6 , \cf7 SEL\cf6  \cf7 _cmd\cf6 , \cf9 NSString\cf6  *name)\{
 \f0\fs24 \cf0 \
-\pard\tx692\pardeftab692\pardirnatural\partightenfactor0
 
 \f3\fs28 \cf6     \cf10 NSLog\cf6 (\cf11 @"hello %@"\cf6 ,name);
 \f0\fs24 \cf0 \
@@ -182,7 +180,7 @@
 \f0\fs24 \cf0 \
 \pard\tx692\pardeftab692\pardirnatural\partightenfactor0
 
-\f4 \cf0 //\cf15 \cb16 \expnd0\expndtw0\kerning0
+\f4 \cf0 \cb5 //\cf15 \cb16 \expnd0\expndtw0\kerning0
 \'d4\'da\'cf\'c2\'c3\'e6\'b7\'bd\'b7\'a8\'d6\'d0\'b7\'b5\'bb\'d8\'d2\'bb\'b8\'f6\'b7\'bd\'b7\'a8\'c7\'a9\'c3\'fb
 \f0 \cf0 \cb5 \kerning1\expnd0\expndtw0 \
 \pard\tx692\pardeftab692\pardirnatural\partightenfactor0
@@ -227,7 +225,6 @@
 \f3\fs28 \cf6 \}
 \f0\fs24 \cf0 \
 \
-\pard\tx692\pardeftab692\pardirnatural\partightenfactor0
 
 \f3\fs28 \cf7 @end
 \f0\fs24 \cf0 \
@@ -254,7 +251,6 @@
 \f3\fs28 \cf7 @implementation\cf6  Observer
 \f0\fs24 \cf0 \
 \
-\pard\tx692\pardeftab692\pardirnatural\partightenfactor0
 
 \f3\fs28 \cf6 -(\cf7 void\cf6 )observeValueForKeyPath:(\cf9 NSString\cf6  *)keyPath ofObject:(\cf7 id\cf6 )object change:(\cf9 NSDictionary\cf6 <\cf9 NSKeyValueChangeKey\cf6 ,\cf7 id\cf6 > *)change context:(\cf7 void\cf6  *)context\{
 \f0\fs24 \cf0 \
@@ -265,7 +261,6 @@
 \f3\fs28 \cf6 \}
 \f0\fs24 \cf0 \
 \
-\pard\tx692\pardeftab692\pardirnatural\partightenfactor0
 
 \f3\fs28 \cf7 @end
 \f0\fs24 \cf0 \
@@ -273,7 +268,6 @@
 
 \f3\fs28 \cf7 @interface\cf6  Person : \cf9 NSObject\cf6 \{
 \f0\fs24 \cf0 \
-\pard\tx692\pardeftab692\pardirnatural\partightenfactor0
 
 \f3\fs28 \cf6     \cf14 Observer\cf6  *_observer;
 \f0\fs24 \cf0 \
@@ -281,7 +275,6 @@
 \f3\fs28 \cf6 \}
 \f0\fs24 \cf0 \
 \
-\pard\tx692\pardeftab692\pardirnatural\partightenfactor0
 
 \f3\fs28 \cf7 @property\cf6  (\cf7 nonatomic\cf6 , \cf7 copy\cf6 ) \cf9 NSString\cf6  *familyName;
 \f0\fs24 \cf0 \
@@ -302,7 +295,6 @@
 \f3\fs28 \cf7 @implementation\cf6  Person
 \f0\fs24 \cf0 \
 \
-\pard\tx692\pardeftab692\pardirnatural\partightenfactor0
 
 \f3\fs28 \cf6 -(\cf7 instancetype\cf6 )init\{
 \f0\fs24 \cf0 \
@@ -376,7 +368,6 @@
 \f3\fs28 \cf6 \}
 \f0\fs24 \cf0 \
 \
-\pard\tx692\pardeftab692\pardirnatural\partightenfactor0
 
 \f3\fs28 \cf7 @end
 \f0\fs24 \cf0 \
@@ -389,7 +380,6 @@
 
 \f3\fs28 \cf7 \cb5 \kerning1\expnd0\expndtw0 void\cf6  class_swizzleInstanceMethod(\cf14 Class\cf6  class, \cf7 SEL\cf6  originalSEL, \cf7 SEL\cf6  replacementSEL)
 \f0\fs24 \cf0 \
-\pard\tx692\pardeftab692\pardirnatural\partightenfactor0
 
 \f3\fs28 \cf6 \{
 \f0\fs24 \cf0 \
@@ -492,11 +482,9 @@
 \f3\fs28 \cf6 \}
 \f0\fs24 \cf0 \
 \
-\pard\tx692\pardeftab692\pardirnatural\partightenfactor0
 
 \f3\fs28 \cf7 void\cf6  class_swizzleClassMethod(\cf14 Class\cf6  class, \cf7 SEL\cf6  originalSEL, \cf7 SEL\cf6  replacementSEL)
 \f0\fs24 \cf0 \
-\pard\tx692\pardeftab692\pardirnatural\partightenfactor0
 
 \f3\fs28 \cf6 \{
 \f0\fs24 \cf0 \
@@ -520,11 +508,9 @@
 \f3\fs28 \cf6 \}
 \f0\fs24 \cf0 \
 \
-\pard\tx692\pardeftab692\pardirnatural\partightenfactor0
 
 \f3\fs28 \cf7 void\cf6  WWSwizzleMethod(\cf14 Class\cf6  c, \cf7 SEL\cf6  origSEL, \cf7 SEL\cf6  newSEL) \{
 \f0\fs24 \cf0 \
-\pard\tx692\pardeftab692\pardirnatural\partightenfactor0
 
 \f3\fs28 \cf6     \cf9 Method\cf6  origMethod = \cf10 class_getInstanceMethod\cf6 (c, origSEL);
 \f0\fs24 \cf0 \
@@ -610,7 +596,6 @@
 
 \f3\fs28 \cf7 \cb5 \kerning1\expnd0\expndtw0 @interface\cf6  TargetProxy : \cf9 NSProxy\cf6  \{
 \f0\fs24 \cf0 \
-\pard\tx692\pardeftab692\pardirnatural\partightenfactor0
 
 \f3\fs28 \cf6     \cf7 id\cf6  realObject1;
 \f0\fs24 \cf0 \
@@ -623,7 +608,6 @@
 
 \f3\fs28 \cf6 - (\cf7 id\cf6 )initWithTarget1:(\cf7 id\cf6 )t1 target2:(\cf7 id\cf6 )t2;
 \f0\fs24 \cf0 \
-\pard\tx692\pardeftab692\pardirnatural\partightenfactor0
 
 \f3\fs28 \cf7 @end
 \f0\fs24 \cf0 \
@@ -631,7 +615,6 @@
 
 \f3\fs28 \cf7 @implementation\cf6  TargetProxy
 \f0\fs24 \cf0 \
-\pard\tx692\pardeftab692\pardirnatural\partightenfactor0
 
 \f3\fs28 \cf6 - (\cf7 id\cf6 )initWithTarget1:(\cf7 id\cf6 )t1 target2:(\cf7 id\cf6 )t2 \{
 \f0\fs24 \cf0 \
@@ -732,7 +715,6 @@
 
 \f3\fs28 \cf6 \}
 \f0\fs24 \cf0 \
-\pard\tx692\pardeftab692\pardirnatural\partightenfactor0
 
 \f3\fs28 \cf7 @end
 \f0\fs24 \cf0 \
@@ -1047,29 +1029,47 @@
 \cf2 \
 \pard\tx692\pardeftab692\pardirnatural\partightenfactor0
 
-\f3\fs28 \cf7 \cb5 \kerning1\expnd0\expndtw0 static\cf6  \cf9 NSInteger\cf6  sortMoneyTreeResultObjects(\cf14 \cb5 WWGameResultItem\cf6 \cb5  *co1, \cf14 \cb5 WWGameResultItem\cf6 \cb5  *co2, \cf7 void\cf6  *keyForSorting)
+\f3\fs28 \cf7 \cb5 \kerning1\expnd0\expndtw0 static\cf6  \cf9 NSInteger\cf6  sortMoneyTreeResultObjects(\cf14 WWGameResultItem\cf6  *co1, \cf14 WWGameResultItem\cf6  *co2, \cf7 void\cf6  *keyForSorting)
 \f0\fs24 \cf0 \
 
 \f3\fs28 \cf6 \{
 \f0\fs24 \cf0 \
 
-\f3\fs28 \cf6     \cf9 NSNumber\cf6  *gotDia1 = \cf4 @(\cf6 co1.\cf14 \cb5 gotDiamond\cf4 \cb5 )\cf6 ;
+\f3\fs28 \cf6     \cf9 NSNumber\cf6  *gotDia1 = \cf4 @(\cf6 co1.\cf14 gotDiamond\cf4 )\cf6 ;
 \f0\fs24 \cf0 \
 
-\f3\fs28 \cf6     \cf9 NSNumber\cf6  *gotDia2 = \cf4 @(\cf6 co1.\cf14 \cb5 gotDiamond\cf4 \cb5 )\cf6 ;
+\f3\fs28 \cf6     \cf9 NSNumber\cf6  *gotDia2 = \cf4 @(\cf6 co1.\cf14 gotDiamond\cf4 )\cf6 ;
 \f0\fs24 \cf0 \
 
-\f3\fs28 \cf6     \cf7 return\cf6  [gotDia2 \cf10 \cb5 compare\cf6 \cb5 :gotDia1];
+\f3\fs28 \cf6     \cf7 return\cf6  [gotDia2 \cf10 compare\cf6 :gotDia1];
 \f0\fs24 \cf0 \
 
 \f3\fs28 \cf6 \}
 \f1\fs32 \cf2 \cb3 \expnd0\expndtw0\kerning0
 \
 
-\f3\fs28 \cf7 \cb5 \kerning1\expnd0\expndtw0 self\cf6 .\cf14 \cb5 messagedata\cf6 \cb5 .\cf14 \cb5 list\cf6 \cb5  = [\cf9 NSArray\cf6  \cf13 \cb5 modelArrayWithClass\cf6 \cb5 :[\cf14 \cb5 WWGameResultItem\cf6 \cb5  \cf10 \cb5 class\cf6 \cb5 ] \cf13 \cb5 json\cf6 \cb5 :messageDataDic[\cf11 @"list"\cf6 ]];
+\f3\fs28 \cf7 \cb5 \kerning1\expnd0\expndtw0 self\cf6 .\cf14 messagedata\cf6 .\cf14 list\cf6  = [\cf9 NSArray\cf6  \cf13 modelArrayWithClass\cf6 :[\cf14 WWGameResultItem\cf6  \cf10 class\cf6 ] \cf13 json\cf6 :messageDataDic[\cf11 @"list"\cf6 ]];
 \f0\fs24 \cf0 \
 
-\f3\fs28 \cf6                     [\cf7 self\cf6 .\cf14 \cb5 messagedata\cf6 \cb5 .\cf14 \cb5 list\cf6 \cb5  \cf10 \cb5 sortedArrayUsingFunction\cf6 \cb5 :\cf13 \cb5 sortMoneyTreeResultObjects\cf6 \cb5  \cf10 \cb5 context\cf6 \cb5 :\cf7 NULL\cf6 ];
+\f3\fs28 \cf6                     [\cf7 self\cf6 .\cf14 messagedata\cf6 .\cf14 list\cf6  \cf10 sortedArrayUsingFunction\cf6 :\cf13 sortMoneyTreeResultObjects\cf6  \cf10 context\cf6 :\cf7 NULL\cf6 ];
+\f1\fs32 \cf2 \cb3 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720\sl360\partightenfactor0
+\cf2 \
+\pard\tx692\pardeftab692\pardirnatural\partightenfactor0
+
+\f3\fs28 \cf9 \cb5 \kerning1\expnd0\expndtw0 NSSortDescriptor\cf6  *firstnameDesc = [\cf9 NSSortDescriptor\cf6  \cf10 sortDescriptorWithKey\cf6 :\cf11 @"gotDiamond"\cf6  \cf10 ascending\cf6 :\cf7 NO\cf6 ];
+\f0\fs24 \cf0 \
+\pard\tx692\pardeftab692\pardirnatural\partightenfactor0
+
+\f3\fs28 \cf6                 \cf8 // 
+\f4 \'b0\'b4\'cb\'b3\'d0\'f2\'cc\'ed\'bc\'d3\'c5\'c5\'d0\'f2\'c3\'e8\'ca\'f6\'c6\'f7
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6                 \cf9 NSArray\cf6  *descs = [\cf9 NSArray\cf6  \cf10 arrayWithObjects\cf6 :firstnameDesc, \cf7 nil\cf6 ];
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6                 \cf14 diamondRankList\cf6  = [\cf14 _moneyTreeMessageModel\cf6 .\cf14 messagedata\cf6 .\cf14 list\cf6  \cf10 sortedArrayUsingDescriptors\cf6 :descs];
 \f1\fs32 \cf2 \cb3 \expnd0\expndtw0\kerning0
 \
 \pard\pardeftab720\sl360\partightenfactor0
@@ -1078,24 +1078,150 @@
 \
 \pard\tx692\pardeftab692\pardirnatural\partightenfactor0
 
-\f3\fs28 \cf9 \cb5 \kerning1\expnd0\expndtw0 NSSortDescriptor\cf6  *firstnameDesc = [\cf9 NSSortDescriptor\cf6  \cf10 \cb5 sortDescriptorWithKey\cf6 \cb5 :\cf11 @"gotDiamond"\cf6  \cf10 \cb5 ascending\cf6 \cb5 :\cf7 NO\cf6 ];
+\f3\fs28 \cf6 \cb5 \kerning1\expnd0\expndtw0 - (\cf7 void\cf6 )viewDidLoad \{
 \f0\fs24 \cf0 \
 
-\f3\fs28 \cf6                 \cf8 \cb5 // 
-\f4 \'b0\'b4\'cb\'b3\'d0\'f2\'cc\'ed\'bc\'d3\'c5\'c5\'d0\'f2\'c3\'e8\'ca\'f6\'c6\'f7
-\f0\fs24 \cf0 \cb5 \
-
-\f3\fs28 \cf6                 \cf9 NSArray\cf6  *descs = [\cf9 NSArray\cf6  \cf10 \cb5 arrayWithObjects\cf6 \cb5 :firstnameDesc, \cf7 nil\cf6 ];
+\f3\fs28 \cf6     [\cf7 super\cf6  \cf10 viewDidLoad\cf6 ];
 \f0\fs24 \cf0 \
 
-\f3\fs28 \cf6                 \cf14 \cb5 diamondRankList\cf6 \cb5  = [\cf14 \cb5 _moneyTreeMessageModel\cf6 \cb5 .\cf14 \cb5 messagedata\cf6 \cb5 .\cf14 \cb5 list\cf6 \cb5  \cf10 \cb5 sortedArrayUsingDescriptors\cf6 \cb5 :descs];
+\f3\fs28 \cf6     \cf8 //#import "NSAttributedString+YYText.h"
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6     \cf9 NSMutableAttributedString\cf6  *text = [\cf9 NSMutableAttributedString\cf6  \cf10 new\cf6 ];
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6     \cf9 UIFont\cf6  *font = [\cf9 UIFont\cf6  \cf10 systemFontOfSize\cf6 :\cf4 16\cf6 ];
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6     \cf8 //
+\f4 \'cc\'ed\'bc\'d3\'ce\'c4\'b1\'be
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6     \cf9 NSString\cf6  *title =\cf11 @"
+\f4 \'ce\'d2\'cb\'b5\'c4\'e3\'ca\'c7\'c8\'cb\'bc\'e4\'b5\'c4\'cb\'c4\'d4\'c2\'cc\'ec\'a3\'bb\'d0\'a6\'cf\'ec\'b5\'e3\'c1\'c1\'c1\'cb\'cb\'c4\'c3\'e6\'b7\'e7\'a3\'bb\'c7\'e1\'c1\'e9\'d4\'da\'b4\'ba\'b5\'c4\'b9\'e2\'d1\'de\'d6\'d0\'bd\'bb\'ce\'e8\'d7\'c5\'b1\'e4\'a1\'a3\'c4\'e3\'ca\'c7\'cb\'c4\'d4\'c2\'d4\'e7\'cc\'ec\'c0\'ef\'b5\'c4\'d4\'c6\'d1\'cc\'a3\'ac\'bb\'c6\'bb\'e8\'b4\'b5\'d7\'c5\'b7\'e7\'b5\'c4\'c8\'ed\'a3\'ac\'d0\'c7\'d7\'d3\'d4\'da\'ce\'de\'d2\'e2\'d6\'d0\'c9\'c1\'a3\'ac\'cf\'b8\'d3\'ea\'b5\'e3\'c8\'f7\'d4\'da\'bb\'a8\'c7\'b0\'a1\'a3\'c4\'c7\'c7\'e1\'a3\'ac\'c4\'c7\'e6\'b3\'e6\'c3\'c4\'e3\'ca\'c7\'a3\'ac\'cf\'ca\'e5\'fb\'b0\'d9\'bb\'a8\'b5\'c4\'b9\'da\'c3\'e1\'c4\'e3\'b4\'f7\'d7\'c5\'a3\'ac\'c4\'e3\'ca\'c7\'cc\'ec\'d5\'e6\'a3\'ac\'d7\'af\'d1\'cf\'a3\'ac\'c4\'e3\'ca\'c7\'d2\'b9\'d2\'b9\'b5\'c4\'d4\'c2\'d4\'b2\'a1\'a3\'d1\'a9\'bb\'af\'ba\'f3\'c4\'c7\'c6\'aa\'b6\'ec\'bb\'c6\'a3\'ac\'c4\'e3\'cf\'f3\'a3\'bb\'d0\'c2\'cf\'ca\'b3\'f5\'b7\'c5\'d1\'bf\'a3\'ac\'c4\'e3\'ca\'c7\'a3\'bb\'c8\'e1\'c4\'db\'cf\'b2\'d4\'c3\'cb\'ae\'b9\'e2\'b8\'a1\'b6\'af\'d7\'c5\'c4\'e3\'c3\'ce\'c6\'da\'b4\'fd\'d6\'d0\'b0\'d7\'c1\'ab\'a1\'a3\'c4\'e3\'ca\'c7\'d2\'bb\'ca\'f7\'d2\'bb\'ca\'f7\'b5\'c4\'bb\'a8\'bf\'aa\'a3\'ac\'ca\'c7\'d1\'e0\'d4\'da\'c1\'ba\'bc\'e4\'c4\'d8\'e0\'ab\'a3\'ac
+\f3 \'97\'97
+\f4 \'c4\'e3\'ca\'c7\'b0\'ae\'a3\'ac\'ca\'c7\'c5\'af\'a3\'ac\'ca\'c7\'cf\'a3\'cd\'fb\'a3\'ac\'c4\'e3\'ca\'c7\'c8\'cb\'bc\'e4\'b5\'c4\'cb\'c4\'d4\'c2\'cc\'ec\'a3\'a1
+\f3 "\cf6 ;
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6     [text \cf10 appendAttributedString\cf6 :[[\cf9 NSAttributedString\cf6  \cf10 alloc\cf6 ] \cf10 initWithString\cf6 :title \cf10 attributes\cf6 :\cf7 nil\cf6 ]];
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6     text.\cf9 yy_font\cf6  = font ;
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6     
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6     \cf14 \cb5 _label\cf6 \cb5  = [\cf9 YYLabel\cf6  \cf10 new\cf6 ];
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6     \cf14 \cb5 _label\cf6 \cb5 .\cf9 userInteractionEnabled\cf6  =\cf7 YES\cf6 ;
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6     \cf14 \cb5 _label\cf6 \cb5 .\cf9 numberOfLines\cf6  =\cf4 0\cf6 ;
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6     \cf14 \cb5 _label\cf6 \cb5 .\cf9 textVerticalAlignment\cf6  =\cf10 YYTextVerticalAlignmentTop\cf6 ;
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6     \cf14 \cb5 _label\cf6 \cb5 .\cf9 frame\cf6  = \cf10 CGRectMake\cf6 (\cf4 40\cf6 ,\cf4 60\cf6 , \cf7 self\cf6 .\cf9 view\cf6 .\cf9 frame\cf6 .\cf9 size\cf6 .\cf9 width\cf6 -\cf4 80\cf6 ,\cf4 150\cf6 );
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6     \cf14 \cb5 _label\cf6 \cb5 .\cf9 attributedText\cf6  = text;
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6     [\cf7 self\cf6 .\cf9 view\cf6  \cf10 addSubview\cf6 :\cf14 \cb5 _label\cf6 \cb5 ];
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6     \cf14 \cb5 _label\cf6 \cb5 .\cf9 layer\cf6 .\cf9 borderWidth\cf6  =\cf4 0.5\cf6 ;
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6     \cf14 \cb5 _label\cf6 \cb5 .\cf9 layer\cf6 .\cf9 borderColor\cf6  = [\cf9 UIColor\cf6  \cf10 colorWithRed\cf6 :\cf4 0.000\cf6  \cf10 green\cf6 :\cf4 0.463\cf6  \cf10 blue\cf6 :\cf4 1.000\cf6  \cf10 alpha\cf6 :\cf4 1.000\cf6 ].\cf9 CGColor\cf6 ;
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6     \cf8 //
+\f4 \'cc\'ed\'bc\'d3\'c8\'ab\'ce\'c4
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6     [\cf7 self\cf6  \cf13 \cb5 addSeeMoreButton\cf6 \cb5 ];
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6 \}
+\f0\fs24 \cf0 \
+\pard\tx692\pardeftab692\pardirnatural\partightenfactor0
+
+\f3\fs28 \cf12 #pragma mark - 
+\f4 \'cc\'ed\'bc\'d3\'c8\'ab\'ce\'c4
+\f0\fs24 \cf0 \
+\pard\tx692\pardeftab692\pardirnatural\partightenfactor0
+
+\f3\fs28 \cf6 - (\cf7 void\cf6 )addSeeMoreButton \{
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6     \cf7 __weak\cf6  \cf7 __typeof\cf6 (\cf7 self\cf6 ) weakSelf = \cf7 self\cf6 ;
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6     \cf9 NSMutableAttributedString\cf6  *text = [[\cf9 NSMutableAttributedString\cf6  \cf10 alloc\cf6 ] \cf10 initWithString\cf6 :\cf11 @"...
+\f4 \'c8\'ab\'ce\'c4
+\f3 "\cf6 ];
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6     \cf9 YYTextHighlight\cf6  *hi = [\cf9 YYTextHighlight\cf6  \cf10 new\cf6 ];
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6     [hi \cf10 setColor\cf6 :[\cf9 UIColor\cf6  \cf10 colorWithRed\cf6 :\cf4 0.578\cf6  \cf10 green\cf6 :\cf4 0.790\cf6  \cf10 blue\cf6 :\cf4 1.000\cf6  \cf10 alpha\cf6 :\cf4 1.000\cf6 ]];
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6     hi.\cf9 tapAction\cf6  = ^(\cf9 UIView\cf6  *containerView,\cf9 NSAttributedString\cf6  *text,\cf9 NSRange\cf6  range, \cf9 CGRect\cf6  rect) \{
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6         \cf8 //
+\f4 \'b5\'e3\'bb\'f7\'c8\'ab\'ce\'c4\'bb\'d8\'b5\'f7
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6         \cf9 YYLabel\cf6  *label = weakSelf.\cf14 \cb5 label\cf6 \cb5 ;
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6         [label \cf10 sizeToFit\cf6 ];
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6     \};
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6     [text \cf10 yy_setColor\cf6 :[\cf9 UIColor\cf6  \cf10 colorWithRed\cf6 :\cf4 0.000\cf6  \cf10 green\cf6 :\cf4 0.449\cf6  \cf10 blue\cf6 :\cf4 1.000\cf6  \cf10 alpha\cf6 :\cf4 1.000\cf6 ] \cf10 range\cf6 :[text.\cf9 string\cf6  \cf10 rangeOfString\cf6 :\cf11 @"
+\f4 \'c8\'ab\'ce\'c4
+\f3 "\cf6 ]];
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6     [text \cf10 yy_setTextHighlight\cf6 :hi \cf10 range\cf6 :[text.\cf9 string\cf6  \cf10 rangeOfString\cf6 :\cf11 @"
+\f4 \'c8\'ab\'ce\'c4
+\f3 "\cf6 ]];
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6     text.\cf9 yy_font\cf6  =\cf14 \cb5 _label\cf6 \cb5 .\cf9 font\cf6 ;
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6     \cf9 YYLabel\cf6  *seeMore = [\cf9 YYLabel\cf6  \cf10 new\cf6 ];
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6     seeMore.\cf9 attributedText\cf6  = text;
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6     [seeMore \cf10 sizeToFit\cf6 ];
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6     \cf9 NSAttributedString\cf6  *truncationToken = [\cf9 NSAttributedString\cf6  \cf10 yy_attachmentStringWithContent\cf6 :seeMore \cf10 contentMode\cf6 :\cf10 UIViewContentModeCenter\cf6  \cf10 attachmentSize\cf6 :seeMore.\cf9 frame\cf6 .\cf9 size\cf6  \cf10 alignToFont\cf6 :text.\cf9 yy_font\cf6  \cf10 alignment\cf6 :\cf10 YYTextVerticalAlignmentCenter\cf6 ];
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6     \cf14 \cb5 _label\cf6 \cb5 .\cf9 truncationToken\cf6  = truncationToken;
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6 \}
 \f1\fs32 \cf2 \cb3 \expnd0\expndtw0\kerning0
 \
 \pard\pardeftab720\sl360\partightenfactor0
 \cf2 \
-\
-\
-\
 \
 \
 \

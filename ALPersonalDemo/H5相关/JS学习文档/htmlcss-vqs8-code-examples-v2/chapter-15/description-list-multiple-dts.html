@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>Description List with Multiple dts</title>
+	<style>
+	/* As always, place your CSS in an external file instead of embedding it (it's embedded here to simplify the demo). */
+	dd + dt {
+		margin-top: 1em;
+	}
+	</style>
+</head>
+<body>
+
+<h1>Defining words with multiple spellings</h1>
+
+<dl>
+	<dt><dfn>bogeyman</dfn>, n.</dt>
+	<dt><dfn>boogeyman</dfn>, n.</dt>
+	<dd>A mythical creature that lurks under the beds of small children.</dd>
+
+	<dt><dfn lang="en-gb">aluminium</dfn>, n.</dt>
+	<dt><dfn>aluminum</dfn>, n.</dt>
+	<dd>. . .</dd>
+</dl>
+
+</body>
+</html>
+<!--
+根据 HTML5 规范，“由名称及其值构成的组合可以是术语和定义、元数据主题和
+值、问题和答案，以及任何其他的名 – 值组。”每个列表都包含在 dl 中，其中的每个名 – 值组都有一个或多个 dt 元素（名称或术语）以及一个或多个 dd 元素（它们的值）。
+
+可以使用 dfn 元素包围 dt 中的名称，指出该列表是用于定义术语的
+
+提 示 对于描述（值），浏览器通常会在其术语（名称）下面新的一行对其进行缩进（参见图 15.8.3）。可以通过自定义 dd 元素的 margin-left 值改变缩进。如 dd { marginleft:0; }
+会将描述跟术语左对齐。
+-->

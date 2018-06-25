@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Aligning Elements Vertically</title>
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:700" />
+    <link rel="stylesheet" href="css/vertical-align.css" />	
+</head>
+<body>
+
+<h1>Vertical-align example</h1>
+
+<!-- Note: In the action attribute below, you would replace show-results.php with the location and filename of your script on the server that handles the form when it is submitted. See Chapter 16 for coverage about forms.
+
+The role="search" ARIA landmark role improves the form's accessibility by screen readers and other assistive devices. ARIA is discussed in Chapter 3.
+-->
+<form action="show-results.php" method="get" role="search">
+	<label for="search">Search</label>
+	<input type="search" id="search" name="search" />
+	<input type="image" src="img/btn-go.png" alt="Submit search" />
+</form>
+
+</body>
+</html>
+
+<!--11.13　对元素进行相对定位
+.example {
+position: relative;
+ top: 35px;
+ left: 100px;
+}
+提 示 其他元素不会受到偏移的影响，仍然按照这个元素原来的盒子进行排列。设置了相对定位的内容可能与其他内容重叠，这取决于 top、right、bottom 和 left 的值。
+提 示 使用相对定位、绝对定位或固定定位时，对于相互重叠的元素，可以用 z-index属性指定它们的叠放次序。详
+提 示 对元素设置 position: static，可以覆盖 position: relative 设置。static 是元素的默认值，这就是元素出现在常规文档流中的原因。
+提 示 定位不是继承的。
+
+.masthead .social-sites {
+position: absolute;
+top: 41px;
+right: 0;
+}
+
+对包含图标列表（参见图 11.14.2）的页眉设置 position: relative，从而让这些图标可以相对页眉（而不是 body 元素）进行绝对定位。
+提 示 如果不为绝对定位的元素指定偏移量，这个元素将显示在它的自然位置上，但不会影响后续元素在文档流中的位置。
+
+如果对元素设置 position:fixed;，它就会固定在浏览器窗口中。当访问者上下滚动浏览器窗口时，该元素不会随之移动，页面的其余部分仍照常滚动。
+提 示 使用相对定位、绝对定位或固定定位时，可以使用 z-index 属性指定相互重叠的元素的叠放次序。详
+提 示 z-index 属性不是继承的。
+.box3 {
+ background: #ccc;
+position: static;
+/* 静态的，没有任何效果 */
+z-index: 1000;
+}
+
+
+-->

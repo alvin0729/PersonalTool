@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Author Contact Info with address</title>
+</head>
+<body>
+
+<main role="main">
+	<article>
+		<h1>Museum Opens on the Waterfront</h1>
+
+		<p>The new art museum not only introduces a range of contemporary works to the city, it's part of a larger development effort on the waterfront.</p>
+
+		<p>. . . [rest of story content] . . .</p>
+		
+		<!-- the article's footer with address information for the article -->
+		<footer>
+			<p>Tracey Wong has written for <cite>The Paper of Papers</cite> since receiving her MFA in art history three years ago.</p>
+
+			<address>
+				Email her at <a href="mailto:traceyw@thepaperofpapers.com">traceyw@thepaperofpapers.com</a>.
+			</address>
+		</footer>
+	</article>
+</main>
+
+<!-- the page's footer with address information for the whole page -->
+<footer role="contentinfo">
+	<p><small>&copy; 2014 The Paper of Papers, Inc.</small></p>
+
+	<address>
+		Have a question or comment about the site? <a href="site-feedback.html">Contact our web team</a>.
+	</address>
+</footer>
+
+</body>
+</html>
+<!--
+大多数时候，联系信息的形式是作者的电子邮件地址或指向联系信息页的链接。联系信息也有可能是作者的通讯地址，
+这时将地址用 address 标记就是有效的。但是用 address 标记公司网站“联系我们”页面中的办公地点，则是错误的用法。
+4.16 节中提供了一种标记通讯地址（街道地址）的方法。
+
+address 只能包含作者的联系信息，不能包括其他内容，如文档或文章的最后
+修改时间（ 图 4.11.1）。 此 外，HTML5 禁止 在 address 里 包 含 以 下 元 素：h1 ～ h6、article、address、aside、footer、header、hgroup、nav 和 section。
+
+-->

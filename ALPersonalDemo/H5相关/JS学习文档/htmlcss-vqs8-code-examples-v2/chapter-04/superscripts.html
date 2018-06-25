@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Creating Superscripts</title>
+</head>
+<body>
+<article>
+	<h1>Famous Catalans</h1>
+
+	<p>When I was in the sixth grade, I played the cello. There was a teacher at school who always used to ask me if I knew who "Pablo Casals" was. I didn't at the time (although I had met Rostropovich once at a concert). Actually, Pablo Casals' real name was <i>Pau</i> Casals, Pau being the Catalan equivalent of Pablo<a href="#footnote-1" title="Read footnote 1"><sup>1</sup></a>.</p>
+
+	<p>In addition to being an amazing cellist, Pau Casals is remembered in this country for his empassioned speech against nuclear proliferation at the United Nations<a href="#footnote-2" title="Read footnote 2"><sup>2</sup></a>, which he began by saying, "I am a Catalan. Catalonia is an oppressed nation."</p>
+
+	<footer>
+		<p id="footnote-1"><sup>1</sup>It means Paul in English.</p>
+		<p id="footnote-2"><sup>2</sup>In 1963, I believe.</p>
+	</footer>
+</article>
+</body>
+</html>
+<!--
+sub 和 sup 元素会轻微地增大行高。幸好，用一点 CSS 就可以修复这个问题。下面的代码来自 Nicolas Gallagher 和 Jonathan Neal 出色的 normalize.css（http://necolas.github.com/normalize.css/）。
+下面的方法并不是他们发明的，他们借用了 https://gist.github.com/413930 里的代码并去掉了注释。
+-->

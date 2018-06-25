@@ -1,0 +1,33 @@
+<!doctype html>
+<script src="code/ancestry.js"></script>
+<script src="code/chapter/05_higher_order.js"></script>
+<script src="code/intro.js"></script>
+<style>
+    body {
+        background: pink;
+    }
+</style>
+
+<body><script>
+var ph = byName["Philibert Haverbeke"];
+console.log(reduceAncestors(ph, sharedDNA, 0) / 4);
+
+function countAncestors(person, test) {
+    function combine(current, fromMother, fromFather) {
+        var thisOneCounts = current != person && test(current);
+        return fromMother + fromFather + (thisOneCounts ? 1 : 0);
+    }
+    return reduceAncestors(person, combine, 0);
+}
+function longLivingPercentage(person) {
+    var all = countAncestors(person, function(person) {
+        return true;
+    });
+    var longLiving = countAncestors(person, function(person) {
+        return (person.died - person.born) >= 70;
+    });
+    return longLiving / all;
+}
+console.log(longLivingPercentage(byName["Emile Haverbeke"]));
+
+</script></body>

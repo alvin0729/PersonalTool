@@ -1,0 +1,62 @@
+html {
+	/* typically font-size: 100% will map to 16px unless your visitor 
+		has increased or decreased the font size in his or her browser */
+ 	font-size: 100%;
+}
+
+body {
+	font-family: Geneva, Tahoma, Verdana, sans-serif;
+	font-size: 100%; /* 16px */
+}
+ 	
+h1,
+h2 {
+	font-family: "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
+	font-weight: normal;
+}
+
+h1 {
+	font-size: 35px; /* optional fallback for IE8 and other old browsers */
+	font-size: 2.1875rem; /* 35px/16px */
+}
+ 
+h2 {
+	font-size: 28px; /* optional fallback for IE8 and other old browsers */
+	font-size: 1.75rem; /* 28px/16px */
+}
+
+em,
+a:link,
+.intro .subhead {
+	font-weight: bold;
+}
+
+.intro .subhead {
+	font-size: 18px; /* optional fallback for IE8 and other old browsers */
+	font-size: 1.125rem; /* 18px/16px */
+}
+
+.intro p {
+	font-size: 17px; /* optional fallback for IE8 and other old browsers */
+	font-size: 1.0625rem; /* 17px/16px */
+}
+
+.intro a {
+	font-size: 16px; /* optional fallback for IE8 and other old browsers */
+	font-size: 1rem; /* was .941176em */
+}
+
+.project p {
+	font-size: 15px; /* optional fallback for IE8 and other old browsers */
+	font-size: .9375rem; /* 15px/16px */
+}
+/*
+CSS3 引入了一些新的单位，其中很有 意思的一个便是 rem(root em 的简称)。它 同 em 很像，
+不过它总是以根元素为参照系 设置其他元素的字体大小，而不是父元素， 参见图 10.6.7。根元素是 html 元素(因为它 包含 body，也就包含了所有内容)
+要指定的字体大小/根元素字体大小=值 实际上就是
+要指定的字体大小/ 16 =值
+
+在冒号(:)后输入准确的字号，如
+13px(关于像素示例，参见图 10.6.1)。 或者使用关键字指定字体大小，即使用 xx-small、x-small、small、medium、large、
+x-large 或 xx-large。
+ */

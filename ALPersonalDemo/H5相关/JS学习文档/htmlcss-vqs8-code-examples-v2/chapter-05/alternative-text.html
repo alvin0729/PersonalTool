@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Barcelona's Market</title>
+</head>
+<body>
+
+<h1>Barcelona's Market</h1>
+
+<img src="corner-market.jpg" alt="Oranges, bananas, apples, and other fruit abound at the Mercat de la Boquería." />
+
+<p>The <span lang="es">Mercat de la Boquería</span> is the central market that is just off the Rambles. It's an incredible place, full of every kind of food you might happen to need. It took me a long time to get up the nerve to actually take a picture there. You might say I'm kind of a chicken, but since I lived there, it was just sort of strange. Do you take pictures of your supermarket?</p>
+
+
+<p><strong><em>Note to Readers:</em></strong> The alternative text shows only if the image doesn't load&#8212;and only in <em>some</em> browsers (<a href="http://www.firefox.com">Firefox</a> is one example). If you want to see how the alternative text appears in Firefox, change the image file name referenced in the HTML of this page from <code>src="corner-market.jpg"</code> to an image that doesn't exist in the folder, such as <code>src="market.jpg"</code>.</p>
+	
+</body>
+</html>
+
+<!--
+load— :load&#8212;
+
+不要用 alt 文本代替图像的 caption。
+在这种情况下，应考虑将 img 放入一个figure 元素，并添加一个 figcaption 元素。
+
+有时需要考虑 Retina 显示屏或类似的其他显示屏，否则图像在浏览器里看起来就会显得模糊。如果你不关心其中的原因，至少应记住，让图像的尺寸扩大为原先的两倍，但仅以一半的尺寸显示它们。
+例如，如果你想让图像在所有的显示屏（并非只是 Retina 显示屏）上都是 40×30 的尺寸（此处及以下尺寸单位均为像素），就应该创建 80×60 大小的图像，而代码写作 <img src="photo.jpg" width="40" height="30" alt="" />。浏览器会将 80×60 的图像缩小，
+以 40×30 的尺寸显示（图 5.8.1 至图 5.8.3 展示了这种方法）。
+
+
+-->

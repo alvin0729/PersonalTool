@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>The City Named After Queen Victoria</title>
+	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lato:300" />
+	<link rel="stylesheet" href="css/victoria.css" />
+</head>
+<body>
+<h1>The City Named After Queen Victoria<h1>
+
+<img src="img/victoria.jpg" width="370" height="220" alt="A weathered life ring indicates you're headed toward  another time and place." />
+
+<p>An hour and a half aboard a comfortable car ferry is all it takes to transport you from  the modern, urban space that is Greater Vancouver to colonial Vancouver Island, seemingly stuck in the 18th century. The main town of Victoria showcases all the picturesque gems the British Empire was so proud of at the height of its spanning expansion. Representative yet inviting Victorian style municipal buildings, a protected harbor and cobblestone streets populated with small shops and artisanal &hellip; <a href="#" class="more">Read More</a></p>
+
+</body>
+</html>
+
+<!--
+20.1　验证代码
+验证代码的步骤
+(1) 首先使用 http://html5.validator.nu（如图 20.1.2 和图 20.1.3 所示）或 W3C 的 http://validator.w3.org 对 HTML 进行检查。更多信
+息参见头两条提示。
+
+(3) 可以使用 http://jigsaw.w3.org/css-validator/检查 CSS 错误。类似地，修复你看到的错误，再重新检查页面。
+
+检查 HTML 的一致性
+对于 HTML 代码中某些部分的格式，HTML 是相当宽松的。例如，对于 img 这样的空元素，使用 /> 和 > 结尾都是合法的。HTML 验证器不会检查此类一致性问题。
+如果你希望代码一致，可以使用 HTML Lint（http://lint.brihten.com/html/）。 通 过 它 可以检查空元素是否闭合，开始和结束标签是否为小写字母，属性是否为小写字母等。
+
+提 示 W3C 的验证器（http://validator.w3.org/）
+使用的是 http://html5.validator.nu/ 提供的验证引擎，因此使用这两种都可以。W3C 的错误消息更易读，但不会突出显示 HTML 源代码的错误部分。
+
+提 示 如果样式表中包含第 11 章介绍的
+.clearfix 样式规则，CSS 验证器会显示几个错误。这是由于使用了为旧版本的 InternetExplorer 准备的非标准的 CSS。你可以忽略这些错误，它们不会影响你的页面。
+
+
+20.2　测试页面
+ 格式与期望的是否一致
+ 链接的 URL 是否指向了正确的页面或资源（可以通过激活链接并查看结果对 URL 进行测试）
+ 所有的图像都出现了吗？它们的位置和对齐方式是对的吗？
+ 如果你检查的是响应式网页，网页布局是否能适应不同的屏幕尺寸
+
+关于浏览器支持信息，Can I Use（http://caniuse.com）和Quirksmode（www.quirksmode.org/css/）是两处非常宝贵的资源。
+
+获取测试用的浏览器
+ 虚拟机（VM）是运行在你的计算机上的一个独立的操作系统。微软为不同版本的Windows 和 IE 提供了虚拟机，因此你可以在 Mac、Windows 或 Linux 机器上对 IE 进
+行测试。这些虚拟机位于 www.modern.ie/en-US/virtualizationtools#downloads。不能在一台 Windows 机器上运行 Mac 虚拟机以测试 Mac 浏览器。
+
+ 使 用 BrowserStack（www.browserstack.com） 和 Sauce Labs（http://saucelabs.com） 可以在很多浏览器和移动设备上免费测试你的页面。
+ DeviceAnywhere（www.deviceanywhere.com）提供了一种在线访问各种不同移动设备进行测试的收费功能。DeviceAnywhere 也有免费版本，不过一次只能用 10 分钟。
+ 使用 Electric Plum 针对 Windows 的 iPhone 和 iPad 模拟器（www.electricplum.com）。这不是由苹果提供的，因此与苹果的 iOS Simulator 不一样。
+ 使用为其他设备和移动浏览器准备的模拟器。Mobile Boilerplate 维护了一个列表，见https://github.com/h5bp/mobile-boilerplate/wiki/Mobile-Emulators-&-Simulators。
+ 查看 Open Device Lab（http://opendevicelab.com），看看你身边是否有可供免费测试的设备。
+ 如果你有设备，结合使用 Adobe Edge Inspect（http://html.adobe.com/edge/inspect/）可以简化测试和修正问题的过程。
+
+
+20.3　尝试一些调试技巧
+
+浏览器开发工具
+
+下面是各个浏览器中最常用的工具。
+ Chrome：DevTools（http://developers.google.com/chrome-developer-tools/）。
+
+ Firefox：Firefox 有内置工具（https://developer.mozilla.org/en-US/docs/Tools），但是 Firebug 插件特别流行（http://getfirebug.com）。此外，
+
+Web Developer（http://chrispederick.com/work/web-developer/）是稍有区别的一种工具，但也非常好用。在同一个链接的页面上，也可以下载用于 Chrome 的版本。
+
+ Internet Explorer：F12 Developer Tools（http://msdn.microsoft.com/en-us/library/hh772704(v=vs.85).aspx）。
+
+ Opera：DragonÀy（www.opera.com/dragonÀy/）。本书写作之时，这个特性还没有成熟。
+
+ Safari：Web Inspector（http://developer.apple.com/technologies/safari/developertools.html）。
+
+
+
+20.4　检查常见错误：一般问题
+20.5　检查常见错误：HTML
+很多网站用于搜索问题的答案。Stack OverÀow（www.stackoverflow.com）和 SitePoint（www.sitepoint.com/forums/）
+
+20.6　检查常见错误：CSS
+确保浏览器支持你编写的代码，尤其是最新特性，因为浏览器在 CSS3 成长的过程中也在不断演变。关于浏览
+器对新特性的支持情况参见 Can I Use（http://caniuse.com）或者 Quirksmode（http://www.quirksmode.org/css/）。
+
+
+Chrome 的 DevTools:
+font-size 设置上有一条删除线，表示这条声明被另一条规则（显示在媒体查询上面的那条）覆盖了。
+
+-->

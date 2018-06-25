@@ -1,0 +1,685 @@
+/*  
+=========================
+Le Journal (Responsive)
+=========================
+*/
+
+
+/* normalize.css v2.1.2 | MIT License | git.io/normalize
+    (truncated for example in book)
+---------------------------------------------------------------- */
+
+/* ::: HTML5 display definitions ::: */
+/**
+ * Correct `block` display not defined in IE 8/9.
+ */
+article,
+aside,
+figcaption,
+figure,
+footer,
+header,
+main,
+nav,
+section {
+  display: block;
+}
+
+/* ::: Base ::: */
+/**
+ * Prevent iOS text size adjust after orientation change, without disabling
+ *    user zoom.
+ */
+html {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+/**
+ * Remove default margin.
+ */
+body {
+  margin: 0;
+}
+
+/* ::: Links ::: */
+/**
+ * Address `outline` inconsistency between Chrome and other browsers.
+ */
+a:focus {
+  outline: thin dotted;
+}
+
+a:active,
+a:hover {
+  outline: 0;
+}
+
+/* ::: Typography ::: */
+/**
+ * Address inconsistent and variable font size in all browsers.
+ */
+small {
+  font-size: 80%;
+}
+
+/* ::: Embedded content ::: */
+/**
+ * Remove border when inside `a` element in IE 8/9.
+ */
+img {
+  border: 0;
+}
+/* -- end of abridged normalize -- */
+
+
+/* WEB ICON FONT
+  (the social icons that appear
+  in the upper-right corner)
+------------------------------------------ */
+@font-face {
+  font-family: 'Social Icons';
+  src: url("font/socialico-webfont.eot");
+  src: url("font/socialico-webfont.eot?#iefix") format("embedded-opentype"), 
+        url("font/socialico-webfont.woff") format("woff"), 
+        url("font/socialico-webfont.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+/* GENERAL (APPLIED DIRECTLY TO ELEMENTS MOSTLY)
+------------------------------------------------ */
+body {
+  font: 100%/1.2 Georgia, "Times New Roman", serif;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+* {
+  -webkit-box-sizing: border-box; /* Android <= 2.3, iOS <= 4 */
+  -moz-box-sizing: border-box; /* Firefox 1+ */
+  box-sizing: border-box; /* Chrome, IE 8+, Opera, Safari 5.1 */
+}
+
+h1 {
+  color: #212121;
+  font-family: 'Lato', sans-serif;
+  font-size: 2.25em;
+  font-weight: 300;
+  letter-spacing: -2px;
+  line-height: .975;
+  margin-bottom: .4125em;
+}
+
+.about h2,
+.mod h2,
+.nav-main a {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.about h2,
+.mod h2 {
+  font-size: .875em; /* 15px/16px */
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  color: #1162a4;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.more:after {
+  content: ' »';
+}
+
+img {
+  border: 0;
+}
+
+.page {
+  /* these declarations combine to center entire page in browser */
+  margin: 0 auto;
+  max-width: 960px;
+}
+
+.post-photo,
+.post-photo-full,
+.about img,
+.map {
+  max-width: 100%;
+}
+
+
+/* MASTHEAD
+------------------------------------------ */
+.masthead {
+  padding-top: 12px;
+}
+
+.logo {
+  font-size: 10px;
+  line-height: 1;
+  margin-bottom: -8px;
+  margin-top: 0;
+}
+
+.logo,
+.social-sites,
+.nav-main li {
+  text-align: center;
+}
+
+/* ::: Main Navigation ::: */
+.nav-main {
+  border-bottom: 1px solid #c7c7c8;
+  border-top: 5px solid #019443;
+  margin-top: 0;
+  padding: .45em 0 .5em;
+}
+
+.nav-main a {
+  color: #292929;
+  font-size: 1.125em; /* 18px/16px */
+}
+
+.nav-main a:hover {
+  color: #029443;
+  text-decoration: none;
+}
+
+.nav-main .current-page,
+.nav-main .current-page:hover {
+  color: #747474;
+  cursor: default;
+}
+
+/* ::: Social Sites Icons ::: */
+.social-sites {
+  margin-bottom: 12px;
+  padding: 0;
+}
+
+.social-sites li {
+  display: inline;
+}
+
+.social-sites a {
+  color: #019443;
+  font-family: 'Social Icons', sans-serif;
+  font-size: 46px;
+  line-height: .8;
+  vertical-align: middle;
+}
+
+.social-sites a:hover {
+  color: #1162a4;
+  text-decoration: none;
+}
+
+
+/* MAIN CONTENT
+------------------------------------------ */
+main > .post:first-child > h1 {
+  margin-top: 0.769em;
+}
+
+.post-blurb p {
+  color: #363636;
+  font-size: 1.125em;
+  line-height: 1.575;
+}
+
+/* ::: Blog Post Footer ::: */
+.post-footer {
+  border-bottom: 1px solid #dbdbdb;
+  border-top: 1px solid #dbdbdb;
+  padding-bottom: .9em;
+  padding-top: .9em;
+}
+
+.post-footer a {
+  font-weight: bold;
+}
+
+.post-footer time {
+  display: block;
+  margin-top: .25em;
+}
+
+.footer p {
+  color: #3a3a3a;
+  font-family: arial, helvetica, sans-serif;
+  font-size: 0.688em;
+}
+
+.footer p small {
+  font-size: inherit;
+}
+
+/* ::: Pagination Links Below Blog Posts ::: */
+.pagination {
+  margin: 30px 0 0;
+  padding: 0;
+}
+
+.pagination li {
+  display: inline-block;
+  font: 0.875em arial, helvetica, sans-serif;
+  margin-right: 0.25em;
+}
+
+
+/* SIDEBAR
+------------------------------------------ */
+.sidebar {
+  margin-top: 60px;
+}
+
+.mod h2 {
+  border-bottom: 1px solid #dbdbdb;
+  margin-top: 2.571em;
+  padding-bottom: .75em;
+}
+
+/* ::: About Me ::: */
+.about {
+  background: #2b2b2b;
+  padding: 0.313em 0.625em 0.625em;
+}
+
+.about h2,
+.about p {
+  color: #dadada;
+}
+
+.about p {
+  font-size: 0.875em;
+  line-height: 1.5;
+}
+
+.about img {
+  border: 5px solid #bebebe;
+  display: block;
+  margin: 0 auto;
+}
+
+.map {
+  margin: 1.438em 0 0.813em;
+}
+
+/* ::: Previous and Shared Posts ::: */
+.links {
+  margin: 1.5em 0 4.125em;
+  padding-left: 0;
+}
+
+.links li {
+  margin-bottom: 1.1em;
+}
+
+.links a {
+  font-size: 1.1em;
+  line-height: 1.195;
+}
+
+
+/* FOOTER
+--------------------------------- */
+footer[role="contentinfo"] {
+  border-top: 1px solid #cacbcb;
+}
+
+
+/* ===================== MEDIA QUERIES ===================== */
+
+/* 320+ 
+------------------------------------------ */
+@media only screen and (min-width: 20em) {
+  /* Masthead */
+  .nav-main li {
+    border-left: 1px solid #c8c8c8;
+    display: inline-block;
+    text-align: left;
+  }
+
+  .nav-main li:first-child {
+    border-left: none;
+  }
+
+  .nav-main li:last-child a {
+    padding-right: 0;
+  }
+
+  .nav-main a {
+    display: inline-block;
+    font-size: 1em;
+    padding: .5em .9em .5em 1.15em;
+  }
+
+  /* Sidebar */
+  .links {
+    width: 90%;
+  }
+}
+
+/*  <link rel="stylesheet" media="only screen and (min-width: 480px)" href="styles-480.css" />  */
+
+/* 480+ 
+------------------------------------------ */
+@media only screen and (min-width: 30em) {
+  /* Masthead */
+  .masthead {
+    position: relative;
+  }
+
+  .logo {
+    margin-bottom: 8px;
+    text-align: left;
+    border: red dashed 5px;
+    border-top: solid 10px red;
+  }
+
+  .nav-main a {
+    font-size: 1.125em; /* 18px/16px */
+    padding-left: 1.4em;
+    padding-right: 1.15em;
+  }
+
+  .social-sites {
+    margin: 0;
+    position: absolute;
+    right: -3px;
+    top: 41px;
+  }
+
+  .social-sites li {
+    margin-left: -1px;
+  }
+
+  /* Main Content */
+  .post-photo {
+    float: left;
+    margin-bottom: 2px;
+    margin-right: 3.67%;
+    max-width: 61.667%;
+  }
+
+  .post-footer time {
+    display: inline;
+    margin-top: 0;
+  }
+
+  .post-footer time:before {
+    content: '•  ';
+  }
+
+  /* Sidebar */
+  .links a {
+    font-size: 1.125em;
+  }
+}
+
+
+/* 480-767-only 
+------------------------------------------ */
+@media only screen and (min-width: 30em) and (max-width: 47.9375em) {
+  /* Sidebar */  
+  .about {
+    overflow: hidden;
+  }
+
+  .about img {
+    float: left;
+    margin-right: 15px;
+  }
+}
+
+
+/* 600-767-only 
+------------------------------------------ */
+@media only screen and (min-width: 37.5em) and (max-width: 47.9375em) {
+  /* Sidebar */
+  .about {
+    padding-bottom: 1.4em;
+  }
+}
+
+
+/* 768+ 
+------------------------------------------- */
+@media only screen and (min-width: 48em) {
+  h1 {
+    font-size: 3.25em;
+  }
+
+  /* Masthead */
+  .masthead {
+    padding-top: 10px;
+  }
+
+  .nav-main {
+    margin-bottom: 0;
+  }
+
+  /* Main Content */
+  .container {
+    background: url(../img/bg.png) repeat-y 65.938% 0;
+    padding-bottom: 1.9375em;
+  }
+
+  main {
+    float: left;
+    width: 62.5%;
+  }
+
+  main > .post:first-child > h1 {
+    margin-top: 0.904em;
+  }
+
+  .post-blurb p {
+    font-size: 1em;
+    line-height: 1.4;
+  }
+
+  .post-footer {
+    padding-bottom: .7em;
+    padding-top: .7em;
+  }
+
+  .footer p {
+    font-size: 0.688em;
+  }
+
+  .pagination {
+    margin-top: 45px;
+  }
+
+  /* Sidebar */
+  .sidebar {
+    float: right;
+    margin-top: 1.875em;
+    width: 31.25%;
+  }
+
+  .about p {
+    font-size: 0.813em;
+  }
+
+  /* Page Footer */
+  footer[role="contentinfo"] {
+    border-top: 1px solid #cacbcb;
+  }
+}
+/* --- end media queries ---- */
+
+
+/* html5boilerplate.com Clearfix
+--------------------------------- */
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  display: table;
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+/*
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+.clearfix {
+  *zoom: 1;
+}
+
+/*
+12.2　创建可伸缩图像
+
+post-photo,
+.post-photo-full {
+max-width: 100%;
+}
+提 示 还可以使用 video, embed, object{ max-width: 100%; } 让 HTML5 视频及其他媒体变成可伸缩的（同样也不要在 HTML中为它们指定 width 和 height）。
+
+12.3　创建弹性布局网格
+要指定的宽度（以像素为单位）／容器宽度（以像素为单位）＝值
+.page {max-width: 60em; }
+
+page {
+max-width: 960px;    通常说来，不必设置 width: 100%;，因为默认设置为 display:block; 的元素（如 p 以及其他很多元素）或手动设置为 display: block; 的元素在默认情况下会占据整个可用空间。
+}
+main {
+ / 要求宽度/包含块宽度使用600px/960px /
+width: 62.5%;
+}
+.sidebar {
+  width: 31.25%; / 300px/960px /
+}
+提 示 对于设置了 body { font-size: 100%;} 的页面，对 font-size、margin、padding 和max-width 使用 em 值还有一个好处——如果用户更改了浏览器默认字体大小，那么页面也会跟着变大或变小。
+提 示 将 box-sizing 属性设置为 borderbox，就可以很方便地对拥有水平方向内边距（使用 em 或其他的单位）的元素定义宽度，而不必进行复杂的数学计算来找出百分数的值。
+ */
+
+/*12.4　理解和实现媒体查询
+媒体查询增强了媒体类型方法，允许根据特定的设备特性定位样式（参见图 12.4.3）。要调整网站的呈现样式，让其适应不同的屏幕尺寸，采用媒体查询特别方便。
+ width（宽度）
+ height（高度）
+ device-width（设备宽度）
+ device-height（设备高度）
+ orientation（方向）
+ aspect-ratio（高宽比）
+ device-aspect-ratio（设备高宽比）
+ color（颜色）
+ color-index（颜色数）
+ monochrome（单色）
+ resolution（分辨率）
+ scan（扫描）
+ grid（栅格）
+还有一些非标准的媒体特性，如
+ -webkit-device-pixel-ratio（WebKit①
+设备像素比）
+ -moz-device-pixel-ratio（Mozilla ② 设
+备像素比）
+除 了 orientation、scan 和 grid 以 外，上述属性均可添加 min- 和 max- 前缀。min-前缀定位的是“大于等于”对应值的目标，而 max- 前缀定位的则是“小于等于”对应值的目标。
+
+1. 媒体查询语法和示例
+ 指向外部样式表的链接：
+<link rel="stylesheet" media="logic type and (feature: value)" href="your-stylesheet.css" />
+ 位于样式表中的媒体查询：
+@media logic type and (feature: value) {
+ / 目标CSS样式规则写在这里 /
+}
+logic（逻辑）部分是可选的，其值可以是 only 或 not。only 关键字可以确保旧的浏览器不读取余下的媒体查询，
+同时一并忽略链接的样式表。not 关键字可以对媒体查询的结果求反，让其反面为真。
+
+type（类型）部分是媒体类型，如screen、print 等。
+
+feature: value 对是可选的，但一旦包含它们，它们必须用括号包围且前面要有 and 这个字。feature 是预定
+义的媒体特性， 如 min-width、maxwidth或 者 resolution。 对 color、color-index 和 monochrome 特性来说，value 是可选的。
+
+可以使用 and 将多个特性和值的组合串接起来，还可以创建一系列媒体查询（使用逗号分隔每个媒体查询）。在用逗号分隔的媒体查询列表中，如果有一个媒体查询为真，则整个媒体查询列表为真。
+media="only screen and (min-width: 480px) and (max-width: 767px)"
+media="only screen and (orientation: landscape)"
+media="only print and (color)"
+media="only print and (monochrome)"
+media="only screen and (color), projection and (color)"
+
+@media only screen and (color), projection and (color) {
+ /样式规则 /
+}
+提 示 任何位于媒体查询以外的基准样式规则都会应用于所有的设备。可以使用媒体查询覆盖这些样式规则。需要说明的是，媒体查询样式规则声明仅在与常规样式冲突时进行覆盖。
+提 示 CSS3 媒体查询规范中列出了关于所有媒体特性的描述（www.w3.org/TR/css3-mediaqueries/#media1）。
+
+
+理解视觉区域及使用视觉区域 meta 元素:
+视觉区域（viewport）指的是浏览器（包括桌面浏览器和移动浏览器）显示页面的区域。它不包含浏览器地址栏、按钮这样的东西，只是浏览区域。媒体查询的 width 特性对应的是视觉区域的宽度。
+不过，device-width 特性不是，它指的是屏幕的宽度。
+
+在页面的 head 部分添加视觉区域 meta 元素。
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+视觉区域的宽度会被设成与设备宽度（对 iPhone 来说为 320 像素）相同的值，因此在纵向模式下该宽度的页面内容会填充整个屏幕（如图 12.4.12 所示）。
+initial-scale=1在 iPhone 中，手机从纵向模式改为横向模式时，网页会被放大，从而让布局与纵向模式的一致。它将页面的默认缩放级别设成了 100%，换成纵向模式也一样。
+ */
+
+/*
+12.5　组合使用
+1. 创建内容和 HTML
+2. 移动优先方法
+“渐进增强：一种最佳实践”:处理能力较弱的（通常也是较旧的）设备和浏览器会根据它们能理解的 CSS 显示网站相对简单的版本。处理能力较强的设备和浏览器则显示增强的版本。
+(1) 首先为所有的设备提供基准样式
+(2) 从 这 种 样 式 开 始， 使 用 媒 体 查 询逐渐为更大的屏幕（或其他媒体特性，如orientation）定义样式。大多数时候，minwidth和 max-width 媒体查询特性是最主要的工具。
+3. 逐步完善布局
+使用媒体查询为页面中的每个断点（breakpoint）定义样式。
+4. 构建响应式 Web 页面
+提 示 Eivind Uggedal 的 http://mediaqueri.es网站汇集了大量现实的响应式网站
+提 示 Screen Sizes 网站（http://screensiz.es）提供了流行设备和显示屏的分辨率和设备宽度信息。
+提 示 Maximiliano Firtman 维护了一个现代移动设备对 HTML5 和 CSS3 支持情况的表格，见 http://mobilehtml5.org。
+测试响应式页面:Malte Wasserman 提供的Viewport Resizer（http://lab.maltewassermann.com/viewport-resizer/）
+
+对 Retina 及类似显示屏使用媒体查询：
+针对高像素密度设备，可以使用下面的媒体查询：
+@media (-o-min-device-pixel-ratio: 5/4),
+(-webkit-min-device-pixel-ratio:1.25),
+(min-resolution: 120dpi) {
+.your-class {
+ background-image:url(sprite-2x.png);
+ background-size: 200px 150px;
+}
+}
+注意background-size设置成了原始尺寸，而不是400像素×300像素。这样会让图像缩小，为原始尺寸创建的样式对 2x 版本也有效。
+
+<head>
+ ...
+<!--[if gt IE 8]><!-->
+ <link rel="stylesheet" href="css/styles.css" />
+<!--<![endif]-->
+<!--[if lt IE 9]>
+ <link rel="stylesheet" href="css/old-ie.css" />
+<![endif]-->
+</head>
+条件注释：http://www.quirksmode.org/css/condcom.html
+第一个条件注释包含的是为 IE8 及更旧版本以外的所有浏览器准备的样式表。第二个包含的则是仅为 IE9 以下的IE 准备的样式表
+
+提 示 如果使用 Sass、LESS 或 Stylus 这类CSS 预处理器，就可以自动创建为旧版 IE 准备的样式表。
+Nicolas Gallagher 分享了一个使用 Sass 的方法（http://nicolasgallagher.com/mobile-first-css-sass-and-ie/）。
+
+使用 Respond.js：可以访问 https://github.com/scottjehl/Respond
+ */
+
+
+
+
+
+
+

@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+    <title>Creating a Form</title>
+	<link rel="stylesheet" href="css/form.css" />
+</head>
+<body>
+<main class="wrapper" role="main">
+	<h1>Create a New Account</h1>
+	
+	<form method="post" action="show-data.php" enctype="multipart/form-data">
+		<!--
+		要让访问者能够上传文件，必须正确地设置enctype属性，创建input type="file"元素。对 input 使用 multiple 属性可以允许上传多个文件（这里并没有包含该属性）。
+		-->
+		<!-- START ACCOUNT FIELDS -->
+		 <fieldset>
+			<h2 class="hdr-account">Account</h2>
+
+			<div class="fields">
+				<p class="row">
+					<!--输入用于让访问者识别文本框的标签-->
+					<label for="first-name">First Name<span class="required">*</span>:</label>
+					<!--id="idlabel"，这里的 idlabel 跟第 (1) 步中for 属性的文本一样。这跟具有显式文本框的label 元素关联。-->
+					<input type="text" id="first-name" name="first_name" class="field-large" required="required" aria-required="true" />
+					<!--
+					如果需要，输入 value="default"，这里的default 是这个字段中最初显示的数据，如果访问者没有输入别的内容的话，这一数据将被发送到服务器。
+					如果需要，输入placeholder="hinttext"，这里的 hinttext 是这个字段中最初显示的数据
+					如果需要，输入 required="required"，表示仅在这个字段有值的情况下才能提交表单
+					如果需要，输入 autofocus 或 autofocus="autofocus"（在 HTML5 中这两种方法均可）。如果这是第一个拥有此属性的表单控件，input 元素在页面加载时会默认获得焦点。
+					如果需要，通过输入 size="n" 定义文本框的大小，这里的 n 是需要设置的文本框宽度，以字符为单位。
+					如果需要，输入 maxlength="n"，这里的n 是该文本框允许输入的最大字符数。
+					如果整个表单或者这个特定的 input 设置了autocomplete="off"，就不会显示这些提示，浏览器也不会保存用户所输入的内容
+					-->
+				</p>
+				<p class="row">
+					<label for="last-name">Last Name:</label>
+					<input type="text" id="last-name" name="last_name" class="field-large" />
+				</p>
+				<p class="row">
+					<label for="email">Email:</label>
+					<input type="email" id="email" name="email" placeholder="yourname@example.com" class="field-large" />
+				</p>
+				<p class="row">
+					<label for="password">Password:</label>
+					<input type="password" id="password" name="password" />
+				</p>
+				<!--
+				输入 name="dataname"，这里的dataname是用于让服务器识别输入数据的文本。
+				提 示 即便密码框中没有输入任何内容，name 属性仍将被发送到服务器（使用未定义的value）。
+				-->
+				<p class="row">
+					<label for="password2">Re-enter Password:</label>
+					<input type="password" id="password2" name="password2" />
+				</p>
+			</div>
+		</fieldset>
+		<!-- end account -->
+		
+		<!-- START ADDRESS FIELDS -->
+		<fieldset>
+			<h2 class="hdr-address">Address</h2>
+
+			<div class="fields">
+				<div class="row">
+					<label for="street-address">Street Address:</label>
+					<input type="text" id="street-address" name="street_address" class="field-large" />
+				</div>
+				<div class="row">
+					<label for="city">City:</label>
+					<input type="text" id="city" name="city" class="field-large" />
+				</div>
+				<div class="row">
+					<label for="state">State:</label>
+					<select id="state" name="state">
+						<option value="AL">Alabama</option>
+						<option value="AK">Alaska</option>
+						<option value="CA" SELECTED>California</option>
+						<option value="CO">Colorado</option>
+					</select>
+					<!--
+					默认的选择是菜单中的第一个选项，或者是在 HTML 中指定了 selected 的选项（需要注意的一点是，除非设置了 size 属性，否则访问者就必须选择菜单中的某个选项）
+					如果需要，输入 selected 或 者selected="selected"（在 HTML5 中两种方式均可），指定该选项被默认选中。
+					-->
+				</div>
+				<div class="row">
+					<label for="zip-code">ZIP Code:</label>
+					<input type="text" id="zip-code" name="zip_code" class="field-small" />
+				</div>
+			</div>
+		</fieldset>
+		<!-- end address -->
+		
+		<!-- START PUBLIC PROFILE FIELDS -->
+		<fieldset>
+			<h2 class="hdr-public-profile">Public Profile</h2>
+
+			<div class="fields">
+				<div class="row">
+					<label for="picture">Picture:</label>
+					<input type="file" id="picture" name="picture" />
+					<p class="instructions">Maximum size of 700k. JPG, GIF or PNG.</p>
+				</div>
+				<p class="row">
+					<label for="screen-name">Screen Name:</label>
+					<input type="text" id="screen-name" name="screen_name" class="field-medium" />
+				</p>
+				<div class="row">
+					<label for="website">Website URL:</label>
+					<input type="url" id="website" name="website" placeholder="http://www.example.com" class="field-large" />
+					<p class="instructions">Have a homepage or a blog? Put the address here, <br />beginning with <kbd>http://</kbd> or <kbd>https://</kbd>.</p>
+				</div>
+				<p class="row">
+					<label for="phone">Phone:</label>
+					<input type="tel" id="phone" name="phone" class="field-large" placeholder="xxx-xxx-xxxx" pattern="\d{3}-\d{3}-\d{4}" />
+					<!--
+					可以在 http://html5pattern.com 找到一些常用的正则表达式
+					-->
+				</p>
+				<p class="row">
+					<label for="bio">Bio:</label>
+					<textarea id="bio" name="bio" cols="40" rows="5" class="field-large"></textarea>
+					<!--
+					rows 和 cols 属性分别控制文本区域的高度和宽度，除非使用 CSS 覆盖其中之一（参见图 16.11.2）或者全部。
+					默认情况下不会继承 textarea、font属性，因此必须显式地设置该属性。
+					-->
+				</p>
+				<div class="row">
+					<fieldset class="radios">
+						<legend>Gender:</legend>
+						<p class="row">
+							<input type="radio" id="gender-male" name="gender" value="male" />
+							<label for="gender-male">Male</label>
+						</p>
+						<p class="row">
+							<input type="radio" id="gender-female" name="gender" value="female" />
+							<label for="gender-female">Female</label>
+						</p>
+					</fieldset>
+				</div>
+			</div>
+		</fieldset>
+		<!-- end public profile -->
+		
+		<!-- START EMAILS FIELDS -->
+		<fieldset>
+			<h2 class="hdr-emails">Emails</h2>
+			<div class="fields checkboxes">
+				<div class="row">
+					<input type="checkbox" id="email-ok-msg-from-users" name="email_signup[]" value="user-emails" />
+					<label for="email-ok-msg-from-users">It is okay to email me with messages from other users.</label>
+				</div>
+				<div class="row">
+					<input type="checkbox" id="email-ok-occasional-updates" name="email_signup[]" value="occasional-updates" />
+					<label for="email-ok-occasional-updates">It is okay to email me with occasional promotions about our other products.</label>
+				</div>    			
+			</div>
+		</fieldset>
+		<!-- end emails -->
+		
+		<input type="submit" value="Create Account" class="btn" />
+		<!--
+		如果不填写 name 属性，则提交按钮的名 – 值对就不会传给脚本。由于通常不需要这一信息，因此这里的做法是有益的
+		-->
+	</form>
+
+	<form method="get" action="search-results.php" role="search">
+		<label for="search">Search:</label>
+		<input type="search" id="search" name="search" size="30" placeholder="e.g., a book or magazine" />
+		<input type="hidden" name="step" value="6" />
+		<input type="hidden" name="email" value="<?= $email ?>" />
+		<!--
+		访问者不会看到这个输入框，但他们提交表单的时候，名“step”和值“6”会随着表单中从访问者输入获取的数据一起传送给服务器
+
+		创建隐藏字段时，可以使用脚本中的变量将字段的值设置为访问者原来输入的值（这个示例使用了 PHP 语法）
+		-->
+		<input type="submit" value="Find It!" />
+	</form>
+
+	<div class="row">
+		<label for="referral">Where did you find out about us?</label>
+		<select id="referral" name="referral">
+			<optgroup label="Online">
+				<option value="social_network">Social Network</option>
+				<option value="search_engine">Search Engine</option>
+			</optgroup>
+			<optgroup label="Offline">
+				<option value="postcard">Postcard</option>
+				<option value="word_of_mouth">Word of Mouth</option>
+			</optgroup>
+		</select>
+	</div>
+</main>
+</body>
+</html>
+
+<!--
+我对四个表单部分分别使用了 fieldset，并将 Public Profile（公开资料）部分的 Gender（性别）单选按钮使用一个 fieldset 包围起来。注意，我为被嵌套的 fieldset 添加了 radios 类，
+方便为其添加特定的样式，同时，还在其中添加了一个 legend 元素，用于描述单选按钮
+
+将 action 属性的值设为访问者提交表单时服务器上对数据进行处理的脚本的 URL。例如，action="save-info.php"。
+
+提 示 可以对 form 元素应用 novalidate属 性， 关 闭 表 单 的 HTML5 验 证 特 性（ 本章后面会演示这一特性）。例如 <form method="post" action="show-data.php"novalidate>。
+
+提 示 使用 fieldset 元素对表单进行组织是可选的，使用 legend 也是可选的（使用legend 则必须要有 fieldset）。不过我强烈推荐使用 fieldset 和 legend 对相关的单选按钮进行分组。
+
+无论如何，对于单选按钮，最好总是使用 fieldset 和 legend。
+
+16.5　创建文本框
+服务器端的脚本使用你指定的 name 获取访问者在文本框中输入的值或预设的值（即 value 属性值）。
+
+提 示 文本框大小的默认值为 20。不过，访问者可以输入更多的字符，直到达到maxlength 属性规定的限制。如果需要更大的可以容纳好几行文本的字段，最好使用textarea 元素.
+
+16.6　为表单组件添加说明标签
+label 元素有一个特殊的属性：for。如果 for 的值与一个表单字段的 id 的值相同，该 label 就与该字段显式地关联起来了
+如果访问者与标签有交互（如使用鼠标点击了标签），与之对应的表单字段就会获得焦点
+同时，复选框和单选按钮的标签则让用户可以通过点击标签来修改状态（就像点击表单控件一样）。
+
+提 示 还可以将一个表单字段放在一个包含标签文本的 label 内，例如，<label>FirstName: <input type="text" name="first_name" /></label>。
+（注意在这种情况下，就不需要使用 for 和 id 了。）
+
+对于包含多个单词的值，我们在 for 和 id 中使用连字符（-）分隔各个单词，在name 中 使 用 下 划 线（_）， 参 见 图 16.6.1。 例 如，for="first-name"、id="first-name" 和
+name="first_name"。对 name 使用不同的形式，表现出该属性的值可以与另外两个不同，实际上对需要传入服务器端脚本的 name 值使用下划线分隔多个单词也是一种常见的做法。
+无论使用哪种方法，一定要保证 for 和 id 的值是一样的。
+
+16.7　创建密码框
+
+16.8 创建电子邮件框、搜索框、电话框和 URL 框
+http://html5pattern.com/
+
+H5F（https://github.com/ryanseddon/H5F）这样的 JavaScript为旧浏览器提供 HTML5 功能
+
+提 示 电子邮件框也可以使用 multiple 属性，这样就可以输入多个电子邮件地址（以逗号分隔不同的地址）。
+
+提 示 默 认 情 况 下， 为 Chrome、Safari 和Mobile Safari 等浏览器中的搜索框设置样式是受到限制的（参见图 16.8.6）。 如 果
+要消除这一约束，重新获得 CSS 的控制权， 可 以 使 用 专 有 的 -webkit-appearance:none; 声 明， 例 如 input[type="search"] {
+-webkitappearance: none; }。更多信息（包括 对 Firefox 的支持）参见 http://css-tricks.com/almanac/properties/a/appearance/。不
+
+提 示 WebKit 浏览器支持两个非官方HTML5 属 性：autosave 和 results，它们为搜索框提供了额外的行为和视觉效果。更
+多信息参见 www.wufoo.com/html5/types/5-search.html。
+
+16.9　创建单选按钮
+同一组单选按钮的 name 属性值必须相同，这样在同一时间只有其中一个能被选中。value 属性也很重要，因为对于单选按钮访问者无法输入值
+
+如果需要，输入 checked 或者 checked="checked" 让该单选按钮在页面打开时默认处于激活状态（两种方法在 HTML5 中均可）。在一组单选按钮中，只能对一个按钮添加这一属性。
+
+16.10　创建复选框
+
+提 示 如果使用 PHP 处理表单，在图 16.10.1中使用 name="boxset[]"（这里的 boxset 用于标识发送给脚本的数据）就会自动地创建一个包含复选框值的数组（名为 $_POST['boxset']）。
+
+16.11　创建文本区域
+
+如果没有使用 maxlength 属性限制文本区域的最大字符数量，访问者可以输入多达 32700 个字符。必要时，文本区域内会显示一个滚动
+条（这里没有显示）。访问者可以通过拖曳文本区域右下角的斜线改变文本区域的大小。如果设置了
+textarea { resize: none; }，那么访问者就无法这样操作了　
+
+提 示 要为文本区域添加预设值， 就在textarea 开始标签和结束标签之间添加文本（这里没有 value 属性）。通常，可以包含placeholder 属性定义用于占位的文本。
+提 示 maxlength 是 HTML5 中为文本区域新增的属性，因此它的行为在不同浏览器中可能不一样（参见 www.wufoo.com/html5/attributes/03-maxlength.html）。旧浏览器会直接忽略该属性。
+
+
+16.12　创建选择框
+(5) 如果需要，输入 size="n"，这里的 n代表选择框的高度（以行为单位）。
+(6) 如果需要，输入 multiple 或 者multiple="multiple"（两种方法在 HTML5中均可），从而允许访问者选择一个以上的菜单选项（选择的时候需按住 Control 键或Command 键）。
+
+2. 对选择框选项进行分组
+<optgroup label="Online">
+ <option value="social_network">Social Network</option>
+ <option value="search_engine">Search Engine</option>
+</optgroup>
+提 示 如果添加了 size 属性，那么选择框看起来会更像一个列表，且没有自动选中的选项，参见图 16.12.6（除非设置了 selected）。
+提 示 如果 size 大于选项的数量，访问者就可以通过点击空白区域让所有的选项处于未选中状态。
+提 示 可以对 option 元素添加 label 属性，该属性用于指定需要显示在菜单中的文本（替代了option标签之间的文本），参见16.10节。不过，Firefox并不支持这一属性，因此最好不要用它。
+<select id="state" name="state" size="3">
+
+16.13　让访问者上传文件
+文件上传区域为用户提供了从其系统中选择文件的方式。对于 type="file" 的 input元素，浏览器会自动创建 Browse（浏览）按钮。
+Chrome 和 Safari 不会创建框，它们只显示按钮。浏览器通常不允许像对其他表单元素那样对此类input 设置样式
+
+16.14　创建隐藏字段
+什么时候使用隐藏字段
+这里有个隐藏字段非常方便的例子。假设你有一个表单，希望让访问者在提交表单之前有机会检查他们输入的内容。处理表单的脚本可以向访问者显示提交的数
+据，同时创建一个表单，其中有包含同样数据的隐藏字段。如果访问者希望编辑数据，他们只需后退就可以了。如果他们想提交表单，由于隐藏字段已经将数据填好了，因此他们就不需要再次输入数据了。
+
+提 示 要创建访问者可见但不可修改的表单元素，有两种方法。一种是使用 disabled（禁用）属性（参见 16.16 节）。另一种是使 用 readonly（ 只 读） 属 性。 与 禁 用 字 段
+不同，只读字段可以获得焦点，访问者可以选择和复制里面的文本，但不能修改这些文本。它只能应用于文本输入框和文本区域，
+例如，<input type="text" id="coupon" name="coupon" value="FREE" readonly />。
+
+
+16.15　创建提交按钮
+2. 创建带图像的提交按钮
+(2) 输入 <input type="image">。
+(3) 输入 src="image.url"，其中的image.url是图像在服务器上的位置。
+(4) 输 入 alt="description"，这里的description 是当图像无法显示时需要出现的文本。
+
+3. 创建结合文本和图像的提交按钮
+<button type="submit" class="btn"> <img src="check.png" width="21" height="21" alt="" /> Create Profile</button>
+
+提 示 如果省略 value 属性，那么根据不同的浏览器，提交按钮就会显示默认的 Submit或者 Submit Query。
+提 示 可以使用 button 元素创建不包含图像的提交按钮。任何时候，如果你的表单需要一个以上的提交按钮，就应避免使用 button元素，因为针对这种情况，不同浏览器的行为并不完全一致。
+提 示 表单还可以有重置按钮，用于将表单数据还原为页面加载时（在访问者填写表单之前）的样子。创建重置按钮可以使
+     用 <input type="reset" /> 或 <button type="reset">Reset</button>。我们也可以为重置按钮添加样式。
+提 示 HTML5 对 type="email" 和 type="URL" 的 input 添加了自动验证功能。对提交按钮使用 formnovalidate 属性可以关闭该功能，如 <input type="submit" formnovalidate />。
+
+
+16.17　根据状态为表单设置样式
+伪类:www.quirksmode.org/css/selectors/ 并拖到 UIstate pseudo-classes（UI 状态伪类）部分。
+
+提 示 页面一开始加载就会应用 :invalid状态，因此，根据你所设置的状态，有可能会出现一些意外的结果。例如，如果规则 是 input:invalid { background-color:pink; }，
+那么必填的 input 字段在用户填写任何内容之前就会显示粉红色的背௿。任何标记为 required 但值为空的字段会被认为处于无效状态。）为了将必填字段排除在该规则之外，可以使用 :not 伪类，
+如 input:invalid:not(:required) { border:2px solid red; }。除了 IE9 之前的版本，所有浏览器都支持 :not 伪类。　
+
+提 示 上一条提示讲到的情境还有一种应对方法，即提交表单时，使用 JavaScript 为 form元素添加一个类，并在样式表中为该类创建无效样式，例如，
+.submitted input:invalid{ background-color: red; }。示例代码及其他提示参见 Peter Gasston 的 文 章（ 位 于html5doctor.com/css3-pseudo-classes-and-html5-forms）。
+
+提 示 对于浏览器无法识别的伪类，浏览器会直接忽略其中的样式规则。对于 Web 设计人员和开发人员来说，这通常是可以接受的——使用功能较强的浏览器的访问者获得增强的体验。
+Keith Clark 的 Selectivzr（http://selectivizr.com/）是一个用于让旧浏览器理解这些选择器的 JavaScript 文件。
+
+使用属性选择器为表单设置样式
+别忘了，还可以使用属性选择器定位拥有特定属性的表单字段，例如：
+ [autocomplete]
+ [autofocus]
+ [multiple]（仅限于电子邮件框和文件上传框）
+ [placeholder]
+ [type="email"]（参见图 16.17.8）、[type="url"] 等（其他的输入框类型都可以像这样使用）
+
+-->

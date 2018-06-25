@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>Basic table evolved and styled</title>
+	<link rel="stylesheet" href="css/table-evolved-and-styled.css" />
+</head>
+<body>
+
+<table>
+	<caption>Quarterly Financials for 1962-1964<br /> (in Thousands)</caption>
+	<thead> <!-- table head -->
+		<tr>
+			<th scope="col">Quarter</th>
+			<th scope="col">1962</th>
+			<th scope="col">1963</th>
+			<th scope="col">1964</th>
+		</tr>
+	</thead>
+	<tbody> <!-- table body -->
+		<tr>
+			<th scope="row">Q1</th>
+			<td>$145</td>
+			<td>$167</td>
+			<td>$161</td>
+		</tr>
+		<tr>
+			<th scope="row">Q2</th>
+			<!--
+			输入 <th scope="scopetype"> 开始标题单元格（其中的 scopetype 可以是 col、row、colgroup 或 rowgroup），或者输入 <td>定义数据单元格的开始。
+			-->
+			<td>$140</td>
+			<td>$159</td>
+			<td>$164</td>
+		</tr>
+		<tr>
+			<th scope="row">Q3</th>
+			<td>$153</td>
+			<td>$162</td>
+			<td>$168</td>
+		</tr>
+		<tr>
+			<th scope="row">Q4</th>
+			<td>$157</td>
+			<td>$160</td>
+			<td>$171</td>
+		</tr>						
+	</tbody>
+	<tfoot> <!-- table foot -->
+		<tr>
+			<th scope="row">TOTAL</th>
+			<td>$595</td>
+			<td>$648</td>
+			<td>$664</td>
+		</tr>	
+	</tfoot>
+	<!--通过指定 thead、tbody 和 tfoot 显式地定义了表格的不同部分。接着，在每行的开头添加了 th 元 素。tbody 和 tfoot 中 的 th 设置了scope="row"，表明它们是行标题。
+	-->
+</table>
+
+</body>
+</html>
+
+<!--
+对于一些比较复杂的示例，参见以下 URL。
+
+ Roger Johansson 的“Bring On theTables”（www.456bereastreet.com/archive/200410/bring_on_the_tables/）
+ Roger Hudson 的“Accessible DataTables”（www.usability.com.au/resources/tables.cfm）
+ Stephen Ferg 的“Techniques for AccessibleHTML Tables”（http://accessiblehtml.sourceforge.net/）
+
+从基本层面看，table 元素是由行组成的，行又是由单元格组成的。每个行（tr）都包含标题单元格（th）或数据单元格（td），或者同时包含这两种单元格。
+
+整个表格添加一个标题:可以提供 caption
+
+scope 属性（也是可选的，不过推荐使用）可以告诉屏幕阅读器和其他辅助设备当前的 th是列的标题单元格（使用 scope="col"）还是
+行的标题单元格（使用 scope="row"），抑或是用于其他目的的单元格（参见最后一条提示）。
+
+
+thead 元素可以显式地将一行或多行标题标记为表格的头部。tbody 元素用于包围所有的数据行。tfoot 元素可以显式地将一行或多行标记为表格的尾部。
+
+提 示 如果包含了 caption 元素，那么它必须是 table 中的第一个元素，如图 18.1.1 所示。（caption元素可以包含p和其他文本元素。）
+
+提 示 如果包含了 thead 或 tfoot，则必须包含 tbody。tbody 不能位于 thead 之前。一个 table 只能拥有一个 thead 和一个 tfoot，但可以有多个 tbody 元素。
+
+提 示 如果 table 是嵌套在 figure 元素内除 figcaption 以外的唯一元素，则可以省略caption，使用 figcaption 对表格进行描述
+（参见 4.4 节）。注意，不要在 table 中嵌套figcaption，而应跟往常一样将 figcaption放在 figure 中。
+
+提 示 可以通过 scope 属性指定 th 为一组列的标题（使用 scope="colgroup"），或者为一组行的标题（使用 scope="rowgroup"）。
+-->

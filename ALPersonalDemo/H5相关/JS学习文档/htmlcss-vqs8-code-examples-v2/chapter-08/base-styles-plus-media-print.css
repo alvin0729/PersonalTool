@@ -1,0 +1,44 @@
+/* Styles for all media */
+img {
+	border: 4px solid red;
+}
+
+p {
+	color: orange;
+	font-style: italic;
+}
+
+/* Print Style Sheet */
+@media print {
+
+	body {
+		/* 
+		make text larger. 
+		notice the use of the pt (point) unit. using pt is appropriate for print style sheets.
+		*/
+		font-size: 25pt;
+	}
+
+	p {
+		color: #000; /* hex for black */
+	}
+
+	img {
+		display: none; /* don't show images */
+	}
+
+}
+
+/*
+有 9 种 可 能 的 输 出 类 型：all、aural、braille、handheld、print、projection、screen、tty 和 tv。浏览器对
+它们的支持程度各不相同（大多只有少量的支持）。实际上，用得上的只有 screen 和 print（或许还应加上 all），浏览器对它们
+的支持情况都很好。另一方面（可以这么说），设备对 handheld 的支持程度并不高，因此在为移动设备设计时，通常使用 screen 而不是
+handheld（参见第 12 章）。projection 类型是为投影仪和其他类似的设备准备的，Opera的投影模式 Opera Show 支持这种类型。
+
+通过对 link 元素添加 media 属性，可以将样式表限于特定输出。
+
+在这个例子中，上面是影响所有媒体类型（包括打印）的样式，下面是专门用于打印的样式，样式规则放在 @mediaprint { } 中。
+
+提 示
+联合使用 CSS3 引入的媒体查询和这里介绍的媒体输出类型可以形成强大的威力。通过这些技术，可以根据输出设备的属性确定需要应用到页面的样式。
+ */

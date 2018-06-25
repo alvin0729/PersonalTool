@@ -1,0 +1,56 @@
+body {
+	background: #fff;
+	color: #222;
+	font: 100%/1.05 helvetica, sans-serif;
+	padding-top: 20px;
+}
+
+p {
+	color: #222; /* nearly black */
+	font-size: 4.5em;
+	font-weight: bold;
+	margin: 0 0 45px;
+}
+
+p:last-child {
+	margin: 0;
+}
+
+.basic {
+	text-shadow: 3px 3px #aaa;
+}
+
+/* uses negative offsets--you can mix positive and negative ones, too. */
+.basic-negative {
+	text-shadow: -4px -2px #ccc; /* a little lighter grey than #aaa */
+}
+
+.blur {
+	text-shadow: 2px 2px 10px grey;
+}
+
+.blur-inversed {
+	color: white;
+	text-shadow: 2px 2px 10px #000; /* black */
+}
+
+/* this example has two shadows, but you can include 
+more by separating each with a comma */
+.multiple {
+	text-shadow:
+		2px 2px white,
+		6px 6px rgba(50,50,50,.25);
+}
+
+/*
+(1) 输入 text-shadow:
+(2) 分别输入 x-offset、y-offset、blur-radius 和 color 的值（前三个带长度单位，四个值之间不用逗号分隔）。blur-radius 的值是可选的。
+
+可以为单个元素添加多个阴影样式，每组属性之间用逗号分隔。这样，通过结合使用多个阴影样式，可以创建出特殊而有趣的效果
+
+将 text-shadow 改回默认值: 输入 text-shadow: none;。
+
+提 示 text-shadow属性不需要使用厂商前缀。
+
+提 示 text-shadow 属性是继承的。
+ */

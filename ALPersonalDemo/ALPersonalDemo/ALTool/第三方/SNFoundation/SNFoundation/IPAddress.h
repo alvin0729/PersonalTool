@@ -1,4 +1,4 @@
-//
+  //
 //  IPAddress.h
 //  SuningEBuy
 //
@@ -22,7 +22,7 @@ extern unsigned long ip_addrs[MAXADDRS];
 
 
 void InitAddresses(void);
-
+  
 void FreeAddresses(void);
 
 void GetIPAddresses(void);
