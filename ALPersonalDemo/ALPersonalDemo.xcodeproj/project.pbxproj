@@ -89,6 +89,7 @@
 		CF95F23520D90CE400DDAA28 /* NSDictionary+NilSafe.m in Sources */ = {isa = PBXBuildFile; fileRef = CF95F23420D90CE400DDAA28 /* NSDictionary+NilSafe.m */; };
 		CF970B3B1EF76F0300955D4A /* LLRollingButtonScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = CF970B3A1EF76F0300955D4A /* LLRollingButtonScrollView.m */; };
 		CF9A582420D25EA700067258 /* UIImageView+Letters.m in Sources */ = {isa = PBXBuildFile; fileRef = CF9A582220D25EA600067258 /* UIImageView+Letters.m */; };
+		CF9DE86320EE2046002D415C /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = CF9DE86220EE2045002D415C /* README.md */; };
 		CFA390A320BF9F0C001CDF4F /* EBMute.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CFA390A020BF9F0C001CDF4F /* EBMute.mp3 */; };
 		CFA390A420BF9F0C001CDF4F /* EBMuteDetector.m in Sources */ = {isa = PBXBuildFile; fileRef = CFA390A220BF9F0C001CDF4F /* EBMuteDetector.m */; };
 		CFA390B320BFA7B1001CDF4F /* WXNSoundToolManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CFA390B220BFA7B0001CDF4F /* WXNSoundToolManager.m */; };
@@ -555,6 +556,7 @@
 		CF970B3A1EF76F0300955D4A /* LLRollingButtonScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LLRollingButtonScrollView.m; sourceTree = "<group>"; };
 		CF9A582220D25EA600067258 /* UIImageView+Letters.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+Letters.m"; sourceTree = "<group>"; };
 		CF9A582320D25EA700067258 /* UIImageView+Letters.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+Letters.h"; sourceTree = "<group>"; };
+		CF9DE86220EE2045002D415C /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		CFA390A020BF9F0C001CDF4F /* EBMute.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = EBMute.mp3; sourceTree = "<group>"; };
 		CFA390A120BF9F0C001CDF4F /* EBMuteDetector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EBMuteDetector.h; sourceTree = "<group>"; };
 		CFA390A220BF9F0C001CDF4F /* EBMuteDetector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EBMuteDetector.m; sourceTree = "<group>"; };
@@ -2792,6 +2794,7 @@
 				CF78E0081F3724C90027F046 /* 线程.rtf */,
 				CF1C924B1FBAB8FB0001D0DB /* animate.rtf */,
 				CFE8D7FA2072200E000D4803 /* YYKit.rtf */,
+				CF9DE86220EE2045002D415C /* README.md */,
 				CFB2BACF20C69F0900188C08 /* 常见问题.rtf */,
 			);
 			path = UIKit;
@@ -3005,6 +3008,7 @@
 				CF730C471F4BD07D0040C187 /* gif_3.gif in Resources */,
 				CF730C441F4BD07D0040C187 /* gif_0.gif in Resources */,
 				E1D226491F6D3AD40001E8A3 /* Predicate Programming Guide.rtf in Resources */,
+				CF9DE86320EE2046002D415C /* README.md in Resources */,
 				CF1C924C1FBAB8FB0001D0DB /* animate.rtf in Resources */,
 				CF78E0091F3724C90027F046 /* 线程.rtf in Resources */,
 				CF730C451F4BD07D0040C187 /* gif_1.gif in Resources */,
