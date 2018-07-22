@@ -1,0 +1,54 @@
+/* The style shown in Fig C */
+input[type="image"] {
+	vertical-align: bottom;
+	/*
+	 输入 baseline，使元素的基准线对齐父元素的基准线；
+或者输入 middle，使元素位于父元素中央；
+或者输入sub，使元素成为父元素的下标；
+或者输入 super，使元素成为父元素的上标；
+或者输入 text-top，使元素的顶部对齐父元素的顶部；
+或者输入 text-bottom，使元素的底部对齐父元素的底部；
+或者输入 top，使元素的顶部对齐当前行里最高元素的顶部；
+或者输入 bottom，使元素的底部对齐当前行里最低元素的底部；
+或者输入元素行高的百分比，可以是正数，也可以是负数；
+或者输入某个值（正负均可，单位为像素或 em）分别按照特定的值向上或者向下移动元素。
+
+除了表格以外，vertical-align 属性仅适用于行内元素，不能应用于块级元素。
+	 */
+}
+
+/* Additional styles not shown in chapter */
+body {
+	font: 100% sans-serif;
+	padding: 10px 0 0 5px;
+}
+
+h2 {
+	font-size: 1.125em;
+	font-family: sans-serif;
+	margin-bottom: 3px;
+}
+
+label {
+	color: #717171;
+	font: .875em 'Opens Sans', sans-serif;
+	font-weight: 700;
+	text-transform: uppercase;
+}
+
+input[type="search"] {
+	border: 1px solid #c5c5c5;
+	box-shadow: inset 0px 0px 3px 0px #d8d8d8; /* Chrome 6+, Firefox 4+, IE 9+, iOS 5+, Opera 10.50+ */
+	font: 1em Georgia, 'Times New Roman', serif;
+	height: 40px;
+	margin-left: 6px;
+	margin-right: 5px;
+	padding: .3em;
+	width: 260px;
+
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+
+	-webkit-appearance: none; /* Turn off default search box style in Chrome, iOS, and Safari */
+}

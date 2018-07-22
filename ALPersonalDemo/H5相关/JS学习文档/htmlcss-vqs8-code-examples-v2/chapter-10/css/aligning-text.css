@@ -1,0 +1,105 @@
+body {
+	background-color: #88b2d2;
+	font: 100% Geneva, Tahoma, Verdana, sans-serif;
+}
+
+h1,
+h2 {
+	letter-spacing: 1px;
+	text-align: center;
+	
+	/* Can't combine these into 
+	font shorthand unless you include 
+	font size with them in the shorthand. */
+	font-family: "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
+	font-weight: normal;
+}
+
+h1 {
+	/* Can't combine these into
+	font shorthand unless you include 
+	font family with them in the shorthand. */
+	font-size: 2.1875em; /* 35px/16px */
+	line-height: 1.19318; /* I left this out of book just to keep example simple */
+}
+ 
+h2 {
+	background-color: #eaebef;
+	color: #7d717c;
+	font-size: 1.75em; /* 28px/16px */
+}
+
+p {
+	text-align: justify;
+	/*
+	输入 justify 让文本两端对齐。
+	提 示 如果选择让文本两端对齐，要注意单 词间距和字母间距有可能受到严重的影响。
+	为了让短语内容元素中的文 字对齐，区别于周边的文本，必须先将它们 默认的display: inline;样式改为display: block;
+	或display: inline-block;(前者会 让它们像段落一样显示为单独的行)，然后 再设置相应的 text-align 值。
+	对于设置了 display: inline-block;的元素，需要设置一 定的宽度才能看到对齐效果。
+	 */
+}
+
+em,
+a:link,
+.intro .subhead {
+	font-weight: bold;
+}
+
+.architect {
+	background: #fff;
+	padding: 1.5em 1.75em;
+}
+
+.intro {
+	background-color: #686a63;
+	color: #fff;
+	line-height: 1.45;
+	padding: 1px 1.875em .7em;
+}
+
+.intro .subhead {
+	font-size: 1.125em; /* 18px/16px */
+	text-align: center;
+}
+
+.intro p {
+	font-size: 1.0625em; /* 17px/16px */
+}
+
+.project p {
+	text-indent: 2em;
+	
+	/* Can't combine these into
+	font shorthand unless you include 
+	font family with them in the shorthand. */
+	font-size: .9375em; /* 15px/16px */
+	line-height: 1.65;
+}
+
+/* text-align works on images, too. The following rule 
+centers the images that appear below the h2s. */
+.photos {
+	text-align: center;
+}
+
+/* :::: Links :::: */
+a:link {
+	color: #e10000;
+}
+
+a:visited {
+	color: #b44f4f;
+}
+
+a:hover {
+	color: #f00;
+}
+
+.intro a {
+	color: #fdb09d;
+}
+
+.intro a:hover {
+	color: #fec4b6;
+}

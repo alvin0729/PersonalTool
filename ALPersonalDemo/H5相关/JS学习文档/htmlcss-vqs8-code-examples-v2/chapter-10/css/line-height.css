@@ -1,0 +1,53 @@
+body {
+	font-family: Geneva, Tahoma, Verdana, sans-serif;
+	font-size: 100%;
+}
+ 	
+h1,
+h2 {
+	font-family: "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
+	font-weight: normal;
+}
+
+h1 {
+	font-size: 2.1875em; /* 35px/16px */
+	line-height: 1.19318; /* I left this out of book just to keep example simple */
+}
+ 
+h2 {
+	font-size: 1.75em; /* 28px/16px */
+}
+
+em,
+a:link,
+.intro .subhead {
+	font-weight: bold;
+}
+
+.intro {
+	line-height: 1.45;
+}
+
+.intro .subhead {
+	font-size: 1.125em; /* 18px/16px */
+}
+
+.intro p {
+	font-size: 1.0625em; /* 17px/16px */
+}
+
+.project p {
+	font-size: .9375em; /* 15px/16px */
+	line-height: 1.65; /* 15px x 1.65 = 24.75px */
+}
+
+/*
+输入n，这里的n 是一个数字，它与元素的字体大小相乘，得出需要的行高。(这是最为常用的方法，即一个没有单位的数字。)
+或者输入a，这里的a 是以 em、像素或 磅(仅在打印样式表中使用磅)为单位的值。
+或者输入p%，这里的p%是字体大小的百分数。
+
+ */
+
+
+
+

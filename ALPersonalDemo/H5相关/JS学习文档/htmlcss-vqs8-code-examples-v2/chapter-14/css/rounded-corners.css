@@ -1,0 +1,39 @@
+div {
+	background: #999;
+	float: left;
+	height: 150px;
+	margin: 10px;
+	width: 150px;
+}
+
+.all-corners {
+	-webkit-border-radius: 20px;
+	border-radius: 20px;
+}
+
+.one-corner {
+	-webkit-border-top-left-radius: 75px;
+	border-top-left-radius: 75px;
+}
+
+.elliptical-corners {
+	-webkit-border-radius: 50px / 20px;
+	border-radius: 50px / 20px;
+}
+
+.circle {
+	-webkit-border-radius: 50%;
+	border-radius: 50%;
+}
+
+/*
+提 示 不支持 border-radius 的旧的浏览器仅会以方角呈现元素。
+
+提 示 border-radius 仅影响施加该样式的元素的角，不会影响其子元素的角。因此，如果一个子元素有背௿，该背௿就有可能显
+示在一个或多个父元素的角的位置，从而影响圆角样式。提 示 border-radius 仅影响施加该样式的元素的角，不会影响其子元素的角。因此，
+如果一个子元素有背௿，该背௿就有可能显示在一个或多个父元素的角的位置，从而影响圆角样式。
+
+提 示 有时元素的背௿（这里讲的不是子元素的背௿）会透过其圆角。为了避免这种情况，可以在元素的 border-radius 声明后面增加一条样式规则：background-clip: padding-box;。
+
+提 示 border-radius 属性不是继承的。
+ */

@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Marking up Code</title>
+</head>
+<body>
+
+<p>The <code>showPhoto()</code> function displays the full-size photo of the thumbnail in our <code>&lt;ul id="thumbnails"&gt;</code> carousel list.</p>
+
+<p>This CSS shorthand example applies a margin to all sides of paragraphs: <code>p { margin: 1.25em; }</code>. Take a look at <code>base.css</code> to see more examples.</p>
+		
+</body>
+</html>
+<!--
+code 元素表示其中的文本是代码或文件名。如果你的代码需要显示 < 或 >，应分别使用 &lt; 和 &gt;。这里第二个 code 示例演示了这一
+点。如果真的用了 < 和 >，浏览器会将这些代码当做 HTML 元素处理，而不是当做文本处理
+
+要显示单独的一块代码（位于句子以外），可以用 pre元素包住 code 元素以维持其格式
+
+kbd、samp和var元素极少使用，不过你可能会在内容中用到它们。下面对它们作简要说明。
+◎ kbd 元素
+使用 kbd 标记用户输入指示。
+<p>To log into the demo:</p>
+<ol>
+ <li>Type <kbd>tryDemo</kbd> in the User Name field</li>
+ <li><kbd>TAB</kbd> to the Password field and type <kbd>demoPass</kbd></li>
+ <li>Hit <kbd>RETURN</kbd> or <kbd>ENTER</kbd></li>
+</ol>
+与 code 一样，kbd 默认以等宽字体显示。
+
+◎ samp 元素
+samp 元素用于指示程序或系统的示例输出。
+ <p>Once the payment went through, the site returned a message reading,<samp>Thanks
+➝ for your order!</samp></p>
+samp 也默认以等宽字体显示。
+◎ var 元素
+var 元素表示变量或占位符的值。
+<p>Einstein is best known for <var>E</var>=<var>m</var><var>c</var><sup>2</sup>.</p>
+var也可以作为内容中占位符的值，例如，在填词游戏的答题纸上可以放入<var>adjective
+</var>, <var>verb</var>。
+var 默认以斜体显示。
+需要注意的是，可以在 HTML5 页面中使用 math 等 MathML 元素表示高级的数学相关的标
+记。更多信息参见 http://dev.w3.org/html5/spec-author-view/mathml.html。
+-->

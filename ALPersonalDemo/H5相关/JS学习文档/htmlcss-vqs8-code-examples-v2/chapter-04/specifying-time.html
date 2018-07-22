@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Specifying Time</title>
+</head>
+<body>
+<p>The train arrives at <time>08:45</time> and <time>16:20</time> on <time>2017-03-19</time>.</p>
+ 
+<p>They made their dinner reservation for <time datetime="2013-11-20T18:30:00">tonight at 6:30</time>.</p>
+ 
+<p>We began our descent from the peak of Everest on <time datetime="1952-06-12T11:05:00">June 12, 1952 at 11:05 a.m.</time></p>
+
+<p>The film festival is <time datetime="2014-07-13">July 13</time>-<time datetime="2014-07-16">16</time>.</p>
+
+<!-- Example with no year -->
+<p>Her birthday is <time datetime="03-29">March 29th</time>.</p>
+
+<!-- Example of durations -->
+<p>The meeting lasted <time>2h 41m 3s</time> instead of the scheduled <time datetime="2h 30m">two hours and thirty minutes</time>.</p>
+</body> 
+</html>
+<!--
+time 元素最简单的用法是不包含 datetime 属性。在忽略 datetime 属性的情况下，它们的确提供了具备有效的机器可读格式的时间和日期。在其余的例子中，由于提供了datetime 属性，time 标签中的文本并未严格使用有效的格式
+
+如果忽略 datetime 属性，文本内容就必须是合法的日期或时间格式。也就是说，图 4.7.1 中的第一个例子不能写成
+<p>Thetrain arrives at <time>8:45 a.m.</time>and <time>4:20 p.m.</time> on <time>April 20th, 2015</time>.</p>，
+因为这三处 time文本的格式都不正确。不过，如果包含了datetime，文本内容就可以按你希望的任何形式表示日期、时间或时间段了
+
+datetime 属性不会单独产生任何效果，但它可以用于在 Web 应用（如日历应用）之间同步日期和时间。这就是必须使用标准的机器可读格式的原因，这样，程序之间就可以使用相同的“语言”来共享信息。
+
+不能在 time 元素中嵌套另一个 time元素，也不能在没有 datetime 属性的 time 元素中包含其他元素（只能包含文本）。
+
+理解有效的时间格式:
+YYYY-MM-DDThh:mm:ss
+表示时间段nh nm ns
+全球日期和时间及时差
+在末尾加上字母 Z，就成了 UTC（Coordinated Universal Time，全球标准时间）。UTC 是主要的全球时间标准。
+也可以通过相对UTC时差的方式表示时间。这时不写字母Z，写上–（减）或+（加）及时差即可。
+例如（含相对 UTC 时差的世界时）：1985-11-03T17:19:10-03:30
+-->

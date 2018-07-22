@@ -1,0 +1,62 @@
+body {
+    font-family: 'PTSans', sans-serif;
+    font-size: 100%;
+    line-height: 1.25;
+}
+
+em {
+    font-weight: bold;
+}
+
+/* Regular text */
+@font-face {
+    font-family: 'PTSans';
+    src: url('PTS55F-webfont.eot');
+    src: url('PTS55F-webfont.eot?#iefix') format('embedded-opentype'),
+         url('PTS55F-webfont.woff') format('woff'),
+         url('PTS55F-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Italic text */
+@font-face {
+    font-family: 'PTSans';
+    src: url('PTS56F-webfont.eot');
+    src: url('PTS56F-webfont.eot?#iefix') format('embedded-opentype'),
+         url('PTS56F-webfont.woff') format('woff'),
+         url('PTS56F-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+/* Bold text */
+@font-face {
+    font-family: 'PTSans';
+    src: url('PTS75F-webfont.eot');
+    src: url('PTS75F-webfont.eot?#iefix') format('embedded-opentype'),
+         url('PTS75F-webfont.woff') format('woff'),
+         url('PTS75F-webfont.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+/* Bold Italic text */
+@font-face {
+    font-family: 'PTSans';
+    src: url('PTS76F-webfont.eot');
+    src: url('PTS76F-webfont.eot?#iefix') format('embedded-opentype'),
+         url('PTS76F-webfont.woff') format('woff'),
+         url('PTS76F-webfont.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+}
+
+/*
+font-family: 这个名称可以使用你选择的任何名称。除了可以使用 pt_sansregular 以 外，你还可以选择 Banana 或The Best Font Ever，具体情况取决于个人。
+如果你想进一步深入研究，了解这样显示的原理，我向你推荐 EthanDunham 发表在 Fontspring 上 的 博 文，
+参 见www.fontspring.com/blog/further-hardening-ofthe-bulletproof-syntax。
+
+
+
+ */

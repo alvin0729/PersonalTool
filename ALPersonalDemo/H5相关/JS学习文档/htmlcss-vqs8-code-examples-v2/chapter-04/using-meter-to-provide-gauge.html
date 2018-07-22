@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Providing a Gauge with meter</title>
+</head>
+<body>
+
+<p>Project completion status: <meter value="0.80">80% completed</meter></p>
+
+<p>Car brake pad wear: <meter low="0.25" high="0.75" optimum="0" value="0.21">21% worn</meter></p>
+
+<p>Miles walked during half-marathon: <meter min="0" max="13.1" value="5.5" title="Miles">4.5</meter></p>
+
+</body>
+</html>
+
+<!--
+支持 meter 的浏览器（如 Firefox）会自
+动显示测量值，并根据属性值进行着色。<meter>
+和 </meter> 之间的文字不会显示出来。如最后一
+个例子所示，如果包含 title 文本，就会在鼠标悬
+停在横条上时显示出来
+
+meter 支持好几个属性。value 是其中
+唯一必需包含的属性。如果不指定 min（最小
+值）和 max（最大值），则默认将它们分别设
+为 0 和 1.0。low、high 和 optimum 属性通常
+共同作用，它们将范围划分为低、中、高三
+个区间。optimum 代表范围内的最优位置，如
+上文例子中的“0 brake pad wear”。如果 low
+和 high 的值均不是最优的，可以将 optimum
+设为它们之间的值。
+
+已经有人试过针对支持 meter 的浏览
+器和不支持的浏览器统一编写 meter 的 CSS。
+在网上搜索“style HTML5 meter with CSS”（用
+CSS 为 HTML5 的 meter 添加样式），就可以
+找到一些解决方案（注意其中的一些用到了
+JavaScript）。
+
+meter 并不用于标记没有范围的௾通
+测量值，如高度、宽度、距离、周长等。例
+如，这种写法是不正确的：<p>I walked <meter
+value="4.5">4.5</meter> miles yesterday.</p>。
+-->

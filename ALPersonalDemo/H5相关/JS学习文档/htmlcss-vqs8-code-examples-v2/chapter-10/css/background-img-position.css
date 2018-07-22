@@ -1,0 +1,42 @@
+body {
+	background: #004 url(../img/ufo.png) no-repeat 170px 20px;
+	/* The shorthand above is the same as writing these individually:
+		background-color: #004;
+		background-image: url(../img/ufo.png);
+		background-repeat: no-repeat;
+		background-position: 170px 20px;
+		输入background-position_x y_，其中x 和 y 可以表示为距离左上角的绝对距离或百 分数，如图 10.10.16 所示，
+		如 20px 147px(允 许负值)。也可以用 left(左对齐)、center(居 中)或right(右对齐)表示x，用top(顶 端对齐)、center(居中)或 bottom(底端对齐) 表示y，如图 10.10.13 所示。
+		如果两个值都使 用关键字表示，那么两者的顺序无关紧要， 如 top right 跟 right top 一样。
+
+		提 示 默认情况下，元素的背 会填充其 内容和内边距所在的区域(如图 10.10.5 和 图 10.10.6 所示)，并延伸到边框的边缘(参 见 11.5 节)。
+		可以通过 background-clip 改变 这种规则(参见补充材料“更多 CSS3 的背  控制”)。
+
+		提 示 在 CSS3 中，background-attachment 还可以设置成 local。Lea Verou 的一篇文章
+		演示了该属性值的效果(参见 http://lea.verou. me/2012/04/background-attachment-local/)
+
+
+	*/
+
+	color: greenyellow;
+	font: 1.1em sans-serif;
+	padding: .25em 0 1em 1em;
+}
+
+/*
+更多 CSS3 的背景控制
+CSS3 提供了更多的背 效果。本书将在第 14 章介绍渐变背 和多重背 。
+background-clip 和 background-origin 两个属性分别控制元素背 显示的范围和开始的 位置。
+这两个属性都接受相同的值:content-box 包含内容，padding-box 包含内容和内边距， border-box 包含内容、内边距和边框(参见 11.5 节)。
+background-clip 的默认值为 border- box，而 background-origin 的默认值则为 padding-box。更多信息参见 http://css-tricks.com/ transparent-borders-with-background-clip/。
+background-size 属性可以通过以下属性值控制背 图像的显示尺寸。
+ contain:在显示图像完整宽度和高度的情况下，尽可能地扩大图像的尺寸。使用该值，
+背 图像可能不会填充整个背 区域。
+ cover:在填充元素整个背 区域的情况下，让图像尽可能地小。使用该值，图像的
+一部分可能会超出元素的范围，因而不可见。 一个长度、百分数或auto:如background-size: 250px 400px;或background-size:
+50% 50%;。
+关于该属性的更多信息参见 www.css3.info/background-size/。该属性擅长巧用 sprite(参
+见 12.5 节)。
+大多数关于新的背 样式的讨论都可以在 www.sitepoint.com/new-properties-and-values-
+inbackgrounds-with-css3/ 找到。
+ */

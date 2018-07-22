@@ -1,15 +1,22 @@
 {\rtf1\ansi\ansicpg936\cocoartf1504\cocoasubrtf830
 {\fonttbl\f0\fnil\fcharset0 LucidaGrande;\f1\fmodern\fcharset0 Courier;\f2\fmodern\fcharset0 Courier-Bold;
 \f3\fswiss\fcharset0 Helvetica;\f4\fnil\fcharset0 LucidaGrande-Bold;\f5\fnil\fcharset0 Menlo-Regular;
+\f6\fnil\fcharset0 Consolas;\f7\fswiss\fcharset0 ArialMT;\f8\fnil\fcharset134 PingFangSC-Regular;
 }
 {\colortbl;\red255\green255\blue255;\red255\green255\blue255;\red46\green58\blue89;\red83\green83\blue83;
 \red238\green242\blue247;\red187\green196\blue203;\red39\green78\blue192;\red92\green38\blue153;\red0\green0\blue0;
 \red46\green13\blue110;\red63\green110\blue116;\red0\green116\blue0;\red28\green0\blue207;\red170\green13\blue145;
-\red38\green71\blue75;\red196\green26\blue22;}
+\red38\green71\blue75;\red196\green26\blue22;\red255\green255\blue255;\red100\green56\blue32;\red37\green127\blue159;
+\red235\green236\blue237;\red36\green38\blue41;\red104\green26\blue29;\red43\green39\blue19;\red38\green38\blue38;
+\red255\green255\blue255;\red143\green140\blue45;\red0\green0\blue0;\red15\green114\blue1;\red0\green0\blue255;
+\red44\green44\blue44;}
 {\*\expandedcolortbl;;\cssrgb\c100000\c100000\c100000;\cssrgb\c23529\c29804\c42353;\cssrgb\c40000\c40000\c40000;
 \cssrgb\c94510\c96078\c97647;\cssrgb\c78039\c81176\c83529;\cssrgb\c20000\c40000\c80000;\csgenericrgb\c35900\c14900\c60100;\csgenericrgb\c0\c0\c0;
 \csgenericrgb\c18100\c5200\c43100;\csgenericrgb\c24700\c43100\c45600;\csgenericrgb\c0\c45600\c0;\csgenericrgb\c11000\c0\c81000;\csgenericrgb\c66500\c5200\c56900;
-\csgenericrgb\c14900\c27800\c29400;\csgenericrgb\c77000\c10200\c8600;}
+\csgenericrgb\c14900\c27800\c29400;\csgenericrgb\c77000\c10200\c8600;\csgenericrgb\c100000\c100000\c100000;\csgenericrgb\c39100\c22000\c12500;\cssrgb\c16863\c56863\c68627;
+\cssrgb\c93725\c94118\c94510;\cssrgb\c18824\c20000\c21176;\cssrgb\c49020\c15294\c15294;\cssrgb\c22353\c20000\c9412;\cssrgb\c20000\c20000\c20000;
+\cssrgb\c100000\c100000\c100000;\cssrgb\c62745\c61176\c23137;\cssrgb\c0\c0\c0;\cssrgb\c0\c50980\c0;\cssrgb\c0\c0\c100000;
+\cssrgb\c22745\c22745\c22745;}
 {\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid1\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid1}}
 {\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}}
 \margl1440\margr1440\vieww9000\viewh8400\viewkind0
@@ -1953,21 +1960,476 @@ BNF Definition of Cocoa Predicates\cb1 \
 \cf0 \
 \
 \
+\pard\tx692\pardeftab692\pardirnatural\partightenfactor0
+
+\f5\fs28 \cf8 \cb17 NSMutableAttributedString\cf9  *contentAttributeStr = [[\cf8 NSMutableAttributedString\cf9  \cf10 alloc\cf9 ] \cf10 initWithString\cf9 :[\cf8 NSString\cf9  \cf10 stringWithFormat\cf9 :\cf16 @"%@"\cf9 ,searchPeopleModel.\cf11 nickName\cf9 ]];
+\f3\fs24 \cf0 \
+
+\f5\fs28 \cf9         [contentAttributeStr \cf10 setAttributes\cf9 :\cf13 @\{\cf8 NSForegroundColorAttributeName\cf9  : \cf18 UIColorHex\cf9 (\cf13 0x313131\cf9 ), \cf8 NSFontAttributeName\cf9  : \cf18 DDFONT\cf9 (\cf18 kRELATIVE_W\cf9 (\cf13 19\cf9 ))\cf13 \}\cf9  \cf10 range\cf9 :\cf10 NSMakeRange\cf9 (\cf13 0\cf9 , contentAttributeStr.\cf8 length\cf9 )];
+\f3\fs24 \cf0 \
+
+\f5\fs28 \cf9         
+\f3\fs24 \cf0 \
+
+\f5\fs28 \cf9         \cf8 NSRegularExpression\cf9  *regex = [\cf8 NSRegularExpression\cf9  \cf10 regularExpressionWithPattern\cf9 :[\cf11 WWGlobalSet\cf9  \cf15 globalSet\cf9 ].\cf11 searchNickname\cf9  \cf10 options\cf9 :\cf10 NSRegularExpressionCaseInsensitive\cf9  \cf10 error\cf9 :\cf14 nil\cf9 ];
+\f3\fs24 \cf0 \
+
+\f5\fs28 \cf9         
+\f3\fs24 \cf0 \
+
+\f5\fs28 \cf9         [regex \cf10 enumerateMatchesInString\cf9 :searchPeopleModel.\cf11 nickName\cf9  \cf10 options\cf9 :\cf10 NSMatchingReportCompletion\cf9  \cf10 range\cf9 :\cf10 NSMakeRange\cf9 (\cf13 0\cf9 , searchPeopleModel.\cf11 nickName\cf9 .\cf8 length\cf9 ) \cf10 usingBlock\cf9 :^(\cf8 NSTextCheckingResult\cf9  * \cf14 _Nullable\cf9  result, \cf8 NSMatchingFlags\cf9  flags, \cf14 BOOL\cf9  * \cf14 _Nonnull\cf9  stop) \{
+\f3\fs24 \cf0 \
+
+\f5\fs28 \cf9             [contentAttributeStr \cf10 setAttributes\cf9 :\cf13 @\{\cf8 NSForegroundColorAttributeName\cf9  : \cf18 UIColorHex\cf9 (\cf13 0xF84E4F\cf9 )\cf13 \}\cf9  \cf10 range\cf9 :result.\cf8 range\cf9 ];
+\f3\fs24 \cf0 \
+
+\f5\fs28 \cf9             \cf14 self\cf9 .\cf11 nickNameLabel\cf9 .\cf8 attributedText\cf9  = contentAttributeStr;
+\f3\fs24 \cf0 \
+
+\f5\fs28 \cf9         \}];\
+\
+
+\f3\fs24 \cf0 \cb1 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab720\pardirnatural\partightenfactor0
+\cf0 \
+\pard\tx692\pardeftab692\pardirnatural\partightenfactor0
+
+\f5\fs28 \cf8 \cb17 NSPredicate\cf9  *predicate2 = [\cf8 NSPredicate\cf9  \cf10 predicateWithFormat\cf9 :\cf16 @"%K == 4 OR %K == 5"\cf9 , \cf16 @"msgSendType"\cf9 , \cf16 @"msgSendType"\cf9 ];
+\f3\fs24 \cf0 \
+
+\f5\fs28 \cf8 NSArray\cf9  *ret2 = [\cf14 self\cf9 .\cf11 dynamicMessageList\cf9  \cf10 filteredArrayUsingPredicate\cf9 :predicate2];\
 \
 \
 \
+\pard\pardeftab720\sl300\partightenfactor0
+
+\f6\fs26 \cf19 \cb20 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec19 NSString\cf21 \strokec21  *someText = @\cf22 \strokec22 "some text"\cf21 \strokec21 ;\
+\cf19 \strokec19 NSPredicate\cf21 \strokec21  *predicate = [\cf19 \strokec19 NSPredicate\cf21 \strokec21  predicateWithFormat:\
+         @\cf22 \strokec22 "(field1 CONTAINS[cd] $someText) OR (field2 CONTAINS[cd] $someText)"\cf21 \strokec21 ]];\
+\cf19 \strokec19 NSDictionary\cf21 \strokec21  *varSub = [\cf19 \strokec19 NSDictionary\cf21 \strokec21  dictionaryWithObject:someText forKey:@\cf22 \strokec22 "someText"\cf21 \strokec21 ];\
+\cf19 \strokec19 NSPredicate\cf21 \strokec21  *filterPredicate = [predicate predicateWithSubstitutionVariables:varSub];\cf23 \strokec23 \
+\pard\tx692\pardeftab692\pardirnatural\partightenfactor0
+
+\f3\fs24 \cf0 \cb1 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab720\pardirnatural\partightenfactor0
+\cf0 \
 \
+\pard\pardeftab720\sl560\partightenfactor0
+
+\f7\b\fs48 \cf24 \cb25 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec24 NSPredicate 
+\f8 \'b9\'fd\'c2\'cb\'b5\'f4\'bf\'d5\'d6\'b5XXXX
+\f3\b0\fs24 \cf0 \cb1 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 \
+\pard\pardeftab720\sl300\partightenfactor0
+
+\f7\fs26 \cf26 \cb25 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec26 [NSPredicate 
+\f5\fs28 \cf10 \cb17 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 predicateWithFormat
+\f7\fs26 \cf26 \cb25 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec26 :@" fomat <> %@", @""] 
+\f8 \'a3\'bb
+\f7 \cf24 \strokec24 \'a0
+\f8 \'be\'cd\'bf\'c9\'d2\'d4\'b9\'fd\'c2\'cb\'b5\'f4
+\f7 nil
+\f8 \'a3\'ac
+\f7  @\'94\'93 
+\f8 \'a3\'ac\'ba\'cd
+\f7  
+\f8 \'bf\'d5\'a3\'bb\
+\pard\tx692\pardeftab692\pardirnatural\partightenfactor0
+
+\f3\fs24 \cf0 \cb1 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab720\pardirnatural\partightenfactor0
+\cf0 \
 \
+\pard\tx692\pardeftab692\pardirnatural\partightenfactor0
+
+\f5\fs28 \cf18 \cb17 #pragma mark - UISearchResultsUpdating  (which you use ,which you choose!!)
+\f3\fs24 \cf0 \
+\pard\tx692\pardeftab692\pardirnatural\partightenfactor0
+
+\f5\fs28 \cf12 // Called when the search bar's text or scope has changed or when the search bar becomes first responder.
+\f3\fs24 \cf0 \
+\pard\tx692\pardeftab692\pardirnatural\partightenfactor0
+
+\f5\fs28 \cf9 - (\cf14 void\cf9 )updateSearchResultsForSearchController:(\cf8 UISearchController\cf9  *)searchController
+\f3\fs24 \cf0 \
+
+\f5\fs28 \cf9 \{
+\f3\fs24 \cf0 \
+
+\f5\fs28 \cf9     \cf12 // update the filtered array based on the search text
+\f3\fs24 \cf0 \
+
+\f5\fs28 \cf9     \cf8 NSString\cf9  *searchText = searchController.\cf8 searchBar\cf9 .\cf8 text\cf9 ;
+\f3\fs24 \cf0 \
+
+\f5\fs28 \cf9     \cf8 NSMutableArray\cf9  *searchResults = [\cf14 self\cf9 .\cf11 models\cf9  \cf10 mutableCopy\cf9 ];
+\f3\fs24 \cf0 \
+
+\f5\fs28 \cf9     
+\f3\fs24 \cf0 \
+
+\f5\fs28 \cf9     \cf12 // strip out all the leading and trailing spaces
+\f3\fs24 \cf0 \
+
+\f5\fs28 \cf9     \cf8 NSString\cf9  *strippedString = [searchText \cf10 stringByTrimmingCharactersInSet\cf9 :[\cf8 NSCharacterSet\cf9  \cf10 whitespaceCharacterSet\cf9 ]];
+\f3\fs24 \cf0 \
+
+\f5\fs28 \cf9     
+\f3\fs24 \cf0 \
+
+\f5\fs28 \cf9     \cf12 // break up the search terms (separated by spaces)
+\f3\fs24 \cf0 \
+
+\f5\fs28 \cf9     \cf8 NSArray\cf9  *searchItems = \cf14 nil\cf9 ;
+\f3\fs24 \cf0 \
+
+\f5\fs28 \cf9     \cf14 if\cf9  (strippedString.\cf8 length\cf9  > \cf13 0\cf9 ) \{
+\f3\fs24 \cf0 \
+
+\f5\fs28 \cf9         searchItems = [strippedString \cf10 componentsSeparatedByString\cf9 :\cf16 @" "\cf9 ];
+\f3\fs24 \cf0 \
+
+\f5\fs28 \cf9     \}
+\f3\fs24 \cf0 \
+
+\f5\fs28 \cf9     
+\f3\fs24 \cf0 \
+
+\f5\fs28 \cf9     \cf12 // build all the "AND" expressions for each value in the searchString
+\f3\fs24 \cf0 \
+
+\f5\fs28 \cf9     \cf12 //
+\f3\fs24 \cf0 \
+
+\f5\fs28 \cf9     \cf8 NSMutableArray\cf9  *andMatchPredicates = [\cf8 NSMutableArray\cf9  \cf10 array\cf9 ];
+\f3\fs24 \cf0 \
+
+\f5\fs28 \cf9     
+\f3\fs24 \cf0 \
+
+\f5\fs28 \cf9     \cf14 for\cf9  (\cf8 NSString\cf9  *searchString \cf14 in\cf9  searchItems) \{
+\f3\fs24 \cf0 \
+
+\f5\fs28 \cf9         \cf12 // each searchString creates an OR predicate for: name, id
+\f3\fs24 \cf0 \
+
+\f5\fs28 \cf9         \cf12 //
+\f3\fs24 \cf0 \
+
+\f5\fs28 \cf9         \cf12 // example if searchItems contains "iphone 599 2007":
+\f3\fs24 \cf0 \
+
+\f5\fs28 \cf9         \cf12 //      name CONTAINS[c] "lanmaq"
+\f3\fs24 \cf0 \
+
+\f5\fs28 \cf9         \cf12 //      id CONTAINS[c] "1568689942"
+\f3\fs24 \cf0 \
+
+\f5\fs28 \cf9         \cf8 NSMutableArray\cf9  *searchItemsPredicate = [\cf8 NSMutableArray\cf9  \cf10 array\cf9 ];
+\f3\fs24 \cf0 \
+
+\f5\fs28 \cf9         
+\f3\fs24 \cf0 \
+
+\f5\fs28 \cf9         \cf12 // use NSExpression represent expressions in predicates.
+\f3\fs24 \cf0 \
+
+\f5\fs28 \cf9         \cf12 // NSPredicate is made up of smaller, atomic parts: two NSExpressions (a left-hand value and a right-hand value)
+\f3\fs24 \cf0 \
+
+\f5\fs28 \cf9         
+\f3\fs24 \cf0 \
+
+\f5\fs28 \cf9         \cf12 // friendName field matching
+\f3\fs24 \cf0 \
+
+\f5\fs28 \cf9         \cf8 NSExpression\cf9  *lhs = [\cf8 NSExpression\cf9  \cf10 expressionForKeyPath\cf9 :\cf16 @"friendName"\cf9 ];
+\f3\fs24 \cf0 \
+
+\f5\fs28 \cf9         \cf8 NSExpression\cf9  *rhs = [\cf8 NSExpression\cf9  \cf10 expressionForConstantValue\cf9 :searchString];
+\f3\fs24 \cf0 \
+
+\f5\fs28 \cf9         \cf8 NSPredicate\cf9  *finalPredicate = [\cf8 NSComparisonPredicate
+\f3\fs24 \cf0 \
+
+\f5\fs28 \cf9                                        \cf10 predicateWithLeftExpression\cf9 :lhs
+\f3\fs24 \cf0 \
+
+\f5\fs28 \cf9                                        \cf10 rightExpression\cf9 :rhs
+\f3\fs24 \cf0 \
+
+\f5\fs28 \cf9                                        \cf10 modifier\cf9 :\cf10 NSDirectPredicateModifier
+\f3\fs24 \cf0 \
+
+\f5\fs28 \cf9                                        \cf10 type\cf9 :\cf10 NSContainsPredicateOperatorType
+\f3\fs24 \cf0 \
+
+\f5\fs28 \cf9                                        \cf10 options\cf9 :\cf10 NSCaseInsensitivePredicateOption\cf9 ];
+\f3\fs24 \cf0 \
+
+\f5\fs28 \cf9         [searchItemsPredicate \cf10 addObject\cf9 :finalPredicate];
+\f3\fs24 \cf0 \
+
+\f5\fs28 \cf9         
+\f3\fs24 \cf0 \
+
+\f5\fs28 \cf9         \cf12 // friendId field matching
+\f3\fs24 \cf0 \
+
+\f5\fs28 \cf9         
+\f3\fs24 \cf0 \
+
+\f5\fs28 \cf9       lhs = [\cf8 NSExpression\cf9  \cf10 expressionForKeyPath\cf9 :\cf16 @"friendId"\cf9 ];
+\f3\fs24 \cf0 \
+
+\f5\fs28 \cf9       rhs = [\cf8 NSExpression\cf9  \cf10 expressionForConstantValue\cf9 :searchString];
+\f3\fs24 \cf0 \
+
+\f5\fs28 \cf9       finalPredicate = [\cf8 NSComparisonPredicate
+\f3\fs24 \cf0 \
+
+\f5\fs28 \cf9                                        \cf10 predicateWithLeftExpression\cf9 :lhs
+\f3\fs24 \cf0 \
+
+\f5\fs28 \cf9                                        \cf10 rightExpression\cf9 :rhs
+\f3\fs24 \cf0 \
+
+\f5\fs28 \cf9                                        \cf10 modifier\cf9 :\cf10 NSDirectPredicateModifier
+\f3\fs24 \cf0 \
+
+\f5\fs28 \cf9                                        \cf10 type\cf9 :\cf10 NSContainsPredicateOperatorType
+\f3\fs24 \cf0 \
+
+\f5\fs28 \cf9                                        \cf10 options\cf9 :\cf10 NSCaseInsensitivePredicateOption\cf9 ];
+\f3\fs24 \cf0 \
+
+\f5\fs28 \cf9         [searchItemsPredicate \cf10 addObject\cf9 :finalPredicate];
+\f3\fs24 \cf0 \
 \
+
+\f5\fs28 \cf9  
+\f3\fs24 \cf0 \
+
+\f5\fs28 \cf9         
+\f3\fs24 \cf0 \
+
+\f5\fs28 \cf9         \cf12 // at this OR predicate to our master AND predicate
+\f3\fs24 \cf0 \
+
+\f5\fs28 \cf9         \cf8 NSCompoundPredicate\cf9  *orMatchPredicates = [\cf8 NSCompoundPredicate\cf9  \cf10 orPredicateWithSubpredicates\cf9 :searchItemsPredicate];
+\f3\fs24 \cf0 \
+
+\f5\fs28 \cf9         [andMatchPredicates \cf10 addObject\cf9 :orMatchPredicates];
+\f3\fs24 \cf0 \
+
+\f5\fs28 \cf9     \}
+\f3\fs24 \cf0 \
+
+\f5\fs28 \cf9     
+\f3\fs24 \cf0 \
+
+\f5\fs28 \cf9     \cf12 // match up the fields of the Product object
+\f3\fs24 \cf0 \
+
+\f5\fs28 \cf9     \cf8 NSCompoundPredicate\cf9  *finalCompoundPredicate =
+\f3\fs24 \cf0 \
+
+\f5\fs28 \cf9     [\cf8 NSCompoundPredicate\cf9  \cf10 andPredicateWithSubpredicates\cf9 :andMatchPredicates];
+\f3\fs24 \cf0 \
+
+\f5\fs28 \cf9     searchResults = [[searchResults \cf10 filteredArrayUsingPredicate\cf9 :finalCompoundPredicate] \cf10 mutableCopy\cf9 ];
+\f3\fs24 \cf0 \
+
+\f5\fs28 \cf9     
+\f3\fs24 \cf0 \
+
+\f5\fs28 \cf9     \cf12 // hand over the filtered results to our search results table
+\f3\fs24 \cf0 \
+
+\f5\fs28 \cf9     \cf11 SearchResultTableViewController\cf9  *tableController = (\cf11 SearchResultTableViewController\cf9  *)\cf14 self\cf9 .\cf11 searchController\cf9 .\cf8 searchResultsController\cf9 ;
+\f3\fs24 \cf0 \
+
+\f5\fs28 \cf9     tableController.\cf11 filteredModels\cf9  = searchResults;
+\f3\fs24 \cf0 \
+
+\f5\fs28 \cf9     [tableController.\cf8 tableView\cf9  \cf10 reloadData\cf9 ];
+\f3\fs24 \cf0 \
 \
+
+\f5\fs28 \cf9 \}
+\f3\fs24 \cf0 \cb1 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab720\pardirnatural\partightenfactor0
+\cf0 \
 \
+\pard\pardeftab720\sl560\partightenfactor0
+
+\f8\b\fs48 \cf24 \cb2 \expnd0\expndtw0\kerning0
+XXXX
+\f3\b0\fs24 \cf0 \cb1 \kerning1\expnd0\expndtw0 \
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
+\clvertalt\clvertalbase \clshdrawnil \clwWidth17920\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadl0 \clpadr0 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sl352\partightenfactor0
+
+\f6\fs32 \cf27 \cb25 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec27 NSMutableArray\'a0*arrayM\'a0=\'a0[@[@20,\'a0@40,\'a0@50,\'a0@30,\'a0@60,\'a0@70]\'a0mutableCopy];\
+\'a0\'a0\'a0\'a0\cf28 \strokec28 //\'a0\'a0
+\f8 \'b9\'fd\'c2\'cb\'b4\'f3\'d3\'da
+\f6 50
+\f8 \'b5\'c4\'d6\'b5
+\f6 \cf27 \strokec27 \
+\'a0\'a0\'a0\'a0NSPredicate\'a0*pred1\'a0=\'a0[NSPredicate\'a0predicateWithFormat:@\cf29 \strokec29 "SELF\'a0>\'a050"\cf27 \strokec27 ];\
+\'a0\'a0\'a0\'a0[arrayM\'a0filterUsingPredicate:pred1];\
+\'a0\'a0\'a0\'a0NSLog(@\cf29 \strokec29 "arrayM:%@"\cf27 \strokec27 ,\'a0arrayM);\
+\'a0\'a0\'a0\'a0NSArray\'a0*array\'a0=\'a0@[[ZLPersonModel\'a0personWithName:@\cf29 \strokec29 "Jack"\cf27 \strokec27 \'a0age:20\'a0sex:ZLPersonSexMale],\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0[ZLPersonModel\'a0personWithName:@\cf29 \strokec29 "Rose"\cf27 \strokec27 \'a0age:22\'a0sex:ZLPersonSexFamale],\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0[ZLPersonModel\'a0personWithName:@\cf29 \strokec29 "Jackson"\cf27 \strokec27 \'a0age:30\'a0sex:ZLPersonSexMale],\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0[ZLPersonModel\'a0personWithName:@\cf29 \strokec29 "Johnson"\cf27 \strokec27 \'a0age:35\'a0sex:ZLPersonSexMale]];\
+\'a0\'a0\'a0\'a0\cf28 \strokec28 //\'a0\'a0
+\f8 \'d2\'aa\'c7\'f3\'c8\'a1\'b3\'f6\'b0\'fc\'ba\'ac
+\f6 \'91son\'92
+\f8 \'b5\'c4\'d4\'aa\'cb\'d8
+\f6 \cf27 \strokec27 \
+\'a0\'a0\'a0\'a0NSPredicate\'a0*pred2\'a0=\'a0[NSPredicate\'a0predicateWithFormat:@\cf29 \strokec29 "name\'a0CONTAINS\'a0'son'"\cf27 \strokec27 ];\
+\'a0\'a0\'a0\'a0NSArray\'a0*newArray\'a0=\'a0[array\'a0filteredArrayUsingPredicate:pred2];\
+\'a0\'a0\'a0\'a0NSLog(@\cf29 \strokec29 "%@"\cf27 \strokec27 ,\'a0newArray);\cell \lastrow\row
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab720\pardirnatural\partightenfactor0
+
+\f3\fs24 \cf0 \cb1 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 \
 \
+\pard\pardeftab720\sl352\partightenfactor0
+
+\f6\fs32 \cf27 \cb25 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec27 NSArray\'a0*array\'a0=\'a0@[[ZLPersonModel\'a0personWithName:@\cf29 \strokec29 "Jack"\cf30 \strokec30 \'a0\cf27 \strokec27 age:20\'a0sex:ZLPersonSexMale],\cf30 \strokec30 \
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf27 \strokec27 [ZLPersonModel\'a0personWithName:@\cf29 \strokec29 "Rose"\cf30 \strokec30 \'a0\cf27 \strokec27 age:22\'a0sex:ZLPersonSexFamale],\cf30 \strokec30 \
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf27 \strokec27 [ZLPersonModel\'a0personWithName:@\cf29 \strokec29 "Jackson"\cf30 \strokec30 \'a0\cf27 \strokec27 age:30\'a0sex:ZLPersonSexMale],\cf30 \strokec30 \
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf27 \strokec27 [ZLPersonModel\'a0personWithName:@\cf29 \strokec29 "Johnson"\cf30 \strokec30 \'a0\cf27 \strokec27 age:35\'a0sex:ZLPersonSexMale]];\cf30 \strokec30 \
+\'a0\'a0\cf28 \strokec28 //\'a0\'a0
+\f8 \'b6\'a8\'d2\'e5\'d2\'bb\'b8\'f6
+\f6 property
+\f8 \'c0\'b4\'b4\'e6\'b7\'c5\'ca\'f4\'d0\'d4\'c3\'fb\'a3\'ac\'b6\'a8\'d2\'e5\'d2\'bb\'b8\'f6
+\f6 value
+\f8 \'c0\'b4\'b4\'e6\'b7\'c5\'d6\'b5
+\f6 \cf30 \strokec30 \
+\'a0\'a0\cf27 \strokec27 NSString\'a0*property\'a0=\'a0@\cf29 \strokec29 "name"\cf27 \strokec27 ;\cf30 \strokec30 \
+\'a0\'a0\cf27 \strokec27 NSString\'a0*value\'a0=\'a0@\cf29 \strokec29 "Jack"\cf27 \strokec27 ;\cf30 \strokec30 \
+\'a0\'a0\cf28 \strokec28 //\'a0\'a0
+\f8 \'b8\'c3\'ce\'bd\'b4\'ca\'b5\'c4\'d7\'f7\'d3\'c3\'ca\'c7\'c8\'e7\'b9\'fb\'d4\'aa\'cb\'d8\'d6\'d0
+\f6 property
+\f8 \'ca\'f4\'d0\'d4\'ba\'ac\'d3\'d0\'d6\'b5
+\f6 value
+\f8 \'ca\'b1\'be\'cd\'c8\'a1\'b3\'f6\'b7\'c5\'c8\'eb\'d0\'c2\'b5\'c4\'ca\'fd\'d7\'e9\'c4\'da\'a3\'ac\'d5\'e2\'c0\'ef\'ca\'c7
+\f6 name
+\f8 \'b0\'fc\'ba\'ac
+\f6 Jack\cf30 \strokec30 \
+\'a0\'a0\cf27 \strokec27 NSPredicate\'a0*pred\'a0=\'a0[NSPredicate\'a0predicateWithFormat:@\cf29 \strokec29 "%K\'a0CONTAINS\'a0%@"\cf27 \strokec27 ,\'a0property,\'a0value];\cf30 \strokec30 \
+\'a0\'a0\cf27 \strokec27 NSArray\'a0*newArray\'a0=\'a0[array\'a0filteredArrayUsingPredicate:pred];\cf30 \strokec30 \
+\'a0\'a0\cf27 \strokec27 NSLog(@\cf29 \strokec29 "newArray:%@"\cf27 \strokec27 ,\'a0newArray);\cf30 \strokec30 \
+\'a0\'a0\'a0\
+\'a0\'a0\cf28 \strokec28 //\'a0\'a0
+\f8 \'b4\'b4\'bd\'a8\'ce\'bd\'b4\'ca\'a3\'ac\'ca\'f4\'d0\'d4\'c3\'fb\'b8\'c4\'ce\'aa
+\f6 age
+\f8 \'a3\'ac\'d2\'aa\'c7\'f3\'d5\'e2\'b8\'f6
+\f6 age
+\f8 \'b0\'fc\'ba\'ac
+\f6 $VALUE
+\f8 \'d7\'d6\'b7\'fb\'b4\'ae
+\f6 \cf30 \strokec30 \
+\'a0\'a0\cf27 \strokec27 NSPredicate\'a0*predTemp\'a0=\'a0[NSPredicate\'a0predicateWithFormat:@\cf29 \strokec29 "%K\'a0>\'a0$VALUE"\cf27 \strokec27 ,\'a0@\cf29 \strokec29 "age"\cf27 \strokec27 ];\cf30 \strokec30 \
+\'a0\'a0\cf28 \strokec28 //\'a0
+\f8 \'d6\'b8\'b6\'a8
+\f6 $SUBSTR
+\f8 \'b5\'c4\'d6\'b5\'ce\'aa
+\f6 \'a025\'a0\'a0\'a0\'a0
+\f8 \'d5\'e2\'c0\'ef\'d7\'a2\'ca\'cd\'d6\'d0\'b5\'c4
+\f6 $SUBSTR
+\f8 \'b8\'c4\'ce\'aa
+\f6 $VALUE\cf30 \strokec30 \
+\'a0\'a0\cf27 \strokec27 NSPredicate\'a0*pred1\'a0=\'a0[predTemp\'a0predicateWithSubstitutionVariables:@\{@\cf29 \strokec29 "VALUE"\cf30 \strokec30 \'a0\cf27 \strokec27 :\'a0@25\}];\cf30 \strokec30 \
+\'a0\'a0\cf27 \strokec27 NSArray\'a0*newArray1\'a0=\'a0[array\'a0filteredArrayUsingPredicate:pred1];\cf30 \strokec30 \
+\'a0\'a0\cf27 \strokec27 NSLog(@\cf29 \strokec29 "newArray1:%@"\cf27 \strokec27 ,\'a0newArray1);\cf30 \strokec30 \
+\'a0\'a0\'a0\
+\'a0\'a0\cf28 \strokec28 //\'a0\'a0
+\f8 \'d0\'de\'b8\'c4
+\f6 \'a0$SUBSTR
+\f8 \'b5\'c4\'d6\'b5\'ce\'aa
+\f6 32
+\f8 \'a3\'ac
+\f6 \'a0\'a0
+\f8 \'d5\'e2\'c0\'ef\'d7\'a2\'ca\'cd\'d6\'d0\'b5\'c4
+\f6 SUBSTR
+\f8 \'b8\'c4\'ce\'aa
+\f6 $VALUE\cf30 \strokec30 \
+\'a0\'a0\cf27 \strokec27 NSPredicate\'a0*pred2\'a0=\'a0[predTemp\'a0predicateWithSubstitutionVariables:@\{@\cf29 \strokec29 "VALUE"\cf30 \strokec30 \'a0\cf27 \strokec27 :\'a0@32\}];\cf30 \strokec30 \
+\'a0\'a0\cf27 \strokec27 NSArray\'a0*newArray2\'a0=\'a0[array\'a0filteredArrayUsingPredicate:pred2];\cf30 \strokec30 \
+\'a0\'a0\cf27 \strokec27 NSLog(@\cf29 \strokec29 "newArray2:%@"\cf27 \strokec27 ,\'a0newArray2);\cf30 \strokec30 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab720\pardirnatural\partightenfactor0
+
+\f3\fs24 \cf0 \cb1 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 \
 \
-\
-\
-\
-\
-\
+\pard\pardeftab720\sl560\partightenfactor0
+
+\f8\b\fs48 \cf24 \cb2 \expnd0\expndtw0\kerning0
+XXXX
+\f3\b0\fs24 \cf0 \cb1 \kerning1\expnd0\expndtw0 \
+\pard\pardeftab720\sl352\partightenfactor0
+
+\f6\fs32 \cf27 \cb25 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec27 NSPredicate\'a0*predicate\'a0=\'a0[NSPredicate\'a0predicateWithFormat:@\cf29 \strokec29 "NOT\'a0(SELF\'a0IN\'a0%@)"\cf27 \strokec27 ,\'a0filterArray];\cf30 \strokec30 \
+\pard\pardeftab720\sl352\partightenfactor0
+\cf27 \cb1 \strokec27 NSPredicate\'a0*pred2\'a0=\'a0[NSPredicate\'a0predicateWithFormat:@\cf29 \strokec29 "name\'a0CONTAINS\'a0'son'"\cf27 \strokec27 ];\
+NSPredicate\'a0*predicate\'a0=\'a0[NSPredicate\'a0predicateWithFormat:@\cf29 \strokec29 "SELF\'a0>\'a02\'a0&&\'a0SELF\'a0<\'a05"\cf27 \strokec27 ];\cf30 \cb25 \strokec30 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab720\pardirnatural\partightenfactor0
+
+\f3\fs24 \cf0 \cb1 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 \
+\pard\pardeftab720\sl352\partightenfactor0
+
+\f6\fs32 \cf27 \cb25 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec27 ZLPersonModel\'a0*sunnyzl\'a0=\'a0[ZLPersonModel\'a0personWithName:@\cf29 \strokec29 "sunnyzl"\cf30 \strokec30 \'a0\cf27 \strokec27 age:29\'a0sex:ZLPersonSexMale];\cf30 \strokec30 \
+\'a0\'a0\'a0\'a0\cf27 \strokec27 ZLPersonModel\'a0*jack\'a0=\'a0[ZLPersonModel\'a0personWithName:@\cf29 \strokec29 "jack"\cf30 \strokec30 \'a0\cf27 \strokec27 age:22\'a0sex:ZLPersonSexMale];\cf30 \strokec30 \
+\'a0\'a0\'a0\'a0\cf28 \strokec28 //\'a0\'a0
+\f8 \'ca\'d7\'cf\'c8\'ce\'d2\'c3\'c7\'c0\'b4\'bf\'b4\'d2\'bb\'d0\'a9\'bc\'f2\'b5\'a5\'b5\'c4\'ca\'b9\'d3\'c3
+\f6 \cf30 \strokec30 \
+\'a0\'a0\'a0\'a0\cf28 \strokec28 //\'a0\'a01.
+\f8 \'c5\'d0\'b6\'cf\'d0\'d5\'c3\'fb\'ca\'c7\'b7\'f1\'ca\'c7\'d2\'d4
+\f6 s
+\f8 \'bf\'aa\'cd\'b7\'b5\'c4
+\f6 \cf30 \strokec30 \
+\'a0\'a0\'a0\'a0\cf27 \strokec27 NSPredicate\'a0*pred1\'a0=\'a0[NSPredicate\'a0predicateWithFormat:@\cf29 \strokec29 "name\'a0LIKE\'a0's*'"\cf27 \strokec27 ];\cf30 \strokec30 \
+\'a0\'a0\'a0\'a0\cf28 \strokec28 //\'a0\'a0
+\f8 \'ca\'e4\'b3\'f6\'ce\'aa\'a3\'ba
+\f6 sunnyzl:1,\'a0jack:0\cf30 \strokec30 \
+\'a0\'a0\'a0\'a0\cf27 \strokec27 NSLog(@\cf29 \strokec29 "sunnyzl:%d,\'a0jack:%d"\cf27 \strokec27 ,\'a0[pred1\'a0evaluateWithObject:sunnyzl],\'a0[pred1\'a0evaluateWithObject:jack]);\cf30 \strokec30 \
+\'a0\'a0\'a0\'a0\cf28 \strokec28 //\'a0\'a02.
+\f8 \'c5\'d0\'b6\'cf\'c4\'ea\'c1\'e4\'ca\'c7\'b7\'f1\'b4\'f3\'d3\'da
+\f6 25\cf30 \strokec30 \
+\'a0\'a0\'a0\'a0\cf27 \strokec27 NSPredicate\'a0*pred2\'a0=\'a0[NSPredicate\'a0predicateWithFormat:@\cf29 \strokec29 "age\'a0>\'a025"\cf27 \strokec27 ];\cf30 \strokec30 \
+\'a0\'a0\'a0\'a0\cf28 \strokec28 //\'a0\'a0
+\f8 \'ca\'e4\'b3\'f6\'ce\'aa\'a3\'ba
+\f6 sunnyzl
+\f8 \'b5\'c4\'c4\'ea\'c1\'e4\'ca\'c7\'b7\'f1\'b4\'f3\'d3\'da
+\f6 25
+\f8 \'a3\'ba
+\f6 1,\'a0jack
+\f8 \'b5\'c4\'c4\'ea\'c1\'e4\'ca\'c7\'b7\'f1\'b4\'f3\'d3\'da
+\f6 25
+\f8 \'a3\'ba
+\f6 0\cf30 \strokec30 \
+\'a0\'a0\'a0\'a0\cf27 \strokec27 NSLog(@\cf29 \strokec29 "sunnyzl
+\f8 \'b5\'c4\'c4\'ea\'c1\'e4\'ca\'c7\'b7\'f1\'b4\'f3\'d3\'da
+\f6 25
+\f8 \'a3\'ba
+\f6 %d,\'a0jack
+\f8 \'b5\'c4\'c4\'ea\'c1\'e4\'ca\'c7\'b7\'f1\'b4\'f3\'d3\'da
+\f6 25
+\f8 \'a3\'ba
+\f6 %d"\cf27 \strokec27 ,\'a0[pred2\'a0evaluateWithObject:sunnyzl],\'a0[pred2\'a0evaluateWithObject:jack]);\cf30 \strokec30 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab720\pardirnatural\partightenfactor0
+
+\f3\fs24 \cf0 \cb1 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 \
 \
 \
 \

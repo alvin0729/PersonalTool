@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>Choosing Where to Start List Numbering</title>
+	<style>
+	/* As always, place your CSS in an external file instead of embedding it. I embedded it here to simplify the demo. */
+	
+	/* :::: Not shown in book - just a little font and spacing treatment :::: */
+	body {
+		font-family: Georgia, serif;
+	}
+
+	.hdg {
+		font-size: 1.25em;
+		margin-bottom: 0;
+	}
+
+	.hdg + ol {
+		margin-top: .5em;
+	}
+	</style>
+</head>
+<body>
+
+<h1 class="hdg">Changing a light bulb (with a few steps missing)</h1>
+
+<ol start="2">
+	<li>Unscrew the old bulb.</li>
+	<li value="5">Screw in the new bulb.</li>
+	<li>Plug in the lamp and turn it on!</li>
+</ol>
+
+</body>
+</html>
+
+<!--
+1. 设置整个列表编号方案的初始值在 ol 开始标签中输入 start="n"，这里的n 表示列表的初始值。
+2. 修改有序列表中某列表项目的编号在目标 li 项目内输入 value="n"，这里的n 代表该列表项目的值。
+
+提 示 如果使用 start 和 type，请始终使用数字。即便决定使用字母或罗马数字对列表进行编号（参见 15.2 节），也应使用数字。通过 CSS 或者 type 属性会显示预期的标记。
+
+提 示 value 属性的值会覆盖 start 属 性的值。
+提 示 使用 value 属性对某列表项目的编号进行修改后，后续的列表项目也会相应地重新编号。
+提 示 如果需要在有序列表中指定两个或两个以上位置相同的项目，使用 value 是非常方便的。以表示公路赛前五名选手的列表为例，
+通常该列表会显示为 1、2、3、4、5，但如果有并列第 2 名，则可以将第三个项目写成 <livalue="2">，这时，列表将显示为1、2、2、3、4。
+
+-->
+

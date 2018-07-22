@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>WebM Video with preload="none"</title>
+</head>
+<body>
+
+<h1>WebM Video with preload="none"</h1>
+
+<video src="paddle-steamer.webm" preload="none" controls></video>
+
+</body>
+</html>
+
+
+
+<!--
+对于设置了 preload="none" 的视频，在初始化视频之前，浏览器显示视频的方式并不一样
+
+在 none 和 auto 之间有一个不错的中间值，即 preload="metadata"。这样做会让浏览器仅获取视频的基本信息，如尺寸、
+时长甚至一些关键的帧。在开始播放之前，浏览器不会显示白色的矩形，而且视频的尺寸也会与实际尺寸一致。
+
+
+
+
+-->

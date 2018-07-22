@@ -15,6 +15,7 @@
 #import "FileManagerHelper.h"
 #import <CommonCrypto/CommonDigest.h>
 #import "ALOC_Call_SwiftVC.h"
+#import "NSNull+NullSafe.h"
 
 static NSArray *titles;
 
@@ -28,8 +29,17 @@ static NSArray *titles;
 
 @implementation ViewController
 
+- (void)testNull{
+    id nullValue = [NSNull null];
+    NSString *result = [nullValue stringValue];
+    __unused float x = floorf(123.456f); // makes sure compiler doesn't trick us
+    float resultDouble = [nullValue floatValue];
+    NSLog(@"%@",result);
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self testNull];
     self.view.backgroundColor = [UIColor lightGrayColor];
     //self.title = @"ALPersonalDemo";
     //self.automaticallyAdjustsScrollViewInsets = NO;

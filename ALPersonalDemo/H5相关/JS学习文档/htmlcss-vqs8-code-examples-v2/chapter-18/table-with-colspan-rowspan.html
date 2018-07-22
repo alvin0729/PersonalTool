@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>Table with colspan and rowspan</title>
+	<link rel="stylesheet" href="css/table-with-colspan-rowspan.css" />
+</head>
+<body>
+
+<table>
+	<caption>TV Schedule</caption>
+	<thead> <!-- table head -->
+		<tr>
+			<th scope="rowgroup">Time</th>
+			<th scope="col">Mon</th>
+			<th scope="col">Tue</th>
+			<th scope="col">Wed</th>
+		</tr>
+	</thead>
+	<tbody> <!-- table body -->
+		<tr>
+			<th scope="row">8 pm</th>
+			<td>Staring Contest</td>
+			<td colspan="2">Celebrity Hoedown</td>
+		</tr>
+		<tr>
+			<th scope="row">9 pm</th>
+			<td>Hardy, Har, Har</td>
+			<td>What's for Lunch?</td>
+			<td rowspan="2">Screamfest Movie of the Weak</td>
+		</tr>
+		<tr>
+			<th scope="row">10 pm</th>
+			<td>Healers, Wheelers &amp; Dealers</td>
+			<td>It's a Crime</td>
+		</tr>
+	</tbody>	
+</table>
+
+</body>
+</html>
+
+<!--
+可以通过 colspan 和 rowspan 属性让 th或 td 跨越一个以上的列或行。对该属性指定的数值表示的是跨越的单元格的数量。
+
+注意 Time 这个 th 设置了 scope="rowgroup"，因为它是它正下方的每个行标题组的标题
+
+如果创建了一个 rowspan 等于 2 的单元格，就不需要定义下一行中该单元格对应的单元格了；如果创建了一个 rowspan 等于 3的单元格，
+就不需要定义下面两行中该单元格对应的单元格了，以此类推。
+
+提 示 表格中的每一行都应具有相同的单元格数量。跨越多列的单元格应算做多个单元格，它的 colspan 属性值为多少，就算做多少个单元格。
+
+提 示 表格中的每一列都应具有相同的单元格数量。跨越多行的单元格应算做多个单元格，它的 rowspan 属性值为多少，就算做多少个单元格。
+-->

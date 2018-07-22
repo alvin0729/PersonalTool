@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Preformatted text</title>
+</head>
+<body>
+
+<p>Add this to your style sheet if you want to display a dotted border underneath the <code>abbr</code> element whenever it has a <code>title</code> attribute.</p>
+
+<pre>
+	<code>
+	abbr[title] {
+		border-bottom: 1px dotted #000;
+	}
+	</code>
+</pre>
+
+</body>
+</html>
+<!--
+　使用预格式化的文本
+
+　对于包含重要的空格和换行的文本（如这里显示的 CSS 代码），pre 元素是非常适合的。同时要注意 code 元素的使用，该元素可以标记 pre外面的代码块或与代码有关的文本
+
+下面的 CSS 规则可以对 pre 的内容打开自
+动换行，但在 Internet Explorer 7 及以下版
+本中并不适用。（随着浏览器市场占有率
+的改变，在大多数情况下，这些情况都不
+再需要考虑了。）
+pre {
+ white-space: pre-wrap;
+}
+
+在大多数情况
+下不推荐对 div 等元素使用 white-space: pre
+以代替 pre，因为空格可能对这些内容（尤其
+是代码）的语义非常重要，而只有 pre 才能
+始终保留这些空格。
+-->

@@ -1,0 +1,70 @@
+body {
+	font: 100% Geneva, Tahoma, Verdana, sans-serif;
+}
+
+h1,
+h2 {
+	/* Can't combine these into 
+	font shorthand unless you include 
+	font size with them in the shorthand. */
+	font-family: "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
+	font-weight: normal;
+}
+
+h1 {
+	/* Can't combine these into
+	font shorthand unless you include 
+	font family with them in the shorthand. */
+	font-size: 2.1875em; /* 35px/16px */
+	line-height: 1.19318; /* I left this out of book just to keep example simple */
+}
+ 
+h2 {
+	font-size: 1.75em; /* 28px/16px */
+}
+
+em,
+a:link,
+.intro .subhead {
+	font-weight: bold;
+}
+
+.intro {
+	line-height: 1.45;
+}
+
+.intro .subhead {
+	font-size: 1.125em; /* 18px/16px */
+}
+
+.intro p {
+	font-size: 1.0625em; /* 17px/16px */
+}
+
+.project p {
+	/* Can't combine these into
+	font shorthand unless you include 
+	font family with them in the shorthand. */
+	font-size: .9375em; /* 15px/16px */
+	line-height: 1.65;
+}
+
+/*
+同时设置所有字体值:可以使用 font 简写属性同时设置字体样 式、粗细、变体、大小、行高和字体系列
+但至少应该包含字体大小和字体系列属性
+
+ .example-2 {
+font: .875em/1.3 "Palatino Linotype", ➝ Palatino, serif;
+}
+这 是 一 个 结 合 了 font-size、line- height 和 font-family 声明的 font 简记法的例子。
+行高跟在字体大小和一个斜杠后面。font 简写属性 中还可以包含 font-style、font-variant 和 font- weight
+
+.example-3 {
+font: italic small-caps bold .875em/1.3 ➝ "Palatino Linotype", Palatino, serif;
+}
+这个例子中包含了所有可能的属性。只 要 font 中声明了字体大小和字体系列属性，其他 属性可以任意组合。前三个属性的次序无关紧要
+输入 normal 或 small-caps 来取消或设置小型大写字母
+
+提 示 必须始终显式地声明字体大小和字体 系列属性:先是字体大小，再是字体系列
+提 示 行高是可选的，但它如果出现，就必 须紧跟在字体大小和斜杠后面
+ */

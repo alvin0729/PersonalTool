@@ -1,0 +1,92 @@
+body {
+	background-color: #88b2d2;
+	font: 100% Geneva, Tahoma, Verdana, sans-serif;
+}
+
+h1,
+h2 {
+	/* Can't combine these into 
+	font shorthand unless you include 
+	font size with them in the shorthand. */
+	font-family: "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
+	font-weight: normal;
+	letter-spacing: 7px; /* temporary for demo purposes */
+	/*
+	可以增加或减少单词之间或字母之间的 距离，前者称为字间距(tracking)，后者称 为字偶距(kerning)
+	1. 指定字间距
+输入word-spacing: length，这里的length 是一个带单位的数字
+    2. 指定字偶距
+输入letter-spacing: length，这里的 length 是一个带单位的数字
+提 示 单词间距和字母间距的值还可能受到 所选的对齐方式(用 text-alignment 设置) 和字体系列的影响。
+提 示 要将字母间距和单词间距设为默认值 (即不添加额外的间距)，可以使用normal或0。
+	 */
+}
+
+h1 {
+	/* Can't combine these into
+	font shorthand unless you include 
+	font family with them in the shorthand. */
+	font-size: 2.1875em; /* 35px/16px */
+	line-height: 1.19318; /* I left this out of book just to keep example simple */
+}
+ 
+h2 {
+	background-color: #eaebef;
+	color: #7d717c;
+	font-size: 1.75em; /* 28px/16px */
+}
+
+em,
+a:link,
+.intro .subhead {
+	font-weight: bold;
+}
+
+.architect {
+	background: #fff;
+	padding: 1.5em 1.75em;
+}
+
+.intro {
+	background-color: #686a63;
+	color: #fff;
+	line-height: 1.45;
+	padding: 1px 1.875em .7em;
+}
+
+.intro .subhead {
+	font-size: 1.125em; /* 18px/16px */
+}
+
+.intro p {
+	font-size: 1.0625em; /* 17px/16px */
+}
+
+.project p {
+	/* Can't combine these into
+	font shorthand unless you include 
+	font family with them in the shorthand. */
+	font-size: .9375em; /* 15px/16px */
+	line-height: 1.65;
+}
+
+/* :::: Links :::: */
+a:link {
+	color: #e10000;
+}
+
+a:visited {
+	color: #b44f4f;
+}
+
+a:hover {
+	color: #f00;
+}
+
+.intro a {
+	color: #fdb09d;
+}
+
+.intro a:hover {
+	color: #fec4b6;
+}

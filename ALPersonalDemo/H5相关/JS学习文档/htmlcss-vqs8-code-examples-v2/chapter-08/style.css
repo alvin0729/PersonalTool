@@ -1,0 +1,27 @@
+img {
+	border: 4px solid red;
+}
+
+
+/* 
+That is a shorter way of writing this:
+
+img {
+	border-width: 4px;
+	border-style: solid;
+ 	border-color: red;
+}
+*/
+
+/*
+
+外部样式表要么是通过链接引用的（参见 8.2 节），要么是导入的（通过 @import），不过不推荐导入。@import 指令会影响页面的下载速度和呈现速度，在 Internet Explorer 中影响更为明显。
+
+外部样式表的另一个好处是，一旦浏览器在某个页面加载了它，在随后浏览引用它的页面时，通常无需再向 Web 服务器请求
+该文件。浏览器会将它保存到缓存里，也就是保存到用户的计算机里，并使用这个版本的文件。
+
+当且仅当 style 元素出现在 link 元素后面的时候，嵌入样式表中的样式才会覆盖外部样式表中的样式。
+
+HTML5 之前的版本要求在 style 开始标签中包含属性 type="text/css"，不过HTML5 没有要求。
+
+ */

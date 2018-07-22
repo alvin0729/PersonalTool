@@ -1,0 +1,57 @@
+body {
+	font-family: sans-serif;
+}
+
+.hdg {
+	font-size: 1.5em;
+	margin-bottom: 0;
+}
+
+.hdg + ul {
+	margin-top: .4em;
+}
+
+ul {
+	/* turn off the default markers */
+	list-style: none;
+
+	/* remove indentation of list items */
+	margin-left: 0;
+	padding-left: 0;/*输入 padding-left: value;，这里的value 应不小于背௿图像的宽度，以防列表项目的内容覆盖到定制标记的上面。*/
+}
+
+li {
+	/* show custom marker */
+	/*	Note that the url to your image may be different depending on where you 
+		store your image relative to the location of your CSS file. Of course, 
+		your filename will probably be different than checkmark.png, too.
+	*/
+	background: url(../img/checkmark.png) no-repeat 0 0;/* 输 入 background: url(image.ext) repeattype horizontal vertical;，背景图像的位置  */
+}
+/*
+1. 选择标记
+在 样 式 表 中， 输 入 list-style-type:marker，这里的marker 是以下属性值中的一种。
+ disc（圆点，●）
+ circle（圆圈，○）
+ square（方块，■）
+ decimal（数字，1、2、3……）
+ upper-alpha（ 大 写 字 母，A、B、C……）
+ lower-alpha（ 小 写 字 母，a、b、c……）
+ upper-roman（ 大 写 罗 马 数 字， Ⅰ、Ⅱ、 Ⅲ、 Ⅳ ……）， 如 图 15.2.2 和图 15.2.3 所示
+ lower-roman（小写罗马数字，i、ii、iii、iv……）
+
+
+提 示 也可以在 HTML 中通过 type 属 性为有序列表指定标记类型，但推荐的做法是
+尽可能在 CSS 中定义列表样式类型。一种例外情况请参见 html5doctor.com/ol-elementattributes/。type
+属性可接受的值包括 A、a、I、i 和 1（默认值为 1）。例如，<ol type="I">表示使用大写罗马数字作为编号。
+
+提 示 大多数浏览器是通过 padding-left 为列表设置默认缩进的，但旧浏览器（如 IE8
+之前版本）则是通过 margin-left 设置的。这就是要在使用 padding-left 获得统一样式结果之前需要设置 margin-left: 0; 的原因。现
+在，尽管通常不必为 IE7 及更旧的浏览器考虑了（对于大多数国家来说），但添加 marginleft:0; 也没有任何坏处。
+
+
+提 示 另一种显示定制标记的方法是使用
+list-style-image属性。例如，li { list-styleimage:url(image.png); }。不过，使用这种方法很难达到预期的效果，因为不同浏览器
+对它的显示效果并不一致。并且相比前面展示的背௿图像方法，开发者更难控制图像标记的位置。
+
+ */

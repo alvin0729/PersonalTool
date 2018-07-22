@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>El Palau de la Música</title>
+	<link rel="stylesheet" href="class-instead-of-inline.css" />
+</head>
+<body>
+<article>
+	<h1>El Palau de la Música</h1>
+
+	<img src="img/palau.jpg" width="250" height="163" alt="El Palau de la Música" class="frame" />
+
+	<img src="img/tickets.jpg" width="87" height="163" alt="The Ticket Window" />
+
+	<p>I love the <span lang="es">Palau de la Música</span>. It is ornate and gaudy and everything that was wonderful about modernism. It's also the home of the <span lang="es">Orfeó Català</span>, where I learned the benefits of Moscatell.</p>
+</article>
+</body>
+</html>
+
+<!--
+为第一个 img 添加一个类名，而不是添加一个内联样式。然后，在外部样式表中为该类创建一条规则（如图 8.4.4 所示）。如果你希望其他的元
+素拥有这种样式，只需要为其添加 class="frame"即可。用任何类名都行，frame 只是一个例子
+
+内联样式的优先级高于其他所有样式，除非其他地方与之冲突的样式标记了!important
+
+如果要在内联样式声明中指定字体（参见第 10 章），对于有多个单词的字体名称，
+要用单引号包围，以避免与 style 元素的双引号发生冲突。不能在这两个地方使用相同类型的引号。
+
+在两者发生冲突时，如果 link 元素在 HTML 代码中出现得早（图 8.5.2），style 元素
+就会覆盖链接的样式表（图 8.5.3）；如果 link 元素出现得晚（图 8.5.4），其中的样式及其包含的任何导入样式表就会覆盖 style 元素的规则
+
+内联样式（实际上直接应用于元素）在外部样式表和嵌入样式表之后。由于顺序最靠后，其优先级是最高的。
+一旦应用到任何地方，都会覆盖与之冲突的其他样式。
+
+关于相互冲突的样式的顺序对优先级的影响，有一种例外情况，就是标记!important 的样式总是具有最高的优
+先级，无论它出现在最前、最后，还是中间。
+-->
