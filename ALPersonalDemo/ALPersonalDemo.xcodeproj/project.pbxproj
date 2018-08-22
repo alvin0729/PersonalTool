@@ -83,6 +83,7 @@
 		CF862E6A2011B96300140F31 /* UIImageView+download.m in Sources */ = {isa = PBXBuildFile; fileRef = CF862E692011B96300140F31 /* UIImageView+download.m */; };
 		CF862E6F2011BA8000140F31 /* TGFileTool.m in Sources */ = {isa = PBXBuildFile; fileRef = CF862E6D2011BA8000140F31 /* TGFileTool.m */; };
 		CF862E722011BBBE00140F31 /* UIImage+image.m in Sources */ = {isa = PBXBuildFile; fileRef = CF862E702011BBB900140F31 /* UIImage+image.m */; };
+		CF9433E320F456F90027D4A7 /* UIViewController+BackButtonHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = CF9433E220F456F90027D4A7 /* UIViewController+BackButtonHandler.m */; };
 		CF95F22820D8F27500DDAA28 /* NSURL+QueryDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = CF95F22720D8F27500DDAA28 /* NSURL+QueryDictionary.m */; };
 		CF95F22C20D902F900DDAA28 /* LogCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = CF95F22B20D902F900DDAA28 /* LogCategory.m */; };
 		CF95F23220D905D700DDAA28 /* OrderedDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = CF95F23120D905D700DDAA28 /* OrderedDictionary.m */; };
@@ -138,6 +139,7 @@
 		CFC88B791F359B8C002C6CE5 /* LCFInfiniteScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = CFC88B721F359B8C002C6CE5 /* LCFInfiniteScrollView.m */; };
 		CFC88B7A1F359B8C002C6CE5 /* LCFInfiniteScrollViewItem.m in Sources */ = {isa = PBXBuildFile; fileRef = CFC88B741F359B8C002C6CE5 /* LCFInfiniteScrollViewItem.m */; };
 		CFC88B7B1F359B8C002C6CE5 /* UIColor+LCFImageAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = CFC88B761F359B8C002C6CE5 /* UIColor+LCFImageAdditions.m */; };
+		CFC8BBA0210EEE86007036AF /* UIView+Borders.m in Sources */ = {isa = PBXBuildFile; fileRef = CFC8BB9F210EEE86007036AF /* UIView+Borders.m */; };
 		CFCE04621F0B703F0047D184 /* HexColors.m in Sources */ = {isa = PBXBuildFile; fileRef = CFCE04611F0B703F0047D184 /* HexColors.m */; };
 		CFD3B1E520E1D9FF00D2CE8E /* RTIconButton.m in Sources */ = {isa = PBXBuildFile; fileRef = CFD3B1E420E1D9FF00D2CE8E /* RTIconButton.m */; };
 		CFD3B1E820E2254E00D2CE8E /* UIControl+BlocksKit.m in Sources */ = {isa = PBXBuildFile; fileRef = CFD3B1E620E2254E00D2CE8E /* UIControl+BlocksKit.m */; };
@@ -543,6 +545,8 @@
 		CF862E6E2011BA8000140F31 /* TGFileTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TGFileTool.h; sourceTree = "<group>"; };
 		CF862E702011BBB900140F31 /* UIImage+image.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+image.m"; sourceTree = "<group>"; };
 		CF862E712011BBBD00140F31 /* UIImage+image.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+image.h"; sourceTree = "<group>"; };
+		CF9433E120F456F90027D4A7 /* UIViewController+BackButtonHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+BackButtonHandler.h"; sourceTree = "<group>"; };
+		CF9433E220F456F90027D4A7 /* UIViewController+BackButtonHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+BackButtonHandler.m"; sourceTree = "<group>"; };
 		CF95F22620D8F27500DDAA28 /* NSURL+QueryDictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURL+QueryDictionary.h"; sourceTree = "<group>"; };
 		CF95F22720D8F27500DDAA28 /* NSURL+QueryDictionary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURL+QueryDictionary.m"; sourceTree = "<group>"; };
 		CF95F22A20D902F900DDAA28 /* LogCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogCategory.h; sourceTree = "<group>"; };
@@ -658,6 +662,8 @@
 		CFC88B741F359B8C002C6CE5 /* LCFInfiniteScrollViewItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCFInfiniteScrollViewItem.m; sourceTree = "<group>"; };
 		CFC88B751F359B8C002C6CE5 /* UIColor+LCFImageAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+LCFImageAdditions.h"; sourceTree = "<group>"; };
 		CFC88B761F359B8C002C6CE5 /* UIColor+LCFImageAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+LCFImageAdditions.m"; sourceTree = "<group>"; };
+		CFC8BB9E210EEE86007036AF /* UIView+Borders.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Borders.h"; sourceTree = "<group>"; };
+		CFC8BB9F210EEE86007036AF /* UIView+Borders.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Borders.m"; sourceTree = "<group>"; };
 		CFCE04601F0B703F0047D184 /* HexColors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HexColors.h; sourceTree = "<group>"; };
 		CFCE04611F0B703F0047D184 /* HexColors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HexColors.m; sourceTree = "<group>"; };
 		CFD3B1E320E1D9FE00D2CE8E /* RTIconButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTIconButton.h; sourceTree = "<group>"; };
@@ -2212,6 +2218,8 @@
 				CFA7178320D11D6900C65E96 /* UITabBarController+AddChildVC.m */,
 				E15D70461EF5266B00513AE6 /* UIViewController+MHHUD.h */,
 				E15D70471EF5266B00513AE6 /* UIViewController+MHHUD.m */,
+				CF9433E120F456F90027D4A7 /* UIViewController+BackButtonHandler.h */,
+				CF9433E220F456F90027D4A7 /* UIViewController+BackButtonHandler.m */,
 			);
 			path = UIViewController;
 			sourceTree = "<group>";
@@ -2478,6 +2486,8 @@
 		E17E21E11EDACCAD0013D3B9 /* UIView */ = {
 			isa = PBXGroup;
 			children = (
+				CFC8BB9E210EEE86007036AF /* UIView+Borders.h */,
+				CFC8BB9F210EEE86007036AF /* UIView+Borders.m */,
 				CFA7178020D11D0800C65E96 /* UIView+Nib.h */,
 				CFA7177F20D11D0600C65E96 /* UIView+Nib.m */,
 				CF0A7D4A20CA7C2A001CEDE7 /* UIView+ShortCut.h */,
@@ -3144,8 +3154,10 @@
 				CFD3B1E520E1D9FF00D2CE8E /* RTIconButton.m in Sources */,
 				E1540B151EF6534C00D2721F /* UIColor+iOS7.m in Sources */,
 				E1D226531F6D87E10001E8A3 /* ALNSPredicateViewController.m in Sources */,
+				CF9433E320F456F90027D4A7 /* UIViewController+BackButtonHandler.m in Sources */,
 				E14B8A751EF1889D0021D665 /* NSData+SNFoundation.m in Sources */,
 				E13C567F1EE44EDC00005CFD /* NSDate+AU.m in Sources */,
+				CFC8BBA0210EEE86007036AF /* UIView+Borders.m in Sources */,
 				E1540B211EF6534C00D2721F /* HTHelper.m in Sources */,
 				E18083791F9BA065003454F7 /* BaseModel.m in Sources */,
 				E1F661A31EDD9E2E001D98E1 /* UIColor+SSAdd.m in Sources */,
