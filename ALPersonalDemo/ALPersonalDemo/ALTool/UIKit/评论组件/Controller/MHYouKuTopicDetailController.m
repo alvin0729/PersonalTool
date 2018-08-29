@@ -22,7 +22,7 @@
 #import "MHWebImageTool.h"
 #import "UIImage+MHCrop.h"
 #import "UIImage+MHExtension.h"
-
+#import "NSDate+Extension.h"
 #import "NSObject+MHRandom.h"
 
 @interface MHYouKuTopicDetailController ()<UITableViewDelegate , UITableViewDataSource , MHTopicHeaderViewDelegate , MHYouKuInputPanelViewDelegate , MHCommentCellDelegate>
@@ -200,7 +200,7 @@
     for (NSInteger j = 0; j < count; j++) {
         MHComment *comment = [[MHComment alloc] init];
         comment.commentId = [NSString stringWithFormat:@"%zd" , j];
-        comment.creatTime = [NSDate mh_currentTimestamp];
+        //comment.creatTime = [NSDate mh_currentTimestamp];
         comment.text = [self.textString substringToIndex:[NSObject mh_randomNumber:1 to:60]];
         if (j%3==0) {
             MHUser *toUser = self.users[[NSObject mh_randomNumber:0 to:5]];
@@ -540,7 +540,7 @@
         comment.mediabase_id = inputPanelView.commentReply.mediabase_id;
         comment.commentId = [NSString stringWithFormat:@"%zd",[NSObject mh_randomNumber:0 to:100]];
         comment.text = attributedText;
-        comment.creatTime = [NSDate mh_currentTimestamp];
+        //comment.creatTime = [NSDate mh_currentTimestamp];
         
         MHUser *fromUser = [[MHUser alloc] init];
         fromUser.userId = [AppDelegate sharedDelegate].account.userId ;

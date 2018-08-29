@@ -15,7 +15,6 @@
 		CF0E8C3F20CA424B00DC899B /* ALAssetsLibrary+CustomPhotoAlbum.m in Sources */ = {isa = PBXBuildFile; fileRef = CF0E8C2820CA424A00DC899B /* ALAssetsLibrary+CustomPhotoAlbum.m */; };
 		CF0E8C4020CA424B00DC899B /* NSData+AES.m in Sources */ = {isa = PBXBuildFile; fileRef = CF0E8C2A20CA424B00DC899B /* NSData+AES.m */; };
 		CF0E8C4120CA424B00DC899B /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = CF0E8C2C20CA424B00DC899B /* NSData+Base64.m */; };
-		CF0E8C4220CA424B00DC899B /* NSDate+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = CF0E8C2E20CA424B00DC899B /* NSDate+Extension.m */; };
 		CF0E8C4320CA424B00DC899B /* NSString+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = CF0E8C3020CA424B00DC899B /* NSString+Extension.m */; };
 		CF0E8C4420CA424B00DC899B /* UIImage+fixOrientation.m in Sources */ = {isa = PBXBuildFile; fileRef = CF0E8C3220CA424B00DC899B /* UIImage+fixOrientation.m */; };
 		CF0E8C4520CA424B00DC899B /* UIImage+ScreenShot.m in Sources */ = {isa = PBXBuildFile; fileRef = CF0E8C3420CA424B00DC899B /* UIImage+ScreenShot.m */; };
@@ -43,6 +42,8 @@
 		CF40EC751EE0191E0003499F /* WWTagEditingView.m in Sources */ = {isa = PBXBuildFile; fileRef = CF40EC741EE0191E0003499F /* WWTagEditingView.m */; };
 		CF40EC781EE01A0D0003499F /* WWTagButtonTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = CF40EC771EE01A0D0003499F /* WWTagButtonTextField.m */; };
 		CF40EC7B1EE01AA90003499F /* ALDemo1ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF40EC7A1EE01AA90003499F /* ALDemo1ViewController.m */; };
+		CF43E0182133894D00D6998C /* IFlyAIUIPcmRecorder.m in Sources */ = {isa = PBXBuildFile; fileRef = CF43E0162133894B00D6998C /* IFlyAIUIPcmRecorder.m */; };
+		CF43E01B213389DC00D6998C /* IFlyAIUIAudioSession.m in Sources */ = {isa = PBXBuildFile; fileRef = CF43E019213389DB00D6998C /* IFlyAIUIAudioSession.m */; };
 		CF48AC131EE4E32A009C4AD7 /* UIImage+Orientaion.m in Sources */ = {isa = PBXBuildFile; fileRef = CF48AC0C1EE4E32A009C4AD7 /* UIImage+Orientaion.m */; };
 		CF48AC141EE4E32A009C4AD7 /* UIImage+Scale.m in Sources */ = {isa = PBXBuildFile; fileRef = CF48AC0E1EE4E32A009C4AD7 /* UIImage+Scale.m */; };
 		CF48AC151EE4E32A009C4AD7 /* UIImage+Thumbnail.m in Sources */ = {isa = PBXBuildFile; fileRef = CF48AC101EE4E32A009C4AD7 /* UIImage+Thumbnail.m */; };
@@ -150,6 +151,7 @@
 		CFE7A3321FF4F96600B45A81 /* BigBang.m in Sources */ = {isa = PBXBuildFile; fileRef = CFE7A3311FF4F96500B45A81 /* BigBang.m */; };
 		CFE8D7FB2072200E000D4803 /* YYKit.rtf in Resources */ = {isa = PBXBuildFile; fileRef = CFE8D7FA2072200E000D4803 /* YYKit.rtf */; };
 		CFEAA1491FED059A00007B42 /* UIView+helper.m in Sources */ = {isa = PBXBuildFile; fileRef = CFEAA1481FED059A00007B42 /* UIView+helper.m */; };
+		CFF5E6AB21354C8200A2B37B /* NSDate+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = E15D70021EF4DE4900513AE6 /* NSDate+Extension.m */; };
 		CFFD4B3A1F29E6F800F2841E /* route.rtf in Resources */ = {isa = PBXBuildFile; fileRef = CFFD4B391F29E6F800F2841E /* route.rtf */; };
 		CFFD79451FEB8AA4009966FE /* UIScrollView+UITouch.m in Sources */ = {isa = PBXBuildFile; fileRef = CFFD79441FEB8AA4009966FE /* UIScrollView+UITouch.m */; };
 		CFFF6F291EF91B580092132B /* SSRollingButtonScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = CFFF6F281EF91B580092132B /* SSRollingButtonScrollView.m */; };
@@ -275,7 +277,6 @@
 		E1540B511EF65C8C00D2721F /* RJHomeTopicShareModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E1540B501EF65C8C00D2721F /* RJHomeTopicShareModel.m */; };
 		E15D6FFD1EF4D69600513AE6 /* MHCommentReply.m in Sources */ = {isa = PBXBuildFile; fileRef = E15D6FFC1EF4D69600513AE6 /* MHCommentReply.m */; };
 		E15D70001EF4D6FF00513AE6 /* MHTopic.m in Sources */ = {isa = PBXBuildFile; fileRef = E15D6FFF1EF4D6FF00513AE6 /* MHTopic.m */; };
-		E15D70031EF4DE4900513AE6 /* NSDate+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = E15D70021EF4DE4900513AE6 /* NSDate+Extension.m */; };
 		E15D70061EF4E01600513AE6 /* NSDateFormatter+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = E15D70051EF4E01600513AE6 /* NSDateFormatter+Extension.m */; };
 		E15D70091EF4E08C00513AE6 /* MHCommentFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = E15D70081EF4E08C00513AE6 /* MHCommentFrame.m */; };
 		E15D700C1EF4E3E800513AE6 /* MHTopicFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = E15D700B1EF4E3E800513AE6 /* MHTopicFrame.m */; };
@@ -477,6 +478,10 @@
 		CF40EC771EE01A0D0003499F /* WWTagButtonTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WWTagButtonTextField.m; sourceTree = "<group>"; };
 		CF40EC791EE01AA90003499F /* ALDemo1ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALDemo1ViewController.h; sourceTree = "<group>"; };
 		CF40EC7A1EE01AA90003499F /* ALDemo1ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALDemo1ViewController.m; sourceTree = "<group>"; };
+		CF43E0162133894B00D6998C /* IFlyAIUIPcmRecorder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IFlyAIUIPcmRecorder.m; sourceTree = "<group>"; };
+		CF43E0172133894C00D6998C /* IFlyAIUIPcmRecorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IFlyAIUIPcmRecorder.h; sourceTree = "<group>"; };
+		CF43E019213389DB00D6998C /* IFlyAIUIAudioSession.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IFlyAIUIAudioSession.m; sourceTree = "<group>"; };
+		CF43E01A213389DC00D6998C /* IFlyAIUIAudioSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IFlyAIUIAudioSession.h; sourceTree = "<group>"; };
 		CF48AC0B1EE4E32A009C4AD7 /* UIImage+Orientaion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Orientaion.h"; sourceTree = "<group>"; };
 		CF48AC0C1EE4E32A009C4AD7 /* UIImage+Orientaion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Orientaion.m"; sourceTree = "<group>"; };
 		CF48AC0D1EE4E32A009C4AD7 /* UIImage+Scale.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Scale.h"; sourceTree = "<group>"; };
@@ -2646,6 +2651,10 @@
 				CFA390B020BFA7B0001CDF4F /* SoundNamesHeader.h */,
 				CFA390B120BFA7B0001CDF4F /* WNXSoundToolManager.h */,
 				CFA390B220BFA7B0001CDF4F /* WXNSoundToolManager.m */,
+				CF43E0172133894C00D6998C /* IFlyAIUIPcmRecorder.h */,
+				CF43E0162133894B00D6998C /* IFlyAIUIPcmRecorder.m */,
+				CF43E01A213389DC00D6998C /* IFlyAIUIAudioSession.h */,
+				CF43E019213389DB00D6998C /* IFlyAIUIAudioSession.m */,
 			);
 			path = "缓存音乐播放器";
 			sourceTree = "<group>";
@@ -3127,8 +3136,8 @@
 				CFA53FA6207B864D002EEDDF /* KVOArray.m in Sources */,
 				E1D428E51FDCF8D600D3A51C /* QKYDelayButton.m in Sources */,
 				CF95F23520D90CE400DDAA28 /* NSDictionary+NilSafe.m in Sources */,
+				CFF5E6AB21354C8200A2B37B /* NSDate+Extension.m in Sources */,
 				E1F661BF1EDDA36F001D98E1 /* UITableView+SSAdd.m in Sources */,
-				E15D70031EF4DE4900513AE6 /* NSDate+Extension.m in Sources */,
 				E1F22BC11F9C5A3C0097E6F0 /* UIImage+TKCategory.m in Sources */,
 				CFC0AACB1EFB64B600E4FF12 /* EHHorizontalSelectionView.m in Sources */,
 				CFC0AAEF1EFB74E600E4FF12 /* CollectModel.m in Sources */,
@@ -3238,6 +3247,7 @@
 				CF0E8C4520CA424B00DC899B /* UIImage+ScreenShot.m in Sources */,
 				E1F6619A1EDD9DB5001D98E1 /* NSObject+SSAdd.m in Sources */,
 				E1F6619F1EDD9DE8001D98E1 /* NSString+SSAdd.m in Sources */,
+				CF43E0182133894D00D6998C /* IFlyAIUIPcmRecorder.m in Sources */,
 				E1540B201EF6534C00D2721F /* UIView+Layout.m in Sources */,
 				E1540A551EF64C2A00D2721F /* AJPhotoTapDetectingImageView.m in Sources */,
 				E13C56721EE44BE500005CFD /* NSString+extension.m in Sources */,
@@ -3295,6 +3305,7 @@
 				E17E21E01EDAC4630013D3B9 /* HYBNetworking.m in Sources */,
 				E1540ABF1EF64F9700D2721F /* RJClickCountLabel.m in Sources */,
 				CFC0AACA1EFB64B600E4FF12 /* EHHorizontalLineViewCell.m in Sources */,
+				CF43E01B213389DC00D6998C /* IFlyAIUIAudioSession.m in Sources */,
 				CFCE04621F0B703F0047D184 /* HexColors.m in Sources */,
 				CF1695A81EE918DF00D174B1 /* ZHManualAdapter.m in Sources */,
 				CF40EC7B1EE01AA90003499F /* ALDemo1ViewController.m in Sources */,
@@ -3369,7 +3380,6 @@
 				E14B8A791EF1889D0021D665 /* SNCache.m in Sources */,
 				E17E21EE1EDAF6A20013D3B9 /* ALToastTableViewController.m in Sources */,
 				CFBD175720C11CFD00740909 /* STATextFieldBase.m in Sources */,
-				CF0E8C4220CA424B00DC899B /* NSDate+Extension.m in Sources */,
 				E15D705A1EF540CD00513AE6 /* NSObject+MHRandom.m in Sources */,
 				CF1C56371FEA31F20011C7C6 /* RuntimeInvoker.m in Sources */,
 				E1540A161EF647E100D2721F /* HHInformationViewController.m in Sources */,

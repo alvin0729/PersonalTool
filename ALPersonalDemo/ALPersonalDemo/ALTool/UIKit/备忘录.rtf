@@ -1,4 +1,4 @@
-{\rtf1\ansi\ansicpg936\cocoartf1504\cocoasubrtf830
+{\rtf1\ansi\ansicpg936\cocoartf1561\cocoasubrtf600
 {\fonttbl\f0\fnil\fcharset0 Menlo-Regular;\f1\fswiss\fcharset0 Helvetica;\f2\fnil\fcharset134 PingFangSC-Regular;
 \f3\fswiss\fcharset0 ArialMT;\f4\fnil\fcharset0 MicrosoftYaHei;\f5\fmodern\fcharset0 Courier;
 \f6\fnil\fcharset0 Monaco;\f7\fnil\fcharset0 HelveticaNeue;\f8\fnil\fcharset0 Verdana;
@@ -40,31 +40,31 @@
 \f0\fs28 \cf2 \cb3 - (\cf4 UIBezierPath\cf2  *)pathForProgress:(\cf4 CGFloat\cf2 )progress\{
 \f1\fs24 \cf0 \
 
-\f0\fs28 \cf2     \cf4 CGFloat\cf2  radius = \cf5 self\cf2 .\cf6 topShowBackgroundView\cf2 .\cf4 frame\cf2 .\cf4 size\cf2 .\cf4 height\cf2  * \cf7 0.5\cf2 ;
+\f0\fs28 \cf2     \cf4 CGFloat\cf2  radius = \cf5 self\cf2 .\cf6 \cb3 topShowBackgroundView\cf2 \cb3 .\cf4 frame\cf2 .\cf4 size\cf2 .\cf4 height\cf2  * \cf7 0.5\cf2 ;
 \f1\fs24 \cf0 \
 
-\f0\fs28 \cf2     \cf4 CGPoint\cf2  center1 = \cf8 CGPointMake\cf2 (\cf5 self\cf2 .\cf6 topShowBackgroundView\cf2 .\cf4 frame\cf2 .\cf4 size\cf2 .\cf4 width\cf2  * progress+radius, \cf5 self\cf2 .\cf6 topShowBackgroundView\cf2 .\cf4 frame\cf2 .\cf4 size\cf2 .\cf4 height\cf2  * \cf7 0.5\cf2 );
+\f0\fs28 \cf2     \cf4 CGPoint\cf2  center1 = \cf8 CGPointMake\cf2 (\cf5 self\cf2 .\cf6 \cb3 topShowBackgroundView\cf2 \cb3 .\cf4 frame\cf2 .\cf4 size\cf2 .\cf4 width\cf2  * progress+radius, \cf5 self\cf2 .\cf6 \cb3 topShowBackgroundView\cf2 \cb3 .\cf4 frame\cf2 .\cf4 size\cf2 .\cf4 height\cf2  * \cf7 0.5\cf2 );
 \f1\fs24 \cf0 \
 
 \f0\fs28 \cf2     \cf4 UIBezierPath\cf2  *path = [\cf4 UIBezierPath\cf2  \cf8 bezierPath\cf2 ];
 \f1\fs24 \cf0 \
 
-\f0\fs28 \cf2     [path \cf8 moveToPoint\cf2 :\cf8 CGPointMake\cf2 (\cf5 self\cf2 .\cf6 topShowBackgroundView\cf2 .\cf4 frame\cf2 .\cf4 size\cf2 .\cf4 width\cf2  * progress+radius, \cf7 0\cf2 )];
+\f0\fs28 \cf2     [path \cf8 moveToPoint\cf2 :\cf8 CGPointMake\cf2 (\cf5 self\cf2 .\cf6 \cb3 topShowBackgroundView\cf2 \cb3 .\cf4 frame\cf2 .\cf4 size\cf2 .\cf4 width\cf2  * progress+radius, \cf7 0\cf2 )];
 \f1\fs24 \cf0 \
 
 \f0\fs28 \cf2     [path \cf8 addArcWithCenter\cf2 :center1 \cf8 radius\cf2 :radius \cf8 startAngle\cf2 :\cf9 M_PI\cf2 *\cf7 1.5\cf2   \cf8 endAngle\cf2 : \cf9 M_PI\cf2 *\cf7 0.5\cf2  \cf8 clockwise\cf2 :\cf5 NO\cf2 ];
 \f1\fs24 \cf0 \
 
-\f0\fs28 \cf2     [path \cf8 addLineToPoint\cf2 :\cf8 CGPointMake\cf2 (\cf5 self\cf2 .\cf6 topShowBackgroundView\cf2 .\cf4 frame\cf2 .\cf4 size\cf2 .\cf4 width\cf2  - radius, \cf5 self\cf2 .\cf6 topShowBackgroundView\cf2 .\cf4 frame\cf2 .\cf4 size\cf2 .\cf4 height\cf2 )];
+\f0\fs28 \cf2     [path \cf8 addLineToPoint\cf2 :\cf8 CGPointMake\cf2 (\cf5 self\cf2 .\cf6 \cb3 topShowBackgroundView\cf2 \cb3 .\cf4 frame\cf2 .\cf4 size\cf2 .\cf4 width\cf2  - radius, \cf5 self\cf2 .\cf6 \cb3 topShowBackgroundView\cf2 \cb3 .\cf4 frame\cf2 .\cf4 size\cf2 .\cf4 height\cf2 )];
 \f1\fs24 \cf0 \
 
-\f0\fs28 \cf2     \cf4 CGPoint\cf2  center2 = \cf8 CGPointMake\cf2 (\cf5 self\cf2 .\cf6 topShowBackgroundView\cf2 .\cf4 frame\cf2 .\cf4 size\cf2 .\cf4 width\cf2  - radius, \cf5 self\cf2 .\cf6 topShowBackgroundView\cf2 .\cf4 frame\cf2 .\cf4 size\cf2 .\cf4 height\cf2  * \cf7 0.5\cf2 );
+\f0\fs28 \cf2     \cf4 CGPoint\cf2  center2 = \cf8 CGPointMake\cf2 (\cf5 self\cf2 .\cf6 \cb3 topShowBackgroundView\cf2 \cb3 .\cf4 frame\cf2 .\cf4 size\cf2 .\cf4 width\cf2  - radius, \cf5 self\cf2 .\cf6 \cb3 topShowBackgroundView\cf2 \cb3 .\cf4 frame\cf2 .\cf4 size\cf2 .\cf4 height\cf2  * \cf7 0.5\cf2 );
 \f1\fs24 \cf0 \
 
 \f0\fs28 \cf2     [path \cf8 addArcWithCenter\cf2 :center2 \cf8 radius\cf2 : radius \cf8 startAngle\cf2 :\cf9 M_PI\cf2 *\cf7 0.5\cf2  \cf8 endAngle\cf2 :\cf9 M_PI\cf2 *\cf7 1.5\cf2  \cf8 clockwise\cf2 :\cf5 NO\cf2 ];
 \f1\fs24 \cf0 \
 
-\f0\fs28 \cf2     [path \cf8 addLineToPoint\cf2 :\cf8 CGPointMake\cf2 (\cf5 self\cf2 .\cf6 topShowBackgroundView\cf2 .\cf4 frame\cf2 .\cf4 size\cf2 .\cf4 width\cf2  * progress+radius, \cf7 0\cf2 )];
+\f0\fs28 \cf2     [path \cf8 addLineToPoint\cf2 :\cf8 CGPointMake\cf2 (\cf5 self\cf2 .\cf6 \cb3 topShowBackgroundView\cf2 \cb3 .\cf4 frame\cf2 .\cf4 size\cf2 .\cf4 width\cf2  * progress+radius, \cf7 0\cf2 )];
 \f1\fs24 \cf0 \
 
 \f0\fs28 \cf2     [path \cf8 closePath\cf2 ];
@@ -78,6 +78,7 @@
 
 \f0\fs28 \cf2 \}\
 \
+\pard\tx692\pardeftab692\pardirnatural\partightenfactor0
 
 \f2 \cf0 \cb10 \expnd0\expndtw0\kerning0
 \
@@ -85,7 +86,7 @@
 \cf0 \
 \pard\pardeftab720\sl560\partightenfactor0
 
-\f3\b\fs48 \cf11 \cb10 UILabel
+\f3\b\fs48 \cf11 UILabel
 \f2 \'bf\'ed\'b6\'c8\'b9\'cc\'b6\'a8
 \f3 , 
 \f2 \'d7\'d6\'cc\'e5\'b4\'f3\'d0\'a1\'d7\'d4\'ca\'ca\'d3\'a6\
@@ -121,7 +122,7 @@
 \f2\fs32 \
 \pard\pardeftab720\sl560\partightenfactor0
 
-\fs28 \cf0 \cb10 \
+\fs28 \cf0 \
 \pard\pardeftab720\partightenfactor0
 \cf0 \'b5\'b1
 \f3  label
@@ -129,7 +130,8 @@
 \f3  
 \f2 \'bc\'d3\'c9\'cf\'cf\'c2\'c3\'e6\'b5\'c4\'bb\'b0
 \f3  \cb13 \
-\cb10 \'93Content Compression Resistance\'94
+\pard\pardeftab720\partightenfactor0
+\cf0 \cb10 \'93Content Compression Resistance\'94
 \f2 \'ba\'cd
 \f3 \'93Content Hugging\'94\cb13 \
 \cb10 1.
@@ -328,18 +330,18 @@ stringRect = [string \cf8 boundingRectWithSize\cf2 :constraintSize\
 \f0\fs28 \cf2     
 \f1\fs24 \cf0 \
 
-\f0\fs28 \cf2     if (model.\cf6 balkNickName\cf2 .\cf4 length\cf2 ) \{
+\f0\fs28 \cf2     if (model.\cf6 \cb3 balkNickName\cf2 \cb3 .\cf4 length\cf2 ) \{
 \f1\fs24 \cf0 \
 
 \f0\fs28 \cf2         [contentAttributeStr \cf8 appendAttributedString\cf2 :[[\cf4 NSAttributedString\cf2  \cf8 alloc\cf2 ] \cf8 initWithString\cf2 :\cf34 @" 
-\f2 \'bb\'d8\'b8\'b4
-\f0  "\cf2 ]];
+\f2 \cf34 \cb3 \'bb\'d8\'b8\'b4
+\f0 \cf34 \cb3  "\cf2 ]];
 \f1\fs24 \cf0 \
 
 \f0\fs28 \cf2         
 \f1\fs24 \cf0 \
 
-\f0\fs28 \cf2         \cf4 NSMutableAttributedString\cf2  *contentAppendingStr = [[\cf4 NSMutableAttributedString\cf2  \cf8 alloc\cf2 ] \cf8 initWithString\cf2 :[\cf4 NSString\cf2  \cf8 stringWithFormat\cf2 :\cf34 @"%@"\cf2 ,model.\cf6 balkNickName\cf2 ]];
+\f0\fs28 \cf2         \cf4 NSMutableAttributedString\cf2  *contentAppendingStr = [[\cf4 NSMutableAttributedString\cf2  \cf8 alloc\cf2 ] \cf8 initWithString\cf2 :[\cf4 NSString\cf2  \cf8 stringWithFormat\cf2 :\cf34 @"%@"\cf2 ,model.\cf6 \cb3 balkNickName\cf2 \cb3 ]];
 \f1\fs24 \cf0 \
 
 \f0\fs28 \cf2         [contentAppendingStr \cf8 setAttributes\cf2 :\cf7 @\{\cf4 NSForegroundColorAttributeName\cf2  : \cf9 UIColorHex\cf2 (\cf7 0xf1cbb2\cf2 ), \cf4 NSFontAttributeName\cf2  : \cf9 DDFONT\cf2 (\cf7 13\cf2 )\cf7 \}\cf2  \cf8 range\cf2 :\cf8 NSMakeRange\cf2 (\cf7 0\cf2 , contentAppendingStr.\cf4 length\cf2 )];
@@ -358,8 +360,8 @@ stringRect = [string \cf8 boundingRectWithSize\cf2 :constraintSize\
 \f1\fs24 \cf0 \
 
 \f0\fs28 \cf2     \cf4 NSMutableAttributedString\cf2  *contentAppendingStr = [[\cf4 NSMutableAttributedString\cf2  \cf8 alloc\cf2 ] \cf8 initWithString\cf2 :[\cf4 NSString\cf2  \cf8 stringWithFormat\cf2 :\cf34 @"
-\f2 \'a3\'ba
-\f0 %@"\cf2 , model.\cf6 balkContent\cf2 ]];
+\f2 \cf34 \cb3 \'a3\'ba
+\f0 \cf34 \cb3 %@"\cf2 , model.\cf6 \cb3 balkContent\cf2 \cb3 ]];
 \f1\fs24 \cf0 \
 
 \f0\fs28 \cf2     [contentAttributeStr \cf8 appendAttributedString\cf2 :contentAppendingStr];\
@@ -883,7 +885,7 @@ webView.frame = frame;\
 \f2 \'bb\'d8\'b9\'cb\'d2\'bb\'cf\'c2\'c9\'cf\'c3\'e6\'bd\'b2\'b5\'c4
 \f8 .\cb13 \
 \pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
-\ls3\ilvl0\cf0 \cb10 \kerning1\expnd0\expndtw0 {\listtext	\'95	}\expnd0\expndtw0\kerning0
+\ls3\ilvl0\cf0 \cb10 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
 frame
 \f2 \'d6\'d0\'b5\'c4
 \f8 X,Y
@@ -893,7 +895,7 @@ frame
 \f8 supLayer
 \f2 \'b5\'c4\'d7\'f3\'c9\'cf\'bd\'c7\'b5\'c4\'be\'e0\'c0\'eb
 \f8 \cb13 \
-\ls3\ilvl0\cb10 \kerning1\expnd0\expndtw0 {\listtext	\'95	}\expnd0\expndtw0\kerning0
+\ls3\ilvl0\cb10 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
 position
 \f2 \'d6\'d0\'b5\'c4
 \f8 X,Y
@@ -903,7 +905,7 @@ position
 \f8 supLayer
 \f2 \'b5\'c4\'d7\'f3\'c9\'cf\'bd\'c7\'b5\'c4\'be\'e0\'c0\'eb
 \f8 \cb13 \
-\ls3\ilvl0\cb10 \kerning1\expnd0\expndtw0 {\listtext	\'95	}\expnd0\expndtw0\kerning0
+\ls3\ilvl0\cb10 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
 anchorPoint
 \f2 \'d6\'d0\'b5\'c4
 \f8 X,Y
@@ -955,7 +957,7 @@ frame.origin.y = - anchorPoint.y * bounds.size.height + position.y\'a3\'bb\cb13 
 \f8 \cb13 \
 \pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
 \ls4\ilvl0
-\b0\fs24 \cf0 \cb10 \kerning1\expnd0\expndtw0 {\listtext	\'95	}
+\b0\fs24 \cf0 \cb10 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}
 \f2 \expnd0\expndtw0\kerning0
 \'c3\'aa\'b5\'e3\'b8\'c4\'b1\'e4
 \f8 , position
@@ -963,7 +965,7 @@ frame.origin.y = - anchorPoint.y * bounds.size.height + position.y\'a3\'bb\cb13 
 \f8 , frame
 \f2 \'b1\'e4\'bb\'af
 \f8 \cb13 \
-\ls4\ilvl0\cb10 \kerning1\expnd0\expndtw0 {\listtext	\'95	}\expnd0\expndtw0\kerning0
+\ls4\ilvl0\cb10 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
 frame
 \f2 \'b1\'e4\'bb\'af
 \f8 , 
@@ -971,7 +973,7 @@ frame
 \f8 , position
 \f2 \'b1\'e4\'bb\'af
 \f8 \cb13 \
-\ls4\ilvl0\cb10 \kerning1\expnd0\expndtw0 {\listtext	\'95	}\expnd0\expndtw0\kerning0
+\ls4\ilvl0\cb10 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
 position
 \f2 \'b1\'e4\'bb\'af
 \f8 , 
@@ -1279,7 +1281,7 @@ NSLog(@"Linked in %f ms", linkTime *1000.0);\
 \f0 \cf2 \cb3 \kerning1\expnd0\expndtw0 - (\cf5 void\cf2 )setCoverImage \{
 \f1\fs24 \cf0 \
 
-\f0\fs28 \cf2     \cf4 NSURL\cf2  *fileURL = [\cf4 NSURL\cf2  \cf8 URLWithString\cf2 :\cf5 self\cf2 .\cf6 filePath\cf2 ];
+\f0\fs28 \cf2     \cf4 NSURL\cf2  *fileURL = [\cf4 NSURL\cf2  \cf8 URLWithString\cf2 :\cf5 self\cf2 .\cf6 \cb3 filePath\cf2 \cb3 ];
 \f1\fs24 \cf0 \
 
 \f0\fs28 \cf2     \cf4 AVURLAsset\cf2  *asset = [\cf4 AVURLAsset\cf2  \cf8 URLAssetWithURL\cf2 :fileURL \cf8 options\cf2 :\cf5 nil\cf2 ];
@@ -1312,13 +1314,13 @@ NSLog(@"Linked in %f ms", linkTime *1000.0);\
 \f0\fs28 \cf2                 \cf4 NSDictionary\cf2  *d = [metadataItem.\cf4 value\cf2  \cf8 copyWithZone\cf2 :\cf5 nil\cf2 ];
 \f1\fs24 \cf0 \
 
-\f0\fs28 \cf2                 [\cf5 self\cf2 .\cf6 coverImageView\cf2  \cf8 setImage\cf2 :[\cf4 UIImage\cf2  \cf8 imageWithData\cf2 :[d \cf8 objectForKey\cf2 :\cf34 @"data"\cf2 ]]];
+\f0\fs28 \cf2                 [\cf5 self\cf2 .\cf6 \cb3 coverImageView\cf2 \cb3  \cf8 setImage\cf2 :[\cf4 UIImage\cf2  \cf8 imageWithData\cf2 :[d \cf8 objectForKey\cf2 :\cf34 @"data"\cf2 ]]];
 \f1\fs24 \cf0 \
 
 \f0\fs28 \cf2             \} \cf5 else\cf2  \cf5 if\cf2  ([metadataItem.\cf4 keySpace\cf2  \cf8 isEqualToString\cf2 :\cf4 AVMetadataKeySpaceiTunes\cf2 ]) \{
 \f1\fs24 \cf0 \
 
-\f0\fs28 \cf2                 [\cf5 self\cf2 .\cf6 coverImageView\cf2  \cf8 setImage\cf2 :[\cf4 UIImage\cf2  \cf8 imageWithData\cf2 :[metadataItem.\cf4 value\cf2  \cf8 copyWithZone\cf2 :\cf5 nil\cf2 ]]];
+\f0\fs28 \cf2                 [\cf5 self\cf2 .\cf6 \cb3 coverImageView\cf2 \cb3  \cf8 setImage\cf2 :[\cf4 UIImage\cf2  \cf8 imageWithData\cf2 :[metadataItem.\cf4 value\cf2  \cf8 copyWithZone\cf2 :\cf5 nil\cf2 ]]];
 \f1\fs24 \cf0 \
 
 \f0\fs28 \cf2             \}
@@ -1327,7 +1329,7 @@ NSLog(@"Linked in %f ms", linkTime *1000.0);\
 \f0\fs28 \cf2         \} \cf5 else\cf2  \{
 \f1\fs24 \cf0 \
 
-\f0\fs28 \cf2             [\cf5 self\cf2  \cf49 getContentAndCoverImage\cf2 ];
+\f0\fs28 \cf2             [\cf5 self\cf2  \cf49 \cb3 getContentAndCoverImage\cf2 \cb3 ];
 \f1\fs24 \cf0 \
 
 \f0\fs28 \cf2         \}
@@ -1350,7 +1352,7 @@ NSLog(@"Linked in %f ms", linkTime *1000.0);\
 \f0\fs28 \cf2                     parameters:(\cf5 nullable\cf2  \cf5 id\cf2 )parameters
 \f1\fs24 \cf0 \
 
-\f0\fs28 \cf2      constructingBodyWithBlock:(\cf5 nullable\cf2  \cf5 void\cf2  (^)(\cf5 id\cf2 <\cf6 AFMultipartFormData\cf2 > \cf5 _Nonnull\cf2 ))block
+\f0\fs28 \cf2      constructingBodyWithBlock:(\cf5 nullable\cf2  \cf5 void\cf2  (^)(\cf5 id\cf2 <\cf6 \cb3 AFMultipartFormData\cf2 \cb3 > \cf5 _Nonnull\cf2 ))block
 \f1\fs24 \cf0 \
 
 \f0\fs28 \cf2                        success:(\cf5 nullable\cf2  \cf5 void\cf2  (^)(\cf4 NSURLSessionDataTask\cf2  * \cf5 _Nonnull\cf2 , \cf5 id\cf2  \cf5 _Nullable\cf2 ))success
@@ -1362,7 +1364,7 @@ NSLog(@"Linked in %f ms", linkTime *1000.0);\
 \f0\fs28 \cf2 \{
 \f1\fs24 \cf0 \
 
-\f0\fs28 \cf2     \cf5 return\cf2  [\cf5 self\cf2  \cf49 POST\cf2 :URLString \cf49 parameters\cf2 :parameters \cf49 constructingBodyWithBlock\cf2 :block \cf49 progress\cf2 :\cf5 nil\cf2  \cf49 success\cf2 :success \cf49 failure\cf2 :failure];
+\f0\fs28 \cf2     \cf5 return\cf2  [\cf5 self\cf2  \cf49 \cb3 POST\cf2 \cb3 :URLString \cf49 \cb3 parameters\cf2 \cb3 :parameters \cf49 \cb3 constructingBodyWithBlock\cf2 \cb3 :block \cf49 \cb3 progress\cf2 \cb3 :\cf5 nil\cf2  \cf49 \cb3 success\cf2 \cb3 :success \cf49 \cb3 failure\cf2 \cb3 :failure];
 \f1\fs24 \cf0 \
 
 \f0\fs28 \cf2 \}
@@ -1455,7 +1457,7 @@ NSLog(@"Linked in %f ms", linkTime *1000.0);\
 \f0\fs28 \cf2         \cf4 NSData\cf2  *data = [\cf4 NSJSONSerialization\cf2  \cf8 dataWithJSONObject\cf2 :dataArr \cf8 options\cf2 :\cf7 0\cf2  \cf8 error\cf2 :\cf5 NULL\cf2 ];
 \f1\fs24 \cf0 \
 
-\f0\fs28 \cf2         [\cf6 FCFileManager\cf2  \cf49 writeFileAtPath\cf2 :\cf34 @"002.json"\cf2  \cf49 content\cf2 :data];
+\f0\fs28 \cf2         [\cf6 \cb3 FCFileManager\cf2 \cb3  \cf49 \cb3 writeFileAtPath\cf2 \cb3 :\cf34 @"002.json"\cf2  \cf49 \cb3 content\cf2 \cb3 :data];
 \f1\fs24 \cf0 \
 
 \f0\fs28 \cf2     \}
@@ -1474,7 +1476,7 @@ NSLog(@"Linked in %f ms", linkTime *1000.0);\
 \f0\fs28 \cf2     \cf5 if\cf2  (\cf5 self\cf2 ) \{
 \f1\fs24 \cf0 \
 
-\f0\fs28 \cf2         \cf6 _pointerArray\cf2  = [\cf4 NSPointerArray\cf2  \cf8 weakObjectsPointerArray\cf2 ];
+\f0\fs28 \cf2         \cf6 \cb3 _pointerArray\cf2 \cb3  = [\cf4 NSPointerArray\cf2  \cf8 weakObjectsPointerArray\cf2 ];
 \f1\fs24 \cf0 \
 
 \f0\fs28 \cf2         
@@ -1495,7 +1497,7 @@ NSLog(@"Linked in %f ms", linkTime *1000.0);\
 \f0\fs28 \cf2         \cf5 if\cf2  (firstObject) \{
 \f1\fs24 \cf0 \
 
-\f0\fs28 \cf2             [\cf6 _pointerArray\cf2  \cf8 addPointer\cf2 :(\cf5 __bridge\cf2  \cf5 void\cf2  *)firstObject];
+\f0\fs28 \cf2             [\cf6 \cb3 _pointerArray\cf2 \cb3  \cf8 addPointer\cf2 :(\cf5 __bridge\cf2  \cf5 void\cf2  *)firstObject];
 \f1\fs24 \cf0 \
 
 \f0\fs28 \cf2             arg = \cf9 va_arg\cf2 (params, \cf5 id\cf2 );
@@ -1504,7 +1506,7 @@ NSLog(@"Linked in %f ms", linkTime *1000.0);\
 \f0\fs28 \cf2             \cf5 while\cf2  (arg) \{
 \f1\fs24 \cf0 \
 
-\f0\fs28 \cf2                 [\cf6 _pointerArray\cf2  \cf8 addPointer\cf2 :(\cf5 __bridge\cf2  \cf5 void\cf2  *)arg];
+\f0\fs28 \cf2                 [\cf6 \cb3 _pointerArray\cf2 \cb3  \cf8 addPointer\cf2 :(\cf5 __bridge\cf2  \cf5 void\cf2  *)arg];
 \f1\fs24 \cf0 \
 
 \f0\fs28 \cf2                 arg = \cf9 va_arg\cf2 (params, \cf5 id\cf2 );
@@ -1534,6 +1536,73 @@ NSLog(@"Linked in %f ms", linkTime *1000.0);\
 \pard\pardeftab720\partightenfactor0
 \cf0 \
 \
+\pard\tx692\pardeftab692\pardirnatural\partightenfactor0
+
+\f0 \cf2 \cb3 \kerning1\expnd0\expndtw0 - (\cf5 BOOL\cf2 )webView:(\cf4 UIWebView\cf2  *)webView shouldStartLoadWithRequest:(\cf4 NSURLRequest\cf2  *)request navigationType:(\cf4 UIWebViewNavigationType\cf2 )navigationType \{
+\f1\fs24 \cf0 \
+
+\f0\fs28 \cf2     \cf22 //
+\f2 \'d4\'a4\'c0\'c0\'cd\'bc\'c6\'ac
+\f1\fs24 \cf0 \
+
+\f0\fs28 \cf2     \cf5 if\cf2  ([request.\cf4 URL\cf2 .\cf4 scheme\cf2  \cf8 isEqualToString\cf2 :\cf34 @"image-preview"\cf2 ]) \{
+\f1\fs24 \cf0 \
+
+\f0\fs28 \cf2         \cf4 NSString\cf2 * path = [request.\cf4 URL\cf2 .\cf4 absoluteString\cf2  \cf8 substringFromIndex\cf2 :[\cf34 @"image-preview:"\cf2  \cf8 length\cf2 ]];
+\f1\fs24 \cf0 \
+
+\f0\fs28 \cf2         path = [path \cf8 \cb3 \ulth \ulc8 s\ulnone tringByAddingPercentEscapesUsingEncoding\cf2 :\cf8 NSUTF8StringEncoding\cf2 ];
+\f1\fs24 \cf0 \
 \
+\pard\tx692\pardeftab692\pardirnatural\partightenfactor0
+
+\f0\fs28 \cf2         [\cf5 self\cf2 .\cf6 imageView\cf2  \cf49 setImageWithURL\cf2 :[\cf4 NSURL\cf2  \cf8 URLWithString\cf2 :path] \cf49 placeholderImage\cf2 :[\cf4 UIImage\cf2  \cf8 imageNamed\cf2 :\cf34 @"default"\cf2 ] \cf49 usingActivityIndicatorStyle\cf2 :\cf8 UIActivityIndicatorViewStyleWhite\cf2 ];
+\f1\fs24 \cf0 \
+
+\f0\fs28 \cf2         
+\f1\fs24 \cf0 \
+
+\f0\fs28 \cf2         [\cf4 UIView\cf2  \cf8 animateWithDuration\cf2 :\cf7 0.2f\cf2  \cf8 animations\cf2 :^\{
+\f1\fs24 \cf0 \
+
+\f0\fs28 \cf2             \cf5 self\cf2 .\cf6 imageView\cf2 .\cf4 alpha\cf2  = \cf7 1.0f\cf2 ;
+\f1\fs24 \cf0 \
+
+\f0\fs28 \cf2         \}];
+\f1\fs24 \cf0 \
+
+\f0\fs28 \cf2         
+\f1\fs24 \cf0 \
+
+\f0\fs28 \cf2         \cf5 return\cf2  \cf5 NO\cf2 ;
+\f1\fs24 \cf0 \
+
+\f0\fs28 \cf2     \}
+\f1\fs24 \cf0 \
+
+\f0\fs28 \cf2     \cf5 return\cf2  \cf5 YES\cf2 ;
+\f1\fs24 \cf0 \
+
+\f0\fs28 \cf2 \}
+\f1\fs24 \cf0 \
+\
+
+\f0\fs28 \cf2 - (\cf5 void\cf2 )webViewDidFinishLoad:(\cf4 UIWebView\cf2  *)webView \{
+\f1\fs24 \cf0 \
+
+\f0\fs28 \cf2     [\cf5 self\cf2 .\cf6 webView\cf2  \cf8 stringByEvaluatingJavaScriptFromString\cf2 :\cf34 @"function assignImageClickAction()\{var imgs=document.getElementsByTagName('img');var length=imgs.length;for(var i=0;i<length;i++)\{img=imgs[i];img.onclick=function()\{window.location.href='image-preview:'+this.src\}\}\}"\cf2 ];
+\f1\fs24 \cf0 \
+
+\f0\fs28 \cf2     
+\f1\fs24 \cf0 \
+
+\f0\fs28 \cf2     [\cf5 self\cf2 .\cf6 webView\cf2  \cf8 stringByEvaluatingJavaScriptFromString\cf2 :\cf34 @"assignImageClickAction();"\cf2 ];
+\f1\fs24 \cf0 \
+
+\f0\fs28 \cf2 \}
+\f2 \cf0 \cb10 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720\partightenfactor0
+\cf0 \
 \
 }
