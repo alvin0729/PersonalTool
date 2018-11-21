@@ -51,6 +51,7 @@
 		CF48AC1A1EE4E35B009C4AD7 /* UIImageView+CircleImage.m in Sources */ = {isa = PBXBuildFile; fileRef = CF48AC191EE4E35B009C4AD7 /* UIImageView+CircleImage.m */; };
 		CF581C492004C9B300D6FE17 /* UIControl+ADControl.m in Sources */ = {isa = PBXBuildFile; fileRef = CF581C472004C9B200D6FE17 /* UIControl+ADControl.m */; };
 		CF584CFF1F95E3F100F0DFCC /* UIViewController+Swizzled.m in Sources */ = {isa = PBXBuildFile; fileRef = CF584CFD1F95E3F100F0DFCC /* UIViewController+Swizzled.m */; };
+		CF5D3580216D8AC00029F0BE /* DrawCircleProgressButton.m in Sources */ = {isa = PBXBuildFile; fileRef = CF5D357E216D8AC00029F0BE /* DrawCircleProgressButton.m */; };
 		CF5E3ED21F20BCD3009B40A8 /* WWDropDownMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = CF5E3ED11F20BCD3009B40A8 /* WWDropDownMenu.m */; };
 		CF6012DC1EFA3645007CA737 /* LxGridViewFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = CF6012DB1EFA3645007CA737 /* LxGridViewFlowLayout.m */; };
 		CF6012DF1EFA36EE007CA737 /* UIView+TZLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = CF6012DE1EFA36EE007CA737 /* UIView+TZLayout.m */; };
@@ -496,6 +497,8 @@
 		CF581C482004C9B300D6FE17 /* UIControl+ADControl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIControl+ADControl.h"; sourceTree = "<group>"; };
 		CF584CFD1F95E3F100F0DFCC /* UIViewController+Swizzled.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Swizzled.m"; sourceTree = "<group>"; };
 		CF584CFE1F95E3F100F0DFCC /* UIViewController+Swizzled.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Swizzled.h"; sourceTree = "<group>"; };
+		CF5D357E216D8AC00029F0BE /* DrawCircleProgressButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrawCircleProgressButton.m; sourceTree = "<group>"; };
+		CF5D357F216D8AC00029F0BE /* DrawCircleProgressButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrawCircleProgressButton.h; sourceTree = "<group>"; };
 		CF5E3ED01F20BCD3009B40A8 /* WWDropDownMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WWDropDownMenu.h; sourceTree = "<group>"; };
 		CF5E3ED11F20BCD3009B40A8 /* WWDropDownMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WWDropDownMenu.m; sourceTree = "<group>"; };
 		CF6012DA1EFA3645007CA737 /* LxGridViewFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LxGridViewFlowLayout.h; sourceTree = "<group>"; };
@@ -2627,6 +2630,8 @@
 		E1D428E21FDCF8B300D3A51C /* 自定义控件 */ = {
 			isa = PBXGroup;
 			children = (
+				CF5D357F216D8AC00029F0BE /* DrawCircleProgressButton.h */,
+				CF5D357E216D8AC00029F0BE /* DrawCircleProgressButton.m */,
 				CF66933D1FDF65BA00444670 /* JNJProgressButton.h */,
 				CF66933C1FDF65BA00444670 /* JNJProgressButton.m */,
 				E1D428E41FDCF8D000D3A51C /* QKYDelayButton.h */,
@@ -3364,6 +3369,7 @@
 				CF0A7D4B20CA7C2A001CEDE7 /* UIView+ShortCut.m in Sources */,
 				E15D70411EF5231400513AE6 /* UIImage+MHSnap.m in Sources */,
 				CF862E6F2011BA8000140F31 /* TGFileTool.m in Sources */,
+				CF5D3580216D8AC00029F0BE /* DrawCircleProgressButton.m in Sources */,
 				E15D70401EF5231400513AE6 /* UIImage+MHOrientation.m in Sources */,
 				CF48AC131EE4E32A009C4AD7 /* UIImage+Orientaion.m in Sources */,
 				CF7AF74A1F2C5E6200997D53 /* UIScrollView+ScrollAnimation.m in Sources */,
