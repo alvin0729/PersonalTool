@@ -23,17 +23,18 @@ for (animalName, legCount) in numberOfLegs {
 }
 let minutes = 60
 for tickMark in 0..<minutes {
-    // render the tick mark each minute (60 times)
+    // 每一分钟都渲染一个刻度线（60次）
 }
 //❤️4.0
 let minuteInterval = 5
+//使用 stride(from:to:by:) 函数跳过不需要的标记。
 for tickMark in stride(from: 0, to: minutes, by: minuteInterval) {
-    // render the tick mark every 5 minutes (0, 5, 10, 15 ... 45, 50, 55)
+    // 每5分钟渲染一个刻度线（0, 5, 10, 15 ... 45, 50, 55）
 }
 let hours = 12
 let hourInterval = 3
 for tickMark in stride(from: 3, through: hours, by: hourInterval) {
-    // render the tick mark every 3 hours (3, 6, 9, 12)
+    // 每3小时渲染一个刻度线（3, 6, 9, 12）
 }
 
 //: ### While循环
@@ -80,6 +81,8 @@ print("Game over!")
 >不存在隐式的贯穿No Implicit Fallthrough\
 >每一个case分支都必须包含至少一条语句
  */
+//如果想要显式贯穿 case 分支，请使用 fallthrough 语句，详情请参考贯穿。
+
 let anotherCharacter: Character = "a"
 switch anotherCharacter {
 case "a", "A":
@@ -218,6 +221,8 @@ default:
     description += " an integer."
 }
 print(description)
+
+//fallthrough 关键字不会检查它下一个将会落入执行的 case 中的匹配条件。fallthrough 简单地使代码继续连接到下一个 case 中的代码，这和 C 语言标准中的 switch 语句特性是一样的。
 /*:
 >带标签的语句statement label\
 >对于一个条件语句，可以使用break加标签的方式来结束这个被标记的语句\

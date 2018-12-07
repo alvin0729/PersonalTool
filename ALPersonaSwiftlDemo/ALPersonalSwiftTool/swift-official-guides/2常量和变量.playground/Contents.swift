@@ -27,7 +27,7 @@ print(friendlyWelcome, terminator: "")
 print(friendlyWelcome, terminator: "\n")
 
 //Swift用字符串插值(string interpolation)
-print("The current value of friendlyWelocme is \(friendlyWelcome)")
+print("The current value of friendlyWelocme is \(friendlyWelcome)", " Separator Test!", separator:"--")
 //:### 注释
 //: - callout(Note):\
 //:  /`*`这是一个多行注释\
@@ -126,6 +126,7 @@ var serverResponseCode: Int? = 404
 serverResponseCode = nil
 //serverResponseCode现在不包含值
 var surveyAnswer: String?
+// surveyAnswer 被自动设置为 nil
 //: - callout(Note):if语句以及强制解析(当你知道可选类型确实包含值之后)
 if convertedNumber != nil {
     print("convertedNumber contains some integer value.")
@@ -171,7 +172,7 @@ let implicitString: String = assumedString
 if assumedString != nil {
     print(assumedString)
 }
-
+//可以在可选绑定中使用隐式解析可选类型来检查并解析它的值：
 if let definiteString = assumedString {
     print(definiteString)
 }
@@ -203,10 +204,19 @@ let age = 3
 assert(age >= 0, "A person's age cannot be less than zero")
 
 //❤️4.0
+//如果代码已经检查了条件，你可以使用 assertionFailure(_:file:line:) 函数来表明断言失败了，例如：
+if age > 10 {
+    print("You can ride the roller-coaster or the ferris wheel.")
+} else if age > 0 {
+    print("You can ride the ferris wheel.")
+} else {
+    assertionFailure("A person's age can't be less than zero.")
+}
 //:### Enforcing Preconditions
 /*:
  For example, use a precondition to check that a subscript is not out of bounds, or to check that a function has been passed a valid value.
  */
+// 当表达式的结果为 false 的时候这条信息会被显示：
 // In the implementation of a subscript...
 var index: Int = 1
 precondition(index > 0, "Index must be greater than zero.")

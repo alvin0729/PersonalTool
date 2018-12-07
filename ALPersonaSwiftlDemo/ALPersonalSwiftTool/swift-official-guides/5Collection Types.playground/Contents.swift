@@ -1,5 +1,8 @@
 import UIKit
 //: ## Arrays
+//写 Swift 数组应该遵循像 Array<Element> 这样的形式，其中 Element 是这个数组中唯一允许存在的数据类型。我们也可以使用像 [Element] 这样的简单语法。
+
+
 //创建一个空数组
 var someInts = [Int]()
 print("SomeInts is of type [Int] with \(someInts.count) items.")
@@ -47,11 +50,17 @@ for(index, value)in shoppingList.enumerated(){
 >可以自定义类型符合Swift标准库中的Hashable协议\
 >Hashable协议符合Equatable协议（实现==），==的实现必须满足a==a; a==b, b==a;a==b && b==c,=> a==c
  */
+//a == a(自反性)
+//a == b 意味着 b == a(对称性)
+//a == b && b == c 意味着 a == c(传递性)
+
 //创建和构造一个空的集合
 var letters = Set<Character>()
 print("letters is of type Set<Character> with \(letters.count) items.")
 letters.insert("a")
 letters = []
+
+//letters 现在是一个空的 Set, 但是它依然是 Set<Character> 类型
 
 //用数组字面量创建集合
 var favoriteGenres: Set = ["Rock", "Classical", "Hip hop"]
@@ -83,6 +92,13 @@ for genre in favoriteGenres.sorted() {    //??
     print("\(genre)")
 }
 //:## 集合操作
+/*:
+ >* 使用 intersection(_:) 方法根据两个集合中都包含的值创建的一个新的集合。
+ >* 使用 symmetricDifference(_:) 方法根据在一个集合中但不在两个集合中的值创建一个新的集合。
+ >* 使用 union(_:) 方法根据两个集合的值创建一个新的集合。
+ >* 使用 subtracting(_:) 方法根据不在该集合中的值创建一个新的集合。
+ */
+
 let oddDigits: Set = [1, 3, 5, 7, 9]
 let evenDigits: Set = [0, 2, 4 , 6, 8]
 let singleDigitPrimeNumbers: Set = [2, 3, 5, 7]
@@ -113,10 +129,12 @@ farmAnimals.isDisjoint(with: cityAnimals)
 // true”
 //:## Dictionary
 //创建一个空字典
-var namesOfIntegers = [Int : String]()  //??
+var namesOfIntegers = [Int : String]()  //namesOfIntegers 是一个空的 [Int: String] 字典
 namesOfIntegers[16] = "sixteen"
 namesOfIntegers = [:]
+// namesOfIntegers 又成为了一个 [Int: String] 类型的空字典
 //:### 用字典字面量创建字典
+
 //var airports: [String: String] = ["XYZ" : "Toronto Pearson", "DUB" : "Dublin"]
 var airports = ["XYZ" : "Toronto Pearson", "DUB" : "Dublin"]
 //访问和修改字典
@@ -140,6 +158,9 @@ if let airportName = airports["DUB"] {
 }
 airports["APL"] = "Apple Internation"
 airports["APL"] = nil
+// APL 现在被移除了
+
+//这个方法在键值对存在的情况下会移除该键值对并且返回被移除的值或者在没有值的情况下返回 nil：
 if let removedValue = airports.removeValue(forKey: "DUB") {
     print("The removed airport's name is \(removedValue)")
 }else{
@@ -150,10 +171,16 @@ for (airportCode, airportName) in airports{
     print("\(airportCode): \(airportName)")
 }
 
+for airportCode in airports.keys {
+    print("Airport code: \(airportCode)")
+}
+// Airport code: YYZ
+// Airport code: LHR
 for airportName in airports.values {
     print("Airport name: \(airportName)")
 }
 
+//作为某个接受 Array 实例的 API 的参数
 let airportCodes = [String](airports.keys)
 // airportCodes is ["YYZ", "LHR"]
 

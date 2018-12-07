@@ -3,27 +3,72 @@
    version = "3.0">
    <TimelineItems>
       <LoggerValueHistoryTimelineItem
-         documentLocation = "file:///Users/alvin/GitLab/PersonalTool/ALPersonaSwiftlDemo/ALPersonalSwiftTool/swift-official-guides/4Strings%20and%20Character.playground#CharacterRangeLen=9&amp;CharacterRangeLoc=2170&amp;EndingColumnNumber=22&amp;EndingLineNumber=88&amp;StartingColumnNumber=13&amp;StartingLineNumber=88&amp;Timestamp=533314114.168844"
+         documentLocation = "file:///Users/dongdongkeji/GitLab/PersonalTool/ALPersonaSwiftlDemo/ALPersonalSwiftTool/swift-official-guides/4Strings%20and%20Character.playground#CharacterRangeLen=9&amp;CharacterRangeLoc=2852&amp;EndingColumnNumber=11&amp;EndingLineNumber=116&amp;StartingColumnNumber=2&amp;StartingLineNumber=116&amp;Timestamp=565852079.6321419"
          selectedRepresentationIndex = "0"
          shouldTrackSuperviewWidth = "NO">
       </LoggerValueHistoryTimelineItem>
       <LoggerValueHistoryTimelineItem
-         documentLocation = "file:///Users/alvin/GitLab/PersonalTool/ALPersonaSwiftlDemo/ALPersonalSwiftTool/swift-official-guides/4Strings%20and%20Character.playground#CharacterRangeLen=15&amp;CharacterRangeLoc=63&amp;EndingColumnNumber=2&amp;EndingLineNumber=4&amp;StartingColumnNumber=16&amp;StartingLineNumber=3&amp;Timestamp=533314114.168985"
+         documentLocation = "file:///Users/dongdongkeji/GitLab/PersonalTool/ALPersonaSwiftlDemo/ALPersonalSwiftTool/swift-official-guides/4Strings%20and%20Character.playground#CharacterRangeLen=15&amp;CharacterRangeLoc=214&amp;EndingColumnNumber=2&amp;EndingLineNumber=8&amp;StartingColumnNumber=16&amp;StartingLineNumber=7&amp;Timestamp=565852079.632283"
          selectedRepresentationIndex = "0"
          shouldTrackSuperviewWidth = "NO">
       </LoggerValueHistoryTimelineItem>
       <LoggerValueHistoryTimelineItem
-         documentLocation = "file:///Users/alvin/GitLab/PersonalTool/ALPersonaSwiftlDemo/ALPersonalSwiftTool/swift-official-guides/4Strings%20and%20Character.playground#CharacterRangeLen=17&amp;CharacterRangeLoc=2395&amp;EndingColumnNumber=27&amp;EndingLineNumber=93&amp;StartingColumnNumber=10&amp;StartingLineNumber=93&amp;Timestamp=533314114.169088"
+         documentLocation = "file:///Users/dongdongkeji/GitLab/PersonalTool/ALPersonaSwiftlDemo/ALPersonalSwiftTool/swift-official-guides/4Strings%20and%20Character.playground#CharacterRangeLen=17&amp;CharacterRangeLoc=3077&amp;EndingColumnNumber=16&amp;EndingLineNumber=121&amp;StartingColumnNumber=51&amp;StartingLineNumber=120&amp;Timestamp=565852079.632396"
          selectedRepresentationIndex = "0"
          shouldTrackSuperviewWidth = "NO">
       </LoggerValueHistoryTimelineItem>
       <LoggerValueHistoryTimelineItem
-         documentLocation = "file:///Users/alvin/GitLab/PersonalTool/ALPersonaSwiftlDemo/ALPersonalSwiftTool/swift-official-guides/4Strings%20and%20Character.playground#CharacterRangeLen=16&amp;CharacterRangeLoc=2945&amp;EndingColumnNumber=0&amp;EndingLineNumber=106&amp;StartingColumnNumber=44&amp;StartingLineNumber=105&amp;Timestamp=533314114.169208"
+         documentLocation = "file:///Users/dongdongkeji/GitLab/PersonalTool/ALPersonaSwiftlDemo/ALPersonalSwiftTool/swift-official-guides/4Strings%20and%20Character.playground#CharacterRangeLen=16&amp;CharacterRangeLoc=3709&amp;EndingColumnNumber=49&amp;EndingLineNumber=134&amp;StartingColumnNumber=33&amp;StartingLineNumber=134&amp;Timestamp=565852079.632486"
          selectedRepresentationIndex = "0"
          shouldTrackSuperviewWidth = "NO">
       </LoggerValueHistoryTimelineItem>
       <LoggerValueHistoryTimelineItem
-         documentLocation = "file:///Users/alvin/GitLab/PersonalTool/ALPersonaSwiftlDemo/ALPersonalSwiftTool/swift-official-guides/4Strings%20and%20Character.playground#CharacterRangeLen=5&amp;CharacterRangeLoc=3704&amp;EndingColumnNumber=61&amp;EndingLineNumber=125&amp;StartingColumnNumber=56&amp;StartingLineNumber=125&amp;Timestamp=533314114.169307"
+         documentLocation = "file:///Users/dongdongkeji/GitLab/PersonalTool/ALPersonaSwiftlDemo/ALPersonalSwiftTool/swift-official-guides/4Strings%20and%20Character.playground#CharacterRangeLen=5&amp;CharacterRangeLoc=4457&amp;EndingColumnNumber=50&amp;EndingLineNumber=154&amp;StartingColumnNumber=45&amp;StartingLineNumber=154&amp;Timestamp=565852079.632571"
+         selectedRepresentationIndex = "0"
+         shouldTrackSuperviewWidth = "NO">
+      </LoggerValueHistoryTimelineItem>
+      <LoggerValueHistoryTimelineItem
+         documentLocation = "file:///Users/dongdongkeji/GitLab/PersonalTool/ALPersonaSwiftlDemo/ALPersonalSwiftTool/swift-official-guides/4Strings%20and%20Character.playground#CharacterRangeLen=17&amp;CharacterRangeLoc=611&amp;EndingColumnNumber=22&amp;EndingLineNumber=23&amp;StartingColumnNumber=5&amp;StartingLineNumber=23&amp;Timestamp=565852079.632661"
+         selectedRepresentationIndex = "0"
+         shouldTrackSuperviewWidth = "NO">
+      </LoggerValueHistoryTimelineItem>
+      <LoggerValueHistoryTimelineItem
+         documentLocation = "file:///Users/dongdongkeji/GitLab/PersonalTool/ALPersonaSwiftlDemo/ALPersonalSwiftTool/swift-official-guides/4Strings%20and%20Character.playground#CharacterRangeLen=10&amp;CharacterRangeLoc=970&amp;EndingColumnNumber=15&amp;EndingLineNumber=38&amp;StartingColumnNumber=5&amp;StartingLineNumber=38&amp;Timestamp=565852079.632745"
+         selectedRepresentationIndex = "0"
+         shouldTrackSuperviewWidth = "NO">
+      </LoggerValueHistoryTimelineItem>
+      <LoggerValueHistoryTimelineItem
+         documentLocation = "file:///Users/dongdongkeji/GitLab/PersonalTool/ALPersonaSwiftlDemo/ALPersonalSwiftTool/swift-official-guides/4Strings%20and%20Character.playground#CharacterRangeLen=20&amp;CharacterRangeLoc=736&amp;EndingColumnNumber=25&amp;EndingLineNumber=30&amp;StartingColumnNumber=5&amp;StartingLineNumber=30&amp;Timestamp=565852079.632829"
+         selectedRepresentationIndex = "0"
+         shouldTrackSuperviewWidth = "NO">
+      </LoggerValueHistoryTimelineItem>
+      <LoggerValueHistoryTimelineItem
+         documentLocation = "file:///Users/dongdongkeji/GitLab/PersonalTool/ALPersonaSwiftlDemo/ALPersonalSwiftTool/swift-official-guides/4Strings%20and%20Character.playground#CharacterRangeLen=14&amp;CharacterRangeLoc=1529&amp;EndingColumnNumber=19&amp;EndingLineNumber=61&amp;StartingColumnNumber=5&amp;StartingLineNumber=61&amp;Timestamp=565852079.632915"
+         selectedRepresentationIndex = "0"
+         shouldTrackSuperviewWidth = "NO">
+      </LoggerValueHistoryTimelineItem>
+      <LoggerValueHistoryTimelineItem
+         documentLocation = "file:///Users/dongdongkeji/GitLab/PersonalTool/ALPersonaSwiftlDemo/ALPersonalSwiftTool/swift-official-guides/4Strings%20and%20Character.playground#CharacterRangeLen=14&amp;CharacterRangeLoc=1491&amp;EndingColumnNumber=15&amp;EndingLineNumber=60&amp;StartingColumnNumber=1&amp;StartingLineNumber=60&amp;Timestamp=565852079.633008"
+         selectedRepresentationIndex = "0"
+         shouldTrackSuperviewWidth = "NO">
+      </LoggerValueHistoryTimelineItem>
+      <LoggerValueHistoryTimelineItem
+         documentLocation = "file:///Users/dongdongkeji/GitLab/PersonalTool/ALPersonaSwiftlDemo/ALPersonalSwiftTool/swift-official-guides/4Strings%20and%20Character.playground#CharacterRangeLen=16&amp;CharacterRangeLoc=1709&amp;EndingColumnNumber=0&amp;EndingLineNumber=68&amp;StartingColumnNumber=5&amp;StartingLineNumber=67&amp;Timestamp=565852079.6330971"
+         selectedRepresentationIndex = "0"
+         shouldTrackSuperviewWidth = "NO">
+      </LoggerValueHistoryTimelineItem>
+      <LoggerValueHistoryTimelineItem
+         documentLocation = "file:///Users/dongdongkeji/GitLab/PersonalTool/ALPersonaSwiftlDemo/ALPersonalSwiftTool/swift-official-guides/4Strings%20and%20Character.playground#CharacterRangeLen=60&amp;CharacterRangeLoc=3533&amp;EndingColumnNumber=0&amp;EndingLineNumber=131&amp;StartingColumnNumber=1&amp;StartingLineNumber=130&amp;Timestamp=565852079.633184"
+         selectedRepresentationIndex = "0"
+         shouldTrackSuperviewWidth = "NO">
+      </LoggerValueHistoryTimelineItem>
+      <LoggerValueHistoryTimelineItem
+         documentLocation = "file:///Users/dongdongkeji/GitLab/PersonalTool/ALPersonaSwiftlDemo/ALPersonalSwiftTool/swift-official-guides/4Strings%20and%20Character.playground#CharacterRangeLen=60&amp;CharacterRangeLoc=3612&amp;EndingColumnNumber=0&amp;EndingLineNumber=133&amp;StartingColumnNumber=1&amp;StartingLineNumber=132&amp;Timestamp=565852079.633271"
+         selectedRepresentationIndex = "0"
+         shouldTrackSuperviewWidth = "NO">
+      </LoggerValueHistoryTimelineItem>
+      <LoggerValueHistoryTimelineItem
+         documentLocation = "file:///Users/dongdongkeji/GitLab/PersonalTool/ALPersonaSwiftlDemo/ALPersonalSwiftTool/swift-official-guides/4Strings%20and%20Character.playground#CharacterRangeLen=45&amp;CharacterRangeLoc=5577&amp;EndingColumnNumber=0&amp;EndingLineNumber=190&amp;StartingColumnNumber=0&amp;StartingLineNumber=189&amp;Timestamp=565852079.633388"
          selectedRepresentationIndex = "0"
          shouldTrackSuperviewWidth = "NO">
       </LoggerValueHistoryTimelineItem>

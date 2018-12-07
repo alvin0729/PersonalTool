@@ -7,6 +7,7 @@ func greet(person: String) -> String{
     return "Hello, " + person + "!"
 }
 print(greet(person: "Anna"))
+
 //:#### 函数参数与返回值(Function Parameters and Return Values)
 //: 无参数函数(Functions Without Parameters)
 func  sayHelloWorld() -> String{
@@ -105,6 +106,8 @@ arithmeticMean(1,2,3,4,5)
 arithmeticMean(3,8.25,18.75)
 //:#### 输入输出参数In-Out Parameters  
 //: - callout(Note):输入输出参数不能有默认值，而且可变参数不能有inout标记
+//函数参数默认是常量。试图在函数体中更改参数值将会导致编译错误。这意味着你不能错误地更改参数值。如果你想要一个函数可以修改参数的值，并且想要在这些修改在函数调用结束后仍然存在，那么就应该把这个参数定义为输入输出参数（In-Out Parameters）。
+
 func swapTwoInts(_ a: inout Int, _ b: inout Int){
     let temporaryA = a
     a = b
@@ -113,8 +116,10 @@ func swapTwoInts(_ a: inout Int, _ b: inout Int){
 }
 var someInt = 3
 var anotherInt = 107
+//当传入的参数作为输入输出参数时，需要在参数名前加 & 符，表示这个值可以被函数修改。
 swapTwoInts(&someInt, &anotherInt)
 print("someInt is now \(someInt), and anotherInt is now \(anotherInt)")
+//输入输出参数不能有默认值，而且可变参数不能用 inout 标记。
 //:#### 函数类型Function Types
 func addTwoInts(_ a: Int, _ b: Int) -> Int{
     return a + b
@@ -131,6 +136,8 @@ var mathFunction: (Int,Int) -> Int = addTwoInts
 mathFunction = multiplyTwoInts
 print("Result: \(mathFunction(2,3))")
 let anotherMathFuciton = addTwoInts
+// anotherMathFunction 被推断为 (Int, Int) -> Int 类型
+
 //: - 函数类型作为参数类型Function types as parameter types
 func printMathResult(_ mathFunction: (Int, Int) -> Int, _ a : Int,_ b: Int){
     print("Result: \(mathFunction(a,b))")
@@ -143,6 +150,7 @@ func stepForward(_ input: Int) -> Int{
 func stepBackward(_ input: Int) -> Int{
     return input - 1
 }
+//它的返回类型是 (Int) -> Int 类型的函数。
 func chooseStepFunction(backward: Bool) -> (Int) -> Int{
     return backward ? stepBackward : stepForward
 }
@@ -165,13 +173,15 @@ func chooseStepFunction1(backward: Bool) -> (Int) -> Int{
     return backward ? stepBackward : stepForward
 }
 var currentValue1 = -4
-let moveNearerToZero1 = chooseStepFunction(backward: currentValue > 0)
+let moveNearerToZero1 = chooseStepFunction1(backward: currentValue > 0)
 print("Counting to zero:")
 while currentValue1 != 0 {
     print("\(currentValue1)...")
     currentValue1 = moveNearerToZero1(currentValue1)
 }
 print("zero!")
+
+
 //: # 闭包（Closures)
 //:闭包是自包含的函数代码块\
 //:闭包可以捕获和存储其所在上下文中任意常量和变量的引用。Swift会为你管理在捕获过程中涉及到的所有内存操作。\
@@ -179,6 +189,14 @@ print("zero!")
 //:嵌套函数是一个有名字并可以捕获其封闭函数域内值的闭包\
 //:闭包表达式是一个利用轻量级语法所写的可以捕获其上下文中变量或常量值的匿名闭包
 //: ### 闭包表达式closure expressions
+/*
+ 利用上下文推断参数和返回值类型
+ 隐式返回单表达式闭包，即单表达式闭包可以省略 return 关键字
+ 参数名称缩写
+ 尾随闭包语法
+ */
+
+
 //sorted方法（The Sorted Method）返回正确排序的新数组，原数组不会被该方法修改
 let names = ["Chris","Alex","Ewa","Barry","Daniella"]
 //sorted(by:)方法接受一个闭包

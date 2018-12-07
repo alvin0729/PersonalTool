@@ -70,4 +70,12 @@ CGRect  CGRectMoveToCenter(CGRect rect, CGPoint center);
           animations:(void (^)(void))animations
           completion:(void (^)(BOOL))completion;
 
+/**
+ *  绘制cell分割线
+ *
+ *  @param rect      cell_rect
+ *  @param lineWidth 线宽
+ *  @param lineColor 线色
+ */
+- (void)drawCellSeparatorLine:(CGRect)rect lineWidth:(CGFloat)lineWidth lineColor:(UIColor *)lineColor;
 @end

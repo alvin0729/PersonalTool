@@ -472,4 +472,56 @@ static NSArray *dataSource;
     ALAppLog(@"___%s___",__FUNCTION__);
 }
 
+//RACSignal *phoneSignal=[_phoneTextField.rac_textSignal map:^id _Nullable(NSString * _Nullable value) {
+//    if ([XMTools valiMobile:_phoneTextField.text]) {
+//        return @(1);
+//    }else{
+//        return @(0);
+//    }
+//    if (_phoneTextField.text.length>=11) {
+//        return @(1);
+//    }else{
+//        return @(0);
+//    }
+//
+//    return @(0);
+//}];
+//@weakify(self);
+//[RACObserve(self.phoneTextField, text) subscribeNext:^(NSString * _Nullable value) {
+//    @strongify(self);
+//    if (value.length > 11) {
+//        self.phoneTextField.text=[self.phoneTextField.text substringToIndex:11];
+//    }
+//}];
+//
+//RACSignal *codeSinal=[_codeTextField.rac_textSignal map:^id _Nullable(NSString * _Nullable value) {
+//    if (_codeTextField.text.length >= 1 && _codeTextField.text.length<=18) {
+//        return @(1);
+//    }
+//
+//    if (_codeTextField.text.length>18) {
+//        //限制只能输18位
+//        _codeTextField.text=[_codeTextField.text substringToIndex:17];
+//        [NSObject showHudTipStr:@"密码不能超过18位"];
+//        return @(0);
+//    }
+//    return @(0);
+//}];
+//
+//RACSignal *checkFormSignal=[RACSignal combineLatest:@[phoneSignal,codeSinal] reduce:^id (NSNumber *phoneValid, NSNumber *passwordValid){
+//    return @([phoneValid boolValue] && [passwordValid boolValue]);
+//}];
+//
+//
+//[checkFormSignal subscribeNext:^(id  _Nullable x) {
+//
+//    if ([x boolValue]) {
+//
+//        [self enableLoginButton];
+//    }else{
+//
+//        [self disableLoginButton];
+//    }
+//}];
+
 @end

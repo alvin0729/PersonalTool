@@ -481,5 +481,17 @@ completion:(void (^)(BOOL))completion
     [self addGestureRecognizer:tap];
 }
 
+- (void)drawCellSeparatorLine:(CGRect)rect lineWidth:(CGFloat)lineWidth lineColor:(UIColor *)lineColor {
+    // 开启上下文
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    
+    // 上分割线，
+    CGContextSetStrokeColorWithColor(context,lineColor.CGColor);
+    CGContextStrokeRect(context, CGRectMake(0, -0.5, rect.size.width, lineWidth));
+    
+    // 下分割线
+    CGContextSetStrokeColorWithColor(context, lineColor.CGColor);
+    CGContextStrokeRect(context, CGRectMake(0, rect.size.height, rect.size.width, lineWidth));
+}
 
 @end

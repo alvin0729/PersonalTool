@@ -24,13 +24,13 @@
 \
 \pard\tx692\pardeftab692\pardirnatural\partightenfactor0
 
-\f3\fs28 \cf4 \cb5 \kerning1\expnd0\expndtw0 1.\cf6 + resolveInstanceMethod:(\cf7 SEL\cf6 )sel \cf8 // 
+\f3\fs28 \cf4 \cb5 \kerning1\expnd0\expndtw0 1.\cf6 + resolveInstanceMethod:(\cf7 SEL\cf6 )sel \cf8 \cb5 // 
 \f4 \'b6\'d4\'d3\'a6\'ca\'b5\'c0\'fd\'b7\'bd\'b7\'a8
-\f0\fs24 \cf0 \
+\f0\fs24 \cf0 \cb5 \
 
-\f3\fs28 \cf6   + resolveClassMethod:(\cf7 SEL\cf6 )sel \cf8 // 
+\f3\fs28 \cf6   + resolveClassMethod:(\cf7 SEL\cf6 )sel \cf8 \cb5 // 
 \f4 \'b6\'d4\'d3\'a6\'c0\'e0\'b7\'bd\'b7\'a8
-\f0\fs24 \cf0 \
+\f0\fs24 \cf0 \cb5 \
 
 \f3\fs28 \cf4 2.\cf6 - (\cf7 id\cf6 )forwardingTargetForSelector:(\cf7 SEL\cf6 )aSelector
 \f0\fs24 \cf0 \
@@ -59,7 +59,7 @@
 \f3\fs28 \cf6 -(\cf7 void\cf6 )sayHello:(\cf9 NSString\cf6  *)name\{
 \f0\fs24 \cf0 \
 
-\f3\fs28 \cf6     \cf10 NSLog\cf6 (\cf11 @"hello %@"\cf6 ,name);
+\f3\fs28 \cf6     \cf10 NSLog\cf6 (\cf11 \cb5 @"hello %@"\cf6 \cb5 ,name);
 \f0\fs24 \cf0 \
 
 \f3\fs28 \cf6 \}
@@ -69,11 +69,9 @@
 \f3\fs28 \cf7 @end
 \f0\fs24 \cf0 \
 \
-\pard\tx692\pardeftab692\pardirnatural\partightenfactor0
 
-\f3\fs28 \cf12 #import \cf11 <objc/runtime.h>
-\f0\fs24 \cf0 \
-\pard\tx692\pardeftab692\pardirnatural\partightenfactor0
+\f3\fs28 \cf12 #import \cf11 \cb5 <objc/runtime.h>
+\f0\fs24 \cf0 \cb5 \
 
 \f3\fs28 \cf7 @interface\cf6  ViewController : \cf9 UIViewController
 \f0\fs24 \cf0 \
@@ -87,7 +85,7 @@
 \f0\fs24 \cf0 \
 \
 
-\f3\fs28 \cf7 @implementation\cf6  \ulth \ulc6 V\ulnone iewController
+\f3\fs28 \cf7 @implementation\cf6  \cf6 \cb5 \ulth \ulc6 V\ulnone iewController
 \f0\fs24 \cf0 \
 \
 \pard\tx692\pardeftab692\pardirnatural\partightenfactor0
@@ -139,9 +137,11 @@
 \f3\fs28 \cf6 \}
 \f0\fs24 \cf0 \
 \
+\pard\tx692\pardeftab692\pardirnatural\partightenfactor0
 
 \f3\fs28 \cf7 void\cf6  say(\cf7 id\cf6  \cf7 self\cf6 , \cf7 SEL\cf6  \cf7 _cmd\cf6 , \cf9 NSString\cf6  *name)\{
 \f0\fs24 \cf0 \
+\pard\tx692\pardeftab692\pardirnatural\partightenfactor0
 
 \f3\fs28 \cf6     \cf10 NSLog\cf6 (\cf11 @"hello %@"\cf6 ,name);
 \f0\fs24 \cf0 \
@@ -180,7 +180,7 @@
 \f0\fs24 \cf0 \
 \pard\tx692\pardeftab692\pardirnatural\partightenfactor0
 
-\f4 \cf0 \cb5 //\cf15 \cb16 \expnd0\expndtw0\kerning0
+\f4 \cf0 //\cf15 \cb16 \expnd0\expndtw0\kerning0
 \'d4\'da\'cf\'c2\'c3\'e6\'b7\'bd\'b7\'a8\'d6\'d0\'b7\'b5\'bb\'d8\'d2\'bb\'b8\'f6\'b7\'bd\'b7\'a8\'c7\'a9\'c3\'fb
 \f0 \cf0 \cb5 \kerning1\expnd0\expndtw0 \
 \pard\tx692\pardeftab692\pardirnatural\partightenfactor0
@@ -225,6 +225,7 @@
 \f3\fs28 \cf6 \}
 \f0\fs24 \cf0 \
 \
+\pard\tx692\pardeftab692\pardirnatural\partightenfactor0
 
 \f3\fs28 \cf7 @end
 \f0\fs24 \cf0 \
@@ -251,6 +252,7 @@
 \f3\fs28 \cf7 @implementation\cf6  Observer
 \f0\fs24 \cf0 \
 \
+\pard\tx692\pardeftab692\pardirnatural\partightenfactor0
 
 \f3\fs28 \cf6 -(\cf7 void\cf6 )observeValueForKeyPath:(\cf9 NSString\cf6  *)keyPath ofObject:(\cf7 id\cf6 )object change:(\cf9 NSDictionary\cf6 <\cf9 NSKeyValueChangeKey\cf6 ,\cf7 id\cf6 > *)change context:(\cf7 void\cf6  *)context\{
 \f0\fs24 \cf0 \
@@ -261,6 +263,7 @@
 \f3\fs28 \cf6 \}
 \f0\fs24 \cf0 \
 \
+\pard\tx692\pardeftab692\pardirnatural\partightenfactor0
 
 \f3\fs28 \cf7 @end
 \f0\fs24 \cf0 \
@@ -268,6 +271,7 @@
 
 \f3\fs28 \cf7 @interface\cf6  Person : \cf9 NSObject\cf6 \{
 \f0\fs24 \cf0 \
+\pard\tx692\pardeftab692\pardirnatural\partightenfactor0
 
 \f3\fs28 \cf6     \cf14 Observer\cf6  *_observer;
 \f0\fs24 \cf0 \
@@ -275,6 +279,7 @@
 \f3\fs28 \cf6 \}
 \f0\fs24 \cf0 \
 \
+\pard\tx692\pardeftab692\pardirnatural\partightenfactor0
 
 \f3\fs28 \cf7 @property\cf6  (\cf7 nonatomic\cf6 , \cf7 copy\cf6 ) \cf9 NSString\cf6  *familyName;
 \f0\fs24 \cf0 \
@@ -295,6 +300,7 @@
 \f3\fs28 \cf7 @implementation\cf6  Person
 \f0\fs24 \cf0 \
 \
+\pard\tx692\pardeftab692\pardirnatural\partightenfactor0
 
 \f3\fs28 \cf6 -(\cf7 instancetype\cf6 )init\{
 \f0\fs24 \cf0 \
@@ -368,6 +374,7 @@
 \f3\fs28 \cf6 \}
 \f0\fs24 \cf0 \
 \
+\pard\tx692\pardeftab692\pardirnatural\partightenfactor0
 
 \f3\fs28 \cf7 @end
 \f0\fs24 \cf0 \
@@ -380,6 +387,7 @@
 
 \f3\fs28 \cf7 \cb5 \kerning1\expnd0\expndtw0 void\cf6  class_swizzleInstanceMethod(\cf14 Class\cf6  class, \cf7 SEL\cf6  originalSEL, \cf7 SEL\cf6  replacementSEL)
 \f0\fs24 \cf0 \
+\pard\tx692\pardeftab692\pardirnatural\partightenfactor0
 
 \f3\fs28 \cf6 \{
 \f0\fs24 \cf0 \
@@ -482,9 +490,11 @@
 \f3\fs28 \cf6 \}
 \f0\fs24 \cf0 \
 \
+\pard\tx692\pardeftab692\pardirnatural\partightenfactor0
 
 \f3\fs28 \cf7 void\cf6  class_swizzleClassMethod(\cf14 Class\cf6  class, \cf7 SEL\cf6  originalSEL, \cf7 SEL\cf6  replacementSEL)
 \f0\fs24 \cf0 \
+\pard\tx692\pardeftab692\pardirnatural\partightenfactor0
 
 \f3\fs28 \cf6 \{
 \f0\fs24 \cf0 \
@@ -508,9 +518,11 @@
 \f3\fs28 \cf6 \}
 \f0\fs24 \cf0 \
 \
+\pard\tx692\pardeftab692\pardirnatural\partightenfactor0
 
 \f3\fs28 \cf7 void\cf6  WWSwizzleMethod(\cf14 Class\cf6  c, \cf7 SEL\cf6  origSEL, \cf7 SEL\cf6  newSEL) \{
 \f0\fs24 \cf0 \
+\pard\tx692\pardeftab692\pardirnatural\partightenfactor0
 
 \f3\fs28 \cf6     \cf9 Method\cf6  origMethod = \cf10 class_getInstanceMethod\cf6 (c, origSEL);
 \f0\fs24 \cf0 \
@@ -596,6 +608,7 @@
 
 \f3\fs28 \cf7 \cb5 \kerning1\expnd0\expndtw0 @interface\cf6  TargetProxy : \cf9 NSProxy\cf6  \{
 \f0\fs24 \cf0 \
+\pard\tx692\pardeftab692\pardirnatural\partightenfactor0
 
 \f3\fs28 \cf6     \cf7 id\cf6  realObject1;
 \f0\fs24 \cf0 \
@@ -608,6 +621,7 @@
 
 \f3\fs28 \cf6 - (\cf7 id\cf6 )initWithTarget1:(\cf7 id\cf6 )t1 target2:(\cf7 id\cf6 )t2;
 \f0\fs24 \cf0 \
+\pard\tx692\pardeftab692\pardirnatural\partightenfactor0
 
 \f3\fs28 \cf7 @end
 \f0\fs24 \cf0 \
@@ -615,6 +629,7 @@
 
 \f3\fs28 \cf7 @implementation\cf6  TargetProxy
 \f0\fs24 \cf0 \
+\pard\tx692\pardeftab692\pardirnatural\partightenfactor0
 
 \f3\fs28 \cf6 - (\cf7 id\cf6 )initWithTarget1:(\cf7 id\cf6 )t1 target2:(\cf7 id\cf6 )t2 \{
 \f0\fs24 \cf0 \
@@ -715,6 +730,7 @@
 
 \f3\fs28 \cf6 \}
 \f0\fs24 \cf0 \
+\pard\tx692\pardeftab692\pardirnatural\partightenfactor0
 
 \f3\fs28 \cf7 @end
 \f0\fs24 \cf0 \
@@ -1031,6 +1047,7 @@
 
 \f3\fs28 \cf7 \cb5 \kerning1\expnd0\expndtw0 static\cf6  \cf9 NSInteger\cf6  sortMoneyTreeResultObjects(\cf14 WWGameResultItem\cf6  *co1, \cf14 WWGameResultItem\cf6  *co2, \cf7 void\cf6  *keyForSorting)
 \f0\fs24 \cf0 \
+\pard\tx692\pardeftab692\pardirnatural\partightenfactor0
 
 \f3\fs28 \cf6 \{
 \f0\fs24 \cf0 \
@@ -1047,9 +1064,11 @@
 \f3\fs28 \cf6 \}
 \f1\fs32 \cf2 \cb3 \expnd0\expndtw0\kerning0
 \
+\pard\tx692\pardeftab692\pardirnatural\partightenfactor0
 
 \f3\fs28 \cf7 \cb5 \kerning1\expnd0\expndtw0 self\cf6 .\cf14 messagedata\cf6 .\cf14 list\cf6  = [\cf9 NSArray\cf6  \cf13 modelArrayWithClass\cf6 :[\cf14 WWGameResultItem\cf6  \cf10 class\cf6 ] \cf13 json\cf6 :messageDataDic[\cf11 @"list"\cf6 ]];
 \f0\fs24 \cf0 \
+\pard\tx692\pardeftab692\pardirnatural\partightenfactor0
 
 \f3\fs28 \cf6                     [\cf7 self\cf6 .\cf14 messagedata\cf6 .\cf14 list\cf6  \cf10 sortedArrayUsingFunction\cf6 :\cf13 sortMoneyTreeResultObjects\cf6  \cf10 context\cf6 :\cf7 NULL\cf6 ];
 \f1\fs32 \cf2 \cb3 \expnd0\expndtw0\kerning0
@@ -1113,38 +1132,38 @@
 \f3\fs28 \cf6     
 \f0\fs24 \cf0 \
 
-\f3\fs28 \cf6     \cf14 \cb5 _label\cf6 \cb5  = [\cf9 YYLabel\cf6  \cf10 new\cf6 ];
+\f3\fs28 \cf6     \cf14 _label\cf6  = [\cf9 YYLabel\cf6  \cf10 new\cf6 ];
 \f0\fs24 \cf0 \
 
-\f3\fs28 \cf6     \cf14 \cb5 _label\cf6 \cb5 .\cf9 userInteractionEnabled\cf6  =\cf7 YES\cf6 ;
+\f3\fs28 \cf6     \cf14 _label\cf6 .\cf9 userInteractionEnabled\cf6  =\cf7 YES\cf6 ;
 \f0\fs24 \cf0 \
 
-\f3\fs28 \cf6     \cf14 \cb5 _label\cf6 \cb5 .\cf9 numberOfLines\cf6  =\cf4 0\cf6 ;
+\f3\fs28 \cf6     \cf14 _label\cf6 .\cf9 numberOfLines\cf6  =\cf4 0\cf6 ;
 \f0\fs24 \cf0 \
 
-\f3\fs28 \cf6     \cf14 \cb5 _label\cf6 \cb5 .\cf9 textVerticalAlignment\cf6  =\cf10 YYTextVerticalAlignmentTop\cf6 ;
+\f3\fs28 \cf6     \cf14 _label\cf6 .\cf9 textVerticalAlignment\cf6  =\cf10 YYTextVerticalAlignmentTop\cf6 ;
 \f0\fs24 \cf0 \
 
-\f3\fs28 \cf6     \cf14 \cb5 _label\cf6 \cb5 .\cf9 frame\cf6  = \cf10 CGRectMake\cf6 (\cf4 40\cf6 ,\cf4 60\cf6 , \cf7 self\cf6 .\cf9 view\cf6 .\cf9 frame\cf6 .\cf9 size\cf6 .\cf9 width\cf6 -\cf4 80\cf6 ,\cf4 150\cf6 );
+\f3\fs28 \cf6     \cf14 _label\cf6 .\cf9 frame\cf6  = \cf10 CGRectMake\cf6 (\cf4 40\cf6 ,\cf4 60\cf6 , \cf7 self\cf6 .\cf9 view\cf6 .\cf9 frame\cf6 .\cf9 size\cf6 .\cf9 width\cf6 -\cf4 80\cf6 ,\cf4 150\cf6 );
 \f0\fs24 \cf0 \
 
-\f3\fs28 \cf6     \cf14 \cb5 _label\cf6 \cb5 .\cf9 attributedText\cf6  = text;
+\f3\fs28 \cf6     \cf14 _label\cf6 .\cf9 attributedText\cf6  = text;
 \f0\fs24 \cf0 \
 
-\f3\fs28 \cf6     [\cf7 self\cf6 .\cf9 view\cf6  \cf10 addSubview\cf6 :\cf14 \cb5 _label\cf6 \cb5 ];
+\f3\fs28 \cf6     [\cf7 self\cf6 .\cf9 view\cf6  \cf10 addSubview\cf6 :\cf14 _label\cf6 ];
 \f0\fs24 \cf0 \
 
-\f3\fs28 \cf6     \cf14 \cb5 _label\cf6 \cb5 .\cf9 layer\cf6 .\cf9 borderWidth\cf6  =\cf4 0.5\cf6 ;
+\f3\fs28 \cf6     \cf14 _label\cf6 .\cf9 layer\cf6 .\cf9 borderWidth\cf6  =\cf4 0.5\cf6 ;
 \f0\fs24 \cf0 \
 
-\f3\fs28 \cf6     \cf14 \cb5 _label\cf6 \cb5 .\cf9 layer\cf6 .\cf9 borderColor\cf6  = [\cf9 UIColor\cf6  \cf10 colorWithRed\cf6 :\cf4 0.000\cf6  \cf10 green\cf6 :\cf4 0.463\cf6  \cf10 blue\cf6 :\cf4 1.000\cf6  \cf10 alpha\cf6 :\cf4 1.000\cf6 ].\cf9 CGColor\cf6 ;
+\f3\fs28 \cf6     \cf14 _label\cf6 .\cf9 layer\cf6 .\cf9 borderColor\cf6  = [\cf9 UIColor\cf6  \cf10 colorWithRed\cf6 :\cf4 0.000\cf6  \cf10 green\cf6 :\cf4 0.463\cf6  \cf10 blue\cf6 :\cf4 1.000\cf6  \cf10 alpha\cf6 :\cf4 1.000\cf6 ].\cf9 CGColor\cf6 ;
 \f0\fs24 \cf0 \
 
 \f3\fs28 \cf6     \cf8 //
 \f4 \'cc\'ed\'bc\'d3\'c8\'ab\'ce\'c4
 \f0\fs24 \cf0 \
 
-\f3\fs28 \cf6     [\cf7 self\cf6  \cf13 \cb5 addSeeMoreButton\cf6 \cb5 ];
+\f3\fs28 \cf6     [\cf7 self\cf6  \cf13 addSeeMoreButton\cf6 ];
 \f0\fs24 \cf0 \
 
 \f3\fs28 \cf6 \}
@@ -1180,7 +1199,7 @@
 \f4 \'b5\'e3\'bb\'f7\'c8\'ab\'ce\'c4\'bb\'d8\'b5\'f7
 \f0\fs24 \cf0 \
 
-\f3\fs28 \cf6         \cf9 YYLabel\cf6  *label = weakSelf.\cf14 \cb5 label\cf6 \cb5 ;
+\f3\fs28 \cf6         \cf9 YYLabel\cf6  *label = weakSelf.\cf14 label\cf6 ;
 \f0\fs24 \cf0 \
 
 \f3\fs28 \cf6         [label \cf10 sizeToFit\cf6 ];
@@ -1199,7 +1218,7 @@
 \f3 "\cf6 ]];
 \f0\fs24 \cf0 \
 
-\f3\fs28 \cf6     text.\cf9 yy_font\cf6  =\cf14 \cb5 _label\cf6 \cb5 .\cf9 font\cf6 ;
+\f3\fs28 \cf6     text.\cf9 yy_font\cf6  =\cf14 _label\cf6 .\cf9 font\cf6 ;
 \f0\fs24 \cf0 \
 
 \f3\fs28 \cf6     \cf9 YYLabel\cf6  *seeMore = [\cf9 YYLabel\cf6  \cf10 new\cf6 ];
@@ -1214,16 +1233,98 @@
 \f3\fs28 \cf6     \cf9 NSAttributedString\cf6  *truncationToken = [\cf9 NSAttributedString\cf6  \cf10 yy_attachmentStringWithContent\cf6 :seeMore \cf10 contentMode\cf6 :\cf10 UIViewContentModeCenter\cf6  \cf10 attachmentSize\cf6 :seeMore.\cf9 frame\cf6 .\cf9 size\cf6  \cf10 alignToFont\cf6 :text.\cf9 yy_font\cf6  \cf10 alignment\cf6 :\cf10 YYTextVerticalAlignmentCenter\cf6 ];
 \f0\fs24 \cf0 \
 
-\f3\fs28 \cf6     \cf14 \cb5 _label\cf6 \cb5 .\cf9 truncationToken\cf6  = truncationToken;
+\f3\fs28 \cf6     \cf14 _label\cf6 .\cf9 truncationToken\cf6  = truncationToken;
 \f0\fs24 \cf0 \
 
-\f3\fs28 \cf6 \}
+\f3\fs28 \cf6 \}\
+\pard\tx692\pardeftab692\pardirnatural\partightenfactor0
+
+\f1\fs32 \cf2 \cb3 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720\sl360\partightenfactor0
+\cf2 \'cc\'ed\'bc\'d3\'d5\'db\'b5\'fe\'b0\'b4\'c5\'a5\'a3\'a8YYLabel:
+\f3\fs28 \cf14 \cb5 \kerning1\expnd0\expndtw0 descripeLabel
+\f1\fs32 \cf2 \cb3 \expnd0\expndtw0\kerning0
+\'a3\'a9\
+\pard\tx692\pardeftab692\pardirnatural\partightenfactor0
+
+\f3\fs28 \cf9 \cb5 \kerning1\expnd0\expndtw0     NSArray\cf6 <\cf9 NSString\cf6  *> *descripeLabelTextLines = [\cf7 self\cf6 .\cf14 intermediateLabel\cf6  \cf13 \cb5 getLinesArrayOfStringInLabel\cf6 \cb5 :\cf7 self\cf6 .\cf14 intermediateLabel\cf6 ];
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6     \cf10 NSLog\cf6 (\cf11 \cb5 @"========1:%ld"\cf6 \cb5 ,descripeLabelTextLines[\cf4 0\cf6 ].\cf9 length\cf6 );
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6     \cf9 NSMutableAttributedString\cf6  *text;
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6     \cf7 if\cf6  (descripeLabelTextLines.\cf9 count\cf6  > \cf4 3\cf6 ) \{
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6         \cf7 self\cf6 .\cf14 subString\cf6  = [\cf7 self\cf6 .\cf14 descripeString\cf6  \cf10 substringWithRange\cf6 :\cf10 NSMakeRange\cf6 (\cf4 0\cf6 , descripeLabelTextLines[\cf4 0\cf6 ].\cf9 length\cf6  *\cf4 3\cf6  - \cf4 5\cf6 )];
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6         \cf7 self\cf6 .\cf14 subString\cf6  = [\cf9 NSString\cf6  \cf10 stringWithFormat\cf6 :\cf11 \cb5 @"%@%@"\cf6 \cb5 ,\cf7 self\cf6 .\cf14 subString\cf6 ,\cf11 \cb5 @"... "\cf6 \cb5 ];
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6         text = [[\cf9 NSMutableAttributedString\cf6  \cf10 alloc\cf6 ] \cf10 initWithString\cf6 :\cf7 self\cf6 .\cf14 subString\cf6 ];
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6         \cf9 NSMutableAttributedString\cf6  *attachment = \cf7 nil\cf6 ;
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6         attachment = [\cf9 NSMutableAttributedString\cf6  \cf13 \cb5 yy_attachmentStringWithContent\cf6 \cb5 :\cf14 foldBtn\cf6  \cf13 \cb5 contentMode\cf6 \cb5 :\cf10 UIViewContentModeCenter\cf6  \cf13 \cb5 attachmentSize\cf6 \cb5 :\cf14 foldBtn\cf6 .\cf14 size\cf6  \cf13 \cb5 alignToFont\cf6 \cb5 :\cf12 pingfangRegularFontWith\cf6 (\cf4 12\cf6 ) \cf13 \cb5 alignment\cf6 \cb5 :\cf13 \cb5 YYTextVerticalAlignmentCenter\cf6 \cb5 ];
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6         [text \cf10 appendAttributedString\cf6 : attachment];
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6     \} \cf7 else\cf6  \{
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6         text = [[\cf9 NSMutableAttributedString\cf6  \cf10 alloc\cf6 ] \cf10 initWithString\cf6 :\cf7 self\cf6 .\cf14 descripeString\cf6 ];
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6     \}
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6     \cf7 self\cf6 .\cf14 descripeLabel\cf6 .\cf14 attributedText\cf6  = text;
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6     
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6     \cf9 CGSize\cf6  size = \cf10 CGSizeMake\cf6 (\cf7 self\cf6 .\cf14 descripeLabel\cf6 .\cf14 width\cf6 , \cf12 CGFLOAT_MAX\cf6 );
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6     [text \cf13 \cb5 yy_setFont\cf6 \cb5 :\cf12 pingfangRegularFontWith\cf6 (\cf4 12\cf6 ) \cf13 \cb5 range\cf6 \cb5 :text.\cf13 \cb5 yy_rangeOfAll\cf6 \cb5 ];
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6     [text \cf13 \cb5 yy_setColor\cf6 \cb5 :[\cf14 DDSkin\cf6  \cf13 \cb5 DDDarkGray48Color\cf6 \cb5 ] \cf13 \cb5 range\cf6 \cb5 :text.\cf13 \cb5 yy_rangeOfAll\cf6 \cb5 ];
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6     text.\cf14 yy_lineSpacing\cf6  = \cf4 7\cf6 ;
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6     \cf8 \cb5 //[text yy_setKern:@(1) range:text.yy_rangeOfAll];
+\f0\fs24 \cf0 \cb5 \
+
+\f3\fs28 \cf6     \cf14 YYTextLayout\cf6  *layout = [\cf14 YYTextLayout\cf6  \cf13 \cb5 layoutWithContainerSize\cf6 \cb5 :size \cf13 \cb5 text\cf6 \cb5 :text];
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6     \cf7 self\cf6 .\cf14 descripeLabel\cf6 .\cf14 size\cf6  = layout.\cf14 textBoundingSize\cf6 ;
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6     \cf7 self\cf6 .\cf14 descripeLabel\cf6 .\cf14 textLayout\cf6  = layout;
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6     \cf10 NSLog\cf6 (\cf11 \cb5 @"=======================self.descripeLabel.frame:%@====="\cf6 \cb5 ,\cf10 NSStringFromCGRect\cf6 (\cf7 self\cf6 .\cf14 descripeLabel\cf6 .\cf9 frame\cf6 ));
+\f0\fs24 \cf0 \
+
+\f3\fs28 \cf6     \cf7 self\cf6 .\cf14 descriptionViewConstraint\cf6 .\cf9 constant\cf6  = layout.\cf14 textBoundingSize\cf6 .\cf9 height\cf6 ;
 \f1\fs32 \cf2 \cb3 \expnd0\expndtw0\kerning0
 \
 \pard\pardeftab720\sl360\partightenfactor0
 \cf2 \
-\
-\
 \
 \
 \
