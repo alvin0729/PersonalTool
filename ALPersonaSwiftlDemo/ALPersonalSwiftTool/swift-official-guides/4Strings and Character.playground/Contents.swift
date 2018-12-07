@@ -1,6 +1,10 @@
 import UIKit
 /*:
->每一个字符串都是由编码无关的Unicode字符串组成*/
+>每一个字符串都是由编码无关的Unicode字符串组成
+ 注意
+ 
+ Swift 的 String 类型与 Foundation NSString 类进行了无缝桥接。Foundation 也可以对 String 进行扩展，暴露在 NSString 中定义的方法。 这意味着，如果你在 String 中调用这些 NSString 的方法，将不用进行转换。
+ */
 //:### 字符串字面量String Literals
 //可以用于为常量和变量提供初始值
 let someString = "Some string literal value"
@@ -21,10 +25,33 @@ let threeDoubleQuotes = """
 Escaping the first quote \"""
 Escaping all three quotes \"\"\"
 """
+/*
+ *可以用在行尾写一个反斜杠（\）作为续行符
+ */
+let softWrappedQuotation = """
+The White Rabbit put on his spectacles.  "Where shall I begin, \
+please your Majesty?" he asked.
 
+"Begin at the beginning," the King said gravely, "and go on \
+till you come to the end; then stop."
+"""
+
+let lineBreaks = """
+
+This string starts with a line break.
+It also ends with a line break.
+
+"""
+//:### 字符串字面量的特殊字符
+/*:
+>
+ 转义字符 \0(空字符)、\\(反斜线)、\t(水平制表符)、\n(换行符)、\r(回车符)、\"(双引号)、\'(单引号)。
+ 
+Unicode 标量，写成 \u{n}(u 为小写)，其中 n 为任意一到八位十六进制数且可用的 Unicode 位码。
+*/
 //:### 初始化空字符串(Initializing an Empty String)
 var emptyString = ""                 //空字符串字面量
-var anotherEmptyString = String()     //初始化方法
+var anotherEmptyString = String()    //初始化方法
 //两个字符串均为空并等价
 if emptyString.isEmpty{
     print("Nothing to see here")
@@ -37,7 +64,7 @@ let constantString = "Highlander"
 
 //:### 字符串是值类型(strings are value types)
 //使用字符(working with characters)
-for character in "Dog!🐶".characters{
+for character in "Dog!🐶"{
     print(character)
 }
 let exclamationMark:Character = "!"
@@ -53,6 +80,7 @@ var instuction = "look over"
 instuction += string2
 
 let exclamationMark1: Character = "!"
+//您可以用 append() 方法将一个字符附加到一个字符串变量的尾部：
 welcome.append(exclamationMark1)
 
 let badStart = """
@@ -96,12 +124,13 @@ let encloseEAcute: Character = "\u{E9}\u{20DD}"
 let regionalIndicatorForUS: Character = "\u{1F1FA}\u{1F1F8}"
 //:### 计算字符数量（counting characters)
 let unusualMenagerie = "Koala 🐨, Snail 🐌, Penguin 🐧, Dromedary 🐪"
-print("unusualMenagerie has \(unusualMenagerie.characters.count) characters")
+print("unusualMenagerie has \(unusualMenagerie.count) characters")
 
+//例如，如果你用四个字符的单词 cafe 初始化一个新的字符串，然后添加一个 COMBINING ACTUE ACCENT(U+0301)作为字符串的结尾。最终这个字符串的字符数量仍然是 4，因为第四个字符是 é，而不是 e：
 var word = "cafe"
-print("the number of characters in\(word) is \(word.characters.count)")
+print("the number of characters in\(word) is \(word.count)")
 word += "\u{301}"
-print("the number of characters in\(word) is \(word.characters.count)")
+print("the number of characters in\(word) is \(word.count)")
 /*:
 >NSString的length属性是利用UTF-16表示的16位代码单元数字，而不是Unicode可扩展的字符群集\
 >当一个NSString的length属性被一个String值访问时，实际上是调用了utf16Count*/
@@ -120,7 +149,7 @@ greeting[index]
 /*:
  >试图获取越界索引对应的 Character，将引发一个运行时错误\
 >使用characters属性的indices属性会创建一个包含全部索引的范围Range*/
-for index in greeting.characters.indices{
+for index in greeting.indices{
     print("\(greeting[index])", terminator: " ")
 }
 //: - callout(注意):可以使用startIndex和endIndex属性或者index(before:),index(after),index(_:offsetBy:)方法在任意一个确认的并遵循Collection协议的类型里面，如上文所示使用在String中，您可以使用在Array、Dictionary和Set中
@@ -129,22 +158,47 @@ for index in greeting.characters.indices{
 //调用insert(_:atIndex:)
 var welcome1 = "hello"
 welcome1.insert("!", at: welcome1.endIndex)
-welcome1.insert(contentsOf: " there".characters, at: welcome1.index(before: welcome1.endIndex))
+//welcome 变量现在等于 "hello!"
+welcome1.insert(contentsOf: " there", at: welcome1.index(before: welcome1.endIndex))
+// welcome 变量现在等于 "hello there!"
+
+//调用 remove(at:) 方法可以在一个字符串的指定索引删除一个字符，调用 removeSubrange(_:) 方法可以在一个字符串的指定索引删除一个子字符串。
 
 welcome1.remove(at: welcome1.index(before: welcome1.endIndex))
 print(welcome1)
+// welcome 现在等于 "hello there"
+
 let range = welcome1.index(welcome1.endIndex, offsetBy: -6)..<welcome1.endIndex
 welcome1.removeSubrange(range)
 print(welcome1)
+// welcome 现在等于 "hello"
 //上述方法遵循RangeReplaceableCollection协议，同样的有Array、Dictionary和Set
 //:###  ❤️4.0Substrings
+func printAddress(values:AnyObject...){
+    for value in values {
+        print(Unmanaged.passUnretained(value).toOpaque())
+    }
+    line()
+}
+
+func line(){
+    print("----------------")
+}
+
 let greeting1 = "Hello, world!"
 let index1 = greeting1.index(of: ",") ?? greeting1.endIndex
+printAddress(values: greeting1 as AnyObject)
 let beginning = greeting1[..<index1]
 // beginning is "Hello"
-
-// Convert the result to a String for long-term storage.
+printAddress(values: beginning as AnyObject)
+// 把结果转化为 String 以便长期存储。
 let newString = String(beginning)
+
+
+/*:
+ >上面的例子，greeting 是一个 String，意味着它在内存里有一片空间保存字符集。而由于 beginning 是 greeting 的 SubString，它重用了 greeting 的内存空间。相反，newString 是一个 String —— 它是使用 SubString 创建的，拥有一片自己的内存空间。
+*/
+
 //:### 比较字符串Comparing Strings
 //String and Character Equality
 let quotation = "We're a lot alike, you and I."

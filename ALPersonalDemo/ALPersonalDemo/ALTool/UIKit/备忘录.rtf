@@ -43,31 +43,31 @@
 \f0\fs28 \cf2     \cf4 CGFloat\cf2  radius = \cf5 self\cf2 .\cf6 \cb3 topShowBackgroundView\cf2 \cb3 .\cf4 frame\cf2 .\cf4 size\cf2 .\cf4 height\cf2  * \cf7 0.5\cf2 ;
 \f1\fs24 \cf0 \
 
-\f0\fs28 \cf2     \cf4 CGPoint\cf2  center1 = \cf8 CGPointMake\cf2 (\cf5 self\cf2 .\cf6 \cb3 topShowBackgroundView\cf2 \cb3 .\cf4 frame\cf2 .\cf4 size\cf2 .\cf4 width\cf2  * progress+radius, \cf5 self\cf2 .\cf6 \cb3 topShowBackgroundView\cf2 \cb3 .\cf4 frame\cf2 .\cf4 size\cf2 .\cf4 height\cf2  * \cf7 0.5\cf2 );
+\f0\fs28 \cf2     \cf4 CGPoint\cf2  center1 = \cf8 \cb3 CGPointMake\cf2 \cb3 (\cf5 self\cf2 .\cf6 \cb3 topShowBackgroundView\cf2 \cb3 .\cf4 frame\cf2 .\cf4 size\cf2 .\cf4 width\cf2  * progress+radius, \cf5 self\cf2 .\cf6 \cb3 topShowBackgroundView\cf2 \cb3 .\cf4 frame\cf2 .\cf4 size\cf2 .\cf4 height\cf2  * \cf7 0.5\cf2 );
 \f1\fs24 \cf0 \
 
-\f0\fs28 \cf2     \cf4 UIBezierPath\cf2  *path = [\cf4 UIBezierPath\cf2  \cf8 bezierPath\cf2 ];
+\f0\fs28 \cf2     \cf4 UIBezierPath\cf2  *path = [\cf4 UIBezierPath\cf2  \cf8 \cb3 bezierPath\cf2 \cb3 ];
 \f1\fs24 \cf0 \
 
-\f0\fs28 \cf2     [path \cf8 moveToPoint\cf2 :\cf8 CGPointMake\cf2 (\cf5 self\cf2 .\cf6 \cb3 topShowBackgroundView\cf2 \cb3 .\cf4 frame\cf2 .\cf4 size\cf2 .\cf4 width\cf2  * progress+radius, \cf7 0\cf2 )];
+\f0\fs28 \cf2     [path \cf8 \cb3 moveToPoint\cf2 \cb3 :\cf8 \cb3 CGPointMake\cf2 \cb3 (\cf5 self\cf2 .\cf6 \cb3 topShowBackgroundView\cf2 \cb3 .\cf4 frame\cf2 .\cf4 size\cf2 .\cf4 width\cf2  * progress+radius, \cf7 0\cf2 )];
 \f1\fs24 \cf0 \
 
-\f0\fs28 \cf2     [path \cf8 addArcWithCenter\cf2 :center1 \cf8 radius\cf2 :radius \cf8 startAngle\cf2 :\cf9 M_PI\cf2 *\cf7 1.5\cf2   \cf8 endAngle\cf2 : \cf9 M_PI\cf2 *\cf7 0.5\cf2  \cf8 clockwise\cf2 :\cf5 NO\cf2 ];
+\f0\fs28 \cf2     [path \cf8 \cb3 addArcWithCenter\cf2 \cb3 :center1 \cf8 \cb3 radius\cf2 \cb3 :radius \cf8 \cb3 startAngle\cf2 \cb3 :\cf9 M_PI\cf2 *\cf7 1.5\cf2   \cf8 \cb3 endAngle\cf2 \cb3 : \cf9 M_PI\cf2 *\cf7 0.5\cf2  \cf8 \cb3 clockwise\cf2 \cb3 :\cf5 NO\cf2 ];
 \f1\fs24 \cf0 \
 
-\f0\fs28 \cf2     [path \cf8 addLineToPoint\cf2 :\cf8 CGPointMake\cf2 (\cf5 self\cf2 .\cf6 \cb3 topShowBackgroundView\cf2 \cb3 .\cf4 frame\cf2 .\cf4 size\cf2 .\cf4 width\cf2  - radius, \cf5 self\cf2 .\cf6 \cb3 topShowBackgroundView\cf2 \cb3 .\cf4 frame\cf2 .\cf4 size\cf2 .\cf4 height\cf2 )];
+\f0\fs28 \cf2     [path \cf8 \cb3 addLineToPoint\cf2 \cb3 :\cf8 \cb3 CGPointMake\cf2 \cb3 (\cf5 self\cf2 .\cf6 \cb3 topShowBackgroundView\cf2 \cb3 .\cf4 frame\cf2 .\cf4 size\cf2 .\cf4 width\cf2  - radius, \cf5 self\cf2 .\cf6 \cb3 topShowBackgroundView\cf2 \cb3 .\cf4 frame\cf2 .\cf4 size\cf2 .\cf4 height\cf2 )];
 \f1\fs24 \cf0 \
 
-\f0\fs28 \cf2     \cf4 CGPoint\cf2  center2 = \cf8 CGPointMake\cf2 (\cf5 self\cf2 .\cf6 \cb3 topShowBackgroundView\cf2 \cb3 .\cf4 frame\cf2 .\cf4 size\cf2 .\cf4 width\cf2  - radius, \cf5 self\cf2 .\cf6 \cb3 topShowBackgroundView\cf2 \cb3 .\cf4 frame\cf2 .\cf4 size\cf2 .\cf4 height\cf2  * \cf7 0.5\cf2 );
+\f0\fs28 \cf2     \cf4 CGPoint\cf2  center2 = \cf8 \cb3 CGPointMake\cf2 \cb3 (\cf5 self\cf2 .\cf6 \cb3 topShowBackgroundView\cf2 \cb3 .\cf4 frame\cf2 .\cf4 size\cf2 .\cf4 width\cf2  - radius, \cf5 self\cf2 .\cf6 \cb3 topShowBackgroundView\cf2 \cb3 .\cf4 frame\cf2 .\cf4 size\cf2 .\cf4 height\cf2  * \cf7 0.5\cf2 );
 \f1\fs24 \cf0 \
 
-\f0\fs28 \cf2     [path \cf8 addArcWithCenter\cf2 :center2 \cf8 radius\cf2 : radius \cf8 startAngle\cf2 :\cf9 M_PI\cf2 *\cf7 0.5\cf2  \cf8 endAngle\cf2 :\cf9 M_PI\cf2 *\cf7 1.5\cf2  \cf8 clockwise\cf2 :\cf5 NO\cf2 ];
+\f0\fs28 \cf2     [path \cf8 \cb3 addArcWithCenter\cf2 \cb3 :center2 \cf8 \cb3 radius\cf2 \cb3 : radius \cf8 \cb3 startAngle\cf2 \cb3 :\cf9 M_PI\cf2 *\cf7 0.5\cf2  \cf8 \cb3 endAngle\cf2 \cb3 :\cf9 M_PI\cf2 *\cf7 1.5\cf2  \cf8 \cb3 clockwise\cf2 \cb3 :\cf5 NO\cf2 ];
 \f1\fs24 \cf0 \
 
-\f0\fs28 \cf2     [path \cf8 addLineToPoint\cf2 :\cf8 CGPointMake\cf2 (\cf5 self\cf2 .\cf6 \cb3 topShowBackgroundView\cf2 \cb3 .\cf4 frame\cf2 .\cf4 size\cf2 .\cf4 width\cf2  * progress+radius, \cf7 0\cf2 )];
+\f0\fs28 \cf2     [path \cf8 \cb3 addLineToPoint\cf2 \cb3 :\cf8 \cb3 CGPointMake\cf2 \cb3 (\cf5 self\cf2 .\cf6 \cb3 topShowBackgroundView\cf2 \cb3 .\cf4 frame\cf2 .\cf4 size\cf2 .\cf4 width\cf2  * progress+radius, \cf7 0\cf2 )];
 \f1\fs24 \cf0 \
 
-\f0\fs28 \cf2     [path \cf8 closePath\cf2 ];
+\f0\fs28 \cf2     [path \cf8 \cb3 closePath\cf2 \cb3 ];
 \f1\fs24 \cf0 \
 
 \f0\fs28 \cf2     path.\cf4 lineWidth\cf2  = \cf7 1\cf2 ;
@@ -98,22 +98,22 @@
 \f0\fs28 \cf2     \cf4 CGFloat\cf2  fontSizeThatFits = \cf7 5\cf2 ;
 \f1\fs24 \cf0 \
 
-\f0\fs28 \cf2     [label.\cf4 text\cf2  \cf8 sizeWithFont\cf2 :label.\cf4 font
+\f0\fs28 \cf2     [label.\cf4 text\cf2  \cf8 \cb3 sizeWithFont\cf2 \cb3 :label.\cf4 font
 \f1\fs24 \cf0 \
 
-\f0\fs28 \cf2                  \cf8 minFontSize\cf2 :\cf7 12.0
+\f0\fs28 \cf2                  \cf8 \cb3 minFontSize\cf2 \cb3 :\cf7 12.0
 \f1\fs24 \cf0 \
 
-\f0\fs28 \cf2               \cf8 actualFontSize\cf2 :&fontSizeThatFits
+\f0\fs28 \cf2               \cf8 \cb3 actualFontSize\cf2 \cb3 :&fontSizeThatFits
 \f1\fs24 \cf0 \
 
-\f0\fs28 \cf2                     \cf8 forWidth\cf2 :label.\cf4 bounds\cf2 .\cf4 size\cf2 .\cf4 width
+\f0\fs28 \cf2                     \cf8 \cb3 forWidth\cf2 \cb3 :label.\cf4 bounds\cf2 .\cf4 size\cf2 .\cf4 width
 \f1\fs24 \cf0 \
 
-\f0\fs28 \cf2                \cf8 lineBreakMode\cf2 :\cf8 NSLineBreakByWordWrapping\cf2 ];
+\f0\fs28 \cf2                \cf8 \cb3 lineBreakMode\cf2 \cb3 :\cf8 \cb3 NSLineBreakByWordWrapping\cf2 \cb3 ];
 \f1\fs24 \cf0 \
 
-\f0\fs28 \cf2     label.\cf4 font\cf2  = [label.\cf4 font\cf2  \cf8 fontWithSize\cf2 :fontSizeThatFits];\uc0\u8232 
+\f0\fs28 \cf2     label.\cf4 font\cf2  = [label.\cf4 font\cf2  \cf8 \cb3 fontWithSize\cf2 \cb3 :fontSizeThatFits];\uc0\u8232 
 \f1\fs24 \cf0 \
 
 \f0\fs28 \cf2  \}
@@ -131,7 +131,7 @@
 \f2 \'bc\'d3\'c9\'cf\'cf\'c2\'c3\'e6\'b5\'c4\'bb\'b0
 \f3  \cb13 \
 \pard\pardeftab720\partightenfactor0
-\cf0 \cb10 \'93Content Compression Resistance\'94
+\cf0 \cb10 \'93Costent Compression Resistance\'94
 \f2 \'ba\'cd
 \f3 \'93Content Hugging\'94\cb13 \
 \cb10 1.
@@ -321,10 +321,11 @@ stringRect = [string \cf8 boundingRectWithSize\cf2 :constraintSize\
 \
 \pard\tx692\pardeftab692\pardirnatural\partightenfactor0
 
-\fs28 \cf4 \cb3 \CocoaLigature1 NSMutableAttributedString\cf2  *contentAttributeStr = [[\cf4 NSMutableAttributedString\cf2  \cf8 alloc\cf2 ] \cf8 initWithString\cf2 :[\cf4 NSString\cf2  \cf8 stringWithFormat\cf2 :\cf34 @"%@"\cf2 ,text]];
+\fs28 \cf4 \cb3 \CocoaLigature1 NSMutableAttributedString\cf2  *contentAttributeStr = [[\cf4 NSMutableAttributedString\cf2  \cf8 \cb3 alloc\cf2 \cb3 ] \cf8 \cb3 initWithString\cf2 \cb3 :[\cf4 NSString\cf2  \cf8 \cb3 stringWithFormat\cf2 \cb3 :\cf34 @"%@"\cf2 ,text]];
 \f1\fs24 \cf0 \
+\pard\tx692\pardeftab692\pardirnatural\partightenfactor0
 
-\f0\fs28 \cf2     [contentAttributeStr \cf8 setAttributes\cf2 :\cf7 @\{\cf4 NSForegroundColorAttributeName\cf2  : \cf9 UIColorHex\cf2 (\cf7 0xf1cbb2\cf2 ), \cf4 NSFontAttributeName\cf2  : \cf9 DDFONT\cf2 (\cf7 13\cf2 )\cf7 \}\cf2  \cf8 range\cf2 :\cf8 NSMakeRange\cf2 (\cf7 0\cf2 , contentAttributeStr.\cf4 length\cf2 )];
+\f0\fs28 \cf2     [contentAttributeStr \cf8 \cb3 setAttributes\cf2 \cb3 :\cf7 @\{\cf4 NSForegroundColorAttributeName\cf2  : \cf9 UIColorHex\cf2 (\cf7 0xf1cbb2\cf2 ), \cf4 NSFontAttributeName\cf2  : \cf9 DDFONT\cf2 (\cf7 13\cf2 )\cf7 \}\cf2  \cf8 \cb3 range\cf2 \cb3 :\cf8 \cb3 NSMakeRange\cf2 \cb3 (\cf7 0\cf2 , contentAttributeStr.\cf4 length\cf2 )];
 \f1\fs24 \cf0 \
 
 \f0\fs28 \cf2     
@@ -333,7 +334,7 @@ stringRect = [string \cf8 boundingRectWithSize\cf2 :constraintSize\
 \f0\fs28 \cf2     if (model.\cf6 \cb3 balkNickName\cf2 \cb3 .\cf4 length\cf2 ) \{
 \f1\fs24 \cf0 \
 
-\f0\fs28 \cf2         [contentAttributeStr \cf8 appendAttributedString\cf2 :[[\cf4 NSAttributedString\cf2  \cf8 alloc\cf2 ] \cf8 initWithString\cf2 :\cf34 @" 
+\f0\fs28 \cf2         [contentAttributeStr \cf8 \cb3 appendAttributedString\cf2 \cb3 :[[\cf4 NSAttributedString\cf2  \cf8 \cb3 alloc\cf2 \cb3 ] \cf8 \cb3 initWithString\cf2 \cb3 :\cf34 @" 
 \f2 \cf34 \cb3 \'bb\'d8\'b8\'b4
 \f0 \cf34 \cb3  "\cf2 ]];
 \f1\fs24 \cf0 \
@@ -341,16 +342,16 @@ stringRect = [string \cf8 boundingRectWithSize\cf2 :constraintSize\
 \f0\fs28 \cf2         
 \f1\fs24 \cf0 \
 
-\f0\fs28 \cf2         \cf4 NSMutableAttributedString\cf2  *contentAppendingStr = [[\cf4 NSMutableAttributedString\cf2  \cf8 alloc\cf2 ] \cf8 initWithString\cf2 :[\cf4 NSString\cf2  \cf8 stringWithFormat\cf2 :\cf34 @"%@"\cf2 ,model.\cf6 \cb3 balkNickName\cf2 \cb3 ]];
+\f0\fs28 \cf2         \cf4 NSMutableAttributedString\cf2  *contentAppendingStr = [[\cf4 NSMutableAttributedString\cf2  \cf8 \cb3 alloc\cf2 \cb3 ] \cf8 \cb3 initWithString\cf2 \cb3 :[\cf4 NSString\cf2  \cf8 \cb3 stringWithFormat\cf2 \cb3 :\cf34 @"%@"\cf2 ,model.\cf6 \cb3 balkNickName\cf2 \cb3 ]];
 \f1\fs24 \cf0 \
 
-\f0\fs28 \cf2         [contentAppendingStr \cf8 setAttributes\cf2 :\cf7 @\{\cf4 NSForegroundColorAttributeName\cf2  : \cf9 UIColorHex\cf2 (\cf7 0xf1cbb2\cf2 ), \cf4 NSFontAttributeName\cf2  : \cf9 DDFONT\cf2 (\cf7 13\cf2 )\cf7 \}\cf2  \cf8 range\cf2 :\cf8 NSMakeRange\cf2 (\cf7 0\cf2 , contentAppendingStr.\cf4 length\cf2 )];
+\f0\fs28 \cf2         [contentAppendingStr \cf8 \cb3 setAttributes\cf2 \cb3 :\cf7 @\{\cf4 NSForegroundColorAttributeName\cf2  : \cf9 UIColorHex\cf2 (\cf7 0xf1cbb2\cf2 ), \cf4 NSFontAttributeName\cf2  : \cf9 DDFONT\cf2 (\cf7 13\cf2 )\cf7 \}\cf2  \cf8 \cb3 range\cf2 \cb3 :\cf8 \cb3 NSMakeRange\cf2 \cb3 (\cf7 0\cf2 , contentAppendingStr.\cf4 length\cf2 )];
 \f1\fs24 \cf0 \
 
 \f0\fs28 \cf2         
 \f1\fs24 \cf0 \
 
-\f0\fs28 \cf2         [contentAttributeStr \cf8 appendAttributedString\cf2 :contentAppendingStr];
+\f0\fs28 \cf2         [contentAttributeStr \cf8 \cb3 appendAttributedString\cf2 \cb3 :contentAppendingStr];
 \f1\fs24 \cf0 \
 
 \f0\fs28 \cf2     \}
@@ -359,12 +360,12 @@ stringRect = [string \cf8 boundingRectWithSize\cf2 :constraintSize\
 \f0\fs28 \cf2     
 \f1\fs24 \cf0 \
 
-\f0\fs28 \cf2     \cf4 NSMutableAttributedString\cf2  *contentAppendingStr = [[\cf4 NSMutableAttributedString\cf2  \cf8 alloc\cf2 ] \cf8 initWithString\cf2 :[\cf4 NSString\cf2  \cf8 stringWithFormat\cf2 :\cf34 @"
+\f0\fs28 \cf2     \cf4 NSMutableAttributedString\cf2  *contentAppendingStr = [[\cf4 NSMutableAttributedString\cf2  \cf8 \cb3 alloc\cf2 \cb3 ] \cf8 \cb3 initWithString\cf2 \cb3 :[\cf4 NSString\cf2  \cf8 \cb3 stringWithFormat\cf2 \cb3 :\cf34 @"
 \f2 \cf34 \cb3 \'a3\'ba
 \f0 \cf34 \cb3 %@"\cf2 , model.\cf6 \cb3 balkContent\cf2 \cb3 ]];
 \f1\fs24 \cf0 \
 
-\f0\fs28 \cf2     [contentAttributeStr \cf8 appendAttributedString\cf2 :contentAppendingStr];\
+\f0\fs28 \cf2     [contentAttributeStr \cf8 \cb3 appendAttributedString\cf2 \cb3 :contentAppendingStr];\
 \
 \pard\tx692\pardeftab692\pardirnatural\partightenfactor0
 
@@ -450,13 +451,14 @@ UIFont
 \f2 \cf0 \
 \pard\tx692\pardeftab692\pardirnatural\partightenfactor0
 
-\f0 \cf4 \cb3 \kerning1\expnd0\expndtw0 UIBezierPath\cf2  *maskPath = [\cf4 UIBezierPath\cf2  \cf8 bezierPathWithRoundedRect\cf2 :cellBounds \cf8 byRoundingCorners\cf2 :\cf8 UIRectCornerTopLeft\cf2  | \cf8 UIRectCornerTopRight\cf2  \cf8 cornerRadii\cf2 :\cf8 CGSizeMake\cf2 (\cf7 15\cf2 , \cf7 15\cf2 )];
+\f0 \cf4 \cb3 \kerning1\expnd0\expndtw0 UIBezierPath\cf2  *maskPath = [\cf4 UIBezierPath\cf2  \cf8 \cb3 bezierPathWithRoundedRect\cf2 \cb3 :cellBounds \cf8 \cb3 byRoundingCorners\cf2 \cb3 :\cf8 \cb3 UIRectCornerTopLeft\cf2 \cb3  | \cf8 \cb3 UIRectCornerTopRight\cf2 \cb3  \cf8 \cb3 cornerRadii\cf2 \cb3 :\cf8 \cb3 CGSizeMake\cf2 \cb3 (\cf7 15\cf2 , \cf7 15\cf2 )];
 \f1\fs24 \cf0 \
+\pard\tx692\pardeftab692\pardirnatural\partightenfactor0
 
 \f0\fs28 \cf2                 
 \f1\fs24 \cf0 \
 
-\f0\fs28 \cf2                 \cf4 CAShapeLayer\cf2  *maskLayer = [[\cf4 CAShapeLayer\cf2  \cf8 alloc\cf2 ] \cf8 init\cf2 ];
+\f0\fs28 \cf2                 \cf4 CAShapeLayer\cf2  *maskLayer = [[\cf4 CAShapeLayer\cf2  \cf8 \cb3 alloc\cf2 \cb3 ] \cf8 \cb3 init\cf2 \cb3 ];
 \f1\fs24 \cf0 \
 
 \f0\fs28 \cf2                 
@@ -1078,13 +1080,13 @@ return cell;\
 \f0 \cf2 \cb3 \kerning1\expnd0\expndtw0 - (\cf4 UICollectionViewLayoutAttributes\cf2  *)preferredLayoutAttributesFittingAttributes:(\cf4 UICollectionViewLayoutAttributes\cf2  *)layoutAttributes \{
 \f1\fs24 \cf0 \
 
-\f0\fs28 \cf2     [\cf5 self\cf2  \cf8 setNeedsLayout\cf2 ];
+\f0\fs28 \cf2     [\cf5 self\cf2  \cf8 \cb3 setNeedsLayout\cf2 \cb3 ];
 \f1\fs24 \cf0 \
 
-\f0\fs28 \cf2     [\cf5 self\cf2  \cf8 layoutIfNeeded\cf2 ];
+\f0\fs28 \cf2     [\cf5 self\cf2  \cf8 \cb3 layoutIfNeeded\cf2 \cb3 ];
 \f1\fs24 \cf0 \
 
-\f0\fs28 \cf2     \cf4 CGSize\cf2  size = [\cf5 self\cf2 .\cf4 contentView\cf2  \cf8 systemLayoutSizeFittingSize\cf2 :layoutAttributes.\cf4 size\cf2 ];
+\f0\fs28 \cf2     \cf4 CGSize\cf2  size = [\cf5 self\cf2 .\cf4 contentView\cf2  \cf8 \cb3 systemLayoutSizeFittingSize\cf2 \cb3 :layoutAttributes.\cf4 size\cf2 ];
 \f1\fs24 \cf0 \
 
 \f0\fs28 \cf2     \cf4 CGRect\cf2  cellFrame = layoutAttributes.\cf4 frame\cf2 ;
@@ -1281,46 +1283,46 @@ NSLog(@"Linked in %f ms", linkTime *1000.0);\
 \f0 \cf2 \cb3 \kerning1\expnd0\expndtw0 - (\cf5 void\cf2 )setCoverImage \{
 \f1\fs24 \cf0 \
 
-\f0\fs28 \cf2     \cf4 NSURL\cf2  *fileURL = [\cf4 NSURL\cf2  \cf8 URLWithString\cf2 :\cf5 self\cf2 .\cf6 \cb3 filePath\cf2 \cb3 ];
+\f0\fs28 \cf2     \cf4 NSURL\cf2  *fileURL = [\cf4 NSURL\cf2  \cf8 \cb3 URLWithString\cf2 \cb3 :\cf5 self\cf2 .\cf6 \cb3 filePath\cf2 \cb3 ];
 \f1\fs24 \cf0 \
 
-\f0\fs28 \cf2     \cf4 AVURLAsset\cf2  *asset = [\cf4 AVURLAsset\cf2  \cf8 URLAssetWithURL\cf2 :fileURL \cf8 options\cf2 :\cf5 nil\cf2 ];
+\f0\fs28 \cf2     \cf4 AVURLAsset\cf2  *asset = [\cf4 AVURLAsset\cf2  \cf8 \cb3 URLAssetWithURL\cf2 \cb3 :fileURL \cf8 \cb3 options\cf2 \cb3 :\cf5 nil\cf2 ];
 \f1\fs24 \cf0 \
 
-\f0\fs28 \cf2     \cf4 NSArray\cf2  *keys = [\cf4 NSArray\cf2  \cf8 arrayWithObjects\cf2 :\cf34 @"commonMetadata"\cf2 , \cf5 nil\cf2 ];
+\f0\fs28 \cf2     \cf4 NSArray\cf2  *keys = [\cf4 NSArray\cf2  \cf8 \cb3 arrayWithObjects\cf2 \cb3 :\cf34 @"commonMetadata"\cf2 , \cf5 nil\cf2 ];
 \f1\fs24 \cf0 \
 
-\f0\fs28 \cf2     [asset \cf8 loadValuesAsynchronouslyForKeys\cf2 :keys \cf8 completionHandler\cf2 :^\{
+\f0\fs28 \cf2     [asset \cf8 \cb3 loadValuesAsynchronouslyForKeys\cf2 \cb3 :keys \cf8 \cb3 completionHandler\cf2 \cb3 :^\{
 \f1\fs24 \cf0 \
 
-\f0\fs28 \cf2         \cf4 NSArray\cf2  *artworks = [\cf4 AVMetadataItem\cf2  \cf8 metadataItemsFromArray\cf2 :asset.\cf4 commonMetadata
+\f0\fs28 \cf2         \cf4 NSArray\cf2  *artworks = [\cf4 AVMetadataItem\cf2  \cf8 \cb3 metadataItemsFromArray\cf2 \cb3 :asset.\cf4 commonMetadata
 \f1\fs24 \cf0 \
 
-\f0\fs28 \cf2                                                            \cf8 withKey\cf2 :\cf4 AVMetadataCommonKeyArtwork
+\f0\fs28 \cf2                                                            \cf8 \cb3 withKey\cf2 \cb3 :\cf4 AVMetadataCommonKeyArtwork
 \f1\fs24 \cf0 \
 
-\f0\fs28 \cf2                                                           \cf8 keySpace\cf2 :\cf4 AVMetadataKeySpaceCommon\cf2 ];
+\f0\fs28 \cf2                                                           \cf8 \cb3 keySpace\cf2 \cb3 :\cf4 AVMetadataKeySpaceCommon\cf2 ];
 \f1\fs24 \cf0 \
 
 \f0\fs28 \cf2         \cf5 if\cf2  (artworks.\cf4 count\cf2 ) \{
 \f1\fs24 \cf0 \
 
-\f0\fs28 \cf2             \cf4 AVMetadataItem\cf2  *metadataItem = [artworks \cf8 firstObject\cf2 ];
+\f0\fs28 \cf2             \cf4 AVMetadataItem\cf2  *metadataItem = [artworks \cf8 \cb3 firstObject\cf2 \cb3 ];
 \f1\fs24 \cf0 \
 
-\f0\fs28 \cf2             \cf5 if\cf2  ([metadataItem.\cf4 keySpace\cf2  \cf8 isEqualToString\cf2 :\cf4 AVMetadataKeySpaceID3\cf2 ]) \{
+\f0\fs28 \cf2             \cf5 if\cf2  ([metadataItem.\cf4 keySpace\cf2  \cf8 \cb3 isEqualToString\cf2 \cb3 :\cf4 AVMetadataKeySpaceID3\cf2 ]) \{
 \f1\fs24 \cf0 \
 
-\f0\fs28 \cf2                 \cf4 NSDictionary\cf2  *d = [metadataItem.\cf4 value\cf2  \cf8 copyWithZone\cf2 :\cf5 nil\cf2 ];
+\f0\fs28 \cf2                 \cf4 NSDictionary\cf2  *d = [metadataItem.\cf4 value\cf2  \cf8 \cb3 copyWithZone\cf2 \cb3 :\cf5 nil\cf2 ];
 \f1\fs24 \cf0 \
 
-\f0\fs28 \cf2                 [\cf5 self\cf2 .\cf6 \cb3 coverImageView\cf2 \cb3  \cf8 setImage\cf2 :[\cf4 UIImage\cf2  \cf8 imageWithData\cf2 :[d \cf8 objectForKey\cf2 :\cf34 @"data"\cf2 ]]];
+\f0\fs28 \cf2                 [\cf5 self\cf2 .\cf6 \cb3 coverImageView\cf2 \cb3  \cf8 \cb3 setImage\cf2 \cb3 :[\cf4 UIImage\cf2  \cf8 \cb3 imageWithData\cf2 \cb3 :[d \cf8 \cb3 objectForKey\cf2 \cb3 :\cf34 @"data"\cf2 ]]];
 \f1\fs24 \cf0 \
 
-\f0\fs28 \cf2             \} \cf5 else\cf2  \cf5 if\cf2  ([metadataItem.\cf4 keySpace\cf2  \cf8 isEqualToString\cf2 :\cf4 AVMetadataKeySpaceiTunes\cf2 ]) \{
+\f0\fs28 \cf2             \} \cf5 else\cf2  \cf5 if\cf2  ([metadataItem.\cf4 keySpace\cf2  \cf8 \cb3 isEqualToString\cf2 \cb3 :\cf4 AVMetadataKeySpaceiTunes\cf2 ]) \{
 \f1\fs24 \cf0 \
 
-\f0\fs28 \cf2                 [\cf5 self\cf2 .\cf6 \cb3 coverImageView\cf2 \cb3  \cf8 setImage\cf2 :[\cf4 UIImage\cf2  \cf8 imageWithData\cf2 :[metadataItem.\cf4 value\cf2  \cf8 copyWithZone\cf2 :\cf5 nil\cf2 ]]];
+\f0\fs28 \cf2                 [\cf5 self\cf2 .\cf6 \cb3 coverImageView\cf2 \cb3  \cf8 \cb3 setImage\cf2 \cb3 :[\cf4 UIImage\cf2  \cf8 \cb3 imageWithData\cf2 \cb3 :[metadataItem.\cf4 value\cf2  \cf8 \cb3 copyWithZone\cf2 \cb3 :\cf5 nil\cf2 ]]];
 \f1\fs24 \cf0 \
 
 \f0\fs28 \cf2             \}
@@ -1375,52 +1377,53 @@ NSLog(@"Linked in %f ms", linkTime *1000.0);\
 \'b5\'d8\'cd\'bc\'c9\'b8\'d1\'a1\
 \pard\tx692\pardeftab692\pardirnatural\partightenfactor0
 
-\f0 \cf4 \cb3 \kerning1\expnd0\expndtw0 NSMutableArray\cf2  *dataArr = [\cf4 NSMutableArray\cf2  \cf8 array\cf2 ];
+\f0 \cf4 \cb3 \kerning1\expnd0\expndtw0 NSMutableArray\cf2  *dataArr = [\cf4 NSMutableArray\cf2  \cf8 \cb3 array\cf2 \cb3 ];
 \f1\fs24 \cf0 \
+\pard\tx692\pardeftab692\pardirnatural\partightenfactor0
 
 \f0\fs28 \cf2     \cf4 NSError\cf2 *error;
 \f1\fs24 \cf0 \
 
-\f0\fs28 \cf2     \cf4 NSString\cf2  *filePath = [[\cf4 NSBundle\cf2  \cf8 mainBundle\cf2 ]\cf8 pathForResource\cf2 :\cf34 @"province"\cf8 ofType\cf2 :\cf34 @"json"\cf2 ];
+\f0\fs28 \cf2     \cf4 NSString\cf2  *filePath = [[\cf4 NSBundle\cf2  \cf8 \cb3 mainBundle\cf2 \cb3 ]\cf8 \cb3 pathForResource\cf2 \cb3 :\cf34 @"province"\cf8 \cb3 ofType\cf2 \cb3 :\cf34 @"json"\cf2 ];
 \f1\fs24 \cf0 \
 
-\f0\fs28 \cf2     \cf4 NSData\cf2  *jdata = [[\cf4 NSData\cf2  \cf8 alloc\cf2 ]\cf8 initWithContentsOfFile\cf2 :filePath];
+\f0\fs28 \cf2     \cf4 NSData\cf2  *jdata = [[\cf4 NSData\cf2  \cf8 \cb3 alloc\cf2 \cb3 ]\cf8 \cb3 initWithContentsOfFile\cf2 \cb3 :filePath];
 \f1\fs24 \cf0 \
 
-\f0\fs28 \cf2     \cf4 NSDictionary\cf2  *JsonObject=[\cf4 NSJSONSerialization\cf2  \cf8 JSONObjectWithData\cf2 :jdata
+\f0\fs28 \cf2     \cf4 NSDictionary\cf2  *JsonObject=[\cf4 NSJSONSerialization\cf2  \cf8 \cb3 JSONObjectWithData\cf2 \cb3 :jdata
 \f1\fs24 \cf0 \
 
-\f0\fs28 \cf2                                                   \cf8 options\cf2 :\cf8 NSJSONReadingAllowFragments
-\f1\fs24 \cf0 \
+\f0\fs28 \cf2                                                   \cf8 \cb3 options\cf2 \cb3 :\cf8 \cb3 NSJSONReadingAllowFragments
+\f1\fs24 \cf0 \cb3 \
 
-\f0\fs28 \cf2                                                     \cf8 error\cf2 :&error];
+\f0\fs28 \cf2                                                     \cf8 \cb3 error\cf2 \cb3 :&error];
 \f1\fs24 \cf0 \
 
 \f0\fs28 \cf2     
 \f1\fs24 \cf0 \
 
-\f0\fs28 \cf2     \cf4 NSString\cf2  *filePath1 = [[\cf4 NSBundle\cf2  \cf8 mainBundle\cf2 ]\cf8 pathForResource\cf2 :\cf34 @"city"\cf8 ofType\cf2 :\cf34 @"json"\cf2 ];
+\f0\fs28 \cf2     \cf4 NSString\cf2  *filePath1 = [[\cf4 NSBundle\cf2  \cf8 \cb3 mainBundle\cf2 \cb3 ]\cf8 \cb3 pathForResource\cf2 \cb3 :\cf34 @"city"\cf8 \cb3 ofType\cf2 \cb3 :\cf34 @"json"\cf2 ];
 \f1\fs24 \cf0 \
 
-\f0\fs28 \cf2     \cf4 NSData\cf2  *jdata1 = [[\cf4 NSData\cf2  \cf8 alloc\cf2 ]\cf8 initWithContentsOfFile\cf2 :filePath1];
+\f0\fs28 \cf2     \cf4 NSData\cf2  *jdata1 = [[\cf4 NSData\cf2  \cf8 \cb3 alloc\cf2 \cb3 ]\cf8 \cb3 initWithContentsOfFile\cf2 \cb3 :filePath1];
 \f1\fs24 \cf0 \
 
-\f0\fs28 \cf2     \cf4 NSDictionary\cf2  *JsonObject1=[\cf4 NSJSONSerialization\cf2  \cf8 JSONObjectWithData\cf2 :jdata1
+\f0\fs28 \cf2     \cf4 NSDictionary\cf2  *JsonObject1=[\cf4 NSJSONSerialization\cf2  \cf8 \cb3 JSONObjectWithData\cf2 \cb3 :jdata1
 \f1\fs24 \cf0 \
 
-\f0\fs28 \cf2                                                              \cf8 options\cf2 :\cf8 NSJSONReadingAllowFragments
+\f0\fs28 \cf2                                                              \cf8 \cb3 options\cf2 \cb3 :\cf8 \cb3 NSJSONReadingAllowFragments
+\f1\fs24 \cf0 \cb3 \
+
+\f0\fs28 \cf2                                                                \cf8 \cb3 error\cf2 \cb3 :\cf5 nil\cf2 ];
 \f1\fs24 \cf0 \
 
-\f0\fs28 \cf2                                                                \cf8 error\cf2 :\cf5 nil\cf2 ];
+\f0\fs28 \cf2     \cf4 NSMutableArray\cf2  *keysArr = [JsonObject.\cf4 allKeys\cf2  \cf8 \cb3 mutableCopy\cf2 \cb3 ];
 \f1\fs24 \cf0 \
 
-\f0\fs28 \cf2     \cf4 NSMutableArray\cf2  *keysArr = [JsonObject.\cf4 allKeys\cf2  \cf8 mutableCopy\cf2 ];
+\f0\fs28 \cf2     [keysArr \cf8 \cb3 sortUsingComparator\cf2 \cb3 :^\cf4 NSComparisonResult\cf2 (\cf5 id\cf2   \cf5 _Nonnull\cf2  obj1, \cf5 id\cf2   \cf5 _Nonnull\cf2  obj2) \{
 \f1\fs24 \cf0 \
 
-\f0\fs28 \cf2     [keysArr \cf8 sortUsingComparator\cf2 :^\cf4 NSComparisonResult\cf2 (\cf5 id\cf2   \cf5 _Nonnull\cf2  obj1, \cf5 id\cf2   \cf5 _Nonnull\cf2  obj2) \{
-\f1\fs24 \cf0 \
-
-\f0\fs28 \cf2         \cf5 return\cf2  [obj1 \cf8 compare\cf2 :obj2];
+\f0\fs28 \cf2         \cf5 return\cf2  [obj1 \cf8 \cb3 compare\cf2 \cb3 :obj2];
 \f1\fs24 \cf0 \
 
 \f0\fs28 \cf2     \}];
@@ -1429,16 +1432,16 @@ NSLog(@"Linked in %f ms", linkTime *1000.0);\
 \f0\fs28 \cf2     \cf5 for\cf2  (\cf4 NSString\cf2  *key \cf5 in\cf2  keysArr) \{
 \f1\fs24 \cf0 \
 
-\f0\fs28 \cf2         \cf5 if\cf2  ([JsonObject1.\cf4 allKeys\cf2  \cf8 containsObject\cf2 :key]) \{
+\f0\fs28 \cf2         \cf5 if\cf2  ([JsonObject1.\cf4 allKeys\cf2  \cf8 \cb3 containsObject\cf2 \cb3 :key]) \{
 \f1\fs24 \cf0 \
 
-\f0\fs28 \cf2             [dataArr \cf8 addObject\cf2 :\cf7 @\{\cf34 @"code"\cf2 :key,\cf34 @"name"\cf2 :JsonObject[key][\cf34 @"name"\cf2 ],\cf34 @"cities"\cf2 :JsonObject1[key]\cf7 \}\cf2 ];
+\f0\fs28 \cf2             [dataArr \cf8 \cb3 addObject\cf2 \cb3 :\cf7 @\{\cf34 @"code"\cf2 :key,\cf34 @"name"\cf2 :JsonObject[key][\cf34 @"name"\cf2 ],\cf34 @"cities"\cf2 :JsonObject1[key]\cf7 \}\cf2 ];
 \f1\fs24 \cf0 \
 
 \f0\fs28 \cf2         \}\cf5 else\cf2 \{
 \f1\fs24 \cf0 \
 
-\f0\fs28 \cf2             [dataArr \cf8 addObject\cf2 :\cf7 @\{\cf34 @"code"\cf2 :key,\cf34 @"name"\cf2 :JsonObject[key][\cf34 @"name"\cf2 ],\cf34 @"cities"\cf2 :\cf34 @""\cf7 \}\cf2 ];
+\f0\fs28 \cf2             [dataArr \cf8 \cb3 addObject\cf2 \cb3 :\cf7 @\{\cf34 @"code"\cf2 :key,\cf34 @"name"\cf2 :JsonObject[key][\cf34 @"name"\cf2 ],\cf34 @"cities"\cf2 :\cf34 @""\cf7 \}\cf2 ];
 \f1\fs24 \cf0 \
 
 \f0\fs28 \cf2         \}
@@ -1447,14 +1450,14 @@ NSLog(@"Linked in %f ms", linkTime *1000.0);\
 \f0\fs28 \cf2     \}
 \f1\fs24 \cf0 \
 
-\f0\fs28 \cf2     \cf5 BOOL\cf2  isYes = [\cf4 NSJSONSerialization\cf2  \cf8 isValidJSONObject\cf2 :dataArr];
+\f0\fs28 \cf2     \cf5 BOOL\cf2  isYes = [\cf4 NSJSONSerialization\cf2  \cf8 \cb3 isValidJSONObject\cf2 \cb3 :dataArr];
 \f1\fs24 \cf0 \
 \
 
 \f0\fs28 \cf2     \cf5 if\cf2  (isYes) \{
 \f1\fs24 \cf0 \
 
-\f0\fs28 \cf2         \cf4 NSData\cf2  *data = [\cf4 NSJSONSerialization\cf2  \cf8 dataWithJSONObject\cf2 :dataArr \cf8 options\cf2 :\cf7 0\cf2  \cf8 error\cf2 :\cf5 NULL\cf2 ];
+\f0\fs28 \cf2         \cf4 NSData\cf2  *data = [\cf4 NSJSONSerialization\cf2  \cf8 \cb3 dataWithJSONObject\cf2 \cb3 :dataArr \cf8 \cb3 options\cf2 \cb3 :\cf7 0\cf2  \cf8 \cb3 error\cf2 \cb3 :\cf5 NULL\cf2 ];
 \f1\fs24 \cf0 \
 
 \f0\fs28 \cf2         [\cf6 \cb3 FCFileManager\cf2 \cb3  \cf49 \cb3 writeFileAtPath\cf2 \cb3 :\cf34 @"002.json"\cf2  \cf49 \cb3 content\cf2 \cb3 :data];
@@ -1470,13 +1473,13 @@ NSLog(@"Linked in %f ms", linkTime *1000.0);\
 \f0 \cf2 \cb3 \kerning1\expnd0\expndtw0 - (\cf5 instancetype\cf2 )initWithMultiDelegates:(\cf5 id\cf2 )firstObject, ... \{
 \f1\fs24 \cf0 \
 
-\f0\fs28 \cf2     \cf5 self\cf2  = [\cf5 super\cf2  \cf8 init\cf2 ];
+\f0\fs28 \cf2     \cf5 self\cf2  = [\cf5 super\cf2  \cf8 \cb3 init\cf2 \cb3 ];
 \f1\fs24 \cf0 \
 
 \f0\fs28 \cf2     \cf5 if\cf2  (\cf5 self\cf2 ) \{
 \f1\fs24 \cf0 \
 
-\f0\fs28 \cf2         \cf6 \cb3 _pointerArray\cf2 \cb3  = [\cf4 NSPointerArray\cf2  \cf8 weakObjectsPointerArray\cf2 ];
+\f0\fs28 \cf2         \cf6 \cb3 _pointerArray\cf2 \cb3  = [\cf4 NSPointerArray\cf2  \cf8 \cb3 weakObjectsPointerArray\cf2 \cb3 ];
 \f1\fs24 \cf0 \
 
 \f0\fs28 \cf2         
@@ -1497,7 +1500,7 @@ NSLog(@"Linked in %f ms", linkTime *1000.0);\
 \f0\fs28 \cf2         \cf5 if\cf2  (firstObject) \{
 \f1\fs24 \cf0 \
 
-\f0\fs28 \cf2             [\cf6 \cb3 _pointerArray\cf2 \cb3  \cf8 addPointer\cf2 :(\cf5 __bridge\cf2  \cf5 void\cf2  *)firstObject];
+\f0\fs28 \cf2             [\cf6 \cb3 _pointerArray\cf2 \cb3  \cf8 \cb3 addPointer\cf2 \cb3 :(\cf5 __bridge\cf2  \cf5 void\cf2  *)firstObject];
 \f1\fs24 \cf0 \
 
 \f0\fs28 \cf2             arg = \cf9 va_arg\cf2 (params, \cf5 id\cf2 );
@@ -1506,7 +1509,7 @@ NSLog(@"Linked in %f ms", linkTime *1000.0);\
 \f0\fs28 \cf2             \cf5 while\cf2  (arg) \{
 \f1\fs24 \cf0 \
 
-\f0\fs28 \cf2                 [\cf6 \cb3 _pointerArray\cf2 \cb3  \cf8 addPointer\cf2 :(\cf5 __bridge\cf2  \cf5 void\cf2  *)arg];
+\f0\fs28 \cf2                 [\cf6 \cb3 _pointerArray\cf2 \cb3  \cf8 \cb3 addPointer\cf2 \cb3 :(\cf5 __bridge\cf2  \cf5 void\cf2  *)arg];
 \f1\fs24 \cf0 \
 
 \f0\fs28 \cf2                 arg = \cf9 va_arg\cf2 (params, \cf5 id\cf2 );
@@ -1545,10 +1548,10 @@ NSLog(@"Linked in %f ms", linkTime *1000.0);\
 \f2 \'d4\'a4\'c0\'c0\'cd\'bc\'c6\'ac
 \f1\fs24 \cf0 \
 
-\f0\fs28 \cf2     \cf5 if\cf2  ([request.\cf4 URL\cf2 .\cf4 scheme\cf2  \cf8 isEqualToString\cf2 :\cf34 @"image-preview"\cf2 ]) \{
+\f0\fs28 \cf2     \cf5 if\cf2  ([request.\cf4 URL\cf2 .\cf4 scheme\cf2  \cf8 \cb3 isEqualToString\cf2 \cb3 :\cf34 @"image-preview"\cf2 ]) \{
 \f1\fs24 \cf0 \
 
-\f0\fs28 \cf2         \cf4 NSString\cf2 * path = [request.\cf4 URL\cf2 .\cf4 absoluteString\cf2  \cf8 substringFromIndex\cf2 :[\cf34 @"image-preview:"\cf2  \cf8 length\cf2 ]];
+\f0\fs28 \cf2         \cf4 NSString\cf2 * path = [request.\cf4 URL\cf2 .\cf4 absoluteString\cf2  \cf8 \cb3 substringFromIndex\cf2 \cb3 :[\cf34 @"image-preview:"\cf2  \cf8 \cb3 length\cf2 \cb3 ]];
 \f1\fs24 \cf0 \
 
 \f0\fs28 \cf2         path = [path \cf8 \cb3 \ulth \ulc8 s\ulnone tringByAddingPercentEscapesUsingEncoding\cf2 :\cf8 NSUTF8StringEncoding\cf2 ];

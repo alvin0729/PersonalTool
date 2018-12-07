@@ -456,6 +456,7 @@ protocol ExampleProtocol{
     var simpleDescription: String{get}
     mutating func adjust()
 }
+
 /*:
  >**类、枚举和结构体都可以实现协议**
  */
@@ -548,6 +549,7 @@ let printerFailure = try? sendToPrinter(printerName: "Never Has Toner")
 /*:
 >**使用defer代码块来表示在函数返回前，函数中最后执行的代码**
  */
+//使用 defer 代码块来表示在函数返回前，函数中最后执行的代码。无论函数是否会抛出错误，这段代码都将执行。
 var fridgeIsOpen = false
 let fridgeContent = ["milk", "eggs", "lefttovers"]
 func fridgeContains(itemName: String) ->Bool{
@@ -582,6 +584,7 @@ func makeArray<Item>(repeating item: Item, numberOfTimes: Int) -> [Item] {
 }
 makeArray(repeating: "knock", numberOfTimes: 4)
 
+// 重新实现 Swift 标准库中的可选类型
 enum OptionalValue<Wrapped>{
     case None
     case Some(Wrapped)
