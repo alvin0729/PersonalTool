@@ -33,7 +33,7 @@
               "name" : "待定"
               }
               ],
- "online" : 3,
+ "online" : 5,
  "nameGroup" : "宝贝"
  },
  {
@@ -114,8 +114,8 @@
               {
               "vip" : 0,
               "icon" : "009.png",
-              "intro" : "转场动画1",
-              "name" : "转场动画1"
+              "intro" : "Alamofire",
+              "name" : "Alamofire"
               },
               {
               "vip" : 1,

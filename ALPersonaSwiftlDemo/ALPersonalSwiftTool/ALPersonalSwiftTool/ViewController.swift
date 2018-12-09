@@ -88,7 +88,7 @@ extension ViewController:CollapsibleTableViewHeaderDelegate{
         let collapsed = !sections[section].collapsed
         
         sections[section].collapsed = collapsed
-        header.setCollapsed(collapsed)
+        //header.setCollapsed(collapsed)
         tableView.reloadSections(NSIndexSet(index: section) as IndexSet, with: .automatic)
     }
 }

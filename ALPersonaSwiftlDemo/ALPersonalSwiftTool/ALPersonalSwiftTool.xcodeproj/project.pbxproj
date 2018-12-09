@@ -18,6 +18,7 @@
 		CFBFA2631FCEBE8500A0EE4B /* GroupHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFBFA2621FCEBE8500A0EE4B /* GroupHeaderView.swift */; };
 		CFBFA2651FCEBFD300A0EE4B /* JobSummaryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFBFA2641FCEBFD300A0EE4B /* JobSummaryController.swift */; };
 		CFD6C9CB1FD10734001315C3 /* demo.json in Resources */ = {isa = PBXBuildFile; fileRef = CFD6C9CA1FD106A5001315C3 /* demo.json */; };
+		E113906221BCFB2F003D0D7E /* AlamofireVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E113906121BCFB2E003D0D7E /* AlamofireVC.swift */; };
 		E149907D1FC929D000E0A231 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E149907C1FC929D000E0A231 /* AppDelegate.swift */; };
 		E149907F1FC929D000E0A231 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E149907E1FC929D000E0A231 /* ViewController.swift */; };
 		E14990821FC929D000E0A231 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E14990801FC929D000E0A231 /* Main.storyboard */; };
@@ -59,6 +60,7 @@
 		CFD6C9CA1FD106A5001315C3 /* demo.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = demo.json; sourceTree = "<group>"; };
 		CFD6C9CC1FD119FE001315C3 /* File1.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = File1.rtf; sourceTree = "<group>"; };
 		DCDC2986FDB13E8B2DC14D40 /* Pods-ALPersonalSwiftTool.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ALPersonalSwiftTool.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ALPersonalSwiftTool/Pods-ALPersonalSwiftTool.debug.xcconfig"; sourceTree = "<group>"; };
+		E113906121BCFB2E003D0D7E /* AlamofireVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireVC.swift; sourceTree = "<group>"; };
 		E14990791FC929D000E0A231 /* ALPersonalSwiftTool.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ALPersonalSwiftTool.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E149907C1FC929D000E0A231 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E149907E1FC929D000E0A231 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -146,6 +148,14 @@
 			path = "每日优鲜";
 			sourceTree = "<group>";
 		};
+		E113906021BCFB04003D0D7E /* Alamofire */ = {
+			isa = PBXGroup;
+			children = (
+				E113906121BCFB2E003D0D7E /* AlamofireVC.swift */,
+			);
+			path = Alamofire;
+			sourceTree = "<group>";
+		};
 		E14990701FC929D000E0A231 = {
 			isa = PBXGroup;
 			children = (
@@ -171,6 +181,7 @@
 		E149907B1FC929D000E0A231 /* ALPersonalSwiftTool */ = {
 			isa = PBXGroup;
 			children = (
+				E113906021BCFB04003D0D7E /* Alamofire */,
 				CFBFA25A1FCE97AE00A0EE4B /* 每日优鲜 */,
 				CFBFA2531FCE546E00A0EE4B /* CustomCell */,
 				CFBFA2501FCE4F6700A0EE4B /* category */,
@@ -220,7 +231,6 @@
 				E14990761FC929D000E0A231 /* Frameworks */,
 				E14990771FC929D000E0A231 /* Resources */,
 				127F0D9872DFDD1A9B6FFB8B /* [CP] Embed Pods Frameworks */,
-				3F1E4BBD57FD8B14FACBBFFD /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -361,21 +371,6 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ALPersonalSwiftTool/Pods-ALPersonalSwiftTool-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		3F1E4BBD57FD8B14FACBBFFD /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ALPersonalSwiftTool/Pods-ALPersonalSwiftTool-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		F3536457B7507481442EB127 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -410,6 +405,7 @@
 				CFBFA2571FCE7FCB00A0EE4B /* ExampleData.swift in Sources */,
 				CFBFA2551FCE7A0800A0EE4B /* CollapsibleTableViewCell.swift in Sources */,
 				E149907D1FC929D000E0A231 /* AppDelegate.swift in Sources */,
+				E113906221BCFB2F003D0D7E /* AlamofireVC.swift in Sources */,
 				CFBFA2521FCE4F8C00A0EE4B /* Extensions.swift in Sources */,
 				CFBFA25D1FCEA7CE00A0EE4B /* TopTableViewCell.swift in Sources */,
 			);

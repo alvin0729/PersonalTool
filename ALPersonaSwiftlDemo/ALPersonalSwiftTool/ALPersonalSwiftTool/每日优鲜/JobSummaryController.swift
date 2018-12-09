@@ -126,6 +126,10 @@ extension JobSummaryController:UITableViewDataSource,UITableViewDelegate{
             selectIndex = indexPath.row
             self.scrollToTop(section: selectIndex, animated: true)
             topTableView.scrollToRow(at: IndexPath(row: selectIndex, section: 0), at: .top, animated: true)
+        }else{
+            if(indexPath.row == 0){
+                navigationController?.pushViewController(AlamofireVC(), animated: true)
+            }
         }
         
     }
