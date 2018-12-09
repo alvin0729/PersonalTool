@@ -68,6 +68,7 @@ let strings = ["cat","dog","llama","parakeet","terrapin"]
 if let foundIndex = findIndex(ofString: "llama", in: strings) {
     print("The index of llama is \(foundIndex)")
 }
+//定义一个 Equatable 类型约束作为类型参数定义的一部分
 func findIndexT<T: Equatable>(of valueToFind: T, in array:[T]) ->Int?{
     for (index,value) in array.enumerated(){
         if value == valueToFind {
@@ -86,6 +87,7 @@ protocol Container1 {
     var count: Int { get }
     subscript(i: Int) -> Item { get }
 }
+//定义一个协议时，有的时候声明一个或多个关联类型作为协议定义的一部分将会非常有用。关联类型为协议中的某个类型提供了一个占位名（或者说别名），其代表的实际类型在协议被采纳时才会被指定。你可以通过 associatedtype 关键字来指定关联类型。
 struct IntStack: Container1 {
     // original IntStack implementation
     var items = [Int]()
@@ -131,14 +133,56 @@ struct Stack1<Element>: Container1 {
 //: **通过扩展一个存在的类型来指定关联类型-符合一个协议**
 extension Array: Container1{}
 
+//给关联类型添加约束
 //:Using Type Annotations to Constrain an Associated Type-4.0
 protocol Container2 {
-    associatedtype Item: Equatable
+    associatedtype Item: Equatable  //Item 必须遵循 Equatable
     mutating func append(_ item: Item)
     var count: Int { get }
     subscript(i: Int) -> Item { get }
 }
 //: ### 泛型where语句
+
+//:❤️4.2
+//在关联类型约束里使用协议
+//协议可以作为它自身的要求出现
+//suffix(_:) 方法返回容器中从后往前给定数量的元素，把它们存储在一个 Suffix 类型的实例里
+
+//Suffix 拥有两个约束：它必须遵循 SuffixableContainer 协议（就是当前定义的协议），以及它的 Item 类型必须是和容器里的 Item 类型相同。
+//protocol SuffixableContainer: Container2 {
+//    associatedtype Suffix: SuffixableContainer where Suffix.Item == Item
+//    func suffix(_ size: Int) -> Suffix
+//}
+//extension Stack: SuffixableContainer {
+//    func suffix(_ size: Int) -> Stack {
+//        var result = Stack()
+//        for index in (count-size)..<count {
+//            result.append(self[index])
+//        }
+//        return result
+//    }
+//    // Inferred that Suffix is Stack.
+//}
+//var stackOfInts = Stack<Int>()
+//stackOfInts.append(10)
+//stackOfInts.append(20)
+//stackOfInts.append(30)
+//let suffix = stackOfInts.suffix(2)
+// suffix contains 20 and 30
+
+//extension IntStack: SuffixableContainer {
+//    func suffix(_ size: Int) -> Stack<Int> {
+//        var result = Stack<Int>()
+//        for index in (count-size)..<count {
+//            result.append(self[index])
+//        }
+//        return result
+//    }
+//    // Inferred that Suffix is Stack<Int>.
+//}
+
+
+//泛型 Where 语句
 func allItemsMatch<C1: Container1, C2: Container1>
     (_ someContainer: C1, _ anotherContainer: C2) -> Bool
     where C1.Item == C2.Item, C1.Item: Equatable {
@@ -172,6 +216,7 @@ if allItemsMatch(stackOfStrings, arrayOfStrings) {
 // Prints "All items match."
 
 //:4.0Extensions with a Generic Where Clause
+//具有泛型 Where 子句的扩展
 extension Stack1 where Element: Equatable {
     func isTop(_ item: Element) -> Bool {
         guard let topItem = items.last else {
@@ -191,6 +236,8 @@ var notEquatableStack = Stack1<NotEquatable>()
 let notEquatableValue = NotEquatable()
 notEquatableStack.push(notEquatableValue)
 //notEquatableStack.isTop(notEquatableValue)  // Error
+//如果尝试在其元素不符合 Equatable 协议的栈上调用 isTop(_:) 方法，则会收到编译时错误。
+
 
 extension Container1 where Item: Equatable {
     func startsWith(_ item: Item) -> Bool {
@@ -204,6 +251,7 @@ if [9, 9, 9].startsWith(42) {
 }
 // Prints "Starts with something else."
 
+//泛型 where 子句去要求 Item 为特定类型
 extension Container1 where Item == Double {
     func average() -> Double {
         var sum = 0.0
@@ -217,6 +265,7 @@ print([1260.0, 1200.0, 98.6, 37.0].average())
 // Prints "648.9"
 
 //:### Associated Types with a Generic Where Clause
+//具有泛型 Where 子句的关联类型
 protocol Container3 {
     associatedtype Item
     mutating func append(_ item: Item)
@@ -230,6 +279,7 @@ protocol ComparableContainer: Container3 where Item: Comparable { }
 
 
 //:### Generic Subscripts
+//泛型下标
 extension Container3 {
     subscript<Indices: Sequence>(indices: Indices) -> [Item]
         where Indices.Iterator.Element == Int {

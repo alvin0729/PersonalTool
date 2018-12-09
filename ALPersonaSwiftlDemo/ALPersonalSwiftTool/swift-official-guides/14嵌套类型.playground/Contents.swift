@@ -38,7 +38,12 @@ struct BlackjackCard {
 let theAceOfSpades = BlackjackCard(rank: .Ace, suit: .Spades)
 print("theAceOfSpades: \(theAceOfSpades.description)")
 //: ### 引用嵌套类型
+//在外部引用嵌套类型时，在嵌套类型的类型名前加上其外部类型的类型名作为前缀：
 let heartsSymbol = BlackjackCard.Suit.Hearts.rawValue
+let rankSymbol = BlackjackCard.Rank.Ace.rawValue
+let valuesSymbol = BlackjackCard.Rank.Two.values.first
+
+//扩展和 Objective-C 中的分类类似。（与 Objective-C 不同的是，Swift 的扩展没有名字。）
 //: ## 拓展（Extensions）
 //: - 添加计算型属性和计算型类型属性
 //: - 定义实例方法和类型方法
@@ -60,6 +65,8 @@ let heartsSymbol = BlackjackCard.Suit.Hearts.rawValue
  ```
  */
 //: ### 计算型属性
+
+//扩展可以为已有类型添加计算型实例属性和计算型类型属性。
 extension Double{
     var km:Double {return self * 1_000.0}
     var m: Double {return self}
@@ -74,10 +81,17 @@ print("Three feet is \(threeFeet) meters")
 let aMarathon = 42.km + 195.m
 print("A marathon is \(aMarathon) meter long")
 
-/**Extensions can add new computed properties, but they cannot add stored properties, or add property observers to existing properties.*/
+/**扩展可以添加新的计算型属性，但是不可以添加存储型属性，也不可以为已有属性添加属性观察器。*/
 //: - callout(注意): 如果你通过扩展为一个已有类型添加新功能，那么新功能对该类型的所有已有实例都是可用的，即使它们是在这个扩展定义之前创建的。
 //: ### 构造器
+
+/*:
+ >-扩展可以为已有类型添加新的构造器。这可以让你扩展其它类型，将你自己的定制类型作为其构造器参数，或者提供该类型的原始实现中未提供的额外初始化选项。
+ >-扩展能为类添加新的便利构造器，但是它们不能为类添加新的指定构造器或析构器。指定构造器和析构器必须总是由原始的类实现来提供。
+ */
+
 //: - callout(注意): 如果你使用扩展为一个值类型添加构造器，同时该值类型的原始实现中未定义任何定制的构造器且所有存储属性提供了默认值，那么我们就可以在扩展中的构造器里调用默认构造器和逐一成员构造器。
+
 struct Size{
     var width = 0.0,height = 0.0
 }
@@ -88,6 +102,7 @@ struct Rect{
     var origin = Point()
     var size = Size()
 }
+//因为结构体 Rect 未提供定制的构造器，因此它会获得一个逐一成员构造器。又因为它为所有存储型属性提供了默认值，它又会获得一个默认构造器。
 let defaultRect = Rect()
 let memberwiseRect = Rect(origin: Point(x:2.0,y:2.0), size: Size(width: 5.0, height: 5.0))
 extension Rect{
@@ -98,6 +113,7 @@ extension Rect{
     }
 }
 let centerRect = Rect(center: Point(x: 4.0, y: 4.0), size: Size(width: 3.0, height: 3.0))
+//如果你使用扩展提供了一个新的构造器，你依旧有责任确保构造过程能够让实例完全初始化。
 //: ### 方法
 extension Int {
     func repetitions(task:() -> Void){
@@ -111,6 +127,7 @@ extension Int {
     print("Hello!")
 }
 //: **可变实例方法**
+//通过扩展添加的实例方法也可以修改该实例本身。结构体和枚举类型中修改 self 或其属性的方法必须将该实例方法标注为 mutating，正如来自原始实现的可变方法一样。
 extension Int{
     mutating func square() {
         self = self * self
@@ -132,9 +149,11 @@ extension Int{
 746381295[8]
 746381295[9]
 // returns 0, as if you had requested:
+//如果该 Int 值没有足够的位数，即下标越界，那么上述下标实现会返回 0，犹如在数字左边自动补 0
 0746381295[9]
 
 //: ### 嵌套类型
+//扩展可以为已有的类、结构体和枚举添加新的嵌套类型：
 extension Int{
     enum Kind {
         case Negative,Zero,Positive

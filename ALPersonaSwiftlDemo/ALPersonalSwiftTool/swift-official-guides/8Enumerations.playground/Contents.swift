@@ -38,6 +38,20 @@ default:
     print("Not a safe place for humans")
 }
 
+//:- ❤️4.2Iterating over Enumeration Cases
+/*enum Beverage: CaseIterable {
+    case coffee, tea, juice
+}
+let numberOfChoices = Beverage.allCases.count
+print("\(numberOfChoices) beverages available")
+// Prints "3 beverages available"
+for beverage in Beverage.allCases {
+    print(beverage)
+}
+// coffee
+// tea
+// juice
+ */
 //: #### Associated Values关联值
 //:你可以定义 Swift 枚举来存储任意类型的关联值，如果需要的话，每个枚举成员的关联值类型可以各不相同。枚 举的这种特性跟其他语言中的可识别联合(discriminated unions)，标签联合(tagged unions)，或者变体(variants)相似。
 enum BarCode {
@@ -54,6 +68,7 @@ case .QRCode(let productCode):
 }
 
 switch productBarcode {
+//如果一个枚举成员的所有关联值都被提取为常量，或者都被提取为变量，为了简洁，你可以只在成员名称前标注一个 let 或者 var：
 case let .UPCA(numberSystem, manufacturer, product, check):
     print("UPC-A: \(numberSystem), \(manufacturer), \(product), \(check).")
 case let .QRCode(productCode):
@@ -61,6 +76,7 @@ case let .QRCode(productCode):
 }
 
 //: #### 原始值Raw Values
+//作为关联值的替代选择，枚举成员可以被默认值（称为原始值）预填充，这些原始值的类型必须相同。
 enum ASCIIControlCharacter: Character{
     case Tab = "\t"
     case LineFeed = "\n"
@@ -83,6 +99,7 @@ let earthsOrder = Planet1.Earth.rawValue
 let sunsetDirection = CompassPoint1.West.rawValue
 //:使用原始值初始化枚举实例(Initializing from a Raw Value)
 let possiblePlanet = Planet1(rawValue: 7)
+//并非所有 Int 值都可以找到一个匹配的行星。因此，原始值构造器总是返回一个可选的枚举成员
 // possiblePlanet 类型为 Planet? 值为 Planet.Uranus
 //:原始值构造器是一个可失败构造器，因为并不是每一个原始值都有与之对应的枚举成员。
 let positionToFind = 9

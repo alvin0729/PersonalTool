@@ -69,11 +69,13 @@ print("Here's a random number:\(generator.random())")
 print("And another one:\(generator.random())")
 //: ### Mutating方法要求
 //: - callout(注意): 实现协议中的 mutating 方法时，若是类类型，则不用写 mutating 关键字。而对于结构体和枚举，则必须写 mutating 关键字。
+//有时需要在方法中改变（或异变）方法所属的实例。
 protocol Togglable{
     mutating func toggle()
 }
 enum OnOffSwitch: Togglable{
     case Off,On
+    //该方法将会改变遵循协议的类型的实例：
     mutating func toggle() {
         switch self {
         case .Off:
@@ -93,6 +95,8 @@ lightSwitch.toggle()
  }
  ```*/
 //: **构造器要求在类中的实现**
+//你可以在遵循协议的类中实现构造器，无论是作为指定构造器，还是作为便利构造器。无论哪种情况，你都必须为构造器实现标上 required 修饰符：
+//使用 required 修饰符可以确保所有子类也必须提供此构造器实现，从而也能符合协议。
 /*:
  ```
  class SomeClass: SomeProtocol {
@@ -123,6 +127,11 @@ lightSwitch.toggle()
  }
  ```*/
 //: ### 协议作为类型
+/*
+ 作为函数、方法或构造器中的参数类型或返回值类型
+ 作为常量、变量或属性的类型
+ 作为数组、字典或其他容器中的元素类型
+ */
 class Dice {
     let sides: Int
     let generator:RandomNumberGenerator
@@ -200,6 +209,9 @@ let tracker = DiceGameTracker()
 let game = SnakesAndLadders()
 game.delegate = tracker
 game.play()
+
+//在扩展里添加协议遵循
+//即便无法修改源代码，依然可以通过扩展令已有类型遵循并符合协议
 //: ### 通过扩展添加协议的一致性
 protocol TextRepresentable {
     var textualDescription:String{get}
@@ -217,6 +229,20 @@ extension SnakesAndLadders: TextRepresentable{
     }
 }
 print(game.textualDescription)
+
+//: ❤️4.2
+//有条件地遵循协议
+//泛型类型可能只在某些情况下满足一个协议的要求，比如当类型的泛型形式参数遵循对应协议时。
+//下面的扩展让 Array 类型只要在存储遵循 TextRepresentable 协议的元素时就遵循 TextRepresentable 协议。
+//extension Array: TextRepresentable where Element: TextRepresentable {
+//    var textualDescription: String {
+//        let itemsAsText = self.map { $0.textualDescription }
+//        return "[" + itemsAsText.joined(separator: ", ") + "]"
+//    }
+//}
+//let myDice = [d6, d12]
+//print(myDice.textualDescription)
+// 打印 "[A 6-sided dice, A 12-sided dice]"
 //: ### 通过扩展遵循协议
 //: 当一个类型已经符合了某个协议中的所有要求，却还没有声明遵循该协议时，可以通过空扩展体的扩展来遵循该协议
 struct Hamster{
@@ -225,7 +251,10 @@ struct Hamster{
         return "A hamster named \(name)"
     }
 }
+//即使满足了协议的所有要求，类型也不会自动遵循协议，必须显式地遵循协议。
 extension Hamster: TextRepresentable{}
+//从现在起，Hamster 的实例可以作为 TextRepresentable 类型使用
+
 let simonTheHamster = Hamster(name: "Simon")
 let somethingTextRepresentable:TextRepresentable = simonTheHamster
 print(somethingTextRepresentable.textualDescription)
@@ -275,6 +304,7 @@ print(game.prettyTextDescription)
 ```*/
 //: ### 协议合成
 //: 有时候需要同时遵循多个协议，你可以将多个协议采用 SomeProtocol & AnotherProtocol 这样的格式进行组合，称为 协议合成（protocol composition）。你可以罗列任意多个你想要遵循的协议，以与符号(&)分隔。
+//协议组合使用 SomeProtocol & AnotherProtocol 的形式。你可以列举任意数量的协议，用和符号（&）分开。除了协议列表，协议组合也能包含类类型，这允许你标明一个需要的父类。
 protocol Named{
     var name: String{get}
 }
@@ -329,6 +359,7 @@ class Circle:HasArea{
         self.radius = radius
     }
 }
+//Circle 类把 area 属性实现为基于存储型属性 radius 的计算型属性。Country 类则把 area 属性实现为存储型属性。
 class Country:HasArea{
     var area: Double
     init(area:Double) {
@@ -355,6 +386,7 @@ for object in objects {
 }
 //: ### 可选的协议要求
 //: 一个类型为 (Int) -> String 的方法会变成 ((Int) -> String)?。需要注意的是整个函数类型是可选的，而不是函数的返回值。
+//标记 @objc 特性的协议只能被继承自 Objective-C 类的类或者 @objc 类遵循，其他类以及结构体和枚举均不能遵循这种协议。
 @objc protocol CounterDataSource{
     @objc optional func incrementForCount(count:Int) -> Int
     @objc optional var fixedIncrement:Int{get}
@@ -365,7 +397,7 @@ class Counter {
     func increment(){
         if let amount = dataSource?.incrementForCount?(count: count) {//返回值为Int？类型
             count += amount
-        } else if let amount = dataSource?.fixedIncrement{
+        } else if let amount = dataSource?.fixedIncrement{//是一个可选属性，因此属性值是一个 Int? 值
             count += amount
         }
     }
@@ -398,6 +430,7 @@ for _ in 1...5 {
 }
 //: ### 协议扩展
 //: 协议可以通过扩展来为遵循协议的类型提供属性、方法以及下标的实现。通过这种方式，你可以基于协议本身来实现这些功能，而无需在每个遵循协议的类型中都重复同样的实现，也无需使用全局函数。
+//扩展 RandomNumberGenerator 协议来提供 randomBool() 方法
 extension RandomNumberGenerator{
     func randomBool() -> Bool {
         return random() > 0.5
@@ -409,12 +442,30 @@ print("And here's a random Boolean: \(generator1.randomBool())")
 //: **提供默认实现**
 //: 可以通过协议扩展来为协议要求的属性、方法以及下标提供默认的实现。如果遵循协议的类型为这些要求提供了自己的实现，那么这些自定义实现将会替代扩展中的默认实现被使用。
 //: - callout(注意): 通过协议扩展为协议要求提供的默认实现和可选的协议要求不同。虽然在这两种情况下，遵循协议的类型都无需自己实现这些要求，但是通过扩展提供的默认实现可以直接调用，而无需使用可选链式调用。
+
 extension PrettyTextRepresentable{
     var prettyTextualDescription:String{
         return textualDescription
     }
 }
 //: **为协议扩展添加限制条件**
+//你可以扩展 Collection 协议，适用于集合中的元素遵循了 Equatable 协议的情况。通过限制集合元素遵 Equatable 协议， 作为标准库的一部分， 你可以使用 == 和 != 操作符来检查两个元素的等价性和非等价性。
+extension Collection where Element: Equatable {
+    func allEqual() -> Bool {
+        for element in self {
+            if element != self.first {
+                return false
+            }
+        }
+        return true
+    }
+}
+let equalNumbers = [100, 100, 100, 100, 100]
+let differentNumbers = [100, 100, 200, 100, 200]
+print(equalNumbers.allEqual())
+// 打印 "true"
+print(differentNumbers.allEqual())
+// 打印 "false"
 extension Collection where Iterator.Element:TextRepresentable{
     var textualDescription:String{
         let itemsAsText = self.map{$0.textualDescription}

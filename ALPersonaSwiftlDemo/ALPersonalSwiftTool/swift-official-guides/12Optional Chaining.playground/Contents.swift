@@ -59,6 +59,7 @@ class Address{
     func buildingIdentifier() -> String? {
         if buildingName != nil {
             return buildingName
+            //如果 buildingNumber 和 street 均有值则返回 buildingNumber
         } else if let buildingNumber = buildingNumber, let street = street{
             return "\(buildingNumber) \(street)"
         } else {
@@ -76,6 +77,7 @@ if let roomCount = john1.residence?.numberOfRooms {
 let someAddress = Address()
 someAddress.buildingNumber = "29"
 someAddress.street = "Acacia Road"
+//通过 john.residence 来设定 address 属性也会失败，因为 john.residence 当前为 nil。
 john1.residence?.address = someAddress
 
 func createAddress()-> Address{
@@ -89,12 +91,13 @@ func createAddress()-> Address{
 }
 john1.residence?.address = createAddress()
 //: #### 通过可选链式调用调用方法
+//如果在可选值上通过可选链式调用来调用这个方法，该方法的返回类型会是 Void?，而不是 Void，因为通过可选链式调用得到的返回值都是可选的。这样我们就可以使用 if 语句来判断能否成功调用 printNumberOfRooms() 方法，即使方法本身没有定义返回值。通过判断返回值是否为 nil 可以判断调用是否成功
 if john1.residence?.printNumberOfRooms() != nil {
     print("It was possible to print the number of rooms.")
 } else {
     print("It was not possible to print the number of rooms.")
 }
-
+//即使 residence 为 nil。通过可选链式调用给属性赋值会返回 Void?
 if (john1.residence?.address = someAddress) != nil {
     print("It was possible to set the address.")
 } else {
@@ -125,6 +128,8 @@ testScores["Dave"]?[0] = 91
 testScores["Bev"]?[0] += 1
 testScores["Brian"]?[0] = 72
 //: #### 连接多层可选链式调用
+//通过可选链式调用访问一个 Int 值，将会返回 Int?，无论使用了多少层可选链式调用。
+//类似的，通过可选链式调用访问 Int? 值，依旧会返回 Int? 值，并不会返回 Int??。
 if let johnsStreet = john1.residence?.address?.street{
     print("John's street name is  \(johnsStreet).")
 } else {
@@ -142,6 +147,7 @@ if let johnsStreet = john1.residence?.address?.street {
     print("Unable to retrieve the address.")
 }
 //: #### 在方法的可选返回值上进行可选链式调用
+//通过可选链式调用来调用该方法，最终的返回值依旧会是 String? 类型
 if let buildingIdentifier = john1.residence?.address?.buildingIdentifier() {
     print("John's building identifier is \(buildingIdentifier).")
 }
@@ -157,14 +163,16 @@ if let beginsWithThe = john1.residence?.address?.buildingIdentifier()?.hasPrefix
 //: ## 错误处理
 //: #### 表示并抛出错误
  enum VendingMachineError: Error {
- case invalidSelection                     //选择无效
- case insufficientFunds(coinsNeeded: Int)   //金额不足
- case outOfStock                           //缺货
+    case invalidSelection                     //选择无效
+    case insufficientFunds(coinsNeeded: Int)   //金额不足
+    case outOfStock                           //缺货
  }
- throw VendingMachineError.insufficientFunds(coinsNeeded:5)
+ //throw VendingMachineError.insufficientFunds(coinsNeeded:5)
 //: #### 处理错误
 //: - callout(注意):Swift中的错误处理和其他语言中用try，catch和throw进行异常处理很像。和其他语言中（包括 Objective-C ）的异常处理不同的是，Swift 中的错误处理并不涉及解除调用栈，这是一个计算代价高昂的过程。就此而言，throw语句的性能特性是可以和return语句相媲美的。\
 //: **用 throwing 函数传递错误**
+//只有 throwing 函数可以传递错误。任何在某个非 throwing 函数内部抛出的错误只能在函数内部处理。
+
 struct Item {
     var price: Int
     var count: Int
@@ -206,17 +214,20 @@ let favoriteSnacks = [
 func buyFavoriteSnack(person: String, vendingMachine: VendingMachine) throws{
     let snackName = favoriteSnacks[person] ?? "Candy Bar"
     try vendingMachine.vend(itemNamed:snackName)
+    //必须要么直接处理这些错误——使用 do-catch 语句，try? 或 try!；要么继续将这些错误传递下去。
 }
 
 struct Purchasedsnack {
     let name: String
     init(name: String, vendingMachine: VendingMachine) throws {
+        //通过传递到它的调用者来处理这些错误
         try vendingMachine.vend(itemNamed: name)
         self.name = name
     }
 }
 //func canThrowErrors() throws -> String
 //func cannotThrowErrors() -> String
+
 //:**用 Do-Catch 处理错误**
 /*:
  ```
@@ -229,8 +240,9 @@ struct Purchasedsnack {
  statements
  }
 ```*/
+
 var vendingMachine = VendingMachine()
-vendingMachine.coinsDeposited = 8
+vendingMachine.coinsDeposited = 1
 do {
     try buyFavoriteSnack(person: "Alice", vendingMachine: vendingMachine)
 } catch VendingMachineError.invalidSelection {
@@ -240,6 +252,24 @@ do {
 } catch VendingMachineError.insufficientFunds(let coinsNeeded) {
     print("Insufficient funds. Please insert an additional \(coinsNeeded) coins.")
 }
+
+//: ❤️ 4.2
+func nourish(with item: String) throws {
+    do {
+        try vendingMachine.vend(itemNamed: item)
+    } catch is VendingMachineError {
+        print("Invalid selection, out of stock, or not enough money.")
+    }
+}
+
+do {
+    try nourish(with: "Beet-Flavored Chips")
+} catch {
+    print("Unexpected non-vending-machine-related error: \(error)")
+}
+// Prints "Invalid selection, out of stock, or not enough money."
+
+//可以使用 try? 通过将错误转换成一个可选值来处理错误。如果在评估 try? 表达式时一个错误被抛出，那么表达式的值就是 nil。例如，在下面的代码中，x 和 y 有着相同的数值和等价的含义：
 //:**将错误转换成可选值**
 /*:
  ```
@@ -282,3 +312,10 @@ do {
  }
  }
  ```*/
+//因为图片是和应用绑定的，运行时不会有错误抛出，所以适合禁用错误传递。
+//let photo = try! loadImage(atPath: "./Resources/John Appleseed.jpg")
+
+//延迟执行的操作会按照它们声明的顺序从后往前执行——也就是说，第一条 defer 语句中的代码最后才执行，第二条 defer 语句中的代码倒数第二个执行，以此类推。最后一条语句会第一个执行。
+
+
+
