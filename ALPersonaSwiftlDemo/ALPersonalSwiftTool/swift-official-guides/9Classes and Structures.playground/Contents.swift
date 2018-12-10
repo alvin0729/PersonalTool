@@ -43,10 +43,14 @@ print("hd is still \(hd.width) pixels wide")
 
 enum CompassPoint {
     case North, South, East, West
+    mutating func turnNorth() {
+        self = .North
+    }
 }
 var currentDirection = CompassPoint.West
 let rememberedDirection = currentDirection
-currentDirection = .East
+//currentDirection = .North
+currentDirection.turnNorth()
 if rememberedDirection == .West {
     print("The remembered direction is still .West")
 }
@@ -70,6 +74,7 @@ if tenEighty === alsoTenEighty {
 //:类和结构体的选择
 //:结构体实例总是通过值传递，类实例总是通过引用传递。
 //字符串(String)、数组(Array)、和字典(Dictionary)类型的赋值与复制行为
+//Swift 中，许多基本类型，诸如 String，Array 和 Dictionary 类型均以结构体的形式实现。这意味着被赋值给新的常量或变量，或者被传入函数或方法中时，它们的值会被拷贝。
 //: # 属性Properties
 //:计算属性可以用于类、结构体和枚举，存储属性只能用于类和结构体。\
 //:存储属性和计算属性通常与特定类型的实例关联。但是，属性也可以直接作用于类型本身，这种属性称为类型属性。
@@ -84,6 +89,7 @@ rangeOfThreeItems.firstValue = 6
 //常量结构体的存储属性
 let rangeOfFourItems = FixedLengthRange(firstValue: 0, length: 4)
 //rangeOfFourItems.firstValue = 6
+// 尽管 firstValue 是个变量属性，这里还是会报错
 //:如果创建了一个结构体的实例并将其赋值给一个常量，则无法修改该实例的任何属性，即使有属性被声明为变量也不行!\
 //:这种行为是由于结构体(struct)属于值类型。\
 //:延迟存储属性:是指当第一次被调用的时候才会计算其初始值的属性。在属性声明前使用 lazy 来标示一个延迟存 储属性。
@@ -328,6 +334,8 @@ ovenLight.next()
 ovenLight.next()
 //: #### 类型方法 (Type Methods)
 //:在 Objective-C 中，你只能为 Objective-C 的类类型(classes)定义类型方法(type-level methods)。在 Swift 中，你可以为所有的类、结构体和枚举定义类型方法。每一个类型方法都被它所支持的类型显式包含。
+//在方法的 func 关键字之前加上关键字 static，来指定类型方法。类还可以用关键字 class 来允许子类重写父类的方法实现。
+
 class SomeClass1{
     class func someTypeMethod() {
         // type method implementation goes here
@@ -346,6 +354,7 @@ struct LevelTracker {
         return level <= highestUnlockedLevel
     }
     var currentLevel = 1
+    //因为允许在调用 advance(to:) 时候忽略返回值，不会产生编译警告，所以函数被标注为 @ discardableResult 属性
     @discardableResult
     mutating func advanceToLevel(level: Int) -> Bool{
         if LevelTracker.levelIsUnlocked(level: level) {

@@ -35,7 +35,7 @@ public struct Section{
 }
 
 public var sectionsData: [Section] = [
-    Section(name: "dialyemo", items: [
+    Section(name: "dialyDemo", items: [
         Item(name: "每日优鲜", detail: "JobSummaryController")
         ]),
     Section(name: "Mac", items: [

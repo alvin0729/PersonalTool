@@ -31,6 +31,8 @@ let library = [
     Song(name: "Never Gonna Give You Up", artist: "Rick Astley")
 ]
 //: ### 检查类型
+//用类型检查操作符（is）来检查一个实例是否属于特定子类型。若实例属于那个子类型，类型检查操作符返回 true，否则返回 false。
+
 var movieCount = 0
 var songCount = 0
 for item in library {
@@ -42,6 +44,8 @@ for item in library {
 }
 print("Media library contains \(movieCount) movies and \(songCount) songs")
 //: ### 向下转型
+
+
 for item in library{
     if let movie = item as? Movie{
         print("Movie:'\(movie.name)',dir.\(movie.director)'")
@@ -62,7 +66,7 @@ things.append("hello")
 things.append((3.0, 5.0))
 things.append(Movie(name: "Ghostbusters", director: "Ivan Reitman"))
 things.append({(name: String) -> String in "Hello, \(name)"})
-
+//因为向下转型可能会失败，类型转型操作符带有两种不同形式。条件形式 as? 返回一个你试图向下转成的类型的可选值。强制形式 as! 把试图向下转型和强制解包转换结果结合为一个操作
 for thing in things {
     switch thing {
     case 0 as Int:

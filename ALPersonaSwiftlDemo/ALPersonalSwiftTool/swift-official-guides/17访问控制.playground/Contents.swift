@@ -14,6 +14,7 @@ var myNumber = 1
 myNumber = oneMore(than: myNumber)
 print(myNumber)
 //: ### Conflicting Access to In-Out Parameters
+
 var stepSize = 1
 func incrementInPlace(_ number: inout Int) {
     number += stepSize
@@ -57,7 +58,7 @@ extension Player {
 var oscar = Player(name: "Oscar", health: 10, energy: 10)
 var maria = Player(name: "Maria", health: 5, energy: 10)
 oscar.shareHealth(with: &maria)  // OK
-////oscar.shareHealth(with: &oscar)
+//oscar.shareHealth(with: &oscar)
 // Error: conflicting accesses to oscar
 //: ### Conflicting Access to Properties
 var playerInformation = (health: 10, energy: 20)
@@ -74,13 +75,31 @@ func someFunction() {
 //: ## 访问控制
 //: ### 模块和源文件
 //: 模块指的是独立的代码单元，框架或应用程序会作为一个独立的模块来构建和发布。在 Swift 中，一个模块可以使用 import 关键字导入另外一个模块。
+
 //: ### 访问级别
+/*
+ Open 和 Public 级别可以让实体被同一模块源文件中的所有实体访问，在模块外也可以通过导入该模块来访问源文件里的所有实体。通常情况下，你会使用 Open 或 Public 级别来指定框架的外部接口。Open 和 Public 的区别在后面会提到。
+ Internal 级别让实体被同一模块源文件中的任何实体访问，但是不能被模块外的实体访问。通常情况下，如果某个接口只在应用程序或框架内部使用，就可以将其设置为 Internal 级别。
+ File-private 限制实体只能在其定义的文件内部访问。如果功能的部分细节只需要在文件内使用时，可以使用 File-private 来将其隐藏。
+ Private 限制实体只能在其定义的作用域，以及同一文件内的 extension 访问。如果功能的部分细节只需要在当前作用域内使用时，可以使用 Private 来将其隐藏。
+ */
+
+/*
+ Open 只能作用于类和类的成员，它和 Public 的区别如下：
+ 
+ Public 或者其它更严访问级别的类，只能在其定义的模块内部被继承。
+ Public 或者其它更严访问级别的类成员，只能在其定义的模块内部的子类中重写。
+ Open 的类，可以在其定义的模块中被继承，也可以在引用它的模块中被继承。
+ Open 的类成员，可以在其定义的模块中子类中重写，也可以在引用它的模块中的子类重写。
+ */
+
 //: **访问级别基本原则**
 //: Swift 中的访问级别遵循一个基本原则：不可以在某个实体中定义访问级别更低（更严格）的实体。
 //: - 一个公开访问级别的变量，其类型的访问级别不能是内部，文件私有或是私有类型的。因为无法保证变量的类型在使用变量的地方也具有“访问权限。
 //: - 函数的访问级别不能高于它的参数类型和返回类型的访问级别。因为这样就会出现函数可以在任何地方被访问，但是它的参数类型和返回类型却不可以的情况。
 //: **默认访问级别**
 //: 如果你不为代码中的实体显式指定访问级别，那么它们默认为 internal 级别（有一些例外情况，稍后会进行说明）。
+
 //: ### 访问控制语句
 /*:
  ```
@@ -148,9 +167,10 @@ public class A{
 }
 internal class B: A{
     override internal func someMethod(){
-        super.someMethod()
+        //super.someMethod()
     }
 }
+
 internal class C: A {
     override internal func someMethod() {
         super.someMethod()
@@ -164,10 +184,13 @@ internal class C: A {
 //: **Getter 和 Setter**\
 //: 常量、变量、属性、下标的 Getters 和 Setters 的访问级别和它们所属类型的访问级别相同。\
 //: Setter 的访问级别可以低于对应的 Getter 的访问级别，这样就可以控制变量、属性或下标的读写权限。在 var 或 subscript 关键字之前，你可以通过 fileprivate(set)，private(set) 或 internal(set) 为它们的写入权限指定更低的访问级别。
+//如果常量、变量、属性、下标的类型是 private 级别的，那么它们必须明确指定访问级别为 private
 //private var privateInstance = SomePrivateClass()
 
 struct TrackedString {
+    //numberOfEdits 属性的 Getter 依然是默认的访问级别 internal，但是 Setter 的访问级别是 private，这表示该属性只能在内部修改，而在结构体的外部则表现为一个只读属性。
     private(set) var numberOfEdits = 0
+    //将初始值设为 ""
     var value: String = ""{
         didSet{
             numberOfEdits += 1
@@ -179,6 +202,8 @@ stringToEdit.value = "This string will be tracked."
 stringToEdit.value += " This edit will increment numberOfEdits."
 stringToEdit.value += " So will this one."
 print("The number of edits is \(stringToEdit.numberOfEdits)")
+
+//把结构体中的 numberOfEdits 属性的 Getter 的访问级别设置为 public，而 Setter 的访问级别设置为 private
 /*:
  ```
  public struct TrackedString {

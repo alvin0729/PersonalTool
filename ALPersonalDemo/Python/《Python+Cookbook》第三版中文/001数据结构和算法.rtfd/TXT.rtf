@@ -5,7 +5,7 @@
 \red0\green0\blue0;\red28\green0\blue207;}
 {\*\expandedcolortbl;;\csgenericrgb\c100000\c0\c100000;\csgenericrgb\c66500\c5200\c56900;\csgenericrgb\c100000\c100000\c100000;
 \csgenericrgb\c0\c0\c0;\csgenericrgb\c11000\c0\c81000;}
-\paperw11900\paperh16840\margl1440\margr1440\vieww18940\viewh17560\viewkind0
+\paperw11900\paperh16840\margl1440\margr1440\vieww18940\viewh13720\viewkind0
 \pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
 
 \f0\fs36 \cf2 \
@@ -345,114 +345,114 @@ c = \{key:a[key] for key in a.keys() - \{'z', 'w'\}\}\
 # c is \{'x': 1, 'y': 2\}\
 \
 1.10 \'c9\'be\'b3\'fd\'d0\'f2\'c1\'d0\'cf\'e0\'cd\'ac\'d4\'aa\'cb\'d8\'b2\'a2\'b1\'a3\'b3\'d6\'cb\'b3\'d0\'f2\
-\'c8\'e7\'b9\'fb\'d0\'f2\'c1\'d0\'c9\'cf\'b5\'c4\'d6\'b5\'b6\'bc\'ca\'c7 hashable \'c0\'e0\'d0\'cd\'a3\'ac\'c4\'c7\'c3\'b4\'bf\'c9\'d2\'d4\'ba\'dc\'bc\'f2\'b5\'a5\'b5\'c4\'c0\'fb\'d3\'c3\'bc\'af\'ba\'cf\'bb\'f2\'d5\'df\'c9\'fa\'b3\'c9\'c6\'f7\'c0\'b4\'bd\'e2\
+\'c8\'e7\'b9\'fb\'d0\'f2\'c1\'d0\'c9\'cf\'b5\'c4\'d6\'b5\'b6\'bc\'ca\'c7 hashable \'c0\'e0\'d0\'cd\'a3\'ac\'c4\'c7\'c3\'b4\'bf\'c9\'d2\'d4\'ba\'dc\'bc\'f2\'b5\'a5\'b5\'c4\'c0\'fb\'d3\'c3\'bc\'af\'ba\'cf\'bb\'f2\'d5\'df\'c9\'fa\'b3\'c9\'c6\'f7\'c0\'b4\'bd\'e2\
 \'be\'f6\'d5\'e2\'b8\'f6\'ce\'ca\'cc\'e2\'a1\'a3\'b1\'c8\'c8\'e7\'a3\'ba\
-def dedupe(items):\
-	seen = set()\
-	for item in items:\
-		if item not in seen:\
-			yield item\
+def dedupe(items):\
+	seen = set()\
+	for item in items:\
+		if item not in seen:\
+			yield item\
 			seen.add(item)\
->>> a = [1, 5, 2, 1, 9, 1, 5, 10]\
+>>> a = [1, 5, 2, 1, 9, 1, 5, 10]\
 >>> list(dedupe(a))\
 \
 \'cf\'fb\'b3\'fd\'d4\'aa\'cb\'d8\'b2\'bb\'bf\'c9\'b9\'fe\'cf\'a3\'a3\'a8\'b1\'c8\'c8\'e7 dict \'c0\'e0\'d0\'cd\'a3\'a9\'b5\'c4\'d0\'f2\'c1\'d0\'d6\'d0\'d6\'d8\'b8\'b4\'d4\'aa\'cb\'d8\'a3\'a8\'bb\'f9\'d3\'da\'b5\'a5\'b8\'f6\'d7\'d6\'b6\'ce\'a1\'a2\'ca\'f4\'d0\'d4\'bb\'f2\'d5\'df\'c4\'b3\'b8\'f6\'b8\'fc\'b4\'f3\'b5\'c4\'ca\'fd\'be\'dd\'bd\'e1\'b9\'b9\'c0\'b4\'cf\'fb\'b3\'fd\'d6\'d8\'b8\'b4\'d4\'aa\'cb\'d8\'a3\'a9\
-def dedupe(items, key=None):\
-	seen = set()\
-	for item in items:\
-		val = item if key is None else key(item)\
-		if val not in seen:\
-			yield item\
+def dedupe(items, key=None):\
+	seen = set()\
+	for item in items:\
+		val = item if key is None else key(item)\
+		if val not in seen:\
+			yield item\
 			seen.add(val)\
 \'d5\'e2\'c0\'ef\'b5\'c4 key \'b2\'ce\'ca\'fd\'d6\'b8\'b6\'a8\'c1\'cb\'d2\'bb\'b8\'f6\'ba\'af\'ca\'fd\'a3\'ac\'bd\'ab\'d0\'f2\'c1\'d0\'d4\'aa\'cb\'d8\'d7\'aa\'bb\'bb\'b3\'c9 hashable \'c0\'e0\'d0\'cd\'a1\'a3\
->>> a = [ \{'x':1, 'y':2\}, \{'x':1, 'y':3\}, \{'x':1, 'y':2\}, \{'x':2, 'y':4\}]\
->>> list(dedupe(a, key=lambda d: (d['x'],d['y'])))\
-[\{'x': 1, 'y': 2\}, \{'x': 1, 'y': 3\}, \{'x': 2, 'y': 4\}]\
->>> list(dedupe(a, key=lambda d: d['x']))\
-[\{'x': 1, 'y': 2\}, \{'x': 2, 'y': 4\}]\
+>>> a = [ \{'x':1, 'y':2\}, \{'x':1, 'y':3\}, \{'x':1, 'y':2\}, \{'x':2, 'y':4\}]\
+>>> list(dedupe(a, key=lambda d: (d['x'],d['y'])))\
+[\{'x': 1, 'y': 2\}, \{'x': 1, 'y': 3\}, \{'x': 2, 'y': 4\}]\
+>>> list(dedupe(a, key=lambda d: d['x']))\
+[\{'x': 1, 'y': 2\}, \{'x': 2, 'y': 4\}]\
 >>>\
 \
 \'bd\'f6\'bd\'f6\'be\'cd\'ca\'c7\'cf\'eb\'cf\'fb\'b3\'fd\'d6\'d8\'b8\'b4\'d4\'aa\'cb\'d8\
->>> a\
-[1, 5, 2, 1, 9, 1, 5, 10]\
->>> set(a)\
+>>> a\
+[1, 5, 2, 1, 9, 1, 5, 10]\
+>>> set(a)\
 \{1, 2, 10, 5, 9\}\
 \'d5\'e2\'d6\'d6\'b7\'bd\'b7\'a8\'b2\'bb\'c4\'dc\'ce\'ac\'bb\'a4\'d4\'aa\'cb\'d8\'b5\'c4\'cb\'b3\'d0\'f2\'a3\'ac\'c9\'fa\'b3\'c9\'b5\'c4\'bd\'e1\'b9\'fb\'d6\'d0\'b5\'c4\'d4\'aa\'cb\'d8\'ce\'bb\'d6\'c3\'b1\'bb\'b4\'f2\'c2\'d2\'a1\'a3\'b6\'f8\'c9\'cf\'c3\'e6\'b5\'c4\'b7\'bd\'b7\'a8\'bf\'c9\'d2\'d4\'b1\'dc\'c3\'e2\'d5\'e2\'d6\'d6\'c7\'e9\'bf\'f6\'a1\'a3\
 \
-\'d4\'da\'b1\'be\'bd\'da\'d6\'d0\'ce\'d2\'c3\'c7\'ca\'b9\'d3\'c3\'c1\'cb\'c9\'fa\'b3\'c9\'c6\'f7\'ba\'af\'ca\'fd\'c8\'c3\'ce\'d2\'c3\'c7\'b5\'c4\'ba\'af\'ca\'fd\'b8\'fc\'bc\'d3\'cd\'a8\'d3\'c3\'a3\'ac\'b2\'bb\'bd\'f6\'bd\'f6\'ca\'c7\'be\'d6\'cf\'de\'d3\'da\'c1\'d0\'b1\'ed\'b4\'a6\
+\'d4\'da\'b1\'be\'bd\'da\'d6\'d0\'ce\'d2\'c3\'c7\'ca\'b9\'d3\'c3\'c1\'cb\'c9\'fa\'b3\'c9\'c6\'f7\'ba\'af\'ca\'fd\'c8\'c3\'ce\'d2\'c3\'c7\'b5\'c4\'ba\'af\'ca\'fd\'b8\'fc\'bc\'d3\'cd\'a8\'d3\'c3\'a3\'ac\'b2\'bb\'bd\'f6\'bd\'f6\'ca\'c7\'be\'d6\'cf\'de\'d3\'da\'c1\'d0\'b1\'ed\'b4\'a6\
 \'c0\'ed\'a1\'a3\'b1\'c8\'c8\'e7\'a3\'ac\'c8\'e7\'b9\'fb\'c8\'e7\'b9\'fb\'c4\'e3\'cf\'eb\'b6\'c1\'c8\'a1\'d2\'bb\'b8\'f6\'ce\'c4\'bc\'fe\'a3\'ac\'cf\'fb\'b3\'fd\'d6\'d8\'b8\'b4\'d0\'d0\'a3\'ac\'c4\'e3\'bf\'c9\'d2\'d4\'ba\'dc\'c8\'dd\'d2\'d7\'cf\'f1\'d5\'e2\'d1\'f9\'d7\'f6\'a3\'ba\
-with open(somefile,'r') as f:\
-for line in dedupe(f):\
+with open(somefile,'r') as f:\
+for line in dedupe(f):\
 	...\
 \
 1.11 \'c3\'fc\'c3\'fb\'c7\'d0\'c6\'ac\
 \'c4\'da\'d6\'c3\'b5\'c4 slice() \'ba\'af\'ca\'fd\'b4\'b4\'bd\'a8\'c1\'cb\'d2\'bb\'b8\'f6\'c7\'d0\'c6\'ac\'b6\'d4\'cf\'f3\'a3\'ac\'bf\'c9\'d2\'d4\'b1\'bb\'d3\'c3\'d4\'da\'c8\'ce\'ba\'ce\'c7\'d0\'c6\'ac\'d4\'ca\'d0\'ed\'ca\'b9\'d3\'c3\'b5\'c4\'b5\'d8\'b7\'bd\'a1\'a3\
->>> items = [0, 1, 2, 3, 4, 5, 6]\
->>> a = slice(2, 4)\
->>> items[2:4]\
-[2, 3]\
->>> items[a]\
-[2, 3]\
->>> items[a] = [10,11]\
->>> items\
-[0, 1, 10, 11, 4, 5, 6]\
->>> del items[a]\
->>> items\
+>>> items = [0, 1, 2, 3, 4, 5, 6]\
+>>> a = slice(2, 4)\
+>>> items[2:4]\
+[2, 3]\
+>>> items[a]\
+[2, 3]\
+>>> items[a] = [10,11]\
+>>> items\
+[0, 1, 10, 11, 4, 5, 6]\
+>>> del items[a]\
+>>> items\
 [0, 1, 4, 5, 6]\
 \'c8\'e7\'b9\'fb\'c4\'e3\'d3\'d0\'d2\'bb\'b8\'f6\'c7\'d0\'c6\'ac\'b6\'d4\'cf\'f3 a\'a3\'ac\'c4\'e3\'bf\'c9\'d2\'d4\'b7\'d6\'b1\'f0\'b5\'f7\'d3\'c3\'cb\'fc\'b5\'c4 a.start , a.stop , a.step \'ca\'f4\'d0\'d4\'c0\'b4\'bb\'f1\'c8\'a1\'b8\'fc\'b6\'e0\'b5\'c4\'d0\'c5\'cf\'a2\'a1\'a3\
 a = slice(5, 50, 2)\
 \
-\'b5\'f7\'d3\'c3\'c7\'d0\'c6\'ac\'b5\'c4 indices(size) \'b7\'bd\'b7\'a8\'bd\'ab\'cb\'fc\'d3\'b3\'c9\'e4\'b5\'bd\'d2\'bb\'b8\'f6\'c8\'b7\'b6\'a8\'b4\'f3\'d0\'a1\'b5\'c4\'d0\'f2\
-\'c1\'d0\'c9\'cf\'a3\'ac\'d5\'e2\'b8\'f6\'b7\'bd\'b7\'a8\'b7\'b5\'bb\'d8\'d2\'bb\'b8\'f6\'c8\'fd\'d4\'aa\'d7\'e9 (start, stop, step) \'a3\'ac\'cb\'f9\'d3\'d0\'d6\'b5\'b6\'bc\'bb\'e1\'b1\'bb\'ba\'cf\'ca\'ca\'b5\'c4\'cb\'f5\'d0\'a1\'d2\'d4\
+\'b5\'f7\'d3\'c3\'c7\'d0\'c6\'ac\'b5\'c4 indices(size) \'b7\'bd\'b7\'a8\'bd\'ab\'cb\'fc\'d3\'b3\'c9\'e4\'b5\'bd\'d2\'bb\'b8\'f6\'c8\'b7\'b6\'a8\'b4\'f3\'d0\'a1\'b5\'c4\'d0\'f2\
+\'c1\'d0\'c9\'cf\'a3\'ac\'d5\'e2\'b8\'f6\'b7\'bd\'b7\'a8\'b7\'b5\'bb\'d8\'d2\'bb\'b8\'f6\'c8\'fd\'d4\'aa\'d7\'e9 (start, stop, step) \'a3\'ac\'cb\'f9\'d3\'d0\'d6\'b5\'b6\'bc\'bb\'e1\'b1\'bb\'ba\'cf\'ca\'ca\'b5\'c4\'cb\'f5\'d0\'a1\'d2\'d4\
 \'c2\'fa\'d7\'e3\'b1\'df\'bd\'e7\'cf\'de\'d6\'c6\'a3\'ac\'b4\'d3\'b6\'f8\'ca\'b9\'d3\'c3\'b5\'c4\'ca\'b1\'ba\'f2\'b1\'dc\'c3\'e2\'b3\'f6\'cf\'d6 IndexError \'d2\'ec\'b3\'a3\'a1\'a3\
->>> s = 'HelloWorld'\
->>> a.indices(len(s))\
-(5, 10, 2)\
->>> for i in range(*a.indices(len(s))):\
+>>> s = 'HelloWorld'\
+>>> a.indices(len(s))\
+(5, 10, 2)\
+>>> for i in range(*a.indices(len(s))):\
 		  ... print(s[i])\
 \
 1.12 \'d0\'f2\'c1\'d0\'d6\'d0\'b3\'f6\'cf\'d6\'b4\'ce\'ca\'fd\'d7\'ee\'b6\'e0\'b5\'c4\'d4\'aa\'cb\'d8\
-words = [\
-'look', 'into', 'my', 'eyes', 'look', 'into', 'my', 'eyes',\
-'the', 'eyes', 'the', 'eyes', 'the', 'eyes', 'not', 'around', 'the',\
-'eyes', "don't", 'look', 'around', 'the', 'eyes', 'look', 'into',\
-'my', 'eyes', "you're", 'under'\
-]\
-from collections import Counter\
-word_counts = Counter(words)\
-# \'b3\'f6\'cf\'d6\'c6\'b5\'c2\'ca\'d7\'ee\'b8\'df\'b5\'c4 3 \'b8\'f6\'b5\'a5\'b4\'ca\
-top_three = word_counts.most_common(3)\
-print(top_three)\
+words = [\
+'look', 'into', 'my', 'eyes', 'look', 'into', 'my', 'eyes',\
+'the', 'eyes', 'the', 'eyes', 'the', 'eyes', 'not', 'around', 'the',\
+'eyes', "don't", 'look', 'around', 'the', 'eyes', 'look', 'into',\
+'my', 'eyes', "you're", 'under'\
+]\
+from collections import Counter\
+word_counts = Counter(words)\
+# \'b3\'f6\'cf\'d6\'c6\'b5\'c2\'ca\'d7\'ee\'b8\'df\'b5\'c4 3 \'b8\'f6\'b5\'a5\'b4\'ca\
+top_three = word_counts.most_common(3)\
+print(top_three)\
 # Outputs [('eyes', 8), ('the', 5), ('look', 4)]\
 \
 morewords = ['why','are','you','not','looking','in','my','eyes']\
  word_counts.update(morewords)\
 \
 Counter \'ca\'b5\'c0\'fd\'d2\'bb\'b8\'f6\'cf\'ca\'ce\'aa\'c8\'cb\'d6\'aa\'b5\'c4\'cc\'d8\'d0\'d4\'ca\'c7\'cb\'fc\'c3\'c7\'bf\'c9\'d2\'d4\'ba\'dc\'c8\'dd\'d2\'d7\'b5\'c4\'b8\'fa\'ca\'fd\'d1\'a7\'d4\'cb\'cb\'e3\'b2\'d9\'d7\'f7\'cf\'e0\'bd\'e1\'ba\'cf\'a1\'a3\
->>> a = Counter(words)\
->>> b = Counter(morewords)\
->>> a\
-Counter(\{'eyes': 8, 'the': 5, 'look': 4, 'into': 3, 'my': 3, 'around': 2,\
-"you're": 1, "don't": 1, 'under': 1, 'not': 1\})\
->>> b\
-Counter(\{'eyes': 1, 'looking': 1, 'are': 1, 'in': 1, 'not': 1, 'you': 1,\
-'my': 1, 'why': 1\})\
->>> # Combine counts\
->>> c = a + b\
->>> c\
-Counter(\{'eyes': 9, 'the': 5, 'look': 4, 'my': 4, 'into': 3, 'not': 2,\
-'around': 2, "you're": 1, "don't": 1, 'in': 1, 'why': 1,\
-'looking': 1, 'are': 1, 'under': 1, 'you': 1\})\
->>> # Subtract counts\
->>> d = a - b\
->>> d\
-Counter(\{'eyes': 7, 'the': 5, 'look': 4, 'into': 3, 'my': 2, 'around': 2,\
-"you're": 1, "don't": 1, 'under': 1\})\
+>>> a = Counter(words)\
+>>> b = Counter(morewords)\
+>>> a\
+Counter(\{'eyes': 8, 'the': 5, 'look': 4, 'into': 3, 'my': 3, 'around': 2,\
+"you're": 1, "don't": 1, 'under': 1, 'not': 1\})\
+>>> b\
+Counter(\{'eyes': 1, 'looking': 1, 'are': 1, 'in': 1, 'not': 1, 'you': 1,\
+'my': 1, 'why': 1\})\
+>>> # Combine counts\
+>>> c = a + b\
+>>> c\
+Counter(\{'eyes': 9, 'the': 5, 'look': 4, 'my': 4, 'into': 3, 'not': 2,\
+'around': 2, "you're": 1, "don't": 1, 'in': 1, 'why': 1,\
+'looking': 1, 'are': 1, 'under': 1, 'you': 1\})\
+>>> # Subtract counts\
+>>> d = a - b\
+>>> d\
+Counter(\{'eyes': 7, 'the': 5, 'look': 4, 'into': 3, 'my': 2, 'around': 2,\
+"you're": 1, "don't": 1, 'under': 1\})\
 >>>\
 \
 1.13 \'cd\'a8\'b9\'fd\'c4\'b3\'b8\'f6\'b9\'d8\'bc\'fc\'d7\'d6\'c5\'c5\'d0\'f2\'d2\'bb\'b8\'f6\'d7\'d6\'b5\'e4\'c1\'d0\'b1\'ed\
 \
-\
+\'cd\'a8\'b9\'fd\'ca\'b9\'d3\'c3 operator \'c4\'a3\'bf\'e9\'b5\'c4 itemgetter \'ba\'af\'ca\'fd\'a3\'ac\'bf\'c9\'d2\'d4\'b7\'c7\'b3\'a3\'c8\'dd\'d2\'d7\'b5\'c4\'c5\'c5\'d0\'f2\'a3\'ba\'b8\'f9\'be\'dd\'c4\'b3\'b8\'f6\'bb\'f2\'c4\'b3\'bc\'b8\'b8\'f6\'d7\'d6\'b5\'e4\'d7\'d6\'b6\'ce\'c0\'b4\'c5\'c5\'d0\'f2\'d5\'e2\'b8\'f6\'c1\'d0\'b1\'ed\'a1\'a3\
 \
 \
 \

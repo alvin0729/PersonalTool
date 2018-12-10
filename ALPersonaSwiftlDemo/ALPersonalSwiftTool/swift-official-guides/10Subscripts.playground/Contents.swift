@@ -62,6 +62,7 @@ var matrix = Matrix(rows: 2, columns: 2)
 matrix[0,1] = 1.5
 matrix[1,0] = 3.2
 //let someValue = matrix[2,2]
+//// 断言将会触发，因为 [2, 2] 已经超过了 matrix 的范围
 //: # 继承(Inheritance)
 //:在 Swift 中，继承是区分「类」与其它类型的一个基本特征。\
 //:可以为类中继承来的属性添加属性观察器(property observers)\
@@ -190,7 +191,9 @@ struct Color {
 }
 let magenta = Color(red: 1.0, green: 0.0, blue: 1.0)
 let halfGray = Color(white: 0.5)
+//注意，如果不通过参数标签传值，你是没法调用这个构造器的。只要构造器定义了某个参数标签，你就必须使用它，忽略它将导致编译错误：
 //let veryGreen = Color(0.0, 1.0, 0.0)  //error
+// 报编译时错误，需要外部名称
 //:不带外部名的构造器参数
 struct Celsius {
     var temperatureInCelsius: Double
@@ -210,6 +213,7 @@ struct Celsius {
 }
 let bodyTemperature = Celsius(37.0)
 //:可选属性类型
+//如果你定制的类型包含一个逻辑上允许取值为空的存储型属性——无论是因为它无法在初始化时赋值，还是因为它在之后某个时间点可以赋值为空——你都需要将它定义为 可选类型。可选类型的属性将自动初始化为 nil，表示这个属性是有意在初始化时设置为空的。
 class SurveyQuestion0 {
     var text: String
     var response: String?
@@ -314,6 +318,8 @@ var sayHello: String? = "Say hello!"
 //:父类的构造器仅会在安全和适当的情况下被继承。跟 Objective-C 中的子类不同，Swift 中的子类默认情况下不会继承父类的构造器。\
 //:当你在编写一个和父类中指定构造器相匹配的子类构造器时，你实际上是在重写父类的这个指定构造器。因此，你必须在定义子类构造器时带上 override 修饰符。\
 //:由于子类不能直接调用父类的便利构造器,你在子类中“重写”一个父类便利构造器时，不需要加 override 前缀。
+//相反，如果你编写了一个和父类便利构造器相匹配的子类构造器，由于子类不能直接调用父类的便利构造器（每个规则都在上文类的构造器代理规则有所描述），因此，严格意义上来讲，你的子类并未对一个父类构造器提供重写。最后的结果就是，你在子类中“重写”一个父类便利构造器时，不需要加 override 修饰符。
+
 class Vehicle1 {
     var numberOfWheels = 0
     var description: String{
@@ -391,6 +397,7 @@ for item in breakfastList {
 //:可失败构造器的参数名和参数类型，不能与其它非可失败构造器的参数名，及其参数类型相同。
 //: - callout(注意): 严格来说，构造器都不支持返回值。因为构造器本身的作用，只是为了确保对象能被正确构造。因此你只是用 return nil 表明可失败构造器构造失败，而不要用关键字 return 来表明构造成功。
 print("=====================================")
+//例如，实现针对数字类型转换的可失败构造器。确保数字类型之间的转换能保持精确的值，使用这个 init(exactly:) 构造器。如果类型转换不能保持值不变，则这个构造器构造失败。
 let wholeNumber: Double = 12345.0
 let pi = 3.14159
 
@@ -592,5 +599,5 @@ struct Checkerboard {
 }
 let board = Checkerboard()
 print(board.squareIsBlackAtRow(row: 0, column: 1))
-print(board.squareIsBlackAtRow(row: 7, column: 7))
+print(board.squareIsBlackAtRow(row: 7, column: 6))
 

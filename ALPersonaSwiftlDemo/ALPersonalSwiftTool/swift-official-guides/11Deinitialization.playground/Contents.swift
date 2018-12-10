@@ -151,6 +151,7 @@ joh!.card = CreditCard(number: 1234_4567_3456, customer: joh!)
 joh = nil
 //: #### 无主引用以及隐式解析可选属性
 //:存在着第三种场景，在这种场景中，两个属性都必须有值，并且初始化完成后永远不会为nil 。在这种场景中，需要一个类使用无主属性，而另外一个类使用隐式解析可选属性。
+//这使两个属性在初始化完成后能被直接访问（不需要可选展开），同时避免了循环引用
 class Country {
     let name: String
     var capitalCity:City!   //将 Country的capitalCity 属性声明为隐式解析可选类型的属性
@@ -194,10 +195,12 @@ class HTMLElement {
 }
 let heading = HTMLElement(name: "h1")
 let defaultText = "some default text"
+//可以像实例方法那样去命名、使用 asHTML 属性。然而，由于 asHTML 是闭包而不是实例方法，如果你想改变特定 HTML 元素的处理方式的话，可以用自定义的闭包来取代默认值。
 heading.asHTML = {
     return "<\(heading.name)>\(heading.text ?? defaultText)</\(heading.name)>"
 }
 print(heading.asHTML())
+//// 打印 "<h1>some default text</h1>"
 var paragraph: HTMLElement? = HTMLElement(name: "p", text: "hello, world")
 print(paragraph!.asHTML())
 paragraph = nil

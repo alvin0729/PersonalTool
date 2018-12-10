@@ -18,6 +18,10 @@
 		CFBFA2631FCEBE8500A0EE4B /* GroupHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFBFA2621FCEBE8500A0EE4B /* GroupHeaderView.swift */; };
 		CFBFA2651FCEBFD300A0EE4B /* JobSummaryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFBFA2641FCEBFD300A0EE4B /* JobSummaryController.swift */; };
 		CFD6C9CB1FD10734001315C3 /* demo.json in Resources */ = {isa = PBXBuildFile; fileRef = CFD6C9CA1FD106A5001315C3 /* demo.json */; };
+		E113906221BCFB2F003D0D7E /* AlamofireVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E113906121BCFB2E003D0D7E /* AlamofireVC.swift */; };
+		E113906621BD4313003D0D7E /* TendaysDemoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E113906421BD425B003D0D7E /* TendaysDemoVC.swift */; };
+		E113906921BD45D1003D0D7E /* MacroTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = E113906821BD45D1003D0D7E /* MacroTool.swift */; };
+		E113906B21BD4CDB003D0D7E /* TJCommonDefines.swift in Sources */ = {isa = PBXBuildFile; fileRef = E113906A21BD4CDB003D0D7E /* TJCommonDefines.swift */; };
 		E149907D1FC929D000E0A231 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E149907C1FC929D000E0A231 /* AppDelegate.swift */; };
 		E149907F1FC929D000E0A231 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E149907E1FC929D000E0A231 /* ViewController.swift */; };
 		E14990821FC929D000E0A231 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E14990801FC929D000E0A231 /* Main.storyboard */; };
@@ -59,6 +63,11 @@
 		CFD6C9CA1FD106A5001315C3 /* demo.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = demo.json; sourceTree = "<group>"; };
 		CFD6C9CC1FD119FE001315C3 /* File1.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = File1.rtf; sourceTree = "<group>"; };
 		DCDC2986FDB13E8B2DC14D40 /* Pods-ALPersonalSwiftTool.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ALPersonalSwiftTool.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ALPersonalSwiftTool/Pods-ALPersonalSwiftTool.debug.xcconfig"; sourceTree = "<group>"; };
+		E113906121BCFB2E003D0D7E /* AlamofireVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireVC.swift; sourceTree = "<group>"; };
+		E113906421BD425B003D0D7E /* TendaysDemoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TendaysDemoVC.swift; sourceTree = "<group>"; };
+		E113906821BD45D1003D0D7E /* MacroTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MacroTool.swift; sourceTree = "<group>"; };
+		E113906A21BD4CDB003D0D7E /* TJCommonDefines.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TJCommonDefines.swift; sourceTree = "<group>"; };
+		E113906C21BD53C3003D0D7E /* ALPersonalSwiftTool-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ALPersonalSwiftTool-Bridging-Header.h"; sourceTree = "<group>"; };
 		E14990791FC929D000E0A231 /* ALPersonalSwiftTool.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ALPersonalSwiftTool.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E149907C1FC929D000E0A231 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E149907E1FC929D000E0A231 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -146,6 +155,31 @@
 			path = "每日优鲜";
 			sourceTree = "<group>";
 		};
+		E113906021BCFB04003D0D7E /* Alamofire */ = {
+			isa = PBXGroup;
+			children = (
+				E113906121BCFB2E003D0D7E /* AlamofireVC.swift */,
+			);
+			path = Alamofire;
+			sourceTree = "<group>";
+		};
+		E113906321BD35C8003D0D7E /* 30daysDemo */ = {
+			isa = PBXGroup;
+			children = (
+				E113906421BD425B003D0D7E /* TendaysDemoVC.swift */,
+			);
+			path = 30daysDemo;
+			sourceTree = "<group>";
+		};
+		E113906721BD45BE003D0D7E /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+				E113906A21BD4CDB003D0D7E /* TJCommonDefines.swift */,
+				E113906821BD45D1003D0D7E /* MacroTool.swift */,
+			);
+			path = Tool;
+			sourceTree = "<group>";
+		};
 		E14990701FC929D000E0A231 = {
 			isa = PBXGroup;
 			children = (
@@ -171,10 +205,13 @@
 		E149907B1FC929D000E0A231 /* ALPersonalSwiftTool */ = {
 			isa = PBXGroup;
 			children = (
+				E113906321BD35C8003D0D7E /* 30daysDemo */,
+				E113906021BCFB04003D0D7E /* Alamofire */,
 				CFBFA25A1FCE97AE00A0EE4B /* 每日优鲜 */,
 				CFBFA2531FCE546E00A0EE4B /* CustomCell */,
 				CFBFA2501FCE4F6700A0EE4B /* category */,
 				E149907C1FC929D000E0A231 /* AppDelegate.swift */,
+				E113906721BD45BE003D0D7E /* Tool */,
 				E149907E1FC929D000E0A231 /* ViewController.swift */,
 				CFBFA2561FCE7FCB00A0EE4B /* ExampleData.swift */,
 				CFBFA2581FCE812B00A0EE4B /* CollapsibleTableViewHeader.swift */,
@@ -186,6 +223,7 @@
 				E14990881FC929D000E0A231 /* LaunchScreen.storyboard */,
 				E149908B1FC929D000E0A231 /* Info.plist */,
 				E14990831FC929D000E0A231 /* ALPersonalSwiftTool.xcdatamodeld */,
+				E113906C21BD53C3003D0D7E /* ALPersonalSwiftTool-Bridging-Header.h */,
 			);
 			path = ALPersonalSwiftTool;
 			sourceTree = "<group>";
@@ -220,7 +258,6 @@
 				E14990761FC929D000E0A231 /* Frameworks */,
 				E14990771FC929D000E0A231 /* Resources */,
 				127F0D9872DFDD1A9B6FFB8B /* [CP] Embed Pods Frameworks */,
-				3F1E4BBD57FD8B14FACBBFFD /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -279,6 +316,7 @@
 				TargetAttributes = {
 					E14990781FC929D000E0A231 = {
 						CreatedOnToolsVersion = 9.0;
+						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 					};
 					E149908F1FC929D000E0A231 = {
@@ -361,21 +399,6 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ALPersonalSwiftTool/Pods-ALPersonalSwiftTool-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		3F1E4BBD57FD8B14FACBBFFD /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ALPersonalSwiftTool/Pods-ALPersonalSwiftTool-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		F3536457B7507481442EB127 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -406,10 +429,14 @@
 				CFBFA2591FCE812B00A0EE4B /* CollapsibleTableViewHeader.swift in Sources */,
 				CFBFA2651FCEBFD300A0EE4B /* JobSummaryController.swift in Sources */,
 				E149907F1FC929D000E0A231 /* ViewController.swift in Sources */,
+				E113906621BD4313003D0D7E /* TendaysDemoVC.swift in Sources */,
+				E113906B21BD4CDB003D0D7E /* TJCommonDefines.swift in Sources */,
+				E113906921BD45D1003D0D7E /* MacroTool.swift in Sources */,
 				E14990851FC929D000E0A231 /* ALPersonalSwiftTool.xcdatamodeld in Sources */,
 				CFBFA2571FCE7FCB00A0EE4B /* ExampleData.swift in Sources */,
 				CFBFA2551FCE7A0800A0EE4B /* CollapsibleTableViewCell.swift in Sources */,
 				E149907D1FC929D000E0A231 /* AppDelegate.swift in Sources */,
+				E113906221BCFB2F003D0D7E /* AlamofireVC.swift in Sources */,
 				CFBFA2521FCE4F8C00A0EE4B /* Extensions.swift in Sources */,
 				CFBFA25D1FCEA7CE00A0EE4B /* TopTableViewCell.swift in Sources */,
 			);
@@ -578,6 +605,7 @@
 			baseConfigurationReference = DCDC2986FDB13E8B2DC14D40 /* Pods-ALPersonalSwiftTool.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 75C82FC24V;
 				INFOPLIST_FILE = ALPersonalSwiftTool/Info.plist;
@@ -585,6 +613,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.alvin.test4;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "ALPersonalSwiftTool/ALPersonalSwiftTool-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -595,6 +625,7 @@
 			baseConfigurationReference = F1FB1FE21C6DF90B6AAAA074 /* Pods-ALPersonalSwiftTool.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 75C82FC24V;
 				INFOPLIST_FILE = ALPersonalSwiftTool/Info.plist;
@@ -602,6 +633,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.alvin.test4;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "ALPersonalSwiftTool/ALPersonalSwiftTool-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

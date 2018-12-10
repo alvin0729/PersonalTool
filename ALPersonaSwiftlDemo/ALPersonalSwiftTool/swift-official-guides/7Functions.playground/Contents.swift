@@ -279,7 +279,7 @@ let strings = numbers.map{
 //:闭包可以在其被定义的上下文中捕获常量或变量。即使定义这些常量和变量的原作用域已经不存在，闭包任然可以在闭包函数体内引用和修改这些值
 func makeIncrementer(forIncrement amount: Int) -> () -> Int {
     var runningTotal = 0
-    func incrementer() -> Int {//从外围函数捕获amount、amount引用，保证了amount、amount在调用完makeIncrementer后不会消失，并且保证在下一次执行incrementer函数时，runningTotal依旧存在
+    func incrementer() -> Int {//从外围函数捕获runningTotal、amount引用，保证了runningTotal、amount在调用完makeIncrementer后不会消失，并且保证在下一次执行incrementer函数时，runningTotal依旧存在
         runningTotal += amount
         return runningTotal
     }
@@ -352,7 +352,7 @@ func serve(customer customerProvider: @autoclosure () -> String){
 serve(customer: customersInLine.remove(at: 0))
 //: - callout(注意):过度使用 autoclosures 会让你的代码变得难以理解。上下文和函数名应该能够清晰地表明求值是被延迟 执行的。
 //:如果你想让一个自动闭包可以“逃逸”，则应该同时使用 @autoclosure 和 @escaping 属性.
-// customersInLine is ["Barry", "Daniella"]
+// customersInLine i = ["Barry", "Daniella"]
 var customerProviders: [() -> String] = []
 func collectCustomerProviders(_ customerProvider: @autoclosure @escaping () -> String){
     customerProviders.append(customerProvider)
