@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>路径练习</title>
+</head>
+<body>
+
+<!--
+注意点:
+1.以后企业开发中如果需要编写路径, 统一使用反斜杠/, 不要适用正斜杠
+因为将来我们开发的程序可能会部署到其它操作系统的服务器上, 而在其它操作系统中路径都是/, 所以如果你写的不是/, 可能会引发问题
+
+2.在企业开发中一般不会使用绝对路径,  因为可移植性不好
+也就是说将你写好的代码拷贝给别人, 别人可能就不能运行了
+-->
+<!--&lt;!&ndash;同级&ndash;&gt;-->
+<img src="0.jpg" alt="">
+
+<!--&lt;!&ndash;下级&ndash;&gt;-->
+<img src="images/1.jpeg" alt="">
+<img src="images/a/2.jpg" alt="">
+<img src="images/a/b/3.jpg" alt="">
+
+<!--上级-->
+<img src="../4.jpg" alt="">
+<img src="../../c/5.jpeg" alt="">
+
+
+<hr>
+<hr>
+<hr>
+<hr>
+
+<!--同级-->
+<img src="C:\Users\Jonathan_Lee\Desktop\HTML基础\代码\test\demo/0.jpg" alt="">
+
+<!--下级-->
+<img src="C:\Users\Jonathan_Lee\Desktop\HTML基础\代码\test\demo\images/1.jpeg" alt="">
+<img src="C:\Users\Jonathan_Lee\Desktop\HTML基础\代码\test\demo\images/a/2.jpg" alt="">
+<img src="C:\Users\Jonathan_Lee\Desktop\HTML基础\代码\test\demo\images/a/b/3.jpg" alt="">
+
+<!--上级-->
+<img src="C:\Users\Jonathan_Lee\Desktop\HTML基础\代码\test/4.jpg" alt="">
+
+<img src="C:\Users\Jonathan_Lee\Desktop\HTML基础\代码\c/5.jpeg" alt="">
+
+</body>
+</html>

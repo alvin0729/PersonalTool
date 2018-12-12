@@ -1,0 +1,117 @@
+body{
+    background: url("../images/bg.jpg") center top;
+}
+
+/*头部*/
+.header{
+    width: 100%;
+    height: 120px;
+    /*background-color: red;*/
+}
+.header .header_in{
+    width: 980px;
+    height: 100%;
+    margin: 0 auto;
+    /*background-color: gold;*/
+    padding-top: 22px;
+    box-sizing: border-box;
+}
+.header .header_in>h1{
+    width: 173px;
+    height: 75px;
+    background-color: red;
+
+}
+.header .header_in>h1>a{
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    background: url("../images/logo.jpg");
+}
+/***************************头部E****************************/
+
+/*导航*/
+.nav{
+    width: 980px;
+    height: 60px;
+    margin: 0 auto;
+    background-color: blue;
+}
+.nav>span:first-child{
+    float: left;
+    display: inline-block;
+    width: 20px;
+    height: 60px;
+    background: url("../images/nav-left.jpg") no-repeat;
+}
+.nav>span:last-child{
+    float: right;
+    display: inline-block;
+    width: 20px;
+    height: 60px;
+    background: url("../images/nav-right.jpg") no-repeat;
+}
+.nav>ul{
+    float: left;
+    width: 940px;
+    height: 60px;
+    background: url("../images/nav-center.jpg");
+}
+.nav>ul>li{
+    float: left;
+    width: 104px;
+    height: 45px;
+    text-align: center;
+    line-height: 45px;
+    background: url("../images/nav-line.jpg") no-repeat right center;
+}
+.nav>ul>li:last-child{
+    background: none;
+}
+.nav>ul>li:hover a{
+    border-bottom: 1px solid #fff;
+}
+.nav>ul>li>a{
+    color: #fff;
+}
+/***************************导航E****************************/
+
+/*广告*/
+.banner{
+    width: 980px;
+    height: 382px;
+    margin: 0 auto;
+    background-color: pink;
+}
+/***************************广告E****************************/
+
+/*内容*/
+.content{
+    width: 980px;
+    height: 302px;
+    margin: 0 auto;
+    background-color: purple;
+}
+/***************************内容E****************************/
+
+/*底部导航*/
+.sub_nav {
+    width: 980px;
+    height: 34px;
+    margin: 0 auto;
+    background-color: yellow;
+}
+/***********************底部导航E*************************/
+
+/*底部*/
+.footer{
+    width: 100%;
+    height: 86px;
+    background-color: deepskyblue;
+}
+.footer .footer_in{
+    width: 980px;
+    height: 100%;
+    margin: 0 auto;
+    background-color: darkgray;
+}
