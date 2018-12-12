@@ -126,15 +126,15 @@
               {
               "vip" : 0,
               "icon" : "004.png",
-              "intro" : "待定",
-              "name" : "待定"
+              "intro" : "SwiftyJSONTest",
+              "name" : "SwiftyJSONTest"
               },
 
               {
               "vip" : 1,
               "icon" : "002.png",
-              "intro" : "待定",
-              "name" : "待定"
+              "intro" : "Codable",
+              "name" : "Codable"
               },
               {
               "vip" : 0,

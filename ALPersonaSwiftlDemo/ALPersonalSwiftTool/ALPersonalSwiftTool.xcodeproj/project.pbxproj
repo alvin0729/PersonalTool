@@ -8,6 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		92C9519A789EC85218099E86 /* Pods_ALPersonalSwiftTool.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81EE923627FC019009621E4A /* Pods_ALPersonalSwiftTool.framework */; };
+		CF3644AF21BDF9AF00BFD551 /* AlamofireVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF3644AE21BDF9AF00BFD551 /* AlamofireVC.xib */; };
+		CF3644BB21BE661B00BFD551 /* unicorn.png in Resources */ = {isa = PBXBuildFile; fileRef = CF3644B921BE661B00BFD551 /* unicorn.png */; };
+		CF3644BC21BE661B00BFD551 /* rainbow.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CF3644BA21BE661B00BFD551 /* rainbow.jpg */; };
+		CFB87D1921BF5011007614C5 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB87D1821BF5011007614C5 /* SwiftyJSON.swift */; };
+		CFB87D1B21BF50C3007614C5 /* SwiftyJSONTests.json in Resources */ = {isa = PBXBuildFile; fileRef = CFB87D1A21BF50C3007614C5 /* SwiftyJSONTests.json */; };
+		CFB87D1D21BF5215007614C5 /* SwiftyJSONTestVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB87D1C21BF5215007614C5 /* SwiftyJSONTestVC.swift */; };
+		CFB87D2021BF65E3007614C5 /* JSON+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB87D1E21BF65E3007614C5 /* JSON+Extension.swift */; };
+		CFB87D2121BF65E3007614C5 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB87D1F21BF65E3007614C5 /* String+Extensions.swift */; };
+		CFB87D2521BF667B007614C5 /* Tasks.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB87D2321BF667B007614C5 /* Tasks.swift */; };
+		CFB87D2621BF667B007614C5 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB87D2421BF667B007614C5 /* API.swift */; };
+		CFB87D2821BF6691007614C5 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB87D2721BF6691007614C5 /* Task.swift */; };
+		CFB87D2A21BF66BF007614C5 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB87D2921BF66BF007614C5 /* Helper.swift */; };
+		CFB87D2C21BF6721007614C5 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB87D2B21BF6721007614C5 /* Config.swift */; };
+		CFB87D2F21BFB69D007614C5 /* ALCodableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB87D2E21BFB69D007614C5 /* ALCodableVC.swift */; };
 		CFBFA2521FCE4F8C00A0EE4B /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFBFA2511FCE4F8600A0EE4B /* Extensions.swift */; };
 		CFBFA2551FCE7A0800A0EE4B /* CollapsibleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFBFA2541FCE7A0800A0EE4B /* CollapsibleTableViewCell.swift */; };
 		CFBFA2571FCE7FCB00A0EE4B /* ExampleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFBFA2561FCE7FCB00A0EE4B /* ExampleData.swift */; };
@@ -51,6 +65,20 @@
 
 /* Begin PBXFileReference section */
 		81EE923627FC019009621E4A /* Pods_ALPersonalSwiftTool.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ALPersonalSwiftTool.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CF3644AE21BDF9AF00BFD551 /* AlamofireVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AlamofireVC.xib; sourceTree = "<group>"; };
+		CF3644B921BE661B00BFD551 /* unicorn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = unicorn.png; sourceTree = "<group>"; };
+		CF3644BA21BE661B00BFD551 /* rainbow.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = rainbow.jpg; sourceTree = "<group>"; };
+		CFB87D1821BF5011007614C5 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
+		CFB87D1A21BF50C3007614C5 /* SwiftyJSONTests.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = SwiftyJSONTests.json; sourceTree = "<group>"; };
+		CFB87D1C21BF5215007614C5 /* SwiftyJSONTestVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftyJSONTestVC.swift; sourceTree = "<group>"; };
+		CFB87D1E21BF65E3007614C5 /* JSON+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "JSON+Extension.swift"; sourceTree = "<group>"; };
+		CFB87D1F21BF65E3007614C5 /* String+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
+		CFB87D2321BF667B007614C5 /* Tasks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tasks.swift; sourceTree = "<group>"; };
+		CFB87D2421BF667B007614C5 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		CFB87D2721BF6691007614C5 /* Task.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
+		CFB87D2921BF66BF007614C5 /* Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
+		CFB87D2B21BF6721007614C5 /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		CFB87D2E21BFB69D007614C5 /* ALCodableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ALCodableVC.swift; sourceTree = "<group>"; };
 		CFBFA2511FCE4F8600A0EE4B /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		CFBFA2541FCE7A0800A0EE4B /* CollapsibleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollapsibleTableViewCell.swift; sourceTree = "<group>"; };
 		CFBFA2561FCE7FCB00A0EE4B /* ExampleData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleData.swift; sourceTree = "<group>"; };
@@ -128,9 +156,51 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		CF3644B821BE65FE00BFD551 /* sources */ = {
+			isa = PBXGroup;
+			children = (
+				CF3644BA21BE661B00BFD551 /* rainbow.jpg */,
+				CF3644B921BE661B00BFD551 /* unicorn.png */,
+			);
+			path = sources;
+			sourceTree = "<group>";
+		};
+		CFB87D1721BF49D5007614C5 /* JSONToModel */ = {
+			isa = PBXGroup;
+			children = (
+				CFB87D2221BF65EB007614C5 /* API */,
+				CFB87D1A21BF50C3007614C5 /* SwiftyJSONTests.json */,
+				CFB87D2921BF66BF007614C5 /* Helper.swift */,
+				CFB87D2721BF6691007614C5 /* Task.swift */,
+				CFB87D1821BF5011007614C5 /* SwiftyJSON.swift */,
+				CFB87D1C21BF5215007614C5 /* SwiftyJSONTestVC.swift */,
+			);
+			path = JSONToModel;
+			sourceTree = "<group>";
+		};
+		CFB87D2221BF65EB007614C5 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				CFB87D2B21BF6721007614C5 /* Config.swift */,
+				CFB87D2421BF667B007614C5 /* API.swift */,
+				CFB87D2321BF667B007614C5 /* Tasks.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		CFB87D2D21BFB62D007614C5 /* Codable */ = {
+			isa = PBXGroup;
+			children = (
+				CFB87D2E21BFB69D007614C5 /* ALCodableVC.swift */,
+			);
+			path = Codable;
+			sourceTree = "<group>";
+		};
 		CFBFA2501FCE4F6700A0EE4B /* category */ = {
 			isa = PBXGroup;
 			children = (
+				CFB87D1E21BF65E3007614C5 /* JSON+Extension.swift */,
+				CFB87D1F21BF65E3007614C5 /* String+Extensions.swift */,
 				CFBFA2511FCE4F8600A0EE4B /* Extensions.swift */,
 			);
 			path = category;
@@ -159,6 +229,7 @@
 			isa = PBXGroup;
 			children = (
 				E113906121BCFB2E003D0D7E /* AlamofireVC.swift */,
+				CF3644AE21BDF9AF00BFD551 /* AlamofireVC.xib */,
 			);
 			path = Alamofire;
 			sourceTree = "<group>";
@@ -205,6 +276,8 @@
 		E149907B1FC929D000E0A231 /* ALPersonalSwiftTool */ = {
 			isa = PBXGroup;
 			children = (
+				CFB87D2D21BFB62D007614C5 /* Codable */,
+				CFB87D1721BF49D5007614C5 /* JSONToModel */,
 				E113906321BD35C8003D0D7E /* 30daysDemo */,
 				E113906021BCFB04003D0D7E /* Alamofire */,
 				CFBFA25A1FCE97AE00A0EE4B /* 每日优鲜 */,
@@ -214,10 +287,11 @@
 				E113906721BD45BE003D0D7E /* Tool */,
 				E149907E1FC929D000E0A231 /* ViewController.swift */,
 				CFBFA2561FCE7FCB00A0EE4B /* ExampleData.swift */,
+				CF3644B821BE65FE00BFD551 /* sources */,
 				CFBFA2581FCE812B00A0EE4B /* CollapsibleTableViewHeader.swift */,
 				CFD6C9CA1FD106A5001315C3 /* demo.json */,
-				CFBFA25E1FCEB28100A0EE4B /* File0.rtf */,
 				CFD6C9CC1FD119FE001315C3 /* File1.rtf */,
+				CFBFA25E1FCEB28100A0EE4B /* File0.rtf */,
 				E14990801FC929D000E0A231 /* Main.storyboard */,
 				E14990861FC929D000E0A231 /* Assets.xcassets */,
 				E14990881FC929D000E0A231 /* LaunchScreen.storyboard */,
@@ -359,6 +433,10 @@
 				E149908A1FC929D000E0A231 /* LaunchScreen.storyboard in Resources */,
 				E14990871FC929D000E0A231 /* Assets.xcassets in Resources */,
 				E14990821FC929D000E0A231 /* Main.storyboard in Resources */,
+				CF3644AF21BDF9AF00BFD551 /* AlamofireVC.xib in Resources */,
+				CF3644BC21BE661B00BFD551 /* rainbow.jpg in Resources */,
+				CFB87D1B21BF50C3007614C5 /* SwiftyJSONTests.json in Resources */,
+				CF3644BB21BE661B00BFD551 /* unicorn.png in Resources */,
 				CFD6C9CB1FD10734001315C3 /* demo.json in Resources */,
 				CFBFA25F1FCEB28100A0EE4B /* File0.rtf in Resources */,
 			);
@@ -389,10 +467,14 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-ALPersonalSwiftTool/Pods-ALPersonalSwiftTool-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireObjectMapper/AlamofireObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -428,15 +510,25 @@
 				CFBFA2631FCEBE8500A0EE4B /* GroupHeaderView.swift in Sources */,
 				CFBFA2591FCE812B00A0EE4B /* CollapsibleTableViewHeader.swift in Sources */,
 				CFBFA2651FCEBFD300A0EE4B /* JobSummaryController.swift in Sources */,
+				CFB87D2821BF6691007614C5 /* Task.swift in Sources */,
+				CFB87D2C21BF6721007614C5 /* Config.swift in Sources */,
 				E149907F1FC929D000E0A231 /* ViewController.swift in Sources */,
+				CFB87D1D21BF5215007614C5 /* SwiftyJSONTestVC.swift in Sources */,
 				E113906621BD4313003D0D7E /* TendaysDemoVC.swift in Sources */,
+				CFB87D2021BF65E3007614C5 /* JSON+Extension.swift in Sources */,
+				CFB87D2521BF667B007614C5 /* Tasks.swift in Sources */,
 				E113906B21BD4CDB003D0D7E /* TJCommonDefines.swift in Sources */,
 				E113906921BD45D1003D0D7E /* MacroTool.swift in Sources */,
 				E14990851FC929D000E0A231 /* ALPersonalSwiftTool.xcdatamodeld in Sources */,
 				CFBFA2571FCE7FCB00A0EE4B /* ExampleData.swift in Sources */,
+				CFB87D2621BF667B007614C5 /* API.swift in Sources */,
 				CFBFA2551FCE7A0800A0EE4B /* CollapsibleTableViewCell.swift in Sources */,
+				CFB87D2121BF65E3007614C5 /* String+Extensions.swift in Sources */,
+				CFB87D1921BF5011007614C5 /* SwiftyJSON.swift in Sources */,
+				CFB87D2F21BFB69D007614C5 /* ALCodableVC.swift in Sources */,
 				E149907D1FC929D000E0A231 /* AppDelegate.swift in Sources */,
 				E113906221BCFB2F003D0D7E /* AlamofireVC.swift in Sources */,
+				CFB87D2A21BF66BF007614C5 /* Helper.swift in Sources */,
 				CFBFA2521FCE4F8C00A0EE4B /* Extensions.swift in Sources */,
 				CFBFA25D1FCEA7CE00A0EE4B /* TopTableViewCell.swift in Sources */,
 			);
@@ -611,6 +703,7 @@
 				INFOPLIST_FILE = ALPersonalSwiftTool/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"COCOAPODS\" -D DebugType";
 				PRODUCT_BUNDLE_IDENTIFIER = com.alvin.test4;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "ALPersonalSwiftTool/ALPersonalSwiftTool-Bridging-Header.h";

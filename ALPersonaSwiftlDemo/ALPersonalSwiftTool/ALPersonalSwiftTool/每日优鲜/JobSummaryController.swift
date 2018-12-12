@@ -31,7 +31,7 @@ class JobSummaryController: UIViewController{
         topTableView.dataSource = self
         
         topTableView.rowHeight = kScreenW / 4
-        print(topTableView.rowHeight)
+        //print(topTableView.rowHeight)
         topTableView.showsVerticalScrollIndicator = false
         topTableView.backgroundColor = UIColor.green
         topTableView.register(TopTableViewCell.self, forCellReuseIdentifier: kTopTableViewCell)
@@ -133,6 +133,26 @@ extension JobSummaryController:UITableViewDataSource,UITableViewDelegate{
                 }
                 if(indexPath.row == 1){
                    navigationController?.pushViewController(TendaysDemoVC(), animated: true)
+                }
+                if(indexPath.row == 2){
+                    let vc = SwiftyJSONTestVC()
+                    if let file = Bundle.main.path(forResource: "SwiftyJSONTests", ofType: "json"){
+                        do{
+                            let data = try Data(contentsOf: URL(fileURLWithPath: file))
+                            let json = try JSON(data:data)
+                            vc.json = json
+                        }catch{
+                            vc.json = JSON.null
+                        }
+                    }else{
+                        vc.json = JSON.null
+                    }
+                    
+                    navigationController?.pushViewController(vc, animated: true)
+                }
+                
+                if(indexPath.row == 3){
+                    navigationController?.pushViewController(ALCodableVC(), animated: true)
                 }
             }
             

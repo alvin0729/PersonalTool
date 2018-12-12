@@ -3,7 +3,8 @@ platform :ios, '10.0'
 use_frameworks!
 
 target 'ALPersonalSwiftTool' do
-    pod 'Alamofire', '~> 4.0.0'
+    pod 'Alamofire', '~> 4.7'
+    pod 'AlamofireObjectMapper', '~> 5.2'
 end
 
 post_install do |installer|

@@ -30,3 +30,14 @@ extension UIView{
         self.layer.add(animation, forKey: nil)
     }
 }
+
+
+//扩展Data
+extension Data {
+    //增加直接添加String数据的方法
+    mutating func append(_ string: String, using encoding: String.Encoding = .utf8) {
+        if let data = string.data(using: encoding) {
+            append(data)
+        }
+    }
+}

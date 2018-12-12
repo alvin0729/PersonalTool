@@ -29,7 +29,7 @@ class TopTableViewCell: UITableViewCell {
     }
     func configureUI () {
         nameLabel.frame = CGRect(x: 0, y: 0, width: kScreenW / 4, height: kNavigationAndStatusBarHeight)
-        print(nameLabel.frame)
+        //print(nameLabel.frame)
         
         nameLabel.font = UIFont.systemFont(ofSize: 15)
         nameLabel.textAlignment = .center
