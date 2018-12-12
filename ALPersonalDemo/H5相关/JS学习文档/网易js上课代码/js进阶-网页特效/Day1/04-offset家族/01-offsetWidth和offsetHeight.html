@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        #box{
+            width: 200px;
+            height: 150px;
+            background-color: red;
+            padding: 10px;
+            border: 5px solid #ddd;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="box"></div>
+
+<script>
+    var box = document.getElementById("box");
+    // offsetHeight  = 内容 + 内边距 + 边框
+    console.log( box.offsetWidth, box.offsetHeight);
+    console.log( box.style.width, box.style.height);
+    box.style.width = 500 + 'px';
+    box.offsetWidth = 100 + 'px';
+</script>
+</body>
+</html>

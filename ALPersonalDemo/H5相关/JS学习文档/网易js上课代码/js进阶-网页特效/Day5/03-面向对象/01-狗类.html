@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+    function Dog(op) {
+        this._init(op);
+    }
+
+    Dog.prototype = {
+        // 属性
+        _init: function (option) {
+            this.name = option.name;
+            this.age = option.age;
+            this.dogFriends = option.dogFriends;
+        },
+
+        // 方法
+        eat: function (someThing) {
+            console.log(this.name + "吃" + someThing);
+        },
+
+        run: function (someWhere) {
+            console.log(this.name + "跑" + someWhere);
+        }
+    };
+
+    // 实例化
+    var sDog = new Dog({name: "小花", age: 1});
+    // console.log(typeof sDog);
+    // console.log(sDog.dogFriends);
+
+    /*sDog.eat("奶");
+    sDog.run("操场");*/
+
+
+    var bDog = new Dog({name: '大花', age: 10, dogFriends:["大大", "小小"]});
+    console.log(bDog === sDog);
+
+    console.log(bDog.eat === sDog.eat);
+
+
+</script>
+</body>
+</html>

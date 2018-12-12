@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            border:0;
+            list-style: none;
+        }
+
+        body{
+            background-color: pink;
+        }
+
+        #nav{
+            width: 900px;
+            height: 63px;
+            background:url("images/doubleOne.png") no-repeat right
+            center #fff;
+            border-radius: 5px;
+            position: relative;
+            margin: 100px auto;
+        }
+
+        #nav ul{
+            position: relative;
+        }
+
+        #nav ul li{
+            float: left;
+            width: 88px;
+            height: 63px;
+            text-align: center;
+            line-height: 70px;
+            cursor: pointer;
+        }
+
+        #t_mall{
+            width: 88px;
+            height: 63px;
+            background: url("images/tMall.png") no-repeat;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+<nav id="nav">
+    <span id="t_mall"></span>
+    <ul>
+        <li>双11狂欢</li>
+        <li>服装会场</li>
+        <li>数码家电</li>
+        <li>家具建材</li>
+        <li>母婴童装</li>
+        <li>手机会场</li>
+        <li>美妆会场</li>
+        <li>进口会场</li>
+        <li>飞猪旅行</li>
+    </ul>
+</nav>
+<script>
+    window.onload = function () {
+        // 1. 获取需要的标签
+        var nav = $("nav");
+        var t_mall = nav.children[0];
+        var ul = nav.children[1];
+        var allLis = ul.children;
+
+        // 记录鼠标点击的位置
+        var beginX = 0;
+
+        // 2. 遍历
+        for(var i=0; i<allLis.length; i++){
+            var li = allLis[i];
+
+            // 2.1 监听鼠标进入
+            li.onmouseover = function () {
+                end = this.offsetLeft;
+            };
+
+            // 2.2 监听鼠标按下事件
+            li.onmousedown = function () {
+                beginX = this.offsetLeft;
+            };
+
+            // 2.2 监听鼠标离开事件
+            li.onmouseout = function () {
+                end = beginX;
+            }
+        }
+
+        // 3.缓动动画
+        var begin = 0, end =0;
+        setInterval(function () {
+            begin = begin + (end - begin) * 0.1;
+            t_mall.style.left = begin + "px";
+        }, 10);
+
+        function $(id) {
+            return typeof id === "string" ? document.getElementById(id) : null;
+        }
+    }
+</script>
+</body>
+</html>

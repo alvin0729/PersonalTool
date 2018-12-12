@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        #box{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+   <button id="btn">往右走</button>
+   <button id="btn1">往左走</button>
+   <div id="box"></div>
+<script src="js/myFunc.js"></script>
+<script>
+    window.onload = function () {
+
+        // 0. 变量
+        var box = $("box");
+
+        // 1. 监听按钮的点击
+        $("btn").onclick = function () {
+            buffer(box, 800);
+        };
+
+        $("btn1").onclick = function () {
+            buffer(box, 200);
+        };
+    };
+
+    function buffer(obj, target) {
+        // 1.1 清除定时器
+        clearInterval(obj.timer);
+
+        // 1.2 设置定时器
+        obj.timer = setInterval(function () {
+            // 1.3 求出步长
+            var speed = (target - obj.offsetLeft) * 0.2;
+            // 判断是否向上取整
+            speed = (target > obj.offsetLeft) ? Math.ceil(speed) : Math.floor(speed);
+            // 1.4 动起来
+            obj.style.left = obj.offsetLeft + speed + "px";
+            obj.innerText = obj.offsetLeft;
+            // 1.5 判断
+            if(obj.offsetLeft === target){
+                clearInterval(obj.timer);
+            }
+        }, 20);
+    }
+</script>
+</body>
+</html>

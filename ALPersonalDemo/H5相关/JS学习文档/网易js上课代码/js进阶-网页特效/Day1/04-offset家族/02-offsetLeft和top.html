@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        #father{
+            width: 400px;
+            height: 400px;
+            background-color: red;
+            margin: 40px;
+
+           /* position: relative;*/
+        }
+
+        #box{
+            width: 200px;
+            height: 150px;
+            background-color: blue;
+            padding: 10px;
+            border: 5px solid #000;
+            margin-left: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div id="father">
+        <div id="box"></div>
+    </div>
+
+<script>
+    var box = document.getElementById("box");
+    console.log(box.offsetLeft);
+    console.log(box.offsetTop);
+</script>
+</body>
+</html>

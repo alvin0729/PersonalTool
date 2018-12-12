@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="main"></div>
+
+<script src="js/Rect.js"></script>
+<script>
+    // 实例化
+    var rect = new Rect({
+        parentId: "main",
+
+        left: 100,
+        top:200,
+
+        width: 400,
+        height: 450,
+
+        backgroundColor: 'red',
+        border: "20px solid #000",
+        borderRadius: 0
+    });
+    rect.render();
+</script>
+</body>
+</html>

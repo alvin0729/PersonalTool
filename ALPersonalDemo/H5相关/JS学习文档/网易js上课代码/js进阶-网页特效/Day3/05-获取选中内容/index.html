@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        p{
+            margin: 100px;
+            width: 300px;
+        }
+
+        #share_weibo{
+            width: 26px;
+            height: 26px;
+            background: url("images/share.gif");
+            position: absolute;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <p id="word">在新闻发生的第一时间，李克强就批示有关部门，要“以小窥大”，进一步考虑如何通过简政放权、放管结合、优化服务，破除制约社会生产力发展和就业创业的不合理束缚，以主动服务的精神激发市场活力。而11月21日在上海召开的座谈会上，总理再次通过两家小食店的故事“以小窥大”，点题下一阶段政府职能转变和深化“放管服”改革工作。</p>
+
+    <div id="share_weibo"></div>
+<script src="js/myFunc.js"></script>
+<script>
+    window.onload = function () {
+        var selectedText;
+        // 1.监听鼠标抬起
+        $("word").onmouseup = function (event) {
+            // 1.0 兼容
+            var e = event || window.event;
+
+            // 1.1 获取选中的文字
+            if(window.getSelection){ // 标准模式 获取选中的文字
+                selectedText = window.getSelection().toString();
+            }else{ // IE 系列
+                selectedText = document.selection.createRange().text;
+            }
+
+           if(selectedText !== ""){
+               // 1.2 显示面板
+               $("share_weibo").style.display = 'block';
+
+               // 1.3 改变位置
+               $("share_weibo").style.left = e.clientX + 'px';
+               $("share_weibo").style.top = e.clientY + 'px';
+           }
+            
+        };
+        
+        // 2. 监听文档的点击
+        document.onmousedown = function (event) {
+            // 2.0 兼容
+            var e = event || window.event;
+
+            // 2.1 获取点击区域的ID
+            var targetId = e.target ? e.target.id : e.srcElement.id;
+
+            // 2.2 判断
+            if(targetId !== "share_weibo"){
+                $("share_weibo").style.display = "none";
+            }else {
+                window.location.href = 'http://v.t.sina.com.cn/share/share.php?searchPic=false&title=' + selectedText + '&url=https://github.com/xuanzhihua';
+            }
+
+            window.getSelection ? window.getSelection().removeAllRanges() : document.selection.empty();
+        }
+    }
+</script>
+</body>
+</html>
