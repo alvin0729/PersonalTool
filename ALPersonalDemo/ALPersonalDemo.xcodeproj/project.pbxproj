@@ -91,6 +91,7 @@
 		CF95F23220D905D700DDAA28 /* OrderedDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = CF95F23120D905D700DDAA28 /* OrderedDictionary.m */; };
 		CF95F23520D90CE400DDAA28 /* NSDictionary+NilSafe.m in Sources */ = {isa = PBXBuildFile; fileRef = CF95F23420D90CE400DDAA28 /* NSDictionary+NilSafe.m */; };
 		CF970B3B1EF76F0300955D4A /* LLRollingButtonScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = CF970B3A1EF76F0300955D4A /* LLRollingButtonScrollView.m */; };
+		CF9A100021CCD5EB0070C196 /* WHGradientHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = CF9A0FFF21CCD5EB0070C196 /* WHGradientHelper.m */; };
 		CF9A582420D25EA700067258 /* UIImageView+Letters.m in Sources */ = {isa = PBXBuildFile; fileRef = CF9A582220D25EA600067258 /* UIImageView+Letters.m */; };
 		CF9DE86320EE2046002D415C /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = CF9DE86220EE2045002D415C /* README.md */; };
 		CFA390A320BF9F0C001CDF4F /* EBMute.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CFA390A020BF9F0C001CDF4F /* EBMute.mp3 */; };
@@ -566,6 +567,8 @@
 		CF95F23420D90CE400DDAA28 /* NSDictionary+NilSafe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+NilSafe.m"; sourceTree = "<group>"; };
 		CF970B391EF76F0300955D4A /* LLRollingButtonScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LLRollingButtonScrollView.h; sourceTree = "<group>"; };
 		CF970B3A1EF76F0300955D4A /* LLRollingButtonScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LLRollingButtonScrollView.m; sourceTree = "<group>"; };
+		CF9A0FFE21CCD5EB0070C196 /* WHGradientHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WHGradientHelper.h; sourceTree = "<group>"; };
+		CF9A0FFF21CCD5EB0070C196 /* WHGradientHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WHGradientHelper.m; sourceTree = "<group>"; };
 		CF9A582220D25EA600067258 /* UIImageView+Letters.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+Letters.m"; sourceTree = "<group>"; };
 		CF9A582320D25EA700067258 /* UIImageView+Letters.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+Letters.h"; sourceTree = "<group>"; };
 		CF9DE86220EE2045002D415C /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
@@ -1481,6 +1484,15 @@
 				CF970B3A1EF76F0300955D4A /* LLRollingButtonScrollView.m */,
 			);
 			path = BTNScrollView;
+			sourceTree = "<group>";
+		};
+		CF9A0FFD21CCD5EB0070C196 /* WHGradientHelper */ = {
+			isa = PBXGroup;
+			children = (
+				CF9A0FFE21CCD5EB0070C196 /* WHGradientHelper.h */,
+				CF9A0FFF21CCD5EB0070C196 /* WHGradientHelper.m */,
+			);
+			path = WHGradientHelper;
 			sourceTree = "<group>";
 		};
 		CFA3909F20BF9F0C001CDF4F /* EBMuteDetector */ = {
@@ -2779,6 +2791,7 @@
 		E1F661A51EDDA001001D98E1 /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
+				CF9A0FFD21CCD5EB0070C196 /* WHGradientHelper */,
 				CF0E8C4B20CA579600DC899B /* DLRadioButton */,
 				CFC15A291FD138B0001248B7 /* 动画 */,
 				E1D428E21FDCF8B300D3A51C /* 自定义控件 */,
@@ -3331,6 +3344,7 @@
 				E1540B511EF65C8C00D2721F /* RJHomeTopicShareModel.m in Sources */,
 				CF27F3621F7DE033000E241C /* CAAnimation+WAnimation.m in Sources */,
 				CF0E8C4120CA424B00DC899B /* NSData+Base64.m in Sources */,
+				CF9A100021CCD5EB0070C196 /* WHGradientHelper.m in Sources */,
 				E14B8A781EF1889D0021D665 /* NSString+SNFoundation.m in Sources */,
 				CFA7179520D11F6300C65E96 /* UIImage+Size.m in Sources */,
 				CFA7179E20D1200C00C65E96 /* NSDictionary+Params.m in Sources */,
