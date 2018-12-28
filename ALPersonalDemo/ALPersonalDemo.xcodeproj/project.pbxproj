@@ -85,6 +85,7 @@
 		CF862E6A2011B96300140F31 /* UIImageView+download.m in Sources */ = {isa = PBXBuildFile; fileRef = CF862E692011B96300140F31 /* UIImageView+download.m */; };
 		CF862E6F2011BA8000140F31 /* TGFileTool.m in Sources */ = {isa = PBXBuildFile; fileRef = CF862E6D2011BA8000140F31 /* TGFileTool.m */; };
 		CF862E722011BBBE00140F31 /* UIImage+image.m in Sources */ = {isa = PBXBuildFile; fileRef = CF862E702011BBB900140F31 /* UIImage+image.m */; };
+		CF8DD36D21D1F34200942C2B /* WTYShadowAnimationView.m in Sources */ = {isa = PBXBuildFile; fileRef = CF8DD36C21D1F34200942C2B /* WTYShadowAnimationView.m */; };
 		CF9433E320F456F90027D4A7 /* UIViewController+BackButtonHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = CF9433E220F456F90027D4A7 /* UIViewController+BackButtonHandler.m */; };
 		CF95F22820D8F27500DDAA28 /* NSURL+QueryDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = CF95F22720D8F27500DDAA28 /* NSURL+QueryDictionary.m */; };
 		CF95F22C20D902F900DDAA28 /* LogCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = CF95F22B20D902F900DDAA28 /* LogCategory.m */; };
@@ -554,6 +555,8 @@
 		CF862E6E2011BA8000140F31 /* TGFileTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TGFileTool.h; sourceTree = "<group>"; };
 		CF862E702011BBB900140F31 /* UIImage+image.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+image.m"; sourceTree = "<group>"; };
 		CF862E712011BBBD00140F31 /* UIImage+image.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+image.h"; sourceTree = "<group>"; };
+		CF8DD36B21D1F34200942C2B /* WTYShadowAnimationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTYShadowAnimationView.h; sourceTree = "<group>"; };
+		CF8DD36C21D1F34200942C2B /* WTYShadowAnimationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTYShadowAnimationView.m; sourceTree = "<group>"; };
 		CF9433E120F456F90027D4A7 /* UIViewController+BackButtonHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+BackButtonHandler.h"; sourceTree = "<group>"; };
 		CF9433E220F456F90027D4A7 /* UIViewController+BackButtonHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+BackButtonHandler.m"; sourceTree = "<group>"; };
 		CF95F22620D8F27500DDAA28 /* NSURL+QueryDictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURL+QueryDictionary.h"; sourceTree = "<group>"; };
@@ -1587,6 +1590,8 @@
 		CFC15A291FD138B0001248B7 /* 动画 */ = {
 			isa = PBXGroup;
 			children = (
+				CF8DD36B21D1F34200942C2B /* WTYShadowAnimationView.h */,
+				CF8DD36C21D1F34200942C2B /* WTYShadowAnimationView.m */,
 				CFC15A2C1FD13B8A001248B7 /* MSGradualProgressView.h */,
 				CFC15A2D1FD13B8A001248B7 /* MSGradualProgressView.m */,
 				CFC15A2B1FD138CD001248B7 /* MQGradientProgressView.h */,
@@ -3266,6 +3271,7 @@
 				E1F6619A1EDD9DB5001D98E1 /* NSObject+SSAdd.m in Sources */,
 				E1F6619F1EDD9DE8001D98E1 /* NSString+SSAdd.m in Sources */,
 				CF43E0182133894D00D6998C /* IFlyAIUIPcmRecorder.m in Sources */,
+				CF8DD36D21D1F34200942C2B /* WTYShadowAnimationView.m in Sources */,
 				E1540B201EF6534C00D2721F /* UIView+Layout.m in Sources */,
 				E1540A551EF64C2A00D2721F /* AJPhotoTapDetectingImageView.m in Sources */,
 				E13C56721EE44BE500005CFD /* NSString+extension.m in Sources */,
